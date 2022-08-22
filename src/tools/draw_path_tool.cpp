@@ -634,6 +634,15 @@ void DrawPathTool::draw(QPainter* painter, MapWidget* widget)
 	}
 }
 
+MapCoord DrawPathTool::getLastPoint()
+{
+	auto const num_coords = preview_path->getCoordinateCount();
+	if (num_coords > 0)
+		return preview_path->getCoordinate(num_coords - 1);
+	else
+		return {std::numeric_limits<double>::max(), std::numeric_limits<double>::max()};	
+}
+
 void DrawPathTool::updatePreviewPath()
 {
 	DrawLineAndAreaTool::updatePreviewPath();
