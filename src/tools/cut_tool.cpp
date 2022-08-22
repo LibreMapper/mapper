@@ -119,7 +119,17 @@ void CutTool::objectSelectionChangedImpl()
 bool CutTool::mousePressEvent(QMouseEvent* event, const MapCoordF& map_coord, MapWidget* widget)
 {
 	if (path_tool)
-		return path_tool->mousePressEvent(event, map_coord, widget);
+	{
+		// Get path endpoint and check if it is on the area boundary
+		auto const path_end = path_tool->getLastPoint();
+		auto const last = edit_object->findClosestPointTo(MapCoordF(path_end));
+		auto const click_tolerance_map = 0.001 * cur_map_widget->getMapView()->pixelToLength(clickTolerance());
+		if (last.distance_squared > click_tolerance_map*click_tolerance_map
+		    && event->button() == Qt::RightButton
+		    && !drawOnRightClickEnabled())
+			return true;
+		return path_tool->mousePressEvent(event, map_coord, widget);		
+	}
 	
 	if (waiting_for_mouse_release)
 	{
@@ -166,7 +176,15 @@ bool CutTool::mouseReleaseEvent(QMouseEvent* event, const MapCoordF& map_coord, 
 bool CutTool::mouseDoubleClickEvent(QMouseEvent* event, const MapCoordF& map_coord, MapWidget* widget)
 {
 	if (path_tool)
+	{
+		// Get path endpoint and check if it is on the area boundary
+		auto const path_end = path_tool->getLastPoint();
+		auto const last = edit_object->findClosestPointTo(MapCoordF(path_end));
+		auto const click_tolerance_map = 0.001 * cur_map_widget->getMapView()->pixelToLength(clickTolerance());
+		if (last.distance_squared > click_tolerance_map*click_tolerance_map)
+			return true;
 		return path_tool->mouseDoubleClickEvent(event, map_coord, widget);
+	}
 	
 	return false;
 }
@@ -209,6 +227,9 @@ void CutTool::clickPress()
 
 void CutTool::clickRelease()
 {
+	if (!hover_object || hover_object->getSymbol()->getType() != Symbol::Line)
+		return;
+	        
 	if (auto line_point = findEditPoint(click_pos_map, Symbol::Line, Symbol::NoSymbol))
 	{
 		// Line split in single point
