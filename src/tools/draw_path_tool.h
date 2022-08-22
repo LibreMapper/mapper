@@ -65,6 +65,8 @@ public:
 	
 	void draw(QPainter* painter, MapWidget* widget) override;
 	
+	MapCoord getLastPoint();
+	
 protected slots:
 	void updateDirtyRect();
 	void setDrawingSymbol(const LibreMapper::Symbol* symbol) override;
