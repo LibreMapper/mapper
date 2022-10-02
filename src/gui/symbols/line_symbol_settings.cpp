@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2018 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2022 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -240,6 +240,7 @@ LineSymbolSettings::LineSymbolSettings(LineSymbol* symbol, SymbolSettingDialog* 
 	mid_symbol_widget_list = {
 	    mid_symbol_placement_label, mid_symbol_placement_combo,
 	    mid_symbol_per_spot_label, mid_symbol_per_spot_edit,
+	    mid_symbol_distance_label, mid_symbol_distance_edit,
 	    show_at_least_one_symbol_check,
 	};
 	
