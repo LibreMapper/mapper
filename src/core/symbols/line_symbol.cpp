@@ -1040,7 +1040,7 @@ SplitPathCoord LineSymbol::createDashGroups(
 	const auto mid_symbols = (mid_symbols_per_spot > 0 && mid_symbol && !mid_symbol->isEmpty()) ? mid_symbol_placement : LineSymbol::NoMidSymbols;
 	auto mid_symbol_distance_f = length_type(0.001) * mid_symbol_distance;
 	
-	bool half_first_group = is_part_start ? (half_outer_dashes || path_closed)
+	bool half_first_group = is_part_start ? (half_outer_dashes || path_closed || flags[start.index].isDashPoint())
 	                                      : (flags[start.index].isDashPoint() && dashes_in_group == 1);
 	
 	bool ends_with_dashpoint  = is_part_end ? path_closed : true;
@@ -1057,7 +1057,7 @@ SplitPathCoord LineSymbol::createDashGroups(
 	auto length = end.clen - start.clen;
 	auto length_plus_break = length + break_length_f;
 	
-	bool half_last_group  = is_part_end ? (half_outer_dashes || path_closed)
+	bool half_last_group  = is_part_end ? (half_outer_dashes || path_closed || flags[end.index].isDashPoint())
 	                                    : (ends_with_dashpoint && dashes_in_group == 1);
 	int num_half_groups = (half_first_group ? 1 : 0) + (half_last_group ? 1 : 0);
 	
