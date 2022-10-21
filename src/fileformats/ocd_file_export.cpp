@@ -3019,7 +3019,7 @@ quint16 OcdFileExport::exportCoordinates(const MapCoordVector& coords, const Sym
 		if (point.isDashPoint())
 		{
 			if (!symbol || symbol->getType() != Symbol::Line)
-				p.y |= Ocd::OcdPoint32::FlagCorner;
+				p.y |= Ocd::OcdPoint32::FlagDash;
 			else
 			{
 				const LineSymbol* line_symbol = static_cast<const LineSymbol*>(symbol);

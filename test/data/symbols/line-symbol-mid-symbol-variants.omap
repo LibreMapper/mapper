@@ -28,35 +28,35 @@
 </symbols>
 <parts count="1" current="0">
 <part name="default part"><objects count="30">
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="2"><coords count="2">-42500 -57500;15000 5000;</coords><text>solid</text></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="2"><coords count="2">-22500 -57500;15000 5000;</coords><text>dashed</text></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="2"><coords count="2">-2500 -57500;15000 5000;</coords><text>dash groups</text></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="2"><coords count="2">22500 -57500;25000 5000;</coords><text>dashed, 
+<object type="4" symbol="15" h_align="1" v_align="2"><coords count="2">-42500 -57500;15000 5000;</coords><size width="15000" height="5000"/><text>solid</text></object>
+<object type="4" symbol="15" h_align="1" v_align="2"><coords count="2">-22500 -57500;15000 5000;</coords><size width="15000" height="5000"/><text>dashed</text></object>
+<object type="4" symbol="15" h_align="1" v_align="2"><coords count="2">-2500 -57500;15000 5000;</coords><size width="15000" height="5000"/><text>dash groups</text></object>
+<object type="4" symbol="15" h_align="1" v_align="2"><coords count="2">22500 -57500;25000 5000;</coords><size width="25000" height="5000"/><text>dashed, 
 half length at start/end</text></object>
-<object type="4" symbol="15" rotation="1.5707" h_align="2" v_align="2"><coords count="2">-72500 -42500;15000 5000;</coords><text>CenterOfDash</text></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-60000 -52500;20000 5000;</coords><text>no mid symbol</text></object>
+<object type="4" symbol="15" rotation="1.5707" h_align="2" v_align="2"><coords count="2">-72500 -42500;15000 5000;</coords><size width="15000" height="5000"/><text>CenterOfDash</text></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-60000 -52500;20000 5000;</coords><size width="20000" height="5000"/><text>no mid symbol</text></object>
 <object type="1" symbol="0"><coords count="2">-50000 -50000;-35000 -50000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="1" symbol="1"><coords count="2">-30000 -50000 32;-15000 -50000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="1" symbol="2"><coords count="2">-10000 -50000 32;5000 -50000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="1"><coords count="2">-30000 -50000;-15000 -50000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="2"><coords count="2">-10000 -50000;5000 -50000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="3"><coords count="2">10000 -50000 32;25000 -50000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="3"><coords count="13">30000 -50000 1;30000 -51000;31000 -51500;32500 -51500 1;34000 -51500;35000 -51000;35000 -50000 33;35000 -49000;34000 -48500;32500 -48500 1;31000 -48500;30000 -49000;30000 -50000 18;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-60000 -47500;20000 5000;</coords><text>2 on solid line</text></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-60000 -47500;20000 5000;</coords><size width="20000" height="5000"/><text>2 on solid line</text></object>
 <object type="1" symbol="4"><coords count="2">-50000 -45000 32;-35000 -45000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-60000 -42500;20000 5000;</coords><text>2 on dashed line</text></object>
-<object type="1" symbol="5"><coords count="2">-30000 -40000 32;-15000 -40000 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="1" symbol="6"><coords count="2">-10000 -40000 32;5000 -40000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-60000 -42500;20000 5000;</coords><size width="20000" height="5000"/><text>2 on dashed line</text></object>
+<object type="1" symbol="5"><coords count="2">-30000 -40000;-15000 -40000;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="6"><coords count="2">-10000 -40000;5000 -40000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="7"><coords count="2">10000 -40000 32;25000 -40000 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="7"><coords count="13">30000 -40000 1;30000 -41000;31000 -41500;32500 -41500 1;34000 -41500;35000 -41000;35000 -40000 33;35000 -39000;34000 -38500;32500 -38500 1;31000 -38500;30000 -39000;30000 -40000 18;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-60000 -37500;20000 5000;</coords><text>1 on dashed line</text></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-60000 -37500;20000 5000;</coords><size width="20000" height="5000"/><text>1 on dashed line</text></object>
 <object type="1" symbol="8"><coords count="2">-30000 -35000;-15000 -35000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="9"><coords count="2">-10000 -35000;5000 -35000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="10"><coords count="2">10000 -35000;25000 -35000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="10"><coords count="13">30000 -35000 1;30000 -36000;31000 -36500;32500 -36500 1;34000 -36500;35000 -36000;35000 -35000 33;35000 -34000;34000 -33500;32500 -33500 1;31000 -33500;30000 -34000;30000 -35000 18;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-62500 -32500;25000 5000;</coords><text>CenterOfDashGroup</text></object>
-<object type="1" symbol="11"><coords count="2">-10000 -30000 32;5000 -30000 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="4" symbol="15" rotation="0" h_align="1" v_align="3"><coords count="2">-60000 -27500;20000 5000;</coords><text>CenterOfGap</text></object>
-<object type="1" symbol="12"><coords count="2">-30000 -25000 32;-15000 -25000 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="1" symbol="13"><coords count="2">-10000 -25000 32;5000 -25000 48;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-62500 -32500;25000 5000;</coords><size width="25000" height="5000"/><text>CenterOfDashGroup</text></object>
+<object type="1" symbol="11"><coords count="2">-10000 -30000;5000 -30000;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="4" symbol="15" h_align="1" v_align="3"><coords count="2">-60000 -27500;20000 5000;</coords><size width="20000" height="5000"/><text>CenterOfGap</text></object>
+<object type="1" symbol="12"><coords count="2">-30000 -25000;-15000 -25000;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="13"><coords count="2">-10000 -25000;5000 -25000 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="14"><coords count="2">10000 -25000 32;25000 -25000 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="14"><coords count="13">30000 -25000 1;30000 -26000;31000 -26500;32500 -26500 1;34000 -26500;35000 -26000;35000 -25000 1;35000 -24000;34000 -23500;32500 -23500 1;31000 -23500;30000 -24000;30000 -25000 18;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 </objects></part>
