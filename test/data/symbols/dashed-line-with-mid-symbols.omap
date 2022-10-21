@@ -18,7 +18,7 @@ Minimum length: two dashes (3.65 mm - footprint 55 m). If shorter, the symbol mu
 <object type="1" symbol="1"><coords count="7">-47979 -65916 1;-46790 -66102;-47260 -69147;-46711 -69502 1;-45227 -70462;-43504 -67304;-42086 -69484 16;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="0"><coords count="7">-40280 -65313 1;-39258 -66072;-40623 -68494;-39724 -69181 1;-38416 -70181;-39233 -71180;-36859 -70732;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="1" symbol="1"><coords count="13">-54931 -69830 1;-56003 -68619;-55890 -66767;-54679 -65695 1;-53468 -64623;-51617 -64735;-50544 -65947 1;-49472 -67158;-49585 -69009;-50796 -70082 1;-52007 -71154;-53858 -71041;-54931 -69830 18;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
-<object type="1" symbol="2"><coords count="4">-48463 -61909 33;-48152 -64235;-44117 -65995;-42140 -64525 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="2"><coords count="4">-48463 -61909 1;-48152 -64235;-44117 -65995;-42140 -64525 64;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 </objects></part>
 </parts>
 <templates count="0" first_front_template="0">
