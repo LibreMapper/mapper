@@ -172,6 +172,7 @@ protected:
 	// Mouse / key handling
 	bool waiting_for_mouse_release = false;
 	bool switch_dash_points = false;
+	bool switch_corner_points = false;
 	
 	/**
 	 * Offset from cursor position to drag handle of moved element.

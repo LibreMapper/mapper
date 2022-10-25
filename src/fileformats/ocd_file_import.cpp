@@ -2220,8 +2220,10 @@ void OcdFileImport::setPointFlags(OcdImportedPathObject* object, quint32 pos, bo
 	// hole points need to bet set as the last point of a part of an area object instead of the first point of the next part
 	if (ocd_point.x & Ocd::OcdPoint32::FlagCtl1 && pos > 0)
 		object->coords[pos-1].setCurveStart(true);
-	if ((ocd_point.y & Ocd::OcdPoint32::FlagDash) || (ocd_point.y & Ocd::OcdPoint32::FlagCorner))
+	if (ocd_point.y & Ocd::OcdPoint32::FlagDash)
 		object->coords[pos].setDashPoint(true);
+	if (ocd_point.y & Ocd::OcdPoint32::FlagCorner)
+		object->coords[pos].setCornerPoint(true);
 	if (ocd_point.y & Ocd::OcdPoint32::FlagHole && pos > 1 && is_area)
 		setPathHolePoint(object, pos - 1);
 }

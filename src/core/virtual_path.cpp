@@ -120,7 +120,7 @@ bool PathCoordVector::isClosed() const
 	return virtual_coords.flags[back().index].isClosePoint();
 }
 
-PathCoordVector::size_type PathCoordVector::findNextDashPoint(PathCoordVector::size_type first) const
+PathCoordVector::size_type PathCoordVector::findNextDashOrCornerPoint(PathCoordVector::size_type first) const
 {
 	// Get behind the current point
 	auto prev_index = (*this)[first].index;
@@ -131,11 +131,11 @@ PathCoordVector::size_type PathCoordVector::findNextDashPoint(PathCoordVector::s
 		++first;
 	}
 	
-	// Find a dash point or hole point
+	// Find a dash, corner or hole point
 	while (first != last)
 	{
 		const auto& current_flags = virtual_coords.flags[(*this)[first].index];
-		if (current_flags.isDashPoint() || current_flags.isHolePoint())
+		if (current_flags.isDashPoint() || current_flags.isCornerPoint() || current_flags.isHolePoint())
 			break;
 		++first;
 	}
