@@ -75,11 +75,12 @@ public:
 		//unused     1 << 3,
 		HolePoint  = 1 << 4,
 		DashPoint  = 1 << 5,
+		CornerPoint = 1 << 6,
 		//...
 		// Special masks for VirtualPath::copy().
 		// CurveStart is handled explicitly there.
-		MaskCopiedFlagsAtStart = GapPoint | DashPoint,
-		MaskCopiedFlagsAtEnd   = GapPoint | DashPoint | HolePoint | ClosePoint,
+		MaskCopiedFlagsAtStart = GapPoint | DashPoint | CornerPoint,
+		MaskCopiedFlagsAtEnd   = GapPoint | DashPoint | CornerPoint | HolePoint | ClosePoint,
 	};
 	Q_DECLARE_FLAGS(Flags, Flag)
 	
@@ -337,6 +338,13 @@ public:
 	
 	/** Sets the dash point flag. */
 	void setDashPoint(bool value);
+	
+	
+	/** Is this coordinate a special corner point? */
+	constexpr bool isCornerPoint() const;
+	
+	/** Sets the corner point flag. */
+	void setCornerPoint(bool value);
 	
 	
 	/** Is this coordinate a gap point? */
@@ -896,6 +904,18 @@ void MapCoord::setDashPoint(bool value)
 {
 	if (fp.testFlag(DashPoint) != value)
 		fp ^= DashPoint;
+}
+
+constexpr bool MapCoord::isCornerPoint() const
+{
+	return fp.testFlag(CornerPoint);
+}
+
+inline
+void MapCoord::setCornerPoint(bool value)
+{
+	if (fp.testFlag(CornerPoint) != value)
+		fp ^= CornerPoint;
 }
 
 constexpr bool MapCoord::isGapPoint() const

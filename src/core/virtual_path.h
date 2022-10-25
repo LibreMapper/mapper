@@ -71,7 +71,7 @@ public:
 	 * 
 	 * \todo Consider return a SplitPathCoord (cf. actual usage).
 	 */
-	size_type findNextDashPoint(PathCoordVector::size_type first) const;
+	size_type findNextDashOrCornerPoint(PathCoordVector::size_type first) const;
 	
 	
 	/**
