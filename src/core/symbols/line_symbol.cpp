@@ -1005,13 +1005,13 @@ void LineSymbol::processDashedLine(
 	auto line_start   = groups_start;
 	for (auto is_part_start = true, is_part_end = false; !is_part_end; is_part_start = false)
 	{
-		auto groups_end_path_coord_index = path_coords.findNextDashPoint(groups_start.path_coord_index);
+		auto groups_end_path_coord_index = path_coords.findNextDashOrCornerPoint(groups_start.path_coord_index);
 		is_part_end = path.path_coords[groups_end_path_coord_index].clen >= end.clen;
 		auto groups_end = is_part_end ? end : SplitPathCoord::at(path_coords, groups_end_path_coord_index);
-		
+		        
 		line_start = createDashGroups(path, path_closed,
 		                              line_start, groups_start, groups_end,
-		                              is_part_start, is_part_end,
+		                              is_part_start, is_part_end,// || path.coords.flags[groups_end_path_coord_index].isCornerPoint(),
 		                              out_flags, out_coords, output);
 		
 		groups_start = groups_end; // Search then next split (node) after groups_end (current node).
@@ -1043,7 +1043,7 @@ SplitPathCoord LineSymbol::createDashGroups(
 	bool half_first_group = is_part_start ? (half_outer_dashes || path_closed || flags[start.index].isDashPoint())
 	                                      : (flags[start.index].isDashPoint() && dashes_in_group == 1);
 	
-	bool ends_with_dashpoint  = is_part_end ? path_closed : true;
+	bool ends_with_dashpoint  = is_part_end ? path_closed : flags[end.index].isDashPoint();
 	
 	auto dash_length_f           = length_type(0.001) * dash_length;
 	auto break_length_f          = length_type(0.001) * break_length;
@@ -1200,7 +1200,7 @@ SplitPathCoord LineSymbol::createDashGroups(
 					out_flags.back().setGapPoint(true);
 					dash_start = next_dash_start;
 				}
-				if (is_last_dash && !is_part_end)
+				if (flags[end.index].isDashPoint() && is_last_dash && !is_part_end)
 				{
 					// Last dash before a dash point (which is not the closing point):
 					// Give the remaining length to the next round of dash groups drawing.
@@ -1215,6 +1215,9 @@ SplitPathCoord LineSymbol::createDashGroups(
 				
 				if (dash < dashes_in_group)
 					cur_length += in_group_break_length_f;
+				
+				if (is_last_dash && flags[end.index].isCornerPoint())
+					out_flags.back().setGapPoint(false);
 			}
 			
 			if (dashgroup < num_dashgroups)
@@ -1339,7 +1342,7 @@ void LineSymbol::createMidSymbolRenderables(
 	auto groups_start = start;
 	for (auto is_part_end = false; !is_part_end; )
 	{
-		auto groups_end_path_coord_index = path_coords.findNextDashPoint(groups_start.path_coord_index);
+		auto groups_end_path_coord_index = path_coords.findNextDashOrCornerPoint(groups_start.path_coord_index);
 		is_part_end = path.path_coords[groups_end_path_coord_index].clen >= end.clen;
 		auto groups_end = is_part_end ? end : SplitPathCoord::at(path_coords, groups_end_path_coord_index);
 		

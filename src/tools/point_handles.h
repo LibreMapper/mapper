@@ -43,7 +43,8 @@ public:
 		EndHandle    = 1,
 		NormalHandle = 2,
 		CurveHandle  = 3,
-		DashHandle   = 4
+		DashHandle   = 4,
+		CornerHandle = 5
 	};
 	
 	/**

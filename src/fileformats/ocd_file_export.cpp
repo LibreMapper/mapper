@@ -3023,12 +3023,17 @@ quint16 OcdFileExport::exportCoordinates(const MapCoordVector& coords, const Sym
 			else
 			{
 				const LineSymbol* line_symbol = static_cast<const LineSymbol*>(symbol);
-				if ((line_symbol->getDashSymbol() == nullptr || line_symbol->getDashSymbol()->isEmpty()) && line_symbol->isDashed())
-					p.y |= Ocd::OcdPoint32::FlagDash;
-				else
+				// Mapper dash symbol goes to OCD corner symbol, so we got to convert
+				// dash points to corner points for proper rendering.
+				auto const* dash_symbol = line_symbol->getDashSymbol();
+				if (dash_symbol && !dash_symbol->isEmpty())
 					p.y |= Ocd::OcdPoint32::FlagCorner;
+				else
+					p.y |= Ocd::OcdPoint32::FlagDash;
 			}
 		}
+		else if (point.isCornerPoint())
+			p.y |= Ocd::OcdPoint32::FlagCorner;			
 		if (curve_start)
 			p.x |= Ocd::OcdPoint32::FlagCtl1;
 		if (hole_point)
