@@ -19,6 +19,7 @@
 #include <QCursor>
 #include <QEvent>
 #include <QFlags>
+#include <QGuiApplication>
 #include <QKeyEvent>
 #include <QLatin1String>
 #include <QLocale>
@@ -74,7 +75,11 @@ namespace {
 EditPointTool::EditPointTool(MapEditorController* editor, QAction* tool_action)
  : EditTool { editor, EditPoint, tool_action }
 {
-	// noting else
+	// Handle window switching with Alt-Tab. The app doesn't receive the key release event on focus change.
+	QObject::connect(qApp, &QGuiApplication::applicationStateChanged, this, [this](Qt::ApplicationState state){
+	    if (state == Qt::ApplicationState::ApplicationInactive)
+			switch_corner_points = false;
+	});
 }
 
 EditPointTool::~EditPointTool()
@@ -195,6 +200,19 @@ void EditPointTool::clickPress()
 			
 			auto hover_coord = hover_object->getCoordinate(hover_point);
 			hover_coord.setDashPoint(!hover_coord.isDashPoint());
+			hover_object->setCoordinate(hover_point, hover_coord);
+			hover_object->update();
+			updateDirtyRect();
+			waiting_for_mouse_release = true;
+		}
+		else if (switch_corner_points &&
+		    !hover_object->isCurveHandle(hover_point))
+		{
+			// Switch point between corner / normal point
+			createReplaceUndoStep(hover_object);
+			
+			auto hover_coord = hover_object->getCoordinate(hover_point);
+			hover_coord.setCornerPoint(!hover_coord.isCornerPoint());
 			hover_object->setCoordinate(hover_point, hover_coord);
 			hover_object->update();
 			updateDirtyRect();
@@ -431,6 +449,11 @@ bool EditPointTool::keyPress(QKeyEvent* event)
 		updateStatusText();
 		return true;
 		
+	case Qt::Key_Alt:
+		switch_corner_points = true;
+		updateStatusText();
+		return true;
+		
 	case Qt::Key_Control:
 		if (editingInProgress())
 			activateAngleHelperWhileEditing();
@@ -480,6 +503,11 @@ bool EditPointTool::keyRelease(QKeyEvent* event)
 		switch_dash_points = false;
 		if (dash_points_button)
 			dash_points_button->setChecked(switch_dash_points);
+		updateStatusText();
+		return true;
+		
+	case Qt::Key_Alt:
+		switch_corner_points = false;
 		updateStatusText();
 		return true;
 		
@@ -747,8 +775,10 @@ void EditPointTool::updateStatusText()
 				}
 				else if (switch_dash_points)
 					text = tr("<b>%1+Click</b> on point to switch between dash and normal point. ").arg(ModifierKey::space());
+				else if (switch_corner_points)
+					text = tr("<b>%1+Click</b> on point to switch between corner and normal point. ").arg(ModifierKey::alt());
 				else
-					text += QLatin1String("| ") + ::LibreMapper::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::control(), ModifierKey::space());
+					text += QLatin1String("| ") + ::LibreMapper::MapEditorTool::tr("More: %1, %2, %3").arg(ModifierKey::control(), ModifierKey::space(), ModifierKey::alt());
 			}
 		}
 	}
