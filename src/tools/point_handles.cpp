@@ -111,8 +111,12 @@ void PointHandles::draw(
 					handle_type = StartHandle;
 				else if (i == part.last_index && !part.isClosed()) // || coord.isHolePoint())
 					handle_type = EndHandle;
-				else
-					handle_type = coord.isDashPoint() ? DashHandle : NormalHandle;
+				else if (coord.isDashPoint())
+					handle_type = DashHandle;
+				else if (coord.isCornerPoint())
+					handle_type = CornerHandle;
+				else 
+					handle_type = NormalHandle;
 				
 				// Draw incoming curve handle
 				QPointF curve_handle;
