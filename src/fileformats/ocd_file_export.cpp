@@ -3004,6 +3004,10 @@ quint16 OcdFileExport::exportCoordinates(const MapCoordVector& coords, const Sym
 	bool curve_start = false;
 	bool hole_point = false;
 	bool curve_continue = false;
+	// FIXME - handle combined symbols, i.e. "decorated" line symbols or dashed line and area combinations
+	bool const make_half_len_dashes = symbol->getType() == Symbol::Line && symbol->asLine()->isDashed()
+	                                  && coords.size() > 4 && coords[coords.size() - 1].isClosePoint();
+
 	for (const auto& point : coords)
 	{
 		if (point.nativeX() < bottom_left.nativeX())
@@ -3040,7 +3044,9 @@ quint16 OcdFileExport::exportCoordinates(const MapCoordVector& coords, const Sym
 			p.y |= Ocd::OcdPoint32::FlagHole;
 		if (curve_continue)
 			p.x |= Ocd::OcdPoint32::FlagCtl2;
-		
+		if (make_half_len_dashes && (!num_points || num_points == coords.size() - 1))
+			p.y |=  Ocd::OcdPoint32::FlagDash;
+
 		curve_continue = curve_start;
 		curve_start = point.isCurveStart();
 		hole_point = point.isHolePoint();
