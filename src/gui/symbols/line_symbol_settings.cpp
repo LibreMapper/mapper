@@ -718,8 +718,9 @@ void LineSymbolSettings::updateStates()
 	{
 		mid_symbol_widget->setEnabled(!symbol->mid_symbol->isEmpty());
 	}
-	mid_symbol_distance_label->setEnabled(mid_symbol_distance_label->isEnabled() && symbol->mid_symbols_per_spot > 1);
-	mid_symbol_distance_edit->setEnabled(mid_symbol_distance_edit->isEnabled() && symbol->mid_symbols_per_spot > 1);
+	const bool mid_symbol_distance_enabled = !symbol->mid_symbol->isEmpty() && symbol->mid_symbols_per_spot > 1;
+	mid_symbol_distance_label->setEnabled(mid_symbol_distance_enabled);
+	mid_symbol_distance_edit->setEnabled(mid_symbol_distance_enabled);
 	
 	const bool border_active = symbol_active && symbol->have_border_lines;
 	for (auto border_widget : border_widget_list)
