@@ -728,8 +728,8 @@ void OcdFileImport::importColor(const QString& param_string)
 		if (cmyk != color->getCmyk())
 			// The color's CMYK was customized.
 			color->setCmyk(cmyk);
-		color->setKnockout(!overprinting);
 	}
+	color->setKnockout(!overprinting);
 }
 
 namespace {
