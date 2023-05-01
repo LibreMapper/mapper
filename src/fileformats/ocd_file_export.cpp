@@ -1118,12 +1118,29 @@ void OcdFileExport::exportSymbols(OcdFile<Format>& file)
 }
 
 
+template < class OcdBaseSymbol >
+void exportOcdTool(const Symbol* symbol, OcdBaseSymbol& ocd_base_symbol)
+{
+	ocd_base_symbol.tool = symbol->ocdPreferredTool();
+}
+
+
+template < >
+void exportOcdTool<Ocd::BaseSymbolV8>(const Symbol* symbol, Ocd::BaseSymbolV8& ocd_base_symbol)
+{
+	// nothing - V8 does not have the preferred tool setting
+	Q_UNUSED(symbol)
+	Q_UNUSED(ocd_base_symbol)
+}
+
+
 template< class OcdBaseSymbol >
 void OcdFileExport::setupBaseSymbol(const Symbol* symbol, quint32 symbol_number, OcdBaseSymbol& ocd_base_symbol)
 {
 	ocd_base_symbol = {};
 	ocd_base_symbol.description = toOcdString(symbol->getPlainTextName());
 	ocd_base_symbol.number = decltype(ocd_base_symbol.number)(symbol_number);
+	exportOcdTool(symbol, ocd_base_symbol);
 	
 	if (symbol->isProtected())
 		ocd_base_symbol.status |= Ocd::SymbolProtected;

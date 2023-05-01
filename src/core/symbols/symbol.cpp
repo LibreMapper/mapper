@@ -251,6 +251,10 @@ void Symbol::save(QXmlStreamWriter& xml, const Map& map) const
 	symbol_element.writeAttribute(QLatin1String("is_helper_symbol"), is_helper_symbol);
 	symbol_element.writeAttribute(QLatin1String("is_hidden"), is_hidden);
 	symbol_element.writeAttribute(QLatin1String("is_protected"), is_protected);
+	// Assume that the OCD tool is 0 take it as the default.
+	// Don't write it into the file unless needed.
+	if (ocd_preferred_tool)
+		symbol_element.writeAttribute(QLatin1String("ocd_tool"), ocd_preferred_tool);
 	if (!description.isEmpty())
 		xml.writeTextElement(QLatin1String("description"), description);
 	saveImpl(xml, map);
@@ -332,6 +336,7 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 	symbol->is_helper_symbol = symbol_element.attribute<bool>(QLatin1String("is_helper_symbol"));
 	symbol->is_hidden = symbol_element.attribute<bool>(QLatin1String("is_hidden"));
 	symbol->is_protected = symbol_element.attribute<bool>(QLatin1String("is_protected"));
+	symbol->ocd_preferred_tool = symbol_element.attribute<quint8>(QLatin1String("ocd_tool"));
 	
 	while (xml.readNextStartElement())
 	{
