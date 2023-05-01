@@ -1057,6 +1057,22 @@ void OcdFileImport::importView(const QString& param_string)
 }
 
 
+template < class OcdBaseSymbol >
+void importOcdTool(Symbol* symbol, const OcdBaseSymbol& ocd_base_symbol)
+{
+	symbol->setOcdTool(ocd_base_symbol.tool);
+}
+
+
+template < >
+void importOcdTool<Ocd::BaseSymbolV8>(Symbol* symbol, const Ocd::BaseSymbolV8& ocd_base_symbol)
+{
+	// nothing - V8 does not have the preferred tool setting
+	Q_UNUSED(symbol)
+	Q_UNUSED(ocd_base_symbol)
+}
+
+
 template< class OcdBaseSymbol >
 void OcdFileImport::setupBaseSymbol(Symbol* symbol, const OcdBaseSymbol& ocd_base_symbol)
 {
@@ -1068,6 +1084,7 @@ void OcdFileImport::setupBaseSymbol(Symbol* symbol, const OcdBaseSymbol& ocd_bas
 	symbol->setIsHelperSymbol(false);
 	symbol->setProtected(ocd_base_symbol.status & Ocd::SymbolProtected);
 	symbol->setHidden(ocd_base_symbol.status & Ocd::SymbolHidden);
+	importOcdTool(symbol, ocd_base_symbol);
 	setupIcon(symbol, ocd_base_symbol);
 }
 

@@ -516,6 +516,17 @@ public:
 	 */
 	virtual int getMinimumLength() const;
 	
+	/**
+	 * \see setOcdTool
+	 */
+	quint8 ocdPreferredTool() const { return ocd_preferred_tool; };
+
+	/**
+	 * setOcdTool has been introduced exclusively for enhandec OCD format
+	 * compatibility. It is not used by Mapper except for OCD file export.
+	 */	
+	void setOcdTool(quint8 tool) { ocd_preferred_tool = tool; };	
+
 protected:
 	/**
 	 * Sets the rotatability state of the symbol.
@@ -638,6 +649,7 @@ private:
 	bool is_hidden;           /// \see isHidden()
 	bool is_protected;        /// \see isProtected()
 	bool is_rotatable = false;
+	quint8 ocd_preferred_tool = 0; /// \see setOcdTool()
 };
 
 
