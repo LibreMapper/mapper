@@ -489,6 +489,10 @@ QString stringForColor(int i, const MapColor& color)
 	    << "\tk" << qRound(cmyk.k * 1000)/10.0
 	    << "\to" << (color.getKnockout() ? '0' : '1')
 	    << "\tt" << qRound(color.getOpacity() * 100);
+
+	if(!color.ocdBlend().isEmpty())
+		out << "\tb" << color.ocdBlend();
+
 	if (color.getSpotColorMethod() == MapColor::CustomColor)
 	{
 		for (const auto& component : color.getComponents())
@@ -502,6 +506,7 @@ QString stringForColor(int i, const MapColor& color)
 		out << "\ts" << color.getSpotColorName()
 		    << "\tp" << 100;
 	}
+
 	return string_9;
 }
 
