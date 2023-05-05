@@ -337,6 +337,21 @@ public:
 	
 	
 	/**
+	 * setOcdBlend has been introduced exclusively for enhanced OCD format
+	 * compatibility. It is not used by Mapper except for OCD file export.
+	 * 
+	 * The color blend is described at
+	 * https://www.ocad.com/wiki/ocad/en/index.php?title=Blend_Mode.
+	 */	
+	void setOcdBlend(const QString& blend_mode);
+	
+	/**
+	 * Returns the value of the knockout flag.
+	 */
+	const QString ocdBlend() const;
+	
+	
+	/**
 	 * Returns how the CMYK color value is determined.
 	 * 
 	 * Returns CustomColor (for custom CMYK values, e.g. for named spot colors),
@@ -481,6 +496,7 @@ protected:
 	char cmyk_color_method;
 	char rgb_color_method;
 	char flags;
+	QString ocd_blend = { }; ///< OCD color blend mode. \see setOcdBlend
 	
 	QString spot_color_name;
 	double screen_frequency = -1;  ///< Halftone screen frequency in lines per inch.
