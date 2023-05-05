@@ -247,6 +247,15 @@ bool MapColor::getKnockout() const
 	return (flags & MapColor::Knockout) > 0;
 }
 
+void MapColor::setOcdBlend(const QString& blend_mode)
+{
+	ocd_blend = blend_mode;
+}
+
+const QString MapColor::ocdBlend() const
+{
+	return ocd_blend;
+}
 
 void MapColor::setCmyk(const MapColorCmyk& new_cmyk)
 {
