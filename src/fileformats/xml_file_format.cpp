@@ -169,6 +169,7 @@ namespace literal
 	static const QLatin1String g("g");
 	static const QLatin1String b("b");
 	static const QLatin1String opacity("opacity");
+	static const QLatin1String ocd_blend("ocd_blend");
 	
 	static const QLatin1String symbols("symbols");
 	static const QLatin1String id("id");
@@ -323,6 +324,8 @@ void XMLFileExporter::exportColors()
 		color_element.writeAttribute(literal::y, cmyk.y, 3);
 		color_element.writeAttribute(literal::k, cmyk.k, 3);
 		color_element.writeAttribute(literal::opacity, color->getOpacity(), 3);
+		if (!color->ocdBlend().isEmpty())
+		color_element.writeAttribute(literal::ocd_blend, color->ocdBlend());
 		
 		if (color->getSpotColorMethod() != MapColor::UndefinedMethod)
 		{
@@ -763,6 +766,8 @@ void XMLFileImporter::importColors()
 				color->setId(color_element.attribute<int>(literal::id));
 			if (color_element.hasAttribute(literal::opacity))
 				color->setOpacity(color_element.attribute<float>(literal::opacity));
+			if (color_element.hasAttribute(literal::ocd_blend))
+				color->setOcdBlend(color_element.attribute<QString>(literal::ocd_blend));
 			
 			MapColorCmyk cmyk;
 			cmyk.c = color_element.attribute<float>(literal::c);
