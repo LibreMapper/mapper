@@ -633,6 +633,7 @@ void OcdFileImport::importColor(const QString& param_string)
 	bool number_ok = false;
 	MapColorCmyk cmyk { 0.0, 0.0, 0.0, 0.0 };
 	bool overprinting = false;
+	QStringView ocd_blend;
 	float opacity = 1.0f;
 	
 	SpotColorComponents components;
@@ -696,6 +697,9 @@ void OcdFileImport::importColor(const QString& param_string)
 			}
 			spot_color_name.clear();
 			break;
+		case 'b': // blend mode - https://www.ocad.com/wiki/ocad/en/index.php?title=Blend_Mode
+			ocd_blend = param_value;
+			break;
 		default:
 			; // nothing
 		}
@@ -735,6 +739,7 @@ void OcdFileImport::importColor(const QString& param_string)
 			color->setCmyk(cmyk);
 	}
 	color->setKnockout(!overprinting);
+	color->setOcdBlend(ocd_blend.toString());
 }
 
 namespace {
