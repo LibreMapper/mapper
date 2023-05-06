@@ -219,7 +219,8 @@ namespace Ocd
 		{
 			FlagCtl1 = 0x01,
 			FlagCtl2 = 0x02,
-			FlagLeft = 0x04
+			FlagLeft = 0x04,
+			FlagGap  = 0x08
 		};
 		
 		// Flags in Y coordinate
