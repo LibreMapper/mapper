@@ -3059,7 +3059,13 @@ quint16 OcdFileExport::exportCoordinates(const MapCoordVector& coords, const Sym
 			}
 		}
 		else if (point.isCornerPoint())
-			p.y |= Ocd::OcdPoint32::FlagCorner;			
+			p.y |= Ocd::OcdPoint32::FlagCorner;	
+		if(point.isGapPoint())
+			p.x |= Ocd::OcdPoint32::FlagGap;
+		if(point.isNoLeftPoint())
+			p.x |= Ocd::OcdPoint32::FlagLeft;
+		if(point.isNoRightPoint())
+			p.y |= Ocd::OcdPoint32::FlagRight;
 		if (curve_start)
 			p.x |= Ocd::OcdPoint32::FlagCtl1;
 		if (hole_point)

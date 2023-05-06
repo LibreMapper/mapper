@@ -76,11 +76,13 @@ public:
 		HolePoint  = 1 << 4,
 		DashPoint  = 1 << 5,
 		CornerPoint = 1 << 6,
+		NoLeftPoint = 1 << 7,
+		NoRightPoint = 1 << 8,
 		//...
 		// Special masks for VirtualPath::copy().
 		// CurveStart is handled explicitly there.
-		MaskCopiedFlagsAtStart = GapPoint | DashPoint | CornerPoint,
-		MaskCopiedFlagsAtEnd   = GapPoint | DashPoint | CornerPoint | HolePoint | ClosePoint,
+		MaskCopiedFlagsAtStart = GapPoint | DashPoint | CornerPoint | NoLeftPoint | NoRightPoint,
+		MaskCopiedFlagsAtEnd   = GapPoint | DashPoint | CornerPoint | NoLeftPoint | NoRightPoint | HolePoint | ClosePoint,
 	};
 	Q_DECLARE_FLAGS(Flags, Flag)
 	
@@ -352,6 +354,19 @@ public:
 	
 	/** Sets the gap point flag. */
 	void setGapPoint(bool value);
+	
+	
+	/** Is this coordinate a left-sided gap point? */
+	constexpr bool isNoLeftPoint() const;
+	
+	/** Sets the double line gap point flag for the left side. */
+	void setNoLeftPoint(bool value);
+	
+	/** Is this coordinate a right-sided gap point? */
+	constexpr bool isNoRightPoint() const;
+	
+	/** Sets the double line gap point flag for the right side. */
+	void setNoRightPoint(bool value);
 	
 	
 	/** Additive inverse. */
@@ -930,6 +945,25 @@ void MapCoord::setGapPoint(bool value)
 		fp ^= GapPoint;
 }
 
+constexpr bool MapCoord::isNoLeftPoint() const
+{
+	return fp.testFlag(NoLeftPoint);
+}
+
+inline void MapCoord::setNoLeftPoint(bool value)
+{
+	fp.setFlag(NoLeftPoint, value);
+}
+
+constexpr bool MapCoord::isNoRightPoint() const
+{
+	return fp.testFlag(NoRightPoint);
+}
+
+inline void MapCoord::setNoRightPoint(bool value)
+{
+	fp.setFlag(NoRightPoint, value);
+}
 
 constexpr MapCoord MapCoord::operator-() const
 {
