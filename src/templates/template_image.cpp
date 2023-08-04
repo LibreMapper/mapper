@@ -571,7 +571,8 @@ void TemplateImage::drawOntoTemplateImpl(MapCoordF* coords, int num_coords, cons
 		image = image.convertToFormat(QImage::Format_ARGB32_Premultiplied);
 	
 	QPainter painter(&image);
-	painter.setRenderHint(QPainter::Antialiasing);
+	if (mode.testFlag(Antialias))
+		painter.setRenderHint(QPainter::Antialiasing);
 	
 	QPen pen(color);
 	pen.setWidthF(width);

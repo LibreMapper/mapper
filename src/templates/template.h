@@ -136,7 +136,8 @@ public:
 		FilledAreas         = 0x01,  ///< Fill the area defined by the scribble line.
 		ComposeBackground   = 0x02,  ///< Draw lines or fill areas only in transparent areas.
 		PatternFill         = 0x04,  ///< Fill areas with a dot pattern.
-		ScribbleOptionsMask = 0x07,  ///< All bits used by ScribbleOption.
+		Antialias           = 0x80,  ///< Use antialiasing for draw on template. Experimental feature to disable antialiasing, hence the top bit assignment.
+		ScribbleOptionsMask = 0x87,  ///< All bits used by ScribbleOption.
 	};
 	Q_DECLARE_FLAGS(ScribbleOptions, ScribbleOption)
 	
