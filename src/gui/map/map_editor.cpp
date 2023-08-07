@@ -95,6 +95,7 @@
 #include "core/objects/boolean_tool.h"
 #include "core/objects/object.h"
 #include "core/objects/object_operations.h"
+#include "core/symbols/area_symbol.h"
 #include "core/symbols/symbol.h"
 #include "core/symbols/symbol_icon_decorator.h"
 #include "fileformats/file_format.h"
@@ -927,6 +928,7 @@ void MapEditorController::assignKeyboardShortcuts()
 	findAction("connectpaths")->setShortcut(QKeySequence(tr("C")));
 	findAction("rotateobjects")->setShortcut(QKeySequence(tr("R")));
 	findAction("scaleobjects")->setShortcut(QKeySequence(tr("Z")));
+	findAction("enlargeobjects")->setShortcut(QKeySequence(tr("Ctrl+E")));
 	findAction("cutobject")->setShortcut(QKeySequence(tr("K")));
 	findAction("cuthole")->setShortcut(QKeySequence(tr("H")));
 	findAction("moveparallel")->setShortcut(QKeySequence(tr("Ctrl+Shift+M")));
@@ -1054,6 +1056,7 @@ void MapEditorController::createActions()
 	rotate_act = newToolAction("rotateobjects", tr("Rotate objects"), this, SLOT(rotateClicked()), "tool-rotate.png", QString{}, "toolbars.html#rotate");
 	rotate_pattern_act = newToolAction("rotatepatterns", tr("Rotate pattern"), this, SLOT(rotatePatternClicked()), "tool-rotate-pattern.png", QString{}, "toolbars.html#tool_rotate_pattern");
 	scale_act = newToolAction("scaleobjects", tr("Scale objects"), this, SLOT(scaleClicked()), "tool-scale.png", QString{}, "toolbars.html#scale");
+	enlarge_act = newAction("enlargeobjects", tr("Enlarge object to minimum"), this, SLOT(enlargeClicked()), "tool-enlarge-to-minimum.png", QString{}, "toolbars.html#enlarge_to_minimum");
 	measure_act = newCheckAction("measure", tr("Measure lengths and areas"), this, SLOT(measureClicked(bool)), "tool-measure.png", QString{}, "toolbars.html#measure");
 	boolean_union_act = newAction("booleanunion", tr("Unify areas"), this, SLOT(booleanUnionClicked()), "tool-boolean-union.png", QString{}, "toolbars.html#unify_areas");
 	boolean_intersection_act = newAction("booleanintersection", tr("Intersect areas"), this, SLOT(booleanIntersectionClicked()), "tool-boolean-intersection.png", QString{}, "toolbars.html#intersect_areas");
@@ -1226,6 +1229,7 @@ void MapEditorController::createMenuAndToolbars()
 	tools_menu->addAction(rotate_act);
 	tools_menu->addAction(rotate_pattern_act);
 	tools_menu->addAction(scale_act);
+	tools_menu->addAction(enlarge_act);
 	tools_menu->addAction(measure_act);
 	tools_menu->addAction(convert_to_curves_act);
 	tools_menu->addAction(simplify_path_act);
@@ -2617,6 +2621,8 @@ void MapEditorController::updateObjectDependentActions()
 	convert_to_curves_act->setStatusTip(tr("Turn paths made of straight segments into smooth bezier splines.") + (convert_to_curves_act->isEnabled() ? QString{} : QString(QLatin1Char(' ') + tr("Select a path object to activate this tool."))));
 	move_parallel_act->setEnabled(have_area || have_line);
 	move_parallel_act->setStatusTip(tr("Move lines and area borders in and out.") + (move_parallel_act->isEnabled() ? QString{} : QString(QLatin1Char(' ') + tr("Select at least one line or area object to activate this tool."))));
+	enlarge_act->setEnabled(have_area || have_line);
+	enlarge_act->setStatusTip(tr("Enlarge lines and area to their minimum size.") + (enlarge_act->isEnabled() ? QString{} : QString(QLatin1Char(' ') + tr("Select at least one line or area object to activate this tool."))));
 	simplify_path_act->setEnabled(have_area || have_line);
 	simplify_path_act->setStatusTip(tr("Reduce the number of points in path objects while trying to retain their shape.") + (simplify_path_act->isEnabled() ? QString{} : QString(QLatin1Char(' ') + tr("Select a path object to activate this tool."))));
 	
@@ -3359,6 +3365,56 @@ void MapEditorController::rotatePatternClicked()
 void MapEditorController::scaleClicked()
 {
 	setTool(new ScaleTool(this, scale_act));
+}
+
+void MapEditorController::enlargeClicked()
+{
+	auto* undo_step = new ReplaceObjectsUndoStep(map);
+	MapPart* part = map->getCurrentPart();
+
+	for (auto* object : map->selectedObjects())
+	{
+		if (object->getSymbol()->getContainedTypes() & (Symbol::Line | Symbol::Area))
+		{
+			const Symbol* symbol = object->getSymbol();
+			PathObject* path = object->asPath();
+
+			qreal object_size = -1;
+			qreal desired_size = -1;
+
+			const PathPartVector& parts = path->parts();
+			if (symbol->getType() == Symbol::Area)
+			{
+				desired_size = symbol->asArea()->getMinimumArea(); // getMinimumArea() returns thousands of square millimeters
+				object_size = parts.front().calculateArea() * 1000; // millimeters, multiply by 1000 to match the above unit
+			}
+			else if (symbol->getType() == Symbol::Combined)
+			{
+				/// \todo Extract the combined symbol inspection from the measure tool into a shared function and use it for minimum size determination here.
+				QMessageBox::information(window, tr("TODO item"), tr("Enlargement of objects with combined symbols is to be implemented."));
+				return;
+			}
+
+			if (desired_size > object_size && object_size > 0)
+			{
+				auto* undo_duplicate = object->duplicate();
+				undo_duplicate->setMap(map);
+				undo_step->addObject(part->findObjectIndex(path), undo_duplicate);
+				// We rescale area objects only hence the square root in the scaling factor calculation.
+				object->scale(MapCoordF(object->getExtent().center()), std::sqrt(desired_size) / std::sqrt(object_size));
+				object->update();
+			}
+		}
+	}
+
+	if (undo_step->isEmpty())
+		delete undo_step;
+	else
+	{
+		map->setObjectsDirty();
+		map->push(undo_step);
+		map->emitSelectionEdited();
+	}
 }
 
 void MapEditorController::measureClicked(bool checked)
