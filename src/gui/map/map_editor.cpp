@@ -160,6 +160,8 @@
 
 #ifdef MAPPER_USE_GDAL
 #include "gdal/ogr_template.h"
+
+#include <core/symbols/line_symbol.h>
 #endif
 
 
@@ -1070,6 +1072,8 @@ void MapEditorController::createActions()
 	erase_area_act = newToolAction("erasearea", tr("Erase area"), this, SLOT(eraseAreaClicked()), "tool-erase.png", QString{}, "toolbars.html#erase_area");
 	distribute_points_act = newAction("distributepoints", tr("Distribute points along path"), this, SLOT(distributePointsClicked()), "tool-distribute-points.png", QString{}, "toolbars.html#distribute_points"); // TODO: write documentation
 	
+	fill_line_act = newAction("fillline", tr("Fill line object with area symbol"), this, SLOT(fillLineClicked()), "tool-fill-line.png", QString{}, "toolbars.html#fill_line_object");
+	
 	paint_feature = std::make_unique<PaintOnTemplateFeature>(*this);
 	
 	touch_cursor_action = newCheckAction("touchcursor", tr("Enable touch cursor"), map_widget, SLOT(enableTouchCursor(bool)), "tool-touch-cursor.png", QString{}, "toolbars.html#touch_cursor"); // TODO: write documentation
@@ -1263,6 +1267,11 @@ void MapEditorController::createMenuAndToolbars()
 	tools_menu->addAction(erase_area_act);
 	tools_menu->addAction(distribute_points_act);
 	tools_menu->addAction(touch_cursor_action);
+	
+	// Magic tools menu
+	QMenu *magic_tools_menu = window->menuBar()->addMenu(tr("Magic tools"));
+	magic_tools_menu->setWhatsThis(Util::makeWhatThis("magic_tools_menu.html"));
+	magic_tools_menu->addAction(fill_line_act);
 	
 	// Map menu
 	QMenu* map_menu = window->menuBar()->addMenu(tr("M&ap"));
@@ -3385,6 +3394,93 @@ void MapEditorController::rotatePatternClicked()
 void MapEditorController::scaleClicked()
 {
 	setTool(new ScaleTool(this, scale_act));
+}
+
+void MapEditorController::fillLineClicked()
+{
+	auto const* filler_symbol = symbol_widget->getSingleSelectedSymbol();
+
+	if (!filler_symbol || !(filler_symbol->getContainedTypes() & (Symbol::Area | Symbol::Line)))
+	{
+		QMessageBox::warning(window, tr("Fill line tool"), tr("This tool needs exactly one area or line symbol selected."));
+		return;
+	}
+
+	auto undo_step = std::make_unique<DeleteObjectsUndoStep>(map);
+	std::set<Object*> objects_created;
+	std::set<Object*> objects_deselected;
+
+	bool emit_skipped_warning = false;
+	for (auto* object : map->selectedObjects())
+	{
+		if (object->getSymbol()->getType() != Symbol::Line)
+		{
+			emit_skipped_warning = true;
+			continue;
+		}
+
+		auto const* object_symbol = object->getSymbol()->asLine();		
+		auto* path = object->asPath();
+		
+		// We fill the line with the area.
+		Q_ASSERT(path->parts().size() == 1);
+		auto const part = path->parts()[0];
+		
+		MapCoordVector outline_flags;
+		MapCoordVectorF outline_coords;
+		object_symbol->shiftCoordinatesLeft(part, outline_flags, outline_coords);
+		MapCoordVector right_sideline_flags;
+		MapCoordVectorF right_sideline_coords;
+		auto part_copy = part;
+		part_copy.reverse();
+		object_symbol->shiftCoordinatesLeft(part_copy, right_sideline_flags, right_sideline_coords);
+		
+		auto create_one_filler_object = [&](auto outline_flags, auto outline_coords) {
+			std::transform(begin(outline_flags), end(outline_flags), begin(outline_coords), begin(outline_flags),
+			               [](auto coord, auto const& coord_f){
+				coord.setX(coord_f.x());
+				coord.setY(coord_f.y());
+				return coord;
+			});
+			
+			auto* covering_area = new PathObject(filler_symbol, outline_flags, map); // I acknowledge that the use of outline_"flags" feels misleading.
+			covering_area->parts()[0].setClosed(true, true);
+			auto index = map->addObject(covering_area);
+			objects_created.insert(covering_area);
+			objects_deselected.insert(object);
+			undo_step->addObject(index);
+		};
+		
+		if (!part.isClosed() || (filler_symbol->getContainedTypes() & Symbol::Area))
+		{
+			if (!part.isClosed())
+				outline_flags.back().setHolePoint(false); // Make sure to create a continuous boundary around an isolated object.
+			outline_coords.insert(end(outline_coords), begin(right_sideline_coords), end(right_sideline_coords));
+			outline_flags.insert(end(outline_flags), begin(right_sideline_flags), end(right_sideline_flags));				
+			create_one_filler_object(outline_flags, outline_coords);
+		}
+		else
+		{
+			create_one_filler_object(outline_flags, outline_coords);
+			create_one_filler_object(right_sideline_flags, right_sideline_coords);
+		}
+	}
+
+	if (!undo_step->isEmpty())
+	{
+		map->setObjectsDirty();
+		map->push(undo_step.release());
+		
+		for (auto const& object_created: objects_created)
+			map->addObjectToSelection(object_created, false);
+		for (auto const& object_deselected : objects_deselected)
+			map->removeObjectFromSelection(object_deselected, false);
+		
+		map->emitSelectionEdited();
+	}
+	
+	if (emit_skipped_warning)
+		QMessageBox::warning(window, tr("Fill line tool"), tr("One of the selected objects was not a line symbol. Make sure to check the result and possibly undo the action."));		
 }
 
 void MapEditorController::measureClicked(bool checked)

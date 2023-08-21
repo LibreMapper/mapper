@@ -470,6 +470,9 @@ public slots:
 	 *  The prerequisites for using the tool must be given. */
 	void distributePointsClicked();
 	
+	/** Fills selected line objects with selected area symbol */
+	void fillLineClicked();
+	
 	/** Enables or disables GPS display. */
 	void enableGPSDisplay(bool enable);
 	/** Enables or disables showing distance rings when GPS display is active. */
@@ -802,6 +805,8 @@ private:
 	QAction* clip_area_act = {};
 	QAction* erase_area_act = {};
 	QAction* distribute_points_act = {};
+	
+	QAction* fill_line_act = {};
 	
 	std::unique_ptr<PaintOnTemplateFeature> paint_feature;
 	
