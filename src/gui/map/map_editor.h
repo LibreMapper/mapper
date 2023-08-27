@@ -472,6 +472,8 @@ public slots:
 	
 	/** Fills selected line objects with selected area symbol */
 	void fillLineClicked();
+	/** Select objects of certain size - length, area; larger than, smaller than */
+	void selectSizeClicked();
 	
 	/** Enables or disables GPS display. */
 	void enableGPSDisplay(bool enable);
@@ -807,6 +809,7 @@ private:
 	QAction* distribute_points_act = {};
 	
 	QAction* fill_line_act = {};
+	QAction* select_size_act = {};
 	
 	std::unique_ptr<PaintOnTemplateFeature> paint_feature;
 	

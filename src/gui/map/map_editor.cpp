@@ -27,18 +27,23 @@
 #include <QActionGroup>
 #include <QApplication>
 #include <QBuffer>
+#include <QButtonGroup>
 #include <QByteArray>
 #include <QComboBox>
 #include <QDate>
 #include <QDialog>
+#include <QDialogButtonBox>
 #include <QDir>
 #include <QDockWidget>
+#include <QDoubleSpinBox>
 #include <QEvent>
 #include <QFileInfo>
 #include <QFlags>
 #include <QFont>
 #include <QFontMetrics>
+#include <QFormLayout>
 #include <QFrame>
+#include <QGroupBox>
 #include <QHBoxLayout>
 #include <QIcon>
 #include <QImage> // IWYU pragma: keep
@@ -64,6 +69,7 @@
 #include <QPointF>
 #include <QProgressDialog>
 #include <QPushButton>
+#include <QRadioButton>
 #include <QRect>
 #include <QRectF>
 #include <QSettings>
@@ -94,6 +100,7 @@
 #include "core/objects/boolean_tool.h"
 #include "core/objects/object.h"
 #include "core/objects/object_operations.h"
+#include "core/symbols/area_symbol.h"
 #include "core/symbols/symbol.h"
 #include "core/symbols/symbol_icon_decorator.h"
 #include "fileformats/file_format.h"
@@ -1073,6 +1080,7 @@ void MapEditorController::createActions()
 	distribute_points_act = newAction("distributepoints", tr("Distribute points along path"), this, SLOT(distributePointsClicked()), "tool-distribute-points.png", QString{}, "toolbars.html#distribute_points"); // TODO: write documentation
 	
 	fill_line_act = newAction("fillline", tr("Fill line object with area symbol"), this, SLOT(fillLineClicked()), "tool-fill-line.png", QString{}, "toolbars.html#fill_line_object");
+	select_size_act = newAction("selectsize", tr("Select objects of given size"), this, SLOT(selectSizeClicked()), "tool-select-size.png", QString{}, "toolbars.html#select_by_object_size");
 	
 	paint_feature = std::make_unique<PaintOnTemplateFeature>(*this);
 	
@@ -1272,6 +1280,7 @@ void MapEditorController::createMenuAndToolbars()
 	QMenu *magic_tools_menu = window->menuBar()->addMenu(tr("Magic tools"));
 	magic_tools_menu->setWhatsThis(Util::makeWhatThis("magic_tools_menu.html"));
 	magic_tools_menu->addAction(fill_line_act);
+	magic_tools_menu->addAction(select_size_act);
 	
 	// Map menu
 	QMenu* map_menu = window->menuBar()->addMenu(tr("M&ap"));
@@ -3394,6 +3403,129 @@ void MapEditorController::rotatePatternClicked()
 void MapEditorController::scaleClicked()
 {
 	setTool(new ScaleTool(this, scale_act));
+}
+
+void MapEditorController::selectSizeClicked()
+{
+	auto* select_objects_dialog = new QDialog(window);
+	select_objects_dialog->setWindowTitle(tr("Select objects by their size"));
+	auto* form_layout = new QVBoxLayout(select_objects_dialog);
+
+	auto* object_size_widget = new QWidget(select_objects_dialog);
+	auto* size_input_layout = new QHBoxLayout(object_size_widget);
+	auto* measure_method_label = new QLabel(tr("Object"), object_size_widget);
+	size_input_layout->addWidget(measure_method_label);
+	auto* measure_method_selector = new QComboBox(object_size_widget);
+	measure_method_selector->addItem(tr("area"));
+	measure_method_selector->addItem(tr("length"));
+	size_input_layout->addWidget(measure_method_selector);
+	auto* object_size_input = new QDoubleSpinBox(object_size_widget);
+	size_input_layout->addWidget(object_size_input);
+	auto* measure_unit = new QLabel(QString(), object_size_widget);
+	auto label_setter = [&measure_unit](int index) { measure_unit->setText(tr(index ? "mm" : "mm²")); };
+	connect(measure_method_selector, &QComboBox::currentIndexChanged, this, label_setter);
+	size_input_layout->addWidget(measure_unit);
+	form_layout->addWidget(object_size_widget);
+
+	auto* selection_criteria_box = new QGroupBox(tr("Selection criteria"), select_objects_dialog);
+	auto* selection_box_layout = new QVBoxLayout(selection_criteria_box);
+	auto* criteria_button_group = new QButtonGroup(selection_criteria_box);
+	auto* select_smaller_input = new QRadioButton(tr("Smaller than the above size"), selection_criteria_box);
+	select_smaller_input->setChecked(true);
+	criteria_button_group->addButton(select_smaller_input);
+	selection_box_layout->addWidget(select_smaller_input);
+	auto* select_larger_input = new QRadioButton(tr("Larger than the above size"), selection_criteria_box);
+	criteria_button_group->addButton(select_larger_input);
+	selection_box_layout->addWidget(select_larger_input);
+	form_layout->addWidget(selection_criteria_box);
+
+	auto* select_objects_from_box = new QGroupBox(tr("Select objects from"), select_objects_dialog);
+	auto* select_objects_from_layout = new QVBoxLayout(select_objects_from_box);
+	auto* source_button_group = new QButtonGroup(select_objects_from_box);
+	auto* from_selected_symbols_input = new QRadioButton(tr("Those with currently selected symbol(s)"), select_objects_from_box);
+	from_selected_symbols_input->setChecked(true);
+	source_button_group->addButton(from_selected_symbols_input);
+	select_objects_from_layout->addWidget(from_selected_symbols_input);
+	auto* from_current_selection_input = new QRadioButton(tr("Current selection"), select_objects_from_box);
+	source_button_group->addButton(from_current_selection_input);
+	select_objects_from_layout->addWidget(from_current_selection_input);
+	auto* from_all_objects_input = new QRadioButton(tr("All objects"), select_objects_from_box);
+	source_button_group->addButton(from_all_objects_input);
+	select_objects_from_layout->addWidget(from_all_objects_input);
+	form_layout->addWidget(select_objects_from_box);
+
+	auto* vertical_spacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+	form_layout->addItem(vertical_spacer);
+
+	auto* button_box = new QDialogButtonBox(select_objects_dialog);
+	button_box->setOrientation(Qt::Horizontal);
+	button_box->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+	form_layout->addWidget(button_box);
+
+	QObject::connect(button_box, SIGNAL(accepted()), select_objects_dialog, SLOT(accept()));
+	QObject::connect(button_box, SIGNAL(rejected()), select_objects_dialog, SLOT(reject()));
+
+	label_setter(0); // Unconditionally pre-select area measurement
+	if (active_symbol)
+	{
+		if (active_symbol->getType() == Symbol::Area)
+		{
+			object_size_input->setValue(0.001 * active_symbol->asArea()->getMinimumArea());
+		}
+		else if (active_symbol->getType() == Symbol::Line)
+		{
+			object_size_input->setValue(qreal(active_symbol->asLine()->getMinimumLength())/1000);
+			measure_method_selector->setCurrentIndex(1);
+		}
+	}
+
+	if(select_objects_dialog->exec() == QDialog::Rejected)
+		return;
+
+	if (from_selected_symbols_input->isChecked())
+	{
+		selectObjectsClicked(true); /// \fixme We don't want to emit selection changed signal here. Extract the shared code from selectObjectsClicked() into a separate method.
+	}
+	else if (from_all_objects_input->isChecked())
+	{
+		map->clearObjectSelection(false);
+		map->getCurrentPart()->applyOnAllObjects([this](Object* object) {
+			map->addObjectToSelection(object, false);
+		});
+	}
+
+	auto desired_object_size = object_size_input->value();
+	auto select_smaller = select_smaller_input->isChecked();
+	auto selected_objects = std::vector<Object*>();
+
+	for (auto* object : map->selectedObjects())
+	{
+		qreal object_size;
+
+		if (measure_method_selector->currentIndex() == 0) // Area
+		{
+			if (!object->getSymbol()->getContainedTypes().testFlag(Symbol::Area))
+				continue;
+			object_size = object->asPath()->parts().front().calculateArea();
+		}
+		else if (measure_method_selector->currentIndex() == 1) // Line
+		{
+			if (!object->getSymbol()->getContainedTypes().testFlag(Symbol::Line))
+				continue;
+			object_size = object->asPath()->getPaperLength();
+		}
+
+		if ((select_smaller && object_size < desired_object_size)
+		    || (!select_smaller && object_size > desired_object_size))
+		{
+			selected_objects.emplace_back(object);
+		}
+	}
+
+	map->clearObjectSelection(false);
+	for (auto* object : selected_objects)
+		map->addObjectToSelection(object, false);
+	map->emitSelectionChanged();
 }
 
 void MapEditorController::fillLineClicked()
