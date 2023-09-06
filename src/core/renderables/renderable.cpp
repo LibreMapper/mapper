@@ -578,12 +578,8 @@ void MapRenderables::drawColorSeparation(QPainter* painter, const RenderConfig& 
 
 void MapRenderables::insertRenderablesOfObject(const Object* object)
 {
-	auto end_of_colors = object->renderables().end();
-	auto color = object->renderables().begin();
-	for (; color != end_of_colors; ++color)
-	{
-		operator[](color->first)[object] = color->second;
-	}
+	for (const auto& renderable_entry : object->renderables())
+		operator[](renderable_entry.first)[object] = renderable_entry.second;
 }
 
 void MapRenderables::removeRenderablesOfObject(const Object* object, bool mark_area_as_dirty)
@@ -690,6 +686,9 @@ bool PainterConfig::activate(QPainter* painter, const QPainterPath*& current_cli
 	
 	qreal actual_pen_width = pen_width;
 	
+	// Point of big surprise. This condition in fact changes the line width
+	// units for symbols painted with reserved colors from millimeters to
+	// pixels. Sadly, it does not adjust the line dash parameters.	
 	if (color_priority < 0 && color_priority != MapColor::Registration)
 	{
 		if (color_priority == MapColor::Reserved)
