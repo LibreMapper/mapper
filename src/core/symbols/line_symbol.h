@@ -200,8 +200,22 @@ public:
 	static constexpr qreal miterLimit() { return 1; }
 	
 	// Getters / Setters
+	/**
+	 * getLineWidth returns the line width in micrometers. See setLineWidth for
+	 * further details.
+	 * \return Symbol line width in micrometers.
+	 * \see setLineWidth
+	 */
 	inline int getLineWidth() const {return line_width;}
+	
+	/**
+	 * setLineWidth sets line width in millimeters. Please mind that for
+	 * symbols rendered with negative color priority, but not Map::Reserved,
+	 * the width actually denotes line width in pixels. See
+	 * PainterConfig::activate() for the actual implementation.
+	 */
 	inline void setLineWidth(double width) {line_width = qRound(1000 * width);}
+	
 	inline const MapColor* getColor() const {return color;}
 	inline void setColor(const MapColor* color) {this->color = color;}
 	inline int getMinimumLength() const override {return minimum_length;}
