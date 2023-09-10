@@ -88,6 +88,8 @@ protected slots:
 	
 	void setColorModified() { setColorModified(true); }
 	
+	void colorUsageItemClicked(QListWidgetItem* clicked_item);	
+	
 protected:
 	void setColorModified(bool modified);
 	
