@@ -263,6 +263,8 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 
 	color_usage_list = new QListWidget();
 	color_usage_layout->addWidget(color_usage_list);
+	
+	color_usage_layout->addWidget(new QLabel(tr("Double click an entry to edit the associated symbol.")));
 
 	auto* color_usage_widget = new QWidget();
 	color_usage_widget->setLayout(color_usage_layout);
@@ -281,6 +283,7 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 			color_usage_list->addItem(list_item);
 		}
 	}
+	connect(color_usage_list, &QListWidget::itemDoubleClicked, this, &ColorDialog::colorUsageItemClicked);
 
 
 	properties_widget = new QTabWidget();
@@ -852,6 +855,24 @@ void ColorDialog::rgbValueChanged()
 		) );
 		updateWidgets();
 		setColorModified(true);
+	}
+}
+
+void ColorDialog::colorUsageItemClicked(QListWidgetItem* clicked_item)
+{
+	auto item_data = clicked_item->data(Qt::UserRole);
+	Q_ASSERT(item_data.canConvert<const Symbol*>());
+	auto* symbol = const_cast<Symbol*>(item_data.value<const Symbol*>());
+
+	auto* map = const_cast<Map*>(&this->map);
+	SymbolSettingDialog dialog(symbol, map, this);
+	dialog.setWindowModality(Qt::WindowModal);
+	if (dialog.exec() == QDialog::Accepted)
+	{
+		auto* new_symbol = dialog.getNewSymbol().release();
+		map->setSymbol(new_symbol, map->findSymbolIndex(symbol));
+		if(!new_symbol->containsColor(&source_color))
+			delete color_usage_list->takeItem(color_usage_list->row(clicked_item));
 	}
 }
 
