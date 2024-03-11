@@ -3100,6 +3100,7 @@ QByteArray OcdFileExport::exportTextData(const TextObject* object, int chunk_siz
 	if (text.startsWith(QLatin1Char('\n')))
 		text.prepend(QLatin1Char('\n'));
 	text.replace(QLatin1Char('\n'), QLatin1String("\r\n"));
+	text.append(QLatin1Char('\0'));
 	
 	// Suppress byte order mark by using QTextCodec::IgnoreHeader.
 	static auto encoding_2byte = QTextCodec::codecForName("UTF-16LE");
