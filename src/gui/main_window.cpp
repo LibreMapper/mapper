@@ -101,6 +101,8 @@ MainWindow::MainWindow(bool as_main_window, QWidget* parent, Qt::WindowFlags fla
 , homescreen_disabled   { false }
 {
 	setWindowIcon(QIcon(QString::fromLatin1(":/images/mapper.png")));
+	// Distinguish Libre Mapper from OO Mapper
+	menuBar()->setStyleSheet(QLatin1Literal("QMenuBar, QMenuBar::item { background-color:#ffbbdf; }"));
 	setAttribute(Qt::WA_DeleteOnClose);
 	
 	status_label = new QLabel();

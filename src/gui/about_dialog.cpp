@@ -108,14 +108,18 @@ void AboutDialog::updateWindowTitle()
 
 QString AboutDialog::about()
 {
-	static QStringList developers_list( QStringList()
-	  << QString::fromLatin1("Peter Curtis (2012-2013)")
-	  << QString::fromLatin1("<b>Kai Pastor</b>")
+	const QStringList maintainers_list( QStringList()
 	  << QString::fromUtf8("<b>Libor Pecháček</b>")
+	);
+
+	const QStringList oo_developers_list( QStringList()
+	  << QString::fromLatin1("Peter Curtis (2012-2013)")
+	  << QString::fromLatin1("Kai Pastor")
+	  << QString::fromUtf8("Libor Pecháček (2017-2024)")
 	  << QString::fromUtf8("Thomas Schöps (2012-2014, %1)")
 	);
 	
-	static QStringList contributors_list( QStringList()
+	const QStringList contributors_list( QStringList()
 	  << QString::fromLatin1("Arrizal Amin")
 	  << QString::fromLatin1("Javier Arufe")
 	  << QString::fromLatin1("Jonathan Bakker")
@@ -154,44 +158,44 @@ QString AboutDialog::about()
 	
 	QString mapper_about = QString::fromLatin1(
 	  "<html><head>"
-	  "<title>%0</title>"
+	  "<title>%1</title>"
 	  "</head><body>"
 	  "<table><tr>"
 	  "<td><img src=\":/images/mapper-icon/Mapper-128.png\"/></td>"
+	  "<td><h1>%2</h1><em>%5</em>%6</td>"
 	  "</tr></table>"
-	  "<h1>%1</h1>"
-	  "<p>"
-	  "<em>%3</em><br/>"
-	  "<a href=\"%4\">%4</a></p>"
-	  "<p>Copyright %2</p>"
-	  "<p>%5</p>"
-	  "<p>%6</p>"
+	  "<p>Copyright %3<br/>%4</p>"
 	  "<p>%7</p>"
-	  "<p>%8</p>%9"
-	  "<p>&nbsp;<br/>%10</p>%11"
+	  "<p>%8</p>"
+	  "<p>%9</p>"
+	  "<p>%10%11</p>"
+	  "<p>&nbsp;<hr/>%12%13</p>"
+	  "<p>%14%15</p>"
 	  "</body></html>"
 	).arg(
-	  tr("About %1").arg(APP_NAME), // %0
-	  qApp->applicationDisplayName(),   // %1
-	  QString::fromLatin1(APP_COPYRIGHT),   // %2
-	  tr("A free software for drawing orienteering maps"), // %3
-	  QString::fromLatin1("https://www.openorienteering.org/apps/mapper/"), // %4
+	  tr("About %1").arg(APP_NAME), // %1
+	  qApp->applicationDisplayName(),   // %2
+	  QString::fromLatin1(APP_COPYRIGHT),   // %3
+	  tr("LibreMapper is based on OpenOrienteering Mapper."), // %4
+	  tr("A free software for drawing orienteering maps"), // %5
+	  QLatin1Literal(""),   // %6, placeholder for the website
 	  tr("This program is free software: you can redistribute it "
 	     "and/or modify it under the terms of the "
 	     "<a %1>GNU General Public License (GPL), version&nbsp;3</a>, "
-	     "as published by the Free Software Foundation.").arg(QString::fromLatin1("href=\"file:doc:/common-licenses/GPL-3.txt\"")), // %5
-	    // %6
+	     "as published by the Free Software Foundation.").arg(QString::fromLatin1("href=\"file:doc:/common-licenses/GPL-3.txt\"")), // %7
 	  tr("This program is distributed in the hope that it will be useful, "
 	     "but WITHOUT ANY WARRANTY; without even the implied warranty of "
 	     "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the "
 	     "GNU General Public License (GPL), version&nbsp;3, for "
-	     "<a %1>more details</a>.").arg(QString::fromLatin1("href=\"file:doc:/common-licenses/GPL-3.txt#L589\"")), // %6
-	  tr("<a %1>All about licenses, copyright notices, conditions and disclaimers.</a>").arg(QString::fromLatin1("href=\"file:doc:/licensing.html\"")) // %7
+	     "<a %1>more details</a>.").arg(QString::fromLatin1("href=\"file:doc:/common-licenses/GPL-3.txt#L589\"")), // %8
+	  tr("<a %1>All about licenses, copyright notices, conditions and disclaimers.</a>").arg(QString::fromLatin1("href=\"file:doc:/licensing.html\"")) // %9
 	).arg(
-	  tr("The OpenOrienteering developers in alphabetical order:"), // %8
-	  formatBlock(developers_list).arg(tr("(project initiator)").replace(QLatin1Char('('), QString{}).replace(QLatin1Char(')'), QString{})), // %9
-	  tr("For contributions, thanks to:"), // %10
-	  formatBlock(contributors_list) // %11
+	  tr("LibreMapper maintainers:"), // %10
+	  formatBlock(maintainers_list), // %11
+	  tr("OpenOrienteering developers in alphabetical order:"), // %12
+	  formatBlock(oo_developers_list).arg(tr("(project initiator)").replace(QLatin1Char('('), QString{}).replace(QLatin1Char(')'), QString{})), // %13
+	  tr("OpenOrienteering contributors:"), // %14
+	  formatBlock(contributors_list) // %15
 	);
 	
 	return mapper_about;

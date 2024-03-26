@@ -127,8 +127,8 @@ int main(int argc, char** argv)
 {
 #ifdef MAPPER_USE_QTSINGLEAPPLICATION
 	// Create single-instance application.
-	// Use "oo-mapper" instead of the executable as identifier, in case we launch from different paths.
-	QtSingleApplication qapp(QString::fromLatin1("oo-mapper"), argc, argv);
+	// Use "libre-mapper" instead of the executable as identifier, in case we launch from different paths.
+	QtSingleApplication qapp(QString::fromLatin1("libre-mapper"), argc, argv);
 	if (qapp.isRunning()) {
 		// Send a message to activate the running app, and optionally open a file
 		auto const arguments = firstRemoved(QCoreApplication::arguments());

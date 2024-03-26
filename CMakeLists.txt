@@ -32,7 +32,7 @@ option(CMAKE_FIND_PACKAGE_PREFER_CONFIG "Lookup package config files before usin
 # Project declaration
 
 project(Mapper VERSION 0.9.6 LANGUAGES CXX C)
-set(Mapper_COPYRIGHT "(C) 2024 The OpenOrienteering developers")
+set(Mapper_COPYRIGHT "(C) 2024 LibreMapper developers")
 
 math(EXPR Mapper_VERSION_CODE "${Mapper_VERSION_MAJOR} * 10000 + ${Mapper_VERSION_MINOR} * 100 + ${Mapper_VERSION_PATCH} * 2 + ${CMAKE_SIZEOF_VOID_P} / 4 - 1")
 
