@@ -113,15 +113,12 @@ QAbstractButton* AbstractHomeScreenWidget::makeButton(const QString& text, const
 HomeScreenWidgetDesktop::HomeScreenWidgetDesktop(HomeScreenController* controller, QWidget* parent)
 : AbstractHomeScreenWidget(controller, parent)
 {
-	QLabel* title_label = new QLabel(QString::fromLatin1("<img src=\":/images/title.png\"/>"));
-	title_label->setAlignment(Qt::AlignCenter);
 	QWidget* menu_widget = makeMenuWidget(controller, parent);
 	QWidget* recent_files_widget = makeRecentFilesWidget(controller, parent);
 	QWidget* tips_widget = makeTipsWidget(controller, parent);
 	
 	QGridLayout* layout = new QGridLayout();
 	layout->setSpacing(2 * layout->spacing());
-	layout->addWidget(title_label, 0, 0, 1, 2);
 	layout->addWidget(menu_widget, 1, 0, 2, 1);
 	layout->addWidget(recent_files_widget, 1, 1);
 	layout->setRowStretch(1, 4);

@@ -51,7 +51,6 @@
         <file>images/minus.png</file>
         <file>images/move.png</file>
         <file>images/new.png</file>
-        <file>images/open-orienteering.png</file>
         <file>images/open.png</file>
         <file>images/paint-on-template-settings.png</file>
         <file>images/move-to-gps.png</file>
@@ -82,7 +81,6 @@
         <file>images/text-align-baseline.png</file>
         <file>images/text-align-bottom.png</file>
         <file>images/three-dots.png</file>
-        <file>images/title.png</file>
         <file>images/tool-boolean-difference.png</file>
         <file>images/tool-boolean-intersection.png</file>
         <file>images/tool-boolean-union.png</file>
@@ -119,16 +117,16 @@
         <file>images/mapper-icon/Mapper-128.png</file>
         <file alias="doc/tip-of-the-day/tips.txt">doc/tip-of-the-day/tips_en.txt</file>
     </qresource>
-    <qresource prefix="/" lang="de">
+    <qresource lang="de" prefix="/">
         <file alias="doc/tip-of-the-day/tips.txt">doc/tip-of-the-day/tips_de.txt</file>
     </qresource>
-    <qresource prefix="/" lang="fr">
+    <qresource lang="fr" prefix="/">
         <file alias="doc/tip-of-the-day/tips.txt">doc/tip-of-the-day/tips_fr.txt</file>
     </qresource>
-    <qresource prefix="/" lang="ru">
+    <qresource lang="ru" prefix="/">
         <file alias="doc/tip-of-the-day/tips.txt">doc/tip-of-the-day/tips_ru.txt</file>
     </qresource>
-    <qresource prefix="/" lang="uk">
+    <qresource lang="uk" prefix="/">
         <file alias="doc/tip-of-the-day/tips.txt">doc/tip-of-the-day/tips_uk.txt</file>
     </qresource>
 </RCC>

@@ -158,7 +158,6 @@ QString AboutDialog::about()
 	  "</head><body>"
 	  "<table><tr>"
 	  "<td><img src=\":/images/mapper-icon/Mapper-128.png\"/></td>"
-	  "<td><img src=\":/images/open-orienteering.png\"/></td>"
 	  "</tr></table>"
 	  "<h1>%1</h1>"
 	  "<p>"
