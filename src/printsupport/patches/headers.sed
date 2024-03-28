@@ -1,40 +1,16 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
-#    Copyright 2015 Kai Pastor
-#    
-#    This file is part of OpenOrienteering.
-# 
-#    OpenOrienteering is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-# 
-#    OpenOrienteering is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-# 
-#    You should have received a copy of the GNU General Public License
-#    along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>.
+# Copyright 2015 Kai Pastor (OpenOrienteering)
+#
+# This file is part of LibreMapper.
 
 
 # Update of legal information
 
 1 {
-  i  /**
-  i\\ * This file is part of OpenOrienteering.
+  i  /* SPDX-License-Identifier: GPL-3.0-only
   i\\ *
-  i\\ * This is a modified version of a file from the Qt Toolkit.
-  i\\ * You can redistribute it and/or modify it under the terms of
-  i\\ * the GNU General Public License, version 3, as published by
-  i\\ * the Free Software Foundation.
-  i\\ *
-  i\\ * OpenOrienteering is distributed in the hope that it will be useful,
-  i\\ * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  i\\ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  i\\ * GNU General Public License for more details.
-  i\\ *
-  i\\ * You should have received a copy of the GNU General Public License
-  i\\ * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
+  i\\ * This file is part of LibreMapper.
   i\\ *
   i\\ * Changes:
   i\\ * %DATE% Kai Pastor <dg0yt@darc.de>

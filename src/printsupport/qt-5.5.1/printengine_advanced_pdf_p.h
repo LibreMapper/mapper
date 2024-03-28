@@ -1,5 +1,5 @@
 /**
- * This file is part of OpenOrienteering.
+ * This file is part of LibreMapper.
  *
  * This is a modified version of a file from the Qt Toolkit.
  * You can redistribute it and/or modify it under the terms of

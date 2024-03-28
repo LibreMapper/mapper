@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: BSD-3-Clause
 #.rst:
 # FindPolyclipping
 # --------
@@ -37,7 +38,7 @@
 # to tell this module where to look exclusively.
 
 #=============================================================================
-# Copyright 2016 Kai Pastor
+# Copyright 2016 Kai Pastor (OpenOrienteering)
 #
 #
 # This file was derived from CMake 3.5's module FindZLIB.cmake

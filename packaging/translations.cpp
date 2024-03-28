@@ -1,5 +1,5 @@
 /*
- * This file is part of OpenOrienteering.
+ * This file is part of LibreMapper.
  * 
  * This file is not compiled.
  * These string are used for packaging and desktop integration.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: BSD-3-Clause
 #.rst:
 # FindClangTidy
 # -------------
@@ -37,7 +38,7 @@
 # ``ClangTidy_EXECUTABLE`` variable directly.
 
 #=============================================================================
-# Copyright 2019 Kai Pastor
+# Copyright 2019 Kai Pastor (OpenOrienteering)
 #
 #
 # This file was derived from CMake 3.5's module FindZLIB.cmake

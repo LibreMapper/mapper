@@ -1,6 +1,5 @@
-/* Copyright (C) 2001-2005 Peter Selinger.
-   This file is part of potrace. It is free software and it is covered
-   by the GNU General Public License. See the file COPYING for details. */
+// SPDX-License-Identifier: GPL-2.0-or-later
+// Copyright (C) 2001-2005 Peter Selinger.
 
 /* $Id: trace.h,v 1.1 2006/01/19 13:15:09 farco Exp $ */
 
