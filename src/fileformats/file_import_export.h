@@ -18,7 +18,7 @@
 
 class QIODevice;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapView;
@@ -35,7 +35,7 @@ class MapView;
  */
 class ImportExport
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::ImportExport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::ImportExport)
 	
 public:
 	/**
@@ -136,7 +136,7 @@ private:
  */
 class Importer : public ImportExport
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::Importer)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::Importer)
 	
 public:
 	/**
@@ -259,7 +259,7 @@ private:
  */
 class Exporter : public ImportExport
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::Exporter)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::Exporter)
 	
 public:
 	/**
@@ -320,6 +320,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_IMPORT_EXPORT_H

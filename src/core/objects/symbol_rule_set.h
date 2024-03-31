@@ -18,7 +18,7 @@
 
 class QTextStream;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Object;
@@ -259,10 +259,10 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::SymbolRuleSet::Options)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::SymbolRuleSet::Options)
 
 
 #endif // LIBREMAPPER_SYMBOL_RULE_SET_H

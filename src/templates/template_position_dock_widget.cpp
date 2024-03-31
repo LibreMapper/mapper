@@ -22,7 +22,7 @@
 #include "templates/template.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TemplatePositionDockWidget::TemplatePositionDockWidget(Template* temp, MapEditorController* controller, QWidget* parent)
  : QDockWidget(tr("Positioning"), parent), temp(temp), controller(controller)
@@ -183,4 +183,4 @@ void TemplatePositionDockWidget::valueChanged()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

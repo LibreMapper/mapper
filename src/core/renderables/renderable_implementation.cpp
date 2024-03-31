@@ -77,7 +77,7 @@ inline void fixPenForPdf(QPen& pen, const QPainter& painter)
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### DotRenderable ###
 
@@ -799,4 +799,4 @@ void TextFramingRenderable::render(QPainter& painter, const RenderConfig& config
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

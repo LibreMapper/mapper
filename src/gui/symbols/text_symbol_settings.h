@@ -26,7 +26,7 @@ class QPushButton;
 class QRadioButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ColorDropDown;
 class Symbol;
@@ -120,6 +120,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

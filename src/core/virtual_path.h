@@ -22,7 +22,7 @@
 
 // IWYU pragma: no_forward_declare QRectF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class PathCoordVector : public std::vector<PathCoord>
 {
@@ -407,6 +407,6 @@ bool VirtualPath::isPointInside(const MapCoordF& coord) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

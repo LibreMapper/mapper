@@ -18,7 +18,7 @@
 class QPainter;
 // IWYU pragma: no_forward_declare QPointF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoordF;
 class MapWidget;
@@ -46,7 +46,7 @@ public:
 	void paint(QPainter* painter);
 	
 public slots:
-	void newGPSPosition(const OpenOrienteering::MapCoordF& coord, float accuracy);
+	void newGPSPosition(const LibreMapper::MapCoordF& coord, float accuracy);
 	
 private:
 	void updateMapWidget();
@@ -59,6 +59,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

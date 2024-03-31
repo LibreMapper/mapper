@@ -37,7 +37,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### CombinedSymbol ###
 
@@ -266,4 +266,4 @@ void CombinedSymbolSettings::showEditDialog(int index)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

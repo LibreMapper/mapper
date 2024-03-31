@@ -14,7 +14,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 CompassDisplay::CompassDisplay(QWidget* parent)
  : QWidget(parent)
@@ -106,4 +106,4 @@ void CompassDisplay::paintEvent(QPaintEvent*)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -26,7 +26,7 @@
 #include "fileformats/ocd_types_v9.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -246,4 +246,4 @@ QImage OcdIcon::toQImage(const Ocd::IconV9& icon)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

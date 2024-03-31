@@ -16,7 +16,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // TODO: convert these to settings
 const float touch_pos_offset_mm = 25;
@@ -206,4 +206,4 @@ float TouchCursor::standardCursorRadiusPx() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

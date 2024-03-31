@@ -28,7 +28,7 @@
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AreaSymbol;
 class CombinedSymbol;
@@ -635,13 +635,13 @@ typename std::enable_if<std::is_base_of<Symbol, S>::value, std::unique_ptr<S>>::
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_METATYPE(const OpenOrienteering::Symbol*)
+Q_DECLARE_METATYPE(const LibreMapper::Symbol*)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::Symbol::TypeCombination)
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::Symbol::RenderableOptions)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Symbol::TypeCombination)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Symbol::RenderableOptions)
 
 
 #endif

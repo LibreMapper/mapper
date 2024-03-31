@@ -41,7 +41,7 @@ class QTranslator;
 class QWidget;
 // IWYU pragma: no_forward_declare QRectF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CombinedSymbol;
 class Georeferencing;
@@ -1382,29 +1382,29 @@ signals:
 	
 	
 	/** Emitted when a color is added to the map, gives the color's index and pointer. */
-	void colorAdded(int pos, const OpenOrienteering::MapColor* color);
+	void colorAdded(int pos, const LibreMapper::MapColor* color);
 	
 	/** Emitted when a map color is changed, gives the color's index and pointer. */
-	void colorChanged(int pos, const OpenOrienteering::MapColor* color);
+	void colorChanged(int pos, const LibreMapper::MapColor* color);
 	
 	/** Emitted when a map color is deleted, gives the color's index and pointer. */
-	void colorDeleted(int pos, const OpenOrienteering::MapColor* old_color);
+	void colorDeleted(int pos, const LibreMapper::MapColor* old_color);
 	
 	/** Emitted when the presence of spot colors in the map changes. */
 	void spotColorPresenceChanged(bool has_spot_colors) const;  // clazy:exclude=const-signal-or-slot
 	
 	
 	/** Emitted when a symbol is added to the map, gives the symbol's index and pointer. */
-	void symbolAdded(int pos, const OpenOrienteering::Symbol* symbol);
+	void symbolAdded(int pos, const LibreMapper::Symbol* symbol);
 	
 	/** Emitted when a symbol in the map is changed. */
-	void symbolChanged(int pos, const OpenOrienteering::Symbol* new_symbol, const OpenOrienteering::Symbol* old_symbol);
+	void symbolChanged(int pos, const LibreMapper::Symbol* new_symbol, const LibreMapper::Symbol* old_symbol);
 	
 	/** Emitted when the icon of the symbol with the given index changes. */
 	void symbolIconChanged(int pos);
 	
 	/** Emitted when a symbol in the map is deleted. */
-	void symbolDeleted(int pos, const OpenOrienteering::Symbol* old_symbol);
+	void symbolDeleted(int pos, const LibreMapper::Symbol* old_symbol);
 	
 	/** Emitted when the symbol icon zoom changes. */
 	void symbolIconZoomChanged();
@@ -1431,25 +1431,25 @@ signals:
 	 * parameter which always signals whether the template is being added in
 	 * the background.
 	 */
-	void templateAboutToBeAdded(int pos, OpenOrienteering::Template* temp, bool in_background);
+	void templateAboutToBeAdded(int pos, LibreMapper::Template* temp, bool in_background);
 	
 	/** Emitted when a template is added to the map, gives the template's index and pointer. */
-	void templateAdded(int pos, OpenOrienteering::Template* temp);
+	void templateAdded(int pos, LibreMapper::Template* temp);
 	
 	/** Emitted when a template in the map is changed, gives the template's index and pointer. */
-	void templateChanged(int pos, OpenOrienteering::Template* temp);
+	void templateChanged(int pos, LibreMapper::Template* temp);
 	
 	/** Emitted before a template in the map is moved to a different index. */
-	void templateAboutToBeMoved(int old_pos, int new_pos, OpenOrienteering::Template* temp);
+	void templateAboutToBeMoved(int old_pos, int new_pos, LibreMapper::Template* temp);
 	
 	/** Emitted when a template in the map was moved to a different index. */
-	void templateMoved(int old_pos, int new_pos, OpenOrienteering::Template* temp);
+	void templateMoved(int old_pos, int new_pos, LibreMapper::Template* temp);
 	
 	/** Emitted before a template in the map is deleted. */
-	void templateAboutToBeDeleted(int pos, OpenOrienteering::Template* temp);
+	void templateAboutToBeDeleted(int pos, LibreMapper::Template* temp);
 	
 	/** Emitted when a template in the map is deleted, gives the template's index and pointer. */
-	void templateDeleted(int pos, const OpenOrienteering::Template* old_temp);
+	void templateDeleted(int pos, const LibreMapper::Template* old_temp);
 	
 	/** Emitted when the number of closed templates changes between zero and one. */
 	void closedTemplateAvailabilityChanged();
@@ -1473,7 +1473,7 @@ signals:
 	 * 
 	 * @see currentMapPartIndexChanged()
 	 */
-	void currentMapPartChanged(const OpenOrienteering::MapPart* part);
+	void currentMapPartChanged(const LibreMapper::MapPart* part);
 	
 	/**
 	 * Emitted when the index of map part currently used for drawing changes.
@@ -1487,17 +1487,17 @@ signals:
 	/**
 	 * Emitted when a part is added to the map.
 	 */
-	void mapPartAdded(std::size_t index, const OpenOrienteering::MapPart* part);
+	void mapPartAdded(std::size_t index, const LibreMapper::MapPart* part);
 	
 	/**
 	 * Emitted when a part's properties are changed.
 	 */
-	void mapPartChanged(std::size_t index, const OpenOrienteering::MapPart* part);
+	void mapPartChanged(std::size_t index, const LibreMapper::MapPart* part);
 	
 	/**
 	 * Emitted when a part is removed from the map.
 	 */
-	void mapPartDeleted(std::size_t index, const OpenOrienteering::MapPart* part);
+	void mapPartDeleted(std::size_t index, const LibreMapper::MapPart* part);
 	
 protected slots:
 	void checkSpotColorPresence();
@@ -1906,12 +1906,12 @@ TextSymbol* Map::getUndefinedText()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_METATYPE(const OpenOrienteering::Map*)
+Q_DECLARE_METATYPE(const LibreMapper::Map*)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::Map::ImportMode)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Map::ImportMode)
 
 
 #endif

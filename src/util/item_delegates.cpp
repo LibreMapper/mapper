@@ -19,7 +19,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### ColorItemDelegate ###
 
@@ -248,4 +248,4 @@ QSize TextDocItemDelegate::sizeHint(const QStyleOptionViewItem& option, const QM
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

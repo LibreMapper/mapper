@@ -15,7 +15,7 @@
 class QString;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class LatLon;
 class Map;
@@ -64,6 +64,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_KML_COURSE_EXPORT_H

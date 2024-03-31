@@ -37,7 +37,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### MapEditorToolBase::EditedItem ###
 
@@ -685,4 +685,4 @@ void MapEditorToolBase::generateNextSimulatedEvent()
 #endif  // MAPPER_DEVELOPMENT_BUILD
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -10,7 +10,7 @@
 #include <QDebug>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 QDebug operator<<(QDebug dbg, const LatLon& lat_lon)
 {
@@ -21,4 +21,4 @@ QDebug operator<<(QDebug dbg, const LatLon& lat_lon)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -29,7 +29,7 @@
 
 template< class Format > class OcdFile;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AreaSymbol;
 class CombinedSymbol;
@@ -78,7 +78,7 @@ class TextSymbol;
  */
 class OcdFileExport : public Exporter
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::OcdFileExport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::OcdFileExport)
 	
 	/**
 	 * A type for temporaries helping to convert strings to Ocd format.
@@ -336,6 +336,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

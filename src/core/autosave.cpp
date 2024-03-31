@@ -15,7 +15,7 @@
 #include "settings.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 AutosavePrivate::AutosavePrivate(Autosave& autosave)
 : document(autosave)
@@ -124,6 +124,6 @@ bool Autosave::autosaveNeeded() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #include "moc_autosave.cpp"

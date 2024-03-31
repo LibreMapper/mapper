@@ -21,7 +21,7 @@ class QCheckBox;
 class QSpinBox;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class PathObject;
 class PointObject;
@@ -121,5 +121,5 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

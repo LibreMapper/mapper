@@ -24,7 +24,7 @@ class QTextDocument;
 class QStyleOptionViewItem;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -234,6 +234,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

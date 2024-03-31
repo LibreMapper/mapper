@@ -32,7 +32,7 @@ class QPoint;
 class QPointF;
 class QResizeEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -156,6 +156,6 @@ private:
 };
 
 
-} //  namespace OpenOrienteering
+} //  namespace LibreMapper
 
 #endif

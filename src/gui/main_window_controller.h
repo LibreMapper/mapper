@@ -16,7 +16,7 @@
 class QKeyEvent;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MainWindow;
 class FileFormat;
@@ -148,6 +148,6 @@ MainWindow* MainWindowController::getWindow() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

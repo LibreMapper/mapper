@@ -72,7 +72,7 @@
 
 // IWYU pragma: no_forward_declare QFile
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -601,7 +601,7 @@ namespace {
 
 OgrFileImportFormat::OgrFileImportFormat()
  : FileFormat(OgrFile, "OGR",
-              ::OpenOrienteering::ImportExport::tr("Geospatial vector data"),
+              ::LibreMapper::ImportExport::tr("Geospatial vector data"),
               QString{},
               Feature::FileOpen | Feature::FileImport | Feature::ReadingLossy )
 {
@@ -620,7 +620,7 @@ std::unique_ptr<Importer> OgrFileImportFormat::makeImporter(const QString& path,
 
 OgrFileExportFormat::OgrFileExportFormat(QByteArray id, const char* name, const char* extensions)
  : FileFormat(OgrFile, id.data(),
-              ::OpenOrienteering::ImportExport::tr(qstrlen(name) > 0 ? name : id.constData()),
+              ::LibreMapper::ImportExport::tr(qstrlen(name) > 0 ? name : id.constData()),
               QString{},
               Feature::FileExport | Feature::WritingLossy )
  , meta_data(std::move(id))
@@ -798,7 +798,7 @@ bool OgrFileImport::importImplementation()
 	auto data_source = ogr::unique_datasource(OGROpen(path.toUtf8().constData(), 0, nullptr));
 	if (!data_source)
 	{
-		addWarning(::OpenOrienteering::Importer::tr("Cannot open file\n%1:\n%2").arg(path, QString::fromLatin1(CPLGetLastErrorMsg())));
+		addWarning(::LibreMapper::Importer::tr("Cannot open file\n%1:\n%2").arg(path, QString::fromLatin1(CPLGetLastErrorMsg())));
 		return false;
 	}
 	
@@ -1927,7 +1927,7 @@ bool OgrFileExport::exportImplementation()
 	}
 
 	if (!po_driver)
-		throw FileFormatException(::OpenOrienteering::ImportExport::tr("Cannot find a vector data export driver named '%1'")
+		throw FileFormatException(::LibreMapper::ImportExport::tr("Cannot find a vector data export driver named '%1'")
 		                          .arg(QString::fromUtf8(id)));
 
 	setupQuirks(po_driver);
@@ -2418,4 +2418,4 @@ void OgrFileExport::populateStyleTable(const std::vector<const Symbol*>& symbols
 	}
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

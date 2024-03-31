@@ -17,7 +17,7 @@
 #include "fileformats/kml_course_export.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 template <class Exporter>
 std::unique_ptr<CourseFileFormat> makeFileFormat(FileFormat::FileType type, const char* id)
@@ -57,4 +57,4 @@ std::unique_ptr<Exporter> CourseFileFormat::makeExporter(const QString& path, co
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

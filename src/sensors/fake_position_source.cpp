@@ -21,7 +21,7 @@
 #include <QTimerEvent>
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 QGeoCoordinate FakePositionSource::initial_reference  {};
@@ -104,7 +104,7 @@ void FakePositionSource::timerEvent(QTimerEvent* e)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 #endif // QT_POSITIONING_LIB

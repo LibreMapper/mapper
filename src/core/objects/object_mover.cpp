@@ -19,7 +19,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ObjectMover::ObjectMover(Map* map, const MapCoordF& start_pos)
  : start_position(start_pos)
@@ -319,4 +319,4 @@ void ObjectMover::calculateConstraints()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

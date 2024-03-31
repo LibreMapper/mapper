@@ -22,7 +22,7 @@
 // IWYU pragma: no_forward_declare QPointF
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### TextObjectPartInfo ###
 
@@ -545,4 +545,4 @@ void TextObject::prepareLineInfos() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

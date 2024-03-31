@@ -36,7 +36,7 @@
 #include "gui/widgets/segmented_button_layout.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -377,4 +377,4 @@ ObjectQuery TagSelectWidget::makeQuery() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -18,7 +18,7 @@
 
 class QEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -70,6 +70,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

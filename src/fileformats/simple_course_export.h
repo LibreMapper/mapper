@@ -11,7 +11,7 @@
 #include <QCoreApplication>
 #include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class PathObject;
@@ -24,7 +24,7 @@ class PathObject;
  */
 class SimpleCourseExport
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::SimpleCourseExport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::SimpleCourseExport)
 	
 public:
 	static QString defaultEventName();
@@ -63,6 +63,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_SIMPLE_COURSE_EXPORT_H

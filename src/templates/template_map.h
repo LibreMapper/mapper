@@ -26,7 +26,7 @@ class QStringList;
 class QTransform;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 
@@ -153,6 +153,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

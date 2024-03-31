@@ -31,7 +31,7 @@
 #include "core/symbols/symbol.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 CombinedSymbol::CombinedSymbol()
 : Symbol { Symbol::Combined }
@@ -405,4 +405,4 @@ bool CombinedSymbol::hasRotatableFillPattern() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

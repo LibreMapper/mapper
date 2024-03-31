@@ -25,7 +25,7 @@ class QHideEvent;
 class QMouseEvent;
 class QPaintEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /** 
@@ -155,6 +155,6 @@ QPoint PieMenu::getPoint(double radius, double angle) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

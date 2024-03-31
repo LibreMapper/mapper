@@ -22,7 +22,7 @@ class QKeyEvent;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -64,5 +64,5 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

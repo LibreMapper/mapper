@@ -16,7 +16,7 @@
 #include "gui/widgets/home_screen_widget.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 HomeScreenController::HomeScreenController()
 : widget(nullptr)
@@ -147,4 +147,4 @@ void HomeScreenController::goToTip(int index)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -52,7 +52,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -711,14 +711,14 @@ void EditPointTool::updateStatusText()
 	else if (editingInProgress())
 	{
 		MapCoordF drag_vector = constrained_pos_map - click_pos_map;
-		text = ::OpenOrienteering::EditTool::tr("<b>Coordinate offset:</b> %1, %2 mm  <b>Distance:</b> %3 m ").
+		text = ::LibreMapper::EditTool::tr("<b>Coordinate offset:</b> %1, %2 mm  <b>Distance:</b> %3 m ").
 		       arg(QLocale().toString(drag_vector.x(), 'f', 1),
 		           QLocale().toString(-drag_vector.y(), 'f', 1),
 		           QLocale().toString(0.001 * map()->getScaleDenominator() * drag_vector.length(), 'f', 1)) +
 		       QLatin1String("| ");
 		
 		if (!angle_helper->isActive())
-			text += ::OpenOrienteering::EditTool::tr("<b>%1</b>: Fixed angles. ").arg(ModifierKey::control());
+			text += ::LibreMapper::EditTool::tr("<b>%1</b>: Fixed angles. ").arg(ModifierKey::control());
 		
 		if (!(active_modifiers & Qt::ShiftModifier))
 		{
@@ -729,16 +729,16 @@ void EditPointTool::updateStatusText()
 			}	
 			else 
 			{
-				text += ::OpenOrienteering::EditTool::tr("<b>%1</b>: Snap to existing objects. ").arg(ModifierKey::shift());
+				text += ::LibreMapper::EditTool::tr("<b>%1</b>: Snap to existing objects. ").arg(ModifierKey::shift());
 			}
 		}
 	}
 	else
 	{
-		text = ::OpenOrienteering::EditTool::tr("<b>Click</b>: Select a single object. <b>Drag</b>: Select multiple objects. <b>%1+Click</b>: Toggle selection. ").arg(ModifierKey::shift());
+		text = ::LibreMapper::EditTool::tr("<b>Click</b>: Select a single object. <b>Drag</b>: Select multiple objects. <b>%1+Click</b>: Toggle selection. ").arg(ModifierKey::shift());
 		if (map()->getNumSelectedObjects() > 0)
 		{
-			text += ::OpenOrienteering::EditTool::tr("<b>%1</b>: Delete selected objects. ").arg(ModifierKey(DeleteObjectKey));
+			text += ::LibreMapper::EditTool::tr("<b>%1</b>: Delete selected objects. ").arg(ModifierKey(DeleteObjectKey));
 			
 			if (map()->selectedObjects().size() <= max_objects_for_handle_display)
 			{
@@ -755,7 +755,7 @@ void EditPointTool::updateStatusText()
 				else if (switch_dash_points)
 					text = tr("<b>%1+Click</b> on point to switch between dash and normal point. ").arg(ModifierKey::space());
 				else
-					text += QLatin1String("| ") + ::OpenOrienteering::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::control(), ModifierKey::space());
+					text += QLatin1String("| ") + ::LibreMapper::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::control(), ModifierKey::space());
 			}
 		}
 	}
@@ -955,4 +955,4 @@ void EditPointTool::applyViewChanges(MapView::ChangeFlags change)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

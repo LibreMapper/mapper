@@ -31,7 +31,7 @@ class QPushButton;
 class QStackedWidget;
 class QTableWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ColorDropDown;
 class Map;
@@ -212,6 +212,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

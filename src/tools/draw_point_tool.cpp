@@ -47,7 +47,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 DrawPointTool::DrawPointTool(MapEditorController* editor, QAction* tool_action)
 : MapEditorToolBase(QCursor(QPixmap(QString::fromLatin1(":/images/cursor-draw-point.png")), 11, 11), DrawPoint, editor, tool_action)
@@ -349,4 +349,4 @@ void DrawPointTool::objectSelectionChangedImpl()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

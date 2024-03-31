@@ -34,7 +34,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 DrawLineAndAreaTool::DrawLineAndAreaTool(MapEditorController* editor, Type type, QAction* tool_action, bool is_helper_tool)
 : MapEditorTool(editor, type, tool_action)
@@ -392,4 +392,4 @@ void DrawLineAndAreaTool::addPreviewPointSymbolsForBorder(const LineSymbol* line
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

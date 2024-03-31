@@ -19,7 +19,7 @@
 
 class QSpinBox;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CombinedSymbol;
 class Symbol;
@@ -57,6 +57,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

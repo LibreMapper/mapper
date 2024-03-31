@@ -31,7 +31,7 @@ class QPainter;
 class QPointF;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -146,14 +146,14 @@ public slots:
 	 *
 	 * @param change type of change as emitted by MapView
 	 */
-	virtual void applyViewChanges(OpenOrienteering::MapView::ChangeFlags change) = 0;
+	virtual void applyViewChanges(LibreMapper::MapView::ChangeFlags change) = 0;
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::EditTool::HoverState)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::EditTool::HoverState)
 
 
 #endif

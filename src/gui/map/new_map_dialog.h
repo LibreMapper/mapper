@@ -25,7 +25,7 @@ class QListWidgetItem;
 class QPushButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -122,5 +122,5 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

@@ -14,7 +14,7 @@
 
 #include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 struct KeyValue
 {
@@ -75,7 +75,7 @@ private:
 	using std::vector<KeyValue>::operator[];
 };
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 #endif

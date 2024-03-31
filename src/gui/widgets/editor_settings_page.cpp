@@ -25,7 +25,7 @@
 #include "gui/widgets/settings_page.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 EditorSettingsPage::EditorSettingsPage(QWidget* parent)
  : SettingsPage(parent)
@@ -167,4 +167,4 @@ void EditorSettingsPage::updateWidgets()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

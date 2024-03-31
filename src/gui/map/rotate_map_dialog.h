@@ -23,7 +23,7 @@ class QCheckBox;
 class QRadioButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 
@@ -72,6 +72,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

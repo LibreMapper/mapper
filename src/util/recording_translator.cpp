@@ -12,7 +12,7 @@
 #include <QDebug>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 RecordingTranslator::RecordingTranslator(QObject* parent)
  : QTranslator(parent)
@@ -38,4 +38,4 @@ QString RecordingTranslator::translate(const char* context, const char* sourceTe
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

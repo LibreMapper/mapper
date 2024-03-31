@@ -140,8 +140,8 @@ class ProgressObserver;
 
 //! Constructor initializing the menu, actions and connecting signals from
 //! actions
-mainForm::mainForm(QWidget* parent, OpenOrienteering::Map* map,
-				   OpenOrienteering::TemplateImage* templ,
+mainForm::mainForm(QWidget* parent, LibreMapper::Map* map,
+				   LibreMapper::TemplateImage* templ,
 				   Qt::WindowFlags flags)
 	: QDialog(parent, flags)
 	, ooMap(map)
@@ -163,7 +163,7 @@ mainForm::mainForm(QWidget* parent, OpenOrienteering::Map* map,
 
 	loadImage(templ->getImage(), templ->getTemplateFilename());
 
-	ui.symbolComboBox->init(map, OpenOrienteering::Symbol::Line);
+	ui.symbolComboBox->init(map, LibreMapper::Symbol::Line);
 	ui.symbolComboBox->setCurrentIndex(std::min(ui.symbolComboBox->count() - 1, 1));
 }
 
@@ -720,20 +720,20 @@ void mainForm::on_saveVectorsButton_clicked()
 	// transform from template coordinates to map coordinates
 	auto const offset = QPointF { -0.5 * (ui.bwImageView->image()->width() - 1),
 	                              -0.5 * (ui.bwImageView->image()->height() - 1) };
-	auto const transform = [this, offset](const QPointF& point) -> OpenOrienteering::MapCoord {
-		return OpenOrienteering::MapCoord(ooTempl->templateToMap(point + offset));
+	auto const transform = [this, offset](const QPointF& point) -> LibreMapper::MapCoord {
+		return LibreMapper::MapCoord(ooTempl->templateToMap(point + offset));
 	};
 
-	std::vector<OpenOrienteering::Object*> result;
+	std::vector<LibreMapper::Object*> result;
 	result.reserve(polys.size());
 
 	for (const auto& polygon : polys)
 	{
-		auto coords = OpenOrienteering::MapCoordVector {};
+		auto coords = LibreMapper::MapCoordVector {};
 		coords.reserve(polygon.size() + 1);  // One extra slot, for some closed paths.
 		std::transform(begin(polygon), end(polygon), std::back_inserter(coords), transform);
 
-		auto* newOOPolygon = new OpenOrienteering::PathObject(symbol, std::move(coords));
+		auto* newOOPolygon = new LibreMapper::PathObject(symbol, std::move(coords));
 		if (polygon.isClosed())
 			newOOPolygon->closeAllParts();
 		newOOPolygon->setTag(QStringLiteral("generator"), QStringLiteral("cove")); /// \todo Configuration of tag
@@ -743,7 +743,7 @@ void mainForm::on_saveVectorsButton_clicked()
 	}
 
 	auto const* part = ooMap->getCurrentPart();
-	auto* undo_step = new OpenOrienteering::DeleteObjectsUndoStep(ooMap);
+	auto* undo_step = new LibreMapper::DeleteObjectsUndoStep(ooMap);
 	for (auto const* object : result)
 		undo_step->addObject(part->findObjectIndex(object));
 	ooMap->push(undo_step);

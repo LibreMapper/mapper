@@ -31,7 +31,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // static
 bool GdalTemplate::canRead(const QString& path)
@@ -135,7 +135,7 @@ bool GdalTemplate::loadTemplateFileImpl()
 		if (!isGeoreferencingUsable())
 		{
 			// Image was georeferenced, but georeferencing info is gone -> deny to load template
-			setErrorString(::OpenOrienteering::TemplateImage::tr("Georeferencing not found"));
+			setErrorString(::LibreMapper::TemplateImage::tr("Georeferencing not found"));
 			return false;
 		}
 		
@@ -203,4 +203,4 @@ bool GdalTemplate::applyCornerPassPoints()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

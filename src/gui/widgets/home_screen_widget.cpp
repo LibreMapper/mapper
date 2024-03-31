@@ -33,7 +33,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 //### AbstractHomeScreenWidget ###
 
@@ -436,7 +436,7 @@ void HomeScreenWidgetMobile::itemClicked(QListWidgetItem* item)
 		if (hint != StorageLocation::HintNormal)
 		{
 			auto hint_text = StorageLocation::fileHintTextTemplate(hint);
-			QMessageBox::warning(this, ::OpenOrienteering::MainWindow::tr("Warning"), hint_text.arg(item->data(Qt::DisplayRole).toString()));
+			QMessageBox::warning(this, ::LibreMapper::MainWindow::tr("Warning"), hint_text.arg(item->data(Qt::DisplayRole).toString()));
 		}
 		
 		QApplication::processEvents(QEventLoop::ExcludeUserInputEvents, 100 /* ms */);
@@ -625,4 +625,4 @@ void HomeScreenWidgetMobile::addItemToFileList(const QString& label, const QFile
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

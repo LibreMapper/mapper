@@ -38,7 +38,7 @@ class QToolBar;
 class QToolButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ActionGridBar;
 class CompassDisplay;
@@ -292,7 +292,7 @@ public slots:
 	/** Activates or stops follow-position mode. */
 	void followPositionClicked(bool enable);
 	/** Follow-position mode update handler. */
-	void followPositionUpdate(OpenOrienteering::MapCoordF position);
+	void followPositionUpdate(LibreMapper::MapCoordF position);
 	/** Zooms in in the current map widget. */
 	void zoomIn();
 	/** Zooms out in the current map widget. */
@@ -510,9 +510,9 @@ public slots:
 	void mergeAllMapParts();
 	
 	/** Updates action enabled states after a template has been added */
-	void templateAdded(int pos, const OpenOrienteering::Template* temp);
+	void templateAdded(int pos, const LibreMapper::Template* temp);
 	/** Updates action enabled states after a template has been deleted */
-	void templateDeleted(int pos, const OpenOrienteering::Template* temp);
+	void templateDeleted(int pos, const LibreMapper::Template* temp);
 	
 	/** Shows the import file selector and imports the selected file, if any. */
 	void importClicked();
@@ -592,9 +592,9 @@ signals:
 	 * @brief Indicates a change of the active symbol.
 	 * @param symbol The new active symbol, or nullptr.
 	 */
-	void activeSymbolChanged(const OpenOrienteering::Symbol* symbol);
+	void activeSymbolChanged(const LibreMapper::Symbol* symbol);
 	
-	void templatePositionDockWidgetClosed(OpenOrienteering::Template* temp);
+	void templatePositionDockWidgetClosed(LibreMapper::Template* temp);
 
 protected:
 	/**
@@ -852,6 +852,6 @@ Symbol* MapEditorController::activeSymbol() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

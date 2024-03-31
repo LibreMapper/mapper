@@ -19,7 +19,7 @@
 #include <QString>
 #include <QStringList>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Exporter;
 class Importer;
@@ -99,7 +99,7 @@ private:
  *  \code
  *  class MyCustomFileFormat : public FileFormat {
  *  public:
- *      MyCustomFileFormat : FileFormat("custom", ::OpenOrienteering::ImportExport::tr("Custom file"), "custom", true, true) {
+ *      MyCustomFileFormat : FileFormat("custom", ::LibreMapper::ImportExport::tr("Custom file"), "custom", true, true) {
  *      }
  *
  *      Importer *createImporter(QIODevice* stream, Map *map, MapView *view) const {
@@ -385,12 +385,12 @@ const QStringList& FileFormat::fileExtensions() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::FileFormat::FileTypes)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::FileFormat::FileTypes)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::FileFormat::Features)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::FileFormat::Features)
 
 
 #endif // LIBREMAPPER_FILE_FORMAT_H

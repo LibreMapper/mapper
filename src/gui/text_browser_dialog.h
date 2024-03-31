@@ -20,7 +20,7 @@ class QTextBrowser;
 class QUrl;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * @brief A dialog for basic browsing of HTML pages.
@@ -73,6 +73,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

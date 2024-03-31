@@ -23,7 +23,7 @@
 class QIODevice;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -153,6 +153,6 @@ bool operator==(const Track& lhs, const Track& rhs);
 inline bool operator!=(const Track& lhs, const Track& rhs) { return !(lhs==rhs); }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_TRACK_H

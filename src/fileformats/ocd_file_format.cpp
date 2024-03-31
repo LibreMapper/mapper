@@ -21,7 +21,7 @@
 #include "fileformats/ocd_file_import.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -30,9 +30,9 @@ QString labelForVersion(quint16 version)
 	switch (version)
 	{
 	case OcdFileFormat::autoDeterminedVersion():
-		return ::OpenOrienteering::ImportExport::tr("OCAD");
+		return ::LibreMapper::ImportExport::tr("OCAD");
 	default:
-		return ::OpenOrienteering::ImportExport::tr("OCAD version %1").arg(version);
+		return ::LibreMapper::ImportExport::tr("OCAD version %1").arg(version);
 	}
 }
 
@@ -133,4 +133,4 @@ std::unique_ptr<Exporter> OcdFileFormat::makeExporter(const QString& path, const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

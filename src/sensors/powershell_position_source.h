@@ -16,7 +16,7 @@
 #include <QString>
 #include <QTimer>
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 /**
@@ -113,6 +113,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_POWERSHELL_POSITION_SOURCE_H

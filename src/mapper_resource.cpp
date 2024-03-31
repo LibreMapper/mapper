@@ -16,7 +16,7 @@
 #include "mapper_config.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace MapperResource {
 
@@ -71,4 +71,4 @@ void setSeachPaths()
 }  // namespace MapperResource
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

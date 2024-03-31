@@ -49,7 +49,7 @@ namespace std
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoord;
 class MapCoordF;
@@ -213,6 +213,6 @@ bool pointsFormCorner(const MapCoord& point1, const MapCoord& anchor_point,
 }  // namespace Util
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -18,7 +18,7 @@
 #include "tools/tool.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 PanTool::PanTool(MapEditorController* editor, QAction* tool_action)
  : MapEditorToolBase(QCursor(Qt::OpenHandCursor), Pan, editor, tool_action)
@@ -74,4 +74,4 @@ void PanTool::objectSelectionChangedImpl()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

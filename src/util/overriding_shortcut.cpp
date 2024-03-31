@@ -13,7 +13,7 @@
 #include <QWidget>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### OverridingShortcut ###
 
@@ -87,4 +87,4 @@ void OverridingShortcut::updateEventFilters()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

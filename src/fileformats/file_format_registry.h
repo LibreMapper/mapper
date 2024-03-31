@@ -17,7 +17,7 @@
 
 #include "fileformats/file_format.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /** Provides a registry for file formats, and takes ownership of the supported format objects.
@@ -113,6 +113,6 @@ private:
 extern FileFormatRegistry FileFormats;
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_FILE_FORMAT_REGISTRY_H

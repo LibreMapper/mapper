@@ -494,7 +494,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="OpenOrienteering::SymbolDropDown" name="symbolComboBox"/>
+          <widget class="LibreMapper::SymbolDropDown" name="symbolComboBox"/>
          </item>
          <item>
           <widget class="QPushButton" name="saveVectorsButton">
@@ -537,7 +537,7 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>OpenOrienteering::SymbolDropDown</class>
+   <class>LibreMapper::SymbolDropDown</class>
    <extends>QComboBox</extends>
    <header>gui/widgets/symbol_dropdown.h</header>
   </customwidget>

@@ -22,7 +22,7 @@ class QColor;
 class QSettings;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /** Singleton which handles the global application settings.
  *  If you need to do any action when the application settings are changed, connect to the settingsChanged() signal.
@@ -240,6 +240,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

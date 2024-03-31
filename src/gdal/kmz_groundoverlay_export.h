@@ -24,7 +24,7 @@ class QTransform;
 
 // IWYU pragma: no_forward_declare QRectF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapPrinter;
@@ -41,7 +41,7 @@ class MapPrinter;
  */
 class KmzGroundOverlayExport
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::KmzGroundOverlayExport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::KmzGroundOverlayExport)
 	
 	struct Tile
 	{
@@ -111,6 +111,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_KMZ_GROUNDOVERLAY_EXPORT_H

@@ -20,7 +20,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### MapGrid ###
 

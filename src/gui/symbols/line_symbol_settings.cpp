@@ -44,7 +44,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### LineSymbol ###
 
@@ -818,4 +818,4 @@ void LineSymbolSettings::reset(Symbol* symbol)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

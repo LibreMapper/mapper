@@ -21,7 +21,7 @@ class QGeoPositionInfoSource;
 class QPainter;
 class QTimerEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Georeferencing;
 class MapWidget;
@@ -94,7 +94,7 @@ protected:
 signals:
 	/// Is emitted whenever a new position update happens.
 	/// If the accuracy is unknown, -1 will be given.
-	void mapPositionUpdated(const OpenOrienteering::MapCoordF& coord, float accuracy);
+	void mapPositionUpdated(const LibreMapper::MapCoordF& coord, float accuracy);
 	
 	/// Like mapPositionUpdated(), but gives the values as
 	/// latitude / longitude in degrees and also gives altitude
@@ -161,6 +161,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

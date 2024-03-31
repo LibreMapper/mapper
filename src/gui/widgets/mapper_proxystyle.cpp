@@ -42,7 +42,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace  {
 
@@ -553,4 +553,4 @@ QRect MapperProxyStyle::subControlRect(QStyle::ComplexControl cc, const QStyleOp
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

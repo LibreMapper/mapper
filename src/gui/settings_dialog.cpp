@@ -56,7 +56,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SettingsDialog::SettingsDialog(QWidget* parent)
  : QDialog        { parent }
@@ -300,4 +300,4 @@ void SettingsDialog::buttonPressed(QAbstractButton* button)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -12,7 +12,7 @@
 
 #include "scaling_icon_engine.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ScalingIconEnginePlugin::~ScalingIconEnginePlugin() = default;
 
@@ -26,4 +26,4 @@ QIconEngine* ScalingIconEnginePlugin::create(const QString& filename)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

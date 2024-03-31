@@ -10,7 +10,7 @@
 #include "powershell_position_source.h"
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 PowershellPositionPlugin::PowershellPositionPlugin(QObject* parent)
@@ -36,4 +36,4 @@ QGeoSatelliteInfoSource* PowershellPositionPlugin::satelliteInfoSource(QObject* 
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

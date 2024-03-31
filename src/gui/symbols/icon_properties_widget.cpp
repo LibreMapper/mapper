@@ -25,7 +25,7 @@
 #include "gui/symbols/symbol_setting_dialog.h"
 #include "util/backports.h"  // IWYU pragma: keep
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -33,8 +33,8 @@ QString pngFileFilter()
 {
 	static const QString filter_template(QLatin1String("%1 (%2)"));
 	QStringList filters = {
-	    filter_template.arg(::OpenOrienteering::IconPropertiesWidget::tr("PNG"), QLatin1String("*.png")),
-	    ::OpenOrienteering::IconPropertiesWidget::tr("All files (*.*)")
+	    filter_template.arg(::LibreMapper::IconPropertiesWidget::tr("PNG"), QLatin1String("*.png")),
+	    ::LibreMapper::IconPropertiesWidget::tr("All files (*.*)")
 	};
 	return filters.join(QLatin1String(";;"));
 }
@@ -240,4 +240,4 @@ void IconPropertiesWidget::clearClicked()
 
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

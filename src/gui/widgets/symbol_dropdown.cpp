@@ -28,11 +28,11 @@
 
 
 // allow explicit use of Symbol pointers in QVariant
-Q_DECLARE_METATYPE(OpenOrienteering::Symbol*)
+Q_DECLARE_METATYPE(LibreMapper::Symbol*)
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### SymbolDropDown ###
 
@@ -178,4 +178,4 @@ void SymbolDropDownDelegate::emitCommitData()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

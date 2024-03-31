@@ -9,7 +9,7 @@
 #include "text_browser.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TextBrowser::TextBrowser(QWidget* parent)
 : QTextBrowser{ parent }
@@ -42,4 +42,4 @@ QVariant TextBrowser::loadResource(int type, const QUrl& name)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

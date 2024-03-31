@@ -25,7 +25,7 @@ class QPainter;
 class QPainterPath;
 // IWYU pragma: no_forward_declare QRectF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Object;
@@ -465,10 +465,10 @@ bool MapRenderables::empty() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::RenderConfig::Options)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::RenderConfig::Options)
 
 
 #endif

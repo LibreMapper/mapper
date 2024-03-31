@@ -24,7 +24,7 @@
 #include <QToolButton>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -292,4 +292,4 @@ void KeyButtonBar::sendKeyReleaseEvent(Qt::Key key_code)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

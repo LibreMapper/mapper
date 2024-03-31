@@ -11,7 +11,7 @@
 #include <Qt>
 #include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -101,6 +101,6 @@ ModifierKey::operator QString() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

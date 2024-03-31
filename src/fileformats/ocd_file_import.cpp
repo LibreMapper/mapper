@@ -70,7 +70,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -1447,21 +1447,21 @@ void OcdFileImport::setupLineSymbolPointSymbols(OcdFileImport::OcdImportedLineSy
 	{
 		line_symbol->dash_symbol = new OcdImportedPointSymbol();
 		setupPointSymbolPattern(line_symbol->dash_symbol, attributes.corner_data_size, reinterpret_cast<const Ocd::PointSymbolElementV8*>(coords));
-		line_symbol->dash_symbol->setName(QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "Dash symbol"));
+		line_symbol->dash_symbol->setName(QCoreApplication::translate("LibreMapper::LineSymbolSettings", "Dash symbol"));
 		coords += attributes.corner_data_size;
 	}
 	if (attributes.start_data_size > 0)
 	{
 		line_symbol->start_symbol = new OcdImportedPointSymbol();
 		setupPointSymbolPattern(line_symbol->start_symbol, attributes.start_data_size, reinterpret_cast<const Ocd::PointSymbolElementV8*>(coords));
-		line_symbol->start_symbol->setName(QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "Start symbol"));
+		line_symbol->start_symbol->setName(QCoreApplication::translate("LibreMapper::LineSymbolSettings", "Start symbol"));
 		coords += attributes.start_data_size;
 	}
 	if (attributes.end_data_size > 0)
 	{
 		line_symbol->end_symbol = new OcdImportedPointSymbol();
 		setupPointSymbolPattern(line_symbol->end_symbol, attributes.end_data_size, reinterpret_cast<const Ocd::PointSymbolElementV8*>(coords));
-		line_symbol->end_symbol->setName(QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "End symbol"));
+		line_symbol->end_symbol->setName(QCoreApplication::translate("LibreMapper::LineSymbolSettings", "End symbol"));
 	}
 	
 	// Suppress dash symbol at line ends if both start symbol and end symbol exist,
@@ -2401,4 +2401,4 @@ void OcdFileImport::handleStrings(const OcdFile<F>& file, std::initializer_list<
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

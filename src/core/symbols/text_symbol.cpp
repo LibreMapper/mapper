@@ -41,7 +41,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TextSymbol::TextSymbol()
 : Symbol { Symbol::Text }
@@ -502,7 +502,7 @@ bool TextSymbol::equalsImpl(const Symbol* other, Qt::CaseSensitivity case_sensit
 QString TextSymbol::getIconText() const
 {
 	if (icon_text.isEmpty())
-		return QCoreApplication::translate("OpenOrienteering::TextSymbolSettings", "A", "First capital letter of the local alphabet");
+		return QCoreApplication::translate("LibreMapper::TextSymbolSettings", "A", "First capital letter of the local alphabet");
 	return icon_text;
 }
 
@@ -532,4 +532,4 @@ double TextSymbol::getNextTab(double pos) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

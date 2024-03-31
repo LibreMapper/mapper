@@ -91,7 +91,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -1465,6 +1465,6 @@ bool PrintWidget::checkForEmptyMap()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // QT_PRINTSUPPORT_LIB

@@ -17,7 +17,7 @@
 
 class QByteArray;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 
@@ -55,6 +55,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_GDAL_TEMPLATE_H

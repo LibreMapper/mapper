@@ -27,7 +27,7 @@ class QToolBar;
 class QVariant;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoordF;
 class MapEditorController;
@@ -309,6 +309,6 @@ TextObject* TextObjectEditorHelper::object() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

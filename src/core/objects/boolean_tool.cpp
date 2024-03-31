@@ -64,7 +64,7 @@ uint qHash(const IntPoint& point, uint seed)
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -1209,4 +1209,4 @@ bool checkSegmentMatch(
 }  // namespace
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

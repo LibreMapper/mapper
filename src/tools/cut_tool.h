@@ -31,7 +31,7 @@ class QMouseEvent;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class DrawPathTool;
 class MapEditorController;
@@ -138,6 +138,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

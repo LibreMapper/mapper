@@ -166,7 +166,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class PointSymbol;
 
@@ -645,8 +645,8 @@ bool MapEditorController::loadFrom(const QString& path, const FileFormat& format
 	if (!importer)
 	{
 		QMessageBox::warning(dialog_parent, tr("Error"),
-		                     ::OpenOrienteering::MainWindow::tr("Cannot open file:\n%1\n\n%2")
-		                     .arg(path, ::OpenOrienteering::MainWindow::tr("Invalid file type.")));
+		                     ::LibreMapper::MainWindow::tr("Cannot open file:\n%1\n\n%2")
+		                     .arg(path, ::LibreMapper::MainWindow::tr("Invalid file type.")));
 		return false;
 	}
 	
@@ -954,7 +954,7 @@ void MapEditorController::createActions()
 	export_pdf_act = newAction("export-pdf", tr("&PDF"), print_act_mapper, SLOT(map()), nullptr, QString{}, "file_menu.html");
 	print_act_mapper->setMapping(export_pdf_act, PrintWidget::EXPORT_PDF_TASK);
 #ifdef MAPPER_USE_GDAL
-	export_vector_act = newAction("export-vector", ::OpenOrienteering::ImportExport::tr("Geospatial vector data"), this, SLOT(exportVector()), nullptr, {}, "edit_menu.html");
+	export_vector_act = newAction("export-vector", ::LibreMapper::ImportExport::tr("Geospatial vector data"), this, SLOT(exportVector()), nullptr, {}, "edit_menu.html");
 #else
 	export_vector_act = nullptr;
 #endif
@@ -979,7 +979,7 @@ void MapEditorController::createActions()
 	select_all_act = newAction("select-all", tr("Select all"), this, SLOT(selectAll()), nullptr, QString{}, "edit_menu.html");
 	select_nothing_act = newAction("select-nothing", tr("Select nothing"), this, SLOT(selectNothing()), nullptr, QString{}, "edit_menu.html");
 	invert_selection_act = newAction("invert-selection", tr("Invert selection"), this, SLOT(invertSelection()), nullptr, QString{}, "edit_menu.html");
-	select_by_current_symbol_act = newAction("select-by-symbol", QApplication::translate("OpenOrienteering::SymbolRenderWidget", "Select all objects with selected symbols"), this, SLOT(selectByCurrentSymbols()), nullptr, QString{}, "edit_menu.html");
+	select_by_current_symbol_act = newAction("select-by-symbol", QApplication::translate("LibreMapper::SymbolRenderWidget", "Select all objects with selected symbols"), this, SLOT(selectByCurrentSymbols()), nullptr, QString{}, "edit_menu.html");
 	find_feature = std::make_unique<MapFindFeature>(*this);
 	
 	clear_undo_redo_history_act = newAction("clearundoredohistory", tr("Clear undo / redo history"), this, SLOT(clearUndoRedoHistory()), nullptr, tr("Clear the undo / redo history to reduce map file size."), "edit_menu.html");
@@ -1401,7 +1401,7 @@ void MapEditorController::createMobileGUI()
 	
 	mobile_symbol_button_menu = new QMenu(window);
 	mobile_symbol_button_menu->addAction(QString{}); // reserved for symbol name
-	auto* description_action = mobile_symbol_button_menu->addAction(QApplication::translate("OpenOrienteering::SymbolPropertiesWidget", "Description"));
+	auto* description_action = mobile_symbol_button_menu->addAction(QApplication::translate("LibreMapper::SymbolPropertiesWidget", "Description"));
 	connect(description_action, &QAction::triggered, this, [this]() {
 		auto* symbol = symbol_widget->getSingleSelectedSymbol();
 		auto document = QString{ symbol->getNumberAsString() + QLatin1Char(' ')
@@ -1414,7 +1414,7 @@ void MapEditorController::createMobileGUI()
 		description_dialog.exec();
 	});
 	mobile_symbol_button_menu->addSeparator();
-	auto* hide_symbol_action = mobile_symbol_button_menu->addAction(QApplication::translate("OpenOrienteering::SymbolRenderWidget", "Hide objects with this symbol"));
+	auto* hide_symbol_action = mobile_symbol_button_menu->addAction(QApplication::translate("LibreMapper::SymbolRenderWidget", "Hide objects with this symbol"));
 	hide_symbol_action->setCheckable(true);
 	connect(hide_symbol_action, &QAction::triggered, this, [this](bool value) {
 		auto* symbol = symbol_widget->getSingleSelectedSymbol();
@@ -1425,7 +1425,7 @@ void MapEditorController::createMobileGUI()
 		map->setSymbolsDirty();
 		selectedSymbolsChanged();
 	});
-	auto* protected_symbol_action = mobile_symbol_button_menu->addAction(QApplication::translate("OpenOrienteering::SymbolRenderWidget", "Protect objects with this symbol"));
+	auto* protected_symbol_action = mobile_symbol_button_menu->addAction(QApplication::translate("LibreMapper::SymbolRenderWidget", "Protect objects with this symbol"));
 	protected_symbol_action->setCheckable(true);
 	connect(protected_symbol_action, &QAction::triggered, this, [this](bool value) {
 		auto* symbol = symbol_widget->getSingleSelectedSymbol();
@@ -1771,10 +1771,10 @@ void MapEditorController::exportVectorData(int file_types, const QString& format
 	if (!format)
 	{
 		QMessageBox::warning(window, tr("Error"),
-		                     ::OpenOrienteering::MainWindow::tr("File could not be saved:") + QLatin1Char('\n')
-		                     + ::OpenOrienteering::ImportExport::tr("Cannot find a vector data export driver named '%1'")
+		                     ::LibreMapper::MainWindow::tr("File could not be saved:") + QLatin1Char('\n')
+		                     + ::LibreMapper::ImportExport::tr("Cannot find a vector data export driver named '%1'")
 		                       .arg(selected_filter) + QLatin1Char('\n') + QLatin1Char('\n')
-		                     + ::OpenOrienteering::MainWindow::tr("Please report this as a bug.") );
+		                     + ::LibreMapper::MainWindow::tr("Please report this as a bug.") );
 		return;
 	}
 	
@@ -4234,8 +4234,8 @@ bool MapEditorController::importMapWithReplacement(
 	if (!SymbolReplacement(imported_map, *map).withAutoCrtFile(window, crt_file_hint))
 	{
 		auto choice = QMessageBox::question(window,
-		                                    ::OpenOrienteering::Map::tr("Import..."),
-		                                    ::OpenOrienteering::Map::tr("Symbol replacement was canceled.\n"
+		                                    ::LibreMapper::Map::tr("Import..."),
+		                                    ::LibreMapper::Map::tr("Symbol replacement was canceled.\n"
 		                                                                "Import the data anyway?"),
 		                                    QMessageBox::Yes | QMessageBox::No,
 		                                    QMessageBox::No);
@@ -4388,4 +4388,4 @@ void MapEditorToolAction::triggeredImpl(bool checked)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

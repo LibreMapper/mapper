@@ -17,7 +17,7 @@ class QString;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /** 
@@ -189,5 +189,5 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

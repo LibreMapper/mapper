@@ -27,7 +27,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ActionGridBar::ActionGridBar(Direction direction, int rows, QWidget* parent)
 : QWidget(parent)
@@ -247,4 +247,4 @@ void ActionGridBar::resizeEvent(QResizeEvent* event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -9,7 +9,7 @@
 #ifndef LIBREMAPPER_MAPPER_RESOURCE_H
 #define LIBREMAPPER_MAPPER_RESOURCE_H
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 namespace MapperResource {
@@ -29,7 +29,7 @@ void setSeachPaths();
 }  // namespace MapperResource
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 #endif

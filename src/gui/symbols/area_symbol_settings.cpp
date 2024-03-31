@@ -46,7 +46,7 @@
 #include "util/scoped_signals_blocker.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### AreaSymbol ###
 
@@ -564,4 +564,4 @@ void AreaSymbolSettings::patternPointDistChanged(double value)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

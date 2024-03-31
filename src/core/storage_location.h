@@ -17,7 +17,7 @@
 #include <QCoreApplication>
 #include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace Android {
 
@@ -43,7 +43,7 @@ constexpr bool qstring_is_nothrow_move_assignable = std::is_nothrow_move_assigna
  */
 class StorageLocation
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::StorageLocation)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::StorageLocation)
 	
 public:
 	/** Various hints about locations. */
@@ -130,6 +130,6 @@ StorageLocation::Hint StorageLocation::hint() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_STORAGE_LOCATION_H

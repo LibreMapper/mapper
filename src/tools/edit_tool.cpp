@@ -35,15 +35,15 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 EditTool::EditTool(MapEditorController* editor, MapEditorTool::Type type, QAction* tool_action)
  : MapEditorToolBase { QCursor(QPixmap(QString::fromLatin1(":/images/cursor-hollow.png")), 1, 1), type, editor, tool_action }
  , object_selector { new ObjectSelector(map()) }
 {
 	connect(editor->getMainWidget()->getMapView(),
-	        SIGNAL(viewChanged(OpenOrienteering::MapView::ChangeFlags)),
-	        this, SLOT(applyViewChanges(OpenOrienteering::MapView::ChangeFlags)));
+	        SIGNAL(viewChanged(LibreMapper::MapView::ChangeFlags)),
+	        this, SLOT(applyViewChanges(LibreMapper::MapView::ChangeFlags)));
 }
 
 
@@ -265,4 +265,4 @@ void EditTool::drawBoundingPath(QPainter* painter, MapWidget* widget, const std:
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

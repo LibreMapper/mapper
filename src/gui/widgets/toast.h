@@ -20,7 +20,7 @@ class QRect;
 class QTimerEvent;
 // IWYU pragma: no_include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -122,6 +122,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

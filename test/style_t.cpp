@@ -23,7 +23,7 @@
 #include "gui/scaling_icon_engine.h"
 #include "gui/widgets/mapper_proxystyle.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 

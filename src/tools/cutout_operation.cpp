@@ -27,7 +27,7 @@
 #include "undo/undo.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 CutoutOperation::CutoutOperation(Map* map, PathObject* cutout_object, bool cut_away)
 : map(map)
@@ -151,4 +151,4 @@ UndoStep* CutoutOperation::finish()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -16,7 +16,7 @@
 class QUrl;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -37,6 +37,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

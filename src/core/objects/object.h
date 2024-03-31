@@ -31,7 +31,7 @@ class QXmlStreamReader;
 class QXmlStreamWriter;
 // IWYU pragma: no_forward_declare QRectF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class PointObject;
@@ -1283,7 +1283,7 @@ constexpr ObjectPathCoord::operator bool() const
 	return static_cast<bool>(object);
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 #endif

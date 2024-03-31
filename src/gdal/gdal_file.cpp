@@ -15,7 +15,7 @@
 #include <QString>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace GdalFile {
 
@@ -58,4 +58,4 @@ QByteArray tryToFindRelativeTemplateFile(const QByteArray& template_path, const 
 
 }   // namespace GdalUtil
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

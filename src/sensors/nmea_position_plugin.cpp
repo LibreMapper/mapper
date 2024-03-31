@@ -21,7 +21,7 @@
 #endif
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 /**
@@ -185,4 +185,4 @@ QGeoSatelliteInfoSource* NmeaPositionPlugin::satelliteInfoSource(QObject* /* par
 	return nullptr;
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

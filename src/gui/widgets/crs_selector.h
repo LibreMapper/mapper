@@ -22,7 +22,7 @@ class QEvent;
 class QFormLayout;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Georeferencing;
 
@@ -177,6 +177,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -26,7 +26,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 StretchMapDialog::StretchMapDialog(const Map& map, double stretch_factor, QWidget* parent, Qt::WindowFlags f)
 : QDialog(parent, f)
@@ -130,4 +130,4 @@ StretchMapDialog::StretchOp StretchMapDialog::makeStretch() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

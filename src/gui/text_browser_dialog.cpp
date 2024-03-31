@@ -20,7 +20,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TextBrowserDialog::TextBrowserDialog(QWidget* parent)
 : QDialog(parent)
@@ -132,4 +132,4 @@ void TextBrowserDialog::highlighted(const QString& link)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

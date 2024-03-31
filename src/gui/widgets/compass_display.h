@@ -20,7 +20,7 @@ class QHideEvent;
 class QPaintEvent;
 class QShowEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -65,6 +65,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

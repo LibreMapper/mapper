@@ -13,7 +13,7 @@
 
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * A class which helps to run a service alongside the application.
@@ -47,6 +47,6 @@ private:
 	Q_DISABLE_COPY(MapperServiceProxy)
 };
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

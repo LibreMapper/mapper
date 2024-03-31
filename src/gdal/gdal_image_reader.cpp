@@ -45,7 +45,7 @@ QString toWkt(OGRSpatialReferenceH srs)
 }
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 GdalImageReader::GdalImageReader(const QString& path)
 : path(path)
@@ -125,7 +125,7 @@ bool GdalImageReader::read(QImage* image)
 	{
 		err = QImageReader::UnknownError;
 		error_string = QCoreApplication::translate(
-		                   "OpenOrienteering::TemplateImage",
+		                   "LibreMapper::TemplateImage",
 		                   "Not enough free memory (image size: %1x%2 pixels)")
 		               .arg(raster.size.width()).arg(raster.size.height());
 		return false;
@@ -354,4 +354,4 @@ TemplateImage::GeoreferencingOption readGdalGeoTransform(const QString& filepath
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

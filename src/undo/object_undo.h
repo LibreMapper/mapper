@@ -24,7 +24,7 @@
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class XmlElementReader;
@@ -206,12 +206,12 @@ public slots:
 	/**
 	 * Adapts the symbol pointers of objects referencing the changed symbol.
 	 */
-	virtual void symbolChanged(int pos, const OpenOrienteering::Symbol* new_symbol, const OpenOrienteering::Symbol* old_symbol);
+	virtual void symbolChanged(int pos, const LibreMapper::Symbol* new_symbol, const LibreMapper::Symbol* old_symbol);
 	
 	/**
 	 * Invalidates the undo step if a contained object references the deleted symbol.
 	 */
-	virtual void symbolDeleted(int pos, const OpenOrienteering::Symbol* old_symbol);
+	virtual void symbolDeleted(int pos, const LibreMapper::Symbol* old_symbol);
 	
 protected:
 	/**
@@ -359,9 +359,9 @@ public:
 	
 	
 public slots:
-	virtual void symbolChanged(int pos, const OpenOrienteering::Symbol* new_symbol, const OpenOrienteering::Symbol* old_symbol);
+	virtual void symbolChanged(int pos, const LibreMapper::Symbol* new_symbol, const LibreMapper::Symbol* old_symbol);
 	
-	virtual void symbolDeleted(int pos, const OpenOrienteering::Symbol* old_symbol);
+	virtual void symbolDeleted(int pos, const LibreMapper::Symbol* old_symbol);
 	
 protected:
 	void saveImpl(QXmlStreamWriter& xml) const override;
@@ -426,6 +426,6 @@ int ObjectModifyingUndoStep::getPartIndex() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

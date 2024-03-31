@@ -14,7 +14,7 @@
 
 #include "core/map_printer.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 /**

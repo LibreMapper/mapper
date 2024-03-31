@@ -30,7 +30,7 @@ class QStyleOptionComplex;
 class QStyleOption;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -197,6 +197,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_MAPPER_PROXYSTYLE_H

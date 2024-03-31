@@ -20,7 +20,7 @@
 #include "core/virtual_path.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 static_assert(std::is_nothrow_default_constructible<PathCoord>::value,
               "PathCoord must be nothrow default constructible.");
@@ -514,4 +514,4 @@ bool PathCoord::valueLessThanIndex(size_type value, const PathCoord& coord)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

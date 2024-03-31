@@ -27,7 +27,7 @@
 #include <QVBoxLayout>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -163,4 +163,4 @@ void Toast::paintEvent(QPaintEvent* /*event*/)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

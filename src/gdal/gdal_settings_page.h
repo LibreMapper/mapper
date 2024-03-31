@@ -17,7 +17,7 @@ class QCheckBox;
 class QTableWidget;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 class GdalSettingsPage : public SettingsPage
@@ -51,6 +51,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

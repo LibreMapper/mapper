@@ -25,7 +25,7 @@ class QPushButton;
 class QRadioButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 
@@ -86,6 +86,6 @@ inline bool ConfigureGridDialog::gridVisible() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

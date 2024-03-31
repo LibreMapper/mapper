@@ -24,7 +24,7 @@ class QEvent;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CombinedSymbol;
 class LineSymbol;
@@ -57,10 +57,10 @@ public:
 signals:
 	void dirtyRectChanged(const QRectF& rect);
 	void pathAborted();
-	void pathFinished(OpenOrienteering::PathObject* path);
+	void pathFinished(LibreMapper::PathObject* path);
 	
 protected slots:
-	virtual void setDrawingSymbol(const OpenOrienteering::Symbol* symbol);
+	virtual void setDrawingSymbol(const LibreMapper::Symbol* symbol);
 	
 protected:
 	/**
@@ -130,5 +130,5 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

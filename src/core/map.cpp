@@ -66,7 +66,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 QPointer<QTranslator> map_symbol_translator{};
 
@@ -1976,7 +1976,7 @@ void Map::loadTemplateFilesAsync(MapView& view, std::function<void(const QString
 		    && view.getTemplateVisibility(temp.get()).visible)
 		{
 			QTimer::singleShot(10, temp.get(), ([this, &view, temp = temp.get(), log = std::move(listener)]() {
-				log(qApp->translate("OpenOrienteering::MainWindow", "Opening %1")
+				log(qApp->translate("LibreMapper::MainWindow", "Opening %1")
 				         .arg(temp->getTemplateFilename()));
 				if (temp->getTemplateState() != Template::Loaded)
 					temp->loadTemplateFile();
@@ -2491,4 +2491,4 @@ void Map::undoCleanChanged(bool is_clean)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

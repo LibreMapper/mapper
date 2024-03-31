@@ -12,7 +12,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace
 {
@@ -823,4 +823,4 @@ void VirtualPath::copyLengths(
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

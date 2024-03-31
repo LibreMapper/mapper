@@ -14,7 +14,7 @@
 #include "core/objects/object.h"
 #include "core/symbols/symbol.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * Object conditions and processors,
@@ -114,6 +114,6 @@ namespace ObjectOp
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

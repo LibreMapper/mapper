@@ -76,7 +76,7 @@ struct Scaling
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // override
 ScalingIconEngine::~ScalingIconEngine() = default;
@@ -163,4 +163,4 @@ QString  ScalingIconEngine::iconName() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

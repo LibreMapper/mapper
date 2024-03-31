@@ -18,7 +18,7 @@
 #include "fileformats/ocd_parameter_stream_reader.h"
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 /**
@@ -136,10 +136,10 @@ private slots:
 };  // class OcdFileImportTest
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 
-QTEST_APPLESS_MAIN(OpenOrienteering::OcdFileImportTest)
+QTEST_APPLESS_MAIN(LibreMapper::OcdFileImportTest)
 
 #include "ocd_parameter_stream_reader_t.moc"  // IWYU pragma: keep

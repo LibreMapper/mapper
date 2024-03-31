@@ -12,9 +12,9 @@
 #include "undo/undo.h"
 #include "undo/undo_manager.h"
 
-namespace OpenOrienteering { class Map; }
+namespace LibreMapper { class Map; }
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 // test

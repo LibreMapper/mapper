@@ -30,7 +30,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MapPartUndoStep::MapPartUndoStep(Map* map, MapPartChange change, const MapPart* part)
 : UndoStep(UndoStep::MapPartUndoStepType, map)
@@ -165,4 +165,4 @@ void MapPartUndoStep::loadImpl(QXmlStreamReader &xml, SymbolDictionary &)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

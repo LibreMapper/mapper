@@ -27,7 +27,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 RotateMapDialog::RotateMapDialog(const Map& map, QWidget* parent, Qt::WindowFlags f)
 : QDialog(parent, f)
@@ -162,4 +162,4 @@ RotateMapDialog::RotationOp RotateMapDialog::makeRotation() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

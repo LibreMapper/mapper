@@ -18,7 +18,7 @@
 class QSettings;
 // IWYU pragma: no_forward_declare QTranslator
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -158,6 +158,6 @@ bool operator<(const TranslationUtil::Language& first, const TranslationUtil::La
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

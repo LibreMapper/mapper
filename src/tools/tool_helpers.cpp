@@ -45,7 +45,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### ConstrainAngleToolHelper ###
 
@@ -634,8 +634,8 @@ namespace
 AzimuthInfoHelper::AzimuthInfoHelper(const QWidget* widget, QColor color)
 : text_color(std::move(color))
 , text_font(widget->font())
-, azimuth_template(QCoreApplication::translate("OpenOrienteering::UnitOfMeasurement", "%1°", "degree"))
-, distance_template(QCoreApplication::translate("OpenOrienteering::UnitOfMeasurement", "%1 m", "meter"))
+, azimuth_template(QCoreApplication::translate("LibreMapper::UnitOfMeasurement", "%1°", "degree"))
+, distance_template(QCoreApplication::translate("LibreMapper::UnitOfMeasurement", "%1 m", "meter"))
 {
 	auto size = text_font.pixelSize();
 	if (size >= 0)
@@ -734,4 +734,4 @@ void AzimuthInfoHelper::draw(QPainter* painter, const MapWidget* widget, const M
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

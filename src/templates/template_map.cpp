@@ -43,7 +43,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -469,4 +469,4 @@ bool TemplateMap::georeferencedStateSupported() const
 }
 
 
-}   // namespace OpenOrienteering
+}   // namespace LibreMapper

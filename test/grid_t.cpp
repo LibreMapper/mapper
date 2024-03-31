@@ -20,7 +20,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 namespace
@@ -204,10 +204,10 @@ private slots:
 };  // class GridTest
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 
-QTEST_APPLESS_MAIN(OpenOrienteering::GridTest)
+QTEST_APPLESS_MAIN(LibreMapper::GridTest)
 
 #include "grid_t.moc"  // IWYU pragma: keep

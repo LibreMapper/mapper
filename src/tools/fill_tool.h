@@ -25,7 +25,7 @@ class QPainter;
 class QPoint;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapEditorController;
@@ -44,7 +44,7 @@ public:
 	~FillTool() override;
 	
 protected slots:
-	void setDrawingSymbol(const OpenOrienteering::Symbol* symbol);
+	void setDrawingSymbol(const LibreMapper::Symbol* symbol);
 	
 protected:
 	void updateStatusText() override;
@@ -97,6 +97,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -22,7 +22,7 @@ class QCloseEvent;
 class QListWidget;
 class QModelIndex;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MainWindow;
 
@@ -124,6 +124,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_AUTOSAVE_DIALOG_H

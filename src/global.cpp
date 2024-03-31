@@ -18,7 +18,7 @@
 #include "gdal/ogr_file_format.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 void doStaticInitializations()
 {
@@ -38,4 +38,4 @@ void doStaticInitializations()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

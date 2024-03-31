@@ -17,7 +17,7 @@
 
 class QAction;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 
@@ -43,6 +43,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

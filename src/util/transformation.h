@@ -18,7 +18,7 @@ class QTransform;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 struct TemplateTransform;
 
@@ -66,6 +66,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

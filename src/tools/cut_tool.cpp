@@ -43,7 +43,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -59,7 +59,7 @@ namespace {
 	auto no_point = std::numeric_limits<MapCoordVector::size_type>::max();
 	
 	
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 
@@ -749,4 +749,4 @@ void CutTool::replaceObject(Object* object, const std::vector<PathObject*>& repl
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -56,7 +56,7 @@ QString default_language()
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 QString TranslationUtil::base_name(QString::fromLatin1("qt_"));
 
@@ -196,4 +196,4 @@ TranslationUtil::Language TranslationUtil::languageFromSettings(const QSettings&
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

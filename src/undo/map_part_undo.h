@@ -16,7 +16,7 @@
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapPart;
@@ -83,6 +83,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // MAP_PART_UNDO_H

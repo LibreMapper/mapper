@@ -10,7 +10,7 @@
 
 class QByteArray;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -54,6 +54,6 @@ QByteArray tryToFindRelativeTemplateFile(const QByteArray& template_path, const 
 
 }   // namespace GdalUtil
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_GDAL_FILE_H

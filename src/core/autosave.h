@@ -13,7 +13,7 @@
 
 class QString;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Autosave;
 
@@ -114,6 +114,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

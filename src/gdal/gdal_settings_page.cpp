@@ -31,7 +31,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 GdalSettingsPage::GdalSettingsPage(QWidget* parent)
 : SettingsPage(parent)
@@ -247,4 +247,4 @@ int GdalSettingsPage::findDuplicateKey(const QString& key, int row) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

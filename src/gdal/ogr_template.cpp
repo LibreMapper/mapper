@@ -43,7 +43,7 @@
 #include "templates/template_track.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 	
@@ -630,4 +630,4 @@ void OgrTemplate::saveTypeSpecificTemplateConfiguration(QXmlStreamWriter& xml) c
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

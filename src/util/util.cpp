@@ -19,7 +19,7 @@
 class QPointF;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 void blockSignalsRecursively(QObject* obj, bool block)
 {
@@ -323,4 +323,4 @@ bool Util::pointsFormCorner(const MapCoord& point1, const MapCoord& anchor_point
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

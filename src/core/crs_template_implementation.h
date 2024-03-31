@@ -21,7 +21,7 @@
 
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class LatLon;
 
@@ -116,6 +116,6 @@ private:
 
 }  // namespace CRSTemplates
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

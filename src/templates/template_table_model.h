@@ -17,7 +17,7 @@
 
 class QModelIndex;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapView;
@@ -119,6 +119,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

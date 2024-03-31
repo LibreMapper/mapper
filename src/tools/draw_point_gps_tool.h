@@ -22,7 +22,7 @@ class QLabel;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class GPSDisplay;
 class MapCoordF;
@@ -44,11 +44,11 @@ public:
 	~DrawPointGPSTool() override;
 	
 public slots:
-	void newGPSPosition(const OpenOrienteering::MapCoordF& coord, float accuracy);
+	void newGPSPosition(const LibreMapper::MapCoordF& coord, float accuracy);
 	
 protected slots:
-	void activeSymbolChanged(const OpenOrienteering::Symbol* symbol);
-	void symbolDeleted(int pos, const OpenOrienteering::Symbol* old_symbol);
+	void activeSymbolChanged(const LibreMapper::Symbol* symbol);
+	void symbolDeleted(int pos, const LibreMapper::Symbol* old_symbol);
 	
 protected:
 	void initImpl() override;
@@ -71,5 +71,5 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

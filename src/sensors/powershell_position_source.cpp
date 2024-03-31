@@ -32,7 +32,7 @@ inline void initPowershellPositionResources()
 }
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 namespace {
@@ -434,4 +434,4 @@ void PowershellPositionSource::singleUpdateTimeout()
 	emit updateTimeout();
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

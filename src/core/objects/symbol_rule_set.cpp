@@ -31,7 +31,7 @@
 #include "undo/undo_manager.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // The SymbolRule member "query" may throw on copying.
 Q_STATIC_ASSERT(std::is_nothrow_constructible<SymbolRule>::value);
@@ -513,4 +513,4 @@ void SymbolRuleSet::apply(Map& object_map, const Map& symbol_set, Options option
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -18,8 +18,8 @@
 
 #include "util/backports.h"  // IWYU pragma: keep
 
-namespace OpenOrienteering {}
-using namespace OpenOrienteering;
+namespace LibreMapper {}
+using namespace LibreMapper;
 
 
 #ifdef QT_POSITIONING_LIB

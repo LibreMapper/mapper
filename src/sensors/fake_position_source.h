@@ -17,7 +17,7 @@
 
 class QTimerEvent;
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 
@@ -67,6 +67,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_FAKE_POSITION_SOURCE_H

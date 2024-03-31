@@ -31,7 +31,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class GdalManager::GdalManagerPrivate
 {
@@ -526,4 +526,4 @@ void GdalManager::setProjSearchPaths(const char* const* search_paths)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

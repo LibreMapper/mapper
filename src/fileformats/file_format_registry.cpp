@@ -14,7 +14,7 @@
 #include "fileformats/file_import_export.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 FileFormatRegistry FileFormats;
 
@@ -158,4 +158,4 @@ const FileFormat* FileFormatRegistry::findFormatForData(const QString& path, Fil
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

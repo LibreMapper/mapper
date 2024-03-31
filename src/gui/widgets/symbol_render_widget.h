@@ -31,7 +31,7 @@ class QPaintEvent;
 class QPainter;
 class QResizeEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Symbol;
@@ -172,14 +172,14 @@ protected slots:
 	 * 
 	 * @see Map::symbolChanged()
 	 */
-	void symbolChanged(int pos, const OpenOrienteering::Symbol* new_symbol, const OpenOrienteering::Symbol* old_symbol);
+	void symbolChanged(int pos, const LibreMapper::Symbol* new_symbol, const LibreMapper::Symbol* old_symbol);
 	
 	/**
 	 * @brief Updates the widget and the current selection.
 	 * 
 	 * @see Map::symbolDeleted()
 	 */
-	void symbolDeleted(int pos, const OpenOrienteering::Symbol* old_symbol);
+	void symbolDeleted(int pos, const LibreMapper::Symbol* old_symbol);
 	
 	void newPointSymbol();
 	void newLineSymbol();
@@ -367,6 +367,6 @@ int SymbolRenderWidget::selectedSymbolsCount() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

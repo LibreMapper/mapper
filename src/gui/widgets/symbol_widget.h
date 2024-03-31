@@ -16,7 +16,7 @@
 class QContextMenuEvent;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Symbol;
@@ -119,6 +119,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

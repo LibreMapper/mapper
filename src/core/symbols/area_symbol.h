@@ -25,7 +25,7 @@ class QRectF;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AreaRenderable;
 class LineSymbol;
@@ -304,10 +304,10 @@ AreaSymbol::FillPattern::Options AreaSymbol::FillPattern::clipping() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::AreaSymbol::FillPattern::Options)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::AreaSymbol::FillPattern::Options)
 
 
 #endif

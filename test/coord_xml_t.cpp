@@ -23,7 +23,7 @@ namespace literal
 }
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 void CoordXmlTest::initTestCase()
 {
@@ -1056,6 +1056,6 @@ bool CoordXmlTest::compare_all(MapCoordVector& coords, MapCoord& expected) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
-QTEST_GUILESS_MAIN(OpenOrienteering::CoordXmlTest)
+QTEST_GUILESS_MAIN(LibreMapper::CoordXmlTest)

@@ -26,7 +26,7 @@ class QChar;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -59,7 +59,7 @@ namespace OpenOrienteering {
  */
 class MapCoord
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::MapCoord)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::MapCoord)
 	
 public:
 	/**
@@ -1181,10 +1181,10 @@ constexpr MapCoordF operator/(const MapCoordF& lhs, qreal divisor)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::MapCoord::Flags)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::MapCoord::Flags)
 
 
 #endif

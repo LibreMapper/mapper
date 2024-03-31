@@ -24,7 +24,7 @@ class QComboBox;
 class QTableWidget;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class SymbolDropDownDelegate;
@@ -88,6 +88,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

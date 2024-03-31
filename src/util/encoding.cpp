@@ -41,7 +41,7 @@ const LanguageMapping mappings[] = {
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 const char* Util::codepageForLanguage(const QString& language_name)
 {
@@ -68,4 +68,4 @@ QTextCodec* Util::codecForName(const char* name)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -25,7 +25,7 @@
 #include "gui/map/map_widget.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 PointHandles::PointHandles() noexcept
 {
@@ -224,4 +224,4 @@ const QImage PointHandles::loadHandleImage(unsigned int factor)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -26,7 +26,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### UndoStep ###
 
@@ -263,5 +263,5 @@ UndoStep* NoOpUndoStep::undo()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 

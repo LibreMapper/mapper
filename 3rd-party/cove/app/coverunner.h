@@ -8,18 +8,18 @@
 #ifndef COVERUNNER_H
 #define COVERUNNER_H
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 class MainWindow;
 class Map;
 class TemplateImage;
-} // namespace OpenOrienteering
+} // namespace LibreMapper
 
 namespace cove {
 class CoveRunner
 {
 public:
-	void run(OpenOrienteering::MainWindow* parent, OpenOrienteering::Map* map,
-	         OpenOrienteering::TemplateImage* templ);
+	void run(LibreMapper::MainWindow* parent, LibreMapper::Map* map,
+	         LibreMapper::TemplateImage* templ);
 };
 } // cove
 

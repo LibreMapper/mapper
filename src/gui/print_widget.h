@@ -38,7 +38,7 @@ class QScrollArea;
 class QSpinBox;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MainWindow;
 class Map;
@@ -85,7 +85,7 @@ public:
 	
 public slots:
 	/** Changes the type of the print or export task. */
-	void setTask(OpenOrienteering::PrintWidget::TaskFlags type);
+	void setTask(LibreMapper::PrintWidget::TaskFlags type);
 	
 	/** Saves the print or export settings. */
 	void savePrinterConfig() const;
@@ -104,13 +104,13 @@ public slots:
 	void setTarget(const QPrinterInfo* target);
 	
 	/** Sets the format of a single page. */
-	void setPageFormat(const OpenOrienteering::MapPrinterPageFormat& format);
+	void setPageFormat(const LibreMapper::MapPrinterPageFormat& format);
 	
 	/** Sets the exported area. */
 	void setPrintArea(const QRectF& area);
 	
 	/** Sets output options: resolution, overprinting. */
-	void setOptions(const OpenOrienteering::MapPrinterOptions& options);
+	void setOptions(const LibreMapper::MapPrinterOptions& options);
 	
 	/** Listens to view feature changes. */
 	void onVisibilityChanged();
@@ -326,10 +326,10 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::PrintWidget::TaskFlags)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::PrintWidget::TaskFlags)
 
 
 #endif

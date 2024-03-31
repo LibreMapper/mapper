@@ -12,7 +12,7 @@
 #include <QObject>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ScopedMultiSignalsBlocker::~ScopedMultiSignalsBlocker()
 {
@@ -37,4 +37,4 @@ void ScopedMultiSignalsBlocker::add(QObject* object)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

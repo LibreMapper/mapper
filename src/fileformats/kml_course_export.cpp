@@ -23,12 +23,12 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // static
 QString KmlCourseExport::formatDescription()
 {
-	return OpenOrienteering::ImportExport::tr("KML");
+	return LibreMapper::ImportExport::tr("KML");
 }
 
 // static
@@ -128,4 +128,4 @@ void KmlCourseExport::writeCoordinates(const LatLon& latlon)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

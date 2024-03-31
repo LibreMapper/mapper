@@ -17,7 +17,7 @@
 #include "core/map_printer.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 PrintProgressDialog::PrintProgressDialog(MapPrinter* map_printer, QWidget* parent, Qt::WindowFlags f)
  : QProgressDialog(parent, f)
@@ -62,6 +62,6 @@ void PrintProgressDialog::setProgress(int value, const QString& status)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -74,7 +74,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 Q_STATIC_ASSERT(Georeferencing::declinationPrecision() == Util::InputProperties<Util::RotationalDegrees>::decimals());
 
@@ -893,4 +893,4 @@ const QCursor& GeoreferencingTool::getCursor() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

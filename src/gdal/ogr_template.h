@@ -25,7 +25,7 @@ class QWidget;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Georeferencing;
 class Map;
@@ -131,6 +131,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_OGR_TEMPLATE_H

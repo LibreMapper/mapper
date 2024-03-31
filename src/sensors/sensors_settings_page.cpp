@@ -29,7 +29,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SensorsSettingsPage::SensorsSettingsPage(QWidget* parent)
 : SettingsPage(parent)
@@ -156,4 +156,4 @@ void SensorsSettingsPage::updateWidgets()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

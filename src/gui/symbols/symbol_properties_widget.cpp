@@ -38,7 +38,7 @@
 // IWYU pragma: no_forward_declare QLabel
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SymbolPropertiesWidget::SymbolPropertiesWidget(Symbol* symbol, SymbolSettingDialog* dialog)
 : QTabWidget()
@@ -58,7 +58,7 @@ SymbolPropertiesWidget::SymbolPropertiesWidget(Symbol* symbol, SymbolSettingDial
 		editor->setValidator(new QIntValidator(0, 99999, editor));
 	}
 	
-	auto language_label = new QLabel(QApplication::translate("OpenOrienteering::MapSymbolTranslation", "Text source:"));
+	auto language_label = new QLabel(QApplication::translate("LibreMapper::MapSymbolTranslation", "Text source:"));
 	language_combo = new QComboBox();
 	edit_button = new QPushButton(tr("Edit"));
 	auto name_label = new QLabel(tr("Name:"));
@@ -197,14 +197,14 @@ void SymbolPropertiesWidget::editClicked()
 	auto question = QString{};
 	if (language_combo->currentIndex() == 1)
 	{
-		question = QApplication::translate("OpenOrienteering::MapSymbolTranslation",
+		question = QApplication::translate("LibreMapper::MapSymbolTranslation",
 		             "Before editing, the stored text will be "
 		             "replaced with the current translation. "
 		             "Do you want to continue?");
 	}
 	else
 	{
-		question = QApplication::translate("OpenOrienteering::MapSymbolTranslation",
+		question = QApplication::translate("LibreMapper::MapSymbolTranslation",
 		             "After modifying the stored text, "
 		             "the translation may no longer be found. "
 		             "Do you want to continue?");
@@ -306,8 +306,8 @@ void SymbolPropertiesWidget::reset(Symbol* symbol)
 	auto name_translated = dialog->getSourceMap()->raw_translation(symbol->getName());
 	auto description_translated = dialog->getSourceMap()->raw_translation(symbol->getDescription());
 	///: The language of the symbol name in the map file is not defined explicitly.
-	language_combo->addItem(QApplication::translate("OpenOrienteering::MapSymbolTranslation", "Map (%1)").
-	                        arg(QApplication::translate("OpenOrienteering::MapSymbolTranslation", "undefined language")));
+	language_combo->addItem(QApplication::translate("LibreMapper::MapSymbolTranslation", "Map (%1)").
+	                        arg(QApplication::translate("LibreMapper::MapSymbolTranslation", "undefined language")));
 	if (name_translated.isEmpty() && description_translated.isEmpty())
 	{
 		language_combo->setEnabled(false);
@@ -320,10 +320,10 @@ void SymbolPropertiesWidget::reset(Symbol* symbol)
 		auto language = TranslationUtil::languageFromSettings(QSettings());
 		if (!language.isValid())
 		{
-			language.displayName = QApplication::translate("OpenOrienteering::MapSymbolTranslation", "undefined language");
+			language.displayName = QApplication::translate("LibreMapper::MapSymbolTranslation", "undefined language");
 		}
 
-		language_combo->addItem(QApplication::translate("OpenOrienteering::MapSymbolTranslation", "Translation (%1)").arg(language.displayName));
+		language_combo->addItem(QApplication::translate("LibreMapper::MapSymbolTranslation", "Translation (%1)").arg(language.displayName));
 		language_combo->setEnabled(true);
 		language_combo->setCurrentIndex(1);
 		edit_button->setEnabled(true);
@@ -337,4 +337,4 @@ void SymbolPropertiesWidget::reset(Symbol* symbol)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -79,7 +79,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace
 {
@@ -1262,4 +1262,4 @@ QDebug operator<<(QDebug dbg, const Georeferencing &georef)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

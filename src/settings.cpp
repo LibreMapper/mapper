@@ -29,7 +29,7 @@
 #include <QVector>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /*
  * Implementation for some functions which need a Settings instance.
@@ -426,4 +426,4 @@ void Settings::setPaintOnTemplateColors(const std::vector<QColor>& new_colors)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

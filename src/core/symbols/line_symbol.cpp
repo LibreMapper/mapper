@@ -40,7 +40,7 @@
 #include "core/virtual_path.h"
 #include "util/xml_stream_util.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 using length_type = PathCoord::length_type;
 
@@ -1759,19 +1759,19 @@ const Symbol::BorderHints* LineSymbol::borderHints() const
 
 void LineSymbol::setStartSymbol(PointSymbol* symbol)
 {
-	replaceSymbol(start_symbol, symbol, QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "Start symbol"));
+	replaceSymbol(start_symbol, symbol, QCoreApplication::translate("LibreMapper::LineSymbolSettings", "Start symbol"));
 }
 void LineSymbol::setMidSymbol(PointSymbol* symbol)
 {
-	replaceSymbol(mid_symbol, symbol, QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "Mid symbol"));
+	replaceSymbol(mid_symbol, symbol, QCoreApplication::translate("LibreMapper::LineSymbolSettings", "Mid symbol"));
 }
 void LineSymbol::setEndSymbol(PointSymbol* symbol)
 {
-	replaceSymbol(end_symbol, symbol, QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "End symbol"));
+	replaceSymbol(end_symbol, symbol, QCoreApplication::translate("LibreMapper::LineSymbolSettings", "End symbol"));
 }
 void LineSymbol::setDashSymbol(PointSymbol* symbol)
 {
-	replaceSymbol(dash_symbol, symbol, QCoreApplication::translate("OpenOrienteering::LineSymbolSettings", "Dash symbol"));
+	replaceSymbol(dash_symbol, symbol, QCoreApplication::translate("LibreMapper::LineSymbolSettings", "Dash symbol"));
 }
 
 void LineSymbol::setMidSymbolPlacement(LineSymbol::MidSymbolPlacement placement)
@@ -2064,4 +2064,4 @@ bool LineSymbol::equalsImpl(const Symbol* other, Qt::CaseSensitivity case_sensit
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

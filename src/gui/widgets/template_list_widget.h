@@ -28,7 +28,7 @@ class QTableView;
 class QToolButton;
 class QVariant;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapEditorController;
@@ -59,7 +59,7 @@ public:
 	
 signals:
 	void currentRowChanged(int row);
-	void currentTemplateChanged(const OpenOrienteering::Template* temp);
+	void currentTemplateChanged(const LibreMapper::Template* temp);
 	void closePositionDockWidget();
 	void closeClicked();
 	
@@ -81,7 +81,7 @@ protected:
 	 * 
 	 * @see MapView::visibilityChanged
 	 */
-	void updateVisibility(OpenOrienteering::MapView::VisibilityFeature feature, bool active, const OpenOrienteering::Template* temp = nullptr);
+	void updateVisibility(LibreMapper::MapView::VisibilityFeature feature, bool active, const LibreMapper::Template* temp = nullptr);
 	
 	/**
 	 * Updates widget state depending on general template visibility.
@@ -124,7 +124,7 @@ protected:
 	void moreActionClicked(QAction* action);
 	void vectorizeClicked();
 	
-	void templatePositionDockWidgetClosed(OpenOrienteering::Template* temp);
+	void templatePositionDockWidgetClosed(LibreMapper::Template* temp);
 	
 	void changeTemplateFile(int pos);
 	
@@ -165,6 +165,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

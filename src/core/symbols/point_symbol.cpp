@@ -41,7 +41,7 @@
 // IWYU pragma: no_forward_declare QXmlStreamWriter
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 PointSymbol::PointSymbol() noexcept
 : Symbol { Symbol::Point }
@@ -650,4 +650,4 @@ bool PointSymbol::equalsImpl(const Symbol* other, Qt::CaseSensitivity case_sensi
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

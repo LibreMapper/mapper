@@ -11,7 +11,7 @@
 #include <QPainter>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 //### SymbolIconDecorator ###
 
@@ -93,4 +93,4 @@ void ProtectedSymbolDecorator::draw(QPainter& painter) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

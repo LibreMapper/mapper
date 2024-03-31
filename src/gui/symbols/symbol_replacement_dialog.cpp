@@ -70,7 +70,7 @@
 // IWYU pragma: no_forward_declare QTableWidgetItem
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 SymbolReplacementDialog::SymbolReplacementDialog(QWidget* parent, Map& object_map, const Map& symbol_set, SymbolRuleSet& symbol_rules, Mode mode)
@@ -238,7 +238,7 @@ bool SymbolReplacementDialog::saveCrtFile()
 			return true;
 		}
 		/// \todo Reused translation, consider generalized context
-		QMessageBox::warning(this, ::OpenOrienteering::Map::tr("Error"),
+		QMessageBox::warning(this, ::LibreMapper::Map::tr("Error"),
 		                     tr("Cannot save file:\n%1\n\n%2")
 		                     .arg(path, crt_file.errorString()) );
 	}
@@ -321,27 +321,27 @@ void SymbolReplacementDialog::updateMappingTable()
 				{
 				case Symbol::Area:
 					original_icon = object_map.getUndefinedLine()->getIcon(&object_map);
-					original_string = QGuiApplication::translate("OpenOrienteering::SymbolRenderWidget", "Area");
+					original_string = QGuiApplication::translate("LibreMapper::SymbolRenderWidget", "Area");
 					compatible_symbols = Symbol::getCompatibleTypes(replacement_symbol->getType());
 					break;
 				case Symbol::Combined:
 					original_icon = object_map.getUndefinedLine()->getIcon(&object_map);
-					original_string = QGuiApplication::translate("OpenOrienteering::SymbolRenderWidget", "Combined");
+					original_string = QGuiApplication::translate("LibreMapper::SymbolRenderWidget", "Combined");
 					compatible_symbols = Symbol::getCompatibleTypes(replacement_symbol->getType());
 					break;
 				case Symbol::Line:
 					original_icon = object_map.getUndefinedLine()->getIcon(&object_map);
-					original_string = QGuiApplication::translate("OpenOrienteering::SymbolRenderWidget", "Line");
+					original_string = QGuiApplication::translate("LibreMapper::SymbolRenderWidget", "Line");
 					compatible_symbols = Symbol::getCompatibleTypes(replacement_symbol->getType());
 					break;
 				case Symbol::Point:
 					original_icon = object_map.getUndefinedPoint()->getIcon(&object_map);
-					original_string = QGuiApplication::translate("OpenOrienteering::SymbolRenderWidget", "Point");
+					original_string = QGuiApplication::translate("LibreMapper::SymbolRenderWidget", "Point");
 					compatible_symbols = Symbol::getCompatibleTypes(replacement_symbol->getType());
 					break;
 				case Symbol::Text:
 					original_icon = object_map.getUndefinedText()->getIcon(&object_map);
-					original_string = QGuiApplication::translate("OpenOrienteering::SymbolRenderWidget", "Text");
+					original_string = QGuiApplication::translate("LibreMapper::SymbolRenderWidget", "Text");
 					compatible_symbols = Symbol::getCompatibleTypes(replacement_symbol->getType());
 					break;
 				case Symbol::AllSymbols:
@@ -478,4 +478,4 @@ QString SymbolReplacementDialog::replacementId() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

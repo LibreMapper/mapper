@@ -16,7 +16,7 @@
 
 #include "fileformats/file_format.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Exporter;
 class Importer;
@@ -81,6 +81,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_OCD_FILE_FORMAT

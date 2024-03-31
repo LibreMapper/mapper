@@ -13,7 +13,7 @@
 #include <QString>
 #include <QTimer>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapWidget;
 class Template;
@@ -31,7 +31,7 @@ public:
 public slots:
 	void newPosition(double latitude, double longitude, double altitude, float accuracy);
 	void positionUpdatesInterrupted();
-	void templateDeleted(int pos, const OpenOrienteering::Template* old_temp);
+	void templateDeleted(int pos, const LibreMapper::Template* old_temp);
 	void drawUpdate();
 	
 private:
@@ -44,6 +44,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

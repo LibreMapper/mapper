@@ -49,7 +49,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### TemplateVisibility ###
 
@@ -492,4 +492,4 @@ bool MapView::hasAlpha() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

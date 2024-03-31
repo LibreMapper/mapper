@@ -28,7 +28,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ScaleTool::ScaleTool(MapEditorController* editor, QAction* tool_action)
 : MapEditorToolBase { scaledToScreen(QCursor{ QPixmap(QString::fromLatin1(":/images/cursor-scale.png")), 1, 1 }), Other, editor, tool_action }
@@ -199,4 +199,4 @@ void ScaleTool::objectSelectionChangedImpl()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

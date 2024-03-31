@@ -19,7 +19,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ReopenTemplateDialog::ReopenTemplateDialog(QWidget* parent, Map* map, const QString& map_directory)
 : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint)
@@ -149,4 +149,4 @@ void ReopenTemplateDialog::OpenTemplateList::dropEvent(QDropEvent* event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

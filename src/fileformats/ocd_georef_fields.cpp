@@ -28,7 +28,7 @@
 #include "fileformats/ocd_file_import.h" // IWYU pragma: keep
 #include "fileformats/ocd_file_export.h" // IWYU pragma: keep
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -715,7 +715,7 @@ void applyGridAndZone(Georeferencing& georef,
 
 	if (result.first == MapperCrs::Invalid)
 	{
-		warning_handler(::OpenOrienteering::OcdFileImport::tr(
+		warning_handler(::LibreMapper::OcdFileImport::tr(
 		                    "Could not load the coordinate reference system '%1'.")
 		                .arg(combined_ocd_grid_zone));
 		return;
@@ -867,7 +867,7 @@ OcdGeorefFields OcdGeorefFields::fromGeoref(const Georeferencing& georef,
 		QStringList params;
 		std::for_each(begin(crs_param_strings), end(crs_param_strings),
 		              [&](const QString& s) { params.append(s); });
-		warning_handler(::OpenOrienteering::OcdFileExport::tr(
+		warning_handler(::LibreMapper::OcdFileExport::tr(
 		                    "Could not translate coordinate reference system '%1:%2'.")
 		                .arg(crs_id_string, params.join(QLatin1Char(','))));
 	};
@@ -935,4 +935,4 @@ OcdGeorefFields OcdGeorefFields::fromGeoref(const Georeferencing& georef,
 	return retval;
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -16,7 +16,7 @@ class QGeoAreaMonitorSource;
 class QGeoPositionInfoSource;
 class QGeoSatelliteInfoSource;
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 /**
@@ -44,6 +44,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_NMEA_PLUGIN_H

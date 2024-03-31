@@ -56,7 +56,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 namespace
 {

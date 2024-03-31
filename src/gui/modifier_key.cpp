@@ -12,7 +12,7 @@
 #include <QKeySequence>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ModifierKey::ModifierKey(int key)
  : native_text { QKeySequence((int)key).toString(QKeySequence::NativeText) }
@@ -90,4 +90,4 @@ const ModifierKey& ModifierKey::escape()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

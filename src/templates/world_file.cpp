@@ -19,7 +19,7 @@
 #include <QTextStream>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 WorldFile::WorldFile() noexcept
 : parameters { 1, 0, 0, 1, 0.5, 0.5 }
@@ -134,4 +134,4 @@ QString WorldFile::pathForImage(const QString& image_path)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

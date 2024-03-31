@@ -20,7 +20,7 @@
 
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapWidget;
 class Object;
@@ -157,6 +157,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_POINT_HANDLES_H

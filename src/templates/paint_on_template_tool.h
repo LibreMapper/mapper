@@ -31,7 +31,7 @@ class QCursor;
 class QMouseEvent;
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ActionGridBar;
 class MapEditorController;
@@ -101,10 +101,10 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::PaintOnTemplateTool::ErasingOptions)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::PaintOnTemplateTool::ErasingOptions)
 
 
 #endif

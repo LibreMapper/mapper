@@ -19,7 +19,7 @@
 class QPrinter;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapPrinter;
 
@@ -77,6 +77,6 @@ private:
 #endif
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // QT_PRINTSUPPORT_LIB

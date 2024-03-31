@@ -16,7 +16,7 @@
 
 #include "util/encoding.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 EncodingTest::EncodingTest(QObject* parent)

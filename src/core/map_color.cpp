@@ -18,10 +18,10 @@
 #include <QLatin1String>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MapColor::MapColor()
-: name(QCoreApplication::translate("OpenOrienteering::Map", "New color")),
+: name(QCoreApplication::translate("LibreMapper::Map", "New color")),
   priority(Undefined),
   opacity(1.0f),
   q_color(Qt::black),
@@ -35,7 +35,7 @@ MapColor::MapColor()
 }
 
 MapColor::MapColor(int priority)
-: name(QCoreApplication::translate("OpenOrienteering::Map", "New color")),
+: name(QCoreApplication::translate("LibreMapper::Map", "New color")),
   priority(priority),
   opacity(1.0f),
   q_color(Qt::black),
@@ -64,7 +64,7 @@ MapColor::MapColor(int priority)
 			break;
 		case Registration:
 			Q_ASSERT(isBlack());
-			name = QCoreApplication::translate("OpenOrienteering::MapColor", "Registration black (all printed colors)");
+			name = QCoreApplication::translate("LibreMapper::MapColor", "Registration black (all printed colors)");
 			break;
 		default:
 			; // no change
@@ -372,4 +372,4 @@ MapColorRgb MapColor::rgbFromSpotColors() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

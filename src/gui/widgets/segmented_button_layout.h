@@ -15,7 +15,7 @@
 
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -67,6 +67,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_SEGMENTED_BUTTON_LAYOUT_H

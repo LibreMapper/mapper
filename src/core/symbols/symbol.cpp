@@ -52,7 +52,7 @@
 // IWYU pragma: no_include <QObject>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 Symbol::Symbol(Type type) noexcept
 : number { { -1, -1, -1 } }
@@ -282,7 +282,7 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 	auto symbol_type = symbol_element.attribute<int>(QLatin1String("type"));
 	auto symbol = Symbol::makeSymbolForType(static_cast<Symbol::Type>(symbol_type));
 	if (!symbol)
-		throw FileFormatException(::OpenOrienteering::ImportExport::tr("Error while loading a symbol of type %1 at line %2 column %3.").arg(symbol_type).arg(xml.lineNumber()).arg(xml.columnNumber()));
+		throw FileFormatException(::LibreMapper::ImportExport::tr("Error while loading a symbol of type %1 at line %2 column %3.").arg(symbol_type).arg(xml.lineNumber()).arg(xml.columnNumber()));
 	
 	auto code = symbol_element.attribute<QString>(QLatin1String("code"));
 	if (symbol_element.hasAttribute(QLatin1String("id")))
@@ -297,13 +297,13 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 			if (conversion_ok)
 			{
 				if (symbol_dict.contains(converted_id))
-					throw FileFormatException(::OpenOrienteering::ImportExport::tr("Symbol ID '%1' not unique at line %2 column %3.").arg(id).arg(xml.lineNumber()).arg(xml.columnNumber()));
+					throw FileFormatException(::LibreMapper::ImportExport::tr("Symbol ID '%1' not unique at line %2 column %3.").arg(id).arg(xml.lineNumber()).arg(xml.columnNumber()));
 
 				symbol_dict[converted_id] = symbol.get();  // Will be dangling pointer when we throw an exception later
 			}
 			else
 			{
-				throw FileFormatException(::OpenOrienteering::ImportExport::tr("Malformed symbol ID '%1' at line %2 column %3.")
+				throw FileFormatException(::LibreMapper::ImportExport::tr("Malformed symbol ID '%1' at line %2 column %3.")
 			                              .arg(id).arg(xml.lineNumber())
 			                              .arg(xml.columnNumber()));
 			}
@@ -377,7 +377,7 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 	if (xml.error())
 	{
 		throw FileFormatException(
-		            ::OpenOrienteering::ImportExport::tr("Error while loading a symbol of type %1 at line %2 column %3: %4")
+		            ::LibreMapper::ImportExport::tr("Error while loading a symbol of type %1 at line %2 column %3: %4")
 		            .arg(symbol_type)
 		            .arg(xml.lineNumber())
 		            .arg(xml.columnNumber())
@@ -970,4 +970,4 @@ bool Symbol::lessByColor::operator() (const Symbol* s1, const Symbol* s2) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

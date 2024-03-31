@@ -21,7 +21,7 @@ class QSizeGrip; // IWYU pragma: keep
 class QString;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class Template;
@@ -70,6 +70,6 @@ private slots:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

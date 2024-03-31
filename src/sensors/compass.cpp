@@ -46,7 +46,7 @@
 // clazy:excludeall=missing-qobject-macro
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 #ifdef QT_SENSORS_LIB
 	
@@ -227,7 +227,7 @@ namespace SensorHelpers {
     }
 	
 	
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 
@@ -605,4 +605,4 @@ void Compass::emitAzimuthChanged(float value)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

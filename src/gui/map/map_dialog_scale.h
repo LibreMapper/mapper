@@ -20,7 +20,7 @@ class QRadioButton;
 class QDoubleSpinBox;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 
@@ -57,6 +57,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

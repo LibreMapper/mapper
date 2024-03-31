@@ -19,7 +19,7 @@ class QStackedLayout;
 class QTextEdit;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class ObjectQuery;
@@ -74,6 +74,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

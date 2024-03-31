@@ -39,7 +39,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoordF;
 
@@ -265,4 +265,4 @@ void ConfigureGridDialog::showHelp()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

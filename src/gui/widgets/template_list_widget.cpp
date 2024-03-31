@@ -92,7 +92,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -143,12 +143,12 @@ TemplateListWidget::TemplateListWidget(Map& map, MapView& main_view, MapEditorCo
 	auto* top_bar_layout = new QHBoxLayout(top_bar_widget);
 	
 	// Reuse the translation from MapEditorController action.
-	all_hidden_check = new QCheckBox(::OpenOrienteering::MapEditorController::tr("Hide all templates"));
+	all_hidden_check = new QCheckBox(::LibreMapper::MapEditorController::tr("Hide all templates"));
 	top_bar_layout->addWidget(all_hidden_check);
 	
 	if (mobile_mode)
 	{
-		auto* close_action = new QAction(QIcon(QString::fromLatin1(":/images/close.png")), ::OpenOrienteering::MainWindow::tr("Close"), this);
+		auto* close_action = new QAction(QIcon(QString::fromLatin1(":/images/close.png")), ::LibreMapper::MainWindow::tr("Close"), this);
 		connect(close_action, &QAction::triggered, this, &TemplateListWidget::closeClicked );
 		
 		auto* close_button = new QToolButton();
@@ -279,7 +279,7 @@ TemplateListWidget::TemplateListWidget(Map& map, MapView& main_view, MapEditorCo
 #endif /* WITH_COVE */
 
 	edit_button = createToolButton(QIcon(QString::fromLatin1(":/images/settings.png")),
-	                            ::OpenOrienteering::MapEditorController::tr("&Edit").remove(QLatin1Char('&')));
+	                            ::LibreMapper::MapEditorController::tr("&Edit").remove(QLatin1Char('&')));
 	edit_button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 	edit_button->setPopupMode(QToolButton::InstantPopup);
 	edit_button->setMenu(edit_menu);
@@ -621,7 +621,7 @@ std::unique_ptr<Template> TemplateListWidget::showOpenTemplateDialog(QWidget* di
 	}
 	pattern.remove(0, 1);
 	QString path = FileDialog::getOpenFileName(dialog_parent,
-	                                           QCoreApplication::translate("OpenOrienteering::MapEditorController",
+	                                           QCoreApplication::translate("LibreMapper::MapEditorController",
 	                                                                       "Open template..."),
 	                                           template_directory,
 	                                           QString::fromLatin1("%1 (%2);;%3 (*.*)").arg(
@@ -1031,4 +1031,4 @@ void TemplateListWidget::showOpacitySlider(int row)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

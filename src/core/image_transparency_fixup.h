@@ -10,7 +10,7 @@
 
 #include <QImage>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -94,6 +94,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -23,7 +23,7 @@ class QXmlStreamReader;
 class QXmlStreamWriter;
 // IWYU pragma: no_forward_declare QFontMetricsF
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapColor;
@@ -176,6 +176,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

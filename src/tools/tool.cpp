@@ -29,7 +29,7 @@
 #include "gui/map/map_widget.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -365,4 +365,4 @@ void MapEditorTool::settingsChanged()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

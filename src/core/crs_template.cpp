@@ -16,7 +16,7 @@
 #include <QLatin1Char>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // From crs_template_implementation.h/.cpp
 namespace CRSTemplates
@@ -125,4 +125,4 @@ void CRSTemplateRegistry::add(std::unique_ptr<const CRSTemplate> temp)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

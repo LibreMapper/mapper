@@ -31,7 +31,7 @@ using ProjTransformData = void;
 using ProjTransformData = struct PJconsts;
 #endif
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -772,6 +772,6 @@ LatLon Georeferencing::getGeographicRefPoint() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

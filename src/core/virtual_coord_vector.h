@@ -13,7 +13,7 @@
 
 #include "map_coord.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * @brief The VirtualFlagsVector class provides read-only access to a MapCoordVector.
@@ -227,6 +227,6 @@ MapCoordF VirtualCoordVector::back() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

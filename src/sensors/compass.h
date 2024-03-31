@@ -17,7 +17,7 @@
 
 class QMetaMethod;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CompassPrivate;
 
@@ -69,6 +69,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

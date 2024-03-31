@@ -18,7 +18,7 @@
 #include "gui/main_window.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 #ifdef Q_OS_ANDROID
 
@@ -115,4 +115,4 @@ void MapperServiceProxy::stopService()
 #endif
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

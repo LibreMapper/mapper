@@ -35,7 +35,7 @@ class QXmlStreamWriter;
 // IWYU pragma: no_forward_declare QXmlStreamReader
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### FillPattern ###
 
@@ -824,4 +824,4 @@ bool AreaSymbol::equalsImpl(const Symbol* other, Qt::CaseSensitivity case_sensit
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

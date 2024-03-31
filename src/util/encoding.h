@@ -11,7 +11,7 @@
 class QString;
 class QTextCodec;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace Util {
 
@@ -40,6 +40,6 @@ QTextCodec* codecForName(const char* name);
 
 }  // namespace Util
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

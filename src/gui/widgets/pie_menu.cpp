@@ -21,7 +21,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 PieMenu::PieMenu(QWidget* parent)
 : QWidget(parent, Qt::Popup | Qt::FramelessWindowHint),	// NOTE: use Qt::Window for debugging to avoid mouse grab
@@ -380,4 +380,4 @@ void PieMenu::updateCachedState()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

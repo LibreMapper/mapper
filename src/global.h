@@ -8,7 +8,7 @@
 #ifndef LIBREMAPPER_GLOBAL_H
 #define LIBREMAPPER_GLOBAL_H
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /** 
  * This is called at startup in main() and by the test cases
@@ -17,6 +17,6 @@ namespace OpenOrienteering {
 void doStaticInitializations();
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

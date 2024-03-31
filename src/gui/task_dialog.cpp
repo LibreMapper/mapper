@@ -19,7 +19,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TaskDialog::TaskDialog(QWidget* parent, const QString& title, const QString& text, QDialogButtonBox::StandardButtons buttons)
  : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint)
@@ -70,4 +70,4 @@ void TaskDialog::buttonClicked(QAbstractButton* button)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

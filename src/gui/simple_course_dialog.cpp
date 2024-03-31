@@ -19,7 +19,7 @@
 #include "fileformats/simple_course_export.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SimpleCourseDialog::~SimpleCourseDialog() = default;
 
@@ -78,4 +78,4 @@ void SimpleCourseDialog::updateWidgets()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

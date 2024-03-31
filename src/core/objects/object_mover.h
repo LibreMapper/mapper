@@ -18,7 +18,7 @@
 
 #include "core/map_coord.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Object;
@@ -119,6 +119,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

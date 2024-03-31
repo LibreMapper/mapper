@@ -30,7 +30,7 @@ class QPushButton;
 class QResizeEvent;
 class QStackedLayout;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class HomeScreenController;
 class StorageLocation;
@@ -207,5 +207,5 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

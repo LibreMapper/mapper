@@ -10,7 +10,7 @@
 #include "fake_position_source.h"
 
 
-namespace OpenOrienteering
+namespace LibreMapper
 {
 
 FakePositionPlugin::FakePositionPlugin(QObject* parent)
@@ -36,4 +36,4 @@ QGeoSatelliteInfoSource* FakePositionPlugin::satelliteInfoSource(QObject* /* par
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -9,7 +9,7 @@
 #include "map_editor_activity.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MapEditorActivity::~MapEditorActivity() = default;
 
@@ -24,4 +24,4 @@ void MapEditorActivity::draw(QPainter*, MapWidget*)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

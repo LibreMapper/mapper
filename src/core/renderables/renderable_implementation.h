@@ -21,7 +21,7 @@
 class QPainter;
 class QPointF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AreaSymbol;
 class LineSymbol;
@@ -133,6 +133,6 @@ const QPainterPath* AreaRenderable::painterPath() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

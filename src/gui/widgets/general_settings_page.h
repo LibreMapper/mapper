@@ -23,7 +23,7 @@ class QSpinBox;
 class QWidget;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class GeneralSettingsPage : public SettingsPage
 {
@@ -80,6 +80,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

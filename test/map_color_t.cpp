@@ -20,7 +20,7 @@
 
 #include "core/map_color.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 namespace QTest

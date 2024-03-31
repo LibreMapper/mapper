@@ -23,7 +23,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 static_assert(sizeof(qint32) <= sizeof(int), 
               "MapCoord::setX/Y uses qRound() returning int, xp/yp is of type qint32");
@@ -168,7 +168,7 @@ void ensureBoundsForQint32(qint64 x64, qint64 y64)
 		 || y64 < std::numeric_limits<qint32>::min()
 		 || y64 > std::numeric_limits<qint32>::max() )
 	{
-		throw std::range_error(QT_TRANSLATE_NOOP("OpenOrienteering::MapCoord", "Coordinates are out-of-bounds."));
+		throw std::range_error(QT_TRANSLATE_NOOP("LibreMapper::MapCoord", "Coordinates are out-of-bounds."));
 	}
 }
 
@@ -489,4 +489,4 @@ MapCoord::MapCoord(QStringRef& text)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

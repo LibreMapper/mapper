@@ -14,7 +14,7 @@
 
 #include <QtGlobal>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapCoordF;
@@ -65,6 +65,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -20,7 +20,7 @@
 #include "core/map_color.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ColorDropDown::ColorDropDown(const Map* map, const MapColor* initial_color, bool spot_colors_only, QWidget* parent)
 : QComboBox(parent)
@@ -159,4 +159,4 @@ void ColorDropDown::onColorDeleted(int, const MapColor* color)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

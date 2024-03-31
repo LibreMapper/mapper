@@ -19,7 +19,7 @@ class QShowEvent;
 class QToolButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ObjectQuery;
 
@@ -65,6 +65,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

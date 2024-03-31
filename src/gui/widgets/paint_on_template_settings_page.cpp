@@ -49,7 +49,7 @@
 class QWidget;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -62,17 +62,17 @@ struct ColorPresetEntry {
 constexpr std::array<ColorPresetEntry, 3> color_presets = {
     //: Paint on template color preset entry name.
     ColorPresetEntry {
-        QT_TRANSLATE_NOOP("OpenOrienteering::PaintOnTemplateSettingsPage", "Traditional"),
+        QT_TRANSLATE_NOOP("LibreMapper::PaintOnTemplateSettingsPage", "Traditional"),
         "FF0000,FFFF00,00FF00,DB00D8,0000FF,D15C00,000000"
     },
     //: Paint on template color preset entry name.
     ColorPresetEntry {
-        QT_TRANSLATE_NOOP("OpenOrienteering::PaintOnTemplateSettingsPage", "Confetti Hybrid"),
+        QT_TRANSLATE_NOOP("LibreMapper::PaintOnTemplateSettingsPage", "Confetti Hybrid"),
         "000000,FAF607,00A400,B4FF00,0000FE,81EEF7,F6260F,FCB9F4,FAEFD2"
     },
     //: Paint on template color preset entry name.
     ColorPresetEntry {
-        QT_TRANSLATE_NOOP("OpenOrienteering::PaintOnTemplateSettingsPage", "Guacamole Full"),
+        QT_TRANSLATE_NOOP("LibreMapper::PaintOnTemplateSettingsPage", "Guacamole Full"),
         "000000,FF0000,A24802,DCC3A8,0000FF,31DAE5,FFFF00,FFD000,78FF00,B0CF1D,446C55,ECA8EB,D918A8"
     },
 };
@@ -137,7 +137,7 @@ PaintOnTemplateSettingsPage::PaintOnTemplateSettingsPage(QWidget* parent)
 	up_down_layout->addWidget(move_down_button);
 
 	edit_button = Util::ToolButton::create(QIcon(QString::fromLatin1(":/images/settings.png")),
-	                            ::OpenOrienteering::MapEditorController::tr("&Edit").remove(QLatin1Char('&')));
+	                            ::LibreMapper::MapEditorController::tr("&Edit").remove(QLatin1Char('&')));
 	edit_button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 	edit_button->setEnabled(false);
 
@@ -373,4 +373,4 @@ void PaintOnTemplateSettingsPage::editColor(bool clicked)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

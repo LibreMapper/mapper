@@ -17,7 +17,7 @@ class QWidget;
 
 #include "gui/text_browser_dialog.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -51,6 +51,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

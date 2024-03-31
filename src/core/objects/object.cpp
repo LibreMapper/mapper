@@ -68,7 +68,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### Object implementation ###
 
@@ -301,7 +301,7 @@ Object* Object::load(QXmlStreamReader& xml, Map* map, const SymbolDictionary& sy
 	Object::Type object_type = object_element.attribute<Object::Type>(literal::type);
 	Object* object = Object::getObjectForType(object_type);
 	if (!object)
-		throw FileFormatException(::OpenOrienteering::ImportExport::tr("Error while loading an object of type %1.").arg(object_type));
+		throw FileFormatException(::LibreMapper::ImportExport::tr("Error while loading an object of type %1.").arg(object_type));
 	
 	object->map = map;
 	
@@ -315,7 +315,7 @@ Object* Object::load(QXmlStreamReader& xml, Map* map, const SymbolDictionary& sy
 		if (!symbol_id.isEmpty() && !conversion_ok)
 		{
 			delete object;
-			throw FileFormatException(::OpenOrienteering::ImportExport::tr("Malformed symbol ID '%1' at line %2 column %3.")
+			throw FileFormatException(::LibreMapper::ImportExport::tr("Malformed symbol ID '%1' at line %2 column %3.")
 		                              .arg(symbol_id).arg(xml.lineNumber())
 		                              .arg(xml.columnNumber()));
 		}
@@ -342,7 +342,7 @@ Object* Object::load(QXmlStreamReader& xml, Map* map, const SymbolDictionary& sy
 				break;
 			default:
 				throw FileFormatException(
-				  ::OpenOrienteering::ImportExport::tr("Unable to find symbol for object at %1:%2.").
+				  ::LibreMapper::ImportExport::tr("Unable to find symbol for object at %1:%2.").
 				  arg(xml.lineNumber()).arg(xml.columnNumber()) );
 		}
 	}
@@ -378,7 +378,7 @@ Object* Object::load(QXmlStreamReader& xml, Map* map, const SymbolDictionary& sy
 			}
 			catch (FileFormatException& e)
 			{
-				throw FileFormatException(::OpenOrienteering::ImportExport::tr("Error while loading an object of type %1 at %2:%3: %4").
+				throw FileFormatException(::LibreMapper::ImportExport::tr("Error while loading an object of type %1 at %2:%3: %4").
 				  arg(object_type).arg(xml.lineNumber()).arg(xml.columnNumber()).arg(e.message()));
 			}
 		}
@@ -399,7 +399,7 @@ Object* Object::load(QXmlStreamReader& xml, Map* map, const SymbolDictionary& sy
 					catch (const std::range_error& e)
 					{
 						/// \todo Add a warning, but don't throw - throwing lets loading fail.
-						// throw FileFormatException(::OpenOrienteering::MapCoord::tr(e.what()));
+						// throw FileFormatException(::LibreMapper::MapCoord::tr(e.what()));
 						qDebug("%s", e.what());
 					}
 				}
@@ -692,7 +692,7 @@ void Object::setTags(const KeyValueContainer& tags)
 	}
 }
 
-QString OpenOrienteering::Object::getTag(const QString& key) const
+QString LibreMapper::Object::getTag(const QString& key) const
 {
 	auto const it = object_tags.find(key);
 	return it == object_tags.end() ? QString{} : it->value;
@@ -3240,4 +3240,4 @@ bool PointObject::intersectsBox(const QRectF& box) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

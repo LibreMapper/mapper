@@ -17,7 +17,7 @@
 
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Georeferencing;
 
@@ -308,6 +308,6 @@ const CRSTemplateRegistry::TemplateList& CRSTemplateRegistry::list() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

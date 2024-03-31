@@ -36,7 +36,7 @@
 #include "fileformats/xml_file_format.h"
 
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 #ifndef MAPPER_COMMON_LIB

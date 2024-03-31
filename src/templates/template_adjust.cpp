@@ -33,7 +33,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 float TemplateAdjustActivity::cross_radius = 4;
 
@@ -604,7 +604,7 @@ bool TemplateAdjustAddTool::mousePressEvent(QMouseEvent* event, const MapCoordF&
 		setDirtyRect(map_coord);
 		
 		setStatusBarText(tr("<b>Click</b>: Set the map position of the pass point. ") +
-		                 OpenOrienteering::MapEditorTool::tr("<b>%1</b>: Abort. ").arg(ModifierKey::escape()) );
+		                 LibreMapper::MapEditorTool::tr("<b>%1</b>: Abort. ").arg(ModifierKey::escape()) );
 	}
 	else
 	{
@@ -858,4 +858,4 @@ bool TemplateAdjustDeleteTool::mouseMoveEvent(QMouseEvent* event, const MapCoord
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

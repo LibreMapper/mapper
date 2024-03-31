@@ -57,7 +57,7 @@ Q_STATIC_ASSERT((std::is_same<QRgb, unsigned int>::value));
 Q_STATIC_ASSERT(RGB_MASK == 0x00ffffff);
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -527,4 +527,4 @@ bool FillTool::fillBoundary(const QImage& image, const std::vector<QPoint>& boun
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

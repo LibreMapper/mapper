@@ -20,7 +20,7 @@
 #include <QRgb>
 #include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapColor;
 
@@ -866,11 +866,11 @@ QColor colorWithOpacity(const MapColor& c)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 // Allow explicit use of MapColor pointers in QVariant
-Q_DECLARE_METATYPE(const OpenOrienteering::MapColor*)
+Q_DECLARE_METATYPE(const LibreMapper::MapColor*)
 
 
 #endif

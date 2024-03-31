@@ -31,7 +31,7 @@ class QStackedWidget;
 class QToolBar;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MainWindowController;
 class MapperServiceProxy;
@@ -324,7 +324,7 @@ public slots:
 	 */
 	bool openPath(const QString &path);
 	
-	bool openPath(const QString &path, const OpenOrienteering::FileFormat* format);
+	bool openPath(const QString &path, const LibreMapper::FileFormat* format);
 	
 	/**
 	 * Open the file specified in the sending action's data.
@@ -622,6 +622,6 @@ bool MainWindow::homeScreenDisabled() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -24,7 +24,7 @@ class QToolButton;
 class QWidget;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 class PaintOnTemplateSettingsPage : public SettingsPage
@@ -64,6 +64,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_PAINT_ON_TEMPLATE_SETTINGS_PAGE_H

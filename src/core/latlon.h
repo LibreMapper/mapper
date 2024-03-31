@@ -13,7 +13,7 @@
 
 class QDebug;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * @brief Specifies geographic location by latitude and longitude.
@@ -121,6 +121,6 @@ constexpr bool LatLon::operator!=(const LatLon& rhs) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

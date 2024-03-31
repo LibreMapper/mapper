@@ -20,7 +20,7 @@
 #include "core/objects/object.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ObjectSelector::ObjectSelector(Map* map)
  : map(map)
@@ -167,4 +167,4 @@ bool ObjectSelector::selectionInfosEqual(const SelectionInfoVector& a, const Sel
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

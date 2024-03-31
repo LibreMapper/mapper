@@ -25,7 +25,7 @@ class QSizeF;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class KeyValueContainer;
 
@@ -710,6 +710,6 @@ void XmlElementReader::read(QSizeF& size)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

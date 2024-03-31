@@ -16,7 +16,7 @@
 #include <QString>
 #include <QStringRef>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Object;
@@ -37,7 +37,7 @@ class Symbol;
  */
 class ObjectQuery
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::ObjectQuery)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::ObjectQuery)
 	
 public:
 	enum Operator {
@@ -300,9 +300,9 @@ bool operator!=(const ObjectQuery::StringOperands& lhs, const ObjectQuery::Strin
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
-Q_DECLARE_METATYPE(OpenOrienteering::ObjectQuery::Operator)
+Q_DECLARE_METATYPE(LibreMapper::ObjectQuery::Operator)
 
 
 #endif

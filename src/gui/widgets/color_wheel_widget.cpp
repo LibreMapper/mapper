@@ -39,7 +39,7 @@ class QPaintEvent;
 class QResizeEvent;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 ColorWheel::ColorWheel(QWidget* parent)
@@ -421,4 +421,4 @@ QColor ColorWheelDialog::getColor(const QColor& initial, QWidget* parent)
 }
 
 
-} //  namespace OpenOrienteering
+} //  namespace LibreMapper

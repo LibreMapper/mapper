@@ -21,7 +21,7 @@ class QSignalMapper;
 class QVBoxLayout;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -98,6 +98,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

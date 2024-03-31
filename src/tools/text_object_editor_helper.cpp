@@ -60,7 +60,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### TextObjectEditorHelper::BatchEdit ###
 
@@ -118,7 +118,7 @@ TextObjectEditorHelper::TextObjectEditorHelper(not_null<TextObject*> text_object
 	auto window = editor->getWindow();
 	window->setShortcutsBlocked(true);
 	
-	auto const title = QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Alignment");
+	auto const title = QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Alignment");
 	alignment_toolbar = makeAlignmentToolBar();
 	editor->showPopupWidget(alignment_toolbar, title, MapEditorController::PopupLocationTop);
 	
@@ -521,11 +521,11 @@ QToolBar* TextObjectEditorHelper::makeAlignmentToolBar()
 		connect(action, &QAction::triggered, this, [this, alignment]() { setHorizontalAlignment(alignment); });
 	};
 	add_horizontal_option(TextObject::AlignLeft, ":/images/text-align-left.png",
-	                      QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Left"));
+	                      QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Left"));
 	add_horizontal_option(TextObject::AlignHCenter, ":/images/text-align-hcenter.png",
-	                      QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Center"));
+	                      QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Center"));
 	add_horizontal_option(TextObject::AlignRight, ":/images/text-align-right.png",
-	                      QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Right"));
+	                      QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Right"));
 	
 	toolbar->addSeparator();
 	
@@ -538,13 +538,13 @@ QToolBar* TextObjectEditorHelper::makeAlignmentToolBar()
 		connect(action, &QAction::triggered, this, [this, alignment]() { setVerticalAlignment(alignment); });
 	};
 	add_vertical_option(TextObject::AlignTop, ":/images/text-align-top.png",
-	                    QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Top"));
+	                    QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Top"));
 	add_vertical_option(TextObject::AlignVCenter, ":/images/text-align-vcenter.png",
-	                    QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Center"));
+	                    QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Center"));
 	add_vertical_option(TextObject::AlignBaseline, ":/images/text-align-baseline.png",
-	                    QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Baseline"));
+	                    QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Baseline"));
 	add_vertical_option(TextObject::AlignBottom, ":/images/text-align-bottom.png",
-	                    QCoreApplication::translate("OpenOrienteering::TextObjectAlignmentDockWidget", "Bottom"));
+	                    QCoreApplication::translate("LibreMapper::TextObjectAlignmentDockWidget", "Bottom"));
 	
 	return toolbar;
 }
@@ -956,4 +956,4 @@ void TextObjectEditorHelper::foreachLineRect(int begin, int end, const std::func
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

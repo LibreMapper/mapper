@@ -54,7 +54,7 @@
 #include "util/translation_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 GeneralSettingsPage::GeneralSettingsPage(QWidget* parent)
 : SettingsPage(parent)
@@ -101,10 +101,10 @@ GeneralSettingsPage::GeneralSettingsPage(QWidget* parent)
 	layout->addItem(Util::SpacerItem::create(this));
 	layout->addRow(Util::Headline::create(tr("Program start")));
 	
-	open_mru_check = new QCheckBox(::OpenOrienteering::AbstractHomeScreenWidget::tr("Open most recently used file"));
+	open_mru_check = new QCheckBox(::LibreMapper::AbstractHomeScreenWidget::tr("Open most recently used file"));
 	layout->addRow(open_mru_check);
 	
-	tips_visible_check = new QCheckBox(::OpenOrienteering::AbstractHomeScreenWidget::tr("Show tip of the day"));
+	tips_visible_check = new QCheckBox(::LibreMapper::AbstractHomeScreenWidget::tr("Show tip of the day"));
 	layout->addRow(tips_visible_check);
 	
 	layout->addItem(Util::SpacerItem::create(this));
@@ -403,4 +403,4 @@ bool GeneralSettingsPage::eventFilter(QObject* /* watched */, QEvent* event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -82,7 +82,7 @@ void dumpDriverList(std::string const& headline, std::vector<std::string> list)
 void dumpGdalDrivers()
 {
 	auto qimagereader_extensions = std::string("| Qt | QImageReader | ");
-	for (auto& extension : OpenOrienteering::gdal::qImageReaderExtensions<std::vector<const char*>>())
+	for (auto& extension : LibreMapper::gdal::qImageReaderExtensions<std::vector<const char*>>())
 	{
 		 qimagereader_extensions += extension;
 		 qimagereader_extensions += " ";

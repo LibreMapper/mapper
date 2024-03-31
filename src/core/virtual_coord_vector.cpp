@@ -10,7 +10,7 @@
 #include "core/map_coord.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 //### VirtualCoordVector ###
 
@@ -25,4 +25,4 @@ MapCoordF VirtualCoordVector::fromMapCoord(size_type index) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

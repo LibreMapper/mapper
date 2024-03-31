@@ -74,7 +74,7 @@
 #  include "gdal/gdal_manager.h"
 #endif
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 #ifdef QT_PRINTSUPPORT_LIB

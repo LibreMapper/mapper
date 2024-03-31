@@ -37,7 +37,7 @@
 #include "templates/template_image.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SymbolSettingDialog::SymbolSettingDialog(const Symbol* source_symbol, Map* source_map, QWidget* parent)
 : QDialog(parent, Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMaximizeButtonHint)
@@ -485,4 +485,4 @@ void SymbolSettingDialog::updateButtons()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

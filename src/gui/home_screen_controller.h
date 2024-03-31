@@ -13,7 +13,7 @@
 
 #include <QObject>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AbstractHomeScreenWidget;
 class MainWindow;
@@ -74,6 +74,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

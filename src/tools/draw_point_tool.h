@@ -25,7 +25,7 @@ class QPainter;
 class QPointF;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoordF;
 class MapEditorController;
@@ -90,6 +90,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

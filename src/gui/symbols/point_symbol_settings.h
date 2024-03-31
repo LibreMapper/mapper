@@ -18,7 +18,7 @@
 class QVBoxLayout;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class PointSymbol;
 class PointSymbolEditorWidget;
@@ -47,6 +47,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

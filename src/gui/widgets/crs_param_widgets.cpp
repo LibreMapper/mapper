@@ -26,7 +26,7 @@
 // IWYU pragma: no_forward_declare QPushButton
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace  {
 
@@ -101,4 +101,4 @@ bool UTMZoneEdit::calculateValue()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

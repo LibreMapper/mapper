@@ -11,8 +11,8 @@
 
 #include <QObject>
 
-namespace OpenOrienteering { class Object; }
-using OpenOrienteering::Object;
+namespace LibreMapper { class Object; }
+using LibreMapper::Object;
 
 
 /**

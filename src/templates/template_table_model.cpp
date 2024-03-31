@@ -32,7 +32,7 @@ Qt::CheckState toCheckState(const QVariant& value)
 	return value.toBool() ? Qt::Checked : Qt::Unchecked;
 }
 
-QColor paletteColor(OpenOrienteering::MapView const& view, QPalette::ColorRole role) {
+QColor paletteColor(LibreMapper::MapView const& view, QPalette::ColorRole role) {
 	auto const group = view.areAllTemplatesHidden() ? QPalette::Disabled : QPalette::Active;
 	return QPalette().color(group, role);
 }
@@ -51,7 +51,7 @@ constexpr int combined(int column, Qt::ItemDataRole role)
 }
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TemplateTableModel::~TemplateTableModel() = default;
 
@@ -150,21 +150,21 @@ QVariant TemplateTableModel::headerData(int section, Qt::Orientation orientation
 		{
 		case visibilityColumn():
 			if (role == Qt::ToolTipRole)
-				return QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Show");
+				return QCoreApplication::translate("LibreMapper::TemplateListWidget", "Show");
 			if (role == Qt::DecorationRole)
 				return checkBoxDecorator();
 			break;
 		case opacityColumn():
 			if (role == Qt::DisplayRole)
-				return QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Opacity");
+				return QCoreApplication::translate("LibreMapper::TemplateListWidget", "Opacity");
 			break;
 		case groupColumn():
 			if (role == Qt::DisplayRole)
-				return QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Group");
+				return QCoreApplication::translate("LibreMapper::TemplateListWidget", "Group");
 			break;
 		case nameColumn():
 			if (role == Qt::DisplayRole)
-				return QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Filename");
+				return QCoreApplication::translate("LibreMapper::TemplateListWidget", "Filename");
 			break;
 		}
 	}
@@ -242,7 +242,7 @@ QVariant TemplateTableModel::mapData(const QModelIndex &index, int role) const
 			break;
 		Q_FALLTHROUGH();
 	case combined(nameColumn(), Qt::DisplayRole):
-		return QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "- Map -");
+		return QCoreApplication::translate("LibreMapper::TemplateListWidget", "- Map -");
 	}
 	return {};
 }
@@ -450,4 +450,4 @@ void TemplateTableModel::onTemplateStateChanged()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

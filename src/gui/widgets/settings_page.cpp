@@ -9,7 +9,7 @@
 #include "settings_page.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SettingsPage::SettingsPage(QWidget* parent)
 : QWidget(parent)
@@ -20,4 +20,4 @@ SettingsPage::SettingsPage(QWidget* parent)
 SettingsPage::~SettingsPage() = default;
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

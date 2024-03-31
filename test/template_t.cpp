@@ -65,7 +65,7 @@
 #  include "gdal/gdal_file.h"
 #endif
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 namespace
 {

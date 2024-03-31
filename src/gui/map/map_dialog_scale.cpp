@@ -24,7 +24,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 ScaleMapDialog::ScaleMapDialog(QWidget* parent, Map* map) : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint), map(map)
 {
@@ -143,4 +143,4 @@ void ScaleMapDialog::okClicked()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

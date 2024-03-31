@@ -19,7 +19,7 @@
 class QPainter;
 class QRect;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -64,6 +64,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_SCALING_ICON_ENGINE_H

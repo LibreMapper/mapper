@@ -19,7 +19,7 @@
 
 #include "util/key_value_container.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 #define QSL(str) QStringLiteral(str)
 

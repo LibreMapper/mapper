@@ -19,7 +19,7 @@
 #include "util/transformation.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TemplateMoveTool::TemplateMoveTool(Template* templ, MapEditorController* editor, QAction* tool_action)
 : MapEditorTool(editor, Other, tool_action), templ(templ)
@@ -115,4 +115,4 @@ void TemplateMoveTool::updateDragging(const MapCoordF& mouse_pos_map)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

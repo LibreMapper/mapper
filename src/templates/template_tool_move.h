@@ -21,7 +21,7 @@ class QAction;
 class QCursor;
 class QMouseEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -44,7 +44,7 @@ public:
 	bool mouseReleaseEvent(QMouseEvent* event, const MapCoordF& map_coord, MapWidget* widget) override;
 	
 public slots:
-	void templateDeleted(int index, const OpenOrienteering::Template* temp);
+	void templateDeleted(int index, const LibreMapper::Template* temp);
 	
 private:
 	void updateDragging(const MapCoordF& mouse_pos_map);
@@ -57,6 +57,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

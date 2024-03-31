@@ -12,7 +12,7 @@
 
 #include "core/autosave.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 /**

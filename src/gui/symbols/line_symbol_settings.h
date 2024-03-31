@@ -26,7 +26,7 @@ class QScrollArea;
 class QSpinBox;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ColorDropDown;
 class LineSymbol;
@@ -184,6 +184,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

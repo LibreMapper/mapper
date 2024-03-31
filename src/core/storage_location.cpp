@@ -29,7 +29,7 @@
 #include "core/app_permissions.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace Android {
 
@@ -249,12 +249,12 @@ std::vector<StorageLocation> knownLocations()
 
 }  // namespace Android
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // static
 std::shared_ptr<const std::vector<StorageLocation>> StorageLocation::knownLocations()
@@ -309,10 +309,10 @@ QString StorageLocation::fileHintTextTemplate(Hint hint)
 }
 
 
-QString OpenOrienteering::StorageLocation::hintText() const
+QString LibreMapper::StorageLocation::hintText() const
 {
 	return hint() == HintNormal ? QString{} : fileHintTextTemplate(hint()).arg(path());
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

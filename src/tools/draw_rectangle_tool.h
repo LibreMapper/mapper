@@ -29,7 +29,7 @@ class QMouseEvent;
 class QPainter;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ConstrainAngleToolHelper;
 class KeyButtonBar;
@@ -150,5 +150,5 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

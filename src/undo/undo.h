@@ -18,7 +18,7 @@
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Object;
@@ -340,6 +340,6 @@ UndoStep* CombinedUndoStep::getSubStep(int i)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

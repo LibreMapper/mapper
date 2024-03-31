@@ -6,7 +6,7 @@
  */
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace gdal {
 
@@ -29,4 +29,4 @@ T qImageReaderExtensions() {
 
 }  // namespace gdal
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

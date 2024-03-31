@@ -32,7 +32,7 @@
 
 class QPointF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AreaSymbol;
 class Georeferencing;
@@ -171,7 +171,7 @@ namespace ogr
  */
 class OgrFileImport : public Importer
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::OgrFileImport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::OgrFileImport)
 	
 public:
 	using ObjectList = std::vector<Object*>;
@@ -384,7 +384,7 @@ MapCoord OgrFileImport::toMapCoord(double x, double y) const
  */
 class OgrFileExport : public Exporter
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::OgrFileExport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::OgrFileExport)
 
 public:
 
@@ -444,6 +444,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_OGR_FILE_FORMAT_P_H

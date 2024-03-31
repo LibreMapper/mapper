@@ -31,7 +31,7 @@ class QPointF;
 class QRectF;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapEditorTool;
@@ -365,6 +365,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

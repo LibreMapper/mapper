@@ -35,7 +35,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 RotatePatternTool::RotatePatternTool(MapEditorController* editor, QAction* tool_action)
 : MapEditorToolBase(QCursor(QPixmap(QString::fromLatin1(":/images/cursor-rotate.png")), 1, 1), Other, editor, tool_action)
@@ -229,4 +229,4 @@ void RotatePatternTool::objectSelectionChangedImpl()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

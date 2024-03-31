@@ -62,7 +62,7 @@
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 constexpr int MainWindow::max_recent_files;
 
@@ -1426,4 +1426,4 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

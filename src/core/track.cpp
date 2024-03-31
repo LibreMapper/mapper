@@ -32,7 +32,7 @@
 #include "core/storage_location.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### TrackPoint ###
 
@@ -372,4 +372,4 @@ bool operator==(const Track& lhs, const Track& rhs)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -38,7 +38,7 @@
 #include "util/overriding_shortcut.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace MimeType {
 
@@ -923,8 +923,8 @@ void SymbolRenderWidget::pasteSymbols()
 		///       See also MapEditor::importMap.
 		int answer = QMessageBox::question(
 		                 window(),
-		                 ::OpenOrienteering::Map::tr("Question"),
-		                 ::OpenOrienteering::Map::tr("The scale of the imported data is 1:%1 "
+		                 ::LibreMapper::Map::tr("Question"),
+		                 ::LibreMapper::Map::tr("The scale of the imported data is 1:%1 "
 		                                             "which is different from this map's scale of 1:%2.\n\n"
 		                                             "Rescale the imported data?")
 		                 .arg(QLocale().toString(paste_map.getScaleDenominator()),
@@ -1160,4 +1160,4 @@ void SymbolRenderWidget::sort(T compare)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -27,7 +27,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 bool DistributePointsTool::showSettingsDialog(
         QWidget* parent,
@@ -167,4 +167,4 @@ void DistributePointsSettingsDialog::getValues(DistributePointsTool::Settings& s
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

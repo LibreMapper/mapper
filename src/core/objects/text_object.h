@@ -27,7 +27,7 @@
 // IWYU pragma: no_forward_declare QRectF
 // IWYU pragma: no_forward_declare QTransform
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Symbol;
 
@@ -380,6 +380,6 @@ const TextObjectLineInfo*TextObject::getLineInfo(int i) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

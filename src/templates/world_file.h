@@ -14,7 +14,7 @@
 #include <QTransform>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * Handles pixel-to-world transformations given by world files.
@@ -61,6 +61,6 @@ struct WorldFile
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

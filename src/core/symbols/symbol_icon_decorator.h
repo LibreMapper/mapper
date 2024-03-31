@@ -13,7 +13,7 @@
 
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -77,6 +77,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_SYMBOL_ICON_DECORATOR_H

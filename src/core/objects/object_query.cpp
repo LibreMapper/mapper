@@ -92,7 +92,7 @@ QString keyToString(const QString &key)
  */
 class ObjectQueryNesting
 {
-	using ObjectQuery = OpenOrienteering::ObjectQuery;
+	using ObjectQuery = LibreMapper::ObjectQuery;
 	
 	struct Element
 	{
@@ -138,16 +138,16 @@ public:
  * logical query instances with invalid operands. This function creates valid
  * placeholders which can be replaced with an invalid operand in a second step.
  */
-OpenOrienteering::ObjectQuery placeholder()
+LibreMapper::ObjectQuery placeholder()
 {
-	return { static_cast<const OpenOrienteering::Symbol*>(nullptr) };
+	return { static_cast<const LibreMapper::Symbol*>(nullptr) };
 }
 
 }  // namespace
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### ObjectQuery::LogicalOperands ###
 
@@ -914,4 +914,4 @@ const Symbol* ObjectQueryParser::findSymbol(const QString& key) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

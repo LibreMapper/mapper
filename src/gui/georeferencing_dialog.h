@@ -32,7 +32,7 @@ class QRadioButton;
 class QNetworkReply;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CRSSelector;
 class Georeferencing;
@@ -339,6 +339,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

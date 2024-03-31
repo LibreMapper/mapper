@@ -50,7 +50,7 @@
 // IWYU pragma: no_forward_declare QTableWidgetItem
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -107,7 +107,7 @@ ColorListWidget::ColorListWidget(Map* map, MainWindow* window, QWidget* parent)
 	up_down_layout->addWidget(move_down_button);
 	
 	// TODO: In Mapper >= 0.6, switch to ColorWidget (or generic) translation context.
-	edit_button = createToolButton(QIcon(QString::fromLatin1(":/images/settings.png")), QApplication::translate("OpenOrienteering::MapEditorController", "&Edit").remove(QLatin1Char('&')));
+	edit_button = createToolButton(QIcon(QString::fromLatin1(":/images/settings.png")), QApplication::translate("LibreMapper::MapEditorController", "&Edit").remove(QLatin1Char('&')));
 	edit_button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 	
 	auto help_button = createToolButton(QIcon(QString::fromLatin1(":/images/help.png")), tr("Help"));
@@ -495,4 +495,4 @@ void ColorListWidget::updateRow(int row)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

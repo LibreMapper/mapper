@@ -12,7 +12,7 @@
 #include <QWidget>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SegmentedButtonLayout::SegmentedButtonLayout()
  : QHBoxLayout()
@@ -64,4 +64,4 @@ void SegmentedButtonLayout::invalidate()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

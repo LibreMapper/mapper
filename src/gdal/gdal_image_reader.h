@@ -24,7 +24,7 @@
 
 #include "templates/template_image.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -95,7 +95,7 @@ public:
 	
 	// Translation
 	
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::GdalImageReader)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::GdalImageReader)
 	
 	
 protected:
@@ -127,6 +127,6 @@ private:
 TemplateImage::GeoreferencingOption readGdalGeoTransform(const QString& filepath);
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_GDAL_IMAGE_READER_H

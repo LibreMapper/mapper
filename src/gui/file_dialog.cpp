@@ -43,7 +43,7 @@ namespace
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 bool FileDialog::needUpperCaseExtensions()
 {
@@ -103,4 +103,4 @@ void FileDialog::adjustParameters(QString& filter, QFileDialog::Options& options
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

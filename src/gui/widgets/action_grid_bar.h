@@ -23,7 +23,7 @@ class QResizeEvent;
 class QToolButton;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * A toolbar with a grid layout, whose button size depends on the ppi.
@@ -135,5 +135,5 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

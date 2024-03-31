@@ -14,7 +14,7 @@
 #include "core/objects/object.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 // static
@@ -100,4 +100,4 @@ void SimpleCourseExport::setProperties(Map& map, const QString& event_name, cons
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

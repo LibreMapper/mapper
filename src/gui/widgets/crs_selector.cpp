@@ -26,7 +26,7 @@
 #include "core/georeferencing.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // Helper functions for parameter widgets
 namespace {
@@ -375,4 +375,4 @@ void CRSSelector::changeEvent(QEvent* event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

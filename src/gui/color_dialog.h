@@ -31,7 +31,7 @@ class QRadioButton;
 class QTabWidget;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class ColorDropDown;
 class Map;
@@ -151,6 +151,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

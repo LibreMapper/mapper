@@ -19,7 +19,7 @@ class QLineEdit;
 class QSpinBox;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class SimpleCourseExport;
 
@@ -55,6 +55,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_SIMPLE_COURSE_DIALOG_H

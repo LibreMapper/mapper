@@ -19,7 +19,7 @@
 #include "core/symbols/line_symbol.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MeasureWidget::MeasureWidget(Map* map, QWidget* parent)
 : QTextBrowser(parent)
@@ -150,4 +150,4 @@ void MeasureWidget::objectSelectionChanged()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

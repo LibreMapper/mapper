@@ -58,7 +58,7 @@ namespace
 }
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 EditLineTool::EditLineTool(MapEditorController* editor, QAction* tool_action)
  : EditTool(editor, EditLine, tool_action)
@@ -502,7 +502,7 @@ void EditLineTool::updateStatusText()
 	if (editingInProgress())
 	{
 		MapCoordF drag_vector = constrained_pos_map - click_pos_map;
-		text = ::OpenOrienteering::EditTool::tr("<b>Coordinate offset:</b> %1, %2 mm  <b>Distance:</b> %3 m ").arg(
+		text = ::LibreMapper::EditTool::tr("<b>Coordinate offset:</b> %1, %2 mm  <b>Distance:</b> %3 m ").arg(
 		         QLocale().toString(drag_vector.x(), 'f', 1),
 		         QLocale().toString(-drag_vector.y(), 'f', 1),
 		         QLocale().toString(0.001 * map()->getScaleDenominator() * drag_vector.length(), 'f', 1))
@@ -511,23 +511,23 @@ void EditLineTool::updateStatusText()
 		if (angle_helper->isActive())
 			text += tr("<b>%1</b>: Free movement. ").arg(ModifierKey::control());
 		if (!(active_modifiers & Qt::ShiftModifier))
-			text += ::OpenOrienteering::EditTool::tr("<b>%1</b>: Snap to existing objects. ").arg(ModifierKey::shift());
+			text += ::LibreMapper::EditTool::tr("<b>%1</b>: Snap to existing objects. ").arg(ModifierKey::shift());
 		else
 			text.chop(2); // Remove "| "
 	}
 	else
 	{
-		text = ::OpenOrienteering::EditTool::tr("<b>Click</b>: Select a single object. <b>Drag</b>: Select multiple objects. <b>%1+Click</b>: Toggle selection. ").arg(ModifierKey::shift());
+		text = ::LibreMapper::EditTool::tr("<b>Click</b>: Select a single object. <b>Drag</b>: Select multiple objects. <b>%1+Click</b>: Toggle selection. ").arg(ModifierKey::shift());
 		if (map()->getNumSelectedObjects() > 0)
 		{
-			text += ::OpenOrienteering::EditTool::tr("<b>%1</b>: Delete selected objects. ").arg(ModifierKey(DeleteObjectKey));
+			text += ::LibreMapper::EditTool::tr("<b>%1</b>: Delete selected objects. ").arg(ModifierKey(DeleteObjectKey));
 			
 			if (map()->selectedObjects().size() <= max_objects_for_handle_display)
 			{
 				if (active_modifiers & Qt::ControlModifier)
 					text = tr("<b>%1+Click</b> on segment: Toggle between straight and curved. ").arg(ModifierKey::control());
 				else
-					text += ::OpenOrienteering::MapEditorTool::tr("More: %1").arg(ModifierKey::control());
+					text += ::LibreMapper::MapEditorTool::tr("More: %1").arg(ModifierKey::control());
 			}
 		}
 	}
@@ -623,4 +623,4 @@ void EditLineTool::applyViewChanges(MapView::ChangeFlags change)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

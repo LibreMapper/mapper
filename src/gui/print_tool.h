@@ -22,7 +22,7 @@ class QCursor;
 class QMouseEvent;
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapPrinter;
@@ -114,6 +114,6 @@ protected:
 #endif // QT_PRINTSUPPORT_LIB
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_PRINT_TOOL_H

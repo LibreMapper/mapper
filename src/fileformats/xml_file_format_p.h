@@ -18,12 +18,12 @@
 #include "core/symbols/symbol.h"
 #include "fileformats/file_import_export.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /** Map exporter for the xml based map format. */
 class XMLFileExporter : public Exporter
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::XMLFileExporter)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::XMLFileExporter)
 	
 public:
 	XMLFileExporter(const QString& path, const Map* map, const MapView* view);
@@ -56,7 +56,7 @@ private:
 /** Map importer for the xml based map format. */
 class XMLFileImporter : public Importer
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::XMLFileImporter)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::XMLFileImporter)
 	
 public:
 	XMLFileImporter(const QString& path, Map *map, MapView *view);
@@ -96,6 +96,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

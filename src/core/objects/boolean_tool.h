@@ -14,7 +14,7 @@
 
 // IWYU pragma: no_include <algorithm>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CombinedUndoStep;
 class Map;
@@ -132,6 +132,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

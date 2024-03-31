@@ -17,7 +17,7 @@
 
 #include "map_coord.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class PathCoordVector;
 class PathObject;
@@ -301,6 +301,6 @@ SplitPathCoord SplitPathCoord::at(const PathCoordVector& path_coords, SplitPathC
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

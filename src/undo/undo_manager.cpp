@@ -27,7 +27,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 Q_STATIC_ASSERT(UndoManager::max_undo_steps < std::numeric_limits<int>::max());
 
@@ -472,4 +472,4 @@ UndoManager::StepList UndoManager::loadSteps(QXmlStreamReader& xml, SymbolDictio
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

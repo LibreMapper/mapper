@@ -16,7 +16,7 @@
 #include "mapper_config.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -190,4 +190,4 @@ QString AboutDialog::about()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

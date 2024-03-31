@@ -47,7 +47,7 @@
 
 // IWYU pragma: no_forward_declare QTranslator
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 #if defined(MAPPER_USE_FAKE_POSITION_PLUGIN)
@@ -69,11 +69,11 @@ Q_IMPORT_PLUGIN(ScalingIconEnginePlugin)
 
 // From map.h
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 extern QPointer<QTranslator> map_symbol_translator;
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 QStringList firstRemoved(QStringList&& input)

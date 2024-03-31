@@ -27,7 +27,7 @@ class QToolButton;
 class QWidget;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapCoordF;
 
@@ -378,5 +378,5 @@ namespace Util
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

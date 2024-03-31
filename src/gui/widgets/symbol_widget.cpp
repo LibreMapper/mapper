@@ -19,7 +19,7 @@
 // IWYU pragma: no_forward_declare QWidget
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SymbolWidget::SymbolWidget(Map* map, bool mobile_mode, QWidget* parent)
 : QScrollArea(parent)
@@ -77,4 +77,4 @@ void SymbolWidget::contextMenuEvent(QContextMenuEvent* event)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

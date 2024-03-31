@@ -16,7 +16,7 @@ class QString;
 class QStringList;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * A utility class which takes care of GDAL settings and options.
@@ -168,6 +168,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_GDAL_MANAGER_H

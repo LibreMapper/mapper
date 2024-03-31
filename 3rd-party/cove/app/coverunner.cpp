@@ -11,14 +11,14 @@
 
 #include "mainform.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 class Map;
-} // namespace OpenOrienteering
+} // namespace LibreMapper
 
 namespace cove {
-void CoveRunner::run(OpenOrienteering::MainWindow* parent,
-					 OpenOrienteering::Map* map,
-					 OpenOrienteering::TemplateImage* templ)
+void CoveRunner::run(LibreMapper::MainWindow* parent,
+					 LibreMapper::Map* map,
+					 LibreMapper::TemplateImage* templ)
 {
 	mainForm f(parent, map, templ);
 	f.exec();

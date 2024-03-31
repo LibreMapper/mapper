@@ -12,7 +12,7 @@
 #include <QString>
 #include <QStringRef>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**

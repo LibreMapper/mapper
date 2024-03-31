@@ -20,7 +20,7 @@
 #include "gui/symbols/symbol_setting_dialog.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### PointSymbol ###
 
@@ -82,4 +82,4 @@ void PointSymbolSettings::tabChanged(int /*index*/)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

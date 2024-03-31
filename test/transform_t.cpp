@@ -14,7 +14,7 @@
 #include "templates/template.h"
 #include "util/transformation.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 #if QT_VERSION == 0x050B01

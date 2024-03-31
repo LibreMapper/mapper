@@ -54,7 +54,7 @@
 
 // ### A namespace which collects various string constants of type QLatin1String. ###
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -514,7 +514,7 @@ std::unique_ptr<QPrinter> MapPrinter::makePrinter() const
 		PlatformPrinterProperties::restore(printer.get(), native_data);
 	}
 	
-	printer->setDocName(::OpenOrienteering::MapPrinter::tr("- Map -"));
+	printer->setDocName(::LibreMapper::MapPrinter::tr("- Map -"));
 	printer->setFullPage(true);
 	if (page_format.page_size == QPageSize::Custom)
 	{
@@ -1338,8 +1338,8 @@ bool MapPrinter::printMap(QPrinter* printer)
 	int step = 0;
 	auto num_steps = v_page_pos.size() * h_page_pos.size();
 	const QString message_template( (options.mode == MapPrinterOptions::Separations) ?
-	  ::OpenOrienteering::MapPrinter::tr("Processing separations of page %1...") :
-	  ::OpenOrienteering::MapPrinter::tr("Processing page %1...") );
+	  ::LibreMapper::MapPrinter::tr("Processing separations of page %1...") :
+	  ::LibreMapper::MapPrinter::tr("Processing page %1...") );
 	auto message = message_template.arg(1);
 	emit printProgress(0, message);
 	
@@ -1389,16 +1389,16 @@ bool MapPrinter::printMap(QPrinter* printer)
 	
 	if (cancel_print_map)
 	{
-		emit printProgress(100, ::OpenOrienteering::MapPrinter::tr("Canceled"));
+		emit printProgress(100, ::LibreMapper::MapPrinter::tr("Canceled"));
 	}
 	else if (!painter.isActive())
 	{
-		emit printProgress(100, ::OpenOrienteering::MapPrinter::tr("Error"));
+		emit printProgress(100, ::LibreMapper::MapPrinter::tr("Error"));
 		return false;
 	}
 	else
 	{
-		emit printProgress(100, ::OpenOrienteering::MapPrinter::tr("Finished"));
+		emit printProgress(100, ::LibreMapper::MapPrinter::tr("Finished"));
 	}
 	return true;
 }
@@ -1413,4 +1413,4 @@ void MapPrinter::cancelPrintMap()
 #endif  // QT_PRINTSUPPORT_LIB
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

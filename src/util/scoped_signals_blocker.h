@@ -13,7 +13,7 @@
 
 class QObject;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -100,6 +100,6 @@ void ScopedMultiSignalsBlocker::add() const noexcept
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

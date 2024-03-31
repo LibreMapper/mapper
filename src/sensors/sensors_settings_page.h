@@ -16,7 +16,7 @@
 class QComboBox;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 class SensorsSettingsPage : public SettingsPage
@@ -43,6 +43,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_SENSORS_SETTINGS_PAGE_H

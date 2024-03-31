@@ -12,7 +12,7 @@
 
 class QString;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Georeferencing;
 
@@ -68,6 +68,6 @@ bool operator!=(const OcdGeorefFields& lhs, const OcdGeorefFields& rhs)
 	return !operator==(lhs, rhs);
 }
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_OCD_GEOREF_FIELDS_H

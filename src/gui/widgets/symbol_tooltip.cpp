@@ -35,7 +35,7 @@
 // IWYU pragma: no_forward_declare QWidget
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 SymbolToolTip::SymbolToolTip(QWidget* parent, QShortcut* shortcut)
 : QWidget{ parent }
@@ -227,4 +227,4 @@ const Symbol* SymbolToolTip::getSymbol() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

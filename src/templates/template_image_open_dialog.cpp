@@ -30,7 +30,7 @@
 #include "templates/template_image.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TemplateImageOpenDialog::TemplateImageOpenDialog(TemplateImage* templ, QWidget* parent)
  : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint), templ(templ)
@@ -176,4 +176,4 @@ void TemplateImageOpenDialog::doAccept()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

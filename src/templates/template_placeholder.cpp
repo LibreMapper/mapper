@@ -22,7 +22,7 @@
 
 // IWYU pragma: no_include <qxmlstream.h>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -171,4 +171,4 @@ void TemplatePlaceholder::unloadTemplateFileImpl()
 {}
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

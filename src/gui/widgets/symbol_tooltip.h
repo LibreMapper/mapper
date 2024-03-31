@@ -24,7 +24,7 @@ class QShowEvent;
 // IWYU pragma: no_forward_declare QWidget
 // IWYU pragma: no_include <QString>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Symbol;
@@ -132,6 +132,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

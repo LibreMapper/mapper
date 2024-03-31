@@ -46,7 +46,7 @@
 // IWYU pragma: no_forward_declare QXmlStreamWriter
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -442,4 +442,4 @@ bool KmzGroundOverlayExport::wasCanceled() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

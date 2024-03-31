@@ -36,7 +36,7 @@
 #include "core/symbols/point_symbol.h"
 #include "core/symbols/symbol.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 // Uncomment to enable tests which produce unstable results,

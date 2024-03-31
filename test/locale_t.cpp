@@ -15,10 +15,10 @@
 
 #include "util/translation_util.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 inline
 bool operator==(const TranslationUtil::Language& first, const TranslationUtil::Language& second) {
@@ -26,7 +26,7 @@ bool operator==(const TranslationUtil::Language& first, const TranslationUtil::L
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
 

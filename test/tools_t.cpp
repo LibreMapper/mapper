@@ -32,7 +32,7 @@
 #include "tools/edit_point_tool.h"
 #include "tools/edit_tool.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 /// Creates a test map and provides pointers to specific map elements.

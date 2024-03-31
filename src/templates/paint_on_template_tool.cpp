@@ -44,7 +44,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -222,7 +222,7 @@ ActionGridBar* PaintOnTemplateTool::makeToolBar()
 	toolbar->addAction(erase_action, count % 2, count / 2);
 	
 	background_drawing_action = new QAction(makeBackgroundDrawingIcon(icon_size),
-	                                        ::OpenOrienteering::MapEditorController::tr("Background drawing"),
+	                                        ::LibreMapper::MapEditorController::tr("Background drawing"),
 	                                        toolbar);
 	background_drawing_action->setCheckable(true);
 	background_drawing_action->setChecked(options().testFlag(Template::ComposeBackground));
@@ -259,13 +259,13 @@ ActionGridBar* PaintOnTemplateTool::makeToolBar()
 	}
 	
 	auto* undo_action = new QAction(QIcon(QString::fromLatin1(":/images/undo.png")),
-	                                ::OpenOrienteering::MapEditorController::tr("Undo"),
+	                                ::LibreMapper::MapEditorController::tr("Undo"),
 	                                toolbar);
 	connect(undo_action, &QAction::triggered, this, &PaintOnTemplateTool::undoSelected);
 	toolbar->addActionAtEnd(undo_action, 0, 0);
 	
 	auto* redo_action = new QAction(QIcon(QString::fromLatin1(":/images/redo.png")),
-	                                ::OpenOrienteering::MapEditorController::tr("Redo"),
+	                                ::LibreMapper::MapEditorController::tr("Redo"),
 	                                toolbar);
 	connect(redo_action, &QAction::triggered, this, &PaintOnTemplateTool::redoSelected);
 	toolbar->addActionAtEnd(redo_action, 1, 0);
@@ -421,4 +421,4 @@ void PaintOnTemplateTool::draw(QPainter* painter, MapWidget* widget)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

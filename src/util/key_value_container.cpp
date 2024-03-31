@@ -11,7 +11,7 @@
 #include <stdexcept>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 bool operator==(const KeyValue& lhs, const KeyValue& rhs)
 {
@@ -88,4 +88,4 @@ KeyValueContainer::iterator KeyValueContainer::insert_or_assign(iterator hint, c
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

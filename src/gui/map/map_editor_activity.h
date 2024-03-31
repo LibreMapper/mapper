@@ -13,7 +13,7 @@
 
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapWidget;
 
@@ -55,6 +55,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

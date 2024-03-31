@@ -68,7 +68,7 @@ class QGesture;
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MapWidget::MapWidget(bool show_help, bool force_antialiasing, QWidget* parent)
  : QWidget(parent)
@@ -292,7 +292,7 @@ void MapWidget::visibilityChanged(MapView::VisibilityFeature feature, bool activ
 		{
 			// The template must be loaded.
 			QToolTip::showText(QCursor::pos(),
-			                   qApp->translate("OpenOrienteering::MainWindow", "Opening %1")
+			                   qApp->translate("LibreMapper::MainWindow", "Opening %1")
 			                   .arg(temp->getTemplateFilename()) );
 			// Use a small delay so that some UI events can be processed first.
 			QPointer<MapWidget> widget(this);
@@ -303,8 +303,8 @@ void MapWidget::visibilityChanged(MapView::VisibilityFeature feature, bool activ
 					QToolTip::hideText();
 					if (temp->getTemplateState() == Template::Invalid)
 						QMessageBox::warning(widget.data(),
-						                     qApp->translate("OpenOrienteering::MainWindow", "Error"),
-						                     qApp->translate("OpenOrienteering::Importer", "Failed to load template '%1', reason: %2")
+						                     qApp->translate("LibreMapper::MainWindow", "Error"),
+						                     qApp->translate("LibreMapper::Importer", "Failed to load template '%1', reason: %2")
 						                     .arg(temp->getTemplateFilename(), temp->errorString()) );
 				}
 			}));
@@ -1432,4 +1432,4 @@ void MapWidget::shiftCache(int sx, int sy, QPixmap& cache)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -21,7 +21,7 @@ class QPushButton;
 class QToolButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MainWindow;
 class Map;
@@ -169,6 +169,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

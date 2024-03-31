@@ -44,7 +44,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 DrawRectangleTool::DrawRectangleTool(MapEditorController* editor, QAction* tool_action, bool is_helper_tool)
 : DrawLineAndAreaTool(editor, DrawRectangle, tool_action, is_helper_tool)
@@ -709,24 +709,24 @@ void DrawRectangleTool::updateDirtyRect()
 void DrawRectangleTool::updateStatusText()
 {
 	QString text;
-	static const QString text_more_shift_control_space(::OpenOrienteering::MapEditorTool::tr("More: %1, %2, %3").arg(ModifierKey::shift(), ModifierKey::control(), ModifierKey::space()));
-	static const QString text_more_shift_space(::OpenOrienteering::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::shift(), ModifierKey::space()));
-	static const QString text_more_control_space(::OpenOrienteering::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::control(), ModifierKey::space()));
+	static const QString text_more_shift_control_space(::LibreMapper::MapEditorTool::tr("More: %1, %2, %3").arg(ModifierKey::shift(), ModifierKey::control(), ModifierKey::space()));
+	static const QString text_more_shift_space(::LibreMapper::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::shift(), ModifierKey::space()));
+	static const QString text_more_control_space(::LibreMapper::MapEditorTool::tr("More: %1, %2").arg(ModifierKey::control(), ModifierKey::space()));
 	QString text_more(text_more_shift_control_space);
 	
 	if (draw_dash_points)
-		text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>Dash points on.</b> ") + QLatin1String("| ");
+		text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>Dash points on.</b> ") + QLatin1String("| ");
 	
 	if (!editingInProgress())
 	{
 		if (ctrl_pressed)
 		{
-			text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Pick direction from existing objects. ").arg(ModifierKey::control());
+			text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Pick direction from existing objects. ").arg(ModifierKey::control());
 			text_more = text_more_shift_space;
 		}
 		else if (shift_pressed)
 		{
-			text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Snap to existing objects. ").arg(ModifierKey::shift());
+			text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Snap to existing objects. ").arg(ModifierKey::shift());
 			text_more = text_more_control_space;
 		}
 		else
@@ -740,7 +740,7 @@ void DrawRectangleTool::updateStatusText()
 		{
 			if (angles.size() == 1)
 			{
-				text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>%1</b>: Fixed angles. ").arg(ModifierKey::control());
+				text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>%1</b>: Fixed angles. ").arg(ModifierKey::control());
 			}
 			else
 			{
@@ -750,14 +750,14 @@ void DrawRectangleTool::updateStatusText()
 		}
 		else if (shift_pressed)
 		{
-			text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Snap to existing objects. ").arg(ModifierKey::shift());
+			text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>%1+Click</b>: Snap to existing objects. ").arg(ModifierKey::shift());
 			text_more = text_more_control_space;
 		}
 		else
 		{
 			text += tr("<b>Click</b>: Set a corner point. <b>Right or double click</b>: Finish the rectangle. ");
-			text += ::OpenOrienteering::DrawLineAndAreaTool::tr("<b>%1</b>: Undo last point. ").arg(ModifierKey::backspace());
-			text += ::OpenOrienteering::MapEditorTool::tr("<b>%1</b>: Abort. ").arg(ModifierKey::escape());
+			text += ::LibreMapper::DrawLineAndAreaTool::tr("<b>%1</b>: Undo last point. ").arg(ModifierKey::backspace());
+			text += ::LibreMapper::MapEditorTool::tr("<b>%1</b>: Abort. ").arg(ModifierKey::escape());
 		}
 	}
 	
@@ -767,4 +767,4 @@ void DrawRectangleTool::updateStatusText()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

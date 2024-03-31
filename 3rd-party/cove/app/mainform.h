@@ -28,11 +28,11 @@ class QPushButton;
 class QWidget;
 class QUndoStack;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 class Map;
 class Template;
 class TemplateImage;
-} // namespace OpenOrienteering
+} // namespace LibreMapper
 
 namespace cove {
 
@@ -56,8 +56,8 @@ public:
 
 protected:
 	std::unique_ptr<Vectorizer> vectorizerApp;
-	OpenOrienteering::Map* ooMap;
-	OpenOrienteering::Template* ooTempl;
+	LibreMapper::Map* ooMap;
+	LibreMapper::Template* ooTempl;
 	QString imageFileName;
 	QImage imageBitmap;
 	QImage classifiedBitmap;
@@ -76,8 +76,8 @@ protected:
 	QRgb getColorFromImage(const QImage& image);
 
 public:
-	mainForm(QWidget* parent, OpenOrienteering::Map* map,
-	         OpenOrienteering::TemplateImage* templ, Qt::WindowFlags flags = {});
+	mainForm(QWidget* parent, LibreMapper::Map* map,
+	         LibreMapper::TemplateImage* templ, Qt::WindowFlags flags = {});
 	~mainForm() override;
 	void loadImage(const QImage& imageToLoad, const QString& imageName);
 	void clearColorButtonsGroup();

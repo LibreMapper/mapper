@@ -17,7 +17,7 @@ class QRectF;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapCoordF;
@@ -158,6 +158,6 @@ bool operator==(const MapGrid& lhs, const MapGrid& rhs);
 bool operator!=(const MapGrid& lhs, const MapGrid& rhs);
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

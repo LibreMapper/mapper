@@ -39,7 +39,7 @@ namespace literal
 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MapPart::MapPart(const QString& name, Map* map)
 : name(name)
@@ -369,4 +369,4 @@ void MapPart::applyOnAllObjects(const std::function<void (Object*, MapPart*, int
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

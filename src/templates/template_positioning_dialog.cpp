@@ -21,7 +21,7 @@
 #include "gui/util_gui.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TemplatePositioningDialog::TemplatePositioningDialog(QWidget* parent)
 : QDialog(parent, Qt::WindowSystemMenuHint | Qt::WindowTitleHint)
@@ -76,4 +76,4 @@ bool TemplatePositioningDialog::centerOnView() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

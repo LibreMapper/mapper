@@ -34,7 +34,7 @@
 #include "undo/undo.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 CutHoleTool::CutHoleTool(MapEditorController* editor, QAction* tool_action, CutHoleTool::HoleType hole_type)
 : MapEditorTool(editor, Other, tool_action)
@@ -262,4 +262,4 @@ void CutHoleTool::updateStatusText()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

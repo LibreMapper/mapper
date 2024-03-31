@@ -18,7 +18,7 @@ class QLabel;
 class QSpinBox;
 class QLineEdit;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Symbol;
@@ -70,6 +70,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_ICON_PROPERTIES_WIDGET_H

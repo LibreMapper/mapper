@@ -34,7 +34,7 @@ static_assert(false, "This file needs to be modified for correct printing on And
 #endif
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /* 
  * The macro MAPPER_OVERPRINTING_CORRECTION allows to select different
@@ -733,4 +733,4 @@ bool PainterConfig::activate(QPainter* painter, const QPainterPath*& current_cli
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

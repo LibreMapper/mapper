@@ -24,7 +24,7 @@ class QPushButton;
 class QTextEdit;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class IconPropertiesWidget;
 class Symbol;
@@ -99,6 +99,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_SYMBOL_PROPERTIES_WIDGET_H

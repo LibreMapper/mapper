@@ -21,7 +21,7 @@
 #include "fileformats/file_import_export.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### FileFormatException ###
 
@@ -39,7 +39,7 @@ const char* FileFormatException::what() const noexcept
 FileFormatException FileFormatException::internalError(const char* function_info)
 {
 	return FileFormatException {
-		QCoreApplication::translate("OpenOrienteering::Util",
+		QCoreApplication::translate("LibreMapper::Util",
 		                            "Internal error detected!"
 		                            " Please report this issue."
 		                            "\nVersion: %1"
@@ -129,7 +129,7 @@ std::unique_ptr<Exporter> FileFormat::makeExporter(const QString& /*path*/, cons
 	return nullptr;
 }
 
-const QString& OpenOrienteering::FileFormat::filter() const
+const QString& LibreMapper::FileFormat::filter() const
 {
 	if (format_filter.isEmpty())
 	{
@@ -145,4 +145,4 @@ const QString& OpenOrienteering::FileFormat::filter() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -40,7 +40,7 @@
 #include "templates/template_placeholder.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### ImportExport ###
 
@@ -61,7 +61,7 @@ void ImportExport::setDevice(QIODevice* device)
 QVariant ImportExport::option(const QString& name) const
 {
 	if (!options.contains(name))
-		throw FileFormatException(::OpenOrienteering::ImportExport::tr("No such option: %1", "No such import / export option").arg(name));
+		throw FileFormatException(::LibreMapper::ImportExport::tr("No such option: %1", "No such import / export option").arg(name));
 	return options[name];
 }
 
@@ -140,9 +140,9 @@ void Importer::validate()
 		auto const offset = QLineF(actual, expected).length();
 		if (offset > 0.9)
 		{
-			addWarning(::OpenOrienteering::Importer::tr("Georeferencing mismatch:") + QChar::Space +
-			           ::OpenOrienteering::Importer::tr("Data may appear shifted by %1 m.").arg(qCeil(offset)) + QChar::Space +
-			           ::OpenOrienteering::Importer::tr("Check the reference point coordinates in the georeferencing dialog."));
+			addWarning(::LibreMapper::Importer::tr("Georeferencing mismatch:") + QChar::Space +
+			           ::LibreMapper::Importer::tr("Data may appear shifted by %1 m.").arg(qCeil(offset)) + QChar::Space +
+			           ::LibreMapper::Importer::tr("Check the reference point coordinates in the georeferencing dialog."));
 		}
 	}
 	
@@ -158,7 +158,7 @@ void Importer::validate()
 			Object* object = part->getObject(o);
 			if (object->getSymbol() == nullptr)
 			{
-				addWarning(::OpenOrienteering::Importer::tr("Found an object without symbol."));
+				addWarning(::LibreMapper::Importer::tr("Found an object without symbol."));
 				if (object->getType() == Object::Point)
 					object->setSymbol(map->getUndefinedPoint(), true);
 				else if (object->getType() == Object::Path)
@@ -193,7 +193,7 @@ void Importer::validate()
 	for (int i = 0; i < map->getNumSymbols(); ++i)
 	{
 		if (!map->getSymbol(i)->loadingFinishedEvent(map))
-			throw FileFormatException(::OpenOrienteering::Importer::tr("Error during symbol post-processing."));
+			throw FileFormatException(::LibreMapper::Importer::tr("Error during symbol post-processing."));
 	}
 	
 	// Template post processing
@@ -211,7 +211,7 @@ void Importer::validate()
 			continue;
 		case Template::FoundInMapDir:
 			error_string.append(
-			            ::OpenOrienteering::Importer::tr(
+			            ::LibreMapper::Importer::tr(
 			                "Template \"%1\" has been loaded from the map's directory instead of"
 			                " the relative location to the map file where it was previously.")
 			            .arg(temp->getTemplateFilename()) + QLatin1Char('\n') );
@@ -338,4 +338,4 @@ bool Exporter::doExport()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

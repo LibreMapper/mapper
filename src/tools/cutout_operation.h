@@ -14,7 +14,7 @@
 
 #include "core/objects/boolean_tool.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AddObjectsUndoStep;
 class Map;
@@ -88,6 +88,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

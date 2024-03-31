@@ -14,7 +14,7 @@
 #include "core/map_coord.h"
 #include "util/util.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 Q_DECLARE_METATYPE(MapCoord)
 

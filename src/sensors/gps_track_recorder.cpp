@@ -20,7 +20,7 @@
 #include "templates/template_track.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 GPSTrackRecorder::GPSTrackRecorder(GPSDisplay* gps_display, TemplateTrack* target_template, int draw_update_interval_milliseconds, MapWidget* widget)
  : QObject()
@@ -96,4 +96,4 @@ void GPSTrackRecorder::drawUpdate()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

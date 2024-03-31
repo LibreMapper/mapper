@@ -55,7 +55,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Template::ScopedOffsetReversal
 {
@@ -517,7 +517,7 @@ bool Template::execSwitchTemplateFileDialog(QWidget* dialog_parent)
 	}
 	if (getTemplateState() != Loaded)
 	{
-		QString error_template = QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Cannot open template\n%1:\n%2").arg(new_path);
+		QString error_template = QCoreApplication::translate("LibreMapper::TemplateListWidget", "Cannot open template\n%1:\n%2").arg(new_path);
 		QString error = errorString();
 		Q_ASSERT(!error.isEmpty());
 		
@@ -1139,4 +1139,4 @@ void Template::updateTransformationMatrices()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

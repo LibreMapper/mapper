@@ -21,7 +21,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // ### PassPoint ###
 
@@ -357,4 +357,4 @@ bool PassPointList::estimateNonIsometricSimilarityTransform(not_null<QTransform*
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

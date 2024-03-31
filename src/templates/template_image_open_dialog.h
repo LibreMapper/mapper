@@ -19,7 +19,7 @@ class QPushButton;
 class QRadioButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class TemplateImage;
 
@@ -57,6 +57,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif  // LIBREMAPPER_TEMPLATE_IMAGE_OPEN_DIALOG_H

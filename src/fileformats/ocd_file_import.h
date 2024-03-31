@@ -35,7 +35,7 @@
 class QChar;
 class QTextCodec;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CombinedSymbol;
 class Map;
@@ -50,7 +50,7 @@ class Symbol;
  */
 class OcdFileImport : public Importer
 {
-	Q_DECLARE_TR_FUNCTIONS(OpenOrienteering::OcdFileImport)
+	Q_DECLARE_TR_FUNCTIONS(LibreMapper::OcdFileImport)
 	
 protected:
 	/// Information about an OC*D rectangle symbol
@@ -350,6 +350,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_OCD_FILE_IMPORT

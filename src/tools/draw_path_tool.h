@@ -28,7 +28,7 @@ class QMouseEvent;
 class QPainter;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class AzimuthInfoHelper;
 class ConstrainAngleToolHelper;
@@ -67,7 +67,7 @@ public:
 	
 protected slots:
 	void updateDirtyRect();
-	void setDrawingSymbol(const OpenOrienteering::Symbol* symbol) override;
+	void setDrawingSymbol(const LibreMapper::Symbol* symbol) override;
 	
 	/** This slot listens to changes in the map's object selection. */
 	virtual void objectSelectionChanged();
@@ -166,6 +166,6 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -23,7 +23,7 @@ class QStackedWidget;
 class QTabWidget;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class SettingsPage;
 
@@ -101,6 +101,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

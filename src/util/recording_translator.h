@@ -13,7 +13,7 @@
 #include <QString>
 #include <QTranslator>
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /** A QTranslator variation that doesn't actually translate,
@@ -42,6 +42,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

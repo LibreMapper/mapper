@@ -25,7 +25,7 @@
 #include "fileformats/ocd_georef_fields.h"
 #include "fileformats/xml_file_format.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 #ifndef MAPPER_COMMON_LIB

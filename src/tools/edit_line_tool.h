@@ -26,7 +26,7 @@ class QMouseEvent;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapRenderables;
@@ -58,7 +58,7 @@ public:
 	void dragFinish() override;
 	void dragCanceled() override;
 	
-	void applyViewChanges(OpenOrienteering::MapView::ChangeFlags change) override;
+	void applyViewChanges(LibreMapper::MapView::ChangeFlags change) override;
 	
 protected:
 	bool keyPress(QKeyEvent* event) override;
@@ -137,6 +137,6 @@ bool EditLineTool::hoveringOverFrame() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -27,7 +27,7 @@ class QKeyEvent;
 class QMouseEvent;
 class QPainter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -72,6 +72,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

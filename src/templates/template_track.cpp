@@ -49,7 +49,7 @@
 class QAbstractButton;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Symbol;
 
@@ -607,4 +607,4 @@ void TemplateTrack::applyProjectedCrsSpec()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

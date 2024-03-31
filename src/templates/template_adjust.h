@@ -32,7 +32,7 @@ class QPushButton;
 class QTableWidget;
 class QCheckBox;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -63,8 +63,8 @@ public:
 	static float cross_radius;
 	
 protected:
-	void templateChanged(int index, const OpenOrienteering::Template* temp);
-	void templateAboutToBeDeleted(int index, const OpenOrienteering::Template* temp);
+	void templateChanged(int index, const LibreMapper::Template* temp);
+	void templateAboutToBeDeleted(int index, const LibreMapper::Template* temp);
 	
 private:
 	Template* temp;
@@ -220,6 +220,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

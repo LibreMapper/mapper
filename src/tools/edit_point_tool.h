@@ -33,7 +33,7 @@ class QPainter;
 class QRectF;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class MapWidget;
@@ -83,7 +83,7 @@ public:
 	 */
 	void finishEditing() override;
 	
-	void applyViewChanges(OpenOrienteering::MapView::ChangeFlags change) override;
+	void applyViewChanges(LibreMapper::MapView::ChangeFlags change) override;
 	
 protected:
 	bool keyPress(QKeyEvent* event) override;
@@ -204,6 +204,6 @@ bool EditPointTool::hoveringOverFrame() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

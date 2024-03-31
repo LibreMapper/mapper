@@ -21,7 +21,7 @@ class QRectF;
 class QToolButton;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class Template;
@@ -142,6 +142,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -46,7 +46,7 @@
 #include "gui/text_browser_dialog.h" // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 DoubleValidator::DoubleValidator(double bottom, double top, QObject* parent, int decimals)
 : QDoubleValidator(bottom, top, decimals, parent)
@@ -115,7 +115,7 @@ namespace Util {
 			auto compiled_help = QFileInfo{ QString::fromUtf8("doc:Mapper " APP_VERSION_FILESYSTEM " Manual.qch") };
 			if (!help_collection.exists() || !compiled_help.exists())
 			{
-				QMessageBox::warning(dialog_parent, QApplication::translate("OpenOrienteering::Util", "Error"), QApplication::translate("OpenOrienteering::Util", "Failed to locate the help files."));
+				QMessageBox::warning(dialog_parent, QApplication::translate("LibreMapper::Util", "Error"), QApplication::translate("LibreMapper::Util", "Failed to locate the help files."));
 				return;
 			}
 			
@@ -129,7 +129,7 @@ namespace Util {
 				assistant_path = QStandardPaths::findExecutable(assistant);
 			if (assistant_path.isEmpty())
 			{
-				QMessageBox::warning(dialog_parent, QApplication::translate("OpenOrienteering::Util", "Error"), QApplication::translate("OpenOrienteering::Util", "Failed to locate the help browser (\"Qt Assistant\")."));
+				QMessageBox::warning(dialog_parent, QApplication::translate("LibreMapper::Util", "Error"), QApplication::translate("LibreMapper::Util", "Failed to locate the help browser (\"Qt Assistant\")."));
 				return;
 			}
 			
@@ -163,8 +163,8 @@ namespace Util {
 			{
 				QMessageBox msg_box;
 				msg_box.setIcon(QMessageBox::Warning);
-				msg_box.setWindowTitle(QApplication::translate("OpenOrienteering::Util", "Error"));
-				msg_box.setText(QApplication::translate("OpenOrienteering::Util", "Failed to launch the help browser (\"Qt Assistant\")."));
+				msg_box.setWindowTitle(QApplication::translate("LibreMapper::Util", "Error"));
+				msg_box.setText(QApplication::translate("LibreMapper::Util", "Failed to launch the help browser (\"Qt Assistant\")."));
 				msg_box.setStandardButtons(QMessageBox::Ok);
 				auto details = assistant_process.readAllStandardError();
 				if (! details.isEmpty())
@@ -182,24 +182,24 @@ namespace Util {
 	{
 		//: This "See more" is displayed as a link to the manual in What's-this tooltips.
 		return QStringLiteral("<a href=\"%1\">%2</a>").arg(
-				 QString::fromLatin1(reference_latin1), QApplication::translate("OpenOrienteering::Util", "See more...") );
+				 QString::fromLatin1(reference_latin1), QApplication::translate("LibreMapper::Util", "See more...") );
 	}
 	
 	
 	
 	QString InputProperties<MapCoordF>::unit()
 	{
-		return QCoreApplication::translate("OpenOrienteering::UnitOfMeasurement", "mm", "millimeters");
+		return QCoreApplication::translate("LibreMapper::UnitOfMeasurement", "mm", "millimeters");
 	}
 	
 	QString InputProperties<RealMeters>::unit()
 	{
-		return QCoreApplication::translate("OpenOrienteering::UnitOfMeasurement", "m", "meters");
+		return QCoreApplication::translate("LibreMapper::UnitOfMeasurement", "m", "meters");
 	}
 	
 	QString InputProperties<RotationalDegrees>::unit()
 	{
-		return QCoreApplication::translate("OpenOrienteering::UnitOfMeasurement", "\u00b0", "degrees");
+		return QCoreApplication::translate("LibreMapper::UnitOfMeasurement", "\u00b0", "degrees");
 	}
 	
 	
@@ -382,7 +382,7 @@ namespace Util {
 			button->setIcon(icon);
 			button->setText(text);
 			if (whats_this)
-				button->setWhatsThis(OpenOrienteering::Util::makeWhatThis(whats_this));
+				button->setWhatsThis(LibreMapper::Util::makeWhatThis(whats_this));
 			return button;
 		}
 	}  // namespace ToolButton
@@ -391,4 +391,4 @@ namespace Util {
 }  // namespace Util
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

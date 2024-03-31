@@ -37,7 +37,7 @@ class QSizeF;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapView;
@@ -430,10 +430,10 @@ signals:
 	void printAreaChanged(const QRectF& area) const;  // clazy:exclude=const-signal-or-slot
 	
 	/** Indicates a change in the page format. */
-	void pageFormatChanged(const OpenOrienteering::MapPrinterPageFormat& format) const;  // clazy:exclude=const-signal-or-slot
+	void pageFormatChanged(const LibreMapper::MapPrinterPageFormat& format) const;  // clazy:exclude=const-signal-or-slot
 	
 	/** Indicates a change in the rendering options. */
-	void optionsChanged(const OpenOrienteering::MapPrinterOptions& options) const;  // clazy:exclude=const-signal-or-slot
+	void optionsChanged(const LibreMapper::MapPrinterOptions& options) const;  // clazy:exclude=const-signal-or-slot
 	
 	/** Emitted during printMap() to indicate progress. You can expect this
 	 *  signal to be emitted at the start of the print process (value = 1),
@@ -524,6 +524,6 @@ bool operator!=(const MapPrinterConfig& lhs, const MapPrinterConfig& rhs)
 
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

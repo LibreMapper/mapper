@@ -15,7 +15,7 @@
 class QWidget;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 /**
  * A collection of file dialog utility functions.
@@ -78,6 +78,6 @@ namespace FileDialog {
 }  // namespace FileDialog
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

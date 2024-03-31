@@ -24,7 +24,7 @@
 #include "core/symbols/symbol.h"
 #include "core/symbols/point_symbol.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 namespace

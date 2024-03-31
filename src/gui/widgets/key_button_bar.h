@@ -24,7 +24,7 @@ class QHideEvent;
 class QShowEvent;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -134,6 +134,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_KEY_BUTTON_BAR_H

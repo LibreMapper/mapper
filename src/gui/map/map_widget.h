@@ -45,7 +45,7 @@ class QPixmap;
 class QResizeEvent;
 class QWheelEvent;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class GPSDisplay;
 class GPSTemporaryMarkers;
@@ -185,7 +185,7 @@ public:
 	void viewChanged(MapView::ChangeFlags changes);
 	
 	/** Notifies the MapWidget of changes in feature visibility. */
-	void visibilityChanged(OpenOrienteering::MapView::VisibilityFeature feature, bool active, OpenOrienteering::Template* temp);
+	void visibilityChanged(LibreMapper::MapView::VisibilityFeature feature, bool active, LibreMapper::Template* temp);
 	
 	
 	/** 
@@ -570,6 +570,6 @@ MapWidget::CoordsType MapWidget::getCoordsDisplay() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -15,7 +15,7 @@
 
 class QIconEngine;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -40,6 +40,6 @@ public:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_SCALING_ICON_ENGINE_H

@@ -15,7 +15,7 @@
 #include <QLatin1Char>
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 OcdParameterStreamReader::OcdParameterStreamReader(const QString& param_string) noexcept
  : param_string(param_string)
@@ -52,4 +52,4 @@ QStringRef OcdParameterStreamReader::value() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

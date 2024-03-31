@@ -21,7 +21,7 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 void Matrix::save(QXmlStreamWriter& xml, const QString& role) const
 {
@@ -194,4 +194,4 @@ void Matrix::print() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

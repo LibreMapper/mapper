@@ -17,7 +17,7 @@
 class QString;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Exporter;
 class Map;
@@ -52,6 +52,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // LIBREMAPPER_COURSE_FILE_FORMAT_H

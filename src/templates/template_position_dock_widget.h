@@ -18,7 +18,7 @@ class QCloseEvent;
 class QLineEdit;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class MapEditorController;
 class Template;
@@ -40,8 +40,8 @@ signals:
 	void closed();
 	
 public slots:
-	void templateChanged(int index, const OpenOrienteering::Template* temp);
-	void templateDeleted(int index, const OpenOrienteering::Template* temp);
+	void templateChanged(int index, const LibreMapper::Template* temp);
+	void templateDeleted(int index, const LibreMapper::Template* temp);
 	void valueChanged();
 	
 private:
@@ -58,6 +58,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

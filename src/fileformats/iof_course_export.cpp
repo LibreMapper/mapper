@@ -23,12 +23,12 @@
 #include "util/xml_stream_util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 // static
 QString IofCourseExport::formatDescription()
 {
-	return OpenOrienteering::ImportExport::tr("IOF Data Standard 3.0");
+	return LibreMapper::ImportExport::tr("IOF Data Standard 3.0");
 }
 
 // static
@@ -148,4 +148,4 @@ void IofCourseExport::writePosition(const LatLon& latlon)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

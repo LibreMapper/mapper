@@ -54,7 +54,7 @@
 #include "tools/tool.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -69,7 +69,7 @@ void showMessage (MainWindow* window, const QString &message) {
 	window->showStatusBarMessage(message, 2000);
 #else
 	QMessageBox::warning(window,
-	                     OpenOrienteering::MapEditorController::tr("Warning"),
+	                     LibreMapper::MapEditorController::tr("Warning"),
 	                     message,
 	                     QMessageBox::Ok,
 	                     QMessageBox::Ok);
@@ -160,7 +160,7 @@ PaintOnTemplateFeature::PaintOnTemplateFeature(MapEditorController& controller)
 	connect(controller.getMap(), &Map::templateAboutToBeDeleted, this, &PaintOnTemplateFeature::templateAboutToBeDeleted);
 	
 	paint_action = new QAction(QIcon(QString::fromLatin1(":/images/pencil.png")),
-	                           QCoreApplication::translate("OpenOrienteering::MapEditorController", "Paint on template"),
+	                           QCoreApplication::translate("LibreMapper::MapEditorController", "Paint on template"),
 	                           this);
 	paint_action->setMenuRole(QAction::NoRole);
 	paint_action->setCheckable(true);
@@ -226,7 +226,7 @@ void PaintOnTemplateFeature::refreshTemplateMenu(QMenu* menu, QActionGroup* acti
 	
 	/// \todo Review source string (no ellipsis when no dialog)
 	auto* action_new = menu->addAction(QIcon(QStringLiteral(":/images/plus.png")),
-	                                   QCoreApplication::translate("OpenOrienteering::TemplateListWidget", "Add template..."));
+	                                   QCoreApplication::translate("LibreMapper::TemplateListWidget", "Add template..."));
 	connect(action_new, &QAction::triggered, this, [this]() {
 		if (auto* selected_template = setupTemplate())
 			startPainting(selected_template);
@@ -313,7 +313,7 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 		if (temp && temp->getTemplateState() != Template::Loaded)
 		{
 			showMessage(window,
-			            ::OpenOrienteering::MainWindow::tr("Cannot open file:\n%1\n\n%2")
+			            ::LibreMapper::MainWindow::tr("Cannot open file:\n%1\n\n%2")
 			            .arg(image_file_path, temp->errorString()));
 			return nullptr;
 		}
@@ -324,7 +324,7 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 		if (!image.save(image_file_path))
 		{
 			showMessage(window,
-			            OpenOrienteering::MapEditorController::tr("Cannot save file\n%1:\n%2")
+			            LibreMapper::MapEditorController::tr("Cannot save file\n%1:\n%2")
 			            .arg(filename, QString{}));
 			return nullptr;
 		}
@@ -345,7 +345,7 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 		if (template_image->getTemplateState() != Template::Loaded)
 		{
 			showMessage(window,
-			            ::OpenOrienteering::MainWindow::tr("Cannot open file:\n%1\n\n%2")
+			            ::LibreMapper::MainWindow::tr("Cannot open file:\n%1\n\n%2")
 			            .arg(image_file_path, template_image->errorString()));
 			return nullptr;
 		}
@@ -426,4 +426,4 @@ QToolButton* PaintOnTemplateFeature::buttonForPaintAction()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

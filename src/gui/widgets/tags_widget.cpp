@@ -23,7 +23,7 @@
 #include "undo/object_undo.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 TagsWidget::TagsWidget(Map* map, MapView* main_view, MapEditorController* controller, QWidget* parent)
  : QWidget(parent),
@@ -238,4 +238,4 @@ void TagsWidget::cellChange(int row, int column)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

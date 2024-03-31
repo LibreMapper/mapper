@@ -37,7 +37,7 @@ class QWidget;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapView;
@@ -794,9 +794,9 @@ protected:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::Template::ScribbleOptions)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Template::ScribbleOptions)
 
 
 #endif

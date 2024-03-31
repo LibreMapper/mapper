@@ -16,7 +16,7 @@
 
 #include "settings.h"
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 /**
@@ -81,6 +81,6 @@ void SettingsPage::setSetting(Settings::SettingsEnum setting, T value)
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

@@ -20,7 +20,7 @@ struct IconV9;
 }  // namespace Ocd 
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Symbol;
@@ -59,6 +59,6 @@ struct OcdIcon
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

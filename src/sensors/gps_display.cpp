@@ -51,7 +51,7 @@ Q_DECLARE_METATYPE(QGeoPositionInfo)  // QTBUG-65937
 #include "sensors/fake_position_source.h"
 #endif
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace {
 
@@ -461,4 +461,4 @@ void GPSDisplay::updateMapWidget()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

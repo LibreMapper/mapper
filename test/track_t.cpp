@@ -26,7 +26,7 @@
 #include "test_config.h"
 #include "core/track.h"
 
-using namespace OpenOrienteering;
+using namespace LibreMapper;
 
 
 /**

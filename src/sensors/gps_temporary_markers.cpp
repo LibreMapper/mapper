@@ -25,7 +25,7 @@
 class QPointF;
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 GPSTemporaryMarkers::GPSTemporaryMarkers(MapWidget* widget, GPSDisplay* gps_display): QObject()
 {
@@ -125,4 +125,4 @@ void GPSTemporaryMarkers::updateMapWidget()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

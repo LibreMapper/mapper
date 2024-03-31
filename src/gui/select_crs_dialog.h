@@ -21,7 +21,7 @@ class QDialogButtonBox;
 class QLabel;
 class QWidget;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class CRSSelector;
 class Georeferencing;
@@ -68,6 +68,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif

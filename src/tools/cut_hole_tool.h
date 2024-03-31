@@ -25,7 +25,7 @@ class QMouseEvent;
 class QPainter;
 class QRectF;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class DrawLineAndAreaTool;
 class MapCoordF;
@@ -71,7 +71,7 @@ public slots:
 	void objectSelectionChanged();
 	void pathDirtyRectChanged(const QRectF& rect);
 	void pathAborted();
-	void pathFinished(OpenOrienteering::PathObject* hole_path);
+	void pathFinished(LibreMapper::PathObject* hole_path);
 	
 protected:
 	void cutHole(PathObject* edited_path, PathObject* hole_path);
@@ -85,5 +85,5 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 #endif

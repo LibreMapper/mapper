@@ -29,7 +29,7 @@
 #include "util/backports.h"  // IWYU pragma: keep
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 namespace CRSTemplates {
 
@@ -41,22 +41,22 @@ CRSTemplateRegistry::TemplateList defaultList()
 	// UTM
 	auto temp = std::make_unique<CRSTemplate>(
 	  QString::fromLatin1("UTM"),
-	  ::OpenOrienteering::Georeferencing::tr("UTM", "UTM coordinate reference system"),
-	  ::OpenOrienteering::Georeferencing::tr("UTM coordinates"),
+	  ::LibreMapper::Georeferencing::tr("UTM", "UTM coordinate reference system"),
+	  ::LibreMapper::Georeferencing::tr("UTM coordinates"),
 	  QString::fromLatin1("+proj=utm +datum=WGS84 +zone=%1"),
 	  CRSTemplate::ParameterList {
-	    new UTMZoneParameter(QString::fromLatin1("zone"), ::OpenOrienteering::Georeferencing::tr("UTM Zone (number north/south)"))
+	    new UTMZoneParameter(QString::fromLatin1("zone"), ::LibreMapper::Georeferencing::tr("UTM Zone (number north/south)"))
 	  } );
 	templates.push_back(std::move(temp));
 	
 	// Gauss-Krueger
 	temp = std::make_unique<CRSTemplate>(
 	  QString::fromLatin1("Gauss-Krueger, datum: Potsdam"),
-	  ::OpenOrienteering::Georeferencing::tr("Gauss-Krueger, datum: Potsdam", "Gauss-Krueger coordinate reference system"),
-	  ::OpenOrienteering::Georeferencing::tr("Gauss-Krueger coordinates"),
+	  ::LibreMapper::Georeferencing::tr("Gauss-Krueger, datum: Potsdam", "Gauss-Krueger coordinate reference system"),
+	  ::LibreMapper::Georeferencing::tr("Gauss-Krueger coordinates"),
 	  QString::fromLatin1("+proj=tmerc +lat_0=0 +lon_0=%1 +k=1.000000 +x_0=%2 +y_0=0 +ellps=bessel +datum=potsdam +units=m +no_defs"),
 	  CRSTemplate::ParameterList {
-	    new IntRangeParameter(QString::fromLatin1("zone"), ::OpenOrienteering::Georeferencing::tr("Zone number (1 to 119)", "Zone number for Gauss-Krueger coordinates"),
+	    new IntRangeParameter(QString::fromLatin1("zone"), ::LibreMapper::Georeferencing::tr("Zone number (1 to 119)", "Zone number for Gauss-Krueger coordinates"),
 	                          1, 119, { {3, 0}, {1000000, 500000} })
 	  } );
 	templates.push_back(std::move(temp));
@@ -64,23 +64,23 @@ CRSTemplateRegistry::TemplateList defaultList()
 	// EPSG
 	temp = std::make_unique<CRSTemplate>(
 	  QString::fromLatin1("EPSG"),
-	  ::OpenOrienteering::Georeferencing::tr("by EPSG code", "as in: The CRS is specified by EPSG code"),
+	  ::LibreMapper::Georeferencing::tr("by EPSG code", "as in: The CRS is specified by EPSG code"),
 	  //: Don't translate @code@. It is placeholder.
-	  ::OpenOrienteering::Georeferencing::tr("EPSG @code@ coordinates"),
+	  ::LibreMapper::Georeferencing::tr("EPSG @code@ coordinates"),
 	  QString::fromLatin1("+init=epsg:%1"),
 	  CRSTemplate::ParameterList {
-	    new IntRangeParameter(QString::fromLatin1("code"), ::OpenOrienteering::Georeferencing::tr("EPSG code"), 1000, 99999)
+	    new IntRangeParameter(QString::fromLatin1("code"), ::LibreMapper::Georeferencing::tr("EPSG code"), 1000, 99999)
 	  } );
 	templates.push_back(std::move(temp));
 	
 	// Custom
 	temp = std::make_unique<CRSTemplate>(
 	  QString::fromLatin1("PROJ.4"), // Don't change this ID.
-	  ::OpenOrienteering::Georeferencing::tr("Custom PROJ.4", "PROJ.4 specification"),
-	  ::OpenOrienteering::Georeferencing::tr("Local coordinates"),
+	  ::LibreMapper::Georeferencing::tr("Custom PROJ.4", "PROJ.4 specification"),
+	  ::LibreMapper::Georeferencing::tr("Local coordinates"),
 	  QString::fromLatin1("%1"),
 	  CRSTemplate::ParameterList {
-	    new FullSpecParameter(QString::fromLatin1("spec"), ::OpenOrienteering::Georeferencing::tr("Specification", "PROJ.4 specification"))
+	    new FullSpecParameter(QString::fromLatin1("spec"), ::LibreMapper::Georeferencing::tr("Specification", "PROJ.4 specification"))
 	  } );
 	templates.push_back(std::move(temp));
 	
@@ -271,4 +271,4 @@ void IntRangeParameter::setValue(QWidget* edit_widget, const QString& value)
 
 }  // namespace CRSTemplates
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

@@ -17,7 +17,7 @@ class QIcon;
 class QTableWidget;
 class QToolButton;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class MapEditorController;
@@ -81,6 +81,6 @@ private:
 };
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 #endif // TAGS_WIDGET_H

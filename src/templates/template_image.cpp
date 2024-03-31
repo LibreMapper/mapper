@@ -52,7 +52,7 @@
 #include "util/util.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 #ifdef MAPPER_USE_GDAL
 
@@ -729,4 +729,4 @@ void TemplateImage::updatePosFromGeoreferencing()
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

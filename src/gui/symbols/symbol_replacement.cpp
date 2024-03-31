@@ -33,7 +33,7 @@
 #include "gui/symbols/symbol_replacement_dialog.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 
 SymbolReplacement::SymbolReplacement(Map& object_map) noexcept
@@ -112,9 +112,9 @@ bool SymbolReplacement::withNewSymbolSet(QWidget* parent)
 bool SymbolReplacement::withCrtFileDialog(QWidget* parent)
 {
 	auto const dir = QLatin1String{"data:/symbol sets"};
-	auto const filter = QString{::OpenOrienteering::SymbolReplacementDialog::tr("CRT file") + QLatin1String{" (*.crt)"}};
+	auto const filter = QString{::LibreMapper::SymbolReplacementDialog::tr("CRT file") + QLatin1String{" (*.crt)"}};
 	auto const filepath = FileDialog::getOpenFileName(parent,
-	                                                  ::OpenOrienteering::SymbolReplacementDialog::tr("Open CRT file..."),
+	                                                  ::LibreMapper::SymbolReplacementDialog::tr("Open CRT file..."),
 	                                                  dir,
 	                                                  filter);
 	if (filepath.isEmpty())
@@ -167,8 +167,8 @@ SymbolRuleSet SymbolReplacement::loadCrtFile(QWidget* parent, const QString& fil
 	if (!crt_file.open(QFile::ReadOnly))
 	{
 		QMessageBox::warning(parent,
-		                     ::OpenOrienteering::SymbolReplacementDialog::tr("Error"),
-		                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
+		                     ::LibreMapper::SymbolReplacementDialog::tr("Error"),
+		                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
 		return {};
 	}
 	
@@ -177,8 +177,8 @@ SymbolRuleSet SymbolReplacement::loadCrtFile(QWidget* parent, const QString& fil
 	if (stream.status() != QTextStream::Ok)
 	{
 		QMessageBox::warning(parent,
-		                     ::OpenOrienteering::SymbolReplacementDialog::tr("Error"),
-		                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
+		                     ::LibreMapper::SymbolReplacementDialog::tr("Error"),
+		                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
 		return {};
 	}
 	
@@ -186,10 +186,10 @@ SymbolRuleSet SymbolReplacement::loadCrtFile(QWidget* parent, const QString& fil
 	symbol_rules.recognizeSymbolPatterns(object_map);
 	if (auto const* ambiguous = symbol_rules.findDuplicateSymbolPattern())
 	{
-		auto error_msg = ::OpenOrienteering::SymbolReplacementDialog::tr("There are multiple replacements for symbol %1.")
+		auto error_msg = ::LibreMapper::SymbolReplacementDialog::tr("There are multiple replacements for symbol %1.")
 		                 .arg(ambiguous->getNumberAsString());
-		QMessageBox::warning(parent, ::OpenOrienteering::Map::tr("Error"),
-		                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot open file:\n%1\n\n%2")
+		QMessageBox::warning(parent, ::LibreMapper::Map::tr("Error"),
+		                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot open file:\n%1\n\n%2")
 		                     .arg(filepath, error_msg) );
 		return {};
 	}
@@ -212,7 +212,7 @@ std::unique_ptr<Map> SymbolReplacement::getOpenSymbolSet(QWidget* parent) const
 	{
 		auto selected = MainWindow::getOpenFileName(
 		                    parent,
-		                    ::OpenOrienteering::SymbolReplacementDialog::tr("Choose map file to load symbols from"),
+		                    ::LibreMapper::SymbolReplacementDialog::tr("Choose map file to load symbols from"),
 		                    FileFormat::MapFile);
 		if (!selected)
 		{
@@ -224,8 +224,8 @@ std::unique_ptr<Map> SymbolReplacement::getOpenSymbolSet(QWidget* parent) const
 		{
 			/// \todo More precise message
 			QMessageBox::warning(parent,
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Error"),
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Error"),
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
 			break;
 		}
 		
@@ -235,8 +235,8 @@ std::unique_ptr<Map> SymbolReplacement::getOpenSymbolSet(QWidget* parent) const
 		{
 			/// \todo More precise message
 			QMessageBox::warning(parent,
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Error"),
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Error"),
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
 			break;
 		}
 		
@@ -244,24 +244,24 @@ std::unique_ptr<Map> SymbolReplacement::getOpenSymbolSet(QWidget* parent) const
 		{
 			/// \todo Show error from importer
 			QMessageBox::warning(parent,
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Error"),
-			                     ::OpenOrienteering::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Error"),
+			                     ::LibreMapper::SymbolReplacementDialog::tr("Cannot load symbol set, aborting."));
 			break;
 		}
 		
 		if (!importer->warnings().empty())
 		{
 			MainWindow::showMessageBox(parent,
-			                           ::OpenOrienteering::SymbolReplacementDialog::tr("Warning"),
-			                           ::OpenOrienteering::SymbolReplacementDialog::tr("The symbol set import generated warnings."),
+			                           ::LibreMapper::SymbolReplacementDialog::tr("Warning"),
+			                           ::LibreMapper::SymbolReplacementDialog::tr("The symbol set import generated warnings."),
 			                           importer->warnings());
 		}
 		
 		if (object_map.getScaleDenominator() != symbol_set->getScaleDenominator())
 		{
 			if (QMessageBox::warning(parent,
-			                         ::OpenOrienteering::SymbolReplacementDialog::tr("Warning"),
-			                         ::OpenOrienteering::SymbolReplacementDialog::tr("The chosen symbol set has a scale of 1:%1,"
+			                         ::LibreMapper::SymbolReplacementDialog::tr("Warning"),
+			                         ::LibreMapper::SymbolReplacementDialog::tr("The chosen symbol set has a scale of 1:%1,"
 			                                                                         " while the map scale is 1:%2. Do you really"
 			                                                                         " want to choose this set?")
 			                         .arg(symbol_set->getScaleDenominator())
@@ -276,4 +276,4 @@ std::unique_ptr<Map> SymbolReplacement::getOpenSymbolSet(QWidget* parent) const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

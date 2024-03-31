@@ -19,7 +19,7 @@
 #include "gui/map/map_editor.h"
 
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 MainWindowController::~MainWindowController() = default;
 
@@ -107,4 +107,4 @@ MainWindowController* MainWindowController::controllerForFile(const QString& fil
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper

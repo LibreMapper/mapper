@@ -27,7 +27,7 @@ class QRectF;
 class QXmlStreamReader;
 class QXmlStreamWriter;
 
-namespace OpenOrienteering {
+namespace LibreMapper {
 
 class Map;
 class Template;
@@ -317,7 +317,7 @@ signals:
 	 * 
 	 * @param change The aspects that have changed.
 	 */
-	void viewChanged(OpenOrienteering::MapView::ChangeFlags change);
+	void viewChanged(LibreMapper::MapView::ChangeFlags change);
 	
 	/**
 	 * Indicates a change of the pan offset.
@@ -331,7 +331,7 @@ signals:
 	 * @param active  The features current state of activation.
 	 * @param temp    If a the feature is a template, a pointer to this template.
 	 */
-	void visibilityChanged(OpenOrienteering::MapView::VisibilityFeature feature, bool active, OpenOrienteering::Template* temp = nullptr);
+	void visibilityChanged(LibreMapper::MapView::VisibilityFeature feature, bool active, LibreMapper::Template* temp = nullptr);
 	
 	
 public:
@@ -513,10 +513,10 @@ bool MapView::isOverprintingSimulationEnabled() const
 }
 
 
-}  // namespace OpenOrienteering
+}  // namespace LibreMapper
 
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::MapView::ChangeFlags)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::MapView::ChangeFlags)
 
 
 #endif
