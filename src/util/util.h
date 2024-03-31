@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_UTIL_H
-#define OPENORIENTEERING_UTIL_H
+#ifndef LIBREMAPPER_UTIL_H
+#define LIBREMAPPER_UTIL_H
 
 #include <cmath>
 #include <functional>

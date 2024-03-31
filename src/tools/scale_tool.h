@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_SCALE_TOOL_H
-#define OPENORIENTEERING_SCALE_TOOL_H
+#ifndef LIBREMAPPER_SCALE_TOOL_H
+#define LIBREMAPPER_SCALE_TOOL_H
 
 #include <QObject>
 #include <QString>

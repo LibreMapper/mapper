@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_EDITOR_H
-#define OPENORIENTEERING_MAP_EDITOR_H
+#ifndef LIBREMAPPER_MAP_EDITOR_H
+#define LIBREMAPPER_MAP_EDITOR_H
 
 #include <memory>
 #include <vector>

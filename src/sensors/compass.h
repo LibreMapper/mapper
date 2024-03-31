@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_COMPASS_H
-#define OPENORIENTEERING_COMPASS_H
+#ifndef LIBREMAPPER_COMPASS_H
+#define LIBREMAPPER_COMPASS_H
 
 #include <memory>
 

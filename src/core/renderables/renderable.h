@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_RENDERABLE_H
-#define OPENORIENTEERING_RENDERABLE_H
+#ifndef LIBREMAPPER_RENDERABLE_H
+#define LIBREMAPPER_RENDERABLE_H
 
 #include <map>
 #include <vector>

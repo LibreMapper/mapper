@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_TEXT_BROWSER_DIALOG_H
-#define OPENORIENTEERING_TEXT_BROWSER_DIALOG_H
+#ifndef LIBREMAPPER_TEXT_BROWSER_DIALOG_H
+#define LIBREMAPPER_TEXT_BROWSER_DIALOG_H
 
 #include <QDialog>
 #include <QObject>

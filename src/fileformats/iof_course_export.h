@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_IOF_COURSE_EXPORT_H
-#define OPENORIENTEERING_IOF_COURSE_EXPORT_H
+#ifndef LIBREMAPPER_IOF_COURSE_EXPORT_H
+#define LIBREMAPPER_IOF_COURSE_EXPORT_H
 
 #include <vector>
 
@@ -66,4 +66,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_KML_COURSE_EXPORT_H
+#endif // LIBREMAPPER_KML_COURSE_EXPORT_H

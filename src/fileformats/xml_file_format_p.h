@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_FILE_FORMAT_XML_P_H
-#define OPENORIENTEERING_FILE_FORMAT_XML_P_H
+#ifndef LIBREMAPPER_FILE_FORMAT_XML_P_H
+#define LIBREMAPPER_FILE_FORMAT_XML_P_H
 
 #include <functional>
 

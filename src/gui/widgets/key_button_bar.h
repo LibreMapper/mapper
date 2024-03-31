@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_KEY_BUTTON_BAR_H
-#define OPENORIENTEERING_KEY_BUTTON_BAR_H
+#ifndef LIBREMAPPER_KEY_BUTTON_BAR_H
+#define LIBREMAPPER_KEY_BUTTON_BAR_H
 
 #include <Qt>
 #include <QtGlobal>
@@ -136,4 +136,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_KEY_BUTTON_BAR_H
+#endif // LIBREMAPPER_KEY_BUTTON_BAR_H

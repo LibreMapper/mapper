@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_CRS_TEMPLATE_H
-#define OPENORIENTEERING_CRS_TEMPLATE_H
+#ifndef LIBREMAPPER_CRS_TEMPLATE_H
+#define LIBREMAPPER_CRS_TEMPLATE_H
 
 #include <memory>
 #include <vector>

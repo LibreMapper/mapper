@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_UNDO_MANAGER_T_H
-#define OPENORIENTEERING_UNDO_MANAGER_T_H
+#ifndef LIBREMAPPER_UNDO_MANAGER_T_H
+#define LIBREMAPPER_UNDO_MANAGER_T_H
 
 #include <QObject>
 
@@ -65,4 +65,4 @@ protected slots:
 	void canRedoChanged(bool can_redo);
 };
 
-#endif // OPENORIENTEERING_UNDO_MANAGER_T_H
+#endif // LIBREMAPPER_UNDO_MANAGER_T_H

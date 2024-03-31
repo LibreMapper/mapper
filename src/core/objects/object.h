@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_OBJECT_H
-#define OPENORIENTEERING_OBJECT_H
+#ifndef LIBREMAPPER_OBJECT_H
+#define LIBREMAPPER_OBJECT_H
 
 #include <limits>
 #include <vector>

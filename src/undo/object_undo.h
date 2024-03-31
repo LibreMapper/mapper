@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_UNDO_H
-#define OPENORIENTEERING_MAP_UNDO_H
+#ifndef LIBREMAPPER_MAP_UNDO_H
+#define LIBREMAPPER_MAP_UNDO_H
 
 #include <cstddef>
 #include <map>

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_CUT_TOOL_H
-#define OPENORIENTEERING_CUT_TOOL_H
+#ifndef LIBREMAPPER_CUT_TOOL_H
+#define LIBREMAPPER_CUT_TOOL_H
 
 #include <vector>
 

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_GRID_H
-#define OPENORIENTEERING_MAP_GRID_H
+#ifndef LIBREMAPPER_MAP_GRID_H
+#define LIBREMAPPER_MAP_GRID_H
 
 #include <QRgb>
 

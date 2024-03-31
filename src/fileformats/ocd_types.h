@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_TYPES_H
-#define OPENORIENTEERING_OCD_TYPES_H
+#ifndef LIBREMAPPER_OCD_TYPES_H
+#define LIBREMAPPER_OCD_TYPES_H
 
 #include <cstddef>
 #include <iterator>
@@ -860,4 +860,4 @@ const typename OcdFile<F>::ObjectIndex& OcdFile<F>::objects() const
 	return object_index;
 }
 
-#endif // OPENORIENTEERING_OCD_TYPES_H
+#endif // LIBREMAPPER_OCD_TYPES_H

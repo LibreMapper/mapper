@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_TYPES_V8_H
-#define OPENORIENTEERING_OCD_TYPES_V8_H
+#ifndef LIBREMAPPER_OCD_TYPES_V8_H
+#define LIBREMAPPER_OCD_TYPES_V8_H
 
 #include <array>
 
@@ -512,4 +512,4 @@ namespace Ocd
 OCD_EXPLICIT_INSTANTIATION(extern template, Ocd::FormatV8)
 
 
-#endif // OPENORIENTEERING_OCD_TYPES_V8_H
+#endif // LIBREMAPPER_OCD_TYPES_V8_H

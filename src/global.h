@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_GLOBAL_H
-#define OPENORIENTEERING_GLOBAL_H
+#ifndef LIBREMAPPER_GLOBAL_H
+#define LIBREMAPPER_GLOBAL_H
 
 namespace OpenOrienteering {
 

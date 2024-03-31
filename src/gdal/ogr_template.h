@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OGR_TEMPLATE_H
-#define OPENORIENTEERING_OGR_TEMPLATE_H
+#ifndef LIBREMAPPER_OGR_TEMPLATE_H
+#define LIBREMAPPER_OGR_TEMPLATE_H
 
 #include <memory>
 #include <vector>
@@ -133,4 +133,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_OGR_TEMPLATE_H
+#endif // LIBREMAPPER_OGR_TEMPLATE_H

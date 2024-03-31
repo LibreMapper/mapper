@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_PRINT_TOOL_H
-#define OPENORIENTEERING_PRINT_TOOL_H
+#ifndef LIBREMAPPER_PRINT_TOOL_H
+#define LIBREMAPPER_PRINT_TOOL_H
 
 #ifdef QT_PRINTSUPPORT_LIB
 
@@ -116,4 +116,4 @@ protected:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_PRINT_TOOL_H
+#endif // LIBREMAPPER_PRINT_TOOL_H

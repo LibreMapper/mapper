@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_EDITOR_P_H
-#define OPENORIENTEERING_MAP_EDITOR_P_H
+#ifndef LIBREMAPPER_MAP_EDITOR_P_H
+#define LIBREMAPPER_MAP_EDITOR_P_H
 
 #include <QAction>
 #include <QDockWidget>

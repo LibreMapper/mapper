@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_ICON_H
-#define OPENORIENTEERING_OCD_ICON_H
+#ifndef LIBREMAPPER_OCD_ICON_H
+#define LIBREMAPPER_OCD_ICON_H
 
 
 class QImage;

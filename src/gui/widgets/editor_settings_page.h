@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_EDITOR_SETTINGS_PAGE_H
-#define OPENORIENTEERING_EDITOR_SETTINGS_PAGE_H
+#ifndef LIBREMAPPER_EDITOR_SETTINGS_PAGE_H
+#define LIBREMAPPER_EDITOR_SETTINGS_PAGE_H
 
 #include <QObject>
 #include <QString>

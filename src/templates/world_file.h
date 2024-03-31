@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_WORLD_FILE_H
-#define OPENORIENTEERING_WORLD_FILE_H
+#ifndef LIBREMAPPER_WORLD_FILE_H
+#define LIBREMAPPER_WORLD_FILE_H
 
 #include <QString>
 #include <QTransform>

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_SYMBOL_H
-#define OPENORIENTEERING_SYMBOL_H
+#ifndef LIBREMAPPER_SYMBOL_H
+#define LIBREMAPPER_SYMBOL_H
 
 #include <array>
 #include <cstddef>

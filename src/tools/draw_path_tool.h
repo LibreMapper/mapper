@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_DRAW_PATH_H
-#define OPENORIENTEERING_DRAW_PATH_H
+#ifndef LIBREMAPPER_DRAW_PATH_H
+#define LIBREMAPPER_DRAW_PATH_H
 
 #include <memory>
 

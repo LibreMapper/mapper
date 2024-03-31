@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_UTIL_ENCODING_H
-#define OPENORIENTEERING_UTIL_ENCODING_H
+#ifndef LIBREMAPPER_UTIL_ENCODING_H
+#define LIBREMAPPER_UTIL_ENCODING_H
 
 class QString;
 class QTextCodec;

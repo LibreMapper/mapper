@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_MODIFIER_KEY_H
-#define OPENORIENTEERING_MODIFIER_KEY_H
+#ifndef LIBREMAPPER_MODIFIER_KEY_H
+#define LIBREMAPPER_MODIFIER_KEY_H
 
 #include <Qt>
 #include <QString>

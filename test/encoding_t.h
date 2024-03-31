@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_ENCODING_T_H
-#define OPENORIENTEERING_ENCODING_T_H
+#ifndef LIBREMAPPER_ENCODING_T_H
+#define LIBREMAPPER_ENCODING_T_H
 
 #include <QObject>
 

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_AREA_SYMBOL_H
-#define OPENORIENTEERING_AREA_SYMBOL_H
+#ifndef LIBREMAPPER_AREA_SYMBOL_H
+#define LIBREMAPPER_AREA_SYMBOL_H
 
 #include <cstddef>
 #include <vector>

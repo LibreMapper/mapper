@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_PATH_COORD_H
-#define OPENORIENTEERING_PATH_COORD_H
+#ifndef LIBREMAPPER_PATH_COORD_H
+#define LIBREMAPPER_PATH_COORD_H
 
 #include <memory>
 #include <vector>

@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TEXT_BROWSER_H
-#define OPENORIENTEERING_TEXT_BROWSER_H
+#ifndef LIBREMAPPER_TEXT_BROWSER_H
+#define LIBREMAPPER_TEXT_BROWSER_H
 
 #include <QObject>
 #include <QTextBrowser>

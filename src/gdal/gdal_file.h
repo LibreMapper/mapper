@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_GDAL_FILE_H
-#define OPENORIENTEERING_GDAL_FILE_H
+#ifndef LIBREMAPPER_GDAL_FILE_H
+#define LIBREMAPPER_GDAL_FILE_H
 
 class QByteArray;
 
@@ -56,4 +56,4 @@ QByteArray tryToFindRelativeTemplateFile(const QByteArray& template_path, const 
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_GDAL_FILE_H
+#endif // LIBREMAPPER_GDAL_FILE_H

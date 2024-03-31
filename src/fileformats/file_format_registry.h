@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_FILE_FORMAT_REGISTRY_H
-#define OPENORIENTEERING_FILE_FORMAT_REGISTRY_H
+#ifndef LIBREMAPPER_FILE_FORMAT_REGISTRY_H
+#define LIBREMAPPER_FILE_FORMAT_REGISTRY_H
 
 #include <functional>
 #include <memory>
@@ -115,4 +115,4 @@ extern FileFormatRegistry FileFormats;
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_FILE_FORMAT_REGISTRY_H
+#endif // LIBREMAPPER_FILE_FORMAT_REGISTRY_H

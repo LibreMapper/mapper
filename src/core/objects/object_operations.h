@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_OBJECT_OPERATIONS_H
-#define OPENORIENTEERING_OBJECT_OPERATIONS_H
+#ifndef LIBREMAPPER_OBJECT_OPERATIONS_H
+#define LIBREMAPPER_OBJECT_OPERATIONS_H
 
 #include "core/map.h"
 #include "core/objects/object.h"

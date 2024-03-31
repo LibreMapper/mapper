@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_GDAL_IMAGE_READER_H
-#define OPENORIENTEERING_GDAL_IMAGE_READER_H
+#ifndef LIBREMAPPER_GDAL_IMAGE_READER_H
+#define LIBREMAPPER_GDAL_IMAGE_READER_H
 
 #include <functional>
 
@@ -129,4 +129,4 @@ TemplateImage::GeoreferencingOption readGdalGeoTransform(const QString& filepath
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_GDAL_IMAGE_READER_H
+#endif // LIBREMAPPER_GDAL_IMAGE_READER_H

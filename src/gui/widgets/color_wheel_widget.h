@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_COLOR_WHEEL_WIDGET_H
-#define OPENORIENTEERING_COLOR_WHEEL_WIDGET_H
+#ifndef LIBREMAPPER_COLOR_WHEEL_WIDGET_H
+#define LIBREMAPPER_COLOR_WHEEL_WIDGET_H
 
 #include <QColor>
 #include <QDialog>

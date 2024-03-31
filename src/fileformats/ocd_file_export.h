@@ -7,8 +7,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_FILE_EXPORT_H
-#define OPENORIENTEERING_OCD_FILE_EXPORT_H
+#ifndef LIBREMAPPER_OCD_FILE_EXPORT_H
+#define LIBREMAPPER_OCD_FILE_EXPORT_H
 
 #include <cstddef>
 #include <functional>

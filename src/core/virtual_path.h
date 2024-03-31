@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_VIRTUAL_PATH_H
-#define OPENORIENTEERING_VIRTUAL_PATH_H
+#ifndef LIBREMAPPER_VIRTUAL_PATH_H
+#define LIBREMAPPER_VIRTUAL_PATH_H
 
 #include <memory>
 #include <utility>

@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_MAP_PART_UNDO_H
-#define OPENORIENTEERING_MAP_PART_UNDO_H
+#ifndef LIBREMAPPER_MAP_PART_UNDO_H
+#define LIBREMAPPER_MAP_PART_UNDO_H
 
 #include <QString>
 

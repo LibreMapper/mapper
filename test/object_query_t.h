@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OBJECT_QUERY_T_H
-#define OPENORIENTEERING_OBJECT_QUERY_T_H
+#ifndef LIBREMAPPER_OBJECT_QUERY_T_H
+#define LIBREMAPPER_OBJECT_QUERY_T_H
 
 #include <QObject>
 

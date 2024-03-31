@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_AUTOSAVE_H
-#define OPENORIENTEERING_AUTOSAVE_H
+#ifndef LIBREMAPPER_AUTOSAVE_H
+#define LIBREMAPPER_AUTOSAVE_H
 
 #include <QObject>
 #include <QTimer>

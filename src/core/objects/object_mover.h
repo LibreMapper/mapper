@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OBJECT_MOVER_H
-#define OPENORIENTEERING_OBJECT_MOVER_H
+#ifndef LIBREMAPPER_OBJECT_MOVER_H
+#define LIBREMAPPER_OBJECT_MOVER_H
 
 #include <unordered_map>
 #include <unordered_set>

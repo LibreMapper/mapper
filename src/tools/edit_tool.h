@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_EDIT_TOOL_H
-#define OPENORIENTEERING_EDIT_TOOL_H
+#ifndef LIBREMAPPER_EDIT_TOOL_H
+#define LIBREMAPPER_EDIT_TOOL_H
 
 #include <utility>
 #include <vector>

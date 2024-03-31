@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_POINT_HANDLES_H
-#define OPENORIENTEERING_POINT_HANDLES_H
+#ifndef LIBREMAPPER_POINT_HANDLES_H
+#define LIBREMAPPER_POINT_HANDLES_H
 
 
 #include <limits>
@@ -159,4 +159,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_POINT_HANDLES_H
+#endif // LIBREMAPPER_POINT_HANDLES_H

@@ -7,8 +7,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_FILE_IMPORT
-#define OPENORIENTEERING_OCD_FILE_IMPORT
+#ifndef LIBREMAPPER_OCD_FILE_IMPORT
+#define LIBREMAPPER_OCD_FILE_IMPORT
 
 #include <cstddef>
 #include <initializer_list>
@@ -352,4 +352,4 @@ protected:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_OCD_FILE_IMPORT
+#endif // LIBREMAPPER_OCD_FILE_IMPORT

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_POINT_SYMBOL_H
-#define OPENORIENTEERING_POINT_SYMBOL_H
+#ifndef LIBREMAPPER_POINT_SYMBOL_H
+#define LIBREMAPPER_POINT_SYMBOL_H
 
 #include <memory>
 #include <vector>

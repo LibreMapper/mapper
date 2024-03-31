@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_T_H
-#define OPENORIENTEERING_MAP_T_H
+#ifndef LIBREMAPPER_MAP_T_H
+#define LIBREMAPPER_MAP_T_H
 
 #include <QObject>
 

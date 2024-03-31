@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_OBJECT_TEXT_H
-#define OPENORIENTEERING_OBJECT_TEXT_H
+#ifndef LIBREMAPPER_OBJECT_TEXT_H
+#define LIBREMAPPER_OBJECT_TEXT_H
 
 #include <memory>
 #include <vector>

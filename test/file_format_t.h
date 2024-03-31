@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_FILE_FORMAT_T_H
-#define OPENORIENTEERING_FILE_FORMAT_T_H
+#ifndef LIBREMAPPER_FILE_FORMAT_T_H
+#define LIBREMAPPER_FILE_FORMAT_T_H
 
 #include <QObject>
 #include <QString>
@@ -100,4 +100,4 @@ private slots:
 	
 };
 
-#endif // OPENORIENTEERING_FILE_FORMAT_T_H
+#endif // LIBREMAPPER_FILE_FORMAT_T_H

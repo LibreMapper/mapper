@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_COURSE_FILE_FORMAT_H
-#define OPENORIENTEERING_COURSE_FILE_FORMAT_H
+#ifndef LIBREMAPPER_COURSE_FILE_FORMAT_H
+#define LIBREMAPPER_COURSE_FILE_FORMAT_H
 
 #include <functional>
 #include <memory>
@@ -54,4 +54,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_COURSE_FILE_FORMAT_H
+#endif // LIBREMAPPER_COURSE_FILE_FORMAT_H

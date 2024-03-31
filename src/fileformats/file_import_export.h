@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_IMPORT_EXPORT_H
-#define OPENORIENTEERING_IMPORT_EXPORT_H
+#ifndef LIBREMAPPER_IMPORT_EXPORT_H
+#define LIBREMAPPER_IMPORT_EXPORT_H
 
 #include <vector>
 
@@ -322,4 +322,4 @@ protected:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_IMPORT_EXPORT_H
+#endif // LIBREMAPPER_IMPORT_EXPORT_H

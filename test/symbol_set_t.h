@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_SYMBOL_SET_T_H
-#define OPENORIENTEERING_SYMBOL_SET_T_H
+#ifndef LIBREMAPPER_SYMBOL_SET_T_H
+#define LIBREMAPPER_SYMBOL_SET_T_H
 
 #include <vector>
 
@@ -74,4 +74,4 @@ private:
 	
 };
 
-#endif // OPENORIENTEERING_SYMBOL_SET_T_H
+#endif // LIBREMAPPER_SYMBOL_SET_T_H

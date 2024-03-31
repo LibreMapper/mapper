@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_PIE_MENU_H
-#define OPENORIENTEERING_PIE_MENU_H
+#ifndef LIBREMAPPER_PIE_MENU_H
+#define LIBREMAPPER_PIE_MENU_H
 
 #include <cmath>
 

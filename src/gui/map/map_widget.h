@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_WIDGET_H
-#define OPENORIENTEERING_MAP_WIDGET_H
+#ifndef LIBREMAPPER_MAP_WIDGET_H
+#define LIBREMAPPER_MAP_WIDGET_H
 
 #include <functional>
 

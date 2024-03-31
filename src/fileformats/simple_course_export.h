@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_SIMPLE_COURSE_EXPORT_H
-#define OPENORIENTEERING_SIMPLE_COURSE_EXPORT_H
+#ifndef LIBREMAPPER_SIMPLE_COURSE_EXPORT_H
+#define LIBREMAPPER_SIMPLE_COURSE_EXPORT_H
 
 #include <QCoreApplication>
 #include <QString>
@@ -65,4 +65,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_SIMPLE_COURSE_EXPORT_H
+#endif // LIBREMAPPER_SIMPLE_COURSE_EXPORT_H

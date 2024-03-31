@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OVERRIDING_SHORTCUT_H
-#define OPENORIENTEERING_OVERRIDING_SHORTCUT_H
+#ifndef LIBREMAPPER_OVERRIDING_SHORTCUT_H
+#define LIBREMAPPER_OVERRIDING_SHORTCUT_H
 
 #include <Qt>
 #include <QKeySequence>

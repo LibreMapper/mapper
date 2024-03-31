@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_FILE_FORMAT_XML_H
-#define OPENORIENTEERING_FILE_FORMAT_XML_H
+#ifndef LIBREMAPPER_FILE_FORMAT_XML_H
+#define LIBREMAPPER_FILE_FORMAT_XML_H
 
 #include <memory>
 
@@ -114,4 +114,4 @@ public:
 
 */
 
-#endif // OPENORIENTEERING_FILE_FORMAT_XML_H
+#endif // LIBREMAPPER_FILE_FORMAT_XML_H

@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_TOOLS_T_H
-#define OPENORIENTEERING_TOOLS_T_H
+#ifndef LIBREMAPPER_TOOLS_T_H
+#define LIBREMAPPER_TOOLS_T_H
 
 #include <QObject>
 

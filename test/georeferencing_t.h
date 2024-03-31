@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_GEOREFERENCING_TEST_H
-#define OPENORIENTEERING_GEOREFERENCING_TEST_H
+#ifndef LIBREMAPPER_GEOREFERENCING_TEST_H
+#define LIBREMAPPER_GEOREFERENCING_TEST_H
 
 #include <QObject>
 #include <QString>

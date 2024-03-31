@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_MAP_FIND_FEATURE_H
-#define OPENORIENTEERING_MAP_FIND_FEATURE_H
+#ifndef LIBREMAPPER_MAP_FIND_FEATURE_H
+#define LIBREMAPPER_MAP_FIND_FEATURE_H
 
 #include <QtGlobal>
 #include <QObject>

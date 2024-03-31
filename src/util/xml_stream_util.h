@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_XML_STREAM_UTIL_H
-#define OPENORIENTEERING_XML_STREAM_UTIL_H
+#ifndef LIBREMAPPER_XML_STREAM_UTIL_H
+#define LIBREMAPPER_XML_STREAM_UTIL_H
 
 #include <QtGlobal>
 #include <QLatin1String>

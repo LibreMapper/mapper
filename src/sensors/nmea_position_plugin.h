@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_NMEA_PLUGIN_H
-#define OPENORIENTEERING_NMEA_PLUGIN_H
+#ifndef LIBREMAPPER_NMEA_PLUGIN_H
+#define LIBREMAPPER_NMEA_PLUGIN_H
 
 #include <QGeoPositionInfoSourceFactory>
 #include <QObject>
@@ -46,4 +46,4 @@ public:
 
 }  // namespace OpenOrienteering
 
-#endif  // OPENORIENTEERING_NMEA_PLUGIN_H
+#endif  // LIBREMAPPER_NMEA_PLUGIN_H

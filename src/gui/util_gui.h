@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_UTIL_GUI_H
-#define OPENORIENTEERING_UTIL_GUI_H
+#ifndef LIBREMAPPER_UTIL_GUI_H
+#define LIBREMAPPER_UTIL_GUI_H
 
 #include <QtGlobal>
 #include <QDoubleValidator>

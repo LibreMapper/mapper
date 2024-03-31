@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_FILL_TOOL_H
-#define OPENORIENTEERING_FILL_TOOL_H
+#ifndef LIBREMAPPER_FILL_TOOL_H
+#define LIBREMAPPER_FILL_TOOL_H
 
 #include <vector>
 

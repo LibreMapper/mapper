@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TEMPLATE_MAP_H
-#define OPENORIENTEERING_TEMPLATE_MAP_H
+#ifndef LIBREMAPPER_TEMPLATE_MAP_H
+#define LIBREMAPPER_TEMPLATE_MAP_H
 
 #include <memory>
 #include <vector>

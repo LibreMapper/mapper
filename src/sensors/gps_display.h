@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_GPS_DISPLAY_H
-#define OPENORIENTEERING_GPS_DISPLAY_H
+#ifndef LIBREMAPPER_GPS_DISPLAY_H
+#define LIBREMAPPER_GPS_DISPLAY_H
 
 #include <QtGlobal>
 #include <QObject>

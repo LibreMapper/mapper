@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_GEOREF_FIELDS_H
-#define OPENORIENTEERING_OCD_GEOREF_FIELDS_H
+#ifndef LIBREMAPPER_OCD_GEOREF_FIELDS_H
+#define LIBREMAPPER_OCD_GEOREF_FIELDS_H
 
 #include <functional>
 
@@ -70,4 +70,4 @@ bool operator!=(const OcdGeorefFields& lhs, const OcdGeorefFields& rhs)
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_OCD_GEOREF_FIELDS_H
+#endif // LIBREMAPPER_OCD_GEOREF_FIELDS_H

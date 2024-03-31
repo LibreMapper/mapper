@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OCD_TYPES_V2018
-#define OPENORIENTEERING_OCD_TYPES_V2018
+#ifndef LIBREMAPPER_OCD_TYPES_V2018
+#define LIBREMAPPER_OCD_TYPES_V2018
 
 #include "ocd_types.h"
 #include "ocd_types_v12.h"
@@ -27,4 +27,4 @@ namespace Ocd
 	
 }
 
-#endif // OPENORIENTEERING_OCD_TYPES_V2018_H
+#endif // LIBREMAPPER_OCD_TYPES_V2018_H

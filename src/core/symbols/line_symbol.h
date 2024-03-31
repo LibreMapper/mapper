@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_LINE_SYMBOL_H
-#define OPENORIENTEERING_LINE_SYMBOL_H
+#ifndef LIBREMAPPER_LINE_SYMBOL_H
+#define LIBREMAPPER_LINE_SYMBOL_H
 
 #include <vector>  // IWYU pragma: keep
 

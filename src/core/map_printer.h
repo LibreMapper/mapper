@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_PRINTER_H
-#define OPENORIENTEERING_MAP_PRINTER_H
+#ifndef LIBREMAPPER_MAP_PRINTER_H
+#define LIBREMAPPER_MAP_PRINTER_H
 
 #include <memory>
 #include <vector>

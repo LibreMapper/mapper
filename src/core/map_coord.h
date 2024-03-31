@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_COORD_H
-#define OPENORIENTEERING_MAP_COORD_H
+#ifndef LIBREMAPPER_MAP_COORD_H
+#define LIBREMAPPER_MAP_COORD_H
 
 #include <array>
 #include <cmath>

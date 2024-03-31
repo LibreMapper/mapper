@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_FAKE_POSITION_SOURCE_H
-#define OPENORIENTEERING_FAKE_POSITION_SOURCE_H
+#ifndef LIBREMAPPER_FAKE_POSITION_SOURCE_H
+#define LIBREMAPPER_FAKE_POSITION_SOURCE_H
 
 #include <QGeoCoordinate>
 #include <QGeoPositionInfo>
@@ -69,4 +69,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif  // OPENORIENTEERING_FAKE_POSITION_SOURCE_H
+#endif  // LIBREMAPPER_FAKE_POSITION_SOURCE_H

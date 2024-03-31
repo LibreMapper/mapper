@@ -17,8 +17,8 @@
 **
 ****************************************************************************/
 
-#ifndef OPENORIENTEERING_UTIL_QASCONST_H
-#define OPENORIENTEERING_UTIL_QASCONST_H
+#ifndef LIBREMAPPER_UTIL_QASCONST_H
+#define LIBREMAPPER_UTIL_QASCONST_H
 
 #include <qglobal.h>
 
@@ -37,4 +37,4 @@ void qAsConst(const T &&) Q_DECL_EQ_DELETE;
 
 QT_END_NAMESPACE
 
-#endif /* OPENORIENTEERING_UTIL_QASCONST_H */
+#endif /* LIBREMAPPER_UTIL_QASCONST_H */

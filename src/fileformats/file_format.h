@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_FILE_FORMAT_H
-#define OPENORIENTEERING_FILE_FORMAT_H
+#ifndef LIBREMAPPER_FILE_FORMAT_H
+#define LIBREMAPPER_FILE_FORMAT_H
 
 #include <exception>
 #include <memory>
@@ -393,4 +393,4 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::FileFormat::FileTypes)
 Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::FileFormat::Features)
 
 
-#endif // OPENORIENTEERING_FILE_FORMAT_H
+#endif // LIBREMAPPER_FILE_FORMAT_H

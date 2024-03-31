@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_SENSORS_SETTINGS_PAGE_H
-#define OPENORIENTEERING_SENSORS_SETTINGS_PAGE_H
+#ifndef LIBREMAPPER_SENSORS_SETTINGS_PAGE_H
+#define LIBREMAPPER_SENSORS_SETTINGS_PAGE_H
 
 #include <QObject>
 #include <QString>
@@ -45,4 +45,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif  // OPENORIENTEERING_SENSORS_SETTINGS_PAGE_H
+#endif  // LIBREMAPPER_SENSORS_SETTINGS_PAGE_H

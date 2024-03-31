@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_QPAINTER_T_H
-#define OPENORIENTEERING_QPAINTER_T_H
+#ifndef LIBREMAPPER_QPAINTER_T_H
+#define LIBREMAPPER_QPAINTER_T_H
 
 #include <QImage>
 #include <QObject>

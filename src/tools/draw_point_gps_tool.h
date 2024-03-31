@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_DRAW_POINT_GPS_H
-#define OPENORIENTEERING_DRAW_POINT_GPS_H
+#ifndef LIBREMAPPER_DRAW_POINT_GPS_H
+#define LIBREMAPPER_DRAW_POINT_GPS_H
 
 #include <QObject>
 #include <QPointer>

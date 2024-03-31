@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_LATLON_H
-#define OPENORIENTEERING_LATLON_H
+#ifndef LIBREMAPPER_LATLON_H
+#define LIBREMAPPER_LATLON_H
 
 #include <QtMath>
 

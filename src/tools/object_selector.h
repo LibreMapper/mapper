@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OBJECT_SELECTOR_H
-#define OPENORIENTEERING_OBJECT_SELECTOR_H
+#ifndef LIBREMAPPER_OBJECT_SELECTOR_H
+#define LIBREMAPPER_OBJECT_SELECTOR_H
 
 #include <utility>
 #include <vector>

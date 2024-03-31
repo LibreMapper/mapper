@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_MAP_COLOR_H
-#define OPENORIENTEERING_MAP_COLOR_H
+#ifndef LIBREMAPPER_MAP_COLOR_H
+#define LIBREMAPPER_MAP_COLOR_H
 
 #include <vector>
 

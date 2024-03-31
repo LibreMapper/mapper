@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_XML_BENCHMARK_T_H
-#define OPENORIENTEERING_XML_BENCHMARK_T_H
+#ifndef LIBREMAPPER_XML_BENCHMARK_T_H
+#define LIBREMAPPER_XML_BENCHMARK_T_H
 
 #include <QBuffer>
 #include <QObject>

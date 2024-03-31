@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TAGS_WIDGET_H
-#define OPENORIENTEERING_TAGS_WIDGET_H
+#ifndef LIBREMAPPER_TAGS_WIDGET_H
+#define LIBREMAPPER_TAGS_WIDGET_H
 
 #include <QObject>
 #include <QString>

@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_SYMBOL_RULE_SET_H
-#define OPENORIENTEERING_SYMBOL_RULE_SET_H
+#ifndef LIBREMAPPER_SYMBOL_RULE_SET_H
+#define LIBREMAPPER_SYMBOL_RULE_SET_H
 
 #include <functional>
 #include <vector>
@@ -265,4 +265,4 @@ public:
 Q_DECLARE_OPERATORS_FOR_FLAGS(OpenOrienteering::SymbolRuleSet::Options)
 
 
-#endif // OPENORIENTEERING_SYMBOL_RULE_SET_H
+#endif // LIBREMAPPER_SYMBOL_RULE_SET_H

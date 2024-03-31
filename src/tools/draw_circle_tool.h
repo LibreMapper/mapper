@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_DRAW_CIRCLE_H
-#define OPENORIENTEERING_DRAW_CIRCLE_H
+#ifndef LIBREMAPPER_DRAW_CIRCLE_H
+#define LIBREMAPPER_DRAW_CIRCLE_H
 
 #include <QObject>
 #include <QPoint>

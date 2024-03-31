@@ -17,8 +17,8 @@
 **
 ****************************************************************************/
 
-#ifndef OPENORIENTEERING_UTIL_QOVERLOAD_H
-#define OPENORIENTEERING_UTIL_QOVERLOAD_H
+#ifndef LIBREMAPPER_UTIL_QOVERLOAD_H
+#define LIBREMAPPER_UTIL_QOVERLOAD_H
 
 #include <qglobal.h>
 
@@ -73,4 +73,4 @@ template <typename... Args> Q_DECL_CONSTEXPR QNonConstOverload<Args...> qNonCons
 
 QT_END_NAMESPACE
 
-#endif /* OPENORIENTEERING_UTIL_QOVERLOAD_H */
+#endif /* LIBREMAPPER_UTIL_QOVERLOAD_H */

@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_STORAGE_LOCATION_H
-#define OPENORIENTEERING_STORAGE_LOCATION_H
+#ifndef LIBREMAPPER_STORAGE_LOCATION_H
+#define LIBREMAPPER_STORAGE_LOCATION_H
 
 
 #include <memory>
@@ -132,4 +132,4 @@ StorageLocation::Hint StorageLocation::hint() const
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_STORAGE_LOCATION_H
+#endif // LIBREMAPPER_STORAGE_LOCATION_H

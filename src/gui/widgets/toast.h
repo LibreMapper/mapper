@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TOAST_H
-#define OPENORIENTEERING_TOAST_H
+#ifndef LIBREMAPPER_TOAST_H
+#define LIBREMAPPER_TOAST_H
 
 #include <QObject>
 #include <QWidget>

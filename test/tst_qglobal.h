@@ -17,8 +17,8 @@
 **
 ****************************************************************************/
 
-#ifndef OPENORIENTEERING_TST_QGLOBAL_H
-#define OPENORIENTEERING_TST_QGLOBAL_H
+#ifndef LIBREMAPPER_TST_QGLOBAL_H
+#define LIBREMAPPER_TST_QGLOBAL_H
 
 #include <QObject>
 
@@ -31,4 +31,4 @@ private slots:
     void testqOverload();
 };
 
-#endif // OPENORIENTEERING_TST_QGLOBAL_H
+#endif // LIBREMAPPER_TST_QGLOBAL_H

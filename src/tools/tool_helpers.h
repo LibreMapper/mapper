@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TOOL_HELPERS_H
-#define OPENORIENTEERING_TOOL_HELPERS_H
+#ifndef LIBREMAPPER_TOOL_HELPERS_H
+#define LIBREMAPPER_TOOL_HELPERS_H
 
 #include <cstddef>
 #include <memory>

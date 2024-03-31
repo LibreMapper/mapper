@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TRACK_H
-#define OPENORIENTEERING_TRACK_H
+#ifndef LIBREMAPPER_TRACK_H
+#define LIBREMAPPER_TRACK_H
 
 #include <cmath>
 #include <vector>
@@ -155,4 +155,4 @@ inline bool operator!=(const Track& lhs, const Track& rhs) { return !(lhs==rhs);
 
 }  // namespace OpenOrienteering
 
-#endif  // OPENORIENTEERING_TRACK_H
+#endif  // LIBREMAPPER_TRACK_H

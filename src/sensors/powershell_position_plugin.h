@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_POWERSHELL_POSITION_PLUGIN_H
-#define OPENORIENTEERING_POWERSHELL_POSITION_PLUGIN_H
+#ifndef LIBREMAPPER_POWERSHELL_POSITION_PLUGIN_H
+#define LIBREMAPPER_POWERSHELL_POSITION_PLUGIN_H
 
 #include <QGeoPositionInfoSourceFactory>
 #include <QObject>
@@ -43,4 +43,4 @@ public:
 
 }  // namespace OpenOrienteering
 
-#endif  // OPENORIENTEERING_POWERSHELL_POSITION_PLUGIN_H
+#endif  // LIBREMAPPER_POWERSHELL_POSITION_PLUGIN_H

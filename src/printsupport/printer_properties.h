@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_PRINTER_PROPERTIES_H
-#define OPENORIENTEERING_PRINTER_PROPERTIES_H
+#ifndef LIBREMAPPER_PRINTER_PROPERTIES_H
+#define LIBREMAPPER_PRINTER_PROPERTIES_H
 
 #include <memory>
 
@@ -58,4 +58,4 @@ namespace PlatformPrinterProperties
 	int execDialog(QPrinter* printer, std::shared_ptr<void>& buffer, QWidget* parent = nullptr);
 }
 
-#endif // OPENORIENTEERING_PRINTER_PROPERTIES_H
+#endif // LIBREMAPPER_PRINTER_PROPERTIES_H

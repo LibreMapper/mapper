@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_OGR_FILE_FORMAT_P_H
-#define OPENORIENTEERING_OGR_FILE_FORMAT_P_H
+#ifndef LIBREMAPPER_OGR_FILE_FORMAT_P_H
+#define LIBREMAPPER_OGR_FILE_FORMAT_P_H
 
 #include <functional>
 #include <memory>
@@ -446,4 +446,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_OGR_FILE_FORMAT_P_H
+#endif // LIBREMAPPER_OGR_FILE_FORMAT_P_H

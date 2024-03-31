@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_ITEM_DELEGATES_H
-#define OPENORIENTEERING_ITEM_DELEGATES_H
+#ifndef LIBREMAPPER_ITEM_DELEGATES_H
+#define LIBREMAPPER_ITEM_DELEGATES_H
 
 #include <QItemDelegate>
 #include <QLocale>

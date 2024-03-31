@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_ADVANCED_PDF_H
-#define OPENORIENTEERING_ADVANCED_PDF_H
+#ifndef LIBREMAPPER_ADVANCED_PDF_H
+#define LIBREMAPPER_ADVANCED_PDF_H
 
 #include <memory>
 

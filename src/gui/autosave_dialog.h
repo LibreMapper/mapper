@@ -6,8 +6,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_AUTOSAVE_DIALOG_H
-#define OPENORIENTEERING_AUTOSAVE_DIALOG_H
+#ifndef LIBREMAPPER_AUTOSAVE_DIALOG_H
+#define LIBREMAPPER_AUTOSAVE_DIALOG_H
 
 #include <Qt>
 #include <QDialog>
@@ -126,4 +126,4 @@ private:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_AUTOSAVE_DIALOG_H
+#endif // LIBREMAPPER_AUTOSAVE_DIALOG_H

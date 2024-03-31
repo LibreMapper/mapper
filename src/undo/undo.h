@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_UNDO_H
-#define OPENORIENTEERING_UNDO_H
+#ifndef LIBREMAPPER_UNDO_H
+#define LIBREMAPPER_UNDO_H
 
 #include "core/symbols/symbol.h"
 

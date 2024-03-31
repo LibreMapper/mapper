@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_TOOL_CUT_HOLE_H
-#define OPENORIENTEERING_TOOL_CUT_HOLE_H
+#ifndef LIBREMAPPER_TOOL_CUT_HOLE_H
+#define LIBREMAPPER_TOOL_CUT_HOLE_H
 
 #include <QObject>
 #include <QRectF>

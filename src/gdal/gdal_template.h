@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef OPENORIENTEERING_GDAL_TEMPLATE_H
-#define OPENORIENTEERING_GDAL_TEMPLATE_H
+#ifndef LIBREMAPPER_GDAL_TEMPLATE_H
+#define LIBREMAPPER_GDAL_TEMPLATE_H
 
 #include <vector>
 
@@ -57,4 +57,4 @@ protected:
 
 }  // namespace OpenOrienteering
 
-#endif // OPENORIENTEERING_GDAL_TEMPLATE_H
+#endif // LIBREMAPPER_GDAL_TEMPLATE_H

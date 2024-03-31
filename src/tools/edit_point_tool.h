@@ -7,8 +7,8 @@
  */
 
 
-#ifndef OPENORIENTEERING_EDIT_POINT_TOOL_H
-#define OPENORIENTEERING_EDIT_POINT_TOOL_H
+#ifndef LIBREMAPPER_EDIT_POINT_TOOL_H
+#define LIBREMAPPER_EDIT_POINT_TOOL_H
 
 #include <QElapsedTimer>
 #include <QScopedPointer>
