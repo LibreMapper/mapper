@@ -20,7 +20,6 @@ namespace LibreMapper {
 
 HomeScreenController::HomeScreenController()
 : widget(nullptr)
-, current_tip(-1)
 {
 	// nothing
 }
@@ -57,8 +56,6 @@ void HomeScreenController::detach()
 {
 	window->setCentralWidget(nullptr);
 	widget->deleteLater();
-	
-	Settings::getInstance().setSetting(Settings::HomeScreen_CurrentTip, current_tip);
 }
 
 void HomeScreenController::readSettings()
@@ -67,22 +64,6 @@ void HomeScreenController::readSettings()
 	
 	widget->setRecentFiles(settings.getSettingCached(Settings::General_RecentFilesList).toStringList());
 	widget->setOpenMRUFileChecked(settings.getSettingCached(Settings::General_OpenMRUFile).toBool());
-	
-	bool tips_visible = settings.getSettingCached(Settings::HomeScreen_TipsVisible).toBool();
-	widget->setTipsVisible(tips_visible);
-	if (tips_visible)
-	{
-		if (current_tip < 0)
-		{
-			current_tip = settings.getSettingCached(Settings::HomeScreen_CurrentTip).toInt();
-			goToNextTip();
-		}
-		else
-		{
-			// Settings changed.
-			goToTip(current_tip);
-		}
-	}
 }
 
 void HomeScreenController::setOpenMRUFile(bool state)
@@ -94,57 +75,5 @@ void HomeScreenController::clearRecentFiles()
 {
 	Settings::getInstance().remove(Settings::General_RecentFilesList);
 }
-
-void HomeScreenController::setTipsVisible(bool state)
-{
-	Settings::getInstance().setSetting(Settings::HomeScreen_TipsVisible, state);
-}
-
-void HomeScreenController::goToNextTip()
-{
-	goToTip(current_tip + 1);
-}
-
-void HomeScreenController::goToPreviousTip()
-{
-	goToTip(current_tip - 1);
-}
-
-void HomeScreenController::goToTip(int index)
-{
-	static QStringList tips;
-	if (tips.isEmpty())
-	{
-		// Normally, this will be read only once.
-		QFile file(QString::fromLatin1("doc:tip-of-the-day/tips.txt"));
-		if (file.open(QIODevice::ReadOnly))
-		{
-			while (!file.atEnd())
-			{
-				QString tip(QString::fromUtf8(file.readLine().constData()));
-				if (tip.endsWith(QLatin1Char('\n')))
-					tip.chop(1);
-				if (!tip.isEmpty())
-					tips.push_back(tip);
-			}
-		}
-	}
-	
-	if (tips.isEmpty())
-	{
-		// Some error may have occurred during reading the tips file.
-		// Display a welcome text.
-		widget->setTipOfTheDay(QString::fromLatin1("<h2>%1</h2>").arg(tr("Welcome to OpenOrienteering Mapper!")));
-	}
-	else
-	{
-		Q_ASSERT(tips.count() > 0);
-		while (index < 0)
-			index += tips.count();
-		current_tip = index % tips.count();
-		widget->setTipOfTheDay(tips[current_tip]);
-	}
-}
-
 
 }  // namespace LibreMapper

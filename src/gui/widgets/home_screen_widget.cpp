@@ -103,15 +103,12 @@ HomeScreenWidgetDesktop::HomeScreenWidgetDesktop(HomeScreenController* controlle
 {
 	QWidget* menu_widget = makeMenuWidget(controller, parent);
 	QWidget* recent_files_widget = makeRecentFilesWidget(controller, parent);
-	QWidget* tips_widget = makeTipsWidget(controller, parent);
 	
 	QGridLayout* layout = new QGridLayout();
 	layout->setSpacing(2 * layout->spacing());
 	layout->addWidget(menu_widget, 1, 0, 2, 1);
 	layout->addWidget(recent_files_widget, 1, 1);
 	layout->setRowStretch(1, 4);
-	layout->addWidget(tips_widget, 2, 1);
-	layout->setRowStretch(2, 3);
 	setLayout(layout);
 	
 	setAutoFillBackground(false);
@@ -218,44 +215,6 @@ QWidget* HomeScreenWidgetDesktop::makeRecentFilesWidget(HomeScreenController* co
 	return recent_files_widget;
 }
 
-QWidget* HomeScreenWidgetDesktop::makeTipsWidget(HomeScreenController* controller, QWidget* parent)
-{
-	QGridLayout* tips_layout = new QGridLayout();
-	QWidget* tips_headline = makeHeadline(tr("Tip of the day"));
-	tips_layout->addWidget(tips_headline, 0, 0, 1, 3);
-	tips_label = new QLabel();
-	tips_label->setWordWrap(true);
-	tips_label->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-	tips_check = new QCheckBox(tr("Show tip of the day"));
-	tips_check->setChecked(true);
-	tips_layout->addWidget(tips_check, 2, 0, 1, 1);
-	tips_layout->addWidget(tips_label, 1, 0, 1, 3);
-	QPushButton* prev_button = new QPushButton(QIcon(QString::fromLatin1(":/images/arrow-left.png")), tr("Previous"));
-	tips_layout->addWidget(prev_button, 2, 1, 1, 1);
-	QPushButton* next_button = new QPushButton(QIcon(QString::fromLatin1(":/images/arrow-right.png")), tr("Next"));
-	tips_layout->addWidget(next_button, 2, 2, 1, 1);
-	
-	tips_layout->setRowStretch(1, 1);
-	tips_layout->setColumnStretch(0, 1);
-	
-	tips_children.reserve(4);
-	tips_children.push_back(tips_headline);
-	tips_children.push_back(tips_label);
-	tips_children.push_back(prev_button);
-	tips_children.push_back(next_button);
-	
-	MainWindow* window = controller->getWindow();
-	connect(tips_label, &QLabel::linkActivated, window, &MainWindow::linkClicked);
-	connect(tips_check, &QAbstractButton::clicked, controller, &HomeScreenController::setTipsVisible);
-	connect(prev_button, &QAbstractButton::clicked, controller, &HomeScreenController::goToPreviousTip);
-	connect(next_button, &QAbstractButton::clicked, controller, &HomeScreenController::goToNextTip);
-	
-	QWidget* tips_widget = new QWidget(parent);
-	tips_widget->setLayout(tips_layout);
-	tips_widget->setAutoFillBackground(true);
-	return tips_widget;
-}
-
 void HomeScreenWidgetDesktop::setRecentFiles(const QStringList& files)
 {
 	recent_files_list->clear();
@@ -290,25 +249,6 @@ void HomeScreenWidgetDesktop::setOpenMRUFileChecked(bool state)
 {
 	open_mru_file_check->setChecked(state);
 }
-
-void HomeScreenWidgetDesktop::setTipOfTheDay(const QString& text)
-{
-	tips_label->setText(text);
-}
-
-void HomeScreenWidgetDesktop::setTipsVisible(bool state)
-{
-	QGridLayout* layout = qobject_cast<QGridLayout*>(this->layout());
-	for (auto widget : tips_children)
-	{
-		widget->setVisible(state);
-	}
-	if (layout)
-		layout->setRowStretch(2, state ? 3 : 0);
-	
-	tips_check->setChecked(state);
-}
-
 
 
 //### HomeScreenWidgetMobile ###
@@ -381,16 +321,6 @@ void HomeScreenWidgetMobile::setRecentFiles(const QStringList& /*files*/)
 }
 
 void HomeScreenWidgetMobile::setOpenMRUFileChecked(bool /*state*/)
-{
-	// nothing
-}
-
-void HomeScreenWidgetMobile::setTipOfTheDay(const QString& /*text*/)
-{
-	// nothing
-}
-
-void HomeScreenWidgetMobile::setTipsVisible(bool /*state*/)
 {
 	// nothing
 }

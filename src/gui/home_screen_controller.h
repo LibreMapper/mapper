@@ -53,24 +53,9 @@ public slots:
 	/** Sets whether to open the most recently used file on startup. */
 	void setOpenMRUFile(bool state);
 	
-	/** Sets the visibility of the tip-of-the-day to state. */
-	void setTipsVisible(bool state);
-	
-	/** Moves to the tip following the current tip-of-the-day. */
-	void goToPreviousTip();
-	
-	/** Moves to the tip preceding the current tip-of-the-day. */
-	void goToNextTip();
-	
-	/** Moves to the tip-of-the-day given by index. */
-	void goToTip(int index);
-	
 protected:
 	/** The widget owned and controlled by this HomeScreenController. */
 	AbstractHomeScreenWidget* widget;
-	
-	/** The index of the tip-of-the-day currently displayed. */
-	int current_tip;
 };
 
 

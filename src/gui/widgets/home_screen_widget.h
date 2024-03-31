@@ -59,13 +59,6 @@ public slots:
 	 *  the most recently used file on startup. */
 	virtual void setOpenMRUFileChecked(bool state) = 0;
 	
-	/** Sets the text of the the tip-of-the-day. */
-	virtual void setTipOfTheDay(const QString& text) = 0;
-	
-	/** Sets the visibility of the tip-of-the-day, and
-	 *  sets the "checked" state of the control for displaying the tip. */
-	virtual void setTipsVisible(bool state) = 0;
-	
 protected:
 	/** Returns a QLabel for displaying a headline in the home screen. */
 	QLabel* makeHeadline(const QString& text, QWidget* parent = nullptr) const;
@@ -107,13 +100,6 @@ public slots:
 	 *  the most recently used file on startup. */
 	void setOpenMRUFileChecked(bool state) override;
 	
-	/** Sets the text of the the tip-of-the-day. */
-	void setTipOfTheDay(const QString& text) override;
-	
-	/** Sets the visibility of the tip-of-the-day, and
-	 *  sets the "checked" state of the control for displaying the tip. */
-	void setTipsVisible(bool state) override;
-	
 protected slots:
 	/** Opens a file when its is list item is clicked. */
 	void recentFileClicked(QListWidgetItem* item);
@@ -128,15 +114,8 @@ protected:
 	/** Creates the recent files widget. */
 	QWidget* makeRecentFilesWidget(HomeScreenController* controller, QWidget* parent = nullptr);
 	
-	/** Creates the tip-of-the-day widget. */
-	QWidget* makeTipsWidget(HomeScreenController* controller, QWidget* parent = nullptr);
-	
-	
 	QListWidget* recent_files_list;
 	QCheckBox* open_mru_file_check;
-	QLabel* tips_label;
-	QCheckBox* tips_check;
-	std::vector<QWidget*> tips_children;
 };
 
 
@@ -160,13 +139,6 @@ public slots:
 	/** Sets the "checked" state of the control for opening
 	 *  the most recently used file on startup. */
 	void setOpenMRUFileChecked(bool state) override;
-	
-	/** Sets the text of the the tip-of-the-day. */
-	void setTipOfTheDay(const QString& text) override;
-	
-	/** Sets the visibility of the tip-of-the-day, and
-	 *  sets the "checked" state of the control for displaying the tip. */
-	void setTipsVisible(bool state) override;
 	
 	/** Shows the settings dialog, adjusted for small screens. */
 	void showSettings();
