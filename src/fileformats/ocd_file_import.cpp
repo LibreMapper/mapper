@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2013-2022 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  *
@@ -1647,6 +1647,13 @@ TextSymbol* OcdFileImport::importTextSymbol(const S& ocd_symbol)
 	setBasicAttributes(symbol, convertOcdString(ocd_symbol.font_name), ocd_symbol.basic);
 	setSpecialAttributes(symbol, ocd_symbol.special);
 	setFraming(symbol, ocd_symbol.framing);
+	if (ocd_version >= 10)
+	{
+		if (ocd_symbol.framing.point_symbol_on_V10)
+			addSymbolWarning(symbol, OcdFileImport::tr("Skipping unsupported reference to point symbol '%1.%2'.") .
+			                         arg(ocd_symbol.framing.point_symbol_number_V10 / S::BaseSymbol::symbol_number_factor) .
+			                         arg(ocd_symbol.framing.point_symbol_number_V10 % S::BaseSymbol::symbol_number_factor));
+	}
 	symbol->setRotatable(ocd_symbol.base.flags & Ocd::SymbolRotatable);
 	return symbol;
 }
@@ -1931,36 +1938,40 @@ Object* OcdFileImport::importObject(const O& ocd_object, MapPart* part)
 	return nullptr;
 }
 
-QString OcdFileImport::getObjectText(const Ocd::ObjectV8& ocd_object) const
+
+namespace {
+// OCD v8 may choose between Unicode and custom text encoding
+bool ocdObjectUsesUnicode(const Ocd::ObjectV8& ocd_object)
+{
+	return ocd_object.unicode;
+}
+
+// Later OCD format versions use UTF16-LE
+template<class O>
+bool ocdObjectUsesUnicode(const O& ocd_object)
+{
+	Q_UNUSED(ocd_object)
+	return true;
+}
+}
+
+
+template<class O>
+QString OcdFileImport::getObjectText(const O& ocd_object) const
 {
 	auto input  = ocd_object.coords + ocd_object.num_items;
 	auto maxlen = uint(sizeof(Ocd::OcdPoint32) * ocd_object.num_text);
 	QString object_text;
-	if (ocd_object.unicode && ocd_version >= 8)
-	{
+	if (ocdObjectUsesUnicode(ocd_object) && ocd_version >= 8)
 		object_text = convertOcdString(reinterpret_cast<const QChar*>(input), maxlen/2);
-	}
 	else
-	{
 		object_text = convertOcdString<Ocd::Custom8BitEncoding>(reinterpret_cast<const char*>(input), maxlen);
-	}
 	
 	// Remove leading "\r\n"
 	if (object_text.startsWith(QLatin1String("\r\n")))
-	{
 		object_text.remove(0, 2);
-	}
 	
 	return object_text;
-}
-
-template< class O >
-QString OcdFileImport::getObjectText(const O& ocd_object) const
-{
-	auto data = reinterpret_cast<const QChar *>(ocd_object.coords + ocd_object.num_items);
-	if (data[0] == QLatin1Char{'\r'} && data[1] == QLatin1Char{'\n'})
-		data += 2;
-	return QString(data);
 }
 
 

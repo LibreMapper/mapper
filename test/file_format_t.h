@@ -98,6 +98,11 @@ private slots:
 	void importTemplateTest_data();
 	void importTemplateTest();
 	
+	/**
+	 * Ensure proper text handling during the OCD export/import routine.
+	 */
+	void issue_2206_32byte_text_data();
+	void issue_2206_32byte_text();
 };
 
 #endif // LIBREMAPPER_FILE_FORMAT_T_H
