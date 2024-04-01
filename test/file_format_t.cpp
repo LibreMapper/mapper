@@ -1162,6 +1162,42 @@ void FileFormatTest::importTemplateTest()
 	}
 }
 
+void FileFormatTest::issue_2206_32byte_text_data()
+{
+	QTest::addColumn<QString>("format_id");
+	
+	for (auto ocd_version : {8, 9, 10, 11, 12})
+	{
+		auto const format_id = QLatin1String("OCD%1").arg(QString::number(ocd_version));
+		QTest::newRow(format_id.toLatin1()) << format_id;
+	}
+}
+
+void FileFormatTest::issue_2206_32byte_text()
+{
+	QFETCH(QString, format_id);
+	
+	constexpr auto filepath = QLatin1Literal("data:export/issue-2206-32-byte-text.omap");
+	QVERIFY(QFileInfo::exists(filepath));
+	
+	const FileFormat* format = FileFormats.findFormat(format_id.toLatin1());
+	QVERIFY(format);
+	
+	auto original = std::make_unique<Map>();
+	QVERIFY(original->loadFrom(filepath));
+	
+	auto new_map = saveAndLoadMap(*original, format);
+	QVERIFY2(new_map, "Exception while importing / exporting.");
+	
+	QVERIFY(new_map->getNumObjects() > 0);
+	QVERIFY(new_map->getNumParts() > 0);
+	auto const* map_object = new_map->getCurrentPart()->getObject(0);
+	QVERIFY(map_object->getType() == OpenOrienteering::Object::Type::Text);
+	auto const* text_object = map_object->asText();
+	if (qstrcmp(format_id.toLatin1(), "OCD8"))
+		QEXPECT_FAIL("", "OO Mapper issue #2206", Continue);
+	QVERIFY(text_object->getText() == QLatin1Literal(">-- Exactly 32 bytes of text --<"));
+}
 
 
 /*
