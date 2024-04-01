@@ -1194,8 +1194,6 @@ void FileFormatTest::issue_2206_32byte_text()
 	auto const* map_object = new_map->getCurrentPart()->getObject(0);
 	QVERIFY(map_object->getType() == OpenOrienteering::Object::Type::Text);
 	auto const* text_object = map_object->asText();
-	if (qstrcmp(format_id.toLatin1(), "OCD8"))
-		QEXPECT_FAIL("", "OO Mapper issue #2206", Continue);
 	QVERIFY(text_object->getText() == QLatin1Literal(">-- Exactly 32 bytes of text --<"));
 }
 

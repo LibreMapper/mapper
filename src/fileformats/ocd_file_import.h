@@ -305,8 +305,6 @@ protected:
 	template< class O >
 	Object* importObject(const O& ocd_object, MapPart* part);
 	
-	QString getObjectText(const Ocd::ObjectV8& ocd_object) const;
-	
 	template< class O >
 	QString getObjectText(const O& ocd_object) const;
 	
