@@ -1,46 +1,17 @@
-# OpenOrienteering Mapper
+# LibreMapper
 
-![Mapper Screenshot](https://www.openorienteering.org/mapper-manual/pages/images/main_window.png)
+LibreMapper is a free and open source cartographic software tailored for
+orienteering map making. Unlike GIS or graphic software, LibreMapper supports
+the map maker's orienteering field survey routine and helps to perfect the
+graphic map content.
 
-OpenOrienteering Mapper is an orienteering mapmaking program and provides
-a free and open source alternative to existing commercial software.
-OpenOrienteering Mapper runs on Android, Windows, macOS and Linux.
+## Helping to make the software better
 
- - [Mapper Homepage](https://www.openorienteering.org/apps/mapper/)
- - [Manual](https://www.openorienteering.org/mapper-manual/)
- - [Downloads](https://github.com/OpenOrienteering/mapper/releases)
- - [OpenOrienteering Blog](https://www.openorienteering.org/)
-
-
-## Reporting Issues and Asking for Help
-
-Issues and possible improvements can be posted to our public [Ticket system](https://github.com/OpenOrienteering/mapper/issues).
-Please make sure you provide all relevant information about your problem or idea.
-
-
-## Contributing
-
-### Translating
-
-Translations can be edited online on [Weblate](https://hosted.weblate.org/projects/openorienteering/mapper/). You can register/login with your Github account. Find out more about translation in our [wiki](https://github.com/OpenOrienteering/mapper/wiki/Translation).
-
-
-### Writing Documentation
-
-The Mapper manual lives in its [own repository](https://github.com/OpenOrienteering/mapper-manual)
-which contains all information for you to get started.
-
-
-### Writing Code
-
-For building Mapper from source see [`INSTALL.md`](https://github.com/OpenOrienteering/mapper/blob/master/INSTALL.md).
-Pull requests are very welcome.
-
- - [Issue tracker](https://github.com/OpenOrienteering/mapper/issues)
- - [API documentation](https://www.openorienteering.org/api-docs/mapper/)
- - [Developer wiki](https://github.com/OpenOrienteering/mapper/wiki)
-
+If you encounter issues while using LibreMapper, or just want to spend some
+good time coding for the project, please refer to the
+[Contribution Guidelines](https://github.com/LibreMapper/mapper/blob/main/README.md).
 
 ## License
 
-Mapper is licensed under the [GNU GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/gpl.html).
+LibreMapper is a variant of OpenOrienteering Mapper and it's licensed under the
+[GNU GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/gpl.html).
