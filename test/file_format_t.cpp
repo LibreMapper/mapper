@@ -1180,7 +1180,7 @@ void FileFormatTest::issue_2206_32byte_text()
 	QVERIFY(new_map->getNumObjects() > 0);
 	QVERIFY(new_map->getNumParts() > 0);
 	auto const* map_object = new_map->getCurrentPart()->getObject(0);
-	QVERIFY(map_object->getType() == OpenOrienteering::Object::Type::Text);
+	QVERIFY(map_object->getType() == LibreMapper::Object::Type::Text);
 	auto const* text_object = map_object->asText();
 	QVERIFY(text_object->getText() == QLatin1Literal(">-- Exactly 32 bytes of text --<"));
 }
