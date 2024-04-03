@@ -103,6 +103,13 @@ private slots:
 	 */
 	void issue_2206_32byte_text_data();
 	void issue_2206_32byte_text();
+
+	/**
+	 * Test color traits persistence and the link to symbols.
+	 */
+	void colorTest_data();
+	void colorTest();
+
 };
 
 #endif // LIBREMAPPER_FILE_FORMAT_T_H
