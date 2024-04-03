@@ -73,7 +73,7 @@ void AreaSymbol::FillPattern::save(QXmlStreamWriter& xml, const Map& map) const
 	switch (type)
 	{
 	case LinePattern:
-		element.writeAttribute(QLatin1String("color"), map.findColorIndex(line_color));
+		element.writeAttribute(QLatin1String("color"), map.findColorPrio(line_color));
 		element.writeAttribute(QLatin1String("line_width"), line_width);
 		break;
 		
@@ -103,7 +103,7 @@ void AreaSymbol::FillPattern::load(QXmlStreamReader& xml, const Map& map, Symbol
 	switch (type)
 	{
 	case LinePattern:
-		line_color = map.getColor(element.attribute<int>(QLatin1String("color")));
+		line_color = map.getColorByPrio(element.attribute<int>(QLatin1String("color")));
 		line_width = element.attribute<int>(QLatin1String("line_width"));
 		break;
 		
@@ -769,7 +769,7 @@ bool AreaSymbol::hasRotatableFillPattern() const
 void AreaSymbol::saveImpl(QXmlStreamWriter& xml, const Map& map) const
 {
 	XmlElementWriter element { xml, QLatin1String("area_symbol") };
-	element.writeAttribute(QLatin1String{"inner_color"}, map.findColorIndex(color));
+	element.writeAttribute(QLatin1String{"inner_color"}, map.findColorPrio(color));
 	element.writeAttribute(QLatin1String{"min_area"}, minimum_area);
 	element.writeAttribute(QLatin1String{"patterns"}, patterns.size());
 	for (const auto& pattern : patterns)
@@ -782,7 +782,7 @@ bool AreaSymbol::loadImpl(QXmlStreamReader& xml, const Map& map, SymbolDictionar
 		return false;
 	
 	XmlElementReader element { xml };
-	color = map.getColor(element.attribute<int>(QLatin1String("inner_color")));
+	color = map.getColorByPrio(element.attribute<int>(QLatin1String("inner_color")));
 	minimum_area = element.attribute<int>(QLatin1String("min_area"));
 	
 	auto num_patterns = element.attribute<int>(QLatin1String("patterns"));
