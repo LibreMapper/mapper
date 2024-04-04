@@ -1166,7 +1166,7 @@ void FileFormatTest::issue_2206_32byte_text()
 {
 	QFETCH(QString, format_id);
 	
-	constexpr auto filepath = QLatin1Literal("data:export/issue-2206-32-byte-text.omap");
+	const auto filepath = QLatin1Literal("data:export/issue-2206-32-byte-text.omap");
 	QVERIFY(QFileInfo::exists(filepath));
 	
 	const FileFormat* format = FileFormats.findFormat(format_id.toLatin1());
