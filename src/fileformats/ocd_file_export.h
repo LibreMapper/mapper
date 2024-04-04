@@ -332,7 +332,7 @@ private:
 	
 	quint16 ocd_version;
 	
-	bool uses_registration_color = false;
+	int registration_color_id = -1;
 };
 
 
