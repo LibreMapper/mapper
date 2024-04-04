@@ -249,6 +249,7 @@ private:
 	QScopedPointer<Georeferencing> georef; // A working copy of the current or given initial Georeferencing
 	bool allow_no_georeferencing;
 	bool tool_active;
+	QString magcalc_service_key {};
 	bool declination_query_in_progress;
 	bool grivation_locked;
 	bool scale_factor_locked;

@@ -2,6 +2,7 @@
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
  * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2024 Libor Pecháček
  *
  * This file is part of LibreMapper.
  */
@@ -22,12 +23,14 @@
 #include <QDesktopServices>  // IWYU pragma: keep
 #include <QDialogButtonBox>
 #include <QDoubleSpinBox>
+#include <QInputDialog>
 #include <QFlags>
 #include <QFormLayout>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLatin1Char>
 #include <QLatin1String>
+#include <QLineEdit>
 #include <QLocale>
 #include <QMessageBox>
 #include <QMouseEvent>
@@ -117,6 +120,7 @@ GeoreferencingDialog::GeoreferencingDialog(
  , georef(new Georeferencing(*initial_georef))
  , allow_no_georeferencing(allow_no_georeferencing)
  , tool_active(false)
+ , magcalc_service_key(Settings::getInstance().getSettingCached(Settings::MapGeoreferencing_MagCalcServiceKey).toString())
  , declination_query_in_progress(false)
  , grivation_locked(initial_georef->getState() != Georeferencing::Geospatial)
  , scale_factor_locked(grivation_locked)
@@ -436,6 +440,7 @@ void GeoreferencingDialog::requestDeclination(bool no_confirm)
 	
 	QUrlQuery query;
 	QDate today = QDate::currentDate();
+	query.addQueryItem(QString::fromLatin1("key"), magcalc_service_key);
 	query.addQueryItem(QString::fromLatin1("lat1"), QString::number(latlon.latitude()));
 	query.addQueryItem(QString::fromLatin1("lon1"), QString::number(latlon.longitude()));
 	query.addQueryItem(QString::fromLatin1("startYear"), QString::number(today.year()));
@@ -785,6 +790,9 @@ void GeoreferencingDialog::declinationReplyFinished(QNetworkReply* reply)
 								if (ok)
 								{
 									setValueIfChanged(declination_edit, Georeferencing::roundDeclination(declination));
+									auto const orig_service_key = Settings::getInstance().getSetting(Settings::MapGeoreferencing_MagCalcServiceKey).toString();
+									if (magcalc_service_key != orig_service_key)
+										Settings::getInstance().setSetting(Settings::MapGeoreferencing_MagCalcServiceKey, magcalc_service_key);
 									return;
 								}
 								else 
@@ -818,12 +826,16 @@ void GeoreferencingDialog::declinationReplyFinished(QNetworkReply* reply)
 		}
 	}
 	
-	int result = QMessageBox::critical(this, tr("Online declination lookup"),
-		tr("The online declination lookup failed:\n%1").arg(error_string),
-		QMessageBox::Retry | QMessageBox::Close,
-		QMessageBox::Close );
-	if (result == QMessageBox::Retry)
+	auto const confirmed_key = QInputDialog::getText(this, tr("Online declination lookup"),
+	    tr("The online declination lookup failed:\n%1"
+	       "\n\nPlease check the service access key before retrying:").arg(error_string),
+		QLineEdit::Normal, magcalc_service_key);
+
+	if (!confirmed_key.isEmpty())
+	{
+		magcalc_service_key = confirmed_key;
 		requestDeclination(true);
+	}		
 #else
 	Q_UNUSED(reply)
 #endif

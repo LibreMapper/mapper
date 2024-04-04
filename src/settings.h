@@ -44,6 +44,7 @@ public:
 		MapEditor_DrawLastPointOnRightClick,
 		MapEditor_IgnoreTouchInput,
 		MapGeoreferencing_ControlScaleFactor,
+		MapGeoreferencing_MagCalcServiceKey,
 		EditTool_DeleteBezierPointAction,
 		EditTool_DeleteBezierPointActionAlternative,
 		RectangleTool_HelperCrossRadiusMM,

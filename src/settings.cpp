@@ -125,6 +125,7 @@ Settings::Settings()
 	registerSetting(MapEditor_DrawLastPointOnRightClick, "MapEditor/draw_last_point_on_right_click", true);
 	registerSetting(MapEditor_IgnoreTouchInput, "MapEditor/ignore_touch_input", false);
 	registerSetting(MapGeoreferencing_ControlScaleFactor, "MapGeoreferencing/control_scale_factor", false);
+	registerSetting(MapGeoreferencing_MagCalcServiceKey, "MapGeoreferencing/magcalc_service_access_key", QLatin1String("zNEw7")); // Assigned by NOAA NCEI
 	
 	registerSetting(EditTool_DeleteBezierPointAction, "EditTool/delete_bezier_point_action", int(DeleteBezierPoint_RetainExistingShape));
 	registerSetting(EditTool_DeleteBezierPointActionAlternative, "EditTool/delete_bezier_point_action_alternative", int(DeleteBezierPoint_ResetHandles));
