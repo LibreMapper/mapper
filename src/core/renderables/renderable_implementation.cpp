@@ -8,6 +8,8 @@
 
 #include "renderable_implementation.h"
 
+#include <algorithm>
+#include <cmath>
 #include <cstddef>
 #include <iterator>
 #include <memory>
@@ -21,6 +23,7 @@
 #include <QPainter>
 #include <QPen>
 #include <QPoint>
+#include <QSizeF>
 #include <QTransform>
 // IWYU pragma: no_include <QVariant>
 
@@ -269,17 +272,18 @@ LineRenderable::LineRenderable(const LineSymbol* symbol, QPointF first, QPointF 
  , cap_style(Qt::FlatCap)
  , join_style(Qt::MiterJoin)
 {
-	qreal half_line_width = (color_priority < 0) ? 0 : line_width/2;
+	auto line_width_vector = MapCoordF(second - first).perpRight();
+	line_width_vector.normalize();	
+	line_width_vector *= (color_priority < 0) ? 0 : line_width;
 	
-	auto right = MapCoordF(second - first).perpRight();
-	right.normalize();
-	right *= half_line_width;
+	// Might possibly be simplified with QRectf::normalized() and addition of QMarginsF.
+	// We prefer tighter control of the control flow in this calculation though.
+	auto const origin = QPointF { std::min(first.x(), second.x()) - std::abs(line_width_vector.x()/2),
+	                              std::min(first.y(), second.y()) - std::abs(line_width_vector.y()/2) };
+	auto const size = QSizeF { std::abs(first.x() - second.x()) + std::abs(line_width_vector.x()),
+	                           std::abs(first.y() - second.y()) + std::abs(line_width_vector.y()) };
 	
-	extent.setTopLeft(first + right);
-	rectInclude(extent, first - right);
-	rectInclude(extent, second - right);
-	rectInclude(extent, second + right);
-	
+	extent = QRectF { origin, size };
 	path.moveTo(first);
 	path.lineTo(second);
 }
