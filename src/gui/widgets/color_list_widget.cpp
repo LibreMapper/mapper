@@ -221,24 +221,23 @@ void ColorListWidget::deleteColor()
 	
 	if (color_to_be_removed->getSpotColorMethod() == MapColor::SpotColor)
 	{
-		auto color_in_use = false;
-		for (auto color_prio = 0; color_prio < map->getNumColorPrios() && !color_in_use; ++color_prio)
+		auto color_in_use = 0;
+		for (auto color_prio = 0; color_prio < map->getNumColorPrios(); ++color_prio)
 		{
 			if (color_prio == row)
 				continue;
 			
 			for (auto const& component : map->getColorByPrio(color_prio)->getComponents())
+			{
 				if (component.spot_color == color_to_be_removed)
-				{
-					color_in_use = true;
-					break;
-				}
+					++color_in_use;
+			}
 		}
 		
 		if (color_in_use)
 		{
 			if (QMessageBox::warning(this, tr("Confirmation"),
-			                         tr("Another map color uses this one as a spot color. Deleting it will remove the spot color from these map colors! Do you really want to do that?"),
+			                         tr("This color is used by %n map color(s) as a spot color. Deleting it will remove the spot color from these map colors! Do you really want to do that?", nullptr, color_in_use),
 			                         QMessageBox::Yes | QMessageBox::No) == QMessageBox::No)
 				return;
 		}
