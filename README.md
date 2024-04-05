@@ -1,3 +1,5 @@
+[![Coverity](https://scan.coverity.com/projects/30065/badge.svg)](https://scan.coverity.com/projects/libremapper-mapper)
+
 # LibreMapper
 
 LibreMapper is a free and open source cartographic software tailored for
