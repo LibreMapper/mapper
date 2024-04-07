@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
+ * Copyright 2024 Libor Pecháček
  * Copyright 2016-2022 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
@@ -439,7 +440,8 @@ constexpr qint32 convertSize(qint64 size)
  */
 int convertRotation(qreal angle)
 {
-	return qRound(10 * qRadiansToDegrees(angle));
+	auto degrees = qRadiansToDegrees(angle);
+	return qRound(10 * (degrees > 180 ? degrees - 360 : degrees));
 }
 
 
