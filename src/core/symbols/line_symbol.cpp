@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2022 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -791,23 +791,19 @@ void LineSymbol::processContinuousLine(
 	{
 		auto mid_position = (split.clen + effective_end_length - mid_symbols_length) / 2;
 		auto next_split = SplitPathCoord::at(mid_position, split);
-		path.copy(split, next_split, processed_flags, processed_coords);
-		split = next_split;
 		
 		auto orientation = qreal(0);
-		bool mid_symbol_rotatable = bool(mid_symbol) && mid_symbol->isRotatable();
+		bool mid_symbol_rotatable = mid_symbol->isRotatable();
 		for (auto i = mid_symbols_per_spot; i > 0; --i)
 		{
 			if (mid_symbol_rotatable)
-				orientation = split.tangentVector().angle();
-			mid_symbol->createRenderablesScaled(split.pos, orientation, output);
+				orientation = next_split.tangentVector().angle();
+			mid_symbol->createRenderablesScaled(next_split.pos, orientation, output);
 			
 			if (i > 1)
 			{
 				mid_position += mid_symbol_distance_f;
-				next_split = SplitPathCoord::at(mid_position, split);
-				path.copy(split, next_split, processed_flags, processed_coords);
-				split = next_split;
+				next_split = SplitPathCoord::at(mid_position, next_split);
 			}
 		}
 	}
