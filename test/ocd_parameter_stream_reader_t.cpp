@@ -9,11 +9,10 @@
 #include <QtGlobal>
 #include <QtTest>
 #include <QChar>
-#include <QCharRef>
 #include <QLatin1Char>
 #include <QObject>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 
 #include "fileformats/ocd_parameter_stream_reader.h"
 
@@ -85,7 +84,7 @@ private slots:
 		{
 			int next_i = param_string.indexOf(QLatin1Char('\t'), i+1);
 			int len = (next_i > 0 ? next_i : param_string.length()) - i - 2;
-			auto param_value = param_string.midRef(i+2, len);
+			auto param_value = QStringView{param_string}.mid(i+2, len);
 			char key = param_string[i+1].toLatin1();
 			
 			QVERIFY(reader.readNext());

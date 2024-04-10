@@ -60,7 +60,7 @@ TextBrowserDialog::TextBrowserDialog(QWidget* parent)
 	connect(text_browser, &QTextBrowser::sourceChanged, this, &TextBrowserDialog::sourceChanged);
 	connect(text_browser, &QTextBrowser::textChanged, this, &TextBrowserDialog::updateWindowTitle);
 	connect(text_browser, &QTextBrowser::backwardAvailable, back_button, &TextBrowserDialog::setEnabled);
-	connect(text_browser, QOverload<const QString&>::of(&QTextBrowser::highlighted), this, &TextBrowserDialog::highlighted);
+	connect(text_browser, QOverload<const QUrl&>::of(&QTextBrowser::highlighted), this, &TextBrowserDialog::highlighted);
 	connect(back_button,  &QPushButton::clicked, text_browser, &QTextBrowser::backward);
 	connect(close_button, &QPushButton::clicked, this, &TextBrowserDialog::accept);
 	
@@ -116,7 +116,7 @@ void TextBrowserDialog::updateWindowTitle()
 	setWindowTitle(text_browser->documentTitle());
 }
 
-void TextBrowserDialog::highlighted(const QString& link)
+void TextBrowserDialog::highlighted(const QUrl& link)
 {
 	if (link.isEmpty())
 	{
@@ -127,7 +127,7 @@ void TextBrowserDialog::highlighted(const QString& link)
 		/// @todo: Position near mouse pointer
 		auto tooltip_pos  = pos() + text_browser->pos();
 		tooltip_pos.ry() += text_browser->height();
-		QToolTip::showText(tooltip_pos, link, this, {});
+		QToolTip::showText(tooltip_pos, link.toString(), this, {});
 	}
 }
 

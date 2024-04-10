@@ -648,8 +648,8 @@ void MapEditorToolBase::updateConstrainedPositions()
 
 void MapEditorToolBase::generateNextSimulatedEvent()
 {
-	auto next_pos = cur_pos + QPoint{qRound(10.0 - 20.0 * qrand() / RAND_MAX),
-	                                 qRound(10.0 - 20.0 * qrand() / RAND_MAX)};
+	auto next_pos = cur_pos + QPoint{qRound(10.0 - 20.0 * std::rand() / RAND_MAX),
+	                                 qRound(10.0 - 20.0 * std::rand() / RAND_MAX)};
 	switch (simulation_state)
 	{
 	case 1:

@@ -42,8 +42,8 @@ TaskDialog::TaskDialog(QWidget* parent, const QString& title, const QString& tex
 	setLayout(layout);
 	
 	signal_mapper = new QSignalMapper(this);
-	connect(signal_mapper, QOverload<QWidget*>::of(&QSignalMapper::mapped), this, QOverload<QWidget*>::of(&TaskDialog::buttonClicked));
-	connect(button_box, &QDialogButtonBox::clicked, this, QOverload<QWidget*>::of(&TaskDialog::buttonClicked));
+	connect(signal_mapper, &QSignalMapper::mappedObject, this, qOverload<QObject*>(&TaskDialog::buttonClicked));
+	connect(button_box, &QDialogButtonBox::clicked, this, qOverload<QAbstractButton*>(&TaskDialog::buttonClicked));
 }
 
 QCommandLinkButton* TaskDialog::addCommandButton(const QString& text, const QString& description)
@@ -56,10 +56,12 @@ QCommandLinkButton* TaskDialog::addCommandButton(const QString& text, const QStr
 	return button;
 }
 
-void TaskDialog::buttonClicked(QWidget* button)
+/// An adapter method for QSignalMapper which emits mappedObject(QObject*) signal.
+void TaskDialog::buttonClicked(QObject* button)
 {
 	buttonClicked(static_cast<QAbstractButton*>(button));
 }
+
 void TaskDialog::buttonClicked(QAbstractButton* button)
 {
 	clicked_button = button;

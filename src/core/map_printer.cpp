@@ -28,7 +28,7 @@
 #include <QRect>
 #include <QRgb>
 #include <QSize>
-#include <QStringRef>
+#include <QStringView>
 #include <QTransform>
 #include <QXmlStreamReader>
 
@@ -203,7 +203,7 @@ MapPrinterConfig::MapPrinterConfig(const Map& map, QXmlStreamReader& xml)
 	options.show_templates = printer_config_element.attribute<bool>(literal::templates_visible);
 	options.show_grid = printer_config_element.attribute<bool>(literal::grid_visible);
 	options.simulate_overprinting = printer_config_element.attribute<bool>(literal::simulate_overprinting);
-	QStringRef mode = printer_config_element.attribute<QStringRef>(literal::mode);
+	QStringView mode = printer_config_element.attribute<QStringView>(literal::mode);
 	if (!mode.isEmpty())
 	{
 		if (mode == literal::vector)
@@ -215,7 +215,7 @@ MapPrinterConfig::MapPrinterConfig(const Map& map, QXmlStreamReader& xml)
 		else
 			qDebug("Unsupported map printing mode: %s", mode.toUtf8().constData());
 	}
-	QStringRef color_mode = printer_config_element.attribute<QStringRef>(literal::color_mode);
+	QStringView color_mode = printer_config_element.attribute<QStringView>(literal::color_mode);
 	if (!color_mode.isEmpty())
 	{
 		if (color_mode == literal::default_color_mode)

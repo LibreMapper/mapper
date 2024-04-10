@@ -48,8 +48,8 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QRectF>
-#include <QRegExp>
-#include <QRegExpValidator>
+#include <QRegularExpression>
+#include <QRegularExpressionValidator>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QSettings>
@@ -57,7 +57,7 @@
 #include <QSizeF>
 #include <QSpacerItem>
 #include <QSpinBox>
-#include <QStringRef>
+#include <QStringView>
 #include <QStyle>
 #include <QStyleOption>
 #include <QToolButton>
@@ -150,7 +150,7 @@ PrintWidget::PrintWidget(Map* map, MainWindow* main_window, MapView* main_view, 
 	auto page_size_widget = new QWidget();
 	auto page_size_layout = new QHBoxLayout();
 	page_size_widget->setLayout(page_size_layout);
-	page_size_layout->setMargin(0);
+	page_size_layout->setContentsMargins({});
 	page_width_edit = Util::SpinBox::create(1, 0.1, 1000.0, tr("mm"), 1.0);
 	page_width_edit->setEnabled(false);
 	page_size_layout->addWidget(page_width_edit, 1);
@@ -169,8 +169,8 @@ PrintWidget::PrintWidget(Map* map, MainWindow* main_window, MapView* main_view, 
 	auto landscape_button = new QRadioButton(tr("Landscape"));
 	page_orientation_layout->addWidget(landscape_button);
 	page_orientation_group = new QButtonGroup(this);
-	page_orientation_group->addButton(portrait_button, QPrinter::Portrait);
-	page_orientation_group->addButton(landscape_button, QPrinter::Landscape);
+	page_orientation_group->addButton(portrait_button, QPageLayout::Portrait);
+	page_orientation_group->addButton(landscape_button, QPageLayout::Landscape);
 	layout->addRow(tr("Page orientation:"), page_orientation_widget);
 	
 	copies_edit = Util::SpinBox::create(1, 99999);
@@ -208,7 +208,7 @@ PrintWidget::PrintWidget(Map* map, MainWindow* main_window, MapView* main_view, 
 	auto mode_widget = new QWidget();
 	auto mode_layout = new QHBoxLayout();
 	mode_widget->setLayout(mode_layout);
-	mode_layout->setMargin(0);
+	mode_layout->setContentsMargins({});
 	
 	vector_mode_button = createPrintModeButton(QIcon(QString::fromLatin1(":/images/print-mode-vector.png")), tr("Vector\ngraphics"));
 	raster_mode_button = createPrintModeButton(QIcon(QString::fromLatin1(":/images/print-mode-raster.png")), tr("Raster\ngraphics"));
@@ -235,7 +235,7 @@ PrintWidget::PrintWidget(Map* map, MainWindow* main_window, MapView* main_view, 
 	
 	dpi_combo = new QComboBox();
 	dpi_combo->setEditable(true);
-	dpi_combo->setValidator(new QRegExpValidator(QRegExp(QLatin1String("^[1-9]\\d{0,4}$|^[1-9]\\d{0,4} ")+tr("dpi")+QLatin1Char('$')), dpi_combo));
+	dpi_combo->setValidator(new QRegularExpressionValidator(QRegularExpression(QLatin1String("^[1-9]\\d{0,4}$|^[1-9]\\d{0,4} ")+tr("dpi")+QLatin1Char('$')), dpi_combo));
 	// TODO: Implement spinbox-style " dpi" suffix
 	layout->addRow(tr("Resolution:"), dpi_combo);
 	
@@ -327,7 +327,7 @@ PrintWidget::PrintWidget(Map* map, MainWindow* main_window, MapView* main_view, 
 		connect(printer_properties_button, &QAbstractButton::clicked, this, &PrintWidget::propertiesClicked, Qt::QueuedConnection);
 	connect(paper_size_combo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &PrintWidget::paperSizeChanged);
 	connect(page_width_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &PrintWidget::paperDimensionsChanged);
-	connect(page_orientation_group, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &PrintWidget::pageOrientationChanged);
+	connect(page_orientation_group, qOverload<QAbstractButton*>(&QButtonGroup::buttonClicked), this, &PrintWidget::pageOrientationChanged);
 	connect(page_height_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &PrintWidget::paperDimensionsChanged);
 	
 	connect(top_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &PrintWidget::printAreaMoved);
@@ -768,11 +768,12 @@ void PrintWidget::paperDimensionsChanged() const
 }
 
 // slot
-void PrintWidget::pageOrientationChanged(int id) const
+void PrintWidget::pageOrientationChanged(QAbstractButton* button) const
 {
-	if (id == QPrinter::Portrait || id == QPrinter::Landscape)
+	auto const id = page_orientation_group->id(button);
+	if (id == QPageLayout::Portrait || id == QPageLayout::Landscape)
 	{
-		map_printer->setPageOrientation((id == QPrinter::Portrait) ? MapPrinterPageFormat::Portrait : MapPrinterPageFormat::Landscape);
+		map_printer->setPageOrientation((id == QPageLayout::Portrait) ? MapPrinterPageFormat::Portrait : MapPrinterPageFormat::Landscape);
 	}
 }
 
@@ -1054,7 +1055,7 @@ void PrintWidget::resolutionEdited()
 {
 	auto resolution_text = dpi_combo->currentText();
 	auto index_of_space = resolution_text.indexOf(QLatin1Char(' '));
-	auto dpi_value = resolution_text.leftRef(index_of_space).toInt();
+	auto dpi_value = QStringView{resolution_text}.left(index_of_space).toInt();
 	if (dpi_value > 0)
 	{
 		auto pos = dpi_combo->lineEdit()->cursorPosition();
@@ -1324,7 +1325,7 @@ void PrintWidget::exportWorldFile(const QString& path) const
 	const auto xskew  = mm_to_world.m12() / pixel_per_mm;
 	const auto yskew  = mm_to_world.m21() / pixel_per_mm;
 	const auto top_left = georef.toProjectedCoords(MapCoord{map_printer->getPrintArea().topLeft()});
-	const QTransform pixel_to_world(xscale, yskew, 0, xskew, yscale, 0, top_left.x(), top_left.y());
+	const QTransform pixel_to_world(xscale, yskew, 0, xskew, yscale, 0, top_left.x(), top_left.y(), 1);
 	const WorldFile world_file(pixel_to_world);
 	world_file.save(WorldFile::pathForImage(path));
 }
@@ -1339,7 +1340,7 @@ void PrintWidget::exportToPdf()
 	}
 	
 	printer->setOutputFormat(QPrinter::PdfFormat);
-	printer->setNumCopies(copies_edit->value());
+	printer->setCopyCount(copies_edit->value());
 	printer->setCreator(main_window->appName());
 	printer->setDocName(QFileInfo(main_window->currentPath()).baseName());
 	
@@ -1387,7 +1388,7 @@ void PrintWidget::print()
 		return;
 	}
 	
-	printer->setNumCopies(copies_edit->value());
+	printer->setCopyCount(copies_edit->value());
 	printer->setCreator(main_window->appName());
 	printer->setDocName(QFileInfo(main_window->currentPath()).baseName());
 	

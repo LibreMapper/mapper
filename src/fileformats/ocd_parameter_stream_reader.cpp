@@ -46,9 +46,9 @@ bool OcdParameterStreamReader::readNext()
 	return false;
 }
 
-QStringRef OcdParameterStreamReader::value() const
+QStringView OcdParameterStreamReader::value() const
 {
-	return param_string.midRef(pos, std::max(-1, next - pos));
+	return QStringView{param_string}.mid(pos, std::max(-1, next - pos));
 }
 
 

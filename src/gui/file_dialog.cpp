@@ -12,7 +12,7 @@
 #include <iterator>
 
 #include <QtGlobal>
-#include <QStringRef>  // IWYU pragma: keep
+#include <QStringView>  // IWYU pragma: keep
 #include <QVector>
 
 #ifndef QTBUG_51712_QUIRK_ENABLED
@@ -69,7 +69,7 @@ void FileDialog::adjustParameters(QString& filter, QFileDialog::Options& options
 	using std::end;
 	
 	static const auto separator = QString::fromLatin1(";;");
-	const auto filters = filter.splitRef(separator);
+	const auto filters = QStringView{filter}.split(separator);
 	
 	bool has_long_filters = std::any_of(begin(filters), end(filters), [](auto&& item) {
 		return item.length() > max_filter_length;

@@ -20,7 +20,7 @@
 #include <QLatin1String>
 #include <QPointF>
 #include <QRectF>
-#include <QStringRef>
+#include <QStringView>
 #include <QTransform>
 #include <QXmlStreamAttributes>
 #include <QXmlStreamReader>
@@ -312,7 +312,7 @@ void TextSymbol::updateQFont()
 	qfont.setHintingPreference(QFont::PreferNoHinting);
 	qfont.setKerning(kerning);
 	metrics = QFontMetricsF(qfont);
-	qfont.setLetterSpacing(QFont::AbsoluteSpacing, metrics.width(QString(QLatin1String{" "})) * character_spacing);
+	qfont.setLetterSpacing(QFont::AbsoluteSpacing, metrics.horizontalAdvance(QString(QLatin1String{" "})) * character_spacing);
 	
 	qfont.setStyleStrategy(QFont::ForceOutline);
 

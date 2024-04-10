@@ -32,7 +32,7 @@
 #include <QPainter>
 #include <QRectF>
 #include <QSizeF>
-#include <QStringRef>
+#include <QStringView>
 #include <QTransform>
 #include <QXmlStreamAttributes>
 #include <QXmlStreamReader>
@@ -354,7 +354,7 @@ Q_ASSERT(temp->passpoints.size() == 0);
 			bool other_transform_loaded = false;
 			while (xml.readNextStartElement())
 			{
-				QStringRef role = xml.attributes().value(QLatin1String("role"));
+				QStringView role = xml.attributes().value(QLatin1String("role"));
 				if (xml.name() == QLatin1String("transformation"))
 				{
 					if (role == QLatin1String("active"))
@@ -1014,7 +1014,7 @@ std::unique_ptr<Template> Template::templateForPath(const QString& path, Map* ma
 	return t;
 }
 
-std::unique_ptr<Template> Template::templateForType(const QStringRef& type, const QString& path, Map* map)
+std::unique_ptr<Template> Template::templateForType(const QStringView type, const QString& path, Map* map)
 {
 	std::unique_ptr<Template> t;
 	

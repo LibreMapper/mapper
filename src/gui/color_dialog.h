@@ -18,6 +18,7 @@
 #include "core/map_color.h"
 
 class QAbstractButton;
+class QButtonGroup;
 class QCheckBox;
 class QComboBox;
 class QDoubleSpinBox;
@@ -67,7 +68,7 @@ protected slots:
 	
 	void mapColorNameChanged();
 	
-	void spotColorTypeChanged(int id);
+	void spotColorTypeChanged(QAbstractButton* button);
 	
 	void spotColorNameChanged();
 	
@@ -77,11 +78,11 @@ protected slots:
 	
 	void knockoutChanged();
 	
-	void cmykColorTypeChanged(int id);
+	void cmykColorTypeChanged(QAbstractButton* button);
 	
 	void cmykValueChanged();
 	
-	void rgbColorTypeChanged(int id);
+	void rgbColorTypeChanged(QAbstractButton* button);
 	
 	void rgbValueChanged();
 	
@@ -109,7 +110,8 @@ protected:
 	QLineEdit* mc_name_edit;
 	QComboBox* language_combo;
 	QPushButton* name_edit_button;
-	
+
+	QButtonGroup* spot_color_options;	
 	QRadioButton* full_tone_option;
 	QRadioButton* composition_option;
 	QLineEdit* sc_name_edit;
@@ -117,6 +119,7 @@ protected:
 	QDoubleSpinBox* sc_angle_edit;
 	QCheckBox* knockout_option;
 	
+	QButtonGroup* cmyk_color_options;
 	QRadioButton* cmyk_spot_color_option;
 	QRadioButton* evaluate_rgb_option;
 	QRadioButton* custom_cmyk_option;
@@ -125,6 +128,7 @@ protected:
 	QDoubleSpinBox* y_edit;
 	QDoubleSpinBox* k_edit;
 	
+	QButtonGroup* rgb_color_options;
 	QRadioButton* rgb_spot_color_option;
 	QRadioButton* evaluate_cmyk_option;
 	QRadioButton* custom_rgb_option;

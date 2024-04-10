@@ -104,7 +104,7 @@ namespace Ocd
 				// string ends with incomplete surrogate pair
 				--tail;
 			}
-			std::fill(tail, last, 0);
+			std::fill(tail, last, QChar{});
 			return length;
 		}
 		

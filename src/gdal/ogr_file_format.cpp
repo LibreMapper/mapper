@@ -42,7 +42,7 @@
 #include <QScopedValueRollback>
 #include <QString>
 #include <QStringList>
-#include <QStringRef>
+#include <QStringView>
 #include <QVariant>
 
 #include "core/georeferencing.h"
@@ -143,9 +143,9 @@ namespace {
 			double length_0{}, length_1{};
 			bool ok = match.hasMatch();
 			if (ok)
-				length_0 = match.capturedRef(1).toDouble(&ok);
+				length_0 = match.capturedView(1).toDouble(&ok);
 			if (ok)
-				length_1 = match.capturedRef(3).toDouble(&ok);
+				length_1 = match.capturedView(3).toDouble(&ok);
 			if (ok)
 			{
 				/// \todo Apply units from capture 2 and 4
@@ -2247,7 +2247,7 @@ void OgrFileExport::addTextToLayer(OGRLayerH layer, const std::function<bool (co
 			// This may overwrite the symbol name, and
 			// it may be too short for the full text.
 			auto index = OGR_F_GetFieldIndex(po_feature.get(), OGR_Fld_GetNameRef(o_name_field.get()));
-			OGR_F_SetFieldString(po_feature.get(), index, text.leftRef(32).toUtf8().constData());
+			OGR_F_SetFieldString(po_feature.get(), index, QStringView{text}.left(32).toUtf8().constData());
 		}
 
 		auto pt = ogr::unique_geometry(OGR_G_CreateGeometry(wkbPoint));

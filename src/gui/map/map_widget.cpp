@@ -1102,13 +1102,13 @@ void MapWidget::_mouseDoubleClickEvent(QMouseEvent* event)
 
 void MapWidget::wheelEvent(QWheelEvent* event)
 {
-	if (event->orientation() == Qt::Vertical)
+	if (!event->inverted())
 	{
 		if (view)
 		{
-			auto degrees = event->delta() / 8.0;
+			auto degrees = event->angleDelta().y() / 8.0;
 			auto num_steps = degrees / 15.0;
-			auto cursor_pos_view = viewportToView(event->pos());
+			auto cursor_pos_view = viewportToView(event->position());
 			bool preserve_cursor_pos = (event->modifiers() & Qt::ControlModifier) == 0;
 			if (num_steps < 0 && !Settings::getInstance().getSettingCached(Settings::MapEditor_ZoomOutAwayFromCursor).toBool())
 				preserve_cursor_pos = !preserve_cursor_pos;
@@ -1125,7 +1125,7 @@ void MapWidget::wheelEvent(QWheelEvent* event)
 			// Send a mouse move event to the current tool as zooming out can move the mouse position on the map
 			if (tool)
 			{
-				QMouseEvent mouse_event{ QEvent::HoverMove, event->pos(), Qt::NoButton, QApplication::mouseButtons(), Qt::NoModifier };
+				QMouseEvent mouse_event{ QEvent::HoverMove, event->position(), event->globalPosition(), Qt::NoButton, QApplication::mouseButtons(), Qt::NoModifier };
 				tool->mouseMoveEvent(&mouse_event, view->viewToMapF(cursor_pos_view), this);
 			}
 		}

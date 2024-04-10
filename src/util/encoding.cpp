@@ -10,7 +10,7 @@
 #include <QByteArray>
 #include <QLocale>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 #include <QTextCodec>
 
 
@@ -45,7 +45,7 @@ namespace LibreMapper {
 
 const char* Util::codepageForLanguage(const QString& language_name)
 {
-	const auto language = language_name.leftRef(2).toLatin1();
+	const auto language = QStringView{language_name}.left(2).toLatin1();
 	for (const auto& mapping : mappings)
 	{
 		auto len = qstrlen(mapping.languages);

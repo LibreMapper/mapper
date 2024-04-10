@@ -91,7 +91,7 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 	int row = 0;
 	prof_color_layout->addWidget(Util::Headline::create(tr("Spot color printing")), row, col, 1, 2);
 	
-	auto spot_color_options = new QButtonGroup(this);
+	spot_color_options = new QButtonGroup(this);
 	
 	++row;
 	full_tone_option = new QRadioButton(tr("Defines a spot color:"));
@@ -151,7 +151,7 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 	prof_color_layout->setColumnStretch(col+1, 3);
 	prof_color_layout->addWidget(Util::Headline::create(tr("CMYK")), row, col, 1, 2);
 	
-	auto cmyk_color_options = new QButtonGroup(this);
+	cmyk_color_options = new QButtonGroup(this);
 	
 	++row;
 	cmyk_spot_color_option = new QRadioButton(tr("Calculate from spot colors"));
@@ -208,7 +208,7 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 	row = 0;
 	desktop_layout->addWidget(Util::Headline::create(tr("RGB")), row, col, 1, 2);
 	
-	auto rgb_color_options = new QButtonGroup(this);
+	rgb_color_options = new QButtonGroup(this);
 	
 	++row;
 	rgb_spot_color_option = new QRadioButton(tr("Calculate from spot colors"));
@@ -322,24 +322,24 @@ ColorDialog::ColorDialog(const Map& map, const MapColor& source_color, QWidget* 
 	connect(name_edit_button, &QPushButton::clicked, this, &ColorDialog::editClicked);
 	connect(mc_name_edit, &QLineEdit::textChanged, this, &ColorDialog::mapColorNameChanged);
 	
-	connect(spot_color_options, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &ColorDialog::spotColorTypeChanged);
+	connect(spot_color_options, qOverload<QAbstractButton*>(&QButtonGroup::buttonClicked), this, &ColorDialog::spotColorTypeChanged);
 	connect(sc_name_edit, &QLineEdit::textChanged, this, &ColorDialog::spotColorNameChanged);
 	connect(sc_frequency_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::spotColorScreenChanged);
 	connect(sc_angle_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::spotColorScreenChanged);
 	for (std::size_t i = 0; i < component_colors.size(); i++)
 	{
-		connect(component_colors[i], QOverload<int>::of(&ColorDropDown::currentIndexChanged), this, &ColorDialog::spotColorCompositionChanged);
+		connect(component_colors[i], qOverload<int>(&ColorDropDown::currentIndexChanged), this, &ColorDialog::spotColorCompositionChanged);
 		connect(component_halftone[i], QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::spotColorCompositionChanged);
 	}
 	connect(knockout_option, &QAbstractButton::clicked, this, &ColorDialog::knockoutChanged);
 	
-	connect(cmyk_color_options, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &ColorDialog::cmykColorTypeChanged);
+	connect(cmyk_color_options, qOverload<QAbstractButton*>(&QButtonGroup::buttonClicked), this, &ColorDialog::cmykColorTypeChanged);
 	connect(c_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::cmykValueChanged);
 	connect(m_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::cmykValueChanged);
 	connect(y_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::cmykValueChanged);
 	connect(k_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::cmykValueChanged);
 	
-	connect(rgb_color_options, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &ColorDialog::rgbColorTypeChanged);
+	connect(rgb_color_options, qOverload<QAbstractButton*>(&QButtonGroup::buttonClicked), this, &ColorDialog::rgbColorTypeChanged);
 	connect(r_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::rgbValueChanged);
 	connect(g_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::rgbValueChanged);
 	connect(b_edit, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &ColorDialog::rgbValueChanged);
@@ -677,13 +677,13 @@ void ColorDialog::mapColorNameChanged()
 	setColorModified();
 }
 
-void ColorDialog::spotColorTypeChanged(int id)
+void ColorDialog::spotColorTypeChanged(QAbstractButton* button)
 {
 	if (!react_to_changes)
 		return;
 	
 	QString name;
-	switch (id)
+	switch (spot_color_options->id(button))
 	{
 		case MapColor::SpotColor:
 			name = color.getName();
@@ -776,12 +776,12 @@ void ColorDialog::knockoutChanged()
 	setColorModified();
 }
 
-void ColorDialog::cmykColorTypeChanged(int id)
+void ColorDialog::cmykColorTypeChanged(QAbstractButton* button)
 {
 	if (!react_to_changes)
 		return;
 	
-	switch (id)
+	switch (cmyk_color_options->id(button))
 	{
 		case MapColor::SpotColor:
 			color.setCmykFromSpotColors();
@@ -816,12 +816,12 @@ void ColorDialog::cmykValueChanged()
 	}
 }
 
-void ColorDialog::rgbColorTypeChanged(int id)
+void ColorDialog::rgbColorTypeChanged(QAbstractButton* button)
 {
 	if (!react_to_changes)
 		return;
 	
-	switch (id)
+	switch (rgb_color_options->id(button))
 	{
 		case MapColor::SpotColor:
 			color.setRgbFromSpotColors();

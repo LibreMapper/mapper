@@ -352,7 +352,7 @@ void OcdFileImport::importGeoreferencing(const OcdFile< F >& file)
 
 namespace {
 
-void tryParamConvert(int& out, const QStringRef& param_value)
+void tryParamConvert(int& out, QStringView param_value)
 {
 	bool ok;
 	auto value = qRound(param_value.toFloat(&ok));
@@ -377,7 +377,7 @@ void OcdFileImport::importGeoreferencing(const QString& param_string)
 	while (parameters.readNext())
 	{
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'm':
@@ -563,7 +563,7 @@ void OcdFileImport::importSpotColor(const QString& param_string)
 	{
 		float f_value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'n':
@@ -638,7 +638,7 @@ void OcdFileImport::importColor(const QString& param_string)
 		float f_value;
 		int i_value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'n':
@@ -886,7 +886,7 @@ void OcdFileImport::importTemplate(const QString& param_string)
 	{
 		double value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'x':
@@ -1016,7 +1016,7 @@ void OcdFileImport::importView(const QString& param_string)
 	
 	while (parameters.readNext())
 	{
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'x':

@@ -38,7 +38,7 @@
 #include <QSize>
 #include <QSizeF>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 #include <QTemporaryDir>
 #include <QVariant>
 
@@ -582,7 +582,7 @@ void FileFormatTest::mapCoordFromString()
 	QFETCH(flags_type, flags);
 	
 	bool no_exception = true;
-	auto ref = QStringRef{&input};
+	auto ref = QStringView{input};
 	MapCoord coord;
 	try {
 		coord = MapCoord(ref);

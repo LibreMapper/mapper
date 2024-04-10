@@ -53,7 +53,7 @@ PassPoint PassPoint::load(QXmlStreamReader& xml)
 	p.error = passpoint.attribute<double>(QLatin1String("error"));
 	while (xml.readNextStartElement())
 	{
-		QStringRef name = xml.name();
+		QStringView name = xml.name();
 		while (xml.readNextStartElement())
 		{
 			if (xml.name() == QLatin1String("coord"))

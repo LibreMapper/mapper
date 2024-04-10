@@ -227,9 +227,15 @@ void XmlElementReader::read(MapCoordVector& coords)
 			}
 			else if (token == QXmlStreamReader::Characters && !xml.isWhitespace())
 			{
-				QStringRef text = xml.text();
+				QStringView text = xml.text();
 				try
 				{
+					/* \fixme Please mind that the text snippet (QStringView)
+					 * is modified by the MapCoord constructor. The loop tests
+					 * whether the constructor consumed all the charasters in 
+					 * the view. I (Libor) see this as an example violation of
+					 * the principle of least surprise.
+					 */
 					while (text.length())
 					{
 						coords.emplace_back(text);
@@ -290,7 +296,7 @@ void XmlElementReader::readForText(MapCoordVector& coords)
 			}
 			else if (token == QXmlStreamReader::Characters && !xml.isWhitespace())
 			{
-				QStringRef text = xml.text();
+				QStringView text = xml.text();
 				try
 				{
 					while (text.length())

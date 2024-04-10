@@ -420,8 +420,12 @@ public:
 	 * This constructor will initialize the boundsOffset() if necessary.
 	 * Otherwise it will apply the BoundsOffset() and throw a std::range_error
 	 * if the adjusted coordinates are out of bounds for qint32.
+	 * 
+	 * \todo The QStringView instance modification inside the constructor
+	 * is opaque. Find a better way how to indicate the number of bytes
+	 * consumed.
 	 */
-	MapCoord(QStringRef& text);
+	MapCoord(QStringView& text);
 	
 	
 	/** Saves the MapCoord in xml format to the stream. */

@@ -641,7 +641,7 @@ ObjectQuery ObjectQueryParser::parse(const QString& text)
 {
 	auto result = ObjectQuery{};
 	
-	input = {&text, 0, text.size()};
+	input = text;
 	pos = 0;
 	ObjectQueryNesting nested_expressions;
 	auto* current = &result;

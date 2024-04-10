@@ -86,7 +86,7 @@ SpinBoxDelegate::SpinBoxDelegate(int min, int max, const QString& unit, int step
 	// nothing
 }
 
-QWidget* SpinBoxDelegate::createEditor(QWidget* parent, const QStyleOptionViewItem& option, const QModelIndex& index) const
+QWidget* SpinBoxDelegate::createEditor(QWidget* parent, const QStyleOptionViewItem& option, const QModelIndex& index) const 
 {
 	Q_UNUSED(option);
 	Q_UNUSED(index);
@@ -94,11 +94,10 @@ QWidget* SpinBoxDelegate::createEditor(QWidget* parent, const QStyleOptionViewIt
 	QSpinBox* spinbox = Util::SpinBox::create(min, max, unit, step);
 	spinbox->setParent(parent);
 	
-	// Commit each change immediately when returning to event loop
-	QSignalMapper* signal_mapper = new QSignalMapper(spinbox);
-	signal_mapper->setMapping(spinbox, spinbox);
-	connect(spinbox, QOverload<int>::of(&QSpinBox::valueChanged), signal_mapper, QOverload<>::of(&QSignalMapper::map), Qt::QueuedConnection);
-	connect(signal_mapper, QOverload<QWidget*>::of(&QSignalMapper::mapped), this, &QItemDelegate::commitData);
+	// Commit each change immediately when returning to event loop. The lambda is
+	// called later in the game, so that it's safe to const_cast the pointer here
+	// as the createEditor()'s constness promise is not breached.
+	connect(spinbox, qOverload<int>(&QSpinBox::valueChanged), this, [this, spinbox]() { const_cast<SpinBoxDelegate*>(this)->commitData(spinbox); }, Qt::QueuedConnection);
 	
 	return spinbox;
 }

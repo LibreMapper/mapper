@@ -757,6 +757,7 @@ qreal AreaSymbol::dimensionForIcon() const
 
 
 // override
+// \todo check what this function returns when there are no fill patterns
 bool AreaSymbol::hasRotatableFillPattern() const
 {
 	return std::any_of(begin(patterns), end(patterns), [](auto& pattern){

@@ -837,8 +837,8 @@ private:
 	
 	QPointer<QComboBox> mappart_selector_box;
 	
-	QScopedPointer<GeoreferencingDialog> georeferencing_dialog;
-	QScopedPointer<ReopenTemplateDialog> reopen_template_dialog;
+	std::unique_ptr<GeoreferencingDialog> georeferencing_dialog;
+	std::unique_ptr<ReopenTemplateDialog> reopen_template_dialog;
 	
 	QSignalMapper* mappart_merge_mapper;
 	QSignalMapper* mappart_move_mapper;

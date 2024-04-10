@@ -10,6 +10,7 @@
 
 #include <QFile>
 #include <QFileInfo>
+#include <QStringView>
 
 #include "fileformats/file_import_export.h"
 
@@ -114,7 +115,7 @@ const FileFormat *FileFormatRegistry::findFormatByFilter(const QString& filter, 
 		auto const label_len_filter = filter.lastIndexOf(QLatin1String(" ("));
 		auto const label_len_format = format->filter().lastIndexOf(QLatin1String(" ("));
 		return (format->*predicate)()
-		       && filter.leftRef(label_len_filter) == format->filter().leftRef(label_len_format);
+		       && QStringView{filter}.left(label_len_filter) == QStringView{format->filter()}.left(label_len_format);
 	});
 }
 

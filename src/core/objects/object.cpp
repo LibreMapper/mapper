@@ -25,7 +25,7 @@
 #include <QPoint>
 #include <QPointF>
 #include <QScopedPointer>
-#include <QStringRef>
+#include <QStringView>
 #include <QTransform>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
@@ -2219,7 +2219,7 @@ PathPart::size_type PathObject::convertRangeToCurves(const PathPart& part, PathP
 bool PathObject::simplify(PathObject** undo_duplicate, double threshold)
 {
 	// A copy for reference and undo while this is modified.
-	QScopedPointer<PathObject> original(new PathObject(*this));
+	std::unique_ptr<PathObject> original(new PathObject(*this));
 	
 	// original_indices provides a mapping from this object's indices to the
 	// equivalent original object indices in order to extract the relevant
@@ -2419,7 +2419,7 @@ bool PathObject::simplify(PathObject** undo_duplicate, double threshold)
 	bool removed_a_point = (coords.size() != original->coords.size());
 	if (removed_a_point && undo_duplicate)
 	{
-		*undo_duplicate = original.take();
+		*undo_duplicate = original.release();
 	}
 	
 	return removed_a_point;

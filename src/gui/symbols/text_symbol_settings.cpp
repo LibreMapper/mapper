@@ -99,7 +99,7 @@ TextSymbolSettings::TextSymbolSettings(TextSymbol* symbol, SymbolSettingDialog* 
 	layout->addRow(tr("Font size:"), font_size_edit);
 	
 	auto letter_size_layout = new QHBoxLayout();
-	letter_size_layout->setMargin(0);
+	letter_size_layout->setContentsMargins({});
 	
 	letter_size_layout->addWidget(new QLabel(::LibreMapper::DetermineFontSizeDialog::tr("Letter:")));
 	//: "A" is the default letter which is used for determining letter height.

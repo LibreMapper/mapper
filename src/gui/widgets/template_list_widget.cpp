@@ -106,7 +106,7 @@ QVariant makeCheckBoxDecorator(QStyle* style, const QSize& size)
 	QPainter painter(&pixmap);
 	QStyleOptionViewItem option_item;
 	option_item.rect = { {0, 0}, size };
-	style->drawPrimitive(QStyle::PE_IndicatorViewItemCheck, &option_item, &painter, nullptr);
+	style->drawPrimitive(QStyle::PE_IndicatorItemViewItemCheck, &option_item, &painter, nullptr);
 	painter.end();
 	return pixmap;
 }
@@ -218,7 +218,7 @@ TemplateListWidget::TemplateListWidget(Map& map, MapView& main_view, MapEditorCo
 	}
 	
 	all_templates_layout = new QVBoxLayout();
-	all_templates_layout->setMargin(0);
+	all_templates_layout->setContentsMargins({});
 	all_templates_layout->addWidget(top_bar_widget);
 	all_templates_layout->addWidget(template_table, 1);
 	

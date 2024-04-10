@@ -316,7 +316,7 @@ private:
 inline
 double TextObjectPartInfo::getX(int index) const
 {
-	return part_x + metrics.width(part_text.left(index - start_index));
+	return part_x + metrics.horizontalAdvance(part_text.left(index - start_index));
 }
 
 

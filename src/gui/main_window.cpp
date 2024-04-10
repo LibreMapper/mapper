@@ -90,7 +90,7 @@ MainWindow::MainWindow(bool as_main_window, QWidget* parent, Qt::WindowFlags fla
 {
 	setWindowIcon(QIcon(QString::fromLatin1(":/images/mapper.png")));
 	// Distinguish Libre Mapper from OO Mapper
-	menuBar()->setStyleSheet(QLatin1Literal("QMenuBar, QMenuBar::item { background-color:#ffbbdf; }"));
+	menuBar()->setStyleSheet(QLatin1String("QMenuBar, QMenuBar::item { background-color:#ffbbdf; }"));
 	setAttribute(Qt::WA_DeleteOnClose);
 	
 	status_label = new QLabel();
@@ -702,7 +702,7 @@ bool MainWindow::showSaveOnCloseDialog()
 			// Restyle destructive buttons
 			for (auto const& btn : msgBox.buttons())
 				if (msgBox.buttonRole(btn) == QMessageBox::ButtonRole::DestructiveRole)
-					btn->setStyleSheet(QLatin1Literal("QPushButton { color: red; }"));
+					btn->setStyleSheet(QLatin1String("QPushButton { color: red; }"));
 			msgBox.setDefaultButton(QMessageBox::Cancel);
 			auto exec = msgBox.exec();
 			ret = (exec == -1) ? QMessageBox::Cancel : msgBox.standardButton(msgBox.clickedButton());
@@ -761,7 +761,7 @@ void MainWindow::loadWindowSettings()
 {
 #if defined(Q_OS_ANDROID)
 	// Always show the window on the whole available area on Android
-	resize(QApplication::desktop()->availableGeometry().size());
+	resize(QGuiApplication::primaryScreen()->availableGeometry().size());
 #else
 	QSettings settings;
 	
@@ -1364,7 +1364,7 @@ void MainWindow::linkClicked(const QString &link)
 	else if (link.compare(QLatin1String("about:"), Qt::CaseInsensitive) == 0)
 		showAbout();
 	else if (link.startsWith(QLatin1String("examples:"), Qt::CaseInsensitive))
-		openPathLater(QLatin1String("data:/examples/") + link.midRef(9));
+		openPathLater(QLatin1String("data:/examples/") + QStringView{link}.mid(9));
 	else
 		QDesktopServices::openUrl(link);
 }

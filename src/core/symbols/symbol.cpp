@@ -26,7 +26,7 @@
 #include <QPoint>
 #include <QPointF>
 #include <QRectF>
-#include <QStringRef>
+#include <QStringView>
 #include <QVariant>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
@@ -320,7 +320,7 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 		for (auto i = 0u; i < number_components; ++i)
 		{
 			int dot = code.indexOf(QLatin1Char('.'), pos+1);
-			symbol->number[i] = code.midRef(pos, (dot == -1) ? -1 : (dot - pos)).toInt();
+			symbol->number[i] = QStringView{code}.mid(pos, (dot == -1) ? -1 : (dot - pos)).toInt();
 			pos = ++dot;
 			if (pos < 1)
 				break;
@@ -341,7 +341,7 @@ std::unique_ptr<Symbol> Symbol::load(QXmlStreamReader& xml, const Map& map, Symb
 		else if (xml.name() == QLatin1String("icon"))
 		{
 			XmlElementReader icon_element(xml);
-			auto data = icon_element.attribute<QStringRef>(QLatin1String("src")).toLatin1();
+			auto data = icon_element.attribute<QStringView>(QLatin1String("src")).toLatin1();
 			
 			// The "data" URL scheme, RFC2397 (https://tools.ietf.org/html/rfc2397)
 			auto start = data.indexOf(',') + 1;

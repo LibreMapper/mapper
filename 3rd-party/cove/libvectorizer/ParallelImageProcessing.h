@@ -45,7 +45,7 @@ struct HorizontalStripes
 	
 	/// Creates concurrent jobs.
 	template <typename ResultType, typename Functor>
-	static Concurrency::JobList<ResultType> makeJobs(const Functor& functor, const QImage& source, QImage& target)
+	static Concurrency::JobList<ResultType> makeJobs(Functor&& functor, const QImage& source, QImage& target)
 	{
 		Concurrency::JobList<ResultType> jobs;
 		
@@ -64,14 +64,14 @@ struct HorizontalStripes
 			// would detach, and the output would not reach the original target.
 			// That's why we build the stripes inside the concurrent job where
 			// it is going to be used, by using the following wrapper.
-			auto runner = [](const Functor& functor, InplaceStripeData& data, ProgressObserver& observer) -> ResultType {
+			auto runner = [](Functor&& functor, InplaceStripeData& data, ProgressObserver& observer) -> ResultType {
 				auto const input = HorizontalStripes::makeStripe(data.source, data.source_scanline, data.source_height);
 				auto output = HorizontalStripes::makeStripe(data.target, data.target_scanline, data.target_height);
 				return functor(input, output, observer);
 			};
 			// Only a limited number of parameters can be passed to QtConcurrent::run.
 			auto data = InplaceStripeData { source, i, source_stripe_height, target, j, output_stripe_height };
-			jobs.emplace_back(Concurrency::run<ResultType>(runner, functor, data));
+			jobs.emplace_back(Concurrency::run<ResultType>(runner, std::move<Functor>(functor), data));
 		}
 		
 		return jobs;

@@ -18,7 +18,7 @@
 #include <QLatin1Char>
 #include <QLatin1String>
 #include <QLineF>
-#include <QStringRef>
+#include <QStringView>
 
 #include "util/xml_stream_util.h"
 
@@ -379,14 +379,14 @@ QByteArray MapCoord::toUtf8(MapCoord::StringBuffer<char>& buffer) const
 	return QByteArray::fromRawData(&*(first+1), int(std::distance(first, last)));
 }
 
-MapCoord::MapCoord(QStringRef& text)
+MapCoord::MapCoord(QStringView& text)
 : MapCoord{}
 {
 	const int len = text.length();
 	if (Q_UNLIKELY(len < 2))
 		throw std::invalid_argument("Premature end of data");
 	
-	auto const* data = text.constData();
+	auto const* data = text.data();
 	int i = 0;
 	
 	auto const is_whitespace = [](QChar const c) {
