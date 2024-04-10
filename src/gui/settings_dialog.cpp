@@ -45,7 +45,6 @@
 #include "gui/widgets/general_settings_page.h"
 #include "gui/widgets/paint_on_template_settings_page.h"
 #include "gui/widgets/settings_page.h"
-#include "util/backports.h" // IWYU pragma: keep
 
 #ifdef MAPPER_USE_GDAL
 #  include "gdal/gdal_settings_page.h"

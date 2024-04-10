@@ -53,7 +53,6 @@
 #include "gui/widgets/toast.h"
 #include "undo/undo_manager.h"
 #include "util/util.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/mapper_service_proxy.h"
 
 

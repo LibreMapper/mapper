@@ -23,7 +23,6 @@
 #include "gui/file_dialog.h"
 #include "gui/util_gui.h"
 #include "gui/symbols/symbol_setting_dialog.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 namespace LibreMapper {
 

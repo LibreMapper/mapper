@@ -36,7 +36,6 @@
 
 #include "core/map.h"
 #include "gui/util_gui.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 
 namespace LibreMapper {

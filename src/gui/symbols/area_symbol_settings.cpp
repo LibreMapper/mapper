@@ -42,7 +42,6 @@
 #include "gui/symbols/symbol_setting_dialog.h"
 #include "gui/widgets/color_dropdown.h"
 #include "gui/util_gui.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/scoped_signals_blocker.h"
 
 

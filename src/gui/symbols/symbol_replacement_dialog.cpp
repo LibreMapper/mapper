@@ -62,7 +62,6 @@
 #include "gui/util_gui.h"
 #include "gui/symbols/symbol_replacement.h"
 #include "gui/widgets/symbol_dropdown.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 // IWYU pragma: no_forward_declare QColor
 // IWYU pragma: no_forward_declare QFormLayout

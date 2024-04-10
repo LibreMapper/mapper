@@ -18,7 +18,6 @@
 #include <QStyleOptionMenuItem>
 
 #include "settings.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 
 namespace LibreMapper {

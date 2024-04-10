@@ -16,8 +16,6 @@
 #include <QSignalMapper>
 #include <QVBoxLayout>
 
-#include "util/backports.h"  // IWYU pragma: keep
-
 
 namespace LibreMapper {
 

@@ -45,7 +45,6 @@ Q_DECLARE_METATYPE(QGeoPositionInfo)  // QTBUG-65937
 #include "gui/util_gui.h"
 #include "gui/map/map_widget.h"
 #include "sensors/compass.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 #if defined(MAPPER_USE_FAKE_POSITION_PLUGIN)
 #include "sensors/fake_position_source.h"

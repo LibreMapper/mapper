@@ -15,7 +15,6 @@
 #include <QSpinBox>
 #include <QTextDocument>
 
-#include "util/backports.h"  // IWYU pragma: keep
 #include "gui/util_gui.h"
 
 

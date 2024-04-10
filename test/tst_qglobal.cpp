@@ -25,8 +25,6 @@
 #include <QByteArray>
 #include <QString>
 
-#include "util/backports.h"  // IWYU pragma: keep
-
 
 // clazy:excludeall=function-args-by-ref
 struct Overloaded

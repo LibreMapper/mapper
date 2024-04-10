@@ -56,7 +56,6 @@
 #include "sensors/gps_temporary_markers.h"
 #include "templates/template.h"
 #include "tools/tool.h"
-#include "util/backports.h" // IWYU pragma: keep
 #include "util/util.h"
 
 class QGesture;

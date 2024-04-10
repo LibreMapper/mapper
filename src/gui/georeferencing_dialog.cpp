@@ -68,7 +68,6 @@
 #include "gui/map/stretch_map_dialog.h"
 #include "gui/widgets/crs_selector.h"
 #include "gui/util_gui.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/scoped_signals_blocker.h"
 
 

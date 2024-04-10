@@ -17,7 +17,6 @@
 #include <QVBoxLayout>
 
 #include "gui/widgets/text_browser.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 
 namespace LibreMapper {

@@ -35,7 +35,6 @@
 #include "gui/symbols/point_symbol_editor_widget.h"
 #include "gui/symbols/symbol_setting_dialog.h"
 #include "gui/widgets/color_dropdown.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/util.h"
 
 
