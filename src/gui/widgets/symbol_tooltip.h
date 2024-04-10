@@ -96,7 +96,7 @@ protected:
 	 * Hides the tooltip when the mouse enters it.
 	 * This is necessary to let the user select another symbol.
 	 */
-	void enterEvent(QEvent* event) override;
+	void enterEvent(QEnterEvent* event) override;
 	
 	/**
 	 * Enables the shortcut when the tooltip is shown.

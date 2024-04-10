@@ -42,7 +42,7 @@ public:
 	/**
 	 * Returns the current value.
 	 */
-	QStringRef value() const;
+	QStringView value() const;
 	
 	/**
 	 * Returns true if there is no more data.

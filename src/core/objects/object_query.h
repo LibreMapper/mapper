@@ -14,7 +14,7 @@
 #include <QCoreApplication>
 #include <QMetaType>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 
 namespace LibreMapper {
 
@@ -278,8 +278,8 @@ private:
 	const Symbol* findSymbol(const QString& key) const;
 	
 	const Map* map = nullptr;
-	QStringRef input;
-	QStringRef token_text;
+	QStringView input;
+	QStringView token_text;
 	TokenType token;
 	int token_start = -1;
 	int pos;

@@ -32,7 +32,7 @@
 #include <QRect>
 #include <QSaveFile>
 #include <QSize>
-#include <QStringRef>
+#include <QStringView>
 #include <QTransform>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>

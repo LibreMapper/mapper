@@ -12,8 +12,8 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QRegExp>
-#include <QRegExpValidator>
+#include <QRegularExpression>
+#include <QRegularExpressionValidator>
 #include <QStringList>
 #include <QVariant>
 
@@ -52,11 +52,11 @@ UTMZoneEdit::UTMZoneEdit(CRSParameterWidgetObserver& observer, QWidget* parent)
  : QWidget(parent)
  , observer(observer)
 {
-	auto const zone_regexp = QRegExp(QString::fromLatin1("(?:[0-5]?[1-9]|[1-6]0)(?: [NS])?"));
+	auto const zone_RegularExpression = QRegularExpression(QString::fromLatin1("(?:[0-5]?[1-9]|[1-6]0)(?: [NS])?"));
 	auto const zone_list = makeZoneList();
 	
 	line_edit = new QLineEdit();
-	line_edit->setValidator(new QRegExpValidator(zone_regexp, line_edit));
+	line_edit->setValidator(new QRegularExpressionValidator(zone_RegularExpression, line_edit));
 	auto* completer = new QCompleter(zone_list, line_edit);
 	completer->setMaxVisibleItems(4);
 	line_edit->setCompleter(completer);
@@ -66,7 +66,7 @@ UTMZoneEdit::UTMZoneEdit(CRSParameterWidgetObserver& observer, QWidget* parent)
 	connect(button, &QAbstractButton::clicked, this, &UTMZoneEdit::calculateValue);
 	
 	auto* layout = new QHBoxLayout();
-	layout->setMargin(0);
+	layout->setContentsMargins({});
 	layout->addWidget(line_edit, 1);
 	layout->addWidget(button, 0);
 	setLayout(layout);

@@ -22,7 +22,6 @@
 class QByteArray;
 class QPainter;
 class QRectF;
-class QStringList;
 class QTransform;
 class QWidget;
 

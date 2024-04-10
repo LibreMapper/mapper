@@ -64,7 +64,7 @@ protected:
 private:
 	void emitAzimuthChanged(float value);
 	
-	std::unique_ptr<CompassPrivate> p;
+	CompassPrivate* p = nullptr; // review - can we indeed use std::unique_ptr<T> in declaration of T or not?
 	int reference_counter = 0;
 };
 

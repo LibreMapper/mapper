@@ -25,7 +25,7 @@
 #include <QScreen>
 #include <QSettings>
 #include <QStringList>
-#include <QStringRef>
+#include <QStringView>
 #include <QVector>
 
 
@@ -393,7 +393,7 @@ void Settings::setNmeaSerialPort(const QString& name)
 
 std::vector<QColor> Settings::colorsStringToVector(QString config_string)
 {
-	auto const color_strings = config_string.splitRef(QLatin1Char(','));
+	auto const color_strings = QStringView{config_string}.split(QLatin1Char(','));
 
 	auto colors = std::vector<QColor>();
 	colors.reserve(color_strings.size());

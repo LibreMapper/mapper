@@ -1,9 +1,3 @@
-/****************************************************************************
-**
-** Copyright (C) 2016 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-****************************************************************************/
 /**
  * Copyright 2015 Kai Pastor (OpenOrienteering)
  *
@@ -12,8 +6,7 @@
  * This is a modified version of a file from the Qt Toolkit.
  * You can redistribute it and/or modify it under the terms of
  * the GNU General Public License, version 3, as published by
- * the Free Software Foundation, or any later version approved
- * by the KDE Free Qt Foundation
+ * the Free Software Foundation.
  *
  * OpenOrienteering is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,7 +15,21 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
+ *
+ * Changes:
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
+ * - Adjustment of legal information
+ * - Modifications required for separate compilation:
+ *   - Renaming of selected files, classes, members and macros
+ *   - Adjustment of include statements
+ *   - Removal of Q_XXX_EXPORT
  */
+/****************************************************************************
+**
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
+**
+****************************************************************************/
 
 #ifndef PRINTENGINE_ADVANCED_PDF_P_H
 #define PRINTENGINE_ADVANCED_PDF_P_H
@@ -41,13 +48,11 @@
 #include "QtPrintSupport/qprintengine.h"
 
 #ifndef QT_NO_PRINTER
+#include "QtCore/qdatastream.h"
 #include "QtCore/qmap.h"
-#include "QtGui/qmatrix.h"
 #include "QtCore/qstring.h"
-#include "QtCore/qvector.h"
 #include "QtGui/qpaintengine.h"
 #include "QtGui/qpainterpath.h"
-#include "QtCore/qdatastream.h"
 
 #include <private/qfontengine_p.h>
 #include "advanced_pdf_p.h"
@@ -71,7 +76,7 @@ class AdvancedPdfPrintEngine : public AdvancedPdfEngine, public QPrintEngine
     Q_DECLARE_PRIVATE(AdvancedPdfPrintEngine)
 public:
     AdvancedPdfPrintEngine(QPrinter::PrinterMode m, AdvancedPdfEngine::PdfVersion version = AdvancedPdfEngine::Version_1_4);
-    ~AdvancedPdfPrintEngine() override;
+    virtual ~AdvancedPdfPrintEngine();
 
     // reimplementations QPaintEngine
     bool begin(QPaintDevice *pdev) override;
@@ -84,8 +89,8 @@ public:
 
     bool newPage() override;
     int metric(QPaintDevice::PaintDeviceMetric) const override;
-    void setProperty(PrintEnginePropertyKey key, const QVariant &value) override;
-    QVariant property(PrintEnginePropertyKey key) const override;
+    virtual void setProperty(PrintEnginePropertyKey key, const QVariant &value) override;
+    virtual QVariant property(PrintEnginePropertyKey key) const override;
     // end reimplementations QPrintEngine
 
     QPrinter::PrinterState state;
@@ -102,7 +107,7 @@ class AdvancedPdfPrintEnginePrivate : public AdvancedPdfEnginePrivate
     Q_DECLARE_PUBLIC(AdvancedPdfPrintEngine)
 public:
     AdvancedPdfPrintEnginePrivate(QPrinter::PrinterMode m);
-    ~AdvancedPdfPrintEnginePrivate() override;
+    ~AdvancedPdfPrintEnginePrivate();
 
     virtual bool openPrintDevice();
     virtual void closePrintDevice();

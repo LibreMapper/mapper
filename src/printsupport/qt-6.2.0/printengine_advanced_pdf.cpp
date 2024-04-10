@@ -1,9 +1,3 @@
-/****************************************************************************
-**
-** Copyright (C) 2016 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-****************************************************************************/
 /**
  * Copyright 2015 Kai Pastor (OpenOrienteering)
  *
@@ -12,8 +6,7 @@
  * This is a modified version of a file from the Qt Toolkit.
  * You can redistribute it and/or modify it under the terms of
  * the GNU General Public License, version 3, as published by
- * the Free Software Foundation, or any later version approved
- * by the KDE Free Qt Foundation
+ * the Free Software Foundation.
  *
  * OpenOrienteering is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,7 +15,21 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
+ *
+ * Changes:
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
+ * - Adjustment of legal information
+ * - Modifications required for separate compilation:
+ *   - Renaming of selected files, classes, members and macros
+ *   - Adjustment of include statements
+ *   - Removal of Q_XXX_EXPORT
  */
+/****************************************************************************
+**
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
+**
+****************************************************************************/
 
 #include "printengine_advanced_pdf_p.h"
 
@@ -204,19 +211,19 @@ void AdvancedPdfPrintEngine::setProperty(PrintEnginePropertyKey key, const QVari
         break;
     }
     case PPK_QPageSize: {
-        QPageSize pageSize = value.value<QPageSize>();
+        QPageSize pageSize = qvariant_cast<QPageSize>(value);
         if (pageSize.isValid())
             d->m_pageLayout.setPageSize(pageSize);
         break;
     }
     case PPK_QPageMargins: {
-        QPair<QMarginsF, QPageLayout::Unit> pair = value.value<QPair<QMarginsF, QPageLayout::Unit> >();
+        QPair<QMarginsF, QPageLayout::Unit> pair = qvariant_cast<QPair<QMarginsF, QPageLayout::Unit> >(value);
         d->m_pageLayout.setUnits(pair.second);
         d->m_pageLayout.setMargins(pair.first);
         break;
     }
     case PPK_QPageLayout: {
-        QPageLayout pageLayout = value.value<QPageLayout>();
+        QPageLayout pageLayout = qvariant_cast<QPageLayout>(value);
         if (pageLayout.isValid())
             d->m_pageLayout = pageLayout;
         break;

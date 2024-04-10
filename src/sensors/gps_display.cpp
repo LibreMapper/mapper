@@ -382,6 +382,8 @@ void GPSDisplay::positionUpdated(const QGeoPositionInfo& info)
 	}
 	
 	updateMapWidget();
+#else
+	Q_UNUSED(info)
 #endif
 }
 

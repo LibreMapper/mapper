@@ -101,7 +101,7 @@ QString FileFormat::fixupExtension(QString filepath) const
 		using std::begin; using std::end;
 		auto const has_extension = std::any_of(begin(extensions), end(extensions), [&filepath](const auto& extension) {
 			return filepath.endsWith(extension, Qt::CaseInsensitive)
-			        && filepath.midRef(filepath.length() - extension.length() - 1, 1) == QLatin1String(".");
+			        && QStringView{filepath}.mid(filepath.length() - extension.length() - 1, 1) == QLatin1String(".");
 		});
 		if (!has_extension)
 		{

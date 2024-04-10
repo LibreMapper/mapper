@@ -5,14 +5,12 @@
 #
 # This file is part of LibreMapper.
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Widgets REQUIRED)
+find_package(Qt6 CONFIG REQUIRED COMPONENTS Core Widgets Core5Compat)
 
 if(ANDROID)
-	find_package(Qt5AndroidExtras REQUIRED)
+	find_package(Qt6 CONFIG REQUIRED COMPONENTS AndroidExtras)
 else()
-	find_package(Qt5Network REQUIRED)
-	find_package(Qt5PrintSupport REQUIRED)
+	find_package(Qt6 CONFIG REQUIRED COMPONENTS Network PrintSupport)
 endif()
 
 set(CMAKE_AUTOMOC ON)
@@ -49,7 +47,7 @@ set(SCALING_ICON_ENGINE_DEFINITIONS
 )
 set(SCALING_ICON_ENGINE_LINK_LIBRARIES
   PUBLIC
-    Qt5::Gui
+    Qt6::Gui
 )
 
 add_library(scaling-icon-engine STATIC  ${SCALING_ICON_ENGINE_SOURCES})
@@ -60,7 +58,7 @@ target_link_libraries(scaling-icon-engine  ${SCALING_ICON_ENGINE_LINK_LIBRARIES}
 # Resources (from project root)
 
 list(APPEND Mapper_RESOURCES "${PROJECT_SOURCE_DIR}/resources.qrc")
-qt5_add_resources(Mapper_RESOURCES_RCC ${Mapper_RESOURCES} OPTIONS -no-compress)
+qt6_add_resources(Mapper_RESOURCES_RCC ${Mapper_RESOURCES} OPTIONS -no-compress)
 
 
 # Mapper common: static library of full runtime 
@@ -290,7 +288,8 @@ add_dependencies(Mapper_Common
 target_link_libraries(Mapper_Common
   Polyclipping::Polyclipping
   ${PROJ_LIBRARIES}
-  Qt5::Widgets
+  Qt::Widgets
+  Qt::Core5Compat
 )
 foreach(lib
   cove
@@ -299,8 +298,8 @@ foreach(lib
   mapper-sensors
   printsupport
   scaling-icon-engine
-  Qt5::AndroidExtras
-  Qt5::Network
+  Qt6::AndroidExtras
+  Qt6::Network
 )
 	if(TARGET ${lib})
 		target_link_libraries(Mapper_Common ${lib})
@@ -383,13 +382,13 @@ if(WIN32)
 endif()
 foreach(module ${PRIVATE_MODULES})
 	set(qt_module Qt${module})
-	set(qt5_module Qt5${module})
-	if("${${qt5_module}_PRIVATE_INCLUDE_DIRS}" STREQUAL "")
-		foreach(base_dir ${${qt5_module}_INCLUDE_DIRS})
+	set(qt6_module Qt6${module})
+	if("${${qt6_module}_PRIVATE_INCLUDE_DIRS}" STREQUAL "")
+		foreach(base_dir ${${qt6_module}_INCLUDE_DIRS})
 			if("${base_dir}" MATCHES "/${qt_module}\$")
-				list(APPEND ${qt5_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt5_module}_VERSION}/${qt_module}")
+				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}/${qt_module}")
 			endif()
 		endforeach()
 	endif()
-	target_include_directories(Mapper_Common SYSTEM PRIVATE ${${qt5_module}_PRIVATE_INCLUDE_DIRS})
+	target_include_directories(Mapper_Common SYSTEM PRIVATE ${${qt6_module}_PRIVATE_INCLUDE_DIRS})
 endforeach()

@@ -150,7 +150,7 @@ protected slots:
 	void paperDimensionsChanged() const;
 	
 	/** This slot reacts to changes of the page orientation widget. */
-	void pageOrientationChanged(int id) const;
+	void pageOrientationChanged(QAbstractButton* button) const;
 	
 	/** This slot reacts to changes of the print area policy combobox. */
 	void printAreaPolicyChanged(int index);

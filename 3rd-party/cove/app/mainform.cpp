@@ -330,7 +330,8 @@ void mainForm::on_runClassificationButton_clicked()
 	auto classification = [](Vectorizer* v, ProgressObserver& o) -> bool {
 		return v->performClassification(&o);
 	};
-	Concurrency::process<bool>(&totalProgress, classification, vectorizerApp.get());
+//	Concurrency::process<bool>(&totalProgress, classification, vectorizerApp.get());
+	classification(vectorizerApp.get(), totalProgress);
 
 	auto colorsFound = vectorizerApp->getClassifiedColors();
 	setColorButtonsGroup(colorsFound);
@@ -818,7 +819,8 @@ void mainForm::on_applyFIRFilterPushButton_clicked()
 	auto functor = [&f](const QImage& source_image, ProgressObserver& progress_observer) -> QImage {
 		return f.apply(source_image, qRgb(127, 127, 127), &progress_observer);
 	};
-	QImage newImageBitmap = Concurrency::process<QImage>(&progressDialog, functor, imageBitmap);
+//	QImage newImageBitmap = Concurrency::process<QImage>(&progressDialog, functor, imageBitmap);
+	auto newImageBitmap = functor(imageBitmap, progressDialog);
 	if (!newImageBitmap.isNull()) imageBitmap = newImageBitmap;
 	ui.imageView->setImage(&imageBitmap);
 }

@@ -14,7 +14,7 @@
 #include <QDebug>
 #include <QLatin1String>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 #include <QXmlStreamAttributes>
 #include <QXmlStreamReader>
 

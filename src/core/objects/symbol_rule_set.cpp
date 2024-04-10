@@ -342,7 +342,7 @@ void SymbolRuleSet::writeCrt(QTextStream& stream) const
 			{
 				auto first_field = item.symbol->getNumberAsString();
 				auto whitespace = QString(qMax(1, 10-first_field.length()), QLatin1Char{' '});
-				stream <<  first_field << whitespace << second_field << endl;
+				stream <<  first_field << whitespace << second_field << Qt::endl;
 			}
 		}
 	}

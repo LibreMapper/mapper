@@ -15,7 +15,7 @@
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
  *
  * Changes:
- * 2015-10-18 Kai Pastor <dg0yt@darc.de>
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -24,8 +24,8 @@
  */
 /****************************************************************************
 **
-** Copyright (C) 2015 The Qt Company Ltd.
-** Contact: http://www.qt.io/licensing/
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
 **
 ****************************************************************************/
 
@@ -43,6 +43,7 @@
 // We mean it.
 //
 
+#include <QtGui/private/qtguiglobal_p.h>
 #include <private/qfontengine_p.h>
 
 QT_BEGIN_NAMESPACE
@@ -50,7 +51,7 @@ QT_BEGIN_NAMESPACE
 class QFontSubset
 {
 public:
-    explicit QFontSubset(QFontEngine *fe, int obj_id = 0)
+    explicit QFontSubset(QFontEngine *fe, uint obj_id = 0)
         : object_id(obj_id), noEmbed(false), fontEngine(fe), downloaded_glyphs(0), standard_font(false)
     {
         fontEngine->ref.ref();
@@ -67,22 +68,22 @@ public:
 #ifndef QT_NO_PDF
     QByteArray widthArray() const;
     QByteArray createToUnicodeMap() const;
-    QVector<int> getReverseMap() const;
-    QByteArray glyphName(unsigned int glyph, const QVector<int> &reverseMap) const;
+    QList<int> getReverseMap() const;
+    QByteArray glyphName(unsigned int glyph, const QList<int> &reverseMap) const;
 
     static QByteArray glyphName(unsigned short unicode, bool symbol);
 
-    int addGlyph(int index);
+    int addGlyph(uint index);
 #endif
-    const int object_id;
+    const uint object_id;
     bool noEmbed;
     QFontEngine *fontEngine;
-    QList<int> glyph_indices;
+    QList<uint> glyph_indices;
     mutable int downloaded_glyphs;
     mutable bool standard_font;
     int nGlyphs() const { return glyph_indices.size(); }
     mutable QFixed emSquare;
-    mutable QVector<QFixed> widths;
+    mutable QList<QFixed> widths;
 };
 
 QT_END_NAMESPACE

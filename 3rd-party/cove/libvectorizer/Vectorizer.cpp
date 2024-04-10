@@ -443,7 +443,8 @@ QImage Vectorizer::getClassifiedImage(double* qualityPtr,
 		km.setClasses(classes);
 
 		auto mapFunctor = ClassificationMapper(sourceImageColors, km);
-		auto results = Concurrency::process<double>(progressObserver, mapFunctor, sourceImage, classifiedImage);
+//		auto results = Concurrency::process<double>(progressObserver, mapFunctor, sourceImage, classifiedImage);
+		quality = mapFunctor(sourceImage, classifiedImage, *progressObserver);
 		if (progressObserver && progressObserver->isInterruptionRequested())
 		{
 			classifiedImage = QImage();
@@ -451,7 +452,7 @@ QImage Vectorizer::getClassifiedImage(double* qualityPtr,
 		}
 		else
 		{
-			quality = std::accumulate(begin(results), end(results), 0.0, [](auto a, auto& b) { return a + b.future.result(); });
+//			quality = std::accumulate(begin(results), end(results), 0.0, [](auto a, auto& b) { return a + b.future.result(); });
 		}
 	}
 
@@ -507,7 +508,8 @@ QImage Vectorizer::getBWImage(std::vector<bool> selectedColors,
 			QVector<QRgb>{QColor(Qt::white).rgb(), QColor(Qt::black).rgb()});
 
 		auto mapFunctor = BWMapper(std::move(selectedColors));
-		Concurrency::process(progressObserver, mapFunctor, classifiedImage, bwImage);
+//		Concurrency::process(progressObserver, mapFunctor, classifiedImage, bwImage);
+		mapFunctor(classifiedImage, bwImage, *progressObserver);
 		if (progressObserver && progressObserver->isInterruptionRequested())
 			bwImage = {};
 	}
@@ -561,7 +563,8 @@ QImage Vectorizer::getTransformedImage(const QImage& bwImage,
 			progressObserver.setPercentage(100);
 			return ok ? morphology.getImage() : QImage{};
 		};
-		outputImage = Concurrency::process<QImage>(progressObserver, functor, bwImage);
+//		outputImage = Concurrency::process<QImage>(progressObserver, functor, bwImage);
+		outputImage = functor(bwImage, *progressObserver);
 	}
 
 	return outputImage;

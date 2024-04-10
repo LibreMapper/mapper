@@ -19,7 +19,7 @@
 #include <QtGlobal>
 #include <QLatin1String>
 #include <QMessageBox>
-#include <QStringRef>
+#include <QStringView>
 #include <QXmlStreamReader>
 
 #include "core/map.h"

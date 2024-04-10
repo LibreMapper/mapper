@@ -1,9 +1,3 @@
-/****************************************************************************
-**
-** Copyright (C) 2016 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-****************************************************************************/
 /**
  * Copyright 2015 Kai Pastor (OpenOrienteering)
  *
@@ -12,8 +6,7 @@
  * This is a modified version of a file from the Qt Toolkit.
  * You can redistribute it and/or modify it under the terms of
  * the GNU General Public License, version 3, as published by
- * the Free Software Foundation, or any later version approved
- * by the KDE Free Qt Foundation
+ * the Free Software Foundation.
  *
  * OpenOrienteering is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,7 +15,22 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
+ *
+ * Changes:
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
+ * - Adjustment of legal information
+ * - Modifications required for separate compilation:
+ *   - Renaming of selected files, classes, members and macros
+ *   - Adjustment of include statements
+ *   - Removal of Q_XXX_EXPORT
+ *   - Distinct paint engine type
  */
+/****************************************************************************
+**
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
+**
+****************************************************************************/
 
 #ifndef ADVANCED_PDF_P_H
 #define ADVANCED_PDF_P_H
@@ -42,13 +50,12 @@
 
 #ifndef QT_NO_PDF
 
-#include "QtGui/qmatrix.h"
+#include "QtCore/qlist.h"
 #include "QtCore/qstring.h"
-#include "QtCore/qvector.h"
-#include <private/qstroker_p.h>
-#include <private/qpaintengine_p.h>
 #include <private/qfontengine_p.h>
 #include "private/qfontsubset_p.h"
+#include <private/qpaintengine_p.h>
+#include <private/qstroker_p.h>
 #include "qpagelayout.h"
 
 QT_BEGIN_NAMESPACE
@@ -74,6 +81,8 @@ namespace AdvancedPdf {
         ByteStream &operator <<(const ByteStream &src);
         ByteStream &operator <<(qreal val);
         ByteStream &operator <<(int val);
+        ByteStream &operator <<(uint val) { return (*this << int(val)); }
+        ByteStream &operator <<(qint64 val) { return (*this << int(val)); }
         ByteStream &operator <<(const QPointF &p);
         // Note that the stream may be invalidated by calls that insert data.
         QIODevice *stream();
@@ -135,13 +144,13 @@ class AdvancedPdfPage : public AdvancedPdf::ByteStream
 public:
     AdvancedPdfPage();
 
-    QVector<uint> images;
-    QVector<uint> graphicStates;
-    QVector<uint> patterns;
-    QVector<uint> fonts;
-    QVector<uint> annotations;
+    QList<uint> images;
+    QList<uint> graphicStates;
+    QList<uint> patterns;
+    QList<uint> fonts;
+    QList<uint> annotations;
 
-    void streamImage(int w, int h, int object);
+    void streamImage(int w, int h, uint object);
 
     QSize pageSize;
 private:
@@ -155,13 +164,7 @@ class AdvancedPdfEngine : public QPaintEngine
     Q_DECLARE_PRIVATE(AdvancedPdfEngine)
     friend class AdvancedPdfWriter;
 public:
-    static struct PaintEngineTypeStruct
-    {
-        constexpr operator QPaintEngine::Type() const {
-            return QPaintEngine::Type(QPaintEngine::User + 1);
-        }
-    } PaintEngineType;
-
+    // keep in sync with QPagedPaintDevice::PdfVersion and AdvancedPdfEnginePrivate::writeHeader()::mapping!
     enum PdfVersion
     {
         Version_1_4,
@@ -169,9 +172,16 @@ public:
         Version_1_6
     };
 
+    static struct PaintEngineTypeStruct
+    {
+        constexpr operator QPaintEngine::Type() const {
+            return QPaintEngine::Type(QPaintEngine::User + 1);
+        }
+    } PaintEngineType;
+
     AdvancedPdfEngine();
     AdvancedPdfEngine(AdvancedPdfEnginePrivate &d);
-    ~AdvancedPdfEngine() override {}
+    ~AdvancedPdfEngine() {}
 
     void setOutputFilename(const QString &filename);
 
@@ -179,6 +189,11 @@ public:
     int resolution() const;
 
     void setPdfVersion(PdfVersion version);
+
+    void setDocumentXmpMetadata(const QByteArray &xmpMetadata);
+    QByteArray documentXmpMetadata() const;
+
+    void addFileAttachment(const QString &fileName, const QByteArray &data, const QString &mimeType);
 
     // reimplementations QPaintEngine
     bool begin(QPaintDevice *pdev) override;
@@ -229,14 +244,14 @@ class AdvancedPdfEnginePrivate : public QPaintEnginePrivate
     Q_DECLARE_PUBLIC(AdvancedPdfEngine)
 public:
     AdvancedPdfEnginePrivate();
-    ~AdvancedPdfEnginePrivate() override;
+    ~AdvancedPdfEnginePrivate();
 
     inline uint requestObject() { return currentObject++; }
 
     void writeHeader();
     void writeTail();
 
-    int addImage(const QImage &image, bool *bitmap, qint64 serial_no);
+    int addImage(const QImage &image, bool *bitmap, bool lossless, qint64 serial_no);
     int addConstantAlphaObject(int brushAlpha, int penAlpha = 255);
     int addBrushPattern(const QTransform &matrix, bool *specifyColor, int *gStateObject);
 
@@ -254,7 +269,7 @@ public:
     QPointF brushOrigin;
     QBrush brush;
     QPen pen;
-    QVector<QPainterPath> clips;
+    QList<QPainterPath> clips;
     bool clipEnabled;
     bool allClipped;
     bool hasPen;
@@ -290,14 +305,15 @@ private:
     int createShadingFunction(const QGradient *gradient, int from, int to, bool reflect, bool alpha);
 
     void writeInfo();
-    int writeXmpMetaData();
+    int writeXmpDcumentMetaData();
     int writeOutputIntent();
     void writePageRoot();
+    void writeAttachmentRoot();
     void writeFonts();
     void embedFont(QFontSubset *font);
     qreal calcUserUnit() const;
 
-    QVector<int> xrefPositions;
+    QList<int> xrefPositions;
     QDataStream* stream;
     int streampos;
 
@@ -317,11 +333,22 @@ private:
     inline int writeCompressed(const QByteArray &data) { return writeCompressed(data.constData(), data.length()); }
     int writeCompressed(QIODevice *dev);
 
+    struct AttachmentInfo
+    {
+        AttachmentInfo (const QString &fileName, const QByteArray &data, const QString &mimeType)
+            : fileName(fileName), data(data), mimeType(mimeType) {}
+        QString fileName;
+        QByteArray data;
+        QString mimeType;
+    };
+
     // various PDF objects
-    int pageRoot, catalog, info, graphicsState, patternColorSpace;
-    QVector<uint> pages;
+    int pageRoot, embeddedfilesRoot, namesRoot, catalog, info, graphicsState, patternColorSpace;
+    QList<uint> pages;
     QHash<qint64, uint> imageCache;
     QHash<QPair<uint, uint>, uint > alphaCache;
+    QList<AttachmentInfo> fileCache;
+    QByteArray xmpDocumentMetadata;
 };
 
 QT_END_NAMESPACE

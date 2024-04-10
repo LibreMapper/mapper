@@ -38,7 +38,7 @@
 #include <QSize>
 #include <QSizeF>
 #include <QString>
-#include <QStringRef>
+#include <QStringView>
 #include <QTemporaryDir>
 #include <QVariant>
 
@@ -275,7 +275,7 @@ namespace
 			         expected.getCurrentPart()->findObjectIndex(expected.getFirstSelectedObject()));
 			if (actual.getCurrentPart()->getNumObjects() != expected.getCurrentPart()->getNumObjects())
 			{
-				for (auto object_index : qAsConst(actual.selectedObjects()))
+				for (auto object_index : std::as_const(actual.selectedObjects()))
 				{
 					QVERIFY(actual.isObjectSelected(actual.getCurrentPart()->getObject(expected.getCurrentPart()->findObjectIndex(object_index))));
 				}
@@ -581,7 +581,7 @@ void FileFormatTest::mapCoordFromString()
 	QFETCH(flags_type, flags);
 	
 	bool no_exception = true;
-	auto ref = QStringRef{&input};
+	auto ref = QStringView{input};
 	MapCoord coord;
 	try {
 		coord = MapCoord(ref);

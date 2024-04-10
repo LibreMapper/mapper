@@ -166,7 +166,7 @@ QString AboutDialog::about()
 	  QString::fromLatin1(APP_COPYRIGHT),   // %3
 	  tr("LibreMapper is based on OpenOrienteering Mapper."), // %4
 	  tr("A free software for drawing orienteering maps"), // %5
-	  QLatin1Literal(""),   // %6, placeholder for the website
+	  QLatin1String(""),   // %6, placeholder for the website
 	  tr("This program is free software: you can redistribute it "
 	     "and/or modify it under the terms of the "
 	     "<a %1>GNU General Public License (GPL), version&nbsp;3</a>, "

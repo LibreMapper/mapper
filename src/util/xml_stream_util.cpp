@@ -227,7 +227,7 @@ void XmlElementReader::read(MapCoordVector& coords)
 			}
 			else if (token == QXmlStreamReader::Characters && !xml.isWhitespace())
 			{
-				QStringRef text = xml.text();
+				auto text = xml.text();
 				try
 				{
 					while (text.length())
@@ -290,7 +290,7 @@ void XmlElementReader::readForText(MapCoordVector& coords)
 			}
 			else if (token == QXmlStreamReader::Characters && !xml.isWhitespace())
 			{
-				QStringRef text = xml.text();
+				QStringView text = xml.text();
 				try
 				{
 					while (text.length())

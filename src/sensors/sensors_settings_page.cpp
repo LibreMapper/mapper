@@ -34,9 +34,9 @@ namespace LibreMapper {
 SensorsSettingsPage::SensorsSettingsPage(QWidget* parent)
 : SettingsPage(parent)
 {
-	auto* form_layout = new QFormLayout(this);
-	
 #ifdef QT_POSITIONING_LIB
+	auto* form_layout = new QFormLayout(this);
+
 	form_layout->addRow(Util::Headline::create(tr("Location:")));
 	
 	position_source_box = new QComboBox();
@@ -54,6 +54,8 @@ SensorsSettingsPage::SensorsSettingsPage(QWidget* parent)
 #endif
 	
 	form_layout->addItem(Util::SpacerItem::create(this));
+#else
+	Q_UNUSED(parent)
 #endif
 	
 	updateWidgets();

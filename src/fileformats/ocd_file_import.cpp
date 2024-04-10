@@ -35,7 +35,6 @@
 #include <QPointF>
 #include <QStringRef>
 #include <QTextCodec>
-#include <QTextDecoder>
 #include <QVariant>
 #include <QDateTime>
 
@@ -162,11 +161,8 @@ QString OcdFileImport::convertOcdString(const QChar* src, uint maxlen) const
 			--maxlen;
 		}
 	}
-	/// \todo Create and use static decoder
-	QTextCodec* utf16 = QTextCodec::codecForName("UTF-16LE");
-	FILEFORMAT_ASSERT(utf16);
-	auto decoder = std::unique_ptr<QTextDecoder>(utf16->makeDecoder(QTextCodec::ConvertInvalidToNull));
-	return decoder->toUnicode(reinterpret_cast<const char*>(src), 2*int(last - src));
+	auto decoder = std::make_unique<QStringDecoder>(QStringDecoder::Utf16LE);
+	return decoder->decode(QByteArray(reinterpret_cast<const char*>(src), 2*int(last - src)));
 }
 
 
@@ -352,7 +348,7 @@ void OcdFileImport::importGeoreferencing(const OcdFile< F >& file)
 
 namespace {
 
-void tryParamConvert(int& out, const QStringRef& param_value)
+void tryParamConvert(int& out, QStringView param_value)
 {
 	bool ok;
 	auto value = qRound(param_value.toFloat(&ok));
@@ -377,7 +373,7 @@ void OcdFileImport::importGeoreferencing(const QString& param_string)
 	while (parameters.readNext())
 	{
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'm':
@@ -563,7 +559,7 @@ void OcdFileImport::importSpotColor(const QString& param_string)
 	{
 		float f_value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'n':
@@ -628,7 +624,7 @@ void OcdFileImport::importColor(const QString& param_string)
 	bool number_ok = false;
 	MapColorCmyk cmyk { 0.0, 0.0, 0.0, 0.0 };
 	bool overprinting = false;
-	QStringRef ocd_blend;
+	QStringView ocd_blend;
 	float opacity = 1.0f;
 	
 	SpotColorComponents components;
@@ -639,7 +635,7 @@ void OcdFileImport::importColor(const QString& param_string)
 		float f_value;
 		int i_value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'n':
@@ -891,7 +887,7 @@ void OcdFileImport::importTemplate(const QString& param_string)
 	{
 		double value;
 		bool ok;
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'x':
@@ -1021,7 +1017,7 @@ void OcdFileImport::importView(const QString& param_string)
 	
 	while (parameters.readNext())
 	{
-		QStringRef param_value = parameters.value();
+		auto param_value = parameters.value();
 		switch (parameters.key())
 		{
 		case 'x':

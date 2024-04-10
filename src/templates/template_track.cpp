@@ -28,7 +28,7 @@
 #include <QRect>
 #include <QRgb>
 #include <QSize>
-#include <QStringRef>
+#include <QStringView>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 

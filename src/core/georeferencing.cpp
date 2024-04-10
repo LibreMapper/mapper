@@ -24,7 +24,7 @@
 #include <QPoint>
 #include <QSignalBlocker>
 #include <QStandardPaths> // IWYU pragma: keep
-#include <QStringRef>
+#include <QStringView>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 

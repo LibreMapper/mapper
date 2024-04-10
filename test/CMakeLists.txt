@@ -5,12 +5,8 @@
 # This file is part of LibreMapper.
 
 
-find_package(Qt5Network REQUIRED)
-find_package(Qt5PrintSupport REQUIRED)
-find_package(Qt5Test REQUIRED)
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5Positioning)
-find_package(Qt5Sensors)
+find_package(Qt6 CONFIG COMPONENTS REQUIRED Network PrintSupport Test Widgets Core5Compat)
+find_package(Qt6 CONFIG COMPONENTS Positioning Sensors)
 
 set(CMAKE_AUTOMOC ON)
 
@@ -54,12 +50,13 @@ function(add_test_helper testname autorun)
 	add_executable(${testname} ${testname}.cpp ${TEST_${testname}_SRCS})
 	target_link_libraries(${testname} PRIVATE
 	  ${PROJ_LIBRARIES}
-	  Qt5::Test
-	  Qt5::Gui
+	  Qt::Test
+	  Qt::Gui
+	  Qt::Core5Compat
 	  Polyclipping::Polyclipping
 	)
 	if("${ARGN}" MATCHES "crs_template_implementation")
-		target_link_libraries(${testname} PRIVATE Qt5::Widgets)
+		target_link_libraries(${testname} PRIVATE Qt::Widgets)
 	endif()
 	if(NOT manual_test)
 		configure_file(TESTNAME-RUN.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/${testname}-RUN.cmake @ONLY)
@@ -114,7 +111,7 @@ function(add_system_test testname)
 	add_test_helper("${testname}" ${Mapper_AUTORUN_SYSTEM_TESTS} ${ARGN})
 	target_link_libraries(${testname} PRIVATE
 	  Mapper_Common
-	  Qt5::Widgets
+	  Qt6::Widgets
 	)
 endfunction()
 
@@ -197,7 +194,7 @@ add_system_test(undo_manager_t)
 if(TARGET mapper-sensors)
 	add_system_test(sensors_t)
 	target_link_libraries(sensors_t  PRIVATE mapper-sensors)
-	foreach(lib Qt5::Positioning Qt5::Sensors)
+	foreach(lib Qt6::Positioning Qt6::Sensors)
 		if(TARGET ${lib})
 			target_link_libraries(sensors_t  PRIVATE ${lib})
 		endif()

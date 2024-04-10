@@ -645,7 +645,7 @@ void DrawRectangleTool::updateRectangle()
 					QLineF a(QPointF(preview_path->getCoordinate(cur_point_index - 1)), MapCoordF(preview_path->getCoordinate(cur_point_index - 1)) + forward_vector);
 					QLineF b(QPointF(preview_path->getCoordinate(i)), MapCoordF(preview_path->getCoordinate(i)) + rotated_direction);
 					QPointF intersection_point;
-					QLineF::IntersectType intersection_type = a.intersect(b, &intersection_point);
+					QLineF::IntersectType intersection_type = a.intersects(b, &intersection_point);
 					if (intersection_type == QLineF::NoIntersection)
 						continue;
 					

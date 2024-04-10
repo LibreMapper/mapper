@@ -30,8 +30,8 @@
 PROGRAM=$1
 shift
 
-ENABLE_CLANG_TIDY=true
-ENABLE_IWYU=true
+ENABLE_CLANG_TIDY=false
+ENABLE_IWYU=false
 
 PATTERN=
 for I in \

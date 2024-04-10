@@ -124,7 +124,7 @@ void GdalSettingsPage::apply()
 			manager.setParameterValue(key, value.trimmed());
 		}
 	}
-	for (const auto& key : qAsConst(old_parameters))
+	for (const auto& key : std::as_const(old_parameters))
 	{
 		if (!new_parameters.contains(key))
 		{
@@ -156,7 +156,7 @@ void GdalSettingsPage::updateWidgets()
 	
 	QSignalBlocker block(parameters);
 	auto row = 0;
-	for (const auto& item : qAsConst(options))
+	for (const auto& item : std::as_const(options))
 	{
 		auto key_item = new QTableWidgetItem(item);
 		parameters->setItem(row, 0, key_item);

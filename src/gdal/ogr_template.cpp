@@ -22,7 +22,7 @@
 #include <QPoint>
 #include <QPointF>
 #include <QRectF>
-#include <QStringRef>
+#include <QStringView>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 

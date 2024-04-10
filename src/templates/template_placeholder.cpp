@@ -13,7 +13,7 @@
 #include <QByteArray>
 #include <QList>
 #include <QRectF>
-#include <QStringRef>
+#include <QStringView>
 #include <QVariant>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>

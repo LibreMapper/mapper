@@ -1,0 +1,4 @@
+producer.diff -p0
+devicecmyk.diff -p0
+enginetype.diff -p0
+reference_qpdf_resources.diff -p0

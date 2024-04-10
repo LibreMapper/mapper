@@ -13,6 +13,7 @@
 #include <QtGlobal>
 #include <QStandardPaths>
 #include <QStringList>
+#include <QStringView>
 #include <QTemporaryFile>
 
 
@@ -142,7 +143,7 @@ std::vector<QString> getLegacySecondaryStorage(const QString& primary_storage, c
 		if (index < 0)
 			continue;
 		
-		result.push_back(dir.leftRef(index) + QLatin1String("OOMapper"));
+		result.push_back(QStringView{dir}.left(index) + QLatin1String("OOMapper"));
 	}
 	return result;
 }
@@ -221,7 +222,7 @@ std::vector<StorageLocation> knownLocations()
 	if (!env_secondary_storage.isEmpty())
 	{
 		// Mapper legacy approach, API level < 19
-		const auto paths = env_secondary_storage.splitRef(QLatin1Char{';'});
+		const auto paths = QStringView{env_secondary_storage}.split(QLatin1Char{';'});
 		secondary_storage_paths.reserve(std::size_t(paths.size()));
 		for (const auto& path : paths)
 			secondary_storage_paths.emplace_back(path + QLatin1String("/OOMapper"));

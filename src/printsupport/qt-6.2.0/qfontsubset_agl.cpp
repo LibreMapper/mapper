@@ -15,7 +15,7 @@
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
  *
  * Changes:
- * 2015-10-18 Kai Pastor <dg0yt@darc.de>
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -24,8 +24,8 @@
  */
 /****************************************************************************
 **
-** Copyright (C) 2015 The Qt Company Ltd.
-** Contact: http://www.qt.io/licensing/
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
 **
 ****************************************************************************/
 

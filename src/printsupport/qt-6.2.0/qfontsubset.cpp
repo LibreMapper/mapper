@@ -15,7 +15,7 @@
  * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
  *
  * Changes:
- * 2015-10-18 Kai Pastor <dg0yt@darc.de>
+ * 2021-10-11 Kai Pastor <dg0yt@darc.de>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -24,8 +24,8 @@
  */
 /****************************************************************************
 **
-** Copyright (C) 2015 The Qt Company Ltd.
-** Contact: http://www.qt.io/licensing/
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
 **
 ****************************************************************************/
 
@@ -40,6 +40,8 @@
 #include <algorithm>
 
 QT_BEGIN_NAMESPACE
+
+#ifndef QT_NO_PDF
 
 // This map is used for symbol fonts to get the correct glyph names for the latin range
 static const unsigned short symbol_map[0x100] = {
@@ -82,7 +84,7 @@ static const unsigned short symbol_map[0x100] = {
 
 // ---------------------------- PS/PDF helper methods -----------------------------------
 
-#ifndef QT_NO_PDF
+
 
 QByteArray QFontSubset::glyphName(unsigned short unicode, bool symbol)
 {
@@ -102,7 +104,7 @@ QByteArray QFontSubset::glyphName(unsigned short unicode, bool symbol)
     return buffer;
 }
 
-QByteArray QFontSubset::glyphName(unsigned int glyph, const QVector<int> &reverseMap) const
+QByteArray QFontSubset::glyphName(unsigned int glyph, const QList<int> &reverseMap) const
 {
     uint glyphIndex = glyph_indices[glyph];
 
@@ -128,7 +130,7 @@ QByteArray QFontSubset::widthArray() const
 
     QByteArray width;
     AdvancedPdf::ByteStream s(&width);
-    QFixed scale = QFixed(1000)/emSquare;
+    const qreal scale = 1000.0/emSquare.toInt();
 
     QFixed defWidth = widths[0];
     //qDebug("defWidth=%d, scale=%f", defWidth.toInt(), scale.toReal());
@@ -137,7 +139,7 @@ QByteArray QFontSubset::widthArray() const
             defWidth = 0;
     }
     if (defWidth > 0) {
-        s << "/DW " << (defWidth*scale).toInt();
+        s << "/DW " << qRound(defWidth.toInt() * scale);
     } else {
         s << "/W [";
         for (int g = 0; g < nGlyphs();) {
@@ -166,11 +168,11 @@ QByteArray QFontSubset::widthArray() const
             if (endnonlinear > start) {
                 s << start << '[';
                 for (int i = start; i < endnonlinear; ++i)
-                    s << (widths[i]*scale).toInt();
+                    s << qRound(widths[i].toInt() * scale);
                 s << "]\n";
             }
             if (startLinear)
-                s << startLinear << g - 1 << (widths[startLinear]*scale).toInt() << '\n';
+                s << startLinear << g - 1 << qRound(widths[startLinear].toInt() * scale) << '\n';
         }
         s << "]\n";
     }
@@ -187,11 +189,11 @@ static void checkRanges(AdvancedPdf::ByteStream &ts, QByteArray &ranges, int &nr
     }
 }
 
-QVector<int> QFontSubset::getReverseMap() const
+QList<int> QFontSubset::getReverseMap() const
 {
-    QVector<int> reverseMap(0x10000, 0);
+    QList<int> reverseMap(0x10000, 0);
     for (uint uc = 0; uc < 0x10000; ++uc) {
-        int idx = glyph_indices.indexOf(fontEngine->glyphIndex(uc));
+        auto idx = glyph_indices.indexOf(fontEngine->glyphIndex(uc));
         if (idx >= 0 && !reverseMap.at(idx))
             reverseMap[idx] = uc;
     }
@@ -200,7 +202,7 @@ QVector<int> QFontSubset::getReverseMap() const
 
 QByteArray QFontSubset::createToUnicodeMap() const
 {
-    QVector<int> reverseMap = getReverseMap();
+    QList<int> reverseMap = getReverseMap();
 
     QByteArray touc;
     AdvancedPdf::ByteStream ts(&touc);
@@ -290,14 +292,14 @@ QByteArray QFontSubset::createToUnicodeMap() const
     return touc;
 }
 
-int QFontSubset::addGlyph(int index)
+int QFontSubset::addGlyph(uint index)
 {
-    int idx = glyph_indices.indexOf(index);
+    qsizetype idx = glyph_indices.indexOf(index);
     if (idx < 0) {
         idx = glyph_indices.size();
         glyph_indices.append(index);
     }
-    return idx;
+    return (int)idx;
 }
 
 #endif // QT_NO_PDF
@@ -333,7 +335,7 @@ struct QTtfTable {
     Tag tag;
     QByteArray data;
 };
-Q_DECLARE_TYPEINFO(QTtfTable, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(QTtfTable, Q_RELOCATABLE_TYPE);
 
 
 struct qttf_head_table {
@@ -348,6 +350,7 @@ struct qttf_head_table {
     quint16 macStyle;
     qint16 indexToLocFormat;
 };
+Q_DECLARE_TYPEINFO(qttf_head_table, Q_PRIMITIVE_TYPE);
 
 
 struct qttf_hhea_table {
@@ -360,6 +363,7 @@ struct qttf_hhea_table {
     qint16 xMaxExtent;
     quint16 numberOfHMetrics;
 };
+Q_DECLARE_TYPEINFO(qttf_hhea_table, Q_PRIMITIVE_TYPE);
 
 
 struct qttf_maxp_table {
@@ -371,6 +375,7 @@ struct qttf_maxp_table {
     quint16 maxComponentElements;
     quint16 maxComponentDepth;
 };
+Q_DECLARE_TYPEINFO(qttf_maxp_table, Q_PRIMITIVE_TYPE);
 
 struct qttf_name_table {
     QString copyright;
@@ -378,6 +383,7 @@ struct qttf_name_table {
     QString subfamily;
     QString postscript_name;
 };
+Q_DECLARE_TYPEINFO(qttf_name_table, Q_RELOCATABLE_TYPE);
 
 
 static QTtfTable generateHead(const qttf_head_table &head);
@@ -405,7 +411,7 @@ struct QTtfGlyph {
     quint16 numPoints;
     QByteArray data;
 };
-Q_DECLARE_TYPEINFO(QTtfGlyph, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(QTtfGlyph, Q_RELOCATABLE_TYPE);
 
 static QTtfGlyph generateGlyph(int index, const QPainterPath &path, qreal advance, qreal lsb, qreal ppem);
 // generates glyf, loca and hmtx
@@ -605,12 +611,14 @@ struct QTtfNameRecord {
     quint16 nameId;
     QString value;
 };
+Q_DECLARE_TYPEINFO(QTtfNameRecord, Q_RELOCATABLE_TYPE);
 
 static QTtfTable generateName(const QList<QTtfNameRecord> &name);
 
 static QTtfTable generateName(const qttf_name_table &name)
 {
     QList<QTtfNameRecord> list;
+    list.reserve(5);
     QTtfNameRecord rec;
     rec.nameId = 0;
     rec.value = name.copyright;
@@ -726,7 +734,7 @@ static void convertPath(const QPainterPath &path, QList<TTF_POINT> *points, QLis
                     points->takeLast();
                 endPoints->append(points->size() - 1);
             }
-            // fall through
+            Q_FALLTHROUGH();
         case QPainterPath::LineToElement:
             p.flags = OnCurve;
             break;
@@ -774,7 +782,7 @@ static void convertPath(const QPainterPath &path, QList<TTF_POINT> *points, QLis
                         // see if we can optimize out the last onCurve point
                         int mx = (points->at(points->size() - 2).x + base[2].x) >> 1;
                         int my = (points->at(points->size() - 2).y + base[2].y) >> 1;
-                        if (qAbs(mx - base[3].x) <= split_limit && qAbs(my = base[3].y) <= split_limit)
+                        if (qAbs(mx - base[3].x) <= split_limit && qAbs(my - base[3].y) <= split_limit)
                             points->takeLast();
                         try_reduce = false;
                     }
@@ -784,7 +792,7 @@ static void convertPath(const QPainterPath &path, QList<TTF_POINT> *points, QLis
                     base -= 3;
                 } else {
                     // need to split
-//                     qDebug() << "  -> splitting";
+//                     qDebug("  -> splitting");
                     qint16 a, b, c, d;
                     base[6].x = base[3].x;
                     c = base[1].x;
@@ -845,7 +853,7 @@ static void getBounds(const QList<TTF_POINT> &points, qint16 *xmin, qint16 *xmax
 static int convertToRelative(QList<TTF_POINT> *points)
 {
     // convert points to relative and setup flags
-//     qDebug() << "relative points:";
+//     qDebug("relative points:");
     qint16 prev_x = 0;
     qint16 prev_y = 0;
     int point_array_size = 0;
@@ -897,11 +905,11 @@ static int convertToRelative(QList<TTF_POINT> *points)
 
 static void getGlyphData(QTtfGlyph *glyph, const QList<TTF_POINT> &points, const QList<int> &endPoints, int point_array_size)
 {
-    const int max_size = 5*sizeof(qint16) // header
-                         + endPoints.size()*sizeof(quint16) // end points of contours
-                         + sizeof(quint16) // instruction length == 0
-                         + points.size()*(1) // flags
-                         + point_array_size; // coordinates
+    const int max_size = int(5 * sizeof(qint16) // header
+                             + endPoints.size() * sizeof(quint16) // end points of contours
+                             + sizeof(quint16) // instruction length == 0
+                             + points.size()*(1) // flags
+                             + point_array_size); // coordinates
 
     glyph->data.resize(max_size);
 
@@ -952,7 +960,7 @@ static QTtfGlyph generateGlyph(int index, const QPainterPath &path, qreal advanc
     glyph.advanceWidth = qRound(advance * 2048. / ppem);
     glyph.lsb = qRound(lsb * 2048. / ppem);
 
-    if (!path.elementCount()) {
+    if (path.isEmpty()) {
         //qDebug("glyph %d is empty", index);
         lsb = 0;
         glyph.xMin = glyph.xMax = glyph.yMin = glyph.yMax = 0;
@@ -966,7 +974,7 @@ static QTtfGlyph generateGlyph(int index, const QPainterPath &path, qreal advanc
 //     qDebug() << "number of contours=" << endPoints.size();
 //     for (int i = 0; i < points.size(); ++i)
 //         qDebug() << "  point[" << i << "] = " << QPoint(points.at(i).x, points.at(i).y) << " flags=" << points.at(i).flags;
-//     qDebug() << "endPoints:";
+//     qDebug("endPoints:");
 //     for (int i = 0; i < endPoints.size(); ++i)
 //         qDebug() << endPoints.at(i);
 
@@ -1048,6 +1056,7 @@ static QList<QTtfTable> generateGlyphTables(qttf_font_tables &tables, const QLis
     Q_ASSERT(hmtx.data.size() == hs.offset());
 
     QList<QTtfTable> list;
+    list.reserve(3);
     list.append(glyf);
     list.append(loca);
     list.append(hmtx);
@@ -1110,7 +1119,7 @@ static QByteArray bindFont(const QList<QTtfTable>& _tables)
             f << t.tag
               << checksum(t.data)
               << table_offset
-              << t.data.size();
+              << quint32(t.data.size());
             table_offset += size;
 #define TAG(x) char(t.tag >> 24) << char((t.tag >> 16) & 0xff) << char((t.tag >> 8) & 0xff) << char(t.tag & 0xff)
             //qDebug() << "table " << TAG(t.tag) << "has size " << t.data.size() << "stream at " << f.offset();
@@ -1130,7 +1139,7 @@ static QByteArray bindFont(const QList<QTtfTable>& _tables)
 
     // calculate the fonts checksum and qToBigEndian into 'head's checksum_adjust
     quint32 checksum_adjust = 0xB1B0AFBA - checksum(font);
-    qToBigEndian(checksum_adjust, (uchar *)font.data() + head_offset + 8);
+    qToBigEndian(checksum_adjust, font.data() + head_offset + 8);
 
     return font;
 }
@@ -1152,7 +1161,6 @@ QByteArray QFontSubset::toTruetype() const
 
     qreal ppem = fontEngine->fontDef.pixelSize;
 #define TO_TTF(x) qRound(x * 2048. / ppem)
-    QList<QTtfGlyph> glyphs;
 
     QFontEngine::Properties properties = fontEngine->properties();
     // initialize some stuff needed in createWidthArray
@@ -1187,12 +1195,13 @@ QByteArray QFontSubset::toTruetype() const
     font.maxp.maxCompositeContours = 0;
     font.maxp.maxComponentElements = 0;
     font.maxp.maxComponentDepth = 0;
-    font.maxp.numGlyphs = nGlyphs();
-
-
+    const int numGlyphs = nGlyphs();
+    font.maxp.numGlyphs = numGlyphs;
+    QList<QTtfGlyph> glyphs;
+    glyphs.reserve(numGlyphs);
 
     uint sumAdvances = 0;
-    for (int i = 0; i < nGlyphs(); ++i) {
+    for (int i = 0; i < numGlyphs; ++i) {
         glyph_t g = glyph_indices.at(i);
         QPainterPath path;
         glyph_metrics_t metric;
@@ -1238,7 +1247,7 @@ QByteArray QFontSubset::toTruetype() const
             name.copyright = QLatin1String("Fake font");
         else
             name.copyright = QLatin1String(properties.copyright);
-        name.family = fontEngine->fontDef.family;
+        name.family = fontEngine->fontDef.families.first();
         name.subfamily = QLatin1String("Regular"); // ######
         name.postscript_name = QLatin1String(properties.postscriptName);
         name_table = generateName(name);

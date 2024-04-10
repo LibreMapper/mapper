@@ -79,7 +79,7 @@ bool WorldFile::save(const QString &path) const
 		QTextStream stream(&file);
 		stream.setRealNumberPrecision(10);
 		for (auto value : parameters)
-			stream << value << endl;
+			stream << value << Qt::endl;
 		file.close();
 	}
 	return file.error() == QFileDevice::NoError;

@@ -1,0 +1,28 @@
+--- qt-6.2.0/advanced_pdf.cpp.orig
++++ qt-6.2.0/advanced_pdf.cpp
+@@ -24,6 +24,7 @@
+  *   - Change of the PDF Producer property
+  *   - Use of DeviceCMYK color space in PDF output
+  *   - Distinct paint engine type
++ *   - Use resources from the original implementation
+  */
+ /****************************************************************************
+ **
+@@ -68,7 +69,7 @@ static const bool interpolateImages = fa
+ 
+ static void initResources()
+ {
+-    Q_INIT_RESOURCE(advanced_pdf);
++    Q_INIT_RESOURCE(qpdf);
+ }
+ 
+ QT_BEGIN_NAMESPACE
+@@ -1757,7 +1758,7 @@ int AdvancedPdfEnginePrivate::writeOutpu
+ {
+     const int colorProfile = addXrefEntry(-1);
+     {
+-        QFile colorProfileFile(QLatin1String(":/advanced_pdf/sRGB2014.icc"));
++        QFile colorProfileFile(QLatin1String(":/qpdf/sRGB2014.icc"));
+         colorProfileFile.open(QIODevice::ReadOnly);
+         const QByteArray colorProfileData = colorProfileFile.readAll();
+ 

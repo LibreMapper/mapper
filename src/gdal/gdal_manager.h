@@ -11,9 +11,10 @@
 
 #include <vector>
 
+#include <QStringList>
+
 class QByteArray;
 class QString;
-class QStringList;
 
 
 namespace LibreMapper {

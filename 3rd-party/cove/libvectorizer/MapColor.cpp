@@ -235,7 +235,7 @@ QRgb MapColorHSV::getRGBTriplet() const
 
 void MapColorHSV::setRGBTriplet(const QRgb i)
 {
-	qreal qx1, qx2, qx3;
+	float qx1, qx2, qx3;
 	QColor(i).getHsvF(&qx1, &qx2, &qx3);
 	x1 = qx1;
 	x2 = qx2;

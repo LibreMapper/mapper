@@ -541,7 +541,7 @@ void MapRenderables::drawColorSeparation(QPainter* painter, const RenderConfig& 
 				}
 				else if (use_color)
 				{
-					qreal c, m, y, k;
+					float c, m, y, k;
 					color.getCmykF(&c, &m, &y, &k);
 					color.setCmykF(c*drawing_color.factor, m*drawing_color.factor, y*drawing_color.factor, k*drawing_color.factor, 1.0);
 				}
