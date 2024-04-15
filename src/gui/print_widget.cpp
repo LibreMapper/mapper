@@ -83,7 +83,6 @@
 #include "gui/map/map_widget.h"
 #include "templates/template.h" // IWYU pragma: keep
 #include "templates/world_file.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/scoped_signals_blocker.h"
 
 #ifdef MAPPER_USE_GDAL

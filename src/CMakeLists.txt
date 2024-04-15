@@ -277,8 +277,6 @@ set(Mapper_Common_HEADERS
   gui/map/map_editor_p.h
   
   templates/world_file.h
-  
-  util/backports.h
 )
 
 add_library(Mapper_Common STATIC

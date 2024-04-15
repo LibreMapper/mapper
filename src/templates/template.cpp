@@ -50,7 +50,6 @@
 #include "templates/template_map.h"
 #include "templates/template_placeholder.h"
 #include "templates/template_track.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/util.h"
 #include "util/xml_stream_util.h"
 

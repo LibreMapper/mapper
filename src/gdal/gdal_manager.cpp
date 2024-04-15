@@ -28,7 +28,6 @@
 #include <QVariant>
 
 #include "gdal/gdal_extensions.h"
-#include "util/backports.h"  // IWYU pragma: keep
 
 
 namespace LibreMapper {

@@ -155,7 +155,6 @@
 #include "undo/object_undo.h"
 #include "undo/undo.h"
 #include "undo/undo_manager.h"
-#include "util/backports.h" // IWYU pragma: keep
 
 #ifdef MAPPER_USE_GDAL
 #include "gdal/ogr_template.h"

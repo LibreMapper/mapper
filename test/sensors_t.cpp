@@ -16,8 +16,6 @@
 
 #include "test_config.h"  // IWYU pragma: keep
 
-#include "util/backports.h"  // IWYU pragma: keep
-
 namespace LibreMapper {}
 using namespace LibreMapper;
 

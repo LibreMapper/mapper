@@ -16,7 +16,6 @@
 #include "core/map_coord.h"
 #include "fileformats/file_format.h"
 #include "templates/template.h"
-#include "util/backports.h"          // IWYU pragma: keep
 #include "util/matrix.h"
 #include "util/xml_stream_util.h"
 

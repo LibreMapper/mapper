@@ -34,7 +34,6 @@
 #include "core/symbols/text_symbol.h"
 #include "gui/symbols/symbol_setting_dialog.h"
 #include "gui/widgets/symbol_tooltip.h"
-#include "util/backports.h"  // IWYU pragma: keep
 #include "util/overriding_shortcut.h"
 
 
