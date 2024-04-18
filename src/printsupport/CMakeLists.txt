@@ -4,25 +4,19 @@
 #
 # This file is part of LibreMapper.
 
-find_package(Qt5Gui REQUIRED COMPONENTS Private)
-find_package(Qt5PrintSupport REQUIRED COMPONENTS Private)
+find_package(Qt6Gui REQUIRED COMPONENTS Private)
+find_package(Qt6PrintSupport REQUIRED COMPONENTS Private)
 find_package(ZLIB REQUIRED)
 
 set(CMAKE_CXX_CLANG_TIDY "")
 set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "")
 
-if (${Qt5PrintSupport_VERSION} VERSION_LESS 5.12.0)
-	set(FORK_VERSION qt-5.5.1)
-else()
-	set(FORK_VERSION qt-5.12.4)
-endif()
-
 set(PRINTSUPPORT_SRCS
   advanced_pdf_printer.cpp
   printer_properties.h
-  ${FORK_VERSION}/advanced_pdf.cpp
-  ${FORK_VERSION}/printengine_advanced_pdf.cpp
-  ${FORK_VERSION}/qfontsubset.cpp
+  qt-6.7.0/advanced_pdf.cpp
+  qt-6.7.0/printengine_advanced_pdf.cpp
+  qt-6.7.0/qfontsubset.cpp
 )
 
 if(WIN32)
@@ -41,13 +35,13 @@ target_compile_definitions(printsupport PRIVATE
 target_include_directories(printsupport
   SYSTEM
   BEFORE
-  PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/${FORK_VERSION}"
+  PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/qt-6.7.0"
   INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 
 target_link_libraries(printsupport
-  Qt5::PrintSupport
-  Qt5::Gui
+  Qt::PrintSupport
+  Qt::Gui
   ZLIB::ZLIB
 )
 
@@ -57,13 +51,13 @@ target_link_libraries(printsupport
 
 foreach(module Core Gui PrintSupport)
 	set(qt_module Qt${module})
-	set(qt5_module Qt5${module})
-	if("${${qt5_module}_PRIVATE_INCLUDE_DIRS}" STREQUAL "")
-		foreach(base_dir ${${qt5_module}_INCLUDE_DIRS})
+	set(qt6_module Qt6${module})
+	if("${${qt6_module}_PRIVATE_INCLUDE_DIRS}" STREQUAL "")
+		foreach(base_dir ${${qt6_module}_INCLUDE_DIRS})
 			if("${base_dir}" MATCHES "/${qt_module}\$")
-				list(APPEND ${qt5_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt5_module}_VERSION}/${qt_module}")
+				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}/${qt_module}")
 			endif()
 		endforeach()
 	endif()
-	target_include_directories(printsupport SYSTEM PRIVATE ${${qt5_module}_PRIVATE_INCLUDE_DIRS})
+	target_include_directories(printsupport SYSTEM PRIVATE ${${qt6_module}_PRIVATE_INCLUDE_DIRS})
 endforeach()

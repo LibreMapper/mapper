@@ -25,7 +25,7 @@ TextBrowser::~TextBrowser() = default;
 QVariant TextBrowser::loadResource(int type, const QUrl& name)
 {
 	auto result = QTextBrowser::loadResource(type, name);
-	if (result.type() == QVariant::ByteArray
+	if (result.typeId() == QVariant::ByteArray
 	    && type == QTextDocument::HtmlResource
 	    && !name.fileName().contains(QLatin1String(".htm"), Qt::CaseInsensitive))
 	{

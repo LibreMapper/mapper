@@ -1,14 +1,16 @@
---- a/advanced_pdf.cpp	2015-10-14 09:13:34.830472339 +0200
-+++ b/advanced_pdf.cpp	2015-10-14 09:15:26.295025059 +0200
-@@ -22,6 +22,7 @@
+Index: qt-6.7.0/advanced_pdf.cpp
+===================================================================
+--- qt-6.7.0.orig/advanced_pdf.cpp
++++ qt-6.7.0/advanced_pdf.cpp
+@@ -10,6 +10,7 @@
   *   - Adjustment of include statements
   *   - Removal of Q_XXX_EXPORT
   * - Change of the PDF Producer property
 + * - Use of DeviceCMYK color space in PDF output
   */
- /****************************************************************************
- **
-@@ -1321,12 +1322,13 @@
+ // Copyright (C) 2016 The Qt Company Ltd.
+ // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+@@ -1254,12 +1255,13 @@ void AdvancedPdfEngine::setPen()
  
      QColor rgba = b.color();
      if (d->grayscale) {
@@ -27,7 +29,7 @@
      }
      *d->currentPage << "SCN\n";
  
-@@ -1385,12 +1387,13 @@
+@@ -1320,12 +1322,13 @@ void AdvancedPdfEngine::setBrush()
      if (specifyColor) {
          QColor rgba = d->brush.color();
          if (d->grayscale) {
@@ -46,7 +48,7 @@
          }
      }
      if (patternObject)
-@@ -1637,7 +1640,7 @@
+@@ -1644,7 +1647,7 @@ void AdvancedPdfEnginePrivate::writeHead
  
      // color space for pattern
      patternColorSpace = addXrefEntry(-1);
@@ -55,7 +57,7 @@
              "endobj\n");
  }
  
-@@ -1837,7 +1840,7 @@
+@@ -2091,7 +2094,7 @@ void AdvancedPdfEnginePrivate::writePage
      xprintf("<<\n"
              "/ColorSpace <<\n"
              "/PCSp %d 0 R\n"

@@ -4,13 +4,10 @@
 #
 # This file is part of LibreMapper.
 
-find_package(Qt5Core 5.3 REQUIRED)
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5Sensors)
-find_package(Qt5Positioning)
-find_package(Qt5SerialPort)
+find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Sensors Positioning SerialPort)
 if(ANDROID)
-	find_package(Qt5AndroidExtras REQUIRED)
+	find_package(Qt6 COMPONENTS AndroidExtras REQUIRED)
 endif()
 
 set(CMAKE_AUTOMOC ON)
@@ -27,7 +24,7 @@ set(FAKE_POSITION_DEFINITIONS
 )
 set(FAKE_POSITION_SOURCES )
 set(FAKE_POSITION_LINK_LIBRARIES )
-if(TARGET Qt5::Positioning)
+if(TARGET Qt::Positioning)
 	list(APPEND FAKE_POSITION_DEFINITIONS
 	  PUBLIC MAPPER_USE_FAKE_POSITION_PLUGIN
 	)
@@ -37,7 +34,7 @@ if(TARGET Qt5::Positioning)
 	  fake_position_source.cpp
 	)
 	list(APPEND FAKE_POSITION_LINK_LIBRARIES
-	  PRIVATE Qt5::Gui Qt5::Positioning
+	  PRIVATE Qt::Gui Qt::Positioning
 	)
 endif()
 
@@ -45,44 +42,6 @@ add_library(fake_position_source STATIC  ${FAKE_POSITION_SOURCES})
 target_compile_definitions(fake_position_source  ${FAKE_POSITION_DEFINITIONS})
 target_include_directories(fake_position_source  PRIVATE "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(fake_position_source  ${FAKE_POSITION_LINK_LIBRARIES})
-
-
-# OpenOrienteeringNmeaPlugin
-#
-# For testing purposes, we build this plugin on all platforms,
-# but we register it in main.cpp on Linux only.
-
-set(NMEA_POSITION_DEFINITIONS
-  PRIVATE
-    QT_NO_CAST_FROM_ASCII
-    QT_NO_CAST_TO_ASCII
-    QT_USE_QSTRINGBUILDER
-    QT_STATICPLUGIN
-)
-set(NMEA_POSITION_SOURCES )
-set(NMEA_POSITION_LINK_LIBRARIES )
-if(TARGET Qt5::Positioning)
-	list(APPEND NMEA_POSITION_DEFINITIONS
-	  PUBLIC MAPPER_USE_NMEA_POSITION_PLUGIN
-	)
-	list(APPEND NMEA_POSITION_SOURCES
-	  nmea_position_plugin.cpp
-	  nmea_position_plugin.json
-	  #nmea_position_source.cpp
-	)
-	list(APPEND NMEA_POSITION_LINK_LIBRARIES
-	  PRIVATE Qt5::Positioning
-	)
-	if(TARGET Qt5::SerialPort)
-		list(APPEND NMEA_POSITION_LINK_LIBRARIES
-		  PRIVATE Qt5::SerialPort
-		)
-	endif()
-endif()
-
-add_library(nmea_position_source STATIC  ${NMEA_POSITION_SOURCES})
-target_compile_definitions(nmea_position_source  ${NMEA_POSITION_DEFINITIONS})
-target_link_libraries(nmea_position_source  ${NMEA_POSITION_LINK_LIBRARIES})
 
 
 # PowershellPositionPlugin
@@ -99,7 +58,7 @@ set(POWERSHELL_POSITION_DEFINITIONS
 )
 set(POWERSHELL_POSITION_SOURCES )
 set(POWERSHELL_POSITION_LINK_LIBRARIES )
-if(TARGET Qt5::Positioning)
+if(TARGET Qt::Positioning)
 	list(APPEND POWERSHELL_POSITION_DEFINITIONS
 	  PUBLIC MAPPER_USE_POWERSHELL_POSITION_PLUGIN
 	)
@@ -108,11 +67,11 @@ if(TARGET Qt5::Positioning)
 	  powershell_position_plugin.json
 	  powershell_position_source.cpp
 	)
-	qt5_add_resources(POWERSHELL_POSITION_SOURCES
+	qt6_add_resources(POWERSHELL_POSITION_SOURCES
 	  "${CMAKE_CURRENT_SOURCE_DIR}/powershell_position_source.qrc"
 	)
 	list(APPEND POWERSHELL_POSITION_LINK_LIBRARIES
-	  PRIVATE Qt5::Positioning
+	  PRIVATE Qt::Positioning
 	)
 endif()
 
@@ -138,7 +97,7 @@ set(MAPPER_SENSORS_DEFINITIONS
     QT_USE_QSTRINGBUILDER
 )
 
-if(TARGET Qt5::Positioning OR TARGET Qt5::Sensors)
+if(TARGET Qt::Positioning OR TARGET Qt::Sensors)
 	list(APPEND MAPPER_SENSORS_DEFINITIONS  PUBLIC MAPPER_USE_SENSORS)
 endif()
 
@@ -147,13 +106,12 @@ target_compile_definitions(mapper-sensors  ${MAPPER_SENSORS_DEFINITIONS})
 target_include_directories(mapper-sensors  PRIVATE "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(mapper-sensors
   PUBLIC
-    nmea_position_source
     powershell_position_source
-    Qt5::Core
-    Qt5::Gui
-    Qt5::Widgets
+    Qt::Core
+    Qt::Gui
+    Qt::Widgets
 )
-foreach(lib Qt5::Positioning Qt5::Sensors Qt5::SerialPort Qt5::AndroidExtras)
+foreach(lib Qt::Positioning Qt::Sensors Qt::SerialPort Qt::AndroidExtras)
 	if(TARGET ${lib})
 		target_link_libraries(mapper-sensors  PRIVATE ${lib})
 	endif()
@@ -171,6 +129,5 @@ endif()
 
 mapper_translations_sources(
   ${MAPPER_SENSORS_SOURCES}
-  ${NMEA_POSITION_SOURCES}
   ${POWERSHELL_POSITION_SOURCES}
 )

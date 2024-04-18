@@ -374,7 +374,10 @@ bool CutTool::startCuttingArea(const ObjectPathCoord& point)
 	connect(path_tool, &DrawLineAndAreaTool::pathFinished, this, &CutTool::finishCuttingArea);
 	path_tool->init();
 	
-	QMouseEvent event { QEvent::MouseButtonPress, cur_map_widget->mapToViewport(point.pos), Qt::LeftButton, QGuiApplication::mouseButtons(), active_modifiers };
+	// We do not synthetize global position for the event and pass the cursor
+	// position down to the path tool. Currently, there is no use for the global
+	// position but this part may need more love in the future.
+	QMouseEvent event { QEvent::MouseButtonPress, cur_map_widget->mapToViewport(point.pos), QCursor::pos(), Qt::LeftButton, QGuiApplication::mouseButtons(), active_modifiers };
 	path_tool->mousePressEvent(&event, point.pos, cur_map_widget);
 	
 	return true;

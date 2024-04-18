@@ -54,7 +54,7 @@ namespace Ocd
 		{
 			// For defined behaviour for longer inputs, do std::min on the
 			// wider type, then cast the result to the more narrow type.
-			auto const length = static_cast<unsigned char>(std::min(static_cast<int>(max_length), value.length()));
+			auto const length = static_cast<unsigned char>(std::min(static_cast<qsizetype>(max_length), value.length()));
 			auto const tail = std::copy(value.data(), value.data()+length, first);
 			std::fill(tail, last, 0);
 			return length;
@@ -65,7 +65,7 @@ namespace Ocd
 			// For defined behaviour for longer inputs, do std::min on the
 			// wider type, then cast the result to the more narrow type.
 			auto const utf8 = value.toUtf8();
-			auto length = static_cast<unsigned char>(std::min(static_cast<int>(max_length), utf8.length()));
+			auto length = static_cast<unsigned char>(std::min(static_cast<qsizetype>(max_length), utf8.length()));
 			auto tail = std::copy(utf8.data(), utf8.data()+length, first);
 			if (tail == first+max_length && (*(tail-1) & 0x80))
 			{

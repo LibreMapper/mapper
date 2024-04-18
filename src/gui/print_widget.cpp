@@ -709,7 +709,7 @@ void PrintWidget::updatePaperSizes(const QPrinterInfo* target) const
 	if (size_list.isEmpty())
 		size_list = defaultPageSizes();
 	
-	for (auto const & size : qAsConst(size_list))
+	for (auto const & size : std::as_const(size_list))
 	{
 		if (size.id() == QPageSize::Custom)
 			have_custom_size = true; // add it once after all other entries
@@ -1026,7 +1026,7 @@ void PrintWidget::updateResolutions(const QPrinterInfo* target) const
 	static QString dpi_template(QLatin1String("%1 ") + tr("dpi"));
 	QStringList resolutions;
 	resolutions.reserve(supported_resolutions.size());
-	for (auto resolution : qAsConst(supported_resolutions))
+	for (auto resolution : std::as_const(supported_resolutions))
 		resolutions << dpi_template.arg(resolution);
 	
 	QString dpi_text = dpi_combo->currentText();

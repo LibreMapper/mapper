@@ -102,7 +102,7 @@ const CRSTemplate* CRSSelector::currentCRSTemplate() const
 {
 	const CRSTemplate* crs = nullptr;
 	auto item_data = itemData(currentIndex());
-	if (item_data.type() == QVariant::String)
+	if (item_data.typeId() == QVariant::String)
 		crs = CRSTemplateRegistry().find(item_data.toString());
 	return crs;
 }
@@ -131,7 +131,7 @@ int CRSSelector::currentCustomItem() const
 {
 	int id = -1;
 	QVariant item_data = itemData(currentIndex());
-	if (item_data.type() == QVariant::Int)
+	if (item_data.typeId() == QVariant::Int)
 		id = item_data.toInt();
 	return id;
 }

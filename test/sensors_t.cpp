@@ -32,12 +32,6 @@ using namespace LibreMapper;
 Q_IMPORT_PLUGIN(FakePositionPlugin)
 #endif
 
-#ifdef MAPPER_USE_NMEA_POSITION_PLUGIN
-#include <QNmeaPositionInfoSource>  // IWYU pragma: keep
-#include "sensors/nmea_position_plugin.h"
-Q_IMPORT_PLUGIN(NmeaPositionPlugin)
-#endif
-
 #ifdef MAPPER_USE_POWERSHELL_POSITION_PLUGIN
 #include "sensors/powershell_position_source.h"
 Q_IMPORT_PLUGIN(PowershellPositionPlugin)
@@ -88,56 +82,6 @@ private slots:
 		delete source;
 	}
 #endif  // MAPPER_USE_FAKE_POSITION_PLUGIN
-	
-	
-#if defined(MAPPER_USE_NMEA_POSITION_PLUGIN)
-	void nmeaPositionSourcePluginTest()
-	{
-		auto nmea_position_source = QStringLiteral("NMEA (OpenOrienteering)");
-		auto sources = QGeoPositionInfoSource::availableSources();
-		QVERIFY(sources.contains(nmea_position_source));
-	}
-	
-	void nmeaPositionSourceSimulatedTest()
-	{
-		auto nmea_position_source = QStringLiteral("NMEA (OpenOrienteering)");
-		auto* source = QGeoPositionInfoSource::createSource(nmea_position_source, this);
-#if !defined(Q_OS_LINUX) && !defined(Q_OS_MACOS)
-		QVERIFY(!source || source->error() != QGeoPositionInfoSource::NoError);
-		QSKIP("\"unsupported platform");
-#endif
-		QVERIFY(source);
-		QVERIFY(qobject_cast<QNmeaPositionInfoSource*>(source));
-		QCOMPARE(int(source->error()), int(QGeoPositionInfoSource::NoError));
-		
-		QSignalSpy source_spy(source, &QGeoPositionInfoSource::positionUpdated);
-		QVERIFY(source_spy.isValid());
-		
-		auto test_file = QFileInfo(QStringLiteral("testdata:sensors/nmea.txt"));
-		QVERIFY(test_file.exists());
-		qputenv("QT_NMEA_SERIAL_PORT", test_file.absoluteFilePath().toUtf8());
-		source->startUpdates();
-		QCOMPARE(int(source->error()), int(QGeoPositionInfoSource::NoError));
-		QVERIFY(source_spy.wait());
-		
-		auto last = source->lastKnownPosition(true);
-		QVERIFY(last.isValid());
-		QCOMPARE(int(last.coordinate().latitude()), -30);
-		QCOMPARE(int(last.coordinate().longitude()), 139);
-		
-		source->stopUpdates();
-		
-		QTemporaryFile unreadable_file;
-		QVERIFY(unreadable_file.open());
-		unreadable_file.close();
-		unreadable_file.setPermissions({});
-		qputenv("QT_NMEA_SERIAL_PORT", unreadable_file.fileName().toUtf8());
-		source->startUpdates();
-		QCOMPARE(int(source->error()), int(QGeoPositionInfoSource::AccessError));
-		
-		delete source;
-	}
-#endif  // MAPPER_USE_NMEA_POSITION_PLUGIN
 	
 #if defined(MAPPER_USE_POWERSHELL_POSITION_PLUGIN)
 	void powershellPositionSourcePluginTest()

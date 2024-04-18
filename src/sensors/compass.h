@@ -6,7 +6,6 @@
  * This file is part of LibreMapper.
  */
 
-
 #ifndef LIBREMAPPER_COMPASS_H
 #define LIBREMAPPER_COMPASS_H
 
@@ -15,12 +14,13 @@
 #include <QObject>
 #include <QString>
 
+Q_MOC_INCLUDE("sensors/compass_p.h")
+
 class QMetaMethod;
 
 namespace LibreMapper {
 
 class CompassPrivate;
-
 
 /** Provides access to the device's compass. Singleton class. */
 class Compass : public QObject

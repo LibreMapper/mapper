@@ -96,7 +96,7 @@ ScalingIconEngine::ScalingIconEngine(const QIcon& icon)
 // override
 void ScalingIconEngine::paint(QPainter* painter, const QRect& rect, QIcon::Mode mode, QIcon::State state)
 {
-	auto const device_pixel_ratio = qApp->testAttribute(Qt::AA_UseHighDpiPixmaps) ? painter->device()->devicePixelRatioF() : qreal(1.0);
+	auto const device_pixel_ratio = painter->device()->devicePixelRatioF();
 	QSize pixmapSize = rect.size() * device_pixel_ratio;
 	painter->drawPixmap(rect, pixmap(pixmapSize, mode, state));
 }
@@ -151,13 +151,13 @@ QString ScalingIconEngine::key() const
 }
 
 // override
-QList<QSize> ScalingIconEngine::availableSizes(QIcon::Mode mode, QIcon::State state) const
+QList<QSize> ScalingIconEngine::availableSizes(QIcon::Mode mode, QIcon::State state)
 {
 	return icon.availableSizes(mode, state);
 }
 
 // override
-QString  ScalingIconEngine::iconName() const
+QString  ScalingIconEngine::iconName()
 {
 	return icon.name();
 }

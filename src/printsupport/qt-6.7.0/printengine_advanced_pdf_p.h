@@ -1,33 +1,17 @@
-/**
+/* SPDX-License-Identifier: GPL-3.0-only
+ *
  * This file is part of LibreMapper.
  *
- * This is a modified version of a file from the Qt Toolkit.
- * You can redistribute it and/or modify it under the terms of
- * the GNU General Public License, version 3, as published by
- * the Free Software Foundation.
- *
- * OpenOrienteering is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
- *
  * Changes:
- * 2015-10-18 Kai Pastor <dg0yt@darc.de>
+ * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
  *   - Adjustment of include statements
  *   - Removal of Q_XXX_EXPORT
  */
-/****************************************************************************
-**
-** Copyright (C) 2015 The Qt Company Ltd.
-** Contact: http://www.qt.io/licensing/
-**
-****************************************************************************/
+// Copyright (C) 2016 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
 
 #ifndef PRINTENGINE_ADVANCED_PDF_P_H
 #define PRINTENGINE_ADVANCED_PDF_P_H
@@ -46,13 +30,11 @@
 #include "QtPrintSupport/qprintengine.h"
 
 #ifndef QT_NO_PRINTER
+#include "QtCore/qdatastream.h"
 #include "QtCore/qmap.h"
-#include "QtGui/qmatrix.h"
 #include "QtCore/qstring.h"
-#include "QtCore/qvector.h"
 #include "QtGui/qpaintengine.h"
 #include "QtGui/qpainterpath.h"
-#include "QtCore/qdatastream.h"
 
 #include <private/qfontengine_p.h>
 #include "advanced_pdf_p.h"
@@ -75,22 +57,22 @@ class AdvancedPdfPrintEngine : public AdvancedPdfEngine, public QPrintEngine
 {
     Q_DECLARE_PRIVATE(AdvancedPdfPrintEngine)
 public:
-    AdvancedPdfPrintEngine(QPrinter::PrinterMode m);
-    ~AdvancedPdfPrintEngine() override;
+    AdvancedPdfPrintEngine(QPrinter::PrinterMode m, AdvancedPdfEngine::PdfVersion version = AdvancedPdfEngine::Version_1_4);
+    virtual ~AdvancedPdfPrintEngine();
 
     // reimplementations QPaintEngine
-    bool begin(QPaintDevice *pdev) Q_DECL_OVERRIDE;
-    bool end() Q_DECL_OVERRIDE;
+    bool begin(QPaintDevice *pdev) override;
+    bool end() override;
     // end reimplementations QPaintEngine
 
     // reimplementations QPrintEngine
-    bool abort() Q_DECL_OVERRIDE {return false;}
-    QPrinter::PrinterState printerState() const Q_DECL_OVERRIDE {return state;}
+    bool abort() override {return false;}
+    QPrinter::PrinterState printerState() const override {return state;}
 
-    bool newPage() Q_DECL_OVERRIDE;
-    int metric(QPaintDevice::PaintDeviceMetric) const Q_DECL_OVERRIDE;
-    void setProperty(PrintEnginePropertyKey key, const QVariant &value) Q_DECL_OVERRIDE;
-    QVariant property(PrintEnginePropertyKey key) const Q_DECL_OVERRIDE;
+    bool newPage() override;
+    int metric(QPaintDevice::PaintDeviceMetric) const override;
+    virtual void setProperty(PrintEnginePropertyKey key, const QVariant &value) override;
+    virtual QVariant property(PrintEnginePropertyKey key) const override;
     // end reimplementations QPrintEngine
 
     QPrinter::PrinterState state;
@@ -107,7 +89,7 @@ class AdvancedPdfPrintEnginePrivate : public AdvancedPdfEnginePrivate
     Q_DECLARE_PUBLIC(AdvancedPdfPrintEngine)
 public:
     AdvancedPdfPrintEnginePrivate(QPrinter::PrinterMode m);
-    ~AdvancedPdfPrintEnginePrivate() override;
+    ~AdvancedPdfPrintEnginePrivate();
 
     virtual bool openPrintDevice();
     virtual void closePrintDevice();
@@ -122,7 +104,6 @@ private:
     QString printProgram;
     QString selectionOption;
 
-    QPrint::DuplexMode duplex;
     bool collate;
     int copies;
     QPrinter::PageOrder pageOrder;

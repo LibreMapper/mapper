@@ -772,7 +772,7 @@ bool MapWidget::event(QEvent* event)
 	case QEvent::TouchUpdate:
 	case QEvent::TouchEnd:
 	case QEvent::TouchCancel:
-		if (static_cast<QTouchEvent*>(event)->touchPoints().count() >= 2)
+		if (static_cast<QTouchEvent*>(event)->points().count() >= 2)
 			return true;
 		break;
 		
@@ -1012,7 +1012,7 @@ void MapWidget::_mousePressEvent(QMouseEvent* event)
 	else if (event->button() == Qt::RightButton)
 	{
 		if (!context_menu->isEmpty())
-			context_menu->popup(event->globalPos());
+			context_menu->popup(event->globalPosition().toPoint());
 	}
 }
 

@@ -109,7 +109,6 @@ signals:
 private slots:
     void positionUpdated(const QGeoPositionInfo& info);
 	void error();
-	void updateTimeout();
 	
 private:
 	MapCoordF calcLatestGPSCoord(bool& ok);

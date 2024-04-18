@@ -281,13 +281,15 @@ protected:
 	// Mouse handling
 	
 	/// Position where the left mouse button was pressed, with no constraints applied.
-	QPoint click_pos;
+	QPointF click_pos;
+	QPointF click_pos_global;
 	MapCoordF click_pos_map;
 	/// Position where the left mouse button was pressed, constrained by tool helpers, if active.
 	QPointF constrained_click_pos;
 	MapCoordF constrained_click_pos_map;
 	/// Position where the cursor is currently
-	QPoint cur_pos;
+	QPointF cur_pos;
+	QPointF cur_pos_global;
 	MapCoordF cur_pos_map;
 	/// Position where the cursor is currently, constrained by tool helpers, if active
 	QPointF constrained_pos;

@@ -119,7 +119,7 @@ void ReopenTemplateDialog::OpenTemplateList::dropEvent(QDropEvent* event)
 	for (int i = 0; src_pos < 0; ++i)
 	{
 		auto item_data = item(i)->data(Qt::UserRole);
-		switch (item_data.type())
+		switch (item_data.typeId())
 		{
 		case QVariant::Int:
 			item_index = i;

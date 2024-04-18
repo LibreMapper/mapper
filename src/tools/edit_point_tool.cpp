@@ -290,7 +290,7 @@ void EditPointTool::clickPress()
 		connect(text_editor, &TextObjectEditorHelper::finished, this, &EditPointTool::finishEditing);
 		
 		// Send clicked position
-		QMouseEvent event { QEvent::MouseButtonPress, click_pos, Qt::LeftButton, Qt::LeftButton, Qt::KeyboardModifiers{} };
+		QMouseEvent event { QEvent::MouseButtonPress, click_pos, click_pos_global, Qt::LeftButton, Qt::LeftButton, Qt::KeyboardModifiers{} };
 		text_editor->mousePressEvent(&event, click_pos_map, cur_map_widget);
 	}
 	

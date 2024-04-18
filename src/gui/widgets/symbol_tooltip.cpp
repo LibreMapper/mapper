@@ -104,7 +104,7 @@ void SymbolToolTip::reset()
 		shortcut->setEnabled(false);
 }
 
-void SymbolToolTip::enterEvent(QEvent* event)
+void SymbolToolTip::enterEvent(QEnterEvent* event)
 {
 	Q_UNUSED(event);
     hide();

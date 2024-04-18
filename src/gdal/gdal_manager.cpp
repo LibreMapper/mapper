@@ -367,11 +367,11 @@ private:
 		
 		auto new_parameters = settings.childKeys();
 		new_parameters.sort();
-		for (const auto& parameter : qAsConst(new_parameters))
+		for (const auto& parameter : std::as_const(new_parameters))
 		{
 			CPLSetConfigOption(parameter.toLatin1().constData(), settings.value(parameter).toByteArray().constData());
 		}
-		for (const auto& parameter : qAsConst(applied_parameters))
+		for (const auto& parameter : std::as_const(applied_parameters))
 		{
 			if (!new_parameters.contains(parameter)
 			    && parameter != QLatin1String{ "GDAL_DATA" })

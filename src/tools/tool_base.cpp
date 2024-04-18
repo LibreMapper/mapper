@@ -151,7 +151,8 @@ const QCursor& MapEditorToolBase::getCursor() const
 void MapEditorToolBase::mousePositionEvent(QMouseEvent* event, const MapCoordF& map_coord, MapWidget* widget)
 {
 	active_modifiers = event->modifiers();
-	cur_pos = event->pos();
+	cur_pos = event->position();
+	cur_pos_global = event->globalPosition();
 	cur_pos_map = map_coord;
 	cur_map_widget = widget;
 	updateConstrainedPositions();
@@ -159,6 +160,7 @@ void MapEditorToolBase::mousePositionEvent(QMouseEvent* event, const MapCoordF& 
 	if (event->button() == Qt::LeftButton && event->type() == QEvent::MouseButtonPress)
 	{
 		click_pos = cur_pos;
+		click_pos_global = cur_pos_global;
 		click_pos_map = cur_pos_map;
 		constrained_click_pos = constrained_pos;
 		constrained_click_pos_map = constrained_pos_map;
@@ -166,6 +168,7 @@ void MapEditorToolBase::mousePositionEvent(QMouseEvent* event, const MapCoordF& 
 	else if (dragging_canceled)
 	{
 		click_pos = cur_pos;
+		click_pos_global = cur_pos_global;
 		click_pos_map = cur_pos_map;
 		constrained_click_pos = constrained_pos;
 		constrained_click_pos_map = constrained_pos_map;
@@ -648,28 +651,31 @@ void MapEditorToolBase::updateConstrainedPositions()
 
 void MapEditorToolBase::generateNextSimulatedEvent()
 {
-	auto next_pos = cur_pos + QPoint{qRound(10.0 - 20.0 * std::rand() / RAND_MAX),
-	                                 qRound(10.0 - 20.0 * std::rand() / RAND_MAX)};
+	auto move = QPoint{qRound(10.0 - 20.0 * std::rand() / RAND_MAX),
+	                   qRound(10.0 - 20.0 * std::rand() / RAND_MAX)};
+	auto next_pos = cur_pos + move;
+	auto next_pos_global = cur_pos_global + move;
+
 	switch (simulation_state)
 	{
 	case 1:
 		{
-			qDebug("generateNextSimulatedEvent(): MouseButtonPress @ %d,%d", next_pos.x(), next_pos.y());
-			QMouseEvent press(QEvent::MouseButtonPress, next_pos, Qt::LeftButton, Qt::NoButton, active_modifiers);
+			qDebug("generateNextSimulatedEvent(): MouseButtonPress @ %f,%f", next_pos.x(), next_pos.y());
+			QMouseEvent press(QEvent::MouseButtonPress, next_pos, next_pos_global, Qt::LeftButton, Qt::NoButton, active_modifiers);
 			qApp->sendEvent(mapWidget(), &press);
 		}
 		break;
 	case 2:
 		{
-			qDebug("generateNextSimulatedEvent(): MouseMove @ %d,%d", next_pos.x(), next_pos.y());
-			QMouseEvent move(QEvent::MouseMove, next_pos, Qt::NoButton, Qt::LeftButton, active_modifiers);
+			qDebug("generateNextSimulatedEvent(): MouseMove @ %f,%f", next_pos.x(), next_pos.y());
+			QMouseEvent move(QEvent::MouseMove, next_pos, next_pos_global, Qt::NoButton, Qt::LeftButton, active_modifiers);
 			qApp->sendEvent(mapWidget(), &move);
 		}
 		break;
 	case 3:
 		{
-			qDebug("generateNextSimulatedEvent(): MouseButtonRelease @ %d,%d", next_pos.x(), next_pos.y());
-			QMouseEvent release(QEvent::MouseButtonRelease, next_pos, Qt::LeftButton, Qt::LeftButton, active_modifiers);
+			qDebug("generateNextSimulatedEvent(): MouseButtonRelease @ %f,%f", next_pos.x(), next_pos.y());
+			QMouseEvent release(QEvent::MouseButtonRelease, next_pos, next_pos_global, Qt::LeftButton, Qt::LeftButton, active_modifiers);
 			qApp->sendEvent(mapWidget(), &release);
 		}
 		Q_FALLTHROUGH();

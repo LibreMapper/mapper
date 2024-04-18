@@ -24,7 +24,6 @@
 #include <QObject>
 #include <QPointer>
 #include <QSettings>
-#include <QStaticPlugin>  // IWYU pragma: keep
 #include <QString>
 #include <QStringList>
 #include <QTimer>
@@ -56,14 +55,6 @@ Q_IMPORT_PLUGIN(FakePositionPlugin)
 
 #if defined(Q_OS_WIN) && defined(MAPPER_USE_POWERSHELL_POSITION_PLUGIN)
 Q_IMPORT_PLUGIN(PowershellPositionPlugin)
-#endif
-
-#if (defined(Q_OS_LINUX) || defined(Q_OS_MACOS)) && defined(MAPPER_USE_NMEA_POSITION_PLUGIN)
-Q_IMPORT_PLUGIN(NmeaPositionPlugin)
-#endif
-
-#if defined(SCALING_ICON_ENGINE_PLUGIN)
-Q_IMPORT_PLUGIN(ScalingIconEnginePlugin)
 #endif
 
 

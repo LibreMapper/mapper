@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBDIR=qt-5.5.1
+SUBDIR=qt-6.7.0
 PRETTY_DATE=$(date +%Y-%m-%d)
 
 for I in $SUBDIR/*.h $SUBDIR/*.cpp

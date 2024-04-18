@@ -275,7 +275,7 @@ namespace
 			         expected.getCurrentPart()->findObjectIndex(expected.getFirstSelectedObject()));
 			if (actual.getCurrentPart()->getNumObjects() != expected.getCurrentPart()->getNumObjects())
 			{
-				for (auto object_index : qAsConst(actual.selectedObjects()))
+				for (auto object_index : std::as_const(actual.selectedObjects()))
 				{
 					QVERIFY(actual.isObjectSelected(actual.getCurrentPart()->getObject(expected.getCurrentPart()->findObjectIndex(object_index))));
 				}
@@ -1165,7 +1165,7 @@ void FileFormatTest::issue_2206_32byte_text()
 {
 	QFETCH(QString, format_id);
 	
-	const auto filepath = QLatin1Literal("data:export/issue-2206-32-byte-text.omap");
+	const auto filepath = QLatin1StringView("data:export/issue-2206-32-byte-text.omap");
 	QVERIFY(QFileInfo::exists(filepath));
 	
 	const FileFormat* format = FileFormats.findFormat(format_id.toLatin1());
@@ -1182,7 +1182,7 @@ void FileFormatTest::issue_2206_32byte_text()
 	auto const* map_object = new_map->getCurrentPart()->getObject(0);
 	QVERIFY(map_object->getType() == LibreMapper::Object::Type::Text);
 	auto const* text_object = map_object->asText();
-	QVERIFY(text_object->getText() == QLatin1Literal(">-- Exactly 32 bytes of text --<"));
+	QVERIFY(text_object->getText() == QLatin1StringView(">-- Exactly 32 bytes of text --<"));
 }
 
 void FileFormatTest::colorTest_data()

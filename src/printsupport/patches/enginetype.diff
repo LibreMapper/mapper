@@ -1,15 +1,16 @@
-diff -urw a/advanced_pdf.cpp b/advanced_pdf.cpp
---- a/advanced_pdf.cpp	2015-10-14 10:09:43.463176489 +0200
-+++ b/advanced_pdf.cpp	2015-10-14 10:10:02.823272511 +0200
-@@ -23,6 +23,7 @@
+Index: qt-6.7.0/advanced_pdf.cpp
+===================================================================
+--- qt-6.7.0.orig/advanced_pdf.cpp
++++ qt-6.7.0/advanced_pdf.cpp
+@@ -11,6 +11,7 @@
   *   - Removal of Q_XXX_EXPORT
   * - Change of the PDF Producer property
   * - Use of DeviceCMYK color space in PDF output
 + * - Distinct paint engine type
   */
- /****************************************************************************
- **
-@@ -1421,9 +1422,11 @@
+ // Copyright (C) 2016 The Qt Company Ltd.
+ // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+@@ -1356,9 +1357,11 @@ bool AdvancedPdfEngine::newPage()
      return true;
  }
  
@@ -22,18 +23,19 @@ diff -urw a/advanced_pdf.cpp b/advanced_pdf.cpp
  }
  
  void AdvancedPdfEngine::setResolution(int resolution)
-diff -urw a/advanced_pdf_p.h b/advanced_pdf_p.h
---- a/advanced_pdf_p.h	2015-10-14 10:09:43.463176489 +0200
-+++ b/advanced_pdf_p.h	2015-10-14 10:10:02.823272511 +0200
-@@ -21,6 +21,7 @@
+Index: qt-6.7.0/advanced_pdf_p.h
+===================================================================
+--- qt-6.7.0.orig/advanced_pdf_p.h
++++ qt-6.7.0/advanced_pdf_p.h
+@@ -9,6 +9,7 @@
   *   - Renaming of selected files, classes, members and macros
   *   - Adjustment of include statements
   *   - Removal of Q_XXX_EXPORT
 + *   - Distinct paint engine type
   */
- /****************************************************************************
- **
-@@ -165,6 +166,13 @@
+ // Copyright (C) 2016 The Qt Company Ltd.
+ // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+@@ -145,6 +146,13 @@ class AdvancedPdfEngine : public QPaintE
      Q_DECLARE_PRIVATE(AdvancedPdfEngine)
      friend class AdvancedPdfWriter;
  public:
@@ -44,6 +46,6 @@ diff -urw a/advanced_pdf_p.h b/advanced_pdf_p.h
 +        }
 +    } PaintEngineType;
 +
-     AdvancedPdfEngine();
-     AdvancedPdfEngine(AdvancedPdfEnginePrivate &d);
-     ~AdvancedPdfEngine() {}
+     // keep in sync with QPagedPaintDevice::PdfVersion and AdvancedPdfEnginePrivate::writeHeader()::mapping!
+     enum PdfVersion
+     {

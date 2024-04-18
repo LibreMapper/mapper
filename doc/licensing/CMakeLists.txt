@@ -54,8 +54,9 @@ set(LICENSING_NO_ATTRIBUTION "" CACHE STRING
 
 # Import the targets of all found packages into this scope.
 get_cmake_property(packages PACKAGES_FOUND)
+find_package(Qt6 COMPONENTS REQUIRED Network)
 foreach(package ${packages})
-	find_package("${package}" QUIET)
+	find_package("${package}")
 endforeach()
 
 
@@ -68,23 +69,16 @@ set(third_party_components
   qtimageformats
   qttranslations
 )
-if(TARGET Qt5::AndroidExtras)
+if(TARGET Qt6::AndroidExtras)
 	list(APPEND third_party_components qtandroidextras)
 endif()
-if(TARGET Qt5::Positioning)
+if(TARGET Qt6::Positioning)
 	list(APPEND third_party_components qtlocation)
 endif()
-if(TARGET Qt5::Sensors)
+if(TARGET Qt6::Sensors)
 	list(APPEND third_party_components qtsensors)
-	if(NOT TARGET Qt5::QGeoPositionInfoSourceFactorySerialNmea
-	   AND EXISTS "${Qt5Positioning_DIR}/Qt5Positioning_QGeoPositionInfoSourceFactorySerialNmea.cmake")
-		include("${Qt5Positioning_DIR}/Qt5Positioning_QGeoPositionInfoSourceFactorySerialNmea.cmake")
-	endif()
-	if(TARGET Qt5::QGeoPositionInfoSourceFactorySerialNmea)
-		find_package(Qt5SerialPort QUIET)
-	endif()
 endif()
-if(TARGET Qt5::SerialPort)
+if(TARGET Qt6::SerialPort)
 	list(APPEND third_party_components qtserialport)
 endif()
 if(TARGET QtSingleApplication)

@@ -7,7 +7,7 @@
  
 message(STATUS "Configuring ${PROJECT_NAME} translations")
 
-find_package(Qt5LinguistTools REQUIRED)
+find_package(Qt6 COMPONENTS LinguistTools REQUIRED)
 
 # Translation files which are updated by lupdate.
 set(Mapper_translations
@@ -142,7 +142,7 @@ add_custom_command(OUTPUT "${hu_ts}"
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
 )
 
-qt5_add_translation(translations_qm ${Mapper_translations_for_qt} ${map_symbols_translations} ${qt_translations})
+qt6_add_translation(translations_qm ${Mapper_translations_for_qt} ${map_symbols_translations} ${qt_translations})
 
 # A target which builds all translations.
 add_custom_target(Mapper_translations ALL

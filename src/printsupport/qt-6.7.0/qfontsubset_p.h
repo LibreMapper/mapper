@@ -1,33 +1,17 @@
-/**
+/* SPDX-License-Identifier: GPL-3.0-only
+ *
  * This file is part of LibreMapper.
  *
- * This is a modified version of a file from the Qt Toolkit.
- * You can redistribute it and/or modify it under the terms of
- * the GNU General Public License, version 3, as published by
- * the Free Software Foundation.
- *
- * OpenOrienteering is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with OpenOrienteering.  If not, see <http://www.gnu.org/licenses/>
- *
  * Changes:
- * 2015-10-18 Kai Pastor <dg0yt@darc.de>
+ * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
  *   - Adjustment of include statements
  *   - Removal of Q_XXX_EXPORT
  */
-/****************************************************************************
-**
-** Copyright (C) 2015 The Qt Company Ltd.
-** Contact: http://www.qt.io/licensing/
-**
-****************************************************************************/
+// Copyright (C) 2016 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
 
 #ifndef QFONTSUBSET_P_H
 #define QFONTSUBSET_P_H
@@ -43,6 +27,7 @@
 // We mean it.
 //
 
+#include <QtGui/private/qtguiglobal_p.h>
 #include <private/qfontengine_p.h>
 
 QT_BEGIN_NAMESPACE
@@ -50,7 +35,7 @@ QT_BEGIN_NAMESPACE
 class QFontSubset
 {
 public:
-    explicit QFontSubset(QFontEngine *fe, int obj_id = 0)
+    explicit QFontSubset(QFontEngine *fe, uint obj_id = 0)
         : object_id(obj_id), noEmbed(false), fontEngine(fe), downloaded_glyphs(0), standard_font(false)
     {
         fontEngine->ref.ref();
@@ -67,22 +52,21 @@ public:
 #ifndef QT_NO_PDF
     QByteArray widthArray() const;
     QByteArray createToUnicodeMap() const;
-    QVector<int> getReverseMap() const;
-    QByteArray glyphName(unsigned int glyph, const QVector<int> &reverseMap) const;
+    QList<int> getReverseMap() const;
 
     static QByteArray glyphName(unsigned short unicode, bool symbol);
 
-    int addGlyph(int index);
+    qsizetype addGlyph(uint index);
 #endif
-    const int object_id;
+    const uint object_id;
     bool noEmbed;
     QFontEngine *fontEngine;
-    QList<int> glyph_indices;
+    QList<uint> glyph_indices;
     mutable int downloaded_glyphs;
     mutable bool standard_font;
-    int nGlyphs() const { return glyph_indices.size(); }
+    qsizetype nGlyphs() const { return glyph_indices.size(); }
     mutable QFixed emSquare;
-    mutable QVector<QFixed> widths;
+    mutable QList<QFixed> widths;
 };
 
 QT_END_NAMESPACE

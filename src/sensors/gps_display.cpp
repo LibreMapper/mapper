@@ -137,8 +137,7 @@ GPSDisplay::GPSDisplay(MapWidget* widget, const Georeferencing& georeferencing, 
 	source->setPreferredPositioningMethods(QGeoPositionInfoSource::SatellitePositioningMethods);
 	source->setUpdateInterval(1000);
 	connect(source, &QGeoPositionInfoSource::positionUpdated, this, &GPSDisplay::positionUpdated, Qt::QueuedConnection);
-	connect(source, QOverload<QGeoPositionInfoSource::Error>::of(&QGeoPositionInfoSource::error), this, &GPSDisplay::error);
-	connect(source, &QGeoPositionInfoSource::updateTimeout, this, &GPSDisplay::updateTimeout);
+	connect(source, &QGeoPositionInfoSource::errorOccurred, this, &GPSDisplay::error);
 #endif
 
 	widget->setGPSDisplay(this);
@@ -400,17 +399,6 @@ void GPSDisplay::error()
 		}
 	}
 #endif
-}
-
-void GPSDisplay::updateTimeout()
-{
-	// Lost satellite fix
-	if (!tracking_lost)
-	{
-		tracking_lost = true;
-		emit positionUpdatesInterrupted();
-		updateMapWidget();
-	}
 }
 
 MapCoordF GPSDisplay::calcLatestGPSCoord(bool& ok)

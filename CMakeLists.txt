@@ -154,7 +154,7 @@ endif()
 
 include(CTest)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 if(APPLE AND Mapper_MACOSX_VERSION)
@@ -226,13 +226,7 @@ if(Mapper_USE_GDAL)
 	find_package(GDAL 2 REQUIRED)
 endif()
 
-find_package(Qt5Core 5.5 REQUIRED)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050500)
-if (ANDROID AND "${Qt5Core_VERSION}" VERSION_LESS 5.12.1)
-	message(FATAL_ERROR "At least Qt 5.12.1 is required to build for Android")
-elseif ("${Qt5Core_VERSION}" VERSION_LESS 5.8.0)
-	add_definitions("-D'Q_FALLTHROUGH()=(void)0'")
-endif()
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 include("TestBigEndian")
 test_big_endian(big_endian)

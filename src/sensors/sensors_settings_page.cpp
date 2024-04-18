@@ -43,12 +43,9 @@ SensorsSettingsPage::SensorsSettingsPage(QWidget* parent)
 	form_layout->addRow(tr("Source:"), position_source_box);
 	
 #ifdef QT_SERIALPORT_LIB
-	auto const sources = QGeoPositionInfoSource::availableSources();
-	if (sources.contains(QLatin1String("serialnmea"))
-	    || sources.contains(QLatin1String("NMEA (OpenOrienteering)")))
+	if (QGeoPositionInfoSource::availableSources().contains(QLatin1String("nmea")))
 	{
 		nmea_serialport_box = new QComboBox();
-		nmea_serialport_box->setEditable(true);
 		form_layout->addRow(tr("Serial port (NMEA):"), nmea_serialport_box);
 	}
 #endif
@@ -100,12 +97,9 @@ void SensorsSettingsPage::updateWidgets()
 		if (display_name.isEmpty())
 			//: Position source
 			display_name = tr("Default");
-		else if (display_name == QLatin1String("serialnmea"))
+		else if (display_name == QLatin1String("nmea"))
 			//: Position source
 			display_name = tr("NMEA (Qt)");
-		else if (display_name == QLatin1String("NMEA (OpenOrienteering)"))
-			//: Position source
-			display_name = tr("NMEA (OpenOrienteering)");
 		else if (display_name == QLatin1String("Windows"))
 			//: Position source; product name, do not translate literally.
 			display_name = tr("Windows");

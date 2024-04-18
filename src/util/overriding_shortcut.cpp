@@ -52,9 +52,9 @@ bool OverridingShortcut::eventFilter(QObject* watched, QEvent* event)
 	         && isEnabled() && key().count() == 1)
 	{
 		auto* key_event = static_cast<QKeyEvent*>(event);
-		if ((key_event->key() | int(key_event->modifiers())) == key()[0])
+		if (key_event->keyCombination() == key()[0])
 		{
-			QShortcutEvent se(key(), id());
+			QShortcutEvent se(key(), this);
 			event->setAccepted(QShortcut::event(&se));
 			return event->isAccepted();
 		}

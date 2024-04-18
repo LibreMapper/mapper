@@ -673,7 +673,7 @@ void SymbolRenderWidget::dragMoveEvent(QDragMoveEvent* event)
 	if (event->mimeData()->hasFormat(MimeType::OpenOrienteeringSymbolIndex()))
 	{
 		int row, pos_in_row;
-		if (!dropPosition(event->pos(), row, pos_in_row))
+		if (!dropPosition(event->position().toPoint(), row, pos_in_row))
 		{
 			if (last_drop_pos >= 0 && last_drop_row >= 0)
 			{
@@ -711,7 +711,7 @@ void SymbolRenderWidget::dropEvent(QDropEvent* event)
 	if (event->proposedAction() == Qt::MoveAction)
 	{
 		int row, pos_in_row;
-		if (!dropPosition(event->pos(), row, pos_in_row))
+		if (!dropPosition(event->position().toPoint(), row, pos_in_row))
 			return;
 		
 		int pos = row * icons_per_row + pos_in_row;

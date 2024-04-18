@@ -43,13 +43,13 @@ void PanTool::dragStart()
 void PanTool::dragMove()
 {
 	MapView* view = mapWidget()->getMapView();
-	view->setPanOffset(cur_pos - click_pos);
+	view->setPanOffset((cur_pos - click_pos).toPoint());
 }
 
 void PanTool::dragFinish()
 {
 	MapView* view = mapWidget()->getMapView();
-	view->finishPanning(cur_pos - click_pos);
+	view->finishPanning((cur_pos - click_pos).toPoint());
 	
 	cur_map_widget->setCursor(Qt::OpenHandCursor);
 }

@@ -416,10 +416,10 @@ QRectF PaintOnTemplateFeature::viewedRect() const
 
 QToolButton* PaintOnTemplateFeature::buttonForPaintAction()
 {
-	auto const widgets = paintAction()->associatedWidgets();
-	for (auto* w : widgets)
+	auto const objects = paintAction()->associatedObjects();
+	for (auto* object : objects)
 	{
-		if (auto* button = qobject_cast<QToolButton*>(w))
+		if (auto* button = qobject_cast<QToolButton*>(object))
 			return button;
 	}
 	return nullptr;

@@ -20,18 +20,21 @@ FakePositionPlugin::FakePositionPlugin(QObject* parent)
 FakePositionPlugin::~FakePositionPlugin() = default;
 
 
-QGeoAreaMonitorSource* FakePositionPlugin::areaMonitor(QObject* /* parent */)
+QGeoAreaMonitorSource* FakePositionPlugin::areaMonitor(QObject* /* parent */, const QVariantMap& parameters)
 {
+	Q_UNUSED(parameters)
 	return nullptr;
 }
 
-QGeoPositionInfoSource* FakePositionPlugin::positionInfoSource(QObject* parent)
+QGeoPositionInfoSource* FakePositionPlugin::positionInfoSource(QObject* parent, const QVariantMap& parameters)
 {
+	Q_UNUSED(parameters)
 	return new FakePositionSource(parent);
 }
 
-QGeoSatelliteInfoSource* FakePositionPlugin::satelliteInfoSource(QObject* /* parent */)
+QGeoSatelliteInfoSource* FakePositionPlugin::satelliteInfoSource(QObject* /* parent */, const QVariantMap& parameters)
 {
+	Q_UNUSED(parameters)
 	return nullptr;
 }
 

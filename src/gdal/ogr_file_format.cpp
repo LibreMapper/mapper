@@ -1193,13 +1193,13 @@ Object* OgrFileImport::importPointGeometry(OGRFeatureH feature, OGRGeometryH geo
 			object->setText(label);
 			
 			bool ok;
-			auto anchor = QStringRef(&description, 1, 2).toInt(&ok);
+			auto anchor = description.sliced(1, 2).toInt(&ok);
 			if (ok)
 			{
 				applyLabelAnchor(anchor, object);
 			}
 				
-			auto angle = QStringRef(&description, 3, split-3).toDouble(&ok);
+			auto angle = description.sliced(3, split-3).toDouble(&ok);
 			if (ok)
 			{
 				object->setRotation(qDegreesToRadians(angle));

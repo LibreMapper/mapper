@@ -9,11 +9,11 @@ message(STATUS "Configuring ${PROJECT_NAME} packaging")
 option(Mapper_PACKAGE_QT_ALL_TRANSLATIONS "Add all Qt translations to the packages" OFF)
 
 function(deploy_qt_translations basename)
-	find_package(Qt5LinguistTools REQUIRED QUIET) # for Qt5::lconvert
+	find_package(Qt6 COMPONENTS LinguistTools REQUIRED QUIET) # for Qt6::lconvert
 	
 	if(NOT Qt5Translations_DIR)
 		find_package(Qt5Core REQUIRED QUIET)
-		get_target_property(QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
+		get_target_property(QMAKE_EXECUTABLE Qt::qmake IMPORTED_LOCATION)
 		execute_process(
 		  COMMAND "${QMAKE_EXECUTABLE}" -query QT_INSTALL_TRANSLATIONS
 		  OUTPUT_VARIABLE Qt5Translations_DIR
@@ -54,8 +54,8 @@ function(deploy_qt_translations basename)
 			endif()
 		endforeach()
 		add_custom_command(OUTPUT "${basename_file}"
-		  COMMAND Qt5::lconvert -o "${basename_file}" ${input_files}
-		  DEPENDS Qt5::lconvert ${input_files}
+		  COMMAND Qt::lconvert -o "${basename_file}" ${input_files}
+		  DEPENDS Qt::lconvert ${input_files}
 		)
 		list(APPEND generated_translations "${basename_file}")
 		install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${basename_file}" DESTINATION "${MAPPER_DATA_DESTINATION}/translations")
@@ -65,9 +65,9 @@ endfunction(deploy_qt_translations)
 
 
 
-find_package(Qt5Core REQUIRED QUIET)
+find_package(Qt6 COMPONENTS Core REQUIRED QUIET)
 if(NOT QT_LIBRARY_DIR)
-	get_target_property(_qt5core_lib Qt5::Core IMPORTED_LOCATION_RELEASE)
+	get_target_property(_qt5core_lib Qt::Core IMPORTED_LOCATION_RELEASE)
 	get_filename_component(QT_LIBRARY_DIR ${_qt5core_lib} PATH)
 	string(REGEX REPLACE "/[^/]*\\.framework" "" QT_LIBRARY_DIR "${QT_LIBRARY_DIR}")
 endif()
@@ -338,7 +338,7 @@ if(Mapper_PACKAGE_QT)
 	endif()
 	
 	find_package(Qt5Positioning QUIET)
-	if(TARGET Qt5::Positioning)
+	if(TARGET Qt::Positioning)
 		list(APPEND MAPPER_QT_MODULES SerialPort) # Always with serialport NMEA
 	endif()
 	
@@ -350,7 +350,7 @@ if(Mapper_PACKAGE_QT)
 			# unless plugin class name ends in Plugin
 			file(GLOB pluginTargets "${Qt5Positioning_DIR}/Qt5Positioning_*.cmake")
 			foreach(file ${pluginTargets})
-				string(REGEX REPLACE "^.*/Qt5Positioning_([^/]*)\\.cmake" "Qt5::\\1" lib "${file}")
+				string(REGEX REPLACE "^.*/Qt5Positioning_([^/]*)\\.cmake" "Qt::\\1" lib "${file}")
 				if(NOT file MATCHES "Plugin.cmake"
 				   AND NOT "${Qt5Positioning_PLUGINS}" MATCHES "${lib}")
 					include(${file})

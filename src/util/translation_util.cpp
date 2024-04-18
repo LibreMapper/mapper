@@ -91,7 +91,7 @@ TranslationUtil::TranslationUtil(const QString& code, QString translation_file)
 	}
 	
 	QString translation_name = QLatin1String("qt_") + language.code;
-	if (!qt_translator.load(translation_name, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+	if (!qt_translator.load(translation_name, QLibraryInfo::path(QLibraryInfo::TranslationsPath)))
 		load(qt_translator, translation_name);
 	
 	load(app_translator, translation_file);

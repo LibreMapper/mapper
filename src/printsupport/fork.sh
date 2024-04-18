@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBDIR=qt-5.5.1
+SUBDIR=qt-6.7.0
 
 if [ -n "$1" -a -d "$1/qtbase/src" ] ; then
 	SOURCE_DIR=$1/qtbase/src

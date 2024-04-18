@@ -122,7 +122,13 @@ template <typename ResultType, typename FunctorType, typename ... Input>
 Job<ResultType> run(const FunctorType& functor, Input&& ... args)
 {
 	Progress progress;
-	auto future = QtConcurrent::run(functor, &FunctorType::operator(), std::forward<Input>(args)..., progress);
+	// \todo This lambda forces QtConcurrent into the 'basic mode' in the run()
+	// helper. Whe we pass the params to QtConcurrent::run(), it requires the
+	// first param to be a QPromise<T> type. In general, the QPromise together
+	// with QFutureWatcher does the same job as ProgressObserver. Rewrite this
+	// part and drop ProgressObserver.
+	auto call_functor = [&functor, &args ..., &progress]() -> ResultType { return functor(std::forward<Input>(args) ..., progress); };
+	auto future = QtConcurrent::run(call_functor);
 	return {std::move(future), progress};
 }
 

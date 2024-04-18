@@ -7,6 +7,7 @@
  */
 
 #include "compass.h"
+#include "compass_p.h"
 
 #include <QtGlobal>  // IWYU pragma: keep
 #include <QMetaMethod>
@@ -227,300 +228,258 @@ namespace SensorHelpers {
     }
 	
 	
-}  // namespace LibreMapper
+}  // namespace SensorHelpers
 
-
-
-class CompassPrivate : public QGyroscopeFilter
+CompassPrivate::CompassPrivate(Compass* compass)
+    : thread(this)
+    , compass(compass)
+    , enabled(false)
+    , latest_azimuth(-1)
 {
-public:
-	CompassPrivate(Compass* compass)
-	 : thread(this)
-	 , compass(compass)
-	 , enabled(false)
-	 , latest_azimuth(-1)
-	{
-		// Try to filter out non-gravity sources of acceleration
-		if (accelerometer.isFeatureSupported(QSensor::AccelerationMode))
-			accelerometer.setAccelerationMode(QAccelerometer::Gravity);
+	// Try to filter out non-gravity sources of acceleration
+	if (accelerometer.isFeatureSupported(QSensor::AccelerationMode))
+		accelerometer.setAccelerationMode(QAccelerometer::Gravity);
 
-		// Try to filter out local magnetic interference
-		magnetometer.setReturnGeoValues(true);
-		
-		// Check if a gyroscope is available
-		gyro_available = ! QSensor::sensorsForType(QGyroscope::type).empty();
-		if (gyro_available)
-			gyroscope.addFilter(this);
-		
-		thread.start();
-	}
-	
-	~CompassPrivate() override
+	// Try to filter out local magnetic interference
+	magnetometer.setReturnGeoValues(true);
+
+	// Check if a gyroscope is available
+	gyro_available = ! QSensor::sensorsForType(QGyroscope::sensorType).empty();
+	if (gyro_available)
+		gyroscope.addFilter(this);
+
+	thread.start();
+}
+
+CompassPrivate::~CompassPrivate()
+{
+	thread.keep_running = false;
+	thread.condition.wakeAll();
+	thread.wait();
+}
+
+void CompassPrivate::enable(bool enabled)
+{
+	if (enabled)
 	{
-		thread.keep_running = false;
+		last_gyro_timestamp = 0;
+		gyro_orientation_initialized = false;
+
+		accelerometer.start();
+		magnetometer.start();
+		gyroscope.start();
+
+		thread.wait_mutex.lock();
+		this->enabled = true;
 		thread.condition.wakeAll();
-		thread.wait();
+		thread.wait_mutex.unlock();
 	}
-	
-	void enable(bool enabled)
+	else
 	{
-		if (enabled)
-		{
-			last_gyro_timestamp = 0;
-			gyro_orientation_initialized = false;
-			
-			accelerometer.start();
-			magnetometer.start();
-			gyroscope.start();
-			
-			thread.wait_mutex.lock();
-			this->enabled = true;
-			thread.condition.wakeAll();
-			thread.wait_mutex.unlock();
-		}
-		else
-		{
-			this->enabled = false;
-			gyroscope.stop();
-			magnetometer.stop();
-			accelerometer.stop();
-		}
+		this->enabled = false;
+		gyroscope.stop();
+		magnetometer.stop();
+		accelerometer.stop();
 	}
-	
-	float getLatestAzimuth()
-	{
-		return latest_azimuth;
-	}
-	
-	/** Called on new gyro readings */
-	bool filter(QGyroscopeReading* reading) override
-	{
-		if (! gyro_orientation_initialized)
-			return false;
-		
-		if (last_gyro_timestamp > 0)
-		{
-			// Calculate rotation matrix from gyro reading according to Android developer documentation
-			const float EPSILON = 1e-9f;
-			
-			const float microseconds_to_seconds = 1.0f / (1000*1000);
-			const float dt = (reading->timestamp() - last_gyro_timestamp) * microseconds_to_seconds;
-			// Axis of the rotation sample, not normalized yet.
-			const float deg_to_rad = M_PI / 180.0f;
-			float axisX = deg_to_rad * reading->x();
-			float axisY = deg_to_rad * reading->y();
-			float axisZ = deg_to_rad * reading->z();
+}
 
-			// Calculate the angular speed of the sample
-			float omegaMagnitude = sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
+float CompassPrivate::getLatestAzimuth()
+{
+	return latest_azimuth;
+}
 
-			// Normalize the rotation vector if it's big enough to get the axis
-			if (omegaMagnitude > EPSILON) {
-				axisX /= omegaMagnitude;
-				axisY /= omegaMagnitude;
-				axisZ /= omegaMagnitude;
-			}
+/** Called on new gyro readings */
+bool CompassPrivate::filter(QGyroscopeReading* reading)
+{
+	if (! gyro_orientation_initialized)
+		return false;
 
-			// Integrate around this axis with the angular speed by the timestep
-			// in order to get a delta rotation from this sample over the timestep
-			// We will convert this axis-angle representation of the delta rotation
-			// into a quaternion before turning it into the rotation matrix.
-			float thetaOverTwo = omegaMagnitude * dt / 2.0f;
-			float sinThetaOverTwo = qSin(thetaOverTwo);
-			float cosThetaOverTwo = qCos(thetaOverTwo);
-			float deltaRotationVector[4];
-			deltaRotationVector[0] = sinThetaOverTwo * axisX;
-			deltaRotationVector[1] = sinThetaOverTwo * axisY;
-			deltaRotationVector[2] = sinThetaOverTwo * axisZ;
-			deltaRotationVector[3] = cosThetaOverTwo;
-			
-			float R[9];
-			SensorHelpers::getRotationMatrixFromVector(R, deltaRotationVector);
-			
-			float temp[9];
-			gyro_mutex.lock();
-			SensorHelpers::matrixMultiplication(gyro_rotation_matrix, R, temp);
-			memcpy(gyro_rotation_matrix, temp, 9 * sizeof(float));
-			SensorHelpers::getOrientation(gyro_rotation_matrix, gyro_orientation);
-			gyro_mutex.unlock();
-		}
-		
-		last_gyro_timestamp = reading->timestamp();
-		return true;
-	}
-	
-private:
-	/// \todo Review QThread inheritance / Q_OBJECT macro usage
-	class SensorThread : public QThread
+	if (last_gyro_timestamp > 0)
 	{
-	// no Q_OBJECT as it is not required here and was problematic in .cpp
-	//Q_OBJECT
-	public:
-		SensorThread(CompassPrivate* p)
-		 : keep_running(true)
-		 , p(p)
-		{
+		// Calculate rotation matrix from gyro reading according to Android developer documentation
+		const float EPSILON = 1e-9f;
+
+		const float microseconds_to_seconds = 1.0f / (1000*1000);
+		const float dt = (reading->timestamp() - last_gyro_timestamp) * microseconds_to_seconds;
+		// Axis of the rotation sample, not normalized yet.
+		const float deg_to_rad = M_PI / 180.0f;
+		float axisX = deg_to_rad * reading->x();
+		float axisY = deg_to_rad * reading->y();
+		float axisZ = deg_to_rad * reading->z();
+
+		// Calculate the angular speed of the sample
+		float omegaMagnitude = sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
+
+		// Normalize the rotation vector if it's big enough to get the axis
+		if (omegaMagnitude > EPSILON) {
+			axisX /= omegaMagnitude;
+			axisY /= omegaMagnitude;
+			axisZ /= omegaMagnitude;
 		}
-		
-		float fuseOrientationCoefficient(float gyro, float acc_mag)
+
+		// Integrate around this axis with the angular speed by the timestep
+		// in order to get a delta rotation from this sample over the timestep
+		// We will convert this axis-angle representation of the delta rotation
+		// into a quaternion before turning it into the rotation matrix.
+		float thetaOverTwo = omegaMagnitude * dt / 2.0f;
+		float sinThetaOverTwo = qSin(thetaOverTwo);
+		float cosThetaOverTwo = qCos(thetaOverTwo);
+		float deltaRotationVector[4];
+		deltaRotationVector[0] = sinThetaOverTwo * axisX;
+		deltaRotationVector[1] = sinThetaOverTwo * axisY;
+		deltaRotationVector[2] = sinThetaOverTwo * axisZ;
+		deltaRotationVector[3] = cosThetaOverTwo;
+
+		float R[9];
+		SensorHelpers::getRotationMatrixFromVector(R, deltaRotationVector);
+
+		float temp[9];
+		gyro_mutex.lock();
+		SensorHelpers::matrixMultiplication(gyro_rotation_matrix, R, temp);
+		memcpy(gyro_rotation_matrix, temp, 9 * sizeof(float));
+		SensorHelpers::getOrientation(gyro_rotation_matrix, gyro_orientation);
+		gyro_mutex.unlock();
+	}
+
+	last_gyro_timestamp = reading->timestamp();
+	return true;
+}
+
+CompassPrivate::SensorThread::SensorThread(CompassPrivate* p)
+    : keep_running(true)
+    , p(p)
+{
+}
+
+float CompassPrivate::SensorThread::fuseOrientationCoefficient(float gyro, float acc_mag)
+{
+	const float FILTER_COEFFICIENT = 0.98f;
+	const float ONE_MINUS_COEFF = 1.0f - FILTER_COEFFICIENT;
+
+	float result;
+	// Correctly handle wrap-around
+	if (gyro < -0.5 * M_PI && acc_mag > 0.0) {
+		result = (float) (FILTER_COEFFICIENT * (gyro + 2.0 * M_PI) + ONE_MINUS_COEFF * acc_mag);
+		result -= (result > M_PI) ? 2.0 * M_PI : 0;
+	}
+	else if (acc_mag < -0.5 * M_PI && gyro > 0.0) {
+		result = (float) (FILTER_COEFFICIENT * gyro + ONE_MINUS_COEFF * (acc_mag + 2.0 * M_PI));
+		result -= (result > M_PI)? 2.0 * M_PI : 0;
+	}
+	else {
+		result = FILTER_COEFFICIENT * gyro + ONE_MINUS_COEFF * acc_mag;
+	}
+	return result;
+}
+
+void CompassPrivate::SensorThread::filter()
+{
+	if (p->accelerometer.reading() == nullptr ||
+	    p->magnetometer.reading() == nullptr)
+		return;
+
+	// Make copies of the sensor readings (and hope that the reading thread
+	// does not overwrite parts of them while they are being copied)
+	float acceleration[3] = {
+	    (float) p->accelerometer.reading()->x(),
+	    (float) p->accelerometer.reading()->y(),
+	    (float) p->accelerometer.reading()->z()
+	};
+	float geomagnetic[3] = {
+	    (float) p->magnetometer.reading()->x(),
+	    (float) p->magnetometer.reading()->y(),
+	    (float) p->magnetometer.reading()->z()
+	};
+
+	// Calculate orientation from accelerometer and magnetometer (acc_mag_orientation)
+	float R[9];
+	bool ok = SensorHelpers::getRotationMatrix(R, acceleration, geomagnetic);
+	if (!ok)
+		return;
+
+	float acc_mag_orientation[3];
+	SensorHelpers::getOrientation(R, acc_mag_orientation);
+
+	// If gyro not initialized yet (or we do not have a gyro):
+	// use acc_mag_orientation (and initialize gyro if present)
+	float azimuth;
+	if (! p->gyro_available || ! p->gyro_orientation_initialized)
+	{
+		if (p->gyro_available)
 		{
-			const float FILTER_COEFFICIENT = 0.98f;
-			const float ONE_MINUS_COEFF = 1.0f - FILTER_COEFFICIENT;
-			
-			float result;
-			// Correctly handle wrap-around
-            if (gyro < -0.5 * M_PI && acc_mag > 0.0) {
-            	result = (float) (FILTER_COEFFICIENT * (gyro + 2.0 * M_PI) + ONE_MINUS_COEFF * acc_mag);
-        		result -= (result > M_PI) ? 2.0 * M_PI : 0;
-            }
-            else if (acc_mag < -0.5 * M_PI && gyro > 0.0) {
-            	result = (float) (FILTER_COEFFICIENT * gyro + ONE_MINUS_COEFF * (acc_mag + 2.0 * M_PI));
-            	result -= (result > M_PI)? 2.0 * M_PI : 0;
-            }
-            else {
-            	result = FILTER_COEFFICIENT * gyro + ONE_MINUS_COEFF * acc_mag;
-            }
-            return result;
+			memcpy(p->gyro_orientation, acc_mag_orientation, 3 * sizeof(float));
+			SensorHelpers::getRotationMatrixFromOrientation(p->gyro_orientation, p->gyro_rotation_matrix);
+			p->gyro_orientation_initialized = true;
 		}
-		
-		void filter()
-		{
-			if (p->accelerometer.reading() == nullptr ||
-				p->magnetometer.reading() == nullptr)
-				return;
-			
-			// Make copies of the sensor readings (and hope that the reading thread
-			// does not overwrite parts of them while they are being copied)
-			float acceleration[3] = {
-				(float) p->accelerometer.reading()->x(),
-				(float) p->accelerometer.reading()->y(),
-				(float) p->accelerometer.reading()->z()
-			};
-			float geomagnetic[3] = {
-				(float) p->magnetometer.reading()->x(),
-				(float) p->magnetometer.reading()->y(),
-				(float) p->magnetometer.reading()->z()
-			};
-			
-			// Calculate orientation from accelerometer and magnetometer (acc_mag_orientation)
-			float R[9];
-			bool ok = SensorHelpers::getRotationMatrix(R, acceleration, geomagnetic);
-			if (!ok)
-				return;
-			
-			float acc_mag_orientation[3];
-			SensorHelpers::getOrientation(R, acc_mag_orientation);
-			
-			// If gyro not initialized yet (or we do not have a gyro):
-			// use acc_mag_orientation (and initialize gyro if present)
-			float azimuth;
-			if (! p->gyro_available || ! p->gyro_orientation_initialized)
-			{
-				if (p->gyro_available)
-				{
-					memcpy(p->gyro_orientation, acc_mag_orientation, 3 * sizeof(float));
-					SensorHelpers::getRotationMatrixFromOrientation(p->gyro_orientation, p->gyro_rotation_matrix);
-					p->gyro_orientation_initialized = true;
-				}
-				
-				azimuth = acc_mag_orientation[0];
-			}
-			else
-			{
-				// Filter acc_mag_orientation and gyro_orientation to fused_orientation
-				p->gyro_mutex.lock();
-				float fused_orientation[3];
-				fused_orientation[0] = fuseOrientationCoefficient(p->gyro_orientation[0], acc_mag_orientation[0]);
-				fused_orientation[1] = fuseOrientationCoefficient(p->gyro_orientation[1], acc_mag_orientation[1]);
-				fused_orientation[2] = fuseOrientationCoefficient(p->gyro_orientation[2], acc_mag_orientation[2]);
-				
-				// Write back fused_orientation to gyro_orientation
-				SensorHelpers::getRotationMatrixFromOrientation(fused_orientation, p->gyro_rotation_matrix);
-				memcpy(p->gyro_orientation, fused_orientation, 3 * sizeof(float));
-				p->gyro_mutex.unlock();
-				
-				azimuth = fused_orientation[0];
-			}
-			
-			p->latest_azimuth = 180 * azimuth / M_PI;
+
+		azimuth = acc_mag_orientation[0];
+	}
+	else
+	{
+		// Filter acc_mag_orientation and gyro_orientation to fused_orientation
+		p->gyro_mutex.lock();
+		float fused_orientation[3];
+		fused_orientation[0] = fuseOrientationCoefficient(p->gyro_orientation[0], acc_mag_orientation[0]);
+		fused_orientation[1] = fuseOrientationCoefficient(p->gyro_orientation[1], acc_mag_orientation[1]);
+		fused_orientation[2] = fuseOrientationCoefficient(p->gyro_orientation[2], acc_mag_orientation[2]);
+
+		// Write back fused_orientation to gyro_orientation
+		SensorHelpers::getRotationMatrixFromOrientation(fused_orientation, p->gyro_rotation_matrix);
+		memcpy(p->gyro_orientation, fused_orientation, 3 * sizeof(float));
+		p->gyro_mutex.unlock();
+
+		azimuth = fused_orientation[0];
+	}
+
+	p->latest_azimuth = 180 * azimuth / M_PI;
 #ifdef Q_OS_ANDROID
-			// Adjust for display rotation
-			jint orientation = QAndroidJniObject::callStaticMethod<jint>(
-			                    "org/openorienteering/mapper/MapperActivity",
-                                "getDisplayRotation");
-			switch (orientation)
-			{
-			case 1:
-				p->latest_azimuth = (p->latest_azimuth < 90) ? (p->latest_azimuth + 90) : (p->latest_azimuth - 90);
-				break;
-			case 2:
-				p->latest_azimuth = (p->latest_azimuth < 180) ? (p->latest_azimuth + 180) : (p->latest_azimuth - 180);
-				break;
-			case 3:
-				p->latest_azimuth = (p->latest_azimuth < 270) ? (p->latest_azimuth + 270) : (p->latest_azimuth - 270);
-				break;
-			default:
-				;// nothing
-			}
+	// Adjust for display rotation
+	jint orientation = QAndroidJniObject::callStaticMethod<jint>(
+	                       "org/openorienteering/mapper/MapperActivity",
+	                       "getDisplayRotation");
+	switch (orientation)
+	{
+	case 1:
+		p->latest_azimuth = (p->latest_azimuth < 90) ? (p->latest_azimuth + 90) : (p->latest_azimuth - 90);
+		break;
+	case 2:
+		p->latest_azimuth = (p->latest_azimuth < 180) ? (p->latest_azimuth + 180) : (p->latest_azimuth - 180);
+		break;
+	case 3:
+		p->latest_azimuth = (p->latest_azimuth < 270) ? (p->latest_azimuth + 270) : (p->latest_azimuth - 270);
+		break;
+	default:
+		;// nothing
+	}
 #endif
 
-			// Send update to receivers
-			p->compass->emitAzimuthChanged(p->latest_azimuth);
-		}
-		
-		void run() override
-		{
-			// Wait until sensors are initialized
-			QThread::msleep(1000);
-			
-			while (keep_running)
-			{
-				if (! p->enabled)
-				{
-					wait_mutex.lock();
-					if (! p->enabled)
-						condition.wait(&wait_mutex);
-					wait_mutex.unlock();
-					
-					// May do initializations after (re-)enabling here
-				}
-				
-				filter();
-				
-				QThread::msleep(30);
-			}
-		}
-		
-		QMutex wait_mutex;
-		QWaitCondition condition;
-		bool keep_running;
-		CompassPrivate* p;
-	};
-	
-	QAccelerometer accelerometer;
-	QMagnetometer magnetometer;
-	QGyroscope gyroscope;
-	bool gyro_available;
-	float gyro_orientation[3];
-	float gyro_rotation_matrix[9];
-	quint64 last_gyro_timestamp;
-	bool gyro_orientation_initialized;
-	QMutex gyro_mutex;
-	
-	SensorThread thread;
-	Compass* compass;
-	
-	bool enabled;
-	float latest_azimuth;
-};
-#else
-class CompassPrivate
+	// Send update to receivers
+	p->compass->emitAzimuthChanged(p->latest_azimuth);
+}
+
+void CompassPrivate::SensorThread::run()
 {
-	friend class Compass;  // grant access to default members
-};
+	// Wait until sensors are initialized
+	QThread::msleep(1000);
+
+	while (keep_running)
+	{
+		if (! p->enabled)
+		{
+			wait_mutex.lock();
+			if (! p->enabled)
+				condition.wait(&wait_mutex);
+			wait_mutex.unlock();
+
+			// May do initializations after (re-)enabling here
+		}
+
+		filter();
+
+		QThread::msleep(30);
+	}
+}
 #endif  // QT_SENSORS_LIB
-
-
 
 // Emit vtable once, in this translation unit
 Compass::~Compass() = default;
