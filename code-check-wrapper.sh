@@ -52,7 +52,6 @@ for I in \
   georeferencing.cpp \
   georeferencing_dialog.cpp \
   georeferencing_t.cpp \
-  icon_engine \
   iof_course_export \
   key_button_bar.cpp \
   key_value_container \

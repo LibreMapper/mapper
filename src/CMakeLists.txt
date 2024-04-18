@@ -29,32 +29,6 @@ add_library(mapper-config INTERFACE)
 target_include_directories(mapper-config  INTERFACE "${CMAKE_CURRENT_BINARY_DIR}")
 
 
-# Scaling icon engine
-
-set(SCALING_ICON_ENGINE_SOURCES
-  gui/scaling_icon_engine.cpp
-  gui/scaling_icon_engine_plugin.cpp
-  gui/scaling_icon_engine_plugin.json
-)
-set(SCALING_ICON_ENGINE_DEFINITIONS
-  PUBLIC
-    SCALING_ICON_ENGINE_PLUGIN
-  PRIVATE
-    QT_NO_CAST_FROM_ASCII
-    QT_NO_CAST_TO_ASCII
-    QT_USE_QSTRINGBUILDER
-    QT_STATICPLUGIN
-)
-set(SCALING_ICON_ENGINE_LINK_LIBRARIES
-  PUBLIC
-    Qt6::Gui
-)
-
-add_library(scaling-icon-engine STATIC  ${SCALING_ICON_ENGINE_SOURCES})
-target_compile_definitions(scaling-icon-engine  ${SCALING_ICON_ENGINE_DEFINITIONS})
-target_link_libraries(scaling-icon-engine  ${SCALING_ICON_ENGINE_LINK_LIBRARIES})
-
-
 # Resources (from project root)
 
 list(APPEND Mapper_RESOURCES "${PROJECT_SOURCE_DIR}/resources.qrc")
@@ -297,7 +271,6 @@ foreach(lib
   mapper-gdal
   mapper-sensors
   printsupport
-  scaling-icon-engine
   Qt6::AndroidExtras
   Qt6::Network
 )

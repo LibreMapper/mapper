@@ -443,7 +443,6 @@ QSize MapperProxyStyle::sizeFromContents(QStyle::ContentsType ct, const QStyleOp
 
 QIcon MapperProxyStyle::standardIcon(QStyle::StandardPixmap standard_icon, const QStyleOption* option, const QWidget* widget) const
 {
-	QIcon icon;
 	switch (standard_icon)
 	{
 #ifdef Q_OS_ANDROID
@@ -452,7 +451,7 @@ QIcon MapperProxyStyle::standardIcon(QStyle::StandardPixmap standard_icon, const
 	case QStyle::SP_TitleBarCloseButton:
 		if (common_style)
 		{
-			icon = common_style->QCommonStyle::standardIcon(standard_icon, option, widget);
+			return common_style->QCommonStyle::standardIcon(standard_icon, option, widget);
 		}
 		break;
 #endif
@@ -460,11 +459,7 @@ QIcon MapperProxyStyle::standardIcon(QStyle::StandardPixmap standard_icon, const
 		break;
 	}
 	
-	if (icon.isNull())
-		icon = QProxyStyle::standardIcon(standard_icon, option, widget);
-	if (icon.actualSize(QSize(1000,1000)).width() < 1000)
-		icon = QIcon(new ScalingIconEngine(icon));
-	return icon;
+	return QProxyStyle::standardIcon(standard_icon, option, widget);
 }
 
 QPixmap MapperProxyStyle::standardPixmap(QStyle::StandardPixmap standard_pixmap, const QStyleOption* option, const QWidget* widget) const
