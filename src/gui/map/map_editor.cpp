@@ -63,6 +63,7 @@
 #include <QPoint>
 #include <QPointer>
 #include <QPointF>
+#include <QProgressDialog>
 #include <QPushButton>
 #include <QRect>
 #include <QRectF>
@@ -3413,6 +3414,9 @@ void MapEditorController::convertToCurvesClicked()
 	auto* undo_step = new ReplaceObjectsUndoStep(map);
 	MapPart* part = map->getCurrentPart();
 	
+	QProgressDialog progress(tr("Converting objects to curves"), tr("Cancel"), 0, map->getNumSelectedObjects(), window);
+	auto object_num = 0;
+		
 	for (auto* object : map->selectedObjects())
 	{
 		if (object->getType() != Object::Path)
@@ -3428,10 +3432,21 @@ void MapEditorController::convertToCurvesClicked()
 			path->simplify(nullptr, threshold);
 		}
 		path->update();
+		progress.setValue(object_num++);
+		qApp->processEvents();
+		if (progress.wasCanceled())
+			break;		
 	}
 	
-	if (undo_step->isEmpty())
+	if (progress.wasCanceled())
+	{
+		undo_step->undo();
 		delete undo_step;
+	}
+	else if (undo_step->isEmpty())
+	{
+		delete undo_step;
+	}
 	else
 	{
 		map->setObjectsDirty();
@@ -3448,6 +3463,9 @@ void MapEditorController::simplifyPathClicked()
 	auto* undo_step = new ReplaceObjectsUndoStep(map);
 	MapPart* part = map->getCurrentPart();
 	
+	QProgressDialog progress(tr("Simplifying objects"), tr("Cancel"), 0, map->getNumSelectedObjects(), window);
+	auto object_num = 0;
+	
 	for (auto* object : map->selectedObjects())
 	{
 		if (object->getType() != Object::Path)
@@ -3458,10 +3476,23 @@ void MapEditorController::simplifyPathClicked()
 		if (path->simplify(&undo_duplicate, threshold))
 			undo_step->addObject(part->findObjectIndex(path), undo_duplicate);
 		path->update();
+		progress.setValue(object_num++);
+		qApp->processEvents();
+		if (progress.wasCanceled())
+			break;		
 	}
 	
-	if (undo_step->isEmpty())
+	progress.setValue(progress.maximum());
+	
+	if (progress.wasCanceled())
+	{
+		undo_step->undo();
 		delete undo_step;
+	}
+	else if (undo_step->isEmpty())
+	{
+		delete undo_step;
+	}
 	else
 	{
 		map->setObjectsDirty();
