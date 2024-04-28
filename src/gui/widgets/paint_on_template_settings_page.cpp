@@ -29,6 +29,7 @@
 #include <QList>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QSettings>
 #include <QSizePolicy>
 #include <QSpacerItem>
 #include <QString>
@@ -45,6 +46,8 @@
 #include "gui/widgets/segmented_button_layout.h"
 #include "gui/widgets/settings_page.h"
 #include "settings.h"
+
+#include <templates/template.h>
 
 class QWidget;
 
@@ -189,6 +192,14 @@ PaintOnTemplateSettingsPage::PaintOnTemplateSettingsPage(QWidget* parent)
 	presets_layout->addItem(c_p_buttons_layout, row, 2, 1, 1);
 
 	layout->addWidget(presets_box);
+	
+	auto* options_layout = new QVBoxLayout;
+	use_antialiasing = new QCheckBox(tr("Use antialiasing (experimental)"));
+	options_layout->addWidget(use_antialiasing);
+	auto* options_group = new QGroupBox(tr("Options"));
+	options_group->setLayout(options_layout);
+
+	layout->addWidget(options_group);
 
 	connect(move_up_button, &QAbstractButton::clicked, this, &PaintOnTemplateSettingsPage::moveColorUp);
 	connect(move_down_button, &QAbstractButton::clicked, this, &PaintOnTemplateSettingsPage::moveColorDown);
@@ -210,6 +221,10 @@ PaintOnTemplateSettingsPage::PaintOnTemplateSettingsPage(QWidget* parent)
 	setLayout(layout);
 
 	initializePage(Settings::getInstance().paintOnTemplateColors());
+	QSettings settings;	
+	bool antialiasing = settings.value(QStringLiteral("PaintOnTemplateTool/options")).toInt()
+		                                         & Template::Antialias;
+	use_antialiasing->setChecked(antialiasing);
 }
 
 
@@ -238,12 +253,21 @@ std::vector<QColor> PaintOnTemplateSettingsPage::getWorkingColorsFromPage()
 void PaintOnTemplateSettingsPage::apply()
 {
 	Settings::getInstance().setPaintOnTemplateColors(getWorkingColorsFromPage());
+	QSettings settings;
+	auto paint_options = Template::ScribbleOptions(settings.value(QStringLiteral("PaintOnTemplateTool/options")).toInt()
+	                                         & Template::ScribbleOptionsMask);
+	paint_options.setFlag(Template::Antialias, use_antialiasing->isChecked());
+	settings.setValue(QStringLiteral("PaintOnTemplateTool/options"), int(paint_options));
 }
 
 
 void PaintOnTemplateSettingsPage::reset()
 {
 	initializePage(Settings::getInstance().paintOnTemplateColors());
+	QSettings settings;	
+	bool antialiasing = settings.value(QStringLiteral("PaintOnTemplateTool/options")).toInt()
+		                                         & Template::Antialias;
+	use_antialiasing->setChecked(antialiasing);
 }
 
 
