@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -1413,6 +1413,25 @@ bool Map::hasAlpha() const
 }
 
 
+void Map::applyOnMatchingColors(const std::function<void (const MapColor*)>& operation, const std::function<bool (const MapColor*)>& condition) const
+{
+	for (const auto* color : color_set->colors)
+	{
+		if (condition(color))
+			operation(color);
+	}
+}
+
+
+void Map::applyOnAllColors(const std::function<void (const MapColor*)>& operation) const
+{
+	for (const auto* color : color_set->colors)
+	{
+		operation(color);
+	}
+}
+
+
 void Map::setSymbolSetId(const QString& id)
 {
 	symbol_set_id = id;
@@ -1738,6 +1757,25 @@ void Map::determineSymbolUseClosure(std::vector< bool >& symbol_bitfield) const
 		}
 		
 	} while (change);
+}
+
+
+void Map::applyOnMatchingSymbols(const std::function<void (const Symbol*)>& operation, const std::function<bool (const Symbol*)>& condition) const
+{
+	for (const auto* symbol : symbols)
+	{
+		if (condition(symbol))
+			operation(symbol);
+	}
+}
+
+
+void Map::applyOnAllSymbols(const std::function<void (const Symbol*)>& operation) const
+{
+	for (const auto* symbol : symbols)
+	{
+		operation(symbol);
+	}
 }
 
 
