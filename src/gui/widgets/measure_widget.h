@@ -11,6 +11,7 @@
 #define LIBREMAPPER_MEASURE_WIDGET_H
 
 #include <QObject>
+#include <QString>
 #include <QTextBrowser>
 
 class QWidget;
@@ -43,6 +44,7 @@ protected slots:
 	
 private:
 	Map* map;
+	QString warning_icon;
 };
 
 
