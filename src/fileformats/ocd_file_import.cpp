@@ -539,8 +539,13 @@ void OcdFileImport::importColors(const OcdFile< F >& file)
 		return a->getPriority() < b->getPriority();
 	});
 	// Insert the spot colors into the map after (below) the regular colors.
+	auto non_conflicting_id = 0;
+	for (auto prio = 0; prio < map->getNumColorPrios(); ++prio)
+		non_conflicting_id = std::max(non_conflicting_id, map->getColorByPrio(prio)->getId());
+	non_conflicting_id += 512; // Provide breathing room to the regular colors
 	for (auto spot_color : spot_colors)
 	{
+		spot_color->setId(non_conflicting_id++);
 		map->addColor(spot_color, map->getNumColorPrios());
 	}
 }
