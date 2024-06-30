@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -309,6 +309,11 @@ public:
 	 * Returns an empty list if the spot color method is not CustomColor.
 	 */
 	const SpotColorComponents& getComponents() const;
+	
+	/**
+	 * Test if another color is part of the spot color composition.
+	 */
+	bool hasSpotColorComponent(const MapColor* color) const;
 	
 	/**
 	 * Removes a component color.

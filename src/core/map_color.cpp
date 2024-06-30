@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -203,6 +203,13 @@ void MapColor::setSpotColorComposition(const SpotColorComponents& components)
 	removeSpotColorComponent(this);
 	updateCompositionName();
 	updateCalculatedColors();
+}
+
+bool MapColor::hasSpotColorComponent(const MapColor* color) const
+{
+	return std::any_of(components.begin(), components.end(), [color](const auto& component) {
+		return component.spot_color == color;
+	});
 }
 
 bool MapColor::removeSpotColorComponent(const MapColor* color)

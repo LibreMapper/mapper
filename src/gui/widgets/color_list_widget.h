@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012, 2013, 2014, 2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2014, 2017, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -11,7 +11,6 @@
 #define LIBREMAPPER_COLOR_LIST_WIDGET_H
 
 #include <QObject>
-#include <QString>
 #include <QWidget>
 
 class QAction;
@@ -64,6 +63,7 @@ protected:
 private:
 	void addRow(int row);
 	void updateRow(int row);
+	bool confirmColorDeletion(const LibreMapper::MapColor* color_to_be_removed) const;
 	
 	// Color list
 	QTableWidget* color_table;
