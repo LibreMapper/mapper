@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -72,6 +72,12 @@ private slots:
 	void testProjContextSetFileFinder();
 #endif
 	
+	/**
+	 * Tests the determination of the UTM zone from the given latitude and longitude.
+	 */
+	void testUTMZoneCalculation();
+	
+	void testUTMZoneCalculation_data();
 };
 
 #endif
