@@ -61,7 +61,7 @@ void MoveParallelTool::updateStatusText()
 	if (editingInProgress())
 	{
 		setStatusBarText(tr("<b>Move distance:</b> %1 mm")
-		                 .arg(QLocale().toString(qFabs(move_distance), 'f', 1)));
+		                 .arg(QLocale().toString(qFabs(move_distance), 'f', 2)));
 	}
 	else
 	{
