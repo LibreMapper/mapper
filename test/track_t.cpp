@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2018 Kai Pastor (OpenOrienteering)
+ * Copyright 2018, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -105,7 +105,7 @@ private slots:
 		QVERIFY(actual_track.saveTo(filename_tmp));
 		
 		auto readAll = [](QFile&& file) -> QByteArray {
-			file.open(QIODevice::ReadOnly);
+			file.open(QIODevice::ReadOnly | QIODevice::Text);
 			return file.readAll();
 		};
 		const auto raw_tmp = readAll(QFile(filename_tmp));
