@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -1995,8 +1995,8 @@ void MapEditorController::spotColorPresenceChanged(bool has_spot_colors)
 		}
 		else
 		{
-			overprintingSimulation(false);
-			overprinting_simulation_act->setChecked(false);
+			if (overprinting_simulation_act->isChecked())
+				overprinting_simulation_act->trigger();
 			overprinting_simulation_act->setEnabled(false);
 		}
 	}
