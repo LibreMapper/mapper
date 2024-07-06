@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2024, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -229,16 +229,16 @@ bool MapColor::removeSpotColorComponent(const MapColor* color)
 	return changed;
 }
 
-void MapColor::setKnockout(bool flag)
+void MapColor::setKnockout(bool enabled)
 {
 	if (spot_color_method != MapColor::UndefinedMethod)
 	{
-		if (flag)
+		if (enabled)
 			flags |= MapColor::Knockout;
 		else
 			flags &= ~MapColor::Knockout;
 		
-		Q_ASSERT(getKnockout() == flag);
+		Q_ASSERT(getKnockout() == enabled);
 	}
 }
 
