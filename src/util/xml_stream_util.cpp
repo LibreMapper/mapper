@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2013-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -269,7 +269,7 @@ void XmlElementReader::read(MapCoordVector& coords)
 	
 	if (coords.size() != num_coords)
 	{
-		throw FileFormatException(::LibreMapper::ImportExport::tr("Expected %1 coordinates, found %2."));
+		throw FileFormatException(::LibreMapper::ImportExport::tr("Expected %1 coordinates, found %2.").arg(num_coords).arg(coords.size()));
 	}
 }
 
@@ -344,7 +344,7 @@ void XmlElementReader::readForText(MapCoordVector& coords)
 	
 	if (coords.size() != num_coords)
 	{
-		throw FileFormatException(::LibreMapper::ImportExport::tr("Expected %1 coordinates, found %2."));
+		throw FileFormatException(::LibreMapper::ImportExport::tr("Expected %1 coordinates, found %2.").arg(num_coords).arg(coords.size()));
 	}
 }
 
