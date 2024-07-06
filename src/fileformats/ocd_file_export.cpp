@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2024 Libor Pecháček
- * Copyright 2016-2022 Kai Pastor (OpenOrienteering)
+ * Copyright 2016-2022, 2024 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  *
@@ -3146,28 +3146,31 @@ QByteArray OcdFileExport::exportTextData(const TextObject* object, int chunk_siz
 	if (text.startsWith(QLatin1Char('\n')))
 		text.prepend(QLatin1Char('\n'));
 	text.replace(QLatin1Char('\n'), QLatin1String("\r\n"));
-	text.append(QLatin1Char('\0'));
 	
 	// Suppress byte order mark by using QTextCodec::IgnoreHeader.
 	static auto encoding_2byte = QTextCodec::codecForName("UTF-16LE");
 	auto encoder = encoding_2byte->makeEncoder(QTextCodec::IgnoreHeader);
 	auto encoded_text = encoder->fromUnicode(text);
-	if (encoded_text.size() >= max_size)
+	
+	// A trailing zero is required.
+	if (encoded_text.size() + 2 > max_size)
 	{
 		// Truncate safely by decoding truncated encoded data.
 		auto decoder = encoding_2byte->makeDecoder();
-		auto truncated_text = decoder->toUnicode(encoded_text.constData(), max_size - 1);
+		auto truncated_text = decoder->toUnicode(encoded_text.constData(), max_size - 2);
 		delete decoder;
+		if (QChar(truncated_text.back()).isHighSurrogate())
+			truncated_text.chop(1);
 		addTextTruncationWarning(text, truncated_text.length());
 		encoded_text = encoder->fromUnicode(truncated_text);
 	}
 	delete encoder;
 	
 	auto text_size = encoded_text.size();
-	FILEFORMAT_ASSERT(text_size < max_size);
+	FILEFORMAT_ASSERT(text_size + 2 <= max_size);
 	
 	// Resize to multiple of chunk size, appending trailing zeros.
-	encoded_text.resize(text_size + (max_size - text_size) % chunk_size);
+	encoded_text.resize(text_size + 2 + (max_size - text_size - 2) % chunk_size);
 	FILEFORMAT_ASSERT(encoded_text.size() <= max_size);
 	FILEFORMAT_ASSERT(encoded_text.size() % chunk_size == 0);
 	std::fill(encoded_text.begin() + text_size, encoded_text.end(), 0);

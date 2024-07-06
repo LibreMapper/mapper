@@ -2062,6 +2062,8 @@ QString OcdFileImport::getObjectText(const O& ocd_object) const
 	return object_text;
 }
 
+// Explicitly instantiate the v12 method for file_format_t test.
+template QString OcdFileImport::getObjectText(const Ocd::ObjectV12& ocd_object) const;
 
 template< class O >
 Object* OcdFileImport::importRectangleObject(const O& ocd_object, MapPart* part, const OcdFileImport::RectangleInfo& rect)
