@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -110,6 +110,17 @@ private slots:
 	void colorTest_data();
 	void colorTest();
 
+	/**
+	 * Test text export to OCD.
+	 */
+	void ocdTextExportTest_data();
+	void ocdTextExportTest();
+
+	/**
+	 * Test text import from OCD.
+	 */
+	void ocdTextImportTest_data();
+	void ocdTextImportTest();
 };
 
 #endif // LIBREMAPPER_FILE_FORMAT_T_H
