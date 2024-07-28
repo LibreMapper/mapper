@@ -704,7 +704,6 @@ private:
 	QAction* select_all_act = {};
 	QAction* select_nothing_act = {};
 	QAction* invert_selection_act = {};
-	QAction* select_by_current_symbol_act = {};
 	std::unique_ptr<MapFindFeature> find_feature;
 	QAction* clear_undo_redo_history_act = {};
 	

@@ -443,7 +443,6 @@ void MapEditorController::setEditingInProgress(bool value)
 		select_all_act->setEnabled(!editing_in_progress);
 		select_nothing_act->setEnabled(!editing_in_progress);
 		invert_selection_act->setEnabled(!editing_in_progress);
-		select_by_current_symbol_act->setEnabled(!editing_in_progress);
 		find_feature->setEnabled(!editing_in_progress);
 		
 		// Map menu
@@ -981,7 +980,6 @@ void MapEditorController::createActions()
 	select_all_act = newAction("select-all", tr("Select all"), this, SLOT(selectAll()), nullptr, QString{}, "edit_menu.html");
 	select_nothing_act = newAction("select-nothing", tr("Select nothing"), this, SLOT(selectNothing()), nullptr, QString{}, "edit_menu.html");
 	invert_selection_act = newAction("invert-selection", tr("Invert selection"), this, SLOT(invertSelection()), nullptr, QString{}, "edit_menu.html");
-	select_by_current_symbol_act = newAction("select-by-symbol", QApplication::translate("LibreMapper::SymbolRenderWidget", "Select all objects with selected symbols"), this, SLOT(selectByCurrentSymbols()), nullptr, QString{}, "edit_menu.html");
 	find_feature = std::make_unique<MapFindFeature>(*this);
 	
 	clear_undo_redo_history_act = newAction("clearundoredohistory", tr("Clear undo / redo history"), this, SLOT(clearUndoRedoHistory()), nullptr, tr("Clear the undo / redo history to reduce map file size."), "edit_menu.html");
@@ -1160,7 +1158,6 @@ void MapEditorController::createMenuAndToolbars()
 	edit_menu->addAction(select_all_act);
 	edit_menu->addAction(select_nothing_act);
 	edit_menu->addAction(invert_selection_act);
-	edit_menu->addAction(select_by_current_symbol_act);
 	edit_menu->addSeparator();
 	edit_menu->addAction(find_feature->showDialogAction());
 	edit_menu->addAction(find_feature->findNextAction());
