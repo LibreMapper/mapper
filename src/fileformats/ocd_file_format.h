@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_OCD_FILE_FORMAT
-#define LIBREMAPPER_OCD_FILE_FORMAT
+#ifndef LIBREMAPPER_OCD_FILE_FORMAT_H
+#define LIBREMAPPER_OCD_FILE_FORMAT_H
 
 #include <memory>
 #include <vector>
@@ -83,4 +83,4 @@ private:
 
 }  // namespace LibreMapper
 
-#endif // LIBREMAPPER_OCD_FILE_FORMAT
+#endif // LIBREMAPPER_OCD_FILE_FORMAT_H

@@ -66,4 +66,4 @@ private:
 
 }  // namespace LibreMapper
 
-#endif // LIBREMAPPER_KML_COURSE_EXPORT_H
+#endif // LIBREMAPPER_IOF_COURSE_EXPORT_H

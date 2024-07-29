@@ -61,4 +61,4 @@ struct OcdIcon
 
 }  // namespace LibreMapper
 
-#endif
+#endif // LIBREMAPPER_OCD_ICON_H

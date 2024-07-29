@@ -7,8 +7,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_OCD_FILE_IMPORT
-#define LIBREMAPPER_OCD_FILE_IMPORT
+#ifndef LIBREMAPPER_OCD_FILE_IMPORT_H
+#define LIBREMAPPER_OCD_FILE_IMPORT_H
 
 #include <cstddef>
 #include <initializer_list>
@@ -358,4 +358,4 @@ protected:
 
 }  // namespace LibreMapper
 
-#endif // LIBREMAPPER_OCD_FILE_IMPORT
+#endif // LIBREMAPPER_OCD_FILE_IMPORT_H

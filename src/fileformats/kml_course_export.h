@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_KML_EXPORT_EXPORT_H
-#define LIBREMAPPER_KML_EXPORT_EXPORT_H
+#ifndef LIBREMAPPER_KML_COURSE_EXPORT_H
+#define LIBREMAPPER_KML_COURSE_EXPORT_H
 
 #include <vector>
 
@@ -62,4 +62,4 @@ private:
 
 }  // namespace LibreMapper
 
-#endif // LIBREMAPPER_KML_EXPORT_EXPORT_H
+#endif // LIBREMAPPER_KML_COURSE_EXPORT_H
