@@ -52,6 +52,7 @@ set(Mapper_Common_SRCS
   core/map.cpp
   core/map_color.cpp
   core/map_coord.cpp
+  core/map_issue_registry.cpp
   core/map_grid.cpp
   core/map_part.cpp
   core/map_printer.cpp
@@ -167,6 +168,7 @@ set(Mapper_Common_SRCS
   gui/widgets/text_browser.cpp
   gui/widgets/toast.cpp
   
+  templates/map_issues_template.cpp
   templates/paint_on_template_feature.cpp
   templates/paint_on_template_tool.cpp
   templates/template.cpp
