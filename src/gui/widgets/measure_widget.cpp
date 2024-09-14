@@ -29,6 +29,7 @@
 #include <QWidget>
 
 #include "core/map.h"
+#include "core/map_issue_registry.h"
 #include "core/objects/object.h"
 #include "core/symbols/symbol.h"
 
@@ -122,10 +123,15 @@ void MeasureWidget::objectSelectionChanged()
 				
 				if (paper_area < minimum_area && paper_area_text != minimum_area_text)
 				{
+					map->getMapIssueRegistry()->addObjectIssue(object, MapIssueRegistry::Severity::Warning, tr("Area too small"));
 					extra_text = QLatin1String("<b>") + tr("This object is too small.") + QLatin1String("</b><br/>")
 					             + tr("The minimimum area is %1 %2.").arg(minimum_area_text, tr("mm²"))
 					             + QLatin1String("<br/>");
 					show_warning = true;
+				}
+				else
+				{
+					map->getMapIssueRegistry()->deleteObjectIssue(object);
 				}
 				extra_text.append(tr("Note: Boundary length and area are correct only if there are no self-intersections and holes are used as such."));
 			}

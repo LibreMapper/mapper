@@ -34,6 +34,7 @@
 #include "core/georeferencing.h"
 #include "core/map_color.h"
 #include "core/map_coord.h"
+#include "core/map_issue_registry.h"
 #include "core/map_grid.h"
 #include "core/map_part.h"
 #include "core/map_printer.h"
@@ -50,6 +51,7 @@
 #include "fileformats/file_import_export.h"
 #include "fileformats/xml_file_format_p.h"
 #include "gui/map/map_widget.h"
+#include "templates/map_issues_template.h"
 #include "templates/template.h"
 #include "undo/map_part_undo.h"
 #include "undo/object_undo.h"
@@ -443,6 +445,8 @@ Map::Map()
  , undo_manager(new UndoManager(this))
  , renderables(new MapRenderables(this))
  , selection_renderables(new MapRenderables(this))
+ , issues_view(new MapIssuesTemplate(this))
+ , issues(std::make_unique<MapIssueRegistry>(this, issues_view))
  , renderable_options(Symbol::RenderNormal)
  , printer_config(nullptr)
 {
@@ -2209,6 +2213,8 @@ void Map::deleteObject(Object* object)
 
 Object* Map::releaseObject(Object* object)
 {
+	issues->deleteObjectIssue(object);
+	
 	for (MapPart* part : parts)
 	{
 		if (auto object_found = part->releaseObject(object))
@@ -2482,6 +2488,16 @@ void Map::resetPrinterConfig()
 	}
 }
 
+
+MapIssueRegistry* Map::getMapIssueRegistry()
+{
+	return issues.get();
+}
+
+void Map::makeMapIssuesVisible()
+{
+	issues_view->ensureVisible();
+}
 
 void Map::setHasUnsavedChanges(bool has_unsaved_changes)
 {
