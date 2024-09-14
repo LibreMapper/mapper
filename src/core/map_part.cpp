@@ -20,6 +20,7 @@
 #include <QXmlStreamReader>
 
 #include "core/map.h"
+#include "core/map_issue_registry.h"
 #include "core/map_coord.h"
 #include "core/objects/object.h"
 #include "core/symbols/symbol.h"
@@ -173,6 +174,7 @@ bool MapPart::deleteObject(Object* object)
 
 Object* MapPart::releaseObject(int pos)
 {
+	map->getMapIssueRegistry()->deleteObjectIssue(objects[pos]);
 	map->removeRenderablesOfObject(objects[pos], true);
 	auto object_to_return = objects[pos];
 	objects.erase(objects.begin() + pos);

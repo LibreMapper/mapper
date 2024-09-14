@@ -198,7 +198,7 @@ public:
 	 * If a target directory is given via `map_dir`, the relative template
 	 * path is determined for this directory.
 	 */
-	void saveTemplateConfiguration(QXmlStreamWriter& xml, bool open, const QDir* map_dir = nullptr) const;
+	virtual void saveTemplateConfiguration(QXmlStreamWriter& xml, bool open, const QDir* map_dir = nullptr) const;
 	
 	/**
 	 * Creates and returns a template from the configuration in the XML stream.
