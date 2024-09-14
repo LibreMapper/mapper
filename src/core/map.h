@@ -48,6 +48,8 @@ class Georeferencing;
 class LineSymbol;
 class MapColor;
 class MapColorMap;
+class MapIssueRegistry;
+class MapIssuesTemplate;
 class MapPrinterConfig;
 class MapRenderables;
 class MapView;
@@ -1336,6 +1338,16 @@ public:
 	/** Sets default parameters for loading of image templates. */
 	void setImageTemplateDefaults(const ImageTemplateDefaults& defaults) { image_template_defaults = defaults; };
 	
+	/**
+	 * Get the pointer to the map issue registry to feed it with items. The map 
+	 * manages the issue listing based on the object existence.
+	 */
+	MapIssueRegistry* getMapIssueRegistry();
+	
+	/**
+	 * Make the map add a template showing the issues.
+	 */
+	void makeMapIssuesVisible();
 	
 	/**
 	 * Returns whether there are unsaved changes in the map.
@@ -1628,6 +1640,8 @@ private:
 	
 	QScopedPointer<Georeferencing> georeferencing;
 	
+	MapIssuesTemplate* issues_view; // Owned by the map template list which also takes care for the object teardown
+	std::unique_ptr<MapIssueRegistry> issues;
 	MapGrid grid;
 	
 	int renderable_options;
