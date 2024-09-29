@@ -543,7 +543,7 @@ Minimum length: 0.6 mm (footprint 9 m).</description>
             <symbol type="2" id="11" code="105.1" name="Earth wall">
                 <description>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</description>
-                <line_symbol color="8" line_width="180" minimum_length="0" join_style="2" cap_style="0" start_offset="0" end_offset="0" segment_length="2000" end_length="1000" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0">
+                <line_symbol color="8" line_width="180" minimum_length="0" join_style="1" cap_style="0" start_offset="0" end_offset="0" segment_length="2000" end_length="1000" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0">
                     <mid_symbol>
                         <symbol type="1" code="" name="Mid symbol">
                             <point_symbol rotatable="true" inner_radius="225" inner_color="8" outer_width="0" outer_color="-1" elements="0"/>
@@ -554,7 +554,7 @@ Minimum length: 1.4 mm (footprint 21 m).</description>
             <symbol type="2" id="12" code="105.2" name="Retaining earth wall">
                 <description>A retaining earth wall is an abrupt change in ground level which can be clearly distinguished from its surroundings used for minor peat edges and cultivation terraces. If such a feature is higher than 1 m, it should be drawn with the symbol Earth bank (104).
 Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</description>
-                <line_symbol color="8" line_width="180" minimum_length="1400" join_style="2" cap_style="0" start_offset="0" end_offset="0" segment_length="1000" end_length="800" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0">
+                <line_symbol color="8" line_width="180" minimum_length="1400" join_style="1" cap_style="0" start_offset="0" end_offset="0" segment_length="1000" end_length="800" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0">
                     <mid_symbol>
                         <symbol type="1" code="" name="Mid symbol">
                             <point_symbol rotatable="true" inner_radius="0" inner_color="-1" outer_width="0" outer_color="-1" elements="1">
