@@ -49,9 +49,9 @@
         <translation>Czarny pod purpurowym dla symboli trasy</translation>
     </message>
     <message>
-        <source>Black 65%</source>
+        <source>Black 50%</source>
         <comment>Color 9</comment>
-        <translation>Czarny 65%</translation>
+        <translation type="unfinished">Czarny 20%</translation>
     </message>
     <message>
         <source>Black 20%</source>
@@ -124,14 +124,14 @@
         <translation>Żółty 100%/Zielony 50%</translation>
     </message>
     <message>
-        <source>Black 25% (Grey)</source>
+        <source>Black 35% (Grey)</source>
         <comment>Color 24</comment>
-        <translation>Czarny 25% (Szary)</translation>
+        <translation type="unfinished">Zielony 60%</translation>
     </message>
     <message>
-        <source>Green 100%/Black 50%</source>
+        <source>Dark green line symbols </source>
         <comment>Color 25</comment>
-        <translation>Zielony 100%/Czarny 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
@@ -192,8 +192,8 @@ Prominent features such as depressions, re-entrants, spurs, earth banks and terr
 Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
 The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
 The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
-A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
-Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
+A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
+Contours shall be adapted or broken in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
         <comment>Description of symbol 101</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -309,19 +309,30 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
+        <comment>Name of symbol 105.1</comment>
         <translation>Ściana ziemi</translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Wyodrębniona ściana ziemi. Minimalna wysokość: 1 m.
+        <comment>Description of symbol 105.1</comment>
+        <translation type="unfinished">Wyodrębniona ściana ziemi. Minimalna wysokość: 1 m.
 Minimalna długość: 1,4 mm (ślad 21 m).</translation>
+    </message>
+    <message>
+        <source>Retaining earth wall</source>
+        <comment>Name of symbol 105.2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A retaining earth wall is an abrupt change in ground level which can be clearly distinguished from its surroundings used for minor peat edges and cultivation terraces. If such a feature is higher than 1 m, it should be drawn with the symbol Earth bank (104).
+Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
+        <comment>Description of symbol 105.2</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ruined earth wall</source>
@@ -332,8 +343,7 @@ Minimalna długość: 1,4 mm (ślad 21 m).</translation>
         <source>A ruined or less distinct earth wall. Minimum height: 0.5 m.
 Minimum length: two dashes (3.65 mm - footprint 55 m). If shorter, the object must be exaggerated to the minimum length or changed to symbol Earth wall (105).</source>
         <comment>Description of symbol 106</comment>
-        <translation>Rozsypująca się lub niewyodrębniona ściana ziemi. Minimalna wysokość 0.5m.
-Minimalna długość: dwie kreski (3,65 mm - ślad 55 m). Jeśli krótsza, to obiekt musi być wyolbrzymiony do minimalnej długości lub zmieniony symbol na Ściana ziemi (105).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Erosion gully</source>
@@ -341,9 +351,9 @@ Minimalna długość: dwie kreski (3,65 mm - ślad 55 m). Jeśli krótsza, to ob
         <translation>Żleb erozyjny</translation>
     </message>
     <message>
-        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Minimum depth: 1 m.
-Minimum length: 1.15 mm (footprint 17 m).
-Contour lines should not be broken around this symbol.</source>
+        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Contour lines may be broken around this symbol for better readability.
+Minimum depth: 1 m.
+Minimum length: 1.15 mm (footprint 17.25 m).</source>
         <comment>Description of symbol 107</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -353,9 +363,9 @@ Contour lines should not be broken around this symbol.</source>
         <translation>Mały żleb erozyjny</translation>
     </message>
     <message>
-        <source>A small erosion gully, dry ditch or trench. Minimum depth: 0.5 m.
-Minimum length (isolated): three dots (1.15 mm - footprint 17 m).
-Contour lines should be broken around this symbol.</source>
+        <source>A small erosion gully or dry ditch. Minimum depth: 0.5 m.
+Minimum length (isolated): two dots (0.7 mm - footprint 10.5 m).
+Contour lines shall be broken around this symbol.</source>
         <comment>Description of symbol 108</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -512,7 +522,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
@@ -546,7 +556,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Cliff</source>
@@ -555,7 +565,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -569,7 +579,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -583,7 +593,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.5 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -597,7 +607,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -612,7 +622,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Rocky pit or cave (without a distinct entrance)</source>
@@ -630,13 +640,24 @@ Footprint: 10.5 m x 12 m.</source>
     </message>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
-        <comment>Name of symbol 203.2</comment>
-        <translation>Jaskinia lub skalny dół (z wyraźnym wejściem)</translation>
+        <comment>Name of symbol 203.1.1</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
 Location is the centre of gravity of the symbol, and the symbol should point into the cave.
 Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
+        <comment>Description of symbol 203.1.1</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dangerous pit</source>
+        <comment>Name of symbol 203.2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
+Footprint: 13.5 m diameter.</source>
         <comment>Description of symbol 203.2</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -648,7 +669,7 @@ Rocky pits larger than 5 m in diameter should be exaggerated and represented usi
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 203.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Boulder</source>
@@ -761,7 +782,7 @@ Footprint of individual triangle: 12 m x 6 m.</source>
     <message>
         <source>To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.</source>
         <comment>Description of symbol 208.2</comment>
-        <translation>Aby móc pokazać oczywiste różnice w wysokości na polu kamieni, jest dozwolone, aby powiększyć niektóre trójkąty do 120%.</translation>
+        <translation type="unfinished">Aby móc pokazać oczywiste różnice w wysokości na polu kamieni, jest dozwolone, aby powiększyć niektóre trójkąty do 120%.</translation>
     </message>
     <message>
         <source>Dense boulder field</source>
@@ -885,8 +906,7 @@ Collapsed and easily crossable trenches should be mapped as erosion gullies.</so
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The black bank line emphasises that the feature is uncrossable.
-Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+        <source>An area of deep water such as a lake, pond or river which may constitute a danger to the competitor. The black bank line emphasises that the feature is uncrossable. Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301</comment>
@@ -898,7 +918,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+        <source>An area of deep water such as a lake, pond or river which may constitute a danger to the competitor. Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.1</comment>
@@ -910,8 +930,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The black bank line emphasises that the feature is uncrossable.
-Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+        <source>An area of deep water such as a lake, pond or river which may constitute a danger to the competitor. The black bank line emphasises that the feature is uncrossable. Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.2</comment>
@@ -923,7 +942,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+        <source>An area of deep water such as a lake, pond or river which may constitute a danger to the competitor. Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.3</comment>
@@ -935,7 +954,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A black bank line indicates that the feature cannot be crossed.</source>
+        <source>The black bank line emphasises that the feature is uncrossable.</source>
         <comment>Description of symbol 301.4</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1016,7 +1035,7 @@ Footprint: 10.5 m x 12 m.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Should be at least 2 m wide.
+        <source>A crossable watercourse more than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <comment>Description of symbol 304</comment>
         <translation type="unfinished"></translation>
@@ -1027,7 +1046,8 @@ Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Minimum length (isolated): 1 mm (footprint 15 m).</source>
+        <source>A crossable watercourse less than 2 m wide.
+Minimum length (isolated): 1 mm (footprint 15 m)</source>
         <comment>Description of symbol 305</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1529,11 +1549,10 @@ Minimum length: 2 mm (footprint 30 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
-Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
+        <source>A vegetation boundary within the forest, or a distinct forest edge.
+Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
+The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
+Minimum length, black dot implementation: 5 dots (2.0 mm - footprint 30 m).</source>
         <comment>Description of symbol 416</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1543,10 +1562,9 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
+        <source>A vegetation boundary within the forest, or a distinct forest edge.
+Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
+The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
 Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
         <comment>Description of symbol 416.1</comment>
         <translation type="unfinished"></translation>
@@ -1557,7 +1575,9 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Footprint: 13.5 m x 13.5 m.</source>
+        <source>A very large single tree which clearly stands out from the surrounding vegetation.
+White mask is used under the green circle, to improve readability in yellow and green (OM 1.1 mm).
+Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 417</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1567,7 +1587,8 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Use sparingly, as it is easily mistaken for symbol Small knoll (109).
+        <source>A bush or small single tree which clearly stands out from the surrounding vegetation.
+Use sparingly, as it is easily mistaken for symbol Small knoll (109). Small white dot inside is used to aid the colour vision impaired.
 Footprint: 9.0 m x 9.0 m.</source>
         <comment>Description of symbol 418</comment>
         <translation type="unfinished"></translation>
@@ -1578,7 +1599,9 @@ Footprint: 9.0 m x 9.0 m.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The symbol is orientated to north.
+        <source>A vegetation feature which is significant or prominent.
+White mask is used under the green cross, to improve readability in yellow and green (line width of white mask 0.36 mm, and it shall be 0.18 mm longer in the ends of the symbol).
+The symbol is orientated to north.
 The definition of the symbol must be given on the map.
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 419</comment>
@@ -1622,7 +1645,8 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+        <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
+The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502</comment>
@@ -1636,7 +1660,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
@@ -1644,7 +1668,8 @@ A road with two carriageways can be represented using two wide road symbols side
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+        <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
+The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502.2</comment>
@@ -1656,7 +1681,7 @@ A road with two carriageways can be represented using two wide road symbols side
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
+        <source>A maintained road less than 5 m wide suitable for vehicles in all weather.</source>
         <comment>Description of symbol 503</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1777,7 +1802,7 @@ Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
     <message>
         <source>A railway or other kind of railed track.
 If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
-Minimum length (isolated): two dashes (4 mm - footprint 60 m).</source>
+Minimum length (isolated): two black dashes (4 mm - footprint 60 m).</source>
         <comment>Description of symbol 509</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1863,14 +1888,26 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     </message>
     <message>
         <source>Wall</source>
-        <comment>Name of symbol 513</comment>
+        <comment>Name of symbol 513.1</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513</comment>
+        <comment>Description of symbol 513.1</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retaining wall</source>
+        <comment>Name of symbol 513.2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A significant wall of stone, concrete, wood or other materials which is seen only from one side. Half dot must point to the lower level.
+Minimum height: 0.5 m.
+Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
+        <comment>Description of symbol 513.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1901,7 +1938,8 @@ Minimum length (isolated): 3 mm (footprint 45 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If the fence forms an enclosed area, tags should be placed inside.
+        <source>A passable or crossable fence, normally less than 1.5 m high.
+If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
         <comment>Description of symbol 516</comment>
         <translation type="unfinished"></translation>
@@ -1946,10 +1984,9 @@ For impassable features, the line shall be broken at the crossing point. For pas
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
+        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. The area shall be discontinued where a path goes through and white colour is used as background with overlap 0.15 mm on both sides.
+Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line, if the border is unclear no black line shall occur.
 Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
 An out-of-bounds area shall not be entered.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 520</comment>
@@ -1966,27 +2003,22 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes</source>
+        <source>Area that shall not be entered, stripes (deprecated)</source>
         <comment>Name of symbol 520.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
+        <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes, bounding line</source>
+        <source>Area that shall not be entered, stripes, bounding line (deprecated)</source>
         <comment>Name of symbol 520.3</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
+        <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.3</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1998,7 +2030,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprint 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -2028,7 +2060,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprint 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -2043,7 +2075,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprin 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -2073,7 +2105,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>An accessible and runnable area with roof.
 Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
-Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
+Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
         <comment>Description of symbol 522</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -2085,7 +2117,7 @@ Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
     <message>
         <source>An accessible and runnable area with roof.
 Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
-Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
+Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
         <comment>Description of symbol 522.1</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -2141,8 +2173,7 @@ Footprint: 21 m in diameter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An obvious small tower, platform or seat.
-Location is at the centre of gravity of the symbol.
+        <source>An obvious small tower or elevated platform or seat. The object shall be with elevation above the ground. Location is at the centre of gravity of the symbol.
 The symbol is orientated to north.
 Footprint: 15 m x 15 m.</source>
         <comment>Description of symbol 525</comment>
@@ -2420,7 +2451,8 @@ Minimum length: 1 mm (footprint: 15 m).</source>
 – a dashed line indicates intermittent marking in the terrain,
 – no line indicates no marking in the terrain.
 An out-of-bounds area shall not be entered.
-Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
+Minimum width: 3 mm.
+Minimum area: 3 mm x 3 mm (footprint 45 m x 45 m).</source>
         <comment>Description of symbol 709</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -2496,6 +2528,16 @@ Minimum length: 2 symbols (6 mm – footprint 90 m).</source>
     <message>
         <source>The location of a refreshment point which is not at a control.</source>
         <comment>Description of symbol 713</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Continuing point after map exchange</source>
+        <comment>Name of symbol 715</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Symbol marking the continuation of the course after the map flip or the map exchange. The triangle points in the direction of the following control.</source>
+        <comment>Description of symbol 715</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3057,7 +3099,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Black 50%</source>
         <comment>Color 10</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Czarny 20%</translation>
     </message>
     <message>
         <source>Black 20%</source>
@@ -5370,6 +5412,11 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <translation>Czarny</translation>
     </message>
     <message>
+        <source>Black 50%</source>
+        <comment>Color 6</comment>
+        <translation type="unfinished">Czarny 20%</translation>
+    </message>
+    <message>
         <source>Black 20%</source>
         <comment>Color 8</comment>
         <translation>Czarny 20%</translation>
@@ -7501,134 +7548,144 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
         <translation>Czarny 65%</translation>
     </message>
     <message>
-        <source>Black 20%</source>
+        <source>Black 50%</source>
         <comment>Color 11</comment>
+        <translation type="unfinished">Czarny 20%</translation>
+    </message>
+    <message>
+        <source>Black 20%</source>
+        <comment>Color 12</comment>
         <translation>Czarny 20%</translation>
     </message>
     <message>
         <source>Upper brown 50%</source>
-        <comment>Color 12</comment>
+        <comment>Color 13</comment>
         <translation>Górny brąz 50%</translation>
     </message>
     <message>
         <source>Black below upper brown 50%</source>
-        <comment>Color 13</comment>
+        <comment>Color 14</comment>
         <translation>Czarny pod górnym brązem 50%</translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
-        <comment>Color 14</comment>
+        <comment>Color 15</comment>
         <translation>Dolny brąz 50%</translation>
     </message>
     <message>
         <source>Black below lower brown 50%</source>
-        <comment>Color 15</comment>
+        <comment>Color 16</comment>
         <translation>Czarny pod dolnym brązem 50%</translation>
     </message>
     <message>
         <source>Blue 100% for area features</source>
-        <comment>Color 16</comment>
+        <comment>Color 17</comment>
         <translation>Niebieski 100% dla cech obszaru</translation>
     </message>
     <message>
         <source>Blue 70%</source>
-        <comment>Color 17</comment>
+        <comment>Color 18</comment>
         <translation>Niebieski 70%</translation>
     </message>
     <message>
         <source>Blue 50%</source>
-        <comment>Color 18</comment>
+        <comment>Color 19</comment>
         <translation>Niebieski 50%</translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
-        <comment>Color 19</comment>
+        <comment>Color 20</comment>
         <translation>OpenOrienteering Pomarańczowy</translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride</source>
-        <comment>Color 20</comment>
+        <comment>Color 21</comment>
         <translation>Żółty 100% dla wąskiej przesieki</translation>
     </message>
     <message>
         <source>Green 60% for narrow ride</source>
-        <comment>Color 21</comment>
+        <comment>Color 22</comment>
         <translation>Zielony 60% dla wąskiej przesieki</translation>
     </message>
     <message>
         <source>Green 30% for narrow ride</source>
-        <comment>Color 22</comment>
+        <comment>Color 23</comment>
         <translation>Zielony 30% dla wąskiej przesieki</translation>
     </message>
     <message>
         <source>White over green</source>
-        <comment>Color 23</comment>
+        <comment>Color 24</comment>
         <translation>Biały nad zielonym</translation>
     </message>
     <message>
         <source>Yellow 100%/Green 50%</source>
-        <comment>Color 24</comment>
+        <comment>Color 25</comment>
         <translation>Żółty 100%/Zielony 50%</translation>
     </message>
     <message>
         <source>Black 25% (Grey)</source>
-        <comment>Color 25</comment>
+        <comment>Color 26</comment>
         <translation>Czarny 25% (Szary)</translation>
     </message>
     <message>
         <source>Green 100%/Black 50%</source>
-        <comment>Color 26</comment>
+        <comment>Color 27</comment>
         <translation>Zielony 100%/Czarny 50%</translation>
     </message>
     <message>
+        <source>Black 35% (Grey)</source>
+        <comment>Color 28</comment>
+        <translation type="unfinished">Zielony 60%</translation>
+    </message>
+    <message>
         <source>Green 100% for area features</source>
-        <comment>Color 27</comment>
+        <comment>Color 29</comment>
         <translation>Zielony 100% dla cech obszaru</translation>
     </message>
     <message>
         <source>Green 60%</source>
-        <comment>Color 28</comment>
+        <comment>Color 30</comment>
         <translation>Zielony 60%</translation>
     </message>
     <message>
         <source>Green 30%</source>
-        <comment>Color 29</comment>
+        <comment>Color 31</comment>
         <translation>Zielony 30%</translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
-        <comment>Color 30</comment>
+        <comment>Color 32</comment>
         <translation>Zielony 100% dla runa</translation>
     </message>
     <message>
         <source>White over yellow</source>
-        <comment>Color 31</comment>
+        <comment>Color 33</comment>
         <translation>Biały nad żółtym</translation>
     </message>
     <message>
         <source>Black for open land</source>
-        <comment>Color 32</comment>
+        <comment>Color 34</comment>
         <translation>Czarny dla otwartej przestrzeni</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <comment>Color 33</comment>
+        <comment>Color 35</comment>
         <translation>Żółty</translation>
     </message>
     <message>
         <source>Yellow 100% for area features</source>
-        <comment>Color 34</comment>
+        <comment>Color 36</comment>
         <translation>Żółty 100% dla cech obszaru</translation>
     </message>
     <message>
         <source>Yellow 50%</source>
-        <comment>Color 35</comment>
+        <comment>Color 37</comment>
         <translation>Żółty 50%</translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Kontur</translation>
+        <translation type="unfinished">Kontur</translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
@@ -7639,15 +7696,15 @@ Prominent features such as depressions, re-entrants, spurs, earth banks and terr
 Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
 The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
 The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
-A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
-Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
+A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
+Contours shall be adapted or broken in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
         <comment>Description of symbol 101</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope line, contour</source>
         <comment>Name of symbol 101.1</comment>
-        <translation>Linia zbocza, kontur</translation>
+        <translation type="unfinished">Linia zbocza, kontur</translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
@@ -7658,7 +7715,7 @@ A depression has to have at least one slope line.</source>
     <message>
         <source>Index contour</source>
         <comment>Name of symbol 102</comment>
-        <translation>Kontur indeksu</translation>
+        <translation type="unfinished">Kontur indeksu</translation>
     </message>
     <message>
         <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface.
@@ -7670,7 +7727,7 @@ The index contour level must be carefully selected in flat terrain. The ideal le
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.1</comment>
-        <translation>Wartość konturu</translation>
+        <translation type="unfinished">Wartość konturu</translation>
     </message>
     <message>
         <source>An index contour may have a height value assigned. A height value should only be inserted in an index contour in places where other detail is not obscured. It shall be orientated so that the top of the label is on the higher side of the contour. The index value (label) shall be 1.5 mm high and represented in a sans-serif font.</source>
@@ -7680,7 +7737,7 @@ The index contour level must be carefully selected in flat terrain. The ideal le
     <message>
         <source>Form line</source>
         <comment>Name of symbol 103</comment>
-        <translation>Linia formy</translation>
+        <translation type="unfinished">Linia formy</translation>
     </message>
     <message>
         <source>Form lines are used where more information must be given about the shape of the ground. Form lines are added only where representation would be incomplete with ordinary contours. They shall not be used as intermediate contours. Only one form line should be used between neighbouring contours. It is very important that a form line fits logically into the contour system, so the start and end of a form line should be parallel to the neighbouring contours. The gaps between the form line dashes must be placed on reasonably straight sections of the form line. Form lines can be used to differentiate flat knolls and depressions from more distinct ones (minimum height / depth should be 1 m). Excessive use of form lines must be avoided as this disturbs the three-dimensional picture of the ground shape and will complicate map reading.
@@ -7692,7 +7749,7 @@ Minimum length of a form line, knoll or depression: 1.1 mm (footprint 16.5 m)</s
     <message>
         <source>Slope line, formline</source>
         <comment>Name of symbol 103.1</comment>
-        <translation>Linia zbocza, linia formy</translation>
+        <translation type="unfinished">Linia zbocza, linia formy</translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
@@ -7702,7 +7759,7 @@ Minimum length of a form line, knoll or depression: 1.1 mm (footprint 16.5 m)</s
     <message>
         <source>Earth bank</source>
         <comment>Name of symbol 104</comment>
-        <translation>Zmiana poziomu gruntu</translation>
+        <translation type="unfinished">Zmiana poziomu gruntu</translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -7715,7 +7772,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Earth bank, minimum size</source>
         <comment>Name of symbol 104.1</comment>
-        <translation>Zmiana poziomu gruntu, minimalny rozmiar</translation>
+        <translation type="unfinished">Zmiana poziomu gruntu, minimalny rozmiar</translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -7728,7 +7785,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Earth bank, top line</source>
         <comment>Name of symbol 104.2</comment>
-        <translation>Zmiana poziomu gruntu, górna linia</translation>
+        <translation type="unfinished">Zmiana poziomu gruntu, górna linia</translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -7741,51 +7798,62 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Earth bank, tag line</source>
         <comment>Name of symbol 104.3</comment>
-        <translation>Zmiana poziomu gruntu, linia etykiety</translation>
+        <translation type="unfinished">Zmiana poziomu gruntu, linia etykiety</translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of wide earth banks.</source>
         <comment>Description of symbol 104.3</comment>
-        <translation>Użyj tego symbolu do pokazania pełnej rozpiętości szerokich zmian poziomu gruntu.</translation>
+        <translation type="unfinished">Użyj tego symbolu do pokazania pełnej rozpiętości szerokich zmian poziomu gruntu.</translation>
     </message>
     <message>
         <source>Earth bank, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 104.9</comment>
-        <translation>Zmiana poziomu gruntu, minimalny rozmiar (zgodnie z ISOM2000)</translation>
+        <translation type="unfinished">Zmiana poziomu gruntu, minimalny rozmiar (zgodnie z ISOM2000)</translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Ściana ziemi</translation>
+        <comment>Name of symbol 105.1</comment>
+        <translation type="unfinished">Ściana ziemi</translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Wyodrębniona ściana ziemi. Minimalna wysokość: 1 m.
+        <comment>Description of symbol 105.1</comment>
+        <translation type="unfinished">Wyodrębniona ściana ziemi. Minimalna wysokość: 1 m.
 Minimalna długość: 1,4 mm (ślad 21 m).</translation>
+    </message>
+    <message>
+        <source>Retaining earth wall</source>
+        <comment>Name of symbol 105.2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A retaining earth wall is an abrupt change in ground level which can be clearly distinguished from its surroundings used for minor peat edges and cultivation terraces. If such a feature is higher than 1 m, it should be drawn with the symbol Earth bank (104).
+Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
+        <comment>Description of symbol 105.2</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Erosion gully</source>
         <comment>Name of symbol 107</comment>
-        <translation>Żleb erozyjny</translation>
+        <translation type="unfinished">Żleb erozyjny</translation>
     </message>
     <message>
-        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Minimum depth: 1 m.
-Minimum length: 1.15 mm (footprint 17 m).
-Contour lines should not be broken around this symbol.</source>
+        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Contour lines may be broken around this symbol for better readability.
+Minimum depth: 1 m.
+Minimum length: 1.15 mm (footprint 17.25 m).</source>
         <comment>Description of symbol 107</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small knoll</source>
         <comment>Name of symbol 109</comment>
-        <translation>Mały pagórek</translation>
+        <translation type="unfinished">Mały pagórek</translation>
     </message>
     <message>
         <source>An obvious mound or knoll which cannot be drawn to scale with a contour.
@@ -7798,7 +7866,7 @@ Footprint: 7.5 m x 7.5 m.</source>
     <message>
         <source>Small depression</source>
         <comment>Name of symbol 111</comment>
-        <translation>Mała depresja</translation>
+        <translation type="unfinished">Mała depresja</translation>
     </message>
     <message>
         <source>A small depression or hollow without steep sides that is too small to be shown by contours.
@@ -7812,7 +7880,7 @@ Footprint: 12 m x 6 m.</source>
     <message>
         <source>Impassable cliff</source>
         <comment>Name of symbol 201</comment>
-        <translation>Nieprzebieżne urwisko</translation>
+        <translation type="unfinished">Nieprzebieżne urwisko</translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -7826,7 +7894,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.1</comment>
-        <translation>Nieprzebieżne urwisko, minimalny rozmiar</translation>
+        <translation type="unfinished">Nieprzebieżne urwisko, minimalny rozmiar</translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -7845,12 +7913,12 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
         <comment>Name of symbol 201.3</comment>
-        <translation>Nieprzebieżne urwisko, górna linia</translation>
+        <translation type="unfinished">Nieprzebieżne urwisko, górna linia</translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -7864,22 +7932,22 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.4</comment>
-        <translation>Nieprzebieżne urwisko, linia etykiety</translation>
+        <translation type="unfinished">Nieprzebieżne urwisko, linia etykiety</translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of a wide cliff.</source>
         <comment>Description of symbol 201.4</comment>
-        <translation>Użyj tego symblu do pokazania pełnej rozpiętości urwiska.</translation>
+        <translation type="unfinished">Użyj tego symblu do pokazania pełnej rozpiętości urwiska.</translation>
     </message>
     <message>
         <source>Impassable cliff, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 201.9</comment>
-        <translation>Niebrzebieżne urwisko, minimalny rozmiar (zgodny z ISOM2000)</translation>
+        <translation type="unfinished">Niebrzebieżne urwisko, minimalny rozmiar (zgodny z ISOM2000)</translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Cliff</source>
@@ -7888,7 +7956,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -7898,11 +7966,11 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, minimum size</source>
         <comment>Name of symbol 202.1</comment>
-        <translation>Urwisko, minimalny rozmiar</translation>
+        <translation type="unfinished">Urwisko, minimalny rozmiar</translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -7912,11 +7980,11 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags</source>
         <comment>Name of symbol 202.2</comment>
-        <translation>Urwisko, z etykietą</translation>
+        <translation type="unfinished">Urwisko, z etykietą</translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.5 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -7926,11 +7994,11 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size</source>
         <comment>Name of symbol 202.3</comment>
-        <translation>Urwisko, z etykietą, minimalny rozmiar</translation>
+        <translation type="unfinished">Urwisko, z etykietą, minimalny rozmiar</translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.15 mm. A cliff should interplay with the contour lines.
 Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
@@ -7940,17 +8008,17 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 202.9</comment>
-        <translation>Urwisko, z etykietą, minimalny rozmiar (zgodny z ISOM2000)</translation>
+        <translation type="unfinished">Urwisko, z etykietą, minimalny rozmiar (zgodny z ISOM2000)</translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Boulder</source>
         <comment>Name of symbol 204</comment>
-        <translation>Głaz</translation>
+        <translation type="unfinished">Głaz</translation>
     </message>
     <message>
         <source>A distinct boulder (should be higher than 1 m), which is immediately identifiable on the ground. Groups of boulders are represented using symbol Boulder cluster (207) or a boulder field symbol (208, 209).
@@ -7962,7 +8030,7 @@ Footprint: 6 m diameter (7.5 m diameter).</source>
     <message>
         <source>Boulder or large boulder, different size</source>
         <comment>Name of symbol 204.5</comment>
-        <translation>Głaz lub duży głaz, różnego rozmiaru</translation>
+        <translation type="unfinished">Głaz lub duży głaz, różnego rozmiaru</translation>
     </message>
     <message>
         <source>A boulder which is larger than neighboring boulders (204), or a large boulder which is smaller than neighboring large boulders (205).
@@ -7976,7 +8044,7 @@ To be able to show the distinction between neighbouring (closer than 30 metres a
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 205</comment>
-        <translation>Duży głaz</translation>
+        <translation type="unfinished">Duży głaz</translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder. A large boulder should be more than 2 m high.
@@ -7988,7 +8056,7 @@ Footprint: 9 m diameter (7.5 m diameter).</source>
     <message>
         <source>Gigantic boulder</source>
         <comment>Name of symbol 206</comment>
-        <translation>Gigantyczny głaz</translation>
+        <translation type="unfinished">Gigantyczny głaz</translation>
     </message>
     <message>
         <source>A gigantic boulder, rock pillar or massive cliff shall be represented in plan shape. The objects can vary in shape and width.
@@ -8001,7 +8069,7 @@ Minimum area: 0.3 mm² (footprint 67 m²).</source>
     <message>
         <source>Boulder cluster</source>
         <comment>Name of symbol 207</comment>
-        <translation>Skupisko głazów</translation>
+        <translation type="unfinished">Skupisko głazów</translation>
     </message>
     <message>
         <source>A distinct group of boulders so closely clustered together that they cannot be marked individually. The boulders in the cluster should be higher than 1 m.
@@ -8015,7 +8083,7 @@ Footprint: 12 m x 10 m.</source>
     <message>
         <source>Boulder cluster, large</source>
         <comment>Name of symbol 207.1</comment>
-        <translation>Skupisko głazów, duże</translation>
+        <translation type="unfinished">Skupisko głazów, duże</translation>
     </message>
     <message>
         <source>To be able to show the distinction between neighbouring (maximum 30 m apart) boulder clusters with significant difference in boulder size, it is permitted to use this symbol instead of regular Boulder cluster (207) for some of the boulder clusters.</source>
@@ -8025,7 +8093,7 @@ Footprint: 12 m x 10 m.</source>
     <message>
         <source>Boulder field</source>
         <comment>Name of symbol 208</comment>
-        <translation>Pole głazów</translation>
+        <translation type="unfinished">Pole głazów</translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -8039,7 +8107,7 @@ Footprint of individual triangle: 12 m x 6 m.</source>
     <message>
         <source>Boulder field, single triangle</source>
         <comment>Name of symbol 208.1</comment>
-        <translation>Pole głazów, pojedyńczy symbol</translation>
+        <translation type="unfinished">Pole głazów, pojedyńczy symbol</translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -8053,17 +8121,17 @@ Footprint of individual triangle: 12 m x 6 m.</source>
     <message>
         <source>Boulder field, single triangle, enlarged</source>
         <comment>Name of symbol 208.2</comment>
-        <translation>Pole głazów, pojedyńczy symbol, powiększony</translation>
+        <translation type="unfinished">Pole głazów, pojedyńczy symbol, powiększony</translation>
     </message>
     <message>
         <source>To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.</source>
         <comment>Description of symbol 208.2</comment>
-        <translation>Aby móc pokazać oczywiste różnice w wysokości na polu kamieni, jest dozwolone, aby powiększyć niektóre trójkąty do 120%.</translation>
+        <translation type="unfinished">Aby móc pokazać oczywiste różnice w wysokości na polu kamieni, jest dozwolone, aby powiększyć niektóre trójkąty do 120%.</translation>
     </message>
     <message>
         <source>Dense boulder field</source>
         <comment>Name of symbol 209</comment>
-        <translation>Gęste pole głazów</translation>
+        <translation type="unfinished">Gęste pole głazów</translation>
     </message>
     <message>
         <source>An area which is covered with so many blocks of stone that they cannot be marked individually and the runnability is affected, is shown with randomly placed and orientated solid triangles. A minimum of two triangles must be used.
@@ -8139,7 +8207,7 @@ Footprint of individual triangle: 12 m x 6 m.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Should be at least 2 m wide.
+        <source>A crossable watercourse more than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <comment>Description of symbol 304</comment>
         <translation type="unfinished"></translation>
@@ -8150,7 +8218,8 @@ Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Minimum length (isolated): 1 mm (footprint 15 m).</source>
+        <source>A crossable watercourse less than 2 m wide.
+Minimum length (isolated): 1 mm (footprint 15 m)</source>
         <comment>Description of symbol 305</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -8334,11 +8403,10 @@ Minimum length: 2 mm (footprint 30 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
-Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
+        <source>A vegetation boundary within the forest, or a distinct forest edge.
+Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
+The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
+Minimum length, black dot implementation: 5 dots (2.0 mm - footprint 30 m).</source>
         <comment>Description of symbol 416</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -8348,7 +8416,9 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The symbol is orientated to north.
+        <source>A vegetation feature which is significant or prominent.
+White mask is used under the green cross, to improve readability in yellow and green (line width of white mask 0.36 mm, and it shall be 0.18 mm longer in the ends of the symbol).
+The symbol is orientated to north.
 The definition of the symbol must be given on the map.
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 419</comment>
@@ -8392,7 +8462,8 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+        <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
+The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502</comment>
@@ -8406,7 +8477,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation>Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
+        <translation type="unfinished">Zapewnione na potrzeby migracji z ISOM2000. Odradza się używania tego wariantu symbolu dla nowych map.</translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
@@ -8414,7 +8485,8 @@ A road with two carriageways can be represented using two wide road symbols side
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+        <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
+The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502.2</comment>
@@ -8426,7 +8498,7 @@ A road with two carriageways can be represented using two wide road symbols side
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
+        <source>A maintained road less than 5 m wide suitable for vehicles in all weather.</source>
         <comment>Description of symbol 503</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -8499,7 +8571,7 @@ Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
     <message>
         <source>A railway or other kind of railed track.
 If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
-Minimum length (isolated): two dashes (4 mm - footprint 60 m).</source>
+Minimum length (isolated): two black dashes (4 mm - footprint 60 m).</source>
         <comment>Description of symbol 509</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -8585,14 +8657,26 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     </message>
     <message>
         <source>Wall</source>
-        <comment>Name of symbol 513</comment>
+        <comment>Name of symbol 513.1</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513</comment>
+        <comment>Description of symbol 513.1</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Retaining wall</source>
+        <comment>Name of symbol 513.2</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A significant wall of stone, concrete, wood or other materials which is seen only from one side. Half dot must point to the lower level.
+Minimum height: 0.5 m.
+Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
+        <comment>Description of symbol 513.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8612,7 +8696,8 @@ Minimum length (isolated): 3 mm (footprint 45 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If the fence forms an enclosed area, tags should be placed inside.
+        <source>A passable or crossable fence, normally less than 1.5 m high.
+If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
         <comment>Description of symbol 516</comment>
         <translation type="unfinished"></translation>
@@ -8646,10 +8731,9 @@ For impassable features, the line shall be broken at the crossing point. For pas
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
+        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. The area shall be discontinued where a path goes through and white colour is used as background with overlap 0.15 mm on both sides.
+Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line, if the border is unclear no black line shall occur.
 Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
 An out-of-bounds area shall not be entered.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 520</comment>
@@ -8666,27 +8750,22 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes</source>
+        <source>Area that shall not be entered, stripes (deprecated)</source>
         <comment>Name of symbol 520.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
+        <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.2</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes, bounding line</source>
+        <source>Area that shall not be entered, stripes, bounding line (deprecated)</source>
         <comment>Name of symbol 520.3</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
+        <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.3</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -8698,7 +8777,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprint 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -8728,7 +8807,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprint 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -8743,7 +8822,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
 Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Passages through buildings must have a minimum width of 0.4 mm (footprin 6.0 m).
 Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
@@ -8783,8 +8862,7 @@ Footprint: 21 m in diameter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>An obvious small tower, platform or seat.
-Location is at the centre of gravity of the symbol.
+        <source>An obvious small tower or elevated platform or seat. The object shall be with elevation above the ground. Location is at the centre of gravity of the symbol.
 The symbol is orientated to north.
 Footprint: 15 m x 15 m.</source>
         <comment>Description of symbol 525</comment>
@@ -9167,6 +9245,143 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black 20%</source>
+        <comment>Color 11</comment>
+        <translation type="obsolete">Czarny 20%</translation>
+    </message>
+    <message>
+        <source>Upper brown 50%</source>
+        <comment>Color 12</comment>
+        <translation type="obsolete">Górny brąz 50%</translation>
+    </message>
+    <message>
+        <source>Black below upper brown 50%</source>
+        <comment>Color 13</comment>
+        <translation type="obsolete">Czarny pod górnym brązem 50%</translation>
+    </message>
+    <message>
+        <source>Lower brown 50%</source>
+        <comment>Color 14</comment>
+        <translation type="obsolete">Dolny brąz 50%</translation>
+    </message>
+    <message>
+        <source>Black below lower brown 50%</source>
+        <comment>Color 15</comment>
+        <translation type="obsolete">Czarny pod dolnym brązem 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% for area features</source>
+        <comment>Color 16</comment>
+        <translation type="obsolete">Niebieski 100% dla cech obszaru</translation>
+    </message>
+    <message>
+        <source>Blue 70%</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">Niebieski 70%</translation>
+    </message>
+    <message>
+        <source>Blue 50%</source>
+        <comment>Color 18</comment>
+        <translation type="obsolete">Niebieski 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange</source>
+        <comment>Color 19</comment>
+        <translation type="obsolete">OpenOrienteering Pomarańczowy</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride</source>
+        <comment>Color 20</comment>
+        <translation type="obsolete">Żółty 100% dla wąskiej przesieki</translation>
+    </message>
+    <message>
+        <source>Green 60% for narrow ride</source>
+        <comment>Color 21</comment>
+        <translation type="obsolete">Zielony 60% dla wąskiej przesieki</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Zielony 30% dla wąskiej przesieki</translation>
+    </message>
+    <message>
+        <source>White over green</source>
+        <comment>Color 23</comment>
+        <translation type="obsolete">Biały nad zielonym</translation>
+    </message>
+    <message>
+        <source>Yellow 100%/Green 50%</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">Żółty 100%/Zielony 50%</translation>
+    </message>
+    <message>
+        <source>Black 25% (Grey)</source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">Czarny 25% (Szary)</translation>
+    </message>
+    <message>
+        <source>Green 100%/Black 50%</source>
+        <comment>Color 26</comment>
+        <translation type="obsolete">Zielony 100%/Czarny 50%</translation>
+    </message>
+    <message>
+        <source>Green 100% for area features</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">Zielony 100% dla cech obszaru</translation>
+    </message>
+    <message>
+        <source>Green 60%</source>
+        <comment>Color 28</comment>
+        <translation type="obsolete">Zielony 60%</translation>
+    </message>
+    <message>
+        <source>Green 30%</source>
+        <comment>Color 29</comment>
+        <translation type="obsolete">Zielony 30%</translation>
+    </message>
+    <message>
+        <source>Green 100% for undergrowth</source>
+        <comment>Color 30</comment>
+        <translation type="obsolete">Zielony 100% dla runa</translation>
+    </message>
+    <message>
+        <source>White over yellow</source>
+        <comment>Color 31</comment>
+        <translation type="obsolete">Biały nad żółtym</translation>
+    </message>
+    <message>
+        <source>Black for open land</source>
+        <comment>Color 32</comment>
+        <translation type="obsolete">Czarny dla otwartej przestrzeni</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <comment>Color 33</comment>
+        <translation type="obsolete">Żółty</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for area features</source>
+        <comment>Color 34</comment>
+        <translation type="obsolete">Żółty 100% dla cech obszaru</translation>
+    </message>
+    <message>
+        <source>Yellow 50%</source>
+        <comment>Color 35</comment>
+        <translation type="obsolete">Żółty 50%</translation>
+    </message>
+    <message>
+        <source>Earth wall</source>
+        <comment>Name of symbol 105</comment>
+        <translation type="obsolete">Ściana ziemi</translation>
+    </message>
+    <message>
+        <source>Distinct earth wall. Minimum height: 1 m.
+Minimum length: 1.4 mm (footprint 21 m).</source>
+        <comment>Description of symbol 105</comment>
+        <translation type="obsolete">Wyodrębniona ściana ziemi. Minimalna wysokość: 1 m.
+Minimalna długość: 1,4 mm (ślad 21 m).</translation>
     </message>
 </context>
 <context>

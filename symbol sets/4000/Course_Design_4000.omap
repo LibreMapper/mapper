@@ -470,11 +470,11 @@ The orientation of the symbol indicates the direction in which the corner points
 <object type="0" symbol="20"><coords count="1">75000 45000;</coords></object>
 <object type="4" symbol="24" h_align="1" v_align="2"><coords count="1">22500 15000;</coords><text>2</text></object>
 <object type="0" symbol="16"><coords count="1">75000 -45000;</coords></object>
-<object type="1" symbol="0"><coords count="6">-143480 -33777 32;-144117 12630 32;-110523 50330 32;-89230 -1210 32;-70045 21178 32;-52345 24193 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
+<object type="1" symbol="0"><coords count="6">-143480 -33777 32;-144118 12630 32;-110523 50330 32;-89230 -1210 32;-70045 21178 32;-52345 24193 32;</coords><pattern rotation="0"><coord x="0" y="0"/></pattern></object>
 <object type="4" symbol="3" h_align="1" v_align="2"><coords count="1">-128125 10390;</coords><text>1</text></object>
 <object type="0" symbol="84"><coords count="1">82500 45000;</coords></object>
 <object type="4" symbol="3" h_align="1" v_align="2"><coords count="1">-97500 42573;</coords><text>2</text></object>
-<object type="4" symbol="3" h_align="1" v_align="2"><coords count="1">-75818 -11582;</coords><text>3</text></object>
+<object type="4" symbol="3" h_align="1" v_align="2"><coords count="1">-75818 -11583;</coords><text>3</text></object>
 <object type="4" symbol="3" h_align="1" v_align="2"><coords count="1">-74900 32655;</coords><text>4</text></object>
 <object type="0" symbol="22"><coords count="1">75000 -7500;</coords></object>
 <object type="0" symbol="22"><coords count="1">75000 37500;</coords></object>
