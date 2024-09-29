@@ -180,31 +180,31 @@
             <cmyk method="spotcolor"/>
             <rgb method="spotcolor" r="1" g="0.73" b="0.21"/>
         </color>
-        <color id="21" priority="20" name="Green 60% for narrow ride (extra)" c="0.456" m="0" y="0.546" k="0" opacity="1">
+        <color id="21" priority="20" name="Green 60% for narrow ride (extra)" c="0.46" m="0" y="0.55" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0" spotcolor="2"/>
                 <component factor="0.6" spotcolor="5"/>
                 <component factor="0" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="0.544" g="1" b="0.454"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="0.54" g="1" b="0.45"/>
         </color>
-        <color id="22" priority="21" name="Green 30% for narrow ride (extra)" c="0.228" m="0" y="0.273" k="0" opacity="1">
+        <color id="22" priority="21" name="Green 30% for narrow ride (extra)" c="0.24" m="0" y="0.27" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0" spotcolor="2"/>
                 <component factor="0.3" spotcolor="5"/>
                 <component factor="0" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="0.772" g="1" b="0.727"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="0.76" g="1" b="0.73"/>
         </color>
-        <color id="24" priority="22" name="Yellow 100% + Green 50%" c="0.38" m="0.27" y="0.886" k="0" opacity="1">
+        <color id="22" priority="22" name="Yellow 100% + Green 50%" c="0.38" m="0.29" y="1" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0.5" spotcolor="5"/>
                 <component factor="1" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="0.62" g="0.73" b="0.114"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="0.62" g="0.71" b="0"/>
         </color>
         <color id="27" priority="23" name="Green 100% area symbols" c="0.76" m="0" y="0.91" k="0" opacity="1">
             <spotcolors knockout="true">
@@ -214,21 +214,21 @@
             <cmyk method="spotcolor"/>
             <rgb method="spotcolor" r="0.24" g="1" b="0.09"/>
         </color>
-        <color id="28" priority="24" name="Green 60% area symbols" c="0.456" m="0" y="0.546" k="0" opacity="1">
+        <color id="23" priority="24" name="Green 60% area symbols" c="0.46" m="0" y="0.55" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0.6" spotcolor="5"/>
                 <component factor="0" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="0.544" g="1" b="0.454"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="0.54" g="1" b="0.45"/>
         </color>
-        <color id="29" priority="25" name="Green 30% area symbols" c="0.228" m="0" y="0.273" k="0" opacity="1">
+        <color id="24" priority="25" name="Green 30% area symbols" c="0.24" m="0" y="0.27" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0.3" spotcolor="5"/>
                 <component factor="0" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="0.772" g="1" b="0.727"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="0.76" g="1" b="0.73"/>
         </color>
         <color id="25" priority="26" name="Black 35% area symbols" c="0" m="0" y="0" k="0.35" opacity="1">
             <spotcolors knockout="true">
@@ -268,19 +268,19 @@
             <cmyk method="custom"/>
             <rgb method="cmyk" r="1" g="0.73" b="0.21"/>
         </color>
-        <color id="34" priority="31" name="Yellow 75% area symbols" c="0" m="0.203" y="0.593" k="0" opacity="1">
+        <color id="34" priority="31" name="Yellow 75% area symbols" c="0" m="0.2" y="0.59" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0.75" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="1" g="0.798" b="0.407"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="1" g="0.8" b="0.41"/>
         </color>
-        <color id="35" priority="32" name="Yellow 50%" c="0" m="0.135" y="0.395" k="0" opacity="1">
+        <color id="35" priority="32" name="Yellow 50%" c="0" m="0.14" y="0.4" k="0" opacity="1">
             <spotcolors knockout="true">
                 <component factor="0.5" spotcolor="30"/>
             </spotcolors>
-            <cmyk method="spotcolor"/>
-            <rgb method="spotcolor" r="1" g="0.865" b="0.605"/>
+            <cmyk method="custom"/>
+            <rgb method="cmyk" r="1" g="0.86" b="0.6"/>
         </color>
         <color id="19" priority="33" name="OpenOrienteering Orange (extra)" c="0" m="0.474" y="0.895" k="0.09" opacity="1">
             <spotcolors knockout="true">
