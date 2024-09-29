@@ -4,14 +4,14 @@
 <context>
     <name>ISOM 2017-2</name>
     <message>
-        <source>Purple for course overprint</source>
+        <source>Upper purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation>Violett für Bahndruck</translation>
+        <translation type="unfinished">Violett für Bahndruck</translation>
     </message>
     <message>
-        <source>White for course overprint</source>
+        <source>White for railroad</source>
         <comment>Color 1</comment>
-        <translation>Weiß für Bahneindruck</translation>
+        <translation type="unfinished">Weiß für Bahneindruck</translation>
     </message>
     <message>
         <source>Black 100%</source>
@@ -19,164 +19,159 @@
         <translation>Schwarz 100%</translation>
     </message>
     <message>
-        <source>Green 100%</source>
+        <source>Blue 100% point symbols</source>
         <comment>Color 3</comment>
-        <translation>Grün 100%</translation>
+        <translation type="unfinished">Grün 100%</translation>
     </message>
     <message>
-        <source>White for railway</source>
+        <source>Brown 100% point symbols</source>
         <comment>Color 4</comment>
-        <translation>Weiß für Bahngleis</translation>
+        <translation type="unfinished">Weiß für Bahngleis</translation>
     </message>
     <message>
-        <source>Blue 100%</source>
+        <source>Green 100% point symbols</source>
         <comment>Color 5</comment>
-        <translation>Blau 100%</translation>
+        <translation type="unfinished">Blau 100%</translation>
     </message>
     <message>
-        <source>Brown 100%</source>
+        <source>Blue 100% line symbols</source>
         <comment>Color 6</comment>
-        <translation>Braun 100%</translation>
+        <translation type="unfinished">Braun 100%</translation>
     </message>
     <message>
-        <source>Purple for track symbols</source>
+        <source>Dark green line symbols</source>
         <comment>Color 7</comment>
-        <translation>Violett für Bahnsymbole</translation>
+        <translation type="unfinished">Grün 100%/Schwarz 50%</translation>
     </message>
     <message>
-        <source>Black below purple for track symbols</source>
+        <source>Brown 100% line symbols</source>
         <comment>Color 8</comment>
-        <translation>Schwarz unter Violett für Bahnsymbole</translation>
+        <translation type="unfinished">Schwarz unter Violett für Bahnsymbole</translation>
     </message>
     <message>
-        <source>Black 50%</source>
+        <source>Lower purple for course overprint</source>
         <comment>Color 9</comment>
-        <translation>Schwarz 50%</translation>
+        <translation type="unfinished">Schwarz 50%</translation>
     </message>
     <message>
-        <source>Black 20%</source>
+        <source>Brown 50% for road infill</source>
         <comment>Color 10</comment>
-        <translation>Schwarz 20%</translation>
+        <translation type="unfinished">Schwarz 20%</translation>
     </message>
     <message>
-        <source>Upper brown 50%</source>
+        <source>Black 100% for road outline</source>
         <comment>Color 11</comment>
-        <translation>Oberes Braun 50%</translation>
+        <translation type="unfinished">Oberes Braun 50%</translation>
     </message>
     <message>
-        <source>Black below upper brown 50%</source>
+        <source>Black 50% for large buildings and tramway</source>
         <comment>Color 12</comment>
-        <translation>Schwarz unter oberem Braun 50%</translation>
+        <translation type="unfinished">Schwarz unter oberem Braun 50%</translation>
     </message>
     <message>
-        <source>Lower brown 50%</source>
+        <source>Black 20% for canopy</source>
         <comment>Color 13</comment>
-        <translation>Unteres Braun 50%</translation>
+        <translation type="unfinished">Unteres Braun 50%</translation>
     </message>
     <message>
-        <source>Black below lower brown 50%</source>
+        <source>Blue 100% area symbols</source>
         <comment>Color 14</comment>
-        <translation>Schwarz unter unterem Braun 50%</translation>
+        <translation type="unfinished">Schwarz unter unterem Braun 50%</translation>
     </message>
     <message>
-        <source>Blue 100% for area features</source>
+        <source>Blue 70% area symbols</source>
         <comment>Color 15</comment>
-        <translation>Blau 100% für Flächenobjekte</translation>
+        <translation type="unfinished">Blau 100% für Flächenobjekte</translation>
     </message>
     <message>
-        <source>Blue 70%</source>
+        <source>Blue 50% area symbols</source>
         <comment>Color 16</comment>
-        <translation>Blau 70%</translation>
+        <translation type="unfinished">Blau 70%</translation>
     </message>
     <message>
-        <source>Blue 50%</source>
+        <source>White over green and brown (+ yellow)</source>
         <comment>Color 17</comment>
-        <translation>Blau 50%</translation>
+        <translation type="unfinished">Blau 50%</translation>
     </message>
     <message>
-        <source>OpenOrienteering Orange</source>
+        <source>Brown 50% for paved area</source>
         <comment>Color 18</comment>
-        <translation>OpenOrienteering-Orange</translation>
+        <translation type="unfinished">OpenOrienteering-Orange</translation>
     </message>
     <message>
-        <source>Yellow 100% for narrow ride</source>
+        <source>Yellow 100% for narrow ride (extra)</source>
         <comment>Color 19</comment>
-        <translation>Gelb 100% für schmale Schneise</translation>
+        <translation type="unfinished">Gelb 100% für schmale Schneise</translation>
     </message>
     <message>
-        <source>Green 60% for narrow ride</source>
+        <source>Green 60% for narrow ride (extra)</source>
         <comment>Color 20</comment>
-        <translation>Grün 60% für schmale Schneise</translation>
+        <translation type="unfinished">Grün 60% für schmale Schneise</translation>
     </message>
     <message>
-        <source>Green 30% for narrow ride</source>
+        <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 21</comment>
-        <translation>Grün 30% für schmale Schneise</translation>
+        <translation type="unfinished">Grün 30% für schmale Schneise</translation>
     </message>
     <message>
-        <source>White over green</source>
+        <source>Yellow 100% + Green 50%</source>
         <comment>Color 22</comment>
-        <translation>Weiß über Grün</translation>
+        <translation type="unfinished">Weiß über Grün</translation>
     </message>
     <message>
-        <source>Yellow 100%/Green 50%</source>
+        <source>Green 100% area symbols</source>
         <comment>Color 23</comment>
-        <translation>Gelb 100%/Grün 50%</translation>
+        <translation type="unfinished">Gelb 100%/Grün 50%</translation>
     </message>
     <message>
-        <source>Black 35% (Grey)</source>
+        <source>Green 60% area symbols</source>
         <comment>Color 24</comment>
         <translation type="unfinished">Grün 60%</translation>
     </message>
     <message>
-        <source>Dark green line symbols </source>
+        <source>Green 30% area symbols</source>
         <comment>Color 25</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grün 100%/Schwarz 50%</translation>
     </message>
     <message>
-        <source>Green 100% for area features</source>
+        <source>Black 35% area symbols</source>
         <comment>Color 26</comment>
-        <translation>Grün 100% für Flächenobjekte</translation>
+        <translation type="unfinished">Grün 100% für Flächenobjekte</translation>
     </message>
     <message>
-        <source>Green 60%</source>
+        <source>Green 100% below green areas (extra)</source>
         <comment>Color 27</comment>
-        <translation>Grün 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 28</comment>
-        <translation>Grün 30%</translation>
-    </message>
-    <message>
-        <source>Green 100% for undergrowth</source>
-        <comment>Color 29</comment>
-        <translation>Grün 100% für Bodenbewuchs</translation>
+        <translation type="unfinished">Grün 60%</translation>
     </message>
     <message>
         <source>White over yellow</source>
-        <comment>Color 30</comment>
+        <comment>Color 28</comment>
         <translation>Weiß über Gelb</translation>
     </message>
     <message>
-        <source>Black for open land</source>
+        <source>Black for cultivated land and sandy ground</source>
+        <comment>Color 29</comment>
+        <translation type="unfinished">Grün 100% für Bodenbewuchs</translation>
+    </message>
+    <message>
+        <source>Yellow 100% area symbols</source>
+        <comment>Color 30</comment>
+        <translation type="unfinished">Weiß über Gelb</translation>
+    </message>
+    <message>
+        <source>Yellow 75% area symbols</source>
         <comment>Color 31</comment>
-        <translation>Schwarz für offenes Land</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation>Gelb</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for area features</source>
-        <comment>Color 33</comment>
-        <translation>Gelb 100% für Flächenobjekte</translation>
+        <translation type="unfinished">Schwarz für offenes Land</translation>
     </message>
     <message>
         <source>Yellow 50%</source>
-        <comment>Color 34</comment>
+        <comment>Color 32</comment>
         <translation>Gelb 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange (extra)</source>
+        <comment>Color 33</comment>
+        <translation type="unfinished">Gelb 100% für Flächenobjekte</translation>
     </message>
     <message>
         <source>Contour</source>
@@ -277,7 +272,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, minimum size</source>
@@ -290,7 +288,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, top line</source>
@@ -303,7 +304,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, tag line</source>
@@ -323,7 +327,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Earth wall</source>
@@ -535,7 +539,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
@@ -569,7 +573,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Cliff</source>
@@ -635,7 +639,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Rocky pit or cave (without a distinct entrance)</source>
@@ -654,7 +658,7 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
         <comment>Name of symbol 203.1.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höhle oder felsiges Loch (mit eindeutigem Eingang)</translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
@@ -668,13 +672,15 @@ Felslöcher mit mehr als 5 m Durchmesser sollten vergrößert und mit den Felssy
     <message>
         <source>Dangerous pit</source>
         <comment>Name of symbol 203.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höhle oder felsiges Loch (mit eindeutigem Eingang)</translation>
     </message>
     <message>
         <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
 Footprint: 13.5 m diameter.</source>
         <comment>Description of symbol 203.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Felslöcher, Gruben, Höhlen oder Schächte mit einem klaren Eingang, die für den Wettkämpfer eine Gefahr bedeuten können. Minimale Tiefe: 1 m.
+Die Lage entspricht dem Schwerpunkt des Symbols. Die Spitze des Symbols muss in die Höhle hineinzeigen.
+Felslöcher mit mehr als 5 m Durchmesser sollten vergrößert und mit den Felssymbolen (201, 202) dargestellt werden.</translation>
     </message>
     <message>
         <source>Rocky pit or cave with distinct entrance (from ISOM2000)</source>
@@ -684,7 +690,7 @@ Footprint: 13.5 m diameter.</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 203.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Boulder</source>
@@ -975,7 +981,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>The black bank line emphasises that the feature is uncrossable.</source>
         <comment>Description of symbol 301.4</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eine schwarze Umrisslinie gibt an, dass das Objekt nicht überquert werden kann.</translation>
     </message>
     <message>
         <source>Shallow body of water, with solid outline</source>
@@ -1599,7 +1605,7 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
 White mask is used under the green circle, to improve readability in yellow and green (OM 1.1 mm).
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 417</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wirklichkeit: 13.5 m x 13.5 m.</translation>
     </message>
     <message>
         <source>Prominent bush or tree</source>
@@ -1680,7 +1686,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
@@ -2582,6 +2588,288 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Das Logo von OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>White over green and brown</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">Blau 50%</translation>
+    </message>
+    <message>
+        <source>Brown 100% point symbols </source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">Weiß für Bahngleis</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols </source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Brown 100% line symbols </source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">Schwarz unter Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50% </source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
+    </message>
+    <message>
+        <source>Black for cultivated land and sandy ground </source>
+        <comment>Color 29</comment>
+        <translation type="obsolete">Grün 100% für Bodenbewuchs</translation>
+    </message>
+    <message>
+        <source>Green 100% bellow green areas (extra)</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">Grün 60%</translation>
+    </message>
+    <message>
+        <source>Purple for course overprint</source>
+        <comment>Color 0</comment>
+        <translation type="obsolete">Violett für Bahndruck</translation>
+    </message>
+    <message>
+        <source>White for course overprint</source>
+        <comment>Color 1</comment>
+        <translation type="obsolete">Weiß für Bahneindruck</translation>
+    </message>
+    <message>
+        <source>Green 100%</source>
+        <comment>Color 3</comment>
+        <translation type="obsolete">Grün 100%</translation>
+    </message>
+    <message>
+        <source>White for railway</source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">Weiß für Bahngleis</translation>
+    </message>
+    <message>
+        <source>Blue 100%</source>
+        <comment>Color 5</comment>
+        <translation type="obsolete">Blau 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100%</source>
+        <comment>Color 6</comment>
+        <translation type="obsolete">Braun 100%</translation>
+    </message>
+    <message>
+        <source>Purple for track symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Black below purple for track symbols</source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">Schwarz unter Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Black 50%</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Black 20%</source>
+        <comment>Color 10</comment>
+        <translation type="obsolete">Schwarz 20%</translation>
+    </message>
+    <message>
+        <source>Upper brown 50%</source>
+        <comment>Color 11</comment>
+        <translation type="obsolete">Oberes Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black below upper brown 50%</source>
+        <comment>Color 12</comment>
+        <translation type="obsolete">Schwarz unter oberem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Lower brown 50%</source>
+        <comment>Color 13</comment>
+        <translation type="obsolete">Unteres Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black below lower brown 50%</source>
+        <comment>Color 14</comment>
+        <translation type="obsolete">Schwarz unter unterem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% for area features</source>
+        <comment>Color 15</comment>
+        <translation type="obsolete">Blau 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Blue 70%</source>
+        <comment>Color 16</comment>
+        <translation type="obsolete">Blau 70%</translation>
+    </message>
+    <message>
+        <source>Blue 50%</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">Blau 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange</source>
+        <comment>Color 18</comment>
+        <translation type="obsolete">OpenOrienteering-Orange</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride</source>
+        <comment>Color 19</comment>
+        <translation type="obsolete">Gelb 100% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Green 60% for narrow ride</source>
+        <comment>Color 20</comment>
+        <translation type="obsolete">Grün 60% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride</source>
+        <comment>Color 21</comment>
+        <translation type="obsolete">Grün 30% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>White over green</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
+    </message>
+    <message>
+        <source>Yellow 100%/Green 50%</source>
+        <comment>Color 23</comment>
+        <translation type="obsolete">Gelb 100%/Grün 50%</translation>
+    </message>
+    <message>
+        <source>Black 35% (Grey)</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">Schwarz 25% (Grau)</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols </source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Green 100% for area features</source>
+        <comment>Color 26</comment>
+        <translation type="obsolete">Grün 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Green 60%</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">Grün 60%</translation>
+    </message>
+    <message>
+        <source>Green 30%</source>
+        <comment>Color 28</comment>
+        <translation type="obsolete">Grün 30%</translation>
+    </message>
+    <message>
+        <source>Green 100% for undergrowth</source>
+        <comment>Color 29</comment>
+        <translation type="obsolete">Grün 100% für Bodenbewuchs</translation>
+    </message>
+    <message>
+        <source>White over yellow</source>
+        <comment>Color 30</comment>
+        <translation type="obsolete">Weiß über Gelb</translation>
+    </message>
+    <message>
+        <source>Black for open land</source>
+        <comment>Color 31</comment>
+        <translation type="obsolete">Schwarz für offenes Land</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <comment>Color 32</comment>
+        <translation type="obsolete">Gelb</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for area features</source>
+        <comment>Color 33</comment>
+        <translation type="obsolete">Gelb 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Yellow 50%</source>
+        <comment>Color 34</comment>
+        <translation type="obsolete">Gelb 50%</translation>
+    </message>
+    <message>
+        <source>Black 65%</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">Schwarz 65%</translation>
+    </message>
+    <message>
+        <source>Black 25% (Grey)</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">Schwarz 25% (Grau)</translation>
+    </message>
+    <message>
+        <source>Green 100%/Black 50%</source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
+Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
+A closed contour represents a knoll or a depression. A depression has to have at least one slope line. Minimum height/depth should be 1 m.
+Relationships between adjacent contour lines are important. Adjacent contour lines show form and structure. Small details on contours should be avoided because they tend to hide the main features of the terrain.
+Prominent features such as depressions, re-entrants, spurs, earth banks and terraces may have to be exaggerated.
+Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
+The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
+The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
+A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
+Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
+        <comment>Description of symbol 101</comment>
+        <translation type="obsolete">Eine Linie, die Punkte gleicher Höhe verbindet. Die normale Äquidistanz beträgt 5 m. Eine Äquidistanz von 2.5 m kann für flache Gebiete verwendet werden.
+Fallstriche können auf der abwärts gerichteten Seite einer Höhenkurve gezeichnet werden, damit die Richtung, in welche das Gelände abfällt, klarer wird. Die Fallstriche sollten in Mulden gezeichnet werden.
+Eine geschlossene Höhenkurve stellt einen Hügel oder eine Senke dar. Eine Senke muss mindestens einen Fallstrich enthalten. Minimale Höhe/Tiefe sollte 1 m sein.
+Die Beziehung zwischen benachbarten Höhenkurven ist wichtig. Benachbarte Höhenkurven bestimmen Form und Struktur. Kleine Details in den Höhenkurven sollten weggelassen werden, weil diese die Hauptformen des Geländes verbergen können.
+Markante Objekte wie Senken, Mulden, Nasen, Böschungen und Terrassen müssen möglicherweise vergrössert werden.
+Die absolute Höhe ist von geringerer Bedeutung, aber der relative Höhenunterschied benachbarter Objekte sollte auf der Karte so genau wie möglich wiedergegeben werden. Es ist gestattet, Höhenkurven leicht zu verändern, wenn dadurch ein Objekt besser dargestellt werden kann. Derartige Abweichungen sollten nicht mehr als 25% der Äquidistanz betragen, wobei benachbarte Objekte zu berücksichtigen sind.
+Die engste Biegung in einer Höhenkurve ist 0.25 mm (Wirklichkeit 4 m) von Linienmitte zu Linienmitte. Die Breite einer Mulde oder Nase muss grösser als 0.5 mm (Wirklichkeit 8 m) von Linienmitte zu Linienmitte sein.
+Die minimale Länge eines mit Höhenkurven dargestellten Hügels ist 0.9 mm (Wirklichkeit 13.5 m) und die minimale Breite beträgt 0.6 mm (Wirklichkeit 9 m), beides aussen gemessen. Kleinere, deutliche Hügel werden mit dem Symbol 109 (Kuppe) oder Symbol 110 (längliche Kuppe) dargestellt oder können vergrössert gezeichnet werden, damit die Minimaldimensionen eingehalten werden.
+Eine Senke muss wegen dem Fallstrich eine minimale Länge von 1.1 mm (Wirklichkeit 16.5 m) haben und eine minimale Breite von aussen gemessen 0.7 mm (Wirklichkeit 10.5 m). Kleinere, markante Senken können mit Symbol 111 (kleine Senke) dargestellt oder können vergrössert gezeichnet werden, damit die Minimaldimensionen eingehalten werden.
+Die Höhenkurven sollten beim Symbol 109 (Kuppe) oder Symbol 110 (längliche Kuppe) angepasst (nicht unterbrochen) werden.</translation>
+    </message>
+    <message>
+        <source>Earth wall</source>
+        <comment>Name of symbol 105</comment>
+        <translation type="obsolete">Erdwall</translation>
+    </message>
+    <message>
+        <source>Cave or rocky pit (with a distinct entrance)</source>
+        <comment>Name of symbol 203.2</comment>
+        <translation type="obsolete">Höhle oder felsiges Loch (mit eindeutigem Eingang)</translation>
+    </message>
+    <message>
+        <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
+Location is the centre of gravity of the symbol, and the symbol should point into the cave.
+Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
+        <comment>Description of symbol 203.2</comment>
+        <translation type="obsolete">Felslöcher, Gruben, Höhlen oder Schächte mit einem klaren Eingang, die für den Wettkämpfer eine Gefahr bedeuten können. Minimale Tiefe: 1 m.
+Die Lage entspricht dem Schwerpunkt des Symbols. Die Spitze des Symbols muss in die Höhle hineinzeigen.
+Felslöcher mit mehr als 5 m Durchmesser sollten vergrößert und mit den Felssymbolen (201, 202) dargestellt werden.</translation>
+    </message>
+    <message>
+        <source>A black bank line indicates that the feature cannot be crossed.</source>
+        <comment>Description of symbol 301.4</comment>
+        <translation type="obsolete">Eine schwarze Umrisslinie gibt an, dass das Objekt nicht überquert werden kann.</translation>
+    </message>
+    <message>
+        <source>Footprint: 13.5 m x 13.5 m.</source>
+        <comment>Description of symbol 417</comment>
+        <translation type="obsolete">Wirklichkeit: 13.5 m x 13.5 m.</translation>
+    </message>
+    <message>
+        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
+        <comment>Description of symbol 503</comment>
+        <translation type="obsolete">Eine unterhaltene Straße für Motorfahrzeuge, die bei jedem Wetter befahrbar ist. Weniger als 5 m breit.</translation>
+    </message>
+    <message>
+        <source>Wall</source>
+        <comment>Name of symbol 513</comment>
+        <translation type="obsolete">Mauer</translation>
     </message>
 </context>
 <context>
@@ -14571,179 +14859,319 @@ Hinweis: Wenn das Bachsymbol breiter als 0,25 mm ist, muss das Stegsymbol angepa
         <translation>Grün für Ski-OL</translation>
     </message>
     <message>
-        <source>Black 100%</source>
+        <source>Upper purple for course overprint</source>
         <comment>Color 3</comment>
-        <translation>Schwarz 100%</translation>
+        <translation type="unfinished">Violett für Bahndruck</translation>
+    </message>
+    <message>
+        <source>White for railroad</source>
+        <comment>Color 4</comment>
+        <translation type="unfinished">Weiß für Bahneindruck</translation>
+    </message>
+    <message>
+        <source>Black 100%</source>
+        <comment>Color 5</comment>
+        <translation type="unfinished">Schwarz 100%</translation>
     </message>
     <message>
         <source>Green 100%</source>
-        <comment>Color 4</comment>
-        <translation>Grün 100%</translation>
+        <comment>Color 6</comment>
+        <translation type="unfinished">Grün 100%</translation>
     </message>
     <message>
         <source>White for railway</source>
-        <comment>Color 5</comment>
-        <translation>Weiß für Bahngleis</translation>
+        <comment>Color 7</comment>
+        <translation type="unfinished">Weiß für Bahngleis</translation>
     </message>
     <message>
         <source>Blue 100%</source>
-        <comment>Color 6</comment>
-        <translation>Blau 100%</translation>
+        <comment>Color 8</comment>
+        <translation type="unfinished">Blau 100%</translation>
     </message>
     <message>
         <source>Brown 100%</source>
-        <comment>Color 7</comment>
-        <translation>Braun 100%</translation>
+        <comment>Color 9</comment>
+        <translation type="unfinished">Braun 100%</translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
-        <comment>Color 8</comment>
-        <translation>Violett für Bahnsymbole</translation>
+        <comment>Color 10</comment>
+        <translation type="unfinished">Violett für Bahnsymbole</translation>
     </message>
     <message>
         <source>Black below purple for track symbols</source>
-        <comment>Color 9</comment>
-        <translation>Schwarz unter Violett für Bahnsymbole</translation>
+        <comment>Color 11</comment>
+        <translation type="unfinished">Schwarz unter Violett für Bahnsymbole</translation>
     </message>
     <message>
         <source>Black 65%</source>
-        <comment>Color 10</comment>
-        <translation>Schwarz 65%</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 11</comment>
-        <translation>Schwarz 50%</translation>
+        <comment>Color 12</comment>
+        <translation type="unfinished">Schwarz 65%</translation>
     </message>
     <message>
         <source>Black 20%</source>
-        <comment>Color 12</comment>
-        <translation>Schwarz 20%</translation>
+        <comment>Color 13</comment>
+        <translation type="unfinished">Schwarz 20%</translation>
     </message>
     <message>
         <source>Upper brown 50%</source>
-        <comment>Color 13</comment>
-        <translation>Oberes Braun 50%</translation>
+        <comment>Color 14</comment>
+        <translation type="unfinished">Oberes Braun 50%</translation>
     </message>
     <message>
         <source>Black below upper brown 50%</source>
-        <comment>Color 14</comment>
-        <translation>Schwarz unter oberem Braun 50%</translation>
+        <comment>Color 15</comment>
+        <translation type="unfinished">Schwarz unter oberem Braun 50%</translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
-        <comment>Color 15</comment>
-        <translation>Unteres Braun 50%</translation>
+        <comment>Color 16</comment>
+        <translation type="unfinished">Unteres Braun 50%</translation>
     </message>
     <message>
         <source>Black below lower brown 50%</source>
-        <comment>Color 16</comment>
-        <translation>Schwarz unter unterem Braun 50%</translation>
+        <comment>Color 17</comment>
+        <translation type="unfinished">Schwarz unter unterem Braun 50%</translation>
     </message>
     <message>
         <source>Blue 100% for area features</source>
-        <comment>Color 17</comment>
-        <translation>Blau 100% für Flächenobjekte</translation>
+        <comment>Color 18</comment>
+        <translation type="unfinished">Blau 100% für Flächenobjekte</translation>
     </message>
     <message>
         <source>Blue 70%</source>
-        <comment>Color 18</comment>
-        <translation>Blau 70%</translation>
+        <comment>Color 19</comment>
+        <translation type="unfinished">Blau 70%</translation>
     </message>
     <message>
         <source>Blue 50%</source>
-        <comment>Color 19</comment>
-        <translation>Blau 50%</translation>
+        <comment>Color 20</comment>
+        <translation type="unfinished">Blau 50%</translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
-        <comment>Color 20</comment>
-        <translation>OpenOrienteering-Orange</translation>
+        <comment>Color 21</comment>
+        <translation type="unfinished">OpenOrienteering-Orange</translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation>Gelb 100% für schmale Schneise</translation>
+        <comment>Color 22</comment>
+        <translation type="unfinished">Gelb 100% für schmale Schneise</translation>
     </message>
     <message>
         <source>Green 60% for narrow ride</source>
-        <comment>Color 22</comment>
-        <translation>Grün 60% für schmale Schneise</translation>
+        <comment>Color 23</comment>
+        <translation type="unfinished">Grün 60% für schmale Schneise</translation>
     </message>
     <message>
         <source>Green 30% for narrow ride</source>
-        <comment>Color 23</comment>
-        <translation>Grün 30% für schmale Schneise</translation>
+        <comment>Color 24</comment>
+        <translation type="unfinished">Grün 30% für schmale Schneise</translation>
     </message>
     <message>
         <source>White over green</source>
-        <comment>Color 24</comment>
-        <translation>Weiß über Grün</translation>
+        <comment>Color 25</comment>
+        <translation type="unfinished">Weiß über Grün</translation>
     </message>
     <message>
         <source>Yellow 100%/Green 50%</source>
-        <comment>Color 25</comment>
-        <translation>Gelb 100%/Grün 50%</translation>
+        <comment>Color 26</comment>
+        <translation type="unfinished">Gelb 100%/Grün 50%</translation>
     </message>
     <message>
         <source>Black 25% (Grey)</source>
-        <comment>Color 26</comment>
-        <translation>Schwarz 25% (Grau)</translation>
+        <comment>Color 27</comment>
+        <translation type="unfinished">Schwarz 25% (Grau)</translation>
     </message>
     <message>
         <source>Green 100%/Black 50%</source>
-        <comment>Color 27</comment>
-        <translation>Grün 100%/Schwarz 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
         <comment>Color 28</comment>
-        <translation type="unfinished">Grün 60%</translation>
+        <translation type="unfinished">Grün 100%/Schwarz 50%</translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 29</comment>
-        <translation>Grün 100% für Flächenobjekte</translation>
+        <translation type="unfinished">Grün 100% für Flächenobjekte</translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 30</comment>
-        <translation>Grün 60%</translation>
+        <translation type="unfinished">Grün 60%</translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 31</comment>
-        <translation>Grün 30%</translation>
+        <translation type="unfinished">Grün 30%</translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
         <comment>Color 32</comment>
-        <translation>Grün 100% für Bodenbewuchs</translation>
+        <translation type="unfinished">Grün 100% für Bodenbewuchs</translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 33</comment>
-        <translation>Weiß über Gelb</translation>
+        <translation type="unfinished">Weiß über Gelb</translation>
     </message>
     <message>
         <source>Black for open land</source>
         <comment>Color 34</comment>
-        <translation>Schwarz für offenes Land</translation>
+        <translation type="unfinished">Schwarz für offenes Land</translation>
     </message>
     <message>
         <source>Yellow</source>
         <comment>Color 35</comment>
-        <translation>Gelb</translation>
+        <translation type="unfinished">Gelb</translation>
     </message>
     <message>
         <source>Yellow 100% for area features</source>
         <comment>Color 36</comment>
-        <translation>Gelb 100% für Flächenobjekte</translation>
+        <translation type="unfinished">Gelb 100% für Flächenobjekte</translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 37</comment>
-        <translation>Gelb 50%</translation>
+        <translation type="unfinished">Gelb 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% point symbols</source>
+        <comment>Color 38</comment>
+        <translation type="unfinished">Grün 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100% point symbols</source>
+        <comment>Color 39</comment>
+        <translation type="unfinished">Weiß für Bahngleis</translation>
+    </message>
+    <message>
+        <source>Green 100% point symbols</source>
+        <comment>Color 40</comment>
+        <translation type="unfinished">Blau 100%</translation>
+    </message>
+    <message>
+        <source>Blue 100% line symbols</source>
+        <comment>Color 41</comment>
+        <translation type="unfinished">Braun 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100% line symbols</source>
+        <comment>Color 42</comment>
+        <translation type="unfinished">Schwarz unter Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Lower purple for course overprint</source>
+        <comment>Color 43</comment>
+        <translation type="unfinished">Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Brown 50% for road infill</source>
+        <comment>Color 44</comment>
+        <translation type="unfinished">Schwarz 20%</translation>
+    </message>
+    <message>
+        <source>Black 100% for road outline</source>
+        <comment>Color 45</comment>
+        <translation type="unfinished">Oberes Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black 50% for large buildings and tramway</source>
+        <comment>Color 46</comment>
+        <translation type="unfinished">Schwarz unter oberem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black 20% for canopy</source>
+        <comment>Color 47</comment>
+        <translation type="unfinished">Unteres Braun 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% area symbols</source>
+        <comment>Color 48</comment>
+        <translation type="unfinished">Schwarz unter unterem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Blue 70% area symbols</source>
+        <comment>Color 49</comment>
+        <translation type="unfinished">Blau 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Blue 50% area symbols</source>
+        <comment>Color 50</comment>
+        <translation type="unfinished">Blau 70%</translation>
+    </message>
+    <message>
+        <source>White over green and brown (+ yellow)</source>
+        <comment>Color 51</comment>
+        <translation type="unfinished">Blau 50%</translation>
+    </message>
+    <message>
+        <source>Brown 50% for paved area</source>
+        <comment>Color 52</comment>
+        <translation type="unfinished">OpenOrienteering-Orange</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride (extra)</source>
+        <comment>Color 53</comment>
+        <translation type="unfinished">Gelb 100% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride (extra)</source>
+        <comment>Color 54</comment>
+        <translation type="unfinished">Grün 30% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="unfinished">Weiß über Grün</translation>
+    </message>
+    <message>
+        <source>Green 100% area symbols</source>
+        <comment>Color 56</comment>
+        <translation type="unfinished">Gelb 100%/Grün 50%</translation>
+    </message>
+    <message>
+        <source>Green 30% area symbols</source>
+        <comment>Color 57</comment>
+        <translation type="unfinished">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Black 35% area symbols</source>
+        <comment>Color 58</comment>
+        <translation type="unfinished">Grün 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Green 100% below green areas (extra)</source>
+        <comment>Color 59</comment>
+        <translation type="unfinished">Grün 60%</translation>
+    </message>
+    <message>
+        <source>White over yellow</source>
+        <comment>Color 60</comment>
+        <translation type="unfinished">Weiß über Gelb</translation>
+    </message>
+    <message>
+        <source>Black for cultivated land and sandy ground</source>
+        <comment>Color 61</comment>
+        <translation type="unfinished">Grün 100% für Bodenbewuchs</translation>
+    </message>
+    <message>
+        <source>Yellow 100% area symbols</source>
+        <comment>Color 62</comment>
+        <translation type="unfinished">Weiß über Gelb</translation>
+    </message>
+    <message>
+        <source>Yellow 75% area symbols</source>
+        <comment>Color 63</comment>
+        <translation type="unfinished">Schwarz für offenes Land</translation>
+    </message>
+    <message>
+        <source>Yellow 50%</source>
+        <comment>Color 64</comment>
+        <translation type="unfinished">Gelb 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange (extra)</source>
+        <comment>Color 65</comment>
+        <translation type="unfinished">Gelb 100% für Flächenobjekte</translation>
     </message>
     <message>
         <source>Contour</source>
@@ -14844,7 +15272,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, minimum size</source>
@@ -14857,7 +15288,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, top line</source>
@@ -14870,7 +15304,10 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Erdwall ist eine abrupte Veränderung des Bodenniveaus, die sich deutlich von der Umgebung abhebt, z. B. Kies- oder Sandgruben, Straßen- und Bahneinschnitte oder Böschungen.
+Mindesthöhe: 1 m. Ein Erdwall kann die Befahrbarkeit beeinträchtigen. Die Schilder stellen die gesamte Ausdehnung des Erdwalls dar.
+Bei langen Erdwällen ist es zulässig, an den Enden Schilder zu verwenden, die kürzer als die Mindestlänge sind. Liegen zwei Erdwälle dicht beieinander, können die Schilder weggelassen werden. Unbegehbare Erdwälle sind mit dem Symbol Unbegehbare Klippe (201) darzustellen.
+Mindestlänge: 0,6 mm (Fußabdruck 9 m).</translation>
     </message>
     <message>
         <source>Earth bank, tag line</source>
@@ -14890,7 +15327,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Earth wall</source>
@@ -14989,7 +15426,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
@@ -15023,7 +15460,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Cliff</source>
@@ -15089,7 +15526,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Boulder</source>
@@ -15557,7 +15994,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bereitgestellt für die Migration von ISOM2000. Von der Verwendung dieser Symbolvariante für neue Karten wird abgeraten.</translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
@@ -16328,6 +16765,46 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <translation>Das Logo von OpenOrienteering.</translation>
     </message>
     <message>
+        <source>Black 100%</source>
+        <comment>Color 3</comment>
+        <translation type="obsolete">Schwarz 100%</translation>
+    </message>
+    <message>
+        <source>Green 100%</source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">Grün 100%</translation>
+    </message>
+    <message>
+        <source>White for railway</source>
+        <comment>Color 5</comment>
+        <translation type="obsolete">Weiß für Bahngleis</translation>
+    </message>
+    <message>
+        <source>Blue 100%</source>
+        <comment>Color 6</comment>
+        <translation type="obsolete">Blau 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100%</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Braun 100%</translation>
+    </message>
+    <message>
+        <source>Purple for track symbols</source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Black below purple for track symbols</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">Schwarz unter Violett für Bahnsymbole</translation>
+    </message>
+    <message>
+        <source>Black 65%</source>
+        <comment>Color 10</comment>
+        <translation type="obsolete">Schwarz 65%</translation>
+    </message>
+    <message>
         <source>Black 20%</source>
         <comment>Color 11</comment>
         <translation type="obsolete">Schwarz 20%</translation>
@@ -16453,42 +16930,124 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <translation type="obsolete">Gelb 50%</translation>
     </message>
     <message>
-        <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
-Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
-A closed contour represents a knoll or a depression. A depression has to have at least one slope line. Minimum height/depth should be 1 m.
-Relationships between adjacent contour lines are important. Adjacent contour lines show form and structure. Small details on contours should be avoided because they tend to hide the main features of the terrain.
-Prominent features such as depressions, re-entrants, spurs, earth banks and terraces may have to be exaggerated.
-Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
-The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
-The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
-A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
-Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
-        <comment>Description of symbol 101</comment>
-        <translation type="obsolete">Eine Linie, die Punkte gleicher Höhe verbindet. Die normale Äquidistanz beträgt 5 m. Eine Äquidistanz von 2.5 m kann für flache Gebiete verwendet werden.
-Fallstriche können auf der abwärts gerichteten Seite einer Höhenkurve gezeichnet werden, damit die Richtung, in welche das Gelände abfällt, klarer wird. Die Fallstriche sollten in Mulden gezeichnet werden.
-Eine geschlossene Höhenkurve stellt einen Hügel oder eine Senke dar. Eine Senke muss mindestens einen Fallstrich enthalten. Minimale Höhe/Tiefe sollte 1 m sein.
-Die Beziehung zwischen benachbarten Höhenkurven ist wichtig. Benachbarte Höhenkurven bestimmen Form und Struktur. Kleine Details in den Höhenkurven sollten weggelassen werden, weil diese die Hauptformen des Geländes verbergen können.
-Markante Objekte wie Senken, Mulden, Nasen, Böschungen und Terrassen müssen möglicherweise vergrössert werden.
-Die absolute Höhe ist von geringerer Bedeutung, aber der relative Höhenunterschied benachbarter Objekte sollte auf der Karte so genau wie möglich wiedergegeben werden. Es ist gestattet, Höhenkurven leicht zu verändern, wenn dadurch ein Objekt besser dargestellt werden kann. Derartige Abweichungen sollten nicht mehr als 25% der Äquidistanz betragen, wobei benachbarte Objekte zu berücksichtigen sind.
-Die engste Biegung in einer Höhenkurve ist 0.25 mm (Wirklichkeit 4 m) von Linienmitte zu Linienmitte. Die Breite einer Mulde oder Nase muss grösser als 0.5 mm (Wirklichkeit 8 m) von Linienmitte zu Linienmitte sein.
-Die minimale Länge eines mit Höhenkurven dargestellten Hügels ist 0.9 mm (Wirklichkeit 13.5 m) und die minimale Breite beträgt 0.6 mm (Wirklichkeit 9 m), beides aussen gemessen. Kleinere, deutliche Hügel werden mit dem Symbol 109 (Kuppe) oder Symbol 110 (längliche Kuppe) dargestellt oder können vergrössert gezeichnet werden, damit die Minimaldimensionen eingehalten werden.
-Eine Senke muss wegen dem Fallstrich eine minimale Länge von 1.1 mm (Wirklichkeit 16.5 m) haben und eine minimale Breite von aussen gemessen 0.7 mm (Wirklichkeit 10.5 m). Kleinere, markante Senken können mit Symbol 111 (kleine Senke) dargestellt oder können vergrössert gezeichnet werden, damit die Minimaldimensionen eingehalten werden.
-Die Höhenkurven sollten beim Symbol 109 (Kuppe) oder Symbol 110 (längliche Kuppe) angepasst (nicht unterbrochen) werden.</translation>
+        <source>White over green and brown</source>
+        <comment>Color 51</comment>
+        <translation type="obsolete">Blau 50%</translation>
     </message>
     <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
-        <translation type="obsolete">Erdwall</translation>
+        <source>Brown 100% point symbols </source>
+        <comment>Color 39</comment>
+        <translation type="obsolete">Weiß für Bahngleis</translation>
     </message>
     <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
-        <comment>Description of symbol 503</comment>
-        <translation type="obsolete">Eine unterhaltene Straße für Motorfahrzeuge, die bei jedem Wetter befahrbar ist. Weniger als 5 m breit.</translation>
+        <source>Brown 100% line symbols </source>
+        <comment>Color 42</comment>
+        <translation type="obsolete">Schwarz unter Violett für Bahnsymbole</translation>
     </message>
     <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation type="obsolete">Mauer</translation>
+        <source>Yellow 100% + Green 50% </source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
+    </message>
+    <message>
+        <source>Black for cultivated land and sandy ground </source>
+        <comment>Color 61</comment>
+        <translation type="obsolete">Grün 100% für Bodenbewuchs</translation>
+    </message>
+    <message>
+        <source>Green 100% bellow green areas (extra)</source>
+        <comment>Color 59</comment>
+        <translation type="obsolete">Grün 60%</translation>
+    </message>
+    <message>
+        <source>Black 50%</source>
+        <comment>Color 11</comment>
+        <translation type="obsolete">Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Black 20%</source>
+        <comment>Color 12</comment>
+        <translation type="obsolete">Schwarz 20%</translation>
+    </message>
+    <message>
+        <source>Upper brown 50%</source>
+        <comment>Color 13</comment>
+        <translation type="obsolete">Oberes Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black below upper brown 50%</source>
+        <comment>Color 14</comment>
+        <translation type="obsolete">Schwarz unter oberem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Lower brown 50%</source>
+        <comment>Color 15</comment>
+        <translation type="obsolete">Unteres Braun 50%</translation>
+    </message>
+    <message>
+        <source>Black below lower brown 50%</source>
+        <comment>Color 16</comment>
+        <translation type="obsolete">Schwarz unter unterem Braun 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% for area features</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">Blau 100% für Flächenobjekte</translation>
+    </message>
+    <message>
+        <source>Blue 70%</source>
+        <comment>Color 18</comment>
+        <translation type="obsolete">Blau 70%</translation>
+    </message>
+    <message>
+        <source>Blue 50%</source>
+        <comment>Color 19</comment>
+        <translation type="obsolete">Blau 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange</source>
+        <comment>Color 20</comment>
+        <translation type="obsolete">OpenOrienteering-Orange</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride</source>
+        <comment>Color 21</comment>
+        <translation type="obsolete">Gelb 100% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Green 60% for narrow ride</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Grün 60% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride</source>
+        <comment>Color 23</comment>
+        <translation type="obsolete">Grün 30% für schmale Schneise</translation>
+    </message>
+    <message>
+        <source>White over green</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
+    </message>
+    <message>
+        <source>Yellow 100%/Green 50%</source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">Gelb 100%/Grün 50%</translation>
+    </message>
+    <message>
+        <source>Black 25% (Grey)</source>
+        <comment>Color 26</comment>
+        <translation type="obsolete">Schwarz 25% (Grau)</translation>
+    </message>
+    <message>
+        <source>Green 100%/Black 50%</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Black 35% (Grey)</source>
+        <comment>Color 28</comment>
+        <translation type="obsolete">Schwarz 25% (Grau)</translation>
     </message>
 </context>
 <context>

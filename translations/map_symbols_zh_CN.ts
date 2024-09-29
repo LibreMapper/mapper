@@ -4,14 +4,14 @@
 <context>
     <name>ISOM 2017-2</name>
     <message>
-        <source>Purple for course overprint</source>
+        <source>Upper purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation>路线叠印紫色</translation>
+        <translation type="unfinished">路线叠印紫色</translation>
     </message>
     <message>
-        <source>White for course overprint</source>
+        <source>White for railroad</source>
         <comment>Color 1</comment>
-        <translation>路线叠印白色</translation>
+        <translation type="unfinished">路线叠印白色</translation>
     </message>
     <message>
         <source>Black 100%</source>
@@ -19,164 +19,159 @@
         <translation>黑色 100%</translation>
     </message>
     <message>
-        <source>Green 100%</source>
+        <source>Blue 100% point symbols</source>
         <comment>Color 3</comment>
-        <translation>绿色 100%</translation>
+        <translation type="unfinished">绿色 100%</translation>
     </message>
     <message>
-        <source>White for railway</source>
+        <source>Brown 100% point symbols</source>
         <comment>Color 4</comment>
-        <translation>铁路符号的白色</translation>
+        <translation type="unfinished">铁路符号的白色</translation>
     </message>
     <message>
-        <source>Blue 100%</source>
+        <source>Green 100% point symbols</source>
         <comment>Color 5</comment>
-        <translation>蓝色 100%</translation>
+        <translation type="unfinished">蓝色 100%</translation>
     </message>
     <message>
-        <source>Brown 100%</source>
+        <source>Blue 100% line symbols</source>
         <comment>Color 6</comment>
-        <translation>棕色 100%</translation>
+        <translation type="unfinished">棕色 100%</translation>
     </message>
     <message>
-        <source>Purple for track symbols</source>
+        <source>Dark green line symbols</source>
         <comment>Color 7</comment>
-        <translation>轨道符号的紫色</translation>
+        <translation type="unfinished">绿色 100%/黑色 50%</translation>
     </message>
     <message>
-        <source>Black below purple for track symbols</source>
+        <source>Brown 100% line symbols</source>
         <comment>Color 8</comment>
-        <translation>轨道符号紫色下面的黑色</translation>
+        <translation type="unfinished">轨道符号紫色下面的黑色</translation>
     </message>
     <message>
-        <source>Black 50%</source>
+        <source>Lower purple for course overprint</source>
         <comment>Color 9</comment>
-        <translation>黑色50％</translation>
+        <translation type="unfinished">黑色50％</translation>
     </message>
     <message>
-        <source>Black 20%</source>
+        <source>Brown 50% for road infill</source>
         <comment>Color 10</comment>
-        <translation>黑色 20%</translation>
+        <translation type="unfinished">黑色 20%</translation>
     </message>
     <message>
-        <source>Upper brown 50%</source>
+        <source>Black 100% for road outline</source>
         <comment>Color 11</comment>
-        <translation>上层棕色 50%</translation>
+        <translation type="unfinished">上层棕色 50%</translation>
     </message>
     <message>
-        <source>Black below upper brown 50%</source>
+        <source>Black 50% for large buildings and tramway</source>
         <comment>Color 12</comment>
-        <translation>上层棕色 50%下的黑色</translation>
+        <translation type="unfinished">上层棕色 50%下的黑色</translation>
     </message>
     <message>
-        <source>Lower brown 50%</source>
+        <source>Black 20% for canopy</source>
         <comment>Color 13</comment>
-        <translation>下层棕色 50%</translation>
+        <translation type="unfinished">下层棕色 50%</translation>
     </message>
     <message>
-        <source>Black below lower brown 50%</source>
+        <source>Blue 100% area symbols</source>
         <comment>Color 14</comment>
-        <translation>下层棕色 50%下的黑色</translation>
+        <translation type="unfinished">下层棕色 50%下的黑色</translation>
     </message>
     <message>
-        <source>Blue 100% for area features</source>
+        <source>Blue 70% area symbols</source>
         <comment>Color 15</comment>
-        <translation>面状符号填充蓝色 100%</translation>
+        <translation type="unfinished">面状符号填充蓝色 100%</translation>
     </message>
     <message>
-        <source>Blue 70%</source>
+        <source>Blue 50% area symbols</source>
         <comment>Color 16</comment>
-        <translation>蓝色 70%</translation>
+        <translation type="unfinished">蓝色 70%</translation>
     </message>
     <message>
-        <source>Blue 50%</source>
+        <source>White over green and brown (+ yellow)</source>
         <comment>Color 17</comment>
-        <translation>蓝色 50%</translation>
+        <translation type="unfinished">蓝色 50%</translation>
     </message>
     <message>
-        <source>OpenOrienteering Orange</source>
+        <source>Brown 50% for paved area</source>
         <comment>Color 18</comment>
-        <translation>OpenOrinenteering橙色</translation>
+        <translation type="unfinished">OpenOrinenteering橙色</translation>
     </message>
     <message>
-        <source>Yellow 100% for narrow ride</source>
+        <source>Yellow 100% for narrow ride (extra)</source>
         <comment>Color 19</comment>
-        <translation>狭窄行车道用的黄色 100%</translation>
+        <translation type="unfinished">狭窄行车道用的黄色 100%</translation>
     </message>
     <message>
-        <source>Green 60% for narrow ride</source>
+        <source>Green 60% for narrow ride (extra)</source>
         <comment>Color 20</comment>
-        <translation>狭窄行车道用的绿色 60%</translation>
+        <translation type="unfinished">狭窄行车道用的绿色 60%</translation>
     </message>
     <message>
-        <source>Green 30% for narrow ride</source>
+        <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 21</comment>
-        <translation>狭窄行车道用的绿色 30%</translation>
+        <translation type="unfinished">狭窄行车道用的绿色 30%</translation>
     </message>
     <message>
-        <source>White over green</source>
+        <source>Yellow 100% + Green 50%</source>
         <comment>Color 22</comment>
-        <translation>绿色上层的白色</translation>
+        <translation type="unfinished">绿色上层的白色</translation>
     </message>
     <message>
-        <source>Yellow 100%/Green 50%</source>
+        <source>Green 100% area symbols</source>
         <comment>Color 23</comment>
-        <translation>黄色 100%/绿色 50%</translation>
+        <translation type="unfinished">黄色 100%/绿色 50%</translation>
     </message>
     <message>
-        <source>Black 35% (Grey)</source>
+        <source>Green 60% area symbols</source>
         <comment>Color 24</comment>
         <translation type="unfinished">绿色 60%</translation>
     </message>
     <message>
-        <source>Dark green line symbols </source>
+        <source>Green 30% area symbols</source>
         <comment>Color 25</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">绿色 100%/黑色 50%</translation>
     </message>
     <message>
-        <source>Green 100% for area features</source>
+        <source>Black 35% area symbols</source>
         <comment>Color 26</comment>
-        <translation>面状符号填充绿色 100%</translation>
+        <translation type="unfinished">面状符号填充绿色 100%</translation>
     </message>
     <message>
-        <source>Green 60%</source>
+        <source>Green 100% below green areas (extra)</source>
         <comment>Color 27</comment>
-        <translation>绿色 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 28</comment>
-        <translation>绿色 30%</translation>
-    </message>
-    <message>
-        <source>Green 100% for undergrowth</source>
-        <comment>Color 29</comment>
-        <translation>低矮植被的绿色 100%</translation>
+        <translation type="unfinished">绿色 60%</translation>
     </message>
     <message>
         <source>White over yellow</source>
-        <comment>Color 30</comment>
+        <comment>Color 28</comment>
         <translation>黄色上层的白色</translation>
     </message>
     <message>
-        <source>Black for open land</source>
+        <source>Black for cultivated land and sandy ground</source>
+        <comment>Color 29</comment>
+        <translation type="unfinished">低矮植被的绿色 100%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% area symbols</source>
+        <comment>Color 30</comment>
+        <translation type="unfinished">黄色上层的白色</translation>
+    </message>
+    <message>
+        <source>Yellow 75% area symbols</source>
         <comment>Color 31</comment>
-        <translation>空旷地的黑色</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation>黄色</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for area features</source>
-        <comment>Color 33</comment>
-        <translation>面状符号填充黄色 100%</translation>
+        <translation type="unfinished">空旷地的黑色</translation>
     </message>
     <message>
         <source>Yellow 50%</source>
-        <comment>Color 34</comment>
+        <comment>Color 32</comment>
         <translation>黄色 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange (extra)</source>
+        <comment>Color 33</comment>
+        <translation type="unfinished">面状符号填充黄色 100%</translation>
     </message>
     <message>
         <source>Contour</source>
@@ -392,7 +387,9 @@ Minimum length: 1.15 mm (footprint 17.25 m).</source>
 Minimum length (isolated): two dots (0.7 mm - footprint 10.5 m).
 Contour lines shall be broken around this symbol.</source>
         <comment>Description of symbol 108</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">小的侵蚀沟，干沟或沟。最小深度：0.5米。
+最小长度（ 单独）：3 个点（1.15mm - 占地面积17米)。
+此符号周围的等高线可以剪断。</translation>
     </message>
     <message>
         <source>Small knoll</source>
@@ -701,7 +698,7 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
         <comment>Name of symbol 203.1.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">山洞（入口明显）</translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
@@ -715,13 +712,15 @@ Rocky pits larger than 5 m in diameter should be exaggerated and represented usi
     <message>
         <source>Dangerous pit</source>
         <comment>Name of symbol 203.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">山洞（入口明显）</translation>
     </message>
     <message>
         <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
 Footprint: 13.5 m diameter.</source>
         <comment>Description of symbol 203.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">可能对竞赛者构成危险的岩石坑、洞、洞穴或矿井。最小深度：1米。
+该符号的重心处表示出该地物的位置，符号指向洞穴。
+岩石坑直径大于五米的可以夸大一些用符号陡崖（201、202） 来表示。</translation>
     </message>
     <message>
         <source>Rocky pit or cave with distinct entrance (from ISOM2000)</source>
@@ -998,7 +997,10 @@ Collapsed and easily crossable trenches should be mapped as erosion gullies.</so
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">黑色的水岸线强调了这个符号特征是不可通行的。
+大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
     </message>
     <message>
         <source>Uncrossable body of water (full colour)</source>
@@ -1010,7 +1012,9 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
     </message>
     <message>
         <source>Uncrossable body of water (dominant), with bank line</source>
@@ -1022,7 +1026,10 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">黑色的水岸线强调了这个符号特征是不可通行的。
+大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
     </message>
     <message>
         <source>Uncrossable body of water (dominant)</source>
@@ -1034,7 +1041,9 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.3</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
     </message>
     <message>
         <source>Uncrossable body of water, bank line</source>
@@ -1044,7 +1053,7 @@ Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>The black bank line emphasises that the feature is uncrossable.</source>
         <comment>Description of symbol 301.4</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">黑色的水岸线强调了这个符号特征是不可通行的。</translation>
     </message>
     <message>
         <source>Shallow body of water, with solid outline</source>
@@ -1707,7 +1716,11 @@ Only one of the vegetation boundary symbols (black dotted line or dashed green l
 The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
 Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
         <comment>Description of symbol 416.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">树林中明显的树林边缘或植被边界。
+非常明显的树林边缘和植被边界可以使用耕作地边界符号来表示。在地图上只能使用一个植被分界线符号（黑色虚线或绿色虚线）。对于具有大量岩石特征的区域，推荐使用绿色虚线表示植被分界线。
+绿线的一个缺点是它不能用于在符号难行植被（410）周围和内部表示明显的植被边界。这些情况的替代方案是使用符号 耕作地分界线（415） 。
+最小长度， 黑点： 5点（ 2.5mm - 实地长度37米）。
+最小长度， 绿线： 4 段虚线（1.8mm - 实地长度27米）。</translation>
     </message>
     <message>
         <source>Prominent large tree</source>
@@ -1719,7 +1732,7 @@ Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</
 White mask is used under the green circle, to improve readability in yellow and green (OM 1.1 mm).
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 417</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">符号占地面积：13.5米 x 13.5米。</translation>
     </message>
     <message>
         <source>Prominent bush or tree</source>
@@ -1731,7 +1744,8 @@ Footprint: 13.5 m x 13.5 m.</source>
 Use sparingly, as it is easily mistaken for symbol Small knoll (109). Small white dot inside is used to aid the colour vision impaired.
 Footprint: 9.0 m x 9.0 m.</source>
         <comment>Description of symbol 418</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">谨慎使用，因为它很容易被误认为符号 小土丘（109）。内部的小白点用于帮助色觉受损人士辨别。
+符号占地面积：9.0米 x 9.0米。</translation>
     </message>
     <message>
         <source>Prominent vegetation feature</source>
@@ -2326,7 +2340,9 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
 Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
 Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
         <comment>Description of symbol 522</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">有屋顶可通过区域。
+最小面积 (单独): 0.6mm x 0.6mm（实际尺寸9米 x 9米）。
+最小（内部）宽度 : 0.3 mm （实际尺寸 4.5米）。</translation>
     </message>
     <message>
         <source>Canopy</source>
@@ -2338,7 +2354,9 @@ Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
 Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
 Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
         <comment>Description of symbol 522.1</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">有屋顶可通过区域。
+最小面积 (单独): 0.6mm x 0.6mm（实际尺寸9米 x 9米）。
+最小（内部）宽度 : 0.3 mm （实际尺寸 4.5米）。</translation>
     </message>
     <message>
         <source>Canopy, outline</source>
@@ -2350,7 +2368,9 @@ Minimum (inside) width: 0.4 mm (footprint 6.0 m).</source>
 Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
 Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
         <comment>Description of symbol 522.2</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">有屋顶可通过区域。
+最小面积 (单独): 0.6mm x 0.6mm（实际尺寸9米 x 9米）。
+最小（内部）宽度 : 0.3 mm （实际尺寸 4.5米）。</translation>
     </message>
     <message>
         <source>Ruin</source>
@@ -2690,7 +2710,12 @@ An out-of-bounds area shall not be entered.
 Minimum width: 3 mm.
 Minimum area: 3 mm x 3 mm (footprint 45 m x 45 m).</source>
         <comment>Description of symbol 709</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">禁止通行区域，禁区如果没有自然边界，可以画一条边界，如下所示:
+– 实线表示在禁区的边界地形上有连续标记（警戒带等）。
+– 虚线表示在禁区的边界地形上有不连续的标记。
+– 无边线表示禁区的边界地形上没有标记。
+禁区是指禁止进入的区域。
+最小面积：2mmx2mm(实地面积：30米 x 30米)。</translation>
     </message>
     <message>
         <source>Out-of-bounds area, solid boundary</source>
@@ -2799,6 +2824,636 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>OpenOrientering图标。</translation>
+    </message>
+    <message>
+        <source>White over green and brown</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">蓝色 50%</translation>
+    </message>
+    <message>
+        <source>Brown 100% point symbols </source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">铁路符号的白色</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols </source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">绿色 100%/黑色 50%</translation>
+    </message>
+    <message>
+        <source>Brown 100% line symbols </source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">轨道符号紫色下面的黑色</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50% </source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">绿色上层的白色</translation>
+    </message>
+    <message>
+        <source>Black for cultivated land and sandy ground </source>
+        <comment>Color 29</comment>
+        <translation type="obsolete">低矮植被的绿色 100%</translation>
+    </message>
+    <message>
+        <source>Green 100% bellow green areas (extra)</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">绿色 60%</translation>
+    </message>
+    <message>
+        <source>Purple for course overprint</source>
+        <comment>Color 0</comment>
+        <translation type="obsolete">路线叠印紫色</translation>
+    </message>
+    <message>
+        <source>White for course overprint</source>
+        <comment>Color 1</comment>
+        <translation type="obsolete">路线叠印白色</translation>
+    </message>
+    <message>
+        <source>Green 100%</source>
+        <comment>Color 3</comment>
+        <translation type="obsolete">绿色 100%</translation>
+    </message>
+    <message>
+        <source>White for railway</source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">铁路符号的白色</translation>
+    </message>
+    <message>
+        <source>Blue 100%</source>
+        <comment>Color 5</comment>
+        <translation type="obsolete">蓝色 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100%</source>
+        <comment>Color 6</comment>
+        <translation type="obsolete">棕色 100%</translation>
+    </message>
+    <message>
+        <source>Purple for track symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">轨道符号的紫色</translation>
+    </message>
+    <message>
+        <source>Black below purple for track symbols</source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">轨道符号紫色下面的黑色</translation>
+    </message>
+    <message>
+        <source>Black 50%</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">黑色50％</translation>
+    </message>
+    <message>
+        <source>Black 20%</source>
+        <comment>Color 10</comment>
+        <translation type="obsolete">黑色 20%</translation>
+    </message>
+    <message>
+        <source>Upper brown 50%</source>
+        <comment>Color 11</comment>
+        <translation type="obsolete">上层棕色 50%</translation>
+    </message>
+    <message>
+        <source>Black below upper brown 50%</source>
+        <comment>Color 12</comment>
+        <translation type="obsolete">上层棕色 50%下的黑色</translation>
+    </message>
+    <message>
+        <source>Lower brown 50%</source>
+        <comment>Color 13</comment>
+        <translation type="obsolete">下层棕色 50%</translation>
+    </message>
+    <message>
+        <source>Black below lower brown 50%</source>
+        <comment>Color 14</comment>
+        <translation type="obsolete">下层棕色 50%下的黑色</translation>
+    </message>
+    <message>
+        <source>Blue 100% for area features</source>
+        <comment>Color 15</comment>
+        <translation type="obsolete">面状符号填充蓝色 100%</translation>
+    </message>
+    <message>
+        <source>Blue 70%</source>
+        <comment>Color 16</comment>
+        <translation type="obsolete">蓝色 70%</translation>
+    </message>
+    <message>
+        <source>Blue 50%</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">蓝色 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange</source>
+        <comment>Color 18</comment>
+        <translation type="obsolete">OpenOrinenteering橙色</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride</source>
+        <comment>Color 19</comment>
+        <translation type="obsolete">狭窄行车道用的黄色 100%</translation>
+    </message>
+    <message>
+        <source>Green 60% for narrow ride</source>
+        <comment>Color 20</comment>
+        <translation type="obsolete">狭窄行车道用的绿色 60%</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride</source>
+        <comment>Color 21</comment>
+        <translation type="obsolete">狭窄行车道用的绿色 30%</translation>
+    </message>
+    <message>
+        <source>White over green</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">绿色上层的白色</translation>
+    </message>
+    <message>
+        <source>Yellow 100%/Green 50%</source>
+        <comment>Color 23</comment>
+        <translation type="obsolete">黄色 100%/绿色 50%</translation>
+    </message>
+    <message>
+        <source>Black 35% (Grey)</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">黑色 25%（灰色）</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols </source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">绿色 100%/黑色 50%</translation>
+    </message>
+    <message>
+        <source>Green 100% for area features</source>
+        <comment>Color 26</comment>
+        <translation type="obsolete">面状符号填充绿色 100%</translation>
+    </message>
+    <message>
+        <source>Green 60%</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">绿色 60%</translation>
+    </message>
+    <message>
+        <source>Green 30%</source>
+        <comment>Color 28</comment>
+        <translation type="obsolete">绿色 30%</translation>
+    </message>
+    <message>
+        <source>Green 100% for undergrowth</source>
+        <comment>Color 29</comment>
+        <translation type="obsolete">低矮植被的绿色 100%</translation>
+    </message>
+    <message>
+        <source>White over yellow</source>
+        <comment>Color 30</comment>
+        <translation type="obsolete">黄色上层的白色</translation>
+    </message>
+    <message>
+        <source>Black for open land</source>
+        <comment>Color 31</comment>
+        <translation type="obsolete">空旷地的黑色</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <comment>Color 32</comment>
+        <translation type="obsolete">黄色</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for area features</source>
+        <comment>Color 33</comment>
+        <translation type="obsolete">面状符号填充黄色 100%</translation>
+    </message>
+    <message>
+        <source>Yellow 50%</source>
+        <comment>Color 34</comment>
+        <translation type="obsolete">黄色 50%</translation>
+    </message>
+    <message>
+        <source>Black 65%</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">黑色 65%</translation>
+    </message>
+    <message>
+        <source>Black 25% (Grey)</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">黑色 25%（灰色）</translation>
+    </message>
+    <message>
+        <source>Green 100%/Black 50%</source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">绿色 100%/黑色 50%</translation>
+    </message>
+    <message>
+        <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
+Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
+A closed contour represents a knoll or a depression. A depression has to have at least one slope line. Minimum height/depth should be 1 m.
+Relationships between adjacent contour lines are important. Adjacent contour lines show form and structure. Small details on contours should be avoided because they tend to hide the main features of the terrain.
+Prominent features such as depressions, re-entrants, spurs, earth banks and terraces may have to be exaggerated.
+Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
+The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
+The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
+A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
+Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
+        <comment>Description of symbol 101</comment>
+        <translation type="obsolete">等高的连接点。等高线之间的标准垂直距离是5米。平坦地形的等高线间距为2.5米。
+在等高线的下侧可以画出坡度线，以明确坡度的方向。当使用时，他们应该放在山凹。
+闭合的轮廓表示一个小山丘或洼地。凹地必须至少有一条斜线。最低高度/深度应为1米。
+相邻的等高线之间的关系很重要。相邻的等高线表示形状和结构。轮廓上的小细节应该避免，因为它们往往掩盖了地形的主要特征。
+如洼地、山凹、山凸、土坎和台地等突出的特征可能需要被夸大。
+绝对高度精度并不重要，但相邻地物之间的相对高度差应尽可能准确地表示在地图上。允许稍微改变轮廓的高度，如果这样可以改进特征的表示。该偏差不应超过等值线间距的25%，应注意相邻特征。
+等高线上的弯道最小为中线至中线0.25毫米(脚印4米)。重入中线或支线的开口，由中线至中线的宽度必须超过0.5毫米(脚印8米)。
+轮廓丘的最小长度为0.9毫米(足迹13.5米)，最小宽度为0.6毫米(足迹9米)。小而突出的小山丘可以用符号Small knoll(109)或小而细长的knoll(110)来表示，也可以在地图上夸张以满足最小维度。
+洼地必须能容纳一条斜坡线，因此最小长度为1.1毫米(占地16.5米)，最小宽度为0.7毫米(占地10.5米)。更小、突出的凹陷可以用符号Small depression(111)表示，也可以通过夸张来满足最小维度。
+为了不接触符号小丘(109)或小伸长丘(110)，轮廓应适应(不破坏)。</translation>
+    </message>
+    <message>
+        <source>Earth wall</source>
+        <comment>Name of symbol 105</comment>
+        <translation type="obsolete">土墙</translation>
+    </message>
+    <message>
+        <source>Distinct earth wall. Minimum height: 1 m.
+Minimum length: 1.4 mm (footprint 21 m).</source>
+        <comment>Description of symbol 105</comment>
+        <translation type="obsolete">清晰的土墙。最小高度：1米。
+最小长度：1.4mm（实地长度21米）。</translation>
+    </message>
+    <message>
+        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Minimum depth: 1 m.
+Minimum length: 1.15 mm (footprint 17 m).
+Contour lines should not be broken around this symbol.</source>
+        <comment>Description of symbol 107</comment>
+        <translation type="obsolete">侵蚀沟太小不能用符号土崖（104）显示，则通过冲沟单线表示。最小深度：1米。
+最小长度：1.15mm（实地长度17米）。
+此符号周围的等高线可以不剪断。</translation>
+    </message>
+    <message>
+        <source>A small erosion gully, dry ditch or trench. Minimum depth: 0.5 m.
+Minimum length (isolated): three dots (1.15 mm - footprint 17 m).
+Contour lines should be broken around this symbol.</source>
+        <comment>Description of symbol 108</comment>
+        <translation type="obsolete">小的侵蚀沟，干沟或沟。最小深度：0.5米。
+最小长度（ 单独）：3 个点（1.15mm - 占地面积17米)。
+此符号周围的等高线可以剪断。</translation>
+    </message>
+    <message>
+        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+Crossing a cliff will normally slow progress.
+Minimum height: 1 m.
+Minimum length: 0.6 mm (footprint 9 m).</source>
+        <comment>Description of symbol 202</comment>
+        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
+对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
+通常情况下，翻越这种陡崖地形时会降低行进的速度。
+最小高度： 1米。
+最小长度：0.6mm（实际长度9米）。</translation>
+    </message>
+    <message>
+        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+Crossing a cliff will normally slow progress.
+Minimum height: 1 m.
+Minimum length: 0.6 mm (footprint 9 m).</source>
+        <comment>Description of symbol 202.1</comment>
+        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
+对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
+通常情况下，翻越这种陡崖地形时会降低行进的速度。
+最小高度： 1米。
+最小长度：0.6mm（实际长度9米）。</translation>
+    </message>
+    <message>
+        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+Crossing a cliff will normally slow progress.
+Minimum height: 1 m.
+Minimum length: 0.6 mm (footprint 9 m).</source>
+        <comment>Description of symbol 202.2</comment>
+        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
+对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
+通常情况下，翻越这种陡崖地形时会降低行进的速度。
+最小高度： 1米。
+最小长度：0.6mm（实际长度9米）。</translation>
+    </message>
+    <message>
+        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
+For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
+Crossing a cliff will normally slow progress.
+Minimum height: 1 m.
+Minimum length: 0.6 mm (footprint 9 m).</source>
+        <comment>Description of symbol 202.3</comment>
+        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
+对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
+通常情况下，翻越这种陡崖地形时会降低行进的速度。
+最小高度： 1米。
+最小长度：0.6mm（实际长度9米）。</translation>
+    </message>
+    <message>
+        <source>Cave or rocky pit (with a distinct entrance)</source>
+        <comment>Name of symbol 203.2</comment>
+        <translation type="obsolete">山洞（入口明显）</translation>
+    </message>
+    <message>
+        <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
+Location is the centre of gravity of the symbol, and the symbol should point into the cave.
+Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
+        <comment>Description of symbol 203.2</comment>
+        <translation type="obsolete">可能对竞赛者构成危险的岩石坑、洞、洞穴或矿井。最小深度：1米。
+该符号的重心处表示出该地物的位置，符号指向洞穴。
+岩石坑直径大于五米的可以夸大一些用符号陡崖（201、202） 来表示。</translation>
+    </message>
+    <message>
+        <source>The black bank line emphasises that the feature is uncrossable.
+Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+Minimum width (inside): 0.3 mm.
+Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
+        <comment>Description of symbol 301</comment>
+        <translation type="obsolete">黑色的水岸线强调了这个符号特征是不可通行的。
+大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
+    </message>
+    <message>
+        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+Minimum width (inside): 0.3 mm.
+Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
+        <comment>Description of symbol 301.1</comment>
+        <translation type="obsolete">大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
+    </message>
+    <message>
+        <source>The black bank line emphasises that the feature is uncrossable.
+Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+Minimum width (inside): 0.3 mm.
+Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
+        <comment>Description of symbol 301.2</comment>
+        <translation type="obsolete">黑色的水岸线强调了这个符号特征是不可通行的。
+大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
+    </message>
+    <message>
+        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
+Minimum width (inside): 0.3 mm.
+Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
+        <comment>Description of symbol 301.3</comment>
+        <translation type="obsolete">大面积的水域可以用70%的蓝色表示。小面积的水域和较为狭窄的水体部分，应以100%的蓝色表示。
+最小宽度(内):0.3mm。
+最小面积(内部):0.55mm×0.55mm(实地面积8米×8米)。</translation>
+    </message>
+    <message>
+        <source>A black bank line indicates that the feature cannot be crossed.</source>
+        <comment>Description of symbol 301.4</comment>
+        <translation type="obsolete">黑色的水岸线强调了这个符号特征是不可通行的。</translation>
+    </message>
+    <message>
+        <source>Should be at least 2 m wide.
+Minimum length (isolated): 1 mm (footprint 15 m).</source>
+        <comment>Description of symbol 304</comment>
+        <translation type="obsolete">应该至少宽2米。
+最小长度(单独):1mm(实地长度15米)。</translation>
+    </message>
+    <message>
+        <source>Minimum length (isolated): 1 mm (footprint 15 m).</source>
+        <comment>Description of symbol 305</comment>
+        <translation type="obsolete">最小长度(单独):1mm(实地长度15米)。</translation>
+    </message>
+    <message>
+        <source>A distinct forest edge or vegetation boundary within the forest.
+Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
+A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
+Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
+Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
+        <comment>Description of symbol 416</comment>
+        <translation type="obsolete">树林中明显的树林边缘或植被边界。
+非常明显的树林边缘和植被边界可以使用耕作地边界符号来表示。在地图上只能使用一个植被分界线符号（黑色虚线或绿色虚线）。对于具有大量岩石特征的区域，推荐使用绿色虚线表示植被分界线。
+绿线的一个缺点是它不能用于在符号难行植被（410） 周围和内部表示明显的植被边界。这些情况的替代方案是使用符号 耕作地分界线（415） 。
+最小长度， 黑点： 5点（ 2.5mm - 实地长度37米）。
+最小长度， 绿线： 4 段虚线（1.8mm - 实地长度27米）。</translation>
+    </message>
+    <message>
+        <source>A distinct forest edge or vegetation boundary within the forest.
+Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
+A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
+Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
+Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
+        <comment>Description of symbol 416.1</comment>
+        <translation type="obsolete">树林中明显的树林边缘或植被边界。
+非常明显的树林边缘和植被边界可以使用耕作地边界符号来表示。在地图上只能使用一个植被分界线符号（黑色虚线或绿色虚线）。对于具有大量岩石特征的区域，推荐使用绿色虚线表示植被分界线。
+绿线的一个缺点是它不能用于在符号难行植被（410）周围和内部表示明显的植被边界。这些情况的替代方案是使用符号 耕作地分界线（415） 。
+最小长度， 黑点： 5点（ 2.5mm - 实地长度37米）。
+最小长度， 绿线： 4 段虚线（1.8mm - 实地长度27米）。</translation>
+    </message>
+    <message>
+        <source>Footprint: 13.5 m x 13.5 m.</source>
+        <comment>Description of symbol 417</comment>
+        <translation type="obsolete">符号占地面积：13.5米 x 13.5米。</translation>
+    </message>
+    <message>
+        <source>Use sparingly, as it is easily mistaken for symbol Small knoll (109).
+Footprint: 9.0 m x 9.0 m.</source>
+        <comment>Description of symbol 418</comment>
+        <translation type="obsolete">谨慎使用，因为它很容易被误认为符号 小土丘（109）。内部的小白点用于帮助色觉受损人士辨别。
+符号占地面积：9.0米 x 9.0米。</translation>
+    </message>
+    <message>
+        <source>The symbol is orientated to north.
+The definition of the symbol must be given on the map.
+Footprint: 13.5 m x 13.5 m.</source>
+        <comment>Description of symbol 419</comment>
+        <translation type="obsolete">符号朝北。
+必须在地图上给出符号的定义。
+符号占地面积：13.5米 x 13.5米。</translation>
+    </message>
+    <message>
+        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+The space between the black lines is filled with brown (50%).
+A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
+        <comment>Description of symbol 502</comment>
+        <translation type="obsolete">路的宽度应该按比例进行绘制，但不得小于最小宽度(0.3+2*0.14 mm - 占地面积 8.7米)。如果其他地图符号离道路边缘太近而不能使用各自符号时，则外部边界线可以替换为其他黑线符号，如符号 栅栏(516)、不可通行栅栏(518)、墙(513) 或 不可翻越高墙(515)。
+两条黑线之间填充棕色（50％）。
+具有两条车道的道路可以用两个公路符号并排表示,中间只保留一条道路边缘。</translation>
+    </message>
+    <message>
+        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
+The space between the black lines is filled with brown (50%).
+A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
+        <comment>Description of symbol 502.2</comment>
+        <translation type="obsolete">路的宽度应该按比例进行绘制，但不得小于最小宽度(0.3+2*0.14 mm - 占地面积 8.7米)。如果其他地图符号离道路边缘太近而不能使用各自符号时，则外部边界线可以替换为其他黑线符号，如符号栅栏(516)、不可通行栅栏(518)、墙(513) 或 不可翻越高墙(515)。
+两条黑线之间填充棕色（50％）。
+具有两条车道的道路可以用两个公路符号并排表示,中间只保留一条道路边缘。</translation>
+    </message>
+    <message>
+        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
+        <comment>Description of symbol 503</comment>
+        <translation type="obsolete">全天候适合机动车辆行驶的有维护道路，宽度小于5 米。</translation>
+    </message>
+    <message>
+        <source>A railway or other kind of railed track.
+If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
+Minimum length (isolated): two dashes (4 mm - footprint 60 m).</source>
+        <comment>Description of symbol 509</comment>
+        <translation type="obsolete">铁路或其他类型的铁轨。
+如果禁止沿铁路通行, 则应与符号 禁止通行线路 (711) 相结合。 如果禁止穿越铁路, 则必须与 不可通过区域(520) 或 禁止通行区域(709) 的符号相结合。
+最小长度 ( 单独) : 两条虚线 (4mm - 实地长度60米)。</translation>
+    </message>
+    <message>
+        <source>Wall</source>
+        <comment>Name of symbol 513</comment>
+        <translation type="obsolete">墙</translation>
+    </message>
+    <message>
+        <source>A significant wall of stone, concrete, wood or other materials.
+Minimum height: 1 m.
+Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
+        <comment>Description of symbol 513</comment>
+        <translation type="obsolete">由石头、混凝土、木材或其他材料组成的明显的墙。
+最小高度: 1 米。
+最小长度 ( 单独) : 1.4mm ( 实地尺寸21米) 。</translation>
+    </message>
+    <message>
+        <source>If the fence forms an enclosed area, tags should be placed inside.
+Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
+        <comment>Description of symbol 516</comment>
+        <translation type="obsolete">如果栅栏形成一个封闭的区域, 则齿线应朝向区域内部。
+最小长度 (单独): 1.5 mm (实地尺寸22.5米)。</translation>
+    </message>
+    <message>
+        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
+Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
+Course planning symbol 709 can be used for temporary out-of bounds areas.
+The vertical black stripes version of the symbol is orientated to north.
+An out-of-bounds area shall not be entered.
+Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
+        <comment>Description of symbol 520</comment>
+        <translation type="obsolete">不可通行区域是指如私人住宅、花园、工厂或其他工业区。 只有等高线和突出特征物，如轨道和大型建筑物，应显示在不可通行区域内。垂直黑色条纹可用于表示完整地形的重要区域（例如，当森林的一部分是禁区时）。当路径穿过禁区时，应断开此区域符号。
+边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。
+线路设计符号709可用于临时禁区区域。
+禁区符号的垂直黑色条纹版本朝向北方。
+不得进入禁区。
+最小面积：1mm x 1mm (实际尺寸15米 x 15米)。</translation>
+    </message>
+    <message>
+        <source>Area that shall not be entered, stripes</source>
+        <comment>Name of symbol 520.2</comment>
+        <translation type="obsolete">不可通过区域(条状禁区)</translation>
+    </message>
+    <message>
+        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
+Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
+Course planning symbol 709 can be used for temporary out-of bounds areas.
+The vertical black stripes version of the symbol is orientated to north.
+An out-of-bounds area shall not be entered.
+Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
+        <comment>Description of symbol 520.2</comment>
+        <translation type="obsolete">不可通行区域是指如私人住宅、花园、工厂或其他工业区。 只有等高线和突出特征物，如轨道和大型建筑物，应显示在不可通行区域内。垂直黑色条纹可用于表示完整地形的重要区域（例如，当森林的一部分是禁区时）。当路径穿过禁区时，应断开此区域符号。
+边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。
+线路设计符号709可用于临时禁区区域。
+禁区符号的垂直黑色条纹版本朝向北方。
+不得进入禁区。
+最小面积：1mm x 1mm (实际尺寸15米 x 15米)。</translation>
+    </message>
+    <message>
+        <source>Area that shall not be entered, stripes, bounding line</source>
+        <comment>Name of symbol 520.3</comment>
+        <translation type="obsolete">条状禁区边界线</translation>
+    </message>
+    <message>
+        <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
+        <comment>Description of symbol 520.3</comment>
+        <translation type="obsolete">边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。</translation>
+    </message>
+    <message>
+        <source>A building is shown with its ground plan so far as the scale permits.
+Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
+Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Buildings within forbidden areas are generalised.
+Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
+Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
+        <comment>Description of symbol 521</comment>
+        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
+在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
+穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
+禁止区域内的建筑物是概括的。
+完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
+最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
+    </message>
+    <message>
+        <source>A building is shown with its ground plan so far as the scale permits.
+Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
+Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Buildings within forbidden areas are generalised.
+Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
+Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
+        <comment>Description of symbol 521.2</comment>
+        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
+在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
+穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
+禁止区域内的建筑物是概括的。
+完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
+最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
+    </message>
+    <message>
+        <source>A building is shown with its ground plan so far as the scale permits.
+Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
+Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
+Buildings within forbidden areas are generalised.
+Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
+Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
+        <comment>Description of symbol 521.3</comment>
+        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
+在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
+穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
+禁止区域内的建筑物是概括的。
+完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
+最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
+    </message>
+    <message>
+        <source>An accessible and runnable area with roof.
+Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
+Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
+        <comment>Description of symbol 522</comment>
+        <translation type="obsolete">有屋顶可通过区域。
+最小面积 (单独): 0.6mm x 0.6mm（实际尺寸9米 x 9米）。
+最小（内部）宽度 : 0.3 mm （实际尺寸 4.5米）。</translation>
+    </message>
+    <message>
+        <source>An accessible and runnable area with roof.
+Minimum area (isolated): 0.6 mm x 0.6 mm (footprint 9 m x 9 m).
+Minimum (inside) width: 0.3 mm (footprint 4.5 m).</source>
+        <comment>Description of symbol 522.1</comment>
+        <translation type="obsolete">有屋顶可通过区域。
+最小面积 (单独): 0.6mm x 0.6mm（实际尺寸9米 x 9米）。
+最小（内部）宽度 : 0.3 mm （实际尺寸 4.5米）。</translation>
+    </message>
+    <message>
+        <source>An obvious small tower, platform or seat.
+Location is at the centre of gravity of the symbol.
+The symbol is orientated to north.
+Footprint: 15 m x 15 m.</source>
+        <comment>Description of symbol 525</comment>
+        <translation type="obsolete">明显的小塔、平台或座位。
+位置位于符号的重心。
+符号方向朝北。
+符号占地尺寸: 15米 x 15米。</translation>
+    </message>
+    <message>
+        <source>An out-of-bounds area. A bounding line may be drawn if there is no natural boundary, as follows:
+– a solid line indicates that the boundary is marked continuously (tapes, etc.) in the terrain,
+– a dashed line indicates intermittent marking in the terrain,
+– no line indicates no marking in the terrain.
+An out-of-bounds area shall not be entered.
+Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
+        <comment>Description of symbol 709</comment>
+        <translation type="obsolete">禁止通行区域，禁区如果没有自然边界，可以画一条边界，如下所示:
+– 实线表示在禁区的边界地形上有连续标记（警戒带等）。
+– 虚线表示在禁区的边界地形上有不连续的标记。
+– 无边线表示禁区的边界地形上没有标记。
+禁区是指禁止进入的区域。
+最小面积：2mmx2mm(实地面积：30米 x 30米)。</translation>
     </message>
 </context>
 <context>
@@ -12414,179 +13069,319 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
         <translation>绿色用于 SkiO （滑雪定向越野）</translation>
     </message>
     <message>
-        <source>Black 100%</source>
+        <source>Upper purple for course overprint</source>
         <comment>Color 3</comment>
-        <translation>黑色 100%</translation>
+        <translation type="unfinished">路线叠印紫色</translation>
+    </message>
+    <message>
+        <source>White for railroad</source>
+        <comment>Color 4</comment>
+        <translation type="unfinished">路线叠印白色</translation>
+    </message>
+    <message>
+        <source>Black 100%</source>
+        <comment>Color 5</comment>
+        <translation type="unfinished">黑色 100%</translation>
     </message>
     <message>
         <source>Green 100%</source>
-        <comment>Color 4</comment>
-        <translation>绿色 100%</translation>
+        <comment>Color 6</comment>
+        <translation type="unfinished">绿色 100%</translation>
     </message>
     <message>
         <source>White for railway</source>
-        <comment>Color 5</comment>
-        <translation>铁路符号的白色</translation>
+        <comment>Color 7</comment>
+        <translation type="unfinished">铁路符号的白色</translation>
     </message>
     <message>
         <source>Blue 100%</source>
-        <comment>Color 6</comment>
-        <translation>蓝色 100%</translation>
+        <comment>Color 8</comment>
+        <translation type="unfinished">蓝色 100%</translation>
     </message>
     <message>
         <source>Brown 100%</source>
-        <comment>Color 7</comment>
-        <translation>棕色 100%</translation>
+        <comment>Color 9</comment>
+        <translation type="unfinished">棕色 100%</translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
-        <comment>Color 8</comment>
-        <translation>轨道符号的紫色</translation>
+        <comment>Color 10</comment>
+        <translation type="unfinished">轨道符号的紫色</translation>
     </message>
     <message>
         <source>Black below purple for track symbols</source>
-        <comment>Color 9</comment>
-        <translation>轨道符号紫色下面的黑色</translation>
+        <comment>Color 11</comment>
+        <translation type="unfinished">轨道符号紫色下面的黑色</translation>
     </message>
     <message>
         <source>Black 65%</source>
-        <comment>Color 10</comment>
-        <translation>黑色 65%</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 11</comment>
-        <translation>黑色50％</translation>
+        <comment>Color 12</comment>
+        <translation type="unfinished">黑色 65%</translation>
     </message>
     <message>
         <source>Black 20%</source>
-        <comment>Color 12</comment>
-        <translation>黑色 20%</translation>
+        <comment>Color 13</comment>
+        <translation type="unfinished">黑色 20%</translation>
     </message>
     <message>
         <source>Upper brown 50%</source>
-        <comment>Color 13</comment>
-        <translation>上层棕色 50%</translation>
+        <comment>Color 14</comment>
+        <translation type="unfinished">上层棕色 50%</translation>
     </message>
     <message>
         <source>Black below upper brown 50%</source>
-        <comment>Color 14</comment>
-        <translation>上层棕色 50%下的黑色</translation>
+        <comment>Color 15</comment>
+        <translation type="unfinished">上层棕色 50%下的黑色</translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
-        <comment>Color 15</comment>
-        <translation>下层棕色 50%</translation>
+        <comment>Color 16</comment>
+        <translation type="unfinished">下层棕色 50%</translation>
     </message>
     <message>
         <source>Black below lower brown 50%</source>
-        <comment>Color 16</comment>
-        <translation>下层棕色 50%下的黑色</translation>
+        <comment>Color 17</comment>
+        <translation type="unfinished">下层棕色 50%下的黑色</translation>
     </message>
     <message>
         <source>Blue 100% for area features</source>
-        <comment>Color 17</comment>
-        <translation>面状符号填充蓝色 100%</translation>
+        <comment>Color 18</comment>
+        <translation type="unfinished">面状符号填充蓝色 100%</translation>
     </message>
     <message>
         <source>Blue 70%</source>
-        <comment>Color 18</comment>
-        <translation>蓝色 70%</translation>
+        <comment>Color 19</comment>
+        <translation type="unfinished">蓝色 70%</translation>
     </message>
     <message>
         <source>Blue 50%</source>
-        <comment>Color 19</comment>
-        <translation>蓝色 50%</translation>
+        <comment>Color 20</comment>
+        <translation type="unfinished">蓝色 50%</translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
-        <comment>Color 20</comment>
-        <translation>OpenOrinenteering橙色</translation>
+        <comment>Color 21</comment>
+        <translation type="unfinished">OpenOrinenteering橙色</translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation>狭窄行车道用的黄色 100%</translation>
+        <comment>Color 22</comment>
+        <translation type="unfinished">狭窄行车道用的黄色 100%</translation>
     </message>
     <message>
         <source>Green 60% for narrow ride</source>
-        <comment>Color 22</comment>
-        <translation>狭窄行车道用的绿色 60%</translation>
+        <comment>Color 23</comment>
+        <translation type="unfinished">狭窄行车道用的绿色 60%</translation>
     </message>
     <message>
         <source>Green 30% for narrow ride</source>
-        <comment>Color 23</comment>
-        <translation>狭窄行车道用的绿色 30%</translation>
+        <comment>Color 24</comment>
+        <translation type="unfinished">狭窄行车道用的绿色 30%</translation>
     </message>
     <message>
         <source>White over green</source>
-        <comment>Color 24</comment>
-        <translation>绿色上层的白色</translation>
+        <comment>Color 25</comment>
+        <translation type="unfinished">绿色上层的白色</translation>
     </message>
     <message>
         <source>Yellow 100%/Green 50%</source>
-        <comment>Color 25</comment>
-        <translation>黄色 100%/绿色 50%</translation>
+        <comment>Color 26</comment>
+        <translation type="unfinished">黄色 100%/绿色 50%</translation>
     </message>
     <message>
         <source>Black 25% (Grey)</source>
-        <comment>Color 26</comment>
-        <translation>黑色 25%（灰色）</translation>
+        <comment>Color 27</comment>
+        <translation type="unfinished">黑色 25%（灰色）</translation>
     </message>
     <message>
         <source>Green 100%/Black 50%</source>
-        <comment>Color 27</comment>
-        <translation>绿色 100%/黑色 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
         <comment>Color 28</comment>
-        <translation type="unfinished">绿色 60%</translation>
+        <translation type="unfinished">绿色 100%/黑色 50%</translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 29</comment>
-        <translation>面状符号填充绿色 100%</translation>
+        <translation type="unfinished">面状符号填充绿色 100%</translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 30</comment>
-        <translation>绿色 60%</translation>
+        <translation type="unfinished">绿色 60%</translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 31</comment>
-        <translation>绿色 30%</translation>
+        <translation type="unfinished">绿色 30%</translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
         <comment>Color 32</comment>
-        <translation>低矮植被的绿色 100%</translation>
+        <translation type="unfinished">低矮植被的绿色 100%</translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 33</comment>
-        <translation>黄色上层的白色</translation>
+        <translation type="unfinished">黄色上层的白色</translation>
     </message>
     <message>
         <source>Black for open land</source>
         <comment>Color 34</comment>
-        <translation>空旷地的黑色</translation>
+        <translation type="unfinished">空旷地的黑色</translation>
     </message>
     <message>
         <source>Yellow</source>
         <comment>Color 35</comment>
-        <translation>黄色</translation>
+        <translation type="unfinished">黄色</translation>
     </message>
     <message>
         <source>Yellow 100% for area features</source>
         <comment>Color 36</comment>
-        <translation>面状符号填充黄色 100%</translation>
+        <translation type="unfinished">面状符号填充黄色 100%</translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 37</comment>
-        <translation>黄色 50%</translation>
+        <translation type="unfinished">黄色 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% point symbols</source>
+        <comment>Color 38</comment>
+        <translation type="unfinished">绿色 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100% point symbols</source>
+        <comment>Color 39</comment>
+        <translation type="unfinished">铁路符号的白色</translation>
+    </message>
+    <message>
+        <source>Green 100% point symbols</source>
+        <comment>Color 40</comment>
+        <translation type="unfinished">蓝色 100%</translation>
+    </message>
+    <message>
+        <source>Blue 100% line symbols</source>
+        <comment>Color 41</comment>
+        <translation type="unfinished">棕色 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100% line symbols</source>
+        <comment>Color 42</comment>
+        <translation type="unfinished">轨道符号紫色下面的黑色</translation>
+    </message>
+    <message>
+        <source>Lower purple for course overprint</source>
+        <comment>Color 43</comment>
+        <translation type="unfinished">黑色50％</translation>
+    </message>
+    <message>
+        <source>Brown 50% for road infill</source>
+        <comment>Color 44</comment>
+        <translation type="unfinished">黑色 20%</translation>
+    </message>
+    <message>
+        <source>Black 100% for road outline</source>
+        <comment>Color 45</comment>
+        <translation type="unfinished">上层棕色 50%</translation>
+    </message>
+    <message>
+        <source>Black 50% for large buildings and tramway</source>
+        <comment>Color 46</comment>
+        <translation type="unfinished">上层棕色 50%下的黑色</translation>
+    </message>
+    <message>
+        <source>Black 20% for canopy</source>
+        <comment>Color 47</comment>
+        <translation type="unfinished">下层棕色 50%</translation>
+    </message>
+    <message>
+        <source>Blue 100% area symbols</source>
+        <comment>Color 48</comment>
+        <translation type="unfinished">下层棕色 50%下的黑色</translation>
+    </message>
+    <message>
+        <source>Blue 70% area symbols</source>
+        <comment>Color 49</comment>
+        <translation type="unfinished">面状符号填充蓝色 100%</translation>
+    </message>
+    <message>
+        <source>Blue 50% area symbols</source>
+        <comment>Color 50</comment>
+        <translation type="unfinished">蓝色 70%</translation>
+    </message>
+    <message>
+        <source>White over green and brown (+ yellow)</source>
+        <comment>Color 51</comment>
+        <translation type="unfinished">蓝色 50%</translation>
+    </message>
+    <message>
+        <source>Brown 50% for paved area</source>
+        <comment>Color 52</comment>
+        <translation type="unfinished">OpenOrinenteering橙色</translation>
+    </message>
+    <message>
+        <source>Yellow 100% for narrow ride (extra)</source>
+        <comment>Color 53</comment>
+        <translation type="unfinished">狭窄行车道用的黄色 100%</translation>
+    </message>
+    <message>
+        <source>Green 30% for narrow ride (extra)</source>
+        <comment>Color 54</comment>
+        <translation type="unfinished">狭窄行车道用的绿色 30%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="unfinished">绿色上层的白色</translation>
+    </message>
+    <message>
+        <source>Green 100% area symbols</source>
+        <comment>Color 56</comment>
+        <translation type="unfinished">黄色 100%/绿色 50%</translation>
+    </message>
+    <message>
+        <source>Green 30% area symbols</source>
+        <comment>Color 57</comment>
+        <translation type="unfinished">绿色 100%/黑色 50%</translation>
+    </message>
+    <message>
+        <source>Black 35% area symbols</source>
+        <comment>Color 58</comment>
+        <translation type="unfinished">面状符号填充绿色 100%</translation>
+    </message>
+    <message>
+        <source>Green 100% below green areas (extra)</source>
+        <comment>Color 59</comment>
+        <translation type="unfinished">绿色 60%</translation>
+    </message>
+    <message>
+        <source>White over yellow</source>
+        <comment>Color 60</comment>
+        <translation type="unfinished">黄色上层的白色</translation>
+    </message>
+    <message>
+        <source>Black for cultivated land and sandy ground</source>
+        <comment>Color 61</comment>
+        <translation type="unfinished">低矮植被的绿色 100%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% area symbols</source>
+        <comment>Color 62</comment>
+        <translation type="unfinished">黄色上层的白色</translation>
+    </message>
+    <message>
+        <source>Yellow 75% area symbols</source>
+        <comment>Color 63</comment>
+        <translation type="unfinished">空旷地的黑色</translation>
+    </message>
+    <message>
+        <source>Yellow 50%</source>
+        <comment>Color 64</comment>
+        <translation type="unfinished">黄色 50%</translation>
+    </message>
+    <message>
+        <source>OpenOrienteering Orange (extra)</source>
+        <comment>Color 65</comment>
+        <translation type="unfinished">面状符号填充黄色 100%</translation>
     </message>
     <message>
         <source>Contour</source>
@@ -12662,7 +13457,7 @@ The index contour level must be carefully selected in flat terrain. The ideal le
 Minimum length (non-closed): two dashes.
 Minimum length of a form line, knoll or depression: 1.1 mm (footprint 16.5 m)</source>
         <comment>Description of symbol 103</comment>
-        <translation type="unfinished">如果必须提供更多有关地面形状的信息，则使用间曲线。只有在普通等高线不能完整描述地形的情况下才会添加间曲线。它们不得用在等高线之间的中间位置。相邻等高线之间只应使用一条间曲线。间曲线逻辑上和等高线体系吻合非常重要，因此间曲线的起点和终点应与相邻等高线平行。间曲线虚线之间的间隙必须放在间曲线的合理直线部分上。间曲线可用于区分扁平和明显的土丘、洼地（最小高度/深度应为1米）。必须避免过度使用间曲线，因为这会干扰地面形状的三维图像，并使地图阅读复杂化。
+        <translation type="unfinished">如果必须提供更多有关地面形状的信息，则使用间曲线。只有在首曲线不能完整描述地形的情况下才会添加间曲线。它们不得用在等高线之间的中间位置。相邻首曲线之间只应使用一条间曲线。间曲线逻辑上和等高线体系吻合非常重要，因此间曲线的起点和终点应与相邻等高线平行。间曲线虚线之间的间隙必须放在间曲线的合理直线部分上。间曲线可用于区分扁平和明显的土丘、洼地（最小高度/深度应为1米）。必须避免过度使用间曲线，因为这会干扰地面形状的三维图像，并使地图阅读复杂化。
 最小长度（非闭合）：两段虚线。
 最小长度，小丘或凹地：1.1mm（实地长度16.5米）</translation>
     </message>
@@ -12836,7 +13631,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.1</comment>
-        <translation type="unfinished">不可翻越的陡崖最小尺寸</translation>
+        <translation type="unfinished">不可翻越的陡崖-最小尺寸</translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -12854,7 +13649,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, plan shape representation (from ISOM2000)</source>
         <comment>Name of symbol 201.2</comment>
-        <translation type="unfinished">不可翻越的陡崖，平面形状表示（来自 ISOM2000）</translation>
+        <translation type="unfinished">不可翻越的陡崖-平面形状表示（来自 ISOM2000）</translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -12864,7 +13659,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, top line</source>
         <comment>Name of symbol 201.3</comment>
-        <translation type="unfinished">陡崖-主线</translation>
+        <translation type="unfinished">可翻越的石崖-主线</translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -12882,7 +13677,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.4</comment>
-        <translation type="unfinished">陡崖-齿线</translation>
+        <translation type="unfinished">可翻越的石崖-齿线</translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of a wide cliff.</source>
@@ -12892,7 +13687,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Impassable cliff, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 201.9</comment>
-        <translation type="unfinished">不可翻越的陡崖最小尺寸 (来自 ISOM2000)</translation>
+        <translation type="unfinished">不可翻越的陡崖-最小尺寸 (来自 ISOM2000)</translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -13008,6 +13803,7 @@ To be able to show the distinction between neighbouring (closer than 30 metres a
 To be able to show the distinction between neighbouring (closer than 30 metres apart) large boulders (205) with significant difference in size, it is permitted to use this symbol (0.5 mm) as an as a reduction of symbol 205 for some of the boulders.</source>
         <comment>Description of symbol 204.5</comment>
         <translation type="unfinished">大于相邻大石（204）的石头，或者小于相邻巨石（205）的巨石。
+
 为了能够显示相邻的（距离少于30米）大石（204）在尺寸大小上明显的区别，允许使用此符号（0.5 mm）作为对某些符号204的放大石头。
 
 为了能够显示相邻的（距离少于30米）巨石（205）在尺寸大小上明显的区别，允许使用此符号（0.5 mm）作为对某些符号205
@@ -13016,7 +13812,7 @@ To be able to show the distinction between neighbouring (closer than 30 metres a
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 205</comment>
-        <translation type="unfinished">大石</translation>
+        <translation type="unfinished">超大巨石</translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder. A large boulder should be more than 2 m high.
@@ -13752,7 +14548,7 @@ Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
         <source>An impassable or uncrossable wall, normally more than 1.5 m high.
 Minimum length (isolated): 3 mm (footprint 45 m).</source>
         <comment>Description of symbol 515</comment>
-        <translation type="unfinished">不可通过或不可跨越的高墙，通常超过1.5米高。
+        <translation type="unfinished">不可翻越或不可跨越的高墙，通常超过1.5米高。
 最小长度(单独): 3mm (实地尺寸45米)。</translation>
     </message>
     <message>
@@ -13881,7 +14677,7 @@ Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
         <comment>Description of symbol 521.1</comment>
-        <translation type="unfinished">在比例允许的情况下， 建筑物要显示底层平面图。
+        <translation type="unfinished">比例允许的情况下， 建筑物要显示底层平面图。
 在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
 穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
 禁止区域内的建筑物是概括的。
@@ -13941,7 +14737,7 @@ Buildings within forbidden areas are generalised.
 Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
 Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
         <comment>Description of symbol 521.4</comment>
-        <translation type="unfinished">在比例允许的情况下， 建筑物要显示底层平面图。
+        <translation type="unfinished">比例允许的情况下， 建筑物要显示底层平面图。
 在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
 穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
 禁止区域内的建筑物是概括的。
@@ -14046,7 +14842,7 @@ North lines shall be broken to improve the legibility of the map, for instance w
     <message>
         <source>Magnetic north line, blue</source>
         <comment>Name of symbol 601.3</comment>
-        <translation type="unfinished">磁北线，蓝色</translation>
+        <translation type="unfinished">磁北线-蓝色</translation>
     </message>
     <message>
         <source>Magnetic north lines are lines placed on the map pointing to magnetic north, parallel to the sides of the paper. Their spacing on the map shall be 20 mm on the map which represents 300 m on the ground at the scale of 1:15 000. If the map is enlarged to 1:10 000, the spacing of the lines will be 30 mm on the map.
@@ -14058,7 +14854,7 @@ North lines shall be broken to improve the legibility of the map, for instance w
     <message>
         <source>North lines pattern, blue</source>
         <comment>Name of symbol 601.4</comment>
-        <translation type="unfinished">磁北线，蓝色</translation>
+        <translation type="unfinished">磁北线-蓝色(面状)</translation>
     </message>
     <message>
         <source>Magnetic north lines are lines placed on the map pointing to magnetic north, parallel to the sides of the paper. Their spacing on the map shall be 20 mm on the map which represents 300 m on the ground at the scale of 1:15 000. If the map is enlarged to 1:10 000, the spacing of the lines will be 30 mm on the map.
@@ -14384,6 +15180,46 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <translation>OpenOrientering图标。</translation>
     </message>
     <message>
+        <source>Black 100%</source>
+        <comment>Color 3</comment>
+        <translation type="obsolete">黑色 100%</translation>
+    </message>
+    <message>
+        <source>Green 100%</source>
+        <comment>Color 4</comment>
+        <translation type="obsolete">绿色 100%</translation>
+    </message>
+    <message>
+        <source>White for railway</source>
+        <comment>Color 5</comment>
+        <translation type="obsolete">铁路符号的白色</translation>
+    </message>
+    <message>
+        <source>Blue 100%</source>
+        <comment>Color 6</comment>
+        <translation type="obsolete">蓝色 100%</translation>
+    </message>
+    <message>
+        <source>Brown 100%</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">棕色 100%</translation>
+    </message>
+    <message>
+        <source>Purple for track symbols</source>
+        <comment>Color 8</comment>
+        <translation type="obsolete">轨道符号的紫色</translation>
+    </message>
+    <message>
+        <source>Black below purple for track symbols</source>
+        <comment>Color 9</comment>
+        <translation type="obsolete">轨道符号紫色下面的黑色</translation>
+    </message>
+    <message>
+        <source>Black 65%</source>
+        <comment>Color 10</comment>
+        <translation type="obsolete">黑色 65%</translation>
+    </message>
+    <message>
         <source>Black 20%</source>
         <comment>Color 11</comment>
         <translation type="obsolete">黑色 20%</translation>
@@ -14509,288 +15345,124 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <translation type="obsolete">黄色 50%</translation>
     </message>
     <message>
-        <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
-Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
-A closed contour represents a knoll or a depression. A depression has to have at least one slope line. Minimum height/depth should be 1 m.
-Relationships between adjacent contour lines are important. Adjacent contour lines show form and structure. Small details on contours should be avoided because they tend to hide the main features of the terrain.
-Prominent features such as depressions, re-entrants, spurs, earth banks and terraces may have to be exaggerated.
-Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
-The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
-The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
-A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
-Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
-        <comment>Description of symbol 101</comment>
-        <translation type="obsolete">等高的连接点。等高线之间的标准垂直距离是5米。平坦地形的等高线间距为2.5米。
-在等高线的下侧可以画出坡度线，以明确坡度的方向。当使用时，他们应该放在山凹。
-闭合的轮廓表示一个小山丘或洼地。凹地必须至少有一条斜线。最低高度/深度应为1米。
-相邻的等高线之间的关系很重要。相邻的等高线表示形状和结构。轮廓上的小细节应该避免，因为它们往往掩盖了地形的主要特征。
-如洼地、山凹、山凸、土坎和台地等突出的特征可能需要被夸大。
-绝对高度精度并不重要，但相邻地物之间的相对高度差应尽可能准确地表示在地图上。允许稍微改变轮廓的高度，如果这样可以改进特征的表示。该偏差不应超过等值线间距的25%，应注意相邻特征。
-等高线上的弯道最小为中线至中线0.25毫米(脚印4米)。重入中线或支线的开口，由中线至中线的宽度必须超过0.5毫米(脚印8米)。
-轮廓丘的最小长度为0.9毫米(足迹13.5米)，最小宽度为0.6毫米(足迹9米)。小而突出的小山丘可以用符号Small knoll(109)或小而细长的knoll(110)来表示，也可以在地图上夸张以满足最小维度。
-洼地必须能容纳一条斜坡线，因此最小长度为1.1毫米(占地16.5米)，最小宽度为0.7毫米(占地10.5米)。更小、突出的凹陷可以用符号Small depression(111)表示，也可以通过夸张来满足最小维度。
-为了不接触符号小丘(109)或小伸长丘(110)，轮廓应适应(不破坏)。</translation>
+        <source>White over green and brown</source>
+        <comment>Color 51</comment>
+        <translation type="obsolete">蓝色 50%</translation>
     </message>
     <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
-        <translation type="obsolete">土墙</translation>
+        <source>Brown 100% point symbols </source>
+        <comment>Color 39</comment>
+        <translation type="obsolete">铁路符号的白色</translation>
     </message>
     <message>
-        <source>Distinct earth wall. Minimum height: 1 m.
-Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105</comment>
-        <translation type="obsolete">清晰的土墙。最小高度：1米。
-最小长度：1.4mm（实地长度21米）。</translation>
+        <source>Brown 100% line symbols </source>
+        <comment>Color 42</comment>
+        <translation type="obsolete">轨道符号紫色下面的黑色</translation>
     </message>
     <message>
-        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Minimum depth: 1 m.
-Minimum length: 1.15 mm (footprint 17 m).
-Contour lines should not be broken around this symbol.</source>
-        <comment>Description of symbol 107</comment>
-        <translation type="obsolete">侵蚀沟太小不能用符号土崖（104）显示，则通过冲沟单线表示。最小深度：1米。
-最小长度：1.15mm（实地长度17米）。
-此符号周围的等高线可以不剪断。</translation>
+        <source>Yellow 100% + Green 50% </source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">绿色上层的白色</translation>
     </message>
     <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202</comment>
-        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
-对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
-通常情况下，翻越这种陡崖地形时会降低行进的速度。
-最小高度： 1米。
-最小长度：0.6mm（实际长度9米）。</translation>
+        <source>Black for cultivated land and sandy ground </source>
+        <comment>Color 61</comment>
+        <translation type="obsolete">低矮植被的绿色 100%</translation>
     </message>
     <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.1</comment>
-        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
-对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
-通常情况下，翻越这种陡崖地形时会降低行进的速度。
-最小高度： 1米。
-最小长度：0.6mm（实际长度9米）。</translation>
+        <source>Green 100% bellow green areas (extra)</source>
+        <comment>Color 59</comment>
+        <translation type="obsolete">绿色 60%</translation>
     </message>
     <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.2</comment>
-        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
-对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
-通常情况下，翻越这种陡崖地形时会降低行进的速度。
-最小高度： 1米。
-最小长度：0.6mm（实际长度9米）。</translation>
+        <source>Black 50%</source>
+        <comment>Color 11</comment>
+        <translation type="obsolete">黑色50％</translation>
     </message>
     <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.3</comment>
-        <translation type="obsolete">可以翻越的陡崖、采石场。如果从等高线上不能明显反映出陡崖的低的方向，或者是为了提高地图的易读性，陡崖的短齿线可以指向下坡的方向来表达。
-对于那种非垂直的可翻越陡崖，齿线可以画到整个坡面延伸水平范围。两个陡崖之间最小的间隙不少于0.2mm。陡崖要和等高线互相对应。
-通常情况下，翻越这种陡崖地形时会降低行进的速度。
-最小高度： 1米。
-最小长度：0.6mm（实际长度9米）。</translation>
+        <source>Black 20%</source>
+        <comment>Color 12</comment>
+        <translation type="obsolete">黑色 20%</translation>
     </message>
     <message>
-        <source>Should be at least 2 m wide.
-Minimum length (isolated): 1 mm (footprint 15 m).</source>
-        <comment>Description of symbol 304</comment>
-        <translation type="obsolete">应该至少宽2米。
-最小长度(单独):1mm(实地长度15米)。</translation>
+        <source>Upper brown 50%</source>
+        <comment>Color 13</comment>
+        <translation type="obsolete">上层棕色 50%</translation>
     </message>
     <message>
-        <source>Minimum length (isolated): 1 mm (footprint 15 m).</source>
-        <comment>Description of symbol 305</comment>
-        <translation type="obsolete">最小长度(单独):1mm(实地长度15米)。</translation>
+        <source>Black below upper brown 50%</source>
+        <comment>Color 14</comment>
+        <translation type="obsolete">上层棕色 50%下的黑色</translation>
     </message>
     <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
-Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
-        <comment>Description of symbol 416</comment>
-        <translation type="obsolete">树林中明显的树林边缘或植被边界。
-非常明显的树林边缘和植被边界可以使用耕作地边界符号来表示。在地图上只能使用一个植被分界线符号（黑色虚线或绿色虚线）。对于具有大量岩石特征的区域，推荐使用绿色虚线表示植被分界线。
-绿线的一个缺点是它不能用于在符号难行植被（410） 周围和内部表示明显的植被边界。这些情况的替代方案是使用符号 耕作地分界线（415） 。
-最小长度， 黑点： 5点（ 2.5mm - 实地长度37米）。
-最小长度， 绿线： 4 段虚线（1.8mm - 实地长度27米）。</translation>
+        <source>Lower brown 50%</source>
+        <comment>Color 15</comment>
+        <translation type="obsolete">下层棕色 50%</translation>
     </message>
     <message>
-        <source>The symbol is orientated to north.
-The definition of the symbol must be given on the map.
-Footprint: 13.5 m x 13.5 m.</source>
-        <comment>Description of symbol 419</comment>
-        <translation type="obsolete">符号朝北。
-这个符号的含义必须在地图上注明。
-符号占地面积：13.5米×13.5米。</translation>
+        <source>Black below lower brown 50%</source>
+        <comment>Color 16</comment>
+        <translation type="obsolete">下层棕色 50%下的黑色</translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
-The space between the black lines is filled with brown (50%).
-A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
-        <comment>Description of symbol 502</comment>
-        <translation type="obsolete">路的宽度应该按比例进行绘制，但不得小于最小宽度(0.3+2*0.14 mm - 占地面积 8.7米)。如果其他地图符号离道路边缘太近而不能使用各自符号时，则外部边界线可以替换为其他黑线符号，如符号 栅栏(516)、不可通行栅栏(518)、墙(513) 或 不可翻越的墙(515)。
-两条黑线之间填充棕色（50％）。
-具有两条车道的道路可以用两个公路符号并排表示,中间只保留一条道路边缘。</translation>
+        <source>Blue 100% for area features</source>
+        <comment>Color 17</comment>
+        <translation type="obsolete">面状符号填充蓝色 100%</translation>
     </message>
     <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
-The space between the black lines is filled with brown (50%).
-A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
-        <comment>Description of symbol 502.2</comment>
-        <translation type="obsolete">路的宽度应该按比例进行绘制，但不得小于最小宽度(0.3+2*0.14 mm - 占地面积 8.7米)。如果其他地图符号离道路边缘太近而不能使用各自符号时，则外部边界线可以替换为其他黑线符号，如符号 栅栏(516)、不可通行栅栏(518)、墙(513) 或 不可翻越的墙(515)。
-两条黑线之间填充棕色（50％）。
-具有两条车道的道路可以用两个公路符号并排表示,中间只保留一条道路边缘。</translation>
+        <source>Blue 70%</source>
+        <comment>Color 18</comment>
+        <translation type="obsolete">蓝色 70%</translation>
     </message>
     <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
-        <comment>Description of symbol 503</comment>
-        <translation type="obsolete">全天候适合机动车辆行驶的有维护道路，宽度小于5 米。</translation>
+        <source>Blue 50%</source>
+        <comment>Color 19</comment>
+        <translation type="obsolete">蓝色 50%</translation>
     </message>
     <message>
-        <source>A railway or other kind of railed track.
-If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
-Minimum length (isolated): two dashes (4 mm - footprint 60 m).</source>
-        <comment>Description of symbol 509</comment>
-        <translation type="obsolete">铁路或其他类型的铁轨。
-如果禁止沿铁路通行, 则应与符号 禁止通行线路 (711) 相结合。 如果禁止穿越铁路, 则必须与 不可通过区域(520) 或 禁止通行区域(709) 的符号相结合。
-最小长度 ( 单独) : 两条虚线 (4mm - 实地长度60米)。</translation>
+        <source>OpenOrienteering Orange</source>
+        <comment>Color 20</comment>
+        <translation type="obsolete">OpenOrinenteering橙色</translation>
     </message>
     <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation type="obsolete">墙</translation>
+        <source>Yellow 100% for narrow ride</source>
+        <comment>Color 21</comment>
+        <translation type="obsolete">狭窄行车道用的黄色 100%</translation>
     </message>
     <message>
-        <source>A significant wall of stone, concrete, wood or other materials.
-Minimum height: 1 m.
-Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513</comment>
-        <translation type="obsolete">由石头、混凝土、木材或其他材料组成的明显的墙。
-最小高度: 1 米。
-最小长度 ( 单独) : 1.4mm ( 实地尺寸21米) 。</translation>
+        <source>Green 60% for narrow ride</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">狭窄行车道用的绿色 60%</translation>
     </message>
     <message>
-        <source>If the fence forms an enclosed area, tags should be placed inside.
-Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
-        <comment>Description of symbol 516</comment>
-        <translation type="obsolete">如果栅栏形成一个封闭的区域, 则齿线应朝向区域内部。
-最小长度 (单独): 1.5 mm (实地尺寸22.5米)。</translation>
+        <source>Green 30% for narrow ride</source>
+        <comment>Color 23</comment>
+        <translation type="obsolete">狭窄行车道用的绿色 30%</translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
-        <comment>Description of symbol 520</comment>
-        <translation type="obsolete">不可通行区域是指如私人住宅、花园、工厂或其他工业区。 只有等高线和突出特征物，如轨道和大型建筑物，应显示在不可通行区域内。垂直黑色条纹可用于表示完整地形的重要区域（例如，当森林的一部分是禁区时）。当路径穿过禁区时，应断开此区域符号。
-边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。
-线路设计符号709可用于临时禁区区域。
-禁区符号的垂直黑色条纹版本朝向北方。
-不得进入禁区。
-最小面积：1mm x 1mm (实际尺寸15米 x 15米)。</translation>
+        <source>White over green</source>
+        <comment>Color 24</comment>
+        <translation type="obsolete">绿色上层的白色</translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes</source>
-        <comment>Name of symbol 520.2</comment>
-        <translation type="obsolete">不可翻越区域(条状禁区)</translation>
+        <source>Yellow 100%/Green 50%</source>
+        <comment>Color 25</comment>
+        <translation type="obsolete">黄色 100%/绿色 50%</translation>
     </message>
     <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
-        <comment>Description of symbol 520.2</comment>
-        <translation type="obsolete">不可通行区域是指如私人住宅、花园、工厂或其他工业区。 只有等高线和突出特征物，如轨道和大型建筑物，应显示在不可通行区域内。垂直黑色条纹可用于表示完整地形的重要区域（例如，当森林的一部分是禁区时）。当路径穿过禁区时，应断开此区域符号。
-边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。
-线路设计符号709可用于临时禁区区域。
-禁区符号的垂直黑色条纹版本朝向北方。
-不得进入禁区。
-最小面积：1mm x 1mm (实际尺寸15米 x 15米)。</translation>
+        <source>Black 25% (Grey)</source>
+        <comment>Color 26</comment>
+        <translation type="obsolete">黑色 25%（灰色）</translation>
     </message>
     <message>
-        <source>Area that shall not be entered, stripes, bounding line</source>
-        <comment>Name of symbol 520.3</comment>
-        <translation type="obsolete">条状禁区边界线</translation>
+        <source>Green 100%/Black 50%</source>
+        <comment>Color 27</comment>
+        <translation type="obsolete">绿色 100%/黑色 50%</translation>
     </message>
     <message>
-        <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
-        <comment>Description of symbol 520.3</comment>
-        <translation type="obsolete">边界明显的禁区应以黑色边界线或其他黑色线为界，如果边界不明显，则不得出现黑线。</translation>
-    </message>
-    <message>
-        <source>A building is shown with its ground plan so far as the scale permits.
-Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
-Buildings within forbidden areas are generalised.
-Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
-Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
-        <comment>Description of symbol 521</comment>
-        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
-在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
-穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
-禁止区域内的建筑物是概括的。
-完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
-最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
-    </message>
-    <message>
-        <source>A building is shown with its ground plan so far as the scale permits.
-Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
-Buildings within forbidden areas are generalised.
-Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
-Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
-        <comment>Description of symbol 521.2</comment>
-        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
-在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
-穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
-禁止区域内的建筑物是概括的。
-完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
-最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
-    </message>
-    <message>
-        <source>A building is shown with its ground plan so far as the scale permits.
-Buildings larger than 75 m x 75 m may be represented with a dark grey infill in urban areas.
-Passages through buildings must have a minimum width of 0.3 mm (footprint 4.5 m).
-Buildings within forbidden areas are generalised.
-Areas totally contained within a building shall not be mapped (they shall be represented as being part of the building). Minimum gap indicating a passage between buildings and between buildings and other impassable features should be 0.4 mm.
-Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
-        <comment>Description of symbol 521.3</comment>
-        <translation type="obsolete">在比例允许的情况下， 建筑物要显示底层平面图。
-在城市地区，大于75米 x 75米的建筑物可以用深灰色填充表示。
-穿过建筑物的通道必须具有0.3mm的最小宽度（ 实际尺寸4.5米）。
-禁止区域内的建筑物是概括的。
-完全包含在建筑物内的区域不应绘制（应表示为建筑物的一部 分）。表示建筑物之间、建筑物与其他不可通行特征之间的最小间隙应为0.4mm。
-最小面积: 0.5mm x 0.5mm（ 实地尺寸7.5米 x 7.5米）。</translation>
-    </message>
-    <message>
-        <source>An obvious small tower, platform or seat.
-Location is at the centre of gravity of the symbol.
-The symbol is orientated to north.
-Footprint: 15 m x 15 m.</source>
-        <comment>Description of symbol 525</comment>
-        <translation type="obsolete">明显的小塔、平台或座位。
-位置位于符号的重心。
-符号方向朝北。
-符号占地尺寸: 15米 x 15米。</translation>
+        <source>Black 35% (Grey)</source>
+        <comment>Color 28</comment>
+        <translation type="obsolete">黑色 25%（灰色）</translation>
     </message>
 </context>
 <context>
