@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# Copyright 2017, 2018 Kai Pastor (OpenOrienteering)
+# Copyright 2017, 2018, 2024 Kai Pastor (OpenOrienteering)
 #
 # This file is part of LibreMapper.
  
@@ -62,6 +62,7 @@ for I in \
   map_coord.cpp \
   map_editor.cpp \
   map_find_feature.cpp \
+  map_information_dialog.cpp \
   map_printer \
   map_widget.cpp \
   mapper_proxystyle.cpp \

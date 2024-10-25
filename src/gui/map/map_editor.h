@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013, 2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2021 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -335,6 +335,8 @@ public slots:
 	void rotateMapClicked();
 	/** Shows the dialog to enter map notes. */
 	void mapNotesClicked();
+	/** Shows the map information. */
+	void mapInfoClicked();
 	
 	/** Shows or hides the template setup dock widget. */
 	void showTemplateWindow(bool show);
@@ -734,6 +736,7 @@ private:
 	QAction* scale_map_act = {};
 	QAction* rotate_map_act = {};
 	QAction* map_notes_act = {};
+	QAction* map_info_act = {};
 	QAction* symbol_set_id_act = {};
 	
 	QAction* color_window_act = {};
