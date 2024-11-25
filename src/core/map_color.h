@@ -594,8 +594,22 @@ MapColorCmyk::MapColorCmyk(const QColor& other) noexcept
 
 inline
 MapColorCmyk::operator QColor() const
-{
+{/*
+	// Naive transformation
 	return QColor::fromCmykF(c, m, y, k);
+*/
+	// OCAD-like transformation
+	double r = (1.0 - c          ) * (1.0 - m * 0.00498) * (1.0 - y * 0.00703) * (1.0 - k);
+	double g = (1.0 - c * 0.17416) * (1.0 - m * 0.89769) * (1.0 - y * 0.00272) * (1.0 - k);
+	double b = (1.0 - c * 0.18420) *                       (1.0 - y * 0.91071) * (1.0 - k);
+	return QColor::fromRgbF(r, g, b);
+/*
+	// Poppler-like transformation
+	double r = (1.0 - c) * (1.0 - m * 0.098) * (1.0 - k);
+	double g = (1.0 - c * 0.376) * (1.0 - m) * (1.0 - y * 0.070) * (1.0 - k);
+	double b = (1.0 - c * 0.109) * (1.0 - m * 0.505) * (1.0 - y) * (1.0 - k);
+	return QColor::fromRgbF(r, g, b);
+*/
 }
 
 inline
