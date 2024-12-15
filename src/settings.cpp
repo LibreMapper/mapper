@@ -159,6 +159,9 @@ Settings::Settings()
 	// Paint On Template tool settings
 	registerSetting(PaintOnTemplateTool_Colors, "PaintOnTemplateTool/colors", QLatin1String("FF0000,FFFF00,00FF00,DB00D9,0000FF,D15C00,000000"));
 
+	// OCD file format compatibility settings
+	registerSetting(OcdCompatLeavePathsOpenOnImport, "OcdCompatibility/leavePathsOpenOnImport", false);
+
 	QSettings settings;
 	
 #ifndef Q_OS_ANDROID

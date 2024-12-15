@@ -95,6 +95,7 @@ OcdFileImport::OcdImportedPathObject::~OcdImportedPathObject() = default;
 OcdFileImport::OcdFileImport(const QString& path, Map* map, MapView* view)
  : Importer { path, map, view }
  , custom_8bit_encoding { codecFromSettings() }
+ , leave_paths_open { Settings::getInstance().getSettingCached(Settings::OcdCompatLeavePathsOpenOnImport).toBool()}
 {
 	if (!custom_8bit_encoding)
 	{
@@ -2235,7 +2236,10 @@ void OcdFileImport::fillPathCoords(OcdImportedPathObject *object, bool is_area, 
 		setPointFlags(object, i, is_area, ocd_points[i]);
 	}
 	
-	// For path objects, create closed parts where the position of the last point is equal to that of the first point
+	// For path objects, create closed parts where the position of the last
+	// point is equal to that of the first pointand sanitize holes. Skip the
+	// closed part creation when we aim for strict OCD compatibility.
+	
 	if (object->getType() == Object::Path)
 	{
 		size_t start = 0;
@@ -2252,7 +2256,7 @@ void OcdFileImport::fillPathCoords(OcdImportedPathObject *object, bool is_area, 
 				object->coords.erase(begin(object->coords) + i + 1);
 			}
 			
-			if (!object->coords[i].isHolePoint() && i < object->coords.size() - 1)
+			if (leave_paths_open || (!object->coords[i].isHolePoint() && i < object->coords.size() - 1))
 				continue;
 			
 			auto coord = object->coords[start];

@@ -347,6 +347,12 @@ protected:
 	
 	/// The actual format version of the imported file
 	int ocd_version;
+	
+	// Settings section
+	/// Leave paths (lines and area borders) open on OCD file import. Closing
+	/// paths on import affects rendering of dashed lines. Strict OCD 
+	/// compatibility requires deactivation of path closing.
+	bool leave_paths_open = false;
 };
 
 

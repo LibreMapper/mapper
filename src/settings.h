@@ -66,6 +66,7 @@ public:
 		HomeScreen_TipsVisible,
 		HomeScreen_CurrentTip,
 		PaintOnTemplateTool_Colors,
+		OcdCompatLeavePathsOpenOnImport,
 		END_OF_SETTINGSENUM /* Don't add items below this line. */
 	};
 	

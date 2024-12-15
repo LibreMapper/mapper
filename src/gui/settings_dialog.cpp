@@ -50,6 +50,10 @@
 #  include "gdal/gdal_settings_page.h"
 #endif
 
+#ifndef Q_OS_ANDROID
+#  include "fileformats/ocd_compat_settings_page.h"
+#endif
+
 #ifdef MAPPER_USE_SENSORS
 #  include "sensors/sensors_settings_page.h"
 #endif
@@ -205,6 +209,9 @@ void SettingsDialog::addPages()
 	addPage(new EditorSettingsPage(this));
 #ifdef MAPPER_USE_GDAL
 	addPage(new GdalSettingsPage(this));
+#endif
+#ifndef Q_OS_ANDROID
+	addPage(new OcdCompatSettingsPage(this));
 #endif
 #ifdef MAPPER_USE_SENSORS
 	addPage(new SensorsSettingsPage(this));

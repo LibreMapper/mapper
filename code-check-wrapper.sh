@@ -69,6 +69,7 @@ for I in \
   /object.cpp \
   object_mover.cpp \
   object_query.cpp \
+  ocd_compat_settings_page.cpp \
   ocd_file_format.cpp \
   ocd_t.cpp \
   overriding_shortcut.cpp \
