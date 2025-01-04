@@ -4,10 +4,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
 
 configure_file(test_config.h.in test_config.h)
-add_library(cove-test-config INTERFACE)
+qt_add_library(cove-test-config INTERFACE)
 target_include_directories(cove-test-config INTERFACE "${CMAKE_CURRENT_BINARY_DIR}")
 
-add_executable(cove-ParallelImageProcessingTest
+qt_add_executable(cove-ParallelImageProcessingTest
   ParallelImageProcessingTest.cpp
 )
 add_test(
@@ -18,7 +18,7 @@ if(${CMAKE_VERSION} VERSION_LESS 3.8)
 	target_include_directories(cove-ParallelImageProcessingTest PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 endif()
 
-add_executable(cove-PolygonTest
+qt_add_executable(cove-PolygonTest
   PolygonTest.cpp
 )
 target_link_libraries(cove-PolygonTest
@@ -29,7 +29,7 @@ add_test(
   COMMAND cove-PolygonTest
 )
 
-add_executable(cove-PolygonBenchmark EXCLUDE_FROM_ALL
+qt_add_executable(cove-PolygonBenchmark EXCLUDE_FROM_ALL
   PolygonTest.cpp
 )
 target_compile_definitions(cove-PolygonBenchmark

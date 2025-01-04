@@ -47,12 +47,13 @@ set(Mapper_CRT_FILES
 
 set(symbol_sets)
 foreach(_symbol_set ${Mapper_SYMBOL_SETS} ${Mapper_CRT_FILES})
-	get_filename_component(_dir  ${_symbol_set} PATH)
-	install(FILES ${_symbol_set} DESTINATION "${MAPPER_DATA_DESTINATION}/symbol sets/${_dir}")
+	cmake_path(GET _symbol_set PARENT_PATH _dir)
+	cmake_path(SET _dest_path NORMALIZE "${MAPPER_DATA_DESTINATION}/symbol sets/${_dir}")
+	install(FILES ${_symbol_set} DESTINATION "${_dest_path}")
 
 	# Files in the build tree may be overwritten or deleted.
 	# Rename the symbol sets in order to give a minimal warning.
-	get_filename_component(_name ${_symbol_set} NAME)
+	cmake_path(GET _symbol_set FILENAME _name)
 	set(_copy_name ${_dir}/COPY_OF_${_name})
 	add_custom_command(OUTPUT ${_copy_name}
 	  COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${_symbol_set} ${CMAKE_CURRENT_BINARY_DIR}/${_copy_name}

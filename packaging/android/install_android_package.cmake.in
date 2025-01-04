@@ -11,7 +11,7 @@ function(configure_and_install in_file out_dir)
 	if(ARGN)
 		set(filename "${ARGN}")
 	else()
-		get_filename_component(filename "${in_file}" NAME)
+		cmake_path(GET in_file FILENAME filename)
 	endif()
 	set(tmp_file "@MAPPER_PRO_DIR@/tmp/${filename}")
 	# Configure first, so that install can properly detect unchanged files.

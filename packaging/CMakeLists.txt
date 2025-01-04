@@ -11,31 +11,31 @@ option(Mapper_PACKAGE_QT_ALL_TRANSLATIONS "Add all Qt translations to the packag
 function(deploy_qt_translations basename)
 	find_package(Qt6 COMPONENTS LinguistTools REQUIRED QUIET) # for Qt6::lconvert
 	
-	if(NOT Qt5Translations_DIR)
-		find_package(Qt5Core REQUIRED QUIET)
+        if(NOT QtTranslations_DIR)
+                find_package(Qt6 REQUIRED QUIET COMPONENTS Core )
 		get_target_property(QMAKE_EXECUTABLE Qt::qmake IMPORTED_LOCATION)
 		execute_process(
 		  COMMAND "${QMAKE_EXECUTABLE}" -query QT_INSTALL_TRANSLATIONS
-		  OUTPUT_VARIABLE Qt5Translations_DIR
+                  OUTPUT_VARIABLE QtTranslations_DIR
 		)
-		string(STRIP "${Qt5Translations_DIR}" Qt5Translations_DIR)
-		if(NOT EXISTS ${Qt5Translations_DIR})
-			set(Qt5Translations_DIR "Qt5Translations_DIR-NOTFOUND")
+                string(STRIP "${QtTranslations_DIR}" QtTranslations_DIR)
+                if(NOT EXISTS ${QtTranslations_DIR})
+                        set(QtTranslations_DIR "QtTranslations_DIR-NOTFOUND")
 		endif()
-		set(Qt5Translations_DIR "${Qt5Translations_DIR}" CACHE PATH
-		  "The Qt5 translations directory"
+                set(QtTranslations_DIR "${QtTranslations_DIR}" CACHE PATH
+                  "The Qt translations directory"
 		)
 	endif()
 	
 	if(Mapper_PACKAGE_QT_ALL_TRANSLATIONS)
-		file(GLOB basename_files RELATIVE "${Qt5Translations_DIR}" "${Qt5Translations_DIR}/${basename}_??.qm")
+                file(GLOB basename_files RELATIVE "${QtTranslations_DIR}" "${QtTranslations_DIR}/${basename}_??.qm")
 	else()
 		unset(basename_files)
 		foreach(_mapper_trans ${Mapper_translations})
-			get_filename_component(basename_file ${_mapper_trans} NAME_WE)
+			cmake_path(GET _mapper_trans STEM basename_file)
 			string(REPLACE OpenOrienteering ${basename} basename_file ${basename_file})
 			string(REGEX REPLACE "(_..)_..$" "\\1" basename_file ${basename_file})
-			file(GLOB translation_files RELATIVE "${Qt5Translations_DIR}" "${Qt5Translations_DIR}/${basename_file}*.qm")
+                        file(GLOB translation_files RELATIVE "${QtTranslations_DIR}" "${QtTranslations_DIR}/${basename_file}*.qm")
 			list(APPEND basename_files ${translation_files})
 		endforeach()
 	endif()
@@ -46,11 +46,11 @@ function(deploy_qt_translations basename)
 	
 	set(generated_translations )
 	foreach(basename_file ${basename_files})
-		set(input_files "${Qt5Translations_DIR}/${basename_file}")
+                set(input_files "${QtTranslations_DIR}/${basename_file}")
 		foreach(arg ${ARGN})
 			string(REPLACE ${basename} ${arg} extra_file ${basename_file})
-			if(EXISTS "${Qt5Translations_DIR}/${extra_file}")
-				list(INSERT input_files 0 "${Qt5Translations_DIR}/${extra_file}")
+                        if(EXISTS "${QtTranslations_DIR}/${extra_file}")
+                                list(INSERT input_files 0 "${QtTranslations_DIR}/${extra_file}")
 			endif()
 		endforeach()
 		add_custom_command(OUTPUT "${basename_file}"
@@ -67,8 +67,8 @@ endfunction(deploy_qt_translations)
 
 find_package(Qt6 COMPONENTS Core REQUIRED QUIET)
 if(NOT QT_LIBRARY_DIR)
-	get_target_property(_qt5core_lib Qt::Core IMPORTED_LOCATION_RELEASE)
-	get_filename_component(QT_LIBRARY_DIR ${_qt5core_lib} PATH)
+        get_target_property(_Qtcore_lib Qt::Core IMPORTED_LOCATION_RELEASE)
+        cmake_path(GET _Qtcore_lib PARENT_PATH QT_LIBRARY_DIR)
 	string(REGEX REPLACE "/[^/]*\\.framework" "" QT_LIBRARY_DIR "${QT_LIBRARY_DIR}")
 endif()
 
@@ -119,7 +119,7 @@ set(CPACK_SOURCE_IGNORE_FILES
   "/[.]git/"
   "/3rd-party/clipper/download/"
   "/3rd-party/proj/download/"
-  "/3rd-party/qt5/download/"
+  "/3rd-party/Qt/download/"
   ${CPACK_SOURCE_IGNORE_FILES}
 )
 
@@ -290,7 +290,7 @@ if(Mapper_PACKAGE_GDAL)
 	install(
 	  DIRECTORY "${GDAL_DATA_DIR}/"
 	  DESTINATION "${MAPPER_DATA_DESTINATION}/gdal")
-	get_filename_component(GDAL_LIBRARY_DIR "{GDAL_LIBRARY}" PATH)
+        cmake_path(GET GDAL_LIBRARY PARENT_PATH GDAL_LIBRARY_DIR)
 	list(APPEND MAPPER_LIB_HINTS "${GDAL_LIBRARY_DIR}")
 endif()
 
@@ -314,6 +314,8 @@ if(Mapper_PACKAGE_QT)
 	  platforminputcontexts/ibusplatforminputcontextplugin
 	  platforms/qcocoa
 	  platforms/qwindows
+	  platforms/qwayland-egl
+	  platforms/qwayland-generic
 	  platforms/qxcb
 	  position/qtposition_cl
 	  position/qtposition_geoclue
@@ -337,29 +339,23 @@ if(Mapper_PACKAGE_QT)
 		list(REMOVE_ITEM MAPPER_QT_MODULES Sql) # Not deploying Qt Assistant
 	endif()
 	
-	find_package(Qt5Positioning QUIET)
+	find_package(Qt6 COMPONENTS Positioning QUIET)
 	if(TARGET Qt::Positioning)
 		list(APPEND MAPPER_QT_MODULES SerialPort) # Always with serialport NMEA
 	endif()
 	
-	set(QT_PLUGIN_TARGETS )
+	set(QT_PLUGIN_FILES )
 	foreach(module ${MAPPER_QT_MODULES})
-		find_package(Qt5${module} QUIET)
-		if(module STREQUAL "Positioning" AND Qt5Positioning_DIR)
-			# Workaround for QTBUG-58812 CMake: Plugin config not loaded
-			# unless plugin class name ends in Plugin
-			file(GLOB pluginTargets "${Qt5Positioning_DIR}/Qt5Positioning_*.cmake")
-			foreach(file ${pluginTargets})
-				string(REGEX REPLACE "^.*/Qt5Positioning_([^/]*)\\.cmake" "Qt::\\1" lib "${file}")
-				if(NOT file MATCHES "Plugin.cmake"
-				   AND NOT "${Qt5Positioning_PLUGINS}" MATCHES "${lib}")
-					include(${file})
-				endif()
-			endforeach()
-		endif()
-		list(APPEND QT_PLUGIN_TARGETS ${Qt5${module}_PLUGINS})
+		find_package(Qt6 COMPONENTS ${module} QUIET)
+		get_target_property(plugin_types Qt::${module} MODULE_PLUGIN_TYPES)
+		foreach(type ${plugin_types})
+			file(GLOB _qt_plugin_locations "${QT6_INSTALL_PREFIX}/${QT6_INSTALL_PLUGINS}/${type}/*")
+			list(APPEND QT_PLUGIN_FILES ${_qt_plugin_locations})
+		endforeach()
+
+		list(APPEND QT_PLUGIN_TARGETS ${Qt${module}_PLUGINS})
 	endforeach()
-	# Cf. Qt5's qt_de.ts for dependencies - qt_de.ts would not load without them.
+        # Cf. Qt's qt_de.ts for dependencies - qt_de.ts would not load without them.
 	deploy_qt_translations(qt qtbase)
 endif()
 
@@ -368,24 +364,24 @@ if(Mapper_PACKAGE_ASSISTANT)
 	if(CMAKE_FIND_ROOT_PATH)
 		set(assistant_find_options ONLY_CMAKE_FIND_ROOT_PATH)
 	endif()
-	find_program(Qt5Help_ASSISTANT_EXECUTABLE
+        find_program(QtHelp_ASSISTANT_EXECUTABLE
 	  NAMES assistant Assistant assistant.exe
 #	  HINTS bin
 	  ${assistant_find_options}
 	)
-	if(NOT Qt5Help_ASSISTANT_EXECUTABLE)
-		message(FATAL_ERROR "Qt5Help_ASSISTANT_EXECUTABLE: not found, "
+        if(NOT QtHelp_ASSISTANT_EXECUTABLE)
+                message(FATAL_ERROR "QtHelp_ASSISTANT_EXECUTABLE: not found, "
 		  "but required by option Mapper_PACKAGE_ASSISTANT="
 		  ${Mapper_PACKAGE_ASSISTANT})
 	endif()
 	message(STATUS "Qt Assistant - found")
 	if(WIN32 OR APPLE)
 		install(
-		  PROGRAMS ${Qt5Help_ASSISTANT_EXECUTABLE}
+                  PROGRAMS ${QtHelp_ASSISTANT_EXECUTABLE}
 		  DESTINATION "${MAPPER_RUNTIME_DESTINATION}${MAPPER_MACOS_SUBDIR}")
 	else()
 		install(
-		  PROGRAMS ${Qt5Help_ASSISTANT_EXECUTABLE}
+                  PROGRAMS ${QtHelp_ASSISTANT_EXECUTABLE}
 		  DESTINATION "${MAPPER_LIBRARY_DESTINATION}/bin")
 	endif()
 	list(APPEND MAPPER_QT_PLUGINS
@@ -416,17 +412,21 @@ endif()
 unset(MAPPER_QT_PLUGINS_FOUND)
 foreach(_qt_plugin ${MAPPER_QT_PLUGINS})
 	string(REPLACE "/" "/lib" alternative_pattern "${_qt_plugin}")
-	foreach(plugin_target ${QT_PLUGIN_TARGETS} NOT_FOUND)
-		if(plugin_target STREQUAL "NOT_FOUND")
+	foreach(_qt_plugin_location ${QT_PLUGIN_FILES} NOT_FOUND)
+		if(_qt_plugin_location STREQUAL "NOT_FOUND")
 			message(STATUS "   ${_qt_plugin} plugin library - not found")
 			break()
 		endif()
-		get_target_property(_qt_plugin_location ${plugin_target} IMPORTED_LOCATION_RELEASE)
-		if(_qt_plugin_location MATCHES "${_qt_plugin}"
-		   OR _qt_plugin_location MATCHES "${alternative_pattern}")
+		cmake_path(RELATIVE_PATH _qt_plugin_location
+			BASE_DIRECTORY "${QT6_INSTALL_PREFIX}/${QT6_INSTALL_PLUGINS}"
+			OUTPUT_VARIABLE rel_path)
+		cmake_path(REMOVE_EXTENSION rel_path OUTPUT_VARIABLE plugin_name)
+
+		if(plugin_name MATCHES "${_qt_plugin}"
+		   OR plugin_name MATCHES "${alternative_pattern}")
 			message(STATUS "   ${_qt_plugin} plugin library - found")
 			list(APPEND MAPPER_QT_PLUGINS_FOUND "${_qt_plugin}")
-			get_filename_component(_qt_plugin_dir "${_qt_plugin}" PATH)
+			cmake_path(GET rel_path PARENT_PATH _qt_plugin_dir)
 			if(APPLE)
 				install(
 				  FILES "${_qt_plugin_location}"

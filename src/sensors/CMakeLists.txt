@@ -5,7 +5,7 @@
 # This file is part of LibreMapper.
 
 find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
-find_package(Qt6 COMPONENTS Sensors Positioning SerialPort)
+find_package(Qt6 COMPONENTS Sensors Positioning SerialPort GLOBAL)
 if(ANDROID)
 	find_package(Qt6 COMPONENTS AndroidExtras REQUIRED)
 endif()
@@ -38,7 +38,7 @@ if(TARGET Qt::Positioning)
 	)
 endif()
 
-add_library(fake_position_source STATIC  ${FAKE_POSITION_SOURCES})
+qt_add_library(fake_position_source STATIC  ${FAKE_POSITION_SOURCES})
 target_compile_definitions(fake_position_source  ${FAKE_POSITION_DEFINITIONS})
 target_include_directories(fake_position_source  PRIVATE "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(fake_position_source  ${FAKE_POSITION_LINK_LIBRARIES})
@@ -75,7 +75,7 @@ if(TARGET Qt::Positioning)
 	)
 endif()
 
-add_library(powershell_position_source STATIC  ${POWERSHELL_POSITION_SOURCES})
+qt_add_library(powershell_position_source STATIC  ${POWERSHELL_POSITION_SOURCES})
 target_compile_definitions(powershell_position_source  ${POWERSHELL_POSITION_DEFINITIONS})
 target_link_libraries(powershell_position_source  ${POWERSHELL_POSITION_LINK_LIBRARIES})
 
@@ -101,7 +101,7 @@ if(TARGET Qt::Positioning OR TARGET Qt::Sensors)
 	list(APPEND MAPPER_SENSORS_DEFINITIONS  PUBLIC MAPPER_USE_SENSORS)
 endif()
 
-add_library(mapper-sensors STATIC  ${MAPPER_SENSORS_SOURCES})
+qt_add_library(mapper-sensors STATIC  ${MAPPER_SENSORS_SOURCES})
 target_compile_definitions(mapper-sensors  ${MAPPER_SENSORS_DEFINITIONS})
 target_include_directories(mapper-sensors  PRIVATE "${PROJECT_SOURCE_DIR}/src")
 target_link_libraries(mapper-sensors

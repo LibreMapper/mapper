@@ -142,17 +142,16 @@ add_custom_command(OUTPUT "${hu_ts}"
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
 )
 
-qt6_add_translation(translations_qm ${Mapper_translations_for_qt} ${map_symbols_translations} ${qt_translations})
-
 # A target which builds all translations.
 add_custom_target(Mapper_translations ALL
-  DEPENDS ${translations_qm}
   # SOURCES are displayed in Qt Creator
   SOURCES
     ${Mapper_translations}
     ${map_symbols_translations}
     ${qt_translations}
 )
+
+qt_add_translations(Mapper_translations TS_FILES ${Mapper_translations_for_qt} ${map_symbols_translations} ${qt_translations})
 
 install(
   FILES ${translations_qm}
@@ -162,7 +161,7 @@ install(
 if(APPLE)
 	# Localized resources just to enable localized native dialogs.
 	foreach(mapper_trans ${Mapper_translations})
-		get_filename_component(mapper_lang ${mapper_trans} NAME_WE)
+		cmake_path(GET mapper_trans STEM mapper_lang)
 		string(REPLACE OpenOrienteering_ "" language_code ${mapper_lang})
 		configure_file(locversion.plist.in ${language_code}.lproj/locversion.plist @ONLY)
 		install(
@@ -177,11 +176,11 @@ add_dependencies(Mapper_translations Mapper_prerequisites)
 
 
 # We need lupdate >= 5.6.1 for updates from source
-if(TARGET ${Qt5_LUPDATE_EXECUTABLE})
-	get_property(Qt5_LUPDATE_EXECUTABLE TARGET ${Qt5_LUPDATE_EXECUTABLE} PROPERTY IMPORTED_LOCATION)
+if(NOT DEFINED Qt_LUPDATE_EXECUTABLE)
+	get_target_property(Qt_LUPDATE_EXECUTABLE Qt6::lupdate IMPORTED_LOCATION)
 endif()
 execute_process(
-  COMMAND "${Qt5_LUPDATE_EXECUTABLE}" -version
+  COMMAND "${Qt_LUPDATE_EXECUTABLE}" -version
   OUTPUT_VARIABLE lupdate_version
 )
 string(REGEX REPLACE "^.*([0-9]\\.1?[0-9]\\.[0-9]).*" "\\1" lupdate_version "${lupdate_version}")
@@ -209,7 +208,7 @@ else()
 	# One target for each translation.
 	foreach(translation ${Mapper_translations} ${Mapper_translations_template})
 		set(lupdate_options -locations absolute)
-		get_filename_component(ts_filename ${translation} NAME_WE)
+		cmake_path(GET translation STEM ts_filename)
 		if("${ts_filename}" STREQUAL "OpenOrienteering_en")
 			list(APPEND lupdate_options -pluralonly)
 		endif()
@@ -235,7 +234,7 @@ else()
 		
 		add_custom_target(Mapper_${ts_filename}_update
 		  ${pre_lupdate}
-		  COMMAND "${Qt5_LUPDATE_EXECUTABLE}" ${lupdate_options} "@${listfile}" -ts "${CMAKE_CURRENT_SOURCE_DIR}/${translation}"
+                  COMMAND "${Qt_LUPDATE_EXECUTABLE}" ${lupdate_options} "@${listfile}" -ts "${CMAKE_CURRENT_SOURCE_DIR}/${translation}"
 		  COMMAND sed -e "/<context>/N;/<name>Q[A-Z]/,/<.context>/d" -i -- "${CMAKE_CURRENT_SOURCE_DIR}/${translation}"
 		  ${post_lupdate}
 		  COMMAND rm -f "${CMAKE_CURRENT_SOURCE_DIR}/${translation}--"

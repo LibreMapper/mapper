@@ -1,6 +1,6 @@
 project(Cove)
 
-find_package(Qt6 COMPONENTS Core Widgets Concurrent REQUIRED)
+find_package(Qt6 COMPONENTS Core Widgets Concurrent REQUIRED GLOBAL)
 
 set(CMAKE_CXX_STANDARD 17)
 

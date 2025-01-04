@@ -5,7 +5,7 @@
 #
 # This file is part of LibreMapper.
  
-cmake_minimum_required(VERSION 3.7 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.24 FATAL_ERROR)
 
 if(POLICY CMP0115)
     cmake_policy(SET CMP0115 NEW)
@@ -18,15 +18,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(FeatureSummary)
 
-if(CCACHE_PROGRAM)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
-endif()
-
 option(CMAKE_FIND_PACKAGE_PREFER_CONFIG "Lookup package config files before using find modules" ON)
 
 # Project declaration
 
-project(Mapper VERSION 0.9.6 LANGUAGES CXX C)
+project(Mapper VERSION 1.0.0 LANGUAGES CXX C)
 set(Mapper_COPYRIGHT "(C) 2024 LibreMapper developers")
 
 math(EXPR Mapper_VERSION_CODE "${Mapper_VERSION_MAJOR} * 10000 + ${Mapper_VERSION_MINOR} * 100 + ${Mapper_VERSION_PATCH} * 2 + ${CMAKE_SIZEOF_VOID_P} / 4 - 1")
@@ -51,7 +47,7 @@ if(NOT CMAKE_BUILD_TYPE)
 	SET(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING
 	  "Type of build, options are: None Debug Release RelWithDebInfo MinSizeRel."
 	  FORCE)
-endif(NOT CMAKE_BUILD_TYPE)
+endif()
 
 if(APPLE)
 	SET(Mapper_MACOSX_VERSION "10.7" CACHE STRING
@@ -65,7 +61,7 @@ set(Mapper_BUILD_CLIPPER "auto" CACHE STRING
   "Build the Clipper package from source, alternatives: ON, OFF"
 )
 
-option(Mapper_USE_GDAL   "Use the GDAL library" ON)
+option(Mapper_USE_GDAL "Use the GDAL library" ON)
 
 if(ANDROID)
 	set(Mapper_WITH_COVE_DEFAULT OFF)
@@ -110,18 +106,13 @@ mark_as_advanced(Mapper_PACKAGE_PROJ Mapper_PACKAGE_GDAL Mapper_PACKAGE_QT Mappe
 
 # Installation configuration
 
-set(Mapper_PACKAGE_NAME "openorienteering-mapper" CACHE STRING
+set(Mapper_PACKAGE_NAME "libremapper" CACHE STRING
   "The package name"
 )
 
 # These value are used for the DESTINATION parameter of the install command
 # and must not be empty.
-if(WIN32 AND BIN_INSTALL_DIR)
-	set(MAPPER_RUNTIME_DESTINATION "${BIN_INSTALL_DIR}")
-	set(MAPPER_LIBRARY_DESTINATION "${LIB_INSTALL_DIR}")
-	set(MAPPER_DATA_DESTINATION    "${SHARE_INSTALL_DIR}/${Mapper_PACKAGE_NAME}")
-	set(MAPPER_ABOUT_DESTINATION   "${SHARE_INSTALL_DIR}/doc/${Mapper_PACKAGE_NAME}")
-elseif(WIN32)
+if(WIN32)
 	set(MAPPER_RUNTIME_DESTINATION .)
 	set(MAPPER_LIBRARY_DESTINATION .)
 	set(MAPPER_DATA_DESTINATION    .)
@@ -196,41 +187,16 @@ else()
 	find_package(Polyclipping 6.1.3 MODULE REQUIRED)
 endif()
 
-# We must not require a minimum version of PROJ via find_package
-# because PROJ config requires the major version to match exactly.
-find_package(PROJ CONFIG)
-if(NOT PROJ_LIBRARIES)
-	find_package(PkgConfig REQUIRED)
-	if(PKG_CONFIG_FOUND)
-		pkg_check_modules(PROJ4_PC IMPORTED_TARGET proj)
-	endif()
-	if(TARGET PkgConfig::PROJ4_PC)
-		set(PROJ_LIBRARIES PkgConfig::PROJ4_PC)
-		set(PROJ_VERSION "${PROJ4_PC_VERSION}")
-	endif()
-endif()
-if(NOT PROJ_VERSION OR PROJ_VERSION VERSION_LESS 4.9)
-	message(FATAL_ERROR "At least PROJ 4.9 is required")
-elseif(PROJ_VERSION VERSION_LESS 6.1)
-	# New PROJ API missing or incomplete.
-	# (proj_normalize_for_visualization() came in 6.1.)
-	set_property(TARGET "${PROJ_LIBRARIES}" APPEND PROPERTY
-	  INTERFACE_COMPILE_DEFINITIONS ACCEPT_USE_OF_DEPRECATED_PROJ_API_H)
-elseif(PROJ_VERSION VERSION_LESS 6.2.1)
-	# Datum Potsdam issue, https://github.com/OSGeo/PROJ/pull/1573
-	set_property(TARGET "${PROJ_LIBRARIES}" APPEND PROPERTY
-	  INTERFACE_COMPILE_DEFINITIONS PROJ_ISSUE_1573)
-endif()
+find_package(PROJ 9.3 REQUIRED)
 
 if(Mapper_USE_GDAL)
-	find_package(GDAL 2 REQUIRED)
+        find_package(GDAL 3.9 REQUIRED)
 endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Core)
+qt_standard_project_setup()
 
-include("TestBigEndian")
-test_big_endian(big_endian)
-if(big_endian)
+if(CMAKE_CXX_BYTE_ORDER STREQUAL "BIG_ENDIAN")
 	add_definitions(-DMAPPER_BIG_ENDIAN)
 endif()
 
@@ -251,7 +217,7 @@ endif()
 
 if(NOT CMAKE_CXX_CLANG_TIDY)
 	set(min_version 8)
-	find_package(ClangTidy ${min_version})
+        find_package(ClangTidy ${min_version} QUIET)
 	if(ClangTidy_FOUND)
 		set(CMAKE_CXX_CLANG_TIDY "${PROJECT_SOURCE_DIR}/code-check-wrapper.sh;${ClangTidy_EXECUTABLE}")
 	else()
@@ -261,7 +227,7 @@ endif()
 
 if(NOT CMAKE_CXX_INCLUDE_WHAT_YOU_USE)
 	set(min_version 0.12)
-	find_package(IWYU ${min_version})
+        find_package(IWYU ${min_version} QUIET)
 	if(IWYU_FOUND)
 		set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "${PROJECT_SOURCE_DIR}/code-check-wrapper.sh;${IWYU_EXECUTABLE}")
 	else()
@@ -272,7 +238,7 @@ endif()
 
 # Subdirectories
 
-add_subdirectory("doc/manual")
+#add_subdirectory("doc/manual")
 add_subdirectory("examples")
 add_subdirectory("symbol sets")
 add_subdirectory("translations")
@@ -303,7 +269,7 @@ else()
 	add_subdirectory("test")
 endif()
 
-add_subdirectory("doc/api")
+#add_subdirectory("doc/api")
 add_subdirectory("packaging/src")
 
 # Configuration report

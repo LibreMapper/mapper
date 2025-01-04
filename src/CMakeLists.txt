@@ -25,7 +25,7 @@ execute_process(
   COMMAND "${CMAKE_COMMAND}" -E copy_if_different mapper_config.h.tmp mapper_config.h
   WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
 )
-add_library(mapper-config INTERFACE)
+qt_add_library(mapper-config INTERFACE)
 target_include_directories(mapper-config  INTERFACE "${CMAKE_CURRENT_BINARY_DIR}")
 
 
@@ -253,7 +253,7 @@ set(Mapper_Common_HEADERS
   templates/world_file.h
 )
 
-add_library(Mapper_Common STATIC
+qt_add_library(Mapper_Common STATIC
   ${Mapper_Common_SRCS}
   ${Mapper_Common_HEADERS}   # for IDE
   ${Mapper_RESOURCES_RCC}
@@ -308,15 +308,15 @@ if(WIN32)
 endif()
 
 if(ANDROID)
-	add_library(Mapper SHARED ${Mapper_SRCS})
+	qt_add_library(Mapper SHARED ${Mapper_SRCS})
 else()
-	add_executable(Mapper WIN32 MACOSX_BUNDLE ${Mapper_SRCS})
+	qt_add_executable(Mapper WIN32 MACOSX_BUNDLE ${Mapper_SRCS})
 	target_compile_definitions(Mapper PRIVATE MAPPER_USE_QTSINGLEAPPLICATION)
-	target_link_libraries(Mapper QtSingleApplication)
+	target_link_libraries(Mapper PRIVATE QtSingleApplication)
 endif()
 
 target_link_libraries(Mapper
-  Mapper_Common
+  PRIVATE Mapper_Common
 )
 target_compile_definitions(Mapper PRIVATE
   QT_NO_CAST_FROM_ASCII

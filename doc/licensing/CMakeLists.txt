@@ -12,7 +12,7 @@ message(STATUS "Configuring ${PROJECT_NAME} licensing documentation")
 set(known_providers )
 file(GLOB provider_files "${CMAKE_CURRENT_LIST_DIR}/*-licensing.cmake")
 foreach(file ${provider_files})
-	get_filename_component(name "${file}" NAME)
+	cmake_path(GET file FILENAME name)
 	string(REPLACE "-licensing.cmake" "" provider "${name}")
 	list(APPEND known_providers "${provider}")
 	file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${name}.stamp"

@@ -25,7 +25,7 @@ else()
 	list(APPEND PRINTSUPPORT_SRCS printer_properties.cpp)
 endif()
 
-add_library(printsupport STATIC ${PRINTSUPPORT_SRCS})
+qt_add_library(printsupport STATIC ${PRINTSUPPORT_SRCS})
 
 target_compile_definitions(printsupport PRIVATE
   QT_NO_CAST_FROM_ASCII

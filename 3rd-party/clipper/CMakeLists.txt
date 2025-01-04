@@ -89,6 +89,7 @@ ExternalProject_Add(
     ${CMAKE_COMMAND} -E copy <SOURCE_DIR>/cpp/clipper.cpp "${CMAKE_CURRENT_BINARY_DIR}/clipper.cpp"
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
+  DOWNLOAD_EXTRACT_TIMESTAMP ON
 )
 ExternalProject_Get_Property(Clipper SOURCE_DIR)
 

@@ -11,8 +11,9 @@
 # This is different from using `file(INSTALL ...)` at configuration time
 # where CMake takes care of `CMAKE_INSTALL_PREFIX` for generated scripts.
 
-get_filename_component(destination "@MAPPER_ABOUT_DESTINATION@/manual" ABSOLUTE
-  BASE_DIR "${CMAKE_INSTALL_PREFIX}"
+cmake_path(ABSOLUTE_PATH "@MAPPER_ABOUT_DESTINATION@/manual"
+  BASE_DIRECTORY "${CMAKE_INSTALL_PREFIX}" NORMALIZE
+  OUTPUT_VARIABLE destination
 )
 
 file(READ "@CMAKE_CURRENT_BINARY_DIR@/html/index.qhp" index_qhp)

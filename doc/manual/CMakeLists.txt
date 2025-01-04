@@ -140,7 +140,7 @@ if(Mapper_MANUAL_QTHELP)
 		  NAMES ${qcollectiongenerator_name}-qt5 ${qcollectiongenerator_name}
 		  DOC "The path of the Qt Help collection generator executable"
 		)
-		add_executable(Qt6::${qcollectiongenerator_name} IMPORTED)
+		qt_add_executable(Qt6::${qcollectiongenerator_name} IMPORTED)
 		set_target_properties(Qt6::${qcollectiongenerator_name} PROPERTIES
 		  IMPORTED_LOCATION ${Qt5Help_QCOLLECTIONGENERATOR_EXECUTABLE}
 		)
