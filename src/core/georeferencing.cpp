@@ -28,11 +28,7 @@
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 
-#ifdef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-#  include <proj_api.h>
-#else
-#  include <proj.h>
-#endif
+#include <proj.h>
 
 #include "mapper_config.h" // IWYU pragma: keep
 #include "core/crs_template.h"
@@ -180,17 +176,6 @@ namespace
 	public:
 		ProjSetup()
 		{
-#ifdef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-			auto proj_data = QFileInfo(QLatin1String("data:/proj"));
-			if (proj_data.exists())
-			{
-				static auto const location = proj_data.absoluteFilePath().toLocal8Bit();
-				static auto* data = location.constData();
-				pj_set_searchpath(1, &data);
-			}
-			
-			// no Android file finder support for deprecated PROJ API
-#else
 			proj_context_use_proj4_init_rules(PJ_DEFAULT_CTX, 1);
 
 #if defined(Q_OS_ANDROID)
@@ -208,11 +193,10 @@ namespace
 				static auto const location = proj_data.absoluteFilePath().toLocal8Bit();
 				static const char* const data[2] = { location.constData(), nullptr };
 				proj_context_set_search_paths(nullptr, 1, data);
-#if defined(MAPPER_USE_GDAL)// && !defined(QT_TESTLIB_LIB)
+#if defined(MAPPER_USE_GDAL)
 				GdalManager::setProjSearchPaths(data);
 #endif
 			}
-#endif  // ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
 		}
 	};
 	
@@ -240,101 +224,6 @@ namespace
 
 
 //### ProjTransform ###
-
-#ifdef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-
-ProjTransform::ProjTransform(ProjTransformData* pj) noexcept
-: pj{pj}
-{}
-
-ProjTransform::ProjTransform(ProjTransform&& other) noexcept
-{
-	operator=(std::move(other));
-}
-
-ProjTransform::ProjTransform(const QString& crs_spec)
-{
-	auto spec_latin1 = crs_spec.toLatin1();
-	if (!spec_latin1.contains("+no_defs"))
-		spec_latin1.append(" +no_defs");
-	
-	*pj_get_errno_ref() = 0;
-	pj = pj_init_plus(spec_latin1);
-}
-
-ProjTransform::~ProjTransform()
-{
-	if (pj)
-		pj_free(pj);
-}
-
-ProjTransform& ProjTransform::operator=(ProjTransform&& other) noexcept
-{
-	std::swap(pj, other.pj);
-	return *this;
-}
-
-// static
-ProjTransform ProjTransform::crs(const QString& crs_spec)
-{
-	return ProjTransform(crs_spec);
-}
-
-bool ProjTransform::isValid() const noexcept
-{
-	return pj != nullptr;
-}
-
-bool ProjTransform::isGeographic() const
-{
-	return isValid() && pj_is_latlong(pj);
-}
-
-QPointF ProjTransform::forward(const LatLon& lat_lon, bool* ok) const
-{
-	static auto const geographic_crs = ProjTransform(Georeferencing::geographic_crs_spec);
-	
-	auto point = isGeographic()
-	             ? QPointF{lat_lon.longitude(), lat_lon.latitude()}
-	             : QPointF{qDegreesToRadians(lat_lon.longitude()), qDegreesToRadians(lat_lon.latitude())};
-	if (geographic_crs.isValid())
-	{
-		auto ret = pj_transform(geographic_crs.pj, pj, 1, 1, &point.rx(), &point.ry(), nullptr);
-		if (ok)
-			*ok = (ret == 0);
-	}
-	else if (ok)
-	{
-		*ok = false;
-	}
-	return point;
-}
-
-LatLon ProjTransform::inverse(const QPointF& projected_coords, bool* ok) const
-{
-	static auto const geographic_crs = ProjTransform(Georeferencing::geographic_crs_spec);
-	
-	double easting = projected_coords.x(), northing = projected_coords.y();
-	if (geographic_crs.isValid())
-	{
-		auto ret = pj_transform(pj, geographic_crs.pj, 1, 1, &easting, &northing, nullptr);
-		if (ok)
-			*ok = (ret == 0);
-	}
-	else if (ok)
-	{
-		*ok = false;
-	}
-	return isGeographic() ? LatLon{northing, easting} : LatLon::fromRadiant(northing, easting);
-}
-
-QString ProjTransform::errorText() const
-{
-	auto err_no = *pj_get_errno_ref();
-	return (err_no == 0) ? QString() : QString::fromLatin1(pj_strerrno(err_no));
-}
-
-#else
 
 namespace {
 
@@ -367,18 +256,10 @@ ProjTransform::ProjTransform(const QString& crs_spec)
 	static auto const geographic_crs_spec_utf8 = Georeferencing::geographic_crs_spec.toUtf8();
 	
 	auto crs_spec_utf8 = crs_spec.toUtf8();
-#ifdef PROJ_ISSUE_1573
-	// Cf. https://github.com/OSGeo/PROJ/pull/1573
-	crs_spec_utf8.replace("+datum=potsdam", "+ellps=bessel +nadgrids=@BETA2007.gsb");
-#endif
-#if defined(ACCEPT_USE_OF_DEPRECATED_PROJ_API_H) || (PROJ_VERSION_MAJOR) < 8
-	pj = proj_create_crs_to_crs(PJ_DEFAULT_CTX, geographic_crs_spec_utf8, crs_spec_utf8, nullptr);
-#else
 	static auto const geographic_crs = crs(Georeferencing::geographic_crs_spec);
 	auto const projected_crs = crs(crs_spec);
 	static const char* const options[] = {"AUTHORITY=any", nullptr};
 	pj = proj_create_crs_to_crs_from_pj(PJ_DEFAULT_CTX, geographic_crs.pj, projected_crs.pj, nullptr, options);
-#endif
 	if (pj)
 		operator=({proj_normalize_for_visualization(PJ_DEFAULT_CTX, pj)});
 }
@@ -400,10 +281,6 @@ ProjTransform ProjTransform::crs(const QString& crs_spec)
 {
 	ProjTransform result;
 	auto crs_spec_utf8 = withTypeCrs(crs_spec.toUtf8().trimmed());
-#ifdef PROJ_ISSUE_1573
-	// Cf. https://github.com/OSGeo/PROJ/pull/1573
-	crs_spec_utf8.replace("+datum=potsdam", "+ellps=bessel +nadgrids=@BETA2007.gsb");
-#endif
 	result.pj = proj_create(PJ_DEFAULT_CTX, crs_spec_utf8);
 	return result;
 }
@@ -459,8 +336,6 @@ QString ProjTransform::errorText() const
 	auto err_no = proj_errno(pj);
 	return (err_no == 0) ? QString() : QString::fromLatin1(proj_errno_string(err_no));
 }
-
-#endif
 
 
 

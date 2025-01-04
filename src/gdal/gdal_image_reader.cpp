@@ -287,7 +287,7 @@ TemplateImage::GeoreferencingOption GdalImageReader::readGeoTransform()
 		auto const result = GDALGetGeoTransform(dataset, geo_transform.data());
 		if (result == CE_None)
 		{
-#if GDAL_VERSION_NUM >= GDAL_COMPUTE_VERSION(3,0,0) && !defined(ACCEPT_USE_OF_DEPRECATED_PROJ_API_H)
+#if GDAL_VERSION_NUM >= GDAL_COMPUTE_VERSION(3,0,0)
 			georef.crs_spec = toWkt(GDALGetSpatialRef(dataset));
 #else
 			georef.crs_spec = toProjSpec(GDALGetProjectionRef(dataset));

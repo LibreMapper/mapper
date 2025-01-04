@@ -18,9 +18,7 @@
 #include <QPointF>
 
 #include <geodesic.h>
-#ifndef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-#  include <proj.h>
-#endif
+#include <proj.h>
 
 #ifdef MAPPER_TEST_GDAL
 #  include <gdal.h>
@@ -107,11 +105,9 @@ void GeoreferencingTest::initTestCase()
 {
 	XMLFileFormat::active_version = 6;
 	
-#ifndef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
 	auto info = proj_info();
 	QVERIFY(info.major == PROJ_VERSION_MAJOR);
 	QVERIFY(info.minor == PROJ_VERSION_MINOR);
-#endif
 	
 #ifdef MAPPER_TEST_GDAL
 	QVERIFY(GDALCheckVersion(GDAL_VERSION_MAJOR, GDAL_VERSION_MINOR, "GeoreferencingTest") == TRUE);
@@ -337,13 +333,7 @@ void GeoreferencingTest::testCRS()
 	QFETCH(QString, id);
 	QFETCH(QString, spec);
 	QFETCH(bool, is_geographic);
-	
-#ifdef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-	if (qstrcmp(QTest::currentDataTag(), "WGS 84 (G730)") == 0)
-		QSKIP("WGS 84 (G730) requires up-to-date EPSG info");
-#endif
-	
-#ifndef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
+		
 	// Test with IDs
 	{
 		auto t = ProjTransform::crs(id);
@@ -354,7 +344,6 @@ void GeoreferencingTest::testCRS()
 		QVERIFY2(georef.setProjectedCRS(id, id), georef.getErrorText().toLatin1());
 		QCOMPARE(georef.isGeographic(), is_geographic);
 	}
-#endif
 	
 	// Test with specs.
 	{
@@ -506,9 +495,6 @@ void GeoreferencingTest::testProjection()
 }
 
 
-
-#ifndef ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
-
 namespace {
 	bool finder_called;
 
@@ -534,8 +520,6 @@ void GeoreferencingTest::testProjContextSetFileFinder()
 	fake_georef.setProjectedCRS(QStringLiteral("Fake CRS"), QStringLiteral("+init=fake_crs:123"));
 	QVERIFY(finder_called);
 }
-
-#endif
 
 
 void GeoreferencingTest::testUTMZoneCalculation_data()

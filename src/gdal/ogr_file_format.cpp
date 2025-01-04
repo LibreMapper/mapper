@@ -768,10 +768,6 @@ ogr::unique_srs OgrFileImport::srsFromMap()
 		OSRSetProjCS(srs.get(), "Projected map SRS");
 		OSRSetWellKnownGeogCS(srs.get(), "WGS84");
 		auto spec = QByteArray(georef.getProjectedCRSSpec().toLatin1());
-#ifdef PROJ_ISSUE_1573
-		// Cf. https://github.com/OSGeo/PROJ/pull/1573
-		spec.replace("+datum=potsdam", "+ellps=bessel +nadgrids=@BETA2007.gsb");
-#endif
 		auto error = OSRImportFromProj4(srs.get(), spec);
 		if (!error)
 			return srs;
@@ -1779,10 +1775,6 @@ bool OgrFileImport::checkGeoreferencing(const QString& path, const Georeferencin
 bool OgrFileImport::checkGeoreferencing(OGRDataSourceH data_source, const Georeferencing& georef)
 {
 	auto spec = QByteArray(georef.getProjectedCRSSpec().toLatin1());
-#ifdef PROJ_ISSUE_1573
-	// Cf. https://github.com/OSGeo/PROJ/pull/1573
-	spec.replace("+datum=potsdam", "+ellps=bessel +nadgrids=@BETA2007.gsb");
-#endif
 	auto map_srs = ogr::unique_srs { OSRNewSpatialReference(nullptr) };
 	OSRSetProjCS(map_srs.get(), "Projected map SRS");
 	OSRSetWellKnownGeogCS(map_srs.get(), "WGS84");
