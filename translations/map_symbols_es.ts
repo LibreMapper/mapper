@@ -39,7 +39,7 @@
         <translation type="unfinished">Marrón 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Verde 100%/Negro 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished">Verde 30% para pasillos estrechos</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Blanco sobre verde</translation>
     </message>
@@ -2817,6 +2817,16 @@ La línea púrpura se introducirá un poco en el símbolo de meta. Es una defici
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>El logo de OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Verde 100%/Negro 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Blanco sobre verde</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -12325,7 +12335,7 @@ La línea púrpura se introducirá un poco en el símbolo de meta. Es una defici
         <translation type="unfinished">Verde 30% para pasillos estrechos</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Blanco sobre verde</translation>
     </message>
@@ -14167,6 +14177,11 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>El logo de OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Blanco sobre verde</translation>
     </message>
     <message>
         <source>Black 100%</source>

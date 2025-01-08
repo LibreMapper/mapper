@@ -39,7 +39,7 @@
         <translation type="unfinished">Bruna 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Verda 100%/Nigra 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Flava 100%/Verda 50%</translation>
     </message>
@@ -2555,6 +2555,16 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Markemblemo de la OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Verda 100%/Nigra 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Flava 100%/Verda 50%</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -8522,7 +8532,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Flava 100%/Verda 50%</translation>
     </message>
@@ -10138,6 +10148,11 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Markemblemo de la OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Flava 100%/Verda 50%</translation>
     </message>
     <message>
         <source>Black 100%</source>

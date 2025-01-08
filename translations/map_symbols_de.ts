@@ -39,7 +39,7 @@
         <translation type="unfinished">Braun 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Grün 100%/Schwarz 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished">Grün 30% für schmale Schneise</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Weiß über Grün</translation>
     </message>
@@ -2588,6 +2588,16 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Das Logo von OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Grün 100%/Schwarz 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -15119,7 +15129,7 @@ Hinweis: Wenn das Bachsymbol breiter als 0,25 mm ist, muss das Stegsymbol angepa
         <translation type="unfinished">Grün 30% für schmale Schneise</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Weiß über Grün</translation>
     </message>
@@ -16763,6 +16773,11 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Das Logo von OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Weiß über Grün</translation>
     </message>
     <message>
         <source>Black 100%</source>

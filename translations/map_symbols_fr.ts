@@ -39,7 +39,7 @@
         <translation type="unfinished">Brun 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Vert 100%/Noir 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished">Vert 30% pour layon étroit</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Blanc sur vert</translation>
     </message>
@@ -2703,6 +2703,16 @@ Les lignes violettes sont légèrement prolongées dans le symbole d&apos;arriv�
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Logo OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Vert 100%/Noir 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Blanc sur vert</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -14233,7 +14243,7 @@ Largeur minimum : 0,4 mm (6 m au sol).</translation>
         <translation type="unfinished">Vert 30% pour layon étroit</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Blanc sur vert</translation>
     </message>
@@ -15965,6 +15975,11 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Logo OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Blanc sur vert</translation>
     </message>
     <message>
         <source>Black 100%</source>

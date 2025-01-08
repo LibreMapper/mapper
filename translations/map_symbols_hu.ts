@@ -39,7 +39,7 @@
         <translation type="unfinished">Barna 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Zöld 100%/Fekete 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished">Zöld 30%-os keskeny nyiladékhoz</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Fehér zöld felett</translation>
     </message>
@@ -2824,6 +2824,16 @@ A lila színnel a rajttól a célig megrajzolható a pálya. Egyszerű, de nem t
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Az OpenOrienteering logója.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Zöld 100%/Fekete 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Fehér zöld felett</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -15843,7 +15853,7 @@ Megjegyzés: ha az víz szélesebb 0.25mm-nél, akkor mindkét oldalon 0.5 mm-re
         <translation type="unfinished">Zöld 30%-os keskeny nyiladékhoz</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Fehér zöld felett</translation>
     </message>
@@ -17691,6 +17701,11 @@ Azon útvonal, amelyen nem használhatók és tilosak átlépni, cikk-cakkal van
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Az OpenOrienteering logója.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Fehér zöld felett</translation>
     </message>
     <message>
         <source>Black 100%</source>

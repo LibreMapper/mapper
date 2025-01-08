@@ -39,7 +39,7 @@
         <translation type="unfinished">Ruskea 100%</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
         <translation type="unfinished">Vihreä 100%/Musta 50%</translation>
     </message>
@@ -114,7 +114,7 @@
         <translation type="unfinished">Vihreä 30% ajouralle tai kapealle linjalle</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
         <translation type="unfinished">Valkoinen vihreän päällä</translation>
     </message>
@@ -2814,6 +2814,16 @@ Yhdysviiva menee hieman maaliympyrän sisäpuolelle, mikä on symbolin helppoude
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>OpenOrienteering:n logo.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Vihreä 100%/Musta 50%</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Valkoinen vihreän päällä</translation>
     </message>
     <message>
         <source>White over green and brown</source>
@@ -15378,7 +15388,7 @@ Huom: jos vesistö on leveämpi kuin 0.25mm, säädä symbolia niin että se ylt
         <translation type="unfinished">Vihreä 30% ajouralle tai kapealle linjalle</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
         <translation type="unfinished">Valkoinen vihreän päällä</translation>
     </message>
@@ -17190,6 +17200,11 @@ Kielletty reitti, jota ei saa ylittää, merkitään siksak-kuviolla. Kuvion tul
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>OpenOrienteering:n logo.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Valkoinen vihreän päällä</translation>
     </message>
     <message>
         <source>Black 100%</source>

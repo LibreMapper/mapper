@@ -39,9 +39,9 @@
         <translation>Modrá 100% pro liniové prvky</translation>
     </message>
     <message>
-        <source>Dark green line symbols</source>
+        <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
-        <translation>Tmavá zelená pro liniové prvky</translation>
+        <translation type="unfinished">Tmavá zelená pro liniové prvky</translation>
     </message>
     <message>
         <source>Brown 100% line symbols</source>
@@ -114,9 +114,9 @@
         <translation>Zelená 30% pro průsek (extra)</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 22</comment>
-        <translation>Žlutá 100% a zelená 50%</translation>
+        <translation type="unfinished">Žlutá 100% a zelená 50%</translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
@@ -2994,6 +2994,16 @@ Fialová čára se trochu rozšíří do značky pro cíl. To je nedostatek toho
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Logo OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Dark green line symbols</source>
+        <comment>Color 7</comment>
+        <translation type="obsolete">Tmavá zelená pro liniové prvky</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 22</comment>
+        <translation type="obsolete">Žlutá 100% a zelená 50%</translation>
     </message>
     <message>
         <source>Purple for course overprint</source>
@@ -16410,9 +16420,9 @@ Poznámka: Je-li tok širší než 0.25 mm, upravte tuto značku tak, aby přesa
         <translation>Zelená 30% pro průsek (extra)</translation>
     </message>
     <message>
-        <source>Yellow 100% + Green 50%</source>
+        <source>Olive green</source>
         <comment>Color 55</comment>
-        <translation>Žlutá 100% a zelená 50%</translation>
+        <translation type="unfinished">Žlutá 100% a zelená 50%</translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
@@ -18261,6 +18271,11 @@ Trasa, která je nepřípustná a je zakázáno ji překonat, je znázorněna kl
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation>Logo OpenOrienteering.</translation>
+    </message>
+    <message>
+        <source>Yellow 100% + Green 50%</source>
+        <comment>Color 55</comment>
+        <translation type="obsolete">Žlutá 100% a zelená 50%</translation>
     </message>
     <message>
         <source>Black 100%</source>
