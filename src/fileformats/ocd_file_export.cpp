@@ -23,6 +23,7 @@
 #include <Qt>
 #include <QtGlobal>
 #include <QtMath>
+#include <QDate>
 #include <QDir>
 #include <QFileInfo>
 #include <QFlags>
@@ -39,11 +40,10 @@
 #include <QTextDecoder>
 #include <QTextEncoder>
 #include <QTextStream>
+#include <QTimeZone>
 #include <QTransform>
 #include <QVarLengthArray>
 #include <QVariant>
-#include <QDateTime>
-#include <QTimeZone>
 
 #include "settings.h"
 #include "core/georeferencing.h"
@@ -2510,7 +2510,7 @@ void OcdFileExport::fillV12ObjectExtras(const Object* object, OcdObject& ocd_obj
 	// Extra members since V12
 	ocd_object.server_object_id = -1;
 	
-	static auto const dawn_of_time = QDate(1899, 12, 30).startOfDay(Qt::UTC);
+	static auto const dawn_of_time = QDate(1899, 12, 30).startOfDay(QTimeZone::UTC);
 	auto const now = dawn_of_time.msecsTo(QDateTime::currentDateTimeUtc()) / 86400000.0;
 	auto const ctime = QDateTime::fromString(object->getTag(QString::fromLatin1("ctime")), Qt::ISODateWithMs);
 	auto const mtime = QDateTime::fromString(object->getTag(QString::fromLatin1("mtime")), Qt::ISODateWithMs);

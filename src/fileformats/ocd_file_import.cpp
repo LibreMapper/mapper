@@ -24,6 +24,7 @@
 #include <QtNumeric>
 #include <QChar>
 #include <QCoreApplication>
+#include <QDate>
 #include <QDebug>
 #include <QDir>
 #include <QFlags>
@@ -36,8 +37,8 @@
 #include <QStringRef>
 #include <QTextCodec>
 #include <QTextDecoder>
+#include <QTimeZone>
 #include <QVariant>
-#include <QDateTime>
 
 #include "settings.h"
 #include "core/georeferencing.h"
@@ -1880,7 +1881,7 @@ void setObjectDates(Object* object, const O& ocd_object)
 	// modification timestamps but did not specify the time zone.
 	// We will assign UTC time zone to the times to avoid DST and time
 	// zone difference headaches.
-	static auto const dawn_of_time = QDate(1899, 12, 30).startOfDay(Qt::UTC);
+	static auto const dawn_of_time = QDate(1899, 12, 30).startOfDay(QTimeZone::UTC);
 	auto const ctime = dawn_of_time.addMSecs(std::round(ocd_object.creation_date * 86400000)); // will overflow in about 290 Ma
 	auto const mtime = dawn_of_time.addMSecs(std::round(ocd_object.modification_date * 86400000));
 	object->setTag(QString::fromLatin1("ctime"), ctime.toString(Qt::ISODateWithMs));

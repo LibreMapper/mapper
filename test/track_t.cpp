@@ -21,6 +21,7 @@
 #include <QMetaObject>
 #include <QObject>
 #include <QString>
+#include <QTimeZone>
 
 #include "global.h"
 #include "test_config.h"
@@ -36,7 +37,7 @@ class TrackTest : public QObject
 {
 	Q_OBJECT
 	
-	QDateTime base_datetime = QDateTime::fromMSecsSinceEpoch(0, Qt::UTC).addYears(40);
+	QDateTime base_datetime = QDateTime::fromMSecsSinceEpoch(0, QTimeZone::UTC).addYears(40);
 	
 private slots:
 	void initTestCase()
