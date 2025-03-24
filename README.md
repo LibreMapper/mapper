@@ -11,7 +11,7 @@ graphic map content.
 
 If you encounter issues while using LibreMapper, or just want to spend some
 good time coding for the project, please refer to the
-[Contribution Guidelines](https://github.com/LibreMapper/mapper/blob/main/README.md).
+[Contribution Guidelines](https://github.com/LibreMapper/mapper/blob/main/CONTRIBUTING.md).
 
 ## License
 
