@@ -105,7 +105,7 @@ struct Job
 	Job(Job&& cj) noexcept : future(std::move(cj.future)), progress(cj.progress) {}
 	Job(QFuture<ResultType>&& f, const Progress& p) noexcept : future(std::move(f)), progress(p) {}
 	Job& operator=(Job const&) = delete;
-	Job& operator=(Job&& job) noexcept { future = std::move(job.future); progress = job.progress; }
+	Job& operator=(Job&& job) noexcept { future = std::move(job.future); progress = Progress {job.progress}; }
 	~Job() = default;
 };
 
