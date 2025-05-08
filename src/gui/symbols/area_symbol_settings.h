@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -69,6 +69,7 @@ protected:
 	void updatePatternWidgets();
 	
 protected slots:
+	void orientedToNorthClicked(bool checked);
 	void colorChanged();
 	void minimumSizeChanged(double value);
 	void patternAngleChanged(double value);
@@ -86,6 +87,7 @@ private:
 	MapEditorController* controller;
 	std::vector<AreaSymbol::FillPattern>::iterator active_pattern;
 	
+	QCheckBox*      oriented_to_north;
 	ColorDropDown*  color_edit;
 	QDoubleSpinBox* minimum_size_edit;
 	

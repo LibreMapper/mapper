@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2024 Libor Pecháček
- * Copyright 2016-2022, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2016-2022, 2024, 2025 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  *
@@ -1403,6 +1403,8 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 	ocd_area_common.structure_draw_V12 = 0;
 	
 	quint8 flags = 0;
+	if (area_symbol->isRotatable())
+		flags |= Ocd::SymbolRotatable;
 	// Hatch
 	for (int i = 0, end = area_symbol->getNumFillPatterns(); i < end; ++i)
 	{
@@ -1421,8 +1423,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 				else
 					ocd_area_common.hatch_dist = decltype(ocd_area_common.hatch_dist)(convertSize(pattern.line_spacing));
 				ocd_area_common.hatch_angle_1 = decltype(ocd_area_common.hatch_angle_1)(convertRotation(pattern.angle));
-				if (pattern.rotatable())
-					flags |= Ocd::SymbolRotatable;
 				break;
 			case Ocd::HatchSingle:
 				if (ocd_area_common.hatch_color == convertColor(pattern.line_color))
@@ -1434,8 +1434,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 					else
 						ocd_area_common.hatch_dist = decltype(ocd_area_common.hatch_dist)(ocd_area_common.hatch_dist + convertSize(pattern.line_spacing)) / 2;
 					ocd_area_common.hatch_angle_2 = decltype(ocd_area_common.hatch_angle_2)(convertRotation(pattern.angle));
-					if (pattern.rotatable())
-						flags |= Ocd::SymbolRotatable;
 					break;
 				}
 				Q_FALLTHROUGH();
@@ -1457,8 +1455,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 				ocd_area_common.structure_height = decltype(ocd_area_common.structure_height)(convertSize(pattern.line_spacing));
 				ocd_area_common.structure_angle = decltype(ocd_area_common.structure_angle)(convertRotation(pattern.angle));
 				pattern_symbol = pattern.point;
-				if (pattern.rotatable())
-					flags |= Ocd::SymbolRotatable;
 				point_patterns.append(&pattern);
 				break;
 			case 1:

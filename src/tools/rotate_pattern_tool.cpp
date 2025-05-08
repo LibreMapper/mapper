@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2019 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -167,14 +167,19 @@ void RotatePatternTool::dragMove()
 	
 	for (auto object : editedObjects())
 	{
-		if (object->getSymbol()->isRotatable())
+		switch (object->getType())
 		{
-			object->setRotation(rotation);
-		}
-		else if (object->getType() == Object::Path)
-		{
-			object->asPath()->setPatternOrigin(MapCoord(click_pos_map));
-			object->asPath()->setPatternRotation(rotation);
+		case Object::Path:
+			if (object->getSymbol()->hasRotatableFillPattern())
+			{
+				auto* path = object->asPath();
+				path->setPatternOrigin(MapCoord(click_pos_map));
+				path->setPatternRotation(rotation);
+			}
+			break;
+		default:
+			if (object->getSymbol()->isRotatable())
+				object->setRotation(rotation);
 		}
 	}
 	
