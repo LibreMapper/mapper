@@ -8,7 +8,7 @@
 
 #include "ocd_parameter_stream_reader.h"
 
-#include <cmath>
+#include <algorithm>
 
 #include <QtGlobal>
 #include <QChar>

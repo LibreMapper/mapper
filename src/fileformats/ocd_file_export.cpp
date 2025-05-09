@@ -23,6 +23,7 @@
 #include <Qt>
 #include <QtGlobal>
 #include <QtMath>
+#include <QChar>
 #include <QDate>
 #include <QDir>
 #include <QFileInfo>

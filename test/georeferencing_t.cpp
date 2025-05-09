@@ -16,6 +16,7 @@
 #include <QLineF>
 #include <QPoint>
 #include <QPointF>
+#include <QVariant>
 
 #include <geodesic.h>
 #include <proj.h>
