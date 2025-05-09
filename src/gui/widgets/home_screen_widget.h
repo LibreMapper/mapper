@@ -101,7 +101,7 @@ public slots:
 	void setOpenMRUFileChecked(bool state) override;
 	
 protected slots:
-	/** Opens a file when its is list item is clicked. */
+	/** Opens a file when its list item is clicked. */
 	void recentFileClicked(QListWidgetItem* item);
 	
 protected:
@@ -144,7 +144,7 @@ public slots:
 	void showSettings();
 	
 protected:
-	/** Opens a file when its is list item is clicked. */
+	/** Opens a file when its list item is clicked. */
 	void itemClicked(QListWidgetItem* item);
 	
 	/** Rechecks the current selected item. */
