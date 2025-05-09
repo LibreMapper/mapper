@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
  * Copyright 2024 Libor Pecháček
  *
  * This file is part of LibreMapper.
@@ -386,6 +386,7 @@ void GeoreferencingDialog::projectionChanged()
 	QString osm_link =
 	  QString::fromLatin1("https://www.openstreetmap.org/?mlat=%1&mlon=%2&zoom=18&layers=M").
 	  arg(latitude, 0, 'g', 10).arg(longitude, 0, 'g', 10);
+#ifdef MAPPER_WITH_WORLDOFO_LINK
 	QString worldofo_link =
 	  QString::fromLatin1("http://maps.worldofo.com/?zoom=15&lat=%1&lng=%2").
 	  arg(latitude).arg(longitude);
@@ -393,6 +394,9 @@ void GeoreferencingDialog::projectionChanged()
 	  tr("<a href=\"%1\">OpenStreetMap</a> | <a href=\"%2\">World of O Maps</a>").
 	  arg(osm_link, worldofo_link)
 	);
+#else
+	link_label->setText(tr("<a href=\"%1\">OpenStreetMap</a>").arg(osm_link));
+#endif
 	
 	QString error = georef->getErrorText();
 	if (error.length() == 0)
