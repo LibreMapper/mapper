@@ -272,18 +272,16 @@ LineRenderable::LineRenderable(const LineSymbol* symbol, QPointF first, QPointF 
  , cap_style(Qt::FlatCap)
  , join_style(Qt::MiterJoin)
 {
-	auto line_width_vector = MapCoordF(second - first).perpRight();
-	line_width_vector.normalize();	
-	line_width_vector *= (color_priority < 0) ? 0 : line_width;
+	qreal half_line_width = (color_priority < 0) ? 0 : line_width/2;
 	
-	// Might possibly be simplified with QRectf::normalized() and addition of QMarginsF.
-	// We prefer tighter control of the control flow in this calculation though.
-	auto const origin = QPointF { std::min(first.x(), second.x()) - std::abs(line_width_vector.x()/2),
-	                              std::min(first.y(), second.y()) - std::abs(line_width_vector.y()/2) };
-	auto const size = QSizeF { std::abs(first.x() - second.x()) + std::abs(line_width_vector.x()),
-	                           std::abs(first.y() - second.y()) + std::abs(line_width_vector.y()) };
+	auto margin = MapCoordF(second - first).perpRight();
+	margin.normalize();
+	margin.rx() = qAbs(margin.x()) * half_line_width;
+	margin.ry() = qAbs(margin.y()) * half_line_width;
+	extent = QRectF(first, second)
+	             .normalized()
+	             .adjusted(-margin.x(), -margin.y(), margin.x(), margin.y());
 	
-	extent = QRectF { origin, size };
 	path.moveTo(first);
 	path.lineTo(second);
 }
