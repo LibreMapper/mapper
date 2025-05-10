@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2022 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -28,9 +28,9 @@
 #include <QVariant>
 #include <QWidget>
 
-#include "core/symbols/symbol.h"
 #include "core/symbols/line_symbol.h"
 #include "core/symbols/point_symbol.h"
+#include "core/symbols/symbol.h"
 #include "gui/util_gui.h"
 #include "gui/symbols/point_symbol_editor_widget.h"
 #include "gui/symbols/symbol_setting_dialog.h"
@@ -56,7 +56,9 @@ SymbolPropertiesWidget* LineSymbol::createPropertiesWidget(SymbolSettingDialog* 
 // ### LineSymbolSettings ###
 
 LineSymbolSettings::LineSymbolSettings(LineSymbol* symbol, SymbolSettingDialog* dialog)
-: SymbolPropertiesWidget(symbol, dialog), symbol(symbol), dialog(dialog)
+: SymbolPropertiesWidget(symbol, dialog)
+, symbol(symbol)
+, dialog(dialog)
 {
 	auto map = dialog->getPreviewMap();
 	
