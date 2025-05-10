@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -416,9 +416,15 @@ public:
 	
 	
 	/**
-	 * Returns the symbol number as string
+	 * Returns the symbol number as string.
 	 */
 	QString getNumberAsString() const;
+	
+	/**
+	 * Returns the concatenation of symbol number and symbol name.
+	 */
+	QString getNumberAndPlainTextName() const;
+	
 	
 	/**
 	 * Returns the i-th component of the symbol number as int.
@@ -644,4 +650,4 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Symbol::TypeCombination)
 Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::Symbol::RenderableOptions)
 
 
-#endif
+#endif // OPENORIENTEERING_SYMBOL_H
