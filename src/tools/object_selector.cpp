@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2017, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -10,13 +10,13 @@
 
 #include <algorithm>
 #include <cstddef>
-#include <map>
-#include <memory>
+// IWYU pragma: no_include <map>
+// IWYU pragma: no_include <memory>
 
 #include <QRectF>
 
 #include "core/map.h"
-#include "core/map_part.h"
+// IWYU pragma: no_include "core/map_part.h"
 #include "core/objects/object.h"
 
 
@@ -29,12 +29,11 @@ ObjectSelector::ObjectSelector(Map* map)
 }
 
 
-
 bool ObjectSelector::selectAt(const MapCoordF& position, qreal tolerance, bool toggle)
 {
 	bool selection_changed;
 	
-	bool single_object_selected = map->getNumSelectedObjects() == 1;
+	const bool single_object_selected = map->getNumSelectedObjects() == 1;
 	Object* single_selected_object = nullptr;
 	if (single_object_selected)
 		single_selected_object = *map->selectedObjectsBegin();
@@ -70,7 +69,7 @@ bool ObjectSelector::selectAt(const MapCoordF& position, qreal tolerance, bool t
 		{
 			// Results different - select object with highest priority, if it is not the same as before
 			last_results = objects;
-			std::sort(objects.begin(), objects.end(), sortObjects);
+			std::sort(objects.begin(), objects.end(), compareTypeAndExtent);
 			last_results_ordered = std::move(objects);
 			next_object_to_select = 1;
 			
@@ -108,7 +107,7 @@ bool ObjectSelector::selectAt(const MapCoordF& position, qreal tolerance, bool t
 		{
 			// Toggle selection of highest priority object
 			last_results = objects;
-			std::sort(objects.begin(), objects.end(), sortObjects);
+			std::sort(objects.begin(), objects.end(), compareTypeAndExtent);
 			last_results_ordered = std::move(objects);
 			
 			map->toggleObjectSelection(last_results_ordered.begin()->second, true);
@@ -134,7 +133,7 @@ bool ObjectSelector::selectBox(const MapCoordF& corner1, const MapCoordF& corner
 		map->clearObjectSelection(false);
 	}
 	
-	auto size = objects.size();
+	const auto size = objects.size();
 	for (std::size_t i = 0; i < size; ++i)
 	{
 		if (toggle)
@@ -149,18 +148,19 @@ bool ObjectSelector::selectBox(const MapCoordF& corner1, const MapCoordF& corner
 }
 
 
-bool ObjectSelector::sortObjects(const std::pair< int, Object* >& a, const std::pair< int, Object* >& b)
+// static
+bool ObjectSelector::compareTypeAndExtent(const std::pair<int, Object*>& a, const std::pair<int, Object*>& b)
 {
 	if (a.first != b.first)
 		return a.first < b.first;
 	
 	auto a_area = a.second->getExtent().width() * a.second->getExtent().height();
 	auto b_area = b.second->getExtent().width() * b.second->getExtent().height();
-	
 	return a_area < b_area;
 }
 
 
+// static
 bool ObjectSelector::selectionInfosEqual(const SelectionInfoVector& a, const SelectionInfoVector& b)
 {
 	return a.size() == b.size() && std::equal(a.begin(), a.end(), b.begin());
