@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2023 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -9,9 +9,9 @@
 
 #include "edit_point_tool.h"
 
+#include <limits>
 #include <map>
 #include <memory>
-#include <limits>
 #include <vector>
 
 #include <QtGlobal>
@@ -36,7 +36,6 @@
 #include "core/objects/object.h"
 #include "core/objects/object_mover.h"
 #include "core/objects/text_object.h"
-#include "core/symbols/line_symbol.h"
 #include "core/symbols/symbol.h"
 #include "gui/modifier_key.h"
 #include "gui/map/map_editor.h"
@@ -86,7 +85,7 @@ EditPointTool::~EditPointTool()
 bool EditPointTool::addDashPointDefault() const
 {
 	// Toggle dash points depending on if the selected symbol has a dash symbol.
-	return (hover_object && symbolContainsDashSymbol(hover_object->getSymbol()));
+	return (hover_object && hover_object->getSymbol()->containsDashSymbol());
 }
 
 bool EditPointTool::mousePressEvent(QMouseEvent* event, const MapCoordF& map_coord, MapWidget* widget)
@@ -469,9 +468,7 @@ bool EditPointTool::keyRelease(QKeyEvent* event)
 		
 	case Qt::Key_Shift:
 		snap_helper->setFilter(SnappingToolHelper::NoSnapping);
-		if (hoveringOverCurveHandle())
-			reapplyConstraintHelpers();
-		else if (editingInProgress())
+		if (hoveringOverCurveHandle() || editingInProgress())
 			reapplyConstraintHelpers();
 		updateStatusText();
 		return false; // not consuming Shift

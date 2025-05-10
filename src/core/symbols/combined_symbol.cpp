@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -401,6 +401,15 @@ bool CombinedSymbol::hasRotatableFillPattern() const
 {
 	return std::any_of(begin(parts), end(parts), [](auto const* part) {
 		return part && part->hasRotatableFillPattern();
+	});
+}
+
+
+// override
+bool CombinedSymbol::containsDashSymbol() const
+{
+	return std::any_of(begin(parts), end(parts), [](auto const* part) {
+		return part && part->containsDashSymbol();
 	});
 }
 

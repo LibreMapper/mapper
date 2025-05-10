@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2023 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -39,11 +39,11 @@
 #include "core/path_coord.h"
 #include "core/virtual_coord_vector.h"
 #include "core/virtual_path.h"
+#include "core/objects/object.h"
+#include "core/renderables/renderable.h"
 #include "core/symbols/combined_symbol.h"
 #include "core/symbols/line_symbol.h"
 #include "core/symbols/symbol.h"
-#include "core/objects/object.h"
-#include "core/renderables/renderable.h"
 #include "gui/modifier_key.h"
 #include "gui/map/map_editor.h"
 #include "gui/map/map_widget.h"
@@ -978,9 +978,10 @@ void DrawPathTool::setDrawingSymbol(const Symbol* symbol)
 {
 	if (is_helper_tool)
 		return;
-	DrawLineAndAreaTool::setDrawingSymbol(symbol);
 	
+	DrawLineAndAreaTool::setDrawingSymbol(symbol);
 	updateDashPointDrawing();
+	updateStatusText();
 }
 
 void DrawPathTool::objectSelectionChanged()
@@ -1157,18 +1158,8 @@ void DrawPathTool::updateDashPointDrawing()
 	if (is_helper_tool)
 		return;
 	
-	const Symbol* symbol = editor->activeSymbol();
 	// Auto-activate dash points depending on if the selected symbol has a dash symbol.
-	if (symbolContainsDashSymbol(symbol))
-	{
-		draw_dash_points = true;
-		updateStatusText();
-	}
-	else
-	{
-		draw_dash_points = false;
-	}
-	
+	draw_dash_points = editor->activeSymbol()->containsDashSymbol();
 	if (dash_points_button)
 		dash_points_button->setChecked(draw_dash_points);
 }
