@@ -605,8 +605,8 @@ OgrFileImportFormat::OgrFileImportFormat()
               QString{},
               Feature::FileOpen | Feature::FileImport | Feature::ReadingLossy )
 {
-	auto const extensions = GdalManager().supportedVectorImportExtensions();
-	for (const auto& extension : extensions)
+	GdalManager const gdal_manager;
+	for (const auto& extension : gdal_manager.supportedVectorImportExtensions())
 		addExtension(QString::fromLatin1(extension));
 }
 

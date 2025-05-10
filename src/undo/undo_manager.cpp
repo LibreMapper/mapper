@@ -29,7 +29,7 @@
 
 namespace LibreMapper {
 
-Q_STATIC_ASSERT(UndoManager::max_undo_steps < std::numeric_limits<int>::max());
+Q_STATIC_ASSERT(UndoManager::max_undo_steps < static_cast<unsigned int>(std::numeric_limits<int>::max()));
 
 
 // ### UndoManager::State ###

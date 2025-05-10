@@ -11,7 +11,6 @@
 #define LIBREMAPPER_SELECT_CRS_DIALOG_H
 
 #include <QDialog>
-#include <QFlags>
 #include <QObject>
 #include <QString>
 
