@@ -111,9 +111,9 @@ protected:
 	MapCoordF click_pos_map;
 };
 
-#endif // QT_PRINTSUPPORT_LIB
-
 
 }  // namespace LibreMapper
+
+#endif // QT_PRINTSUPPORT_LIB
 
 #endif // LIBREMAPPER_PRINT_TOOL_H
