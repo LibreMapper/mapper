@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -173,7 +173,7 @@ public:
 	
 	
 	/**
-	 * Returns the dimension which shall considered when scaling the icon.
+	 * Returns the dimension which shall be considered when scaling the icon.
 	 */
 	qreal dimensionForIcon() const override;
 	
@@ -186,6 +186,9 @@ public:
 	 * Determines the border hints for this line symbol.
 	 */
 	const BorderHints* borderHints() const override;
+	
+	
+	bool containsDashSymbol() const override;
 	
 	
 	/**
@@ -469,4 +472,4 @@ protected:
 
 }  // namespace LibreMapper
 
-#endif
+#endif // LIBREMAPPER_LINE_SYMBOL_H

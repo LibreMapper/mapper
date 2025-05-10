@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -85,12 +85,12 @@ public:
     qreal calculateLargestLineExtent() const override;
 	
 	/**
-	 * Determines the border hints for this line symbol.
+	 * Determines the border hints for this combined symbol.
 	 */
 	const BorderHints* borderHints() const override;
 	
 	
-	// Getters / Setter
+	// Getters / Setters
 	inline int getNumParts() const {return (int)parts.size();}
 	inline void setNumParts(int num) {parts.resize(num, nullptr); private_parts.resize(num, false);}
 	
@@ -103,6 +103,8 @@ public:
 	bool hasRotatableFillPattern() const override;
 	
 	SymbolPropertiesWidget* createPropertiesWidget(SymbolSettingDialog* dialog) override;
+	
+	bool containsDashSymbol() const override;
 	
 protected:
 	void saveImpl(QXmlStreamWriter& xml, const Map& map) const override;
@@ -119,4 +121,4 @@ protected:
 
 }  // namespace LibreMapper
 
-#endif
+#endif // LIBREMAPPER_COMBINED_SYMBOL_H
