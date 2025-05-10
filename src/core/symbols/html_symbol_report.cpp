@@ -186,9 +186,7 @@ private:
 	
 	QString makeSymbolRow(const Symbol& s)
 	{
-		auto label = QString { s.getNumberAsString()
-		                       + QChar::Space
-		                       + QTextDocumentFragment::fromHtml(s.getName()).toPlainText() };
+		auto label = s.getNumberAndPlainTextName();
 		auto extra_text = QString{};
 		if (s.isRotatable())
 			extra_text += QCoreApplication::translate("LibreMapper::SymbolReport", "[X] %1")
