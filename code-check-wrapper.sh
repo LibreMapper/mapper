@@ -59,6 +59,8 @@ for I in \
   map_editor.cpp \
   map_find_feature.cpp \
   map_notes.cpp \
+  map_information.cpp \
+  map_information_dialog.cpp \
   map_printer \
   map_widget.cpp \
   mapper_proxystyle.cpp \

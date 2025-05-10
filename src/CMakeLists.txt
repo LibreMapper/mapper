@@ -53,6 +53,7 @@ set(Mapper_Common_SRCS
   core/map_color.cpp
   core/map_coord.cpp
   core/map_grid.cpp
+  core/map_information.cpp
   core/map_part.cpp
   core/map_printer.cpp
   core/map_view.cpp
@@ -125,6 +126,7 @@ set(Mapper_Common_SRCS
   gui/map/map_editor_activity.cpp
   gui/map/map_find_feature.cpp
   gui/map/map_notes.cpp
+  gui/map/map_information_dialog.cpp
   gui/map/map_widget.cpp
   gui/map/rotate_map_dialog.cpp
   gui/map/stretch_map_dialog.cpp
