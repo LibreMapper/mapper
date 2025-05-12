@@ -1159,7 +1159,8 @@ void DrawPathTool::updateDashPointDrawing()
 		return;
 	
 	// Auto-activate dash points depending on if the selected symbol has a dash symbol.
-	draw_dash_points = editor->activeSymbol()->containsDashSymbol();
+	const auto* symbol = editor->activeSymbol();
+	draw_dash_points = symbol ? symbol->containsDashSymbol() : false;
 	if (dash_points_button)
 		dash_points_button->setChecked(draw_dash_points);
 }
