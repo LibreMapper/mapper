@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -85,7 +85,7 @@ TagsWidget::~TagsWidget() = default;
 // slot
 void TagsWidget::showHelp()
 {
-	Util::showHelp(controller->getWindow(), "tag_editor.html");
+	Util::showHelp(controller->getWindow(), "object_tags.html");
 }
 
 void TagsWidget::setupLastRow()
