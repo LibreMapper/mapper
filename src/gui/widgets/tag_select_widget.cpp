@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2016 Mitchell Krome (OpenOrienteering)
- * Copyright 2017-2019 Kai Pastor (OpenOrienteering)
+ * Copyright 2017-2019, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -40,6 +40,16 @@ namespace LibreMapper {
 
 namespace {
 
+QTableWidgetItem* createPlaceholderItemFor(const QWidget* widget = nullptr)
+{
+	auto* item = new QTableWidgetItem();
+	item->setFlags(Qt::NoItemFlags);
+	item->setBackground(QBrush(QGuiApplication::palette().window()));
+	if (widget)
+		item->setSizeHint(widget->sizeHint());
+	return item;
+}
+
 /// Local wrapper for Util::ToolButton::create() adding the What's This bit.
 QToolButton* createToolButton(const QIcon& icon, const QString& text)
 {
@@ -64,18 +74,20 @@ TagSelectWidget::TagSelectWidget(QWidget* parent)
 	
 	auto* header_view = horizontalHeader();
 	header_view->setSectionsClickable(false);
-	header_view->setSectionResizeMode(0, QHeaderView::Fixed);
+	header_view->setSectionResizeMode(0, QHeaderView::ResizeToContents);
 	header_view->setSectionResizeMode(1, QHeaderView::Stretch);
-	header_view->setSectionResizeMode(2, QHeaderView::Fixed);
+	header_view->setSectionResizeMode(2, QHeaderView::ResizeToContents);
 	header_view->setSectionResizeMode(3, QHeaderView::Stretch);
 	header_view->resizeSections(QHeaderView::ResizeToContents);
-	setMinimumWidth(10
+	setMinimumWidth(150
 	                + header_view->sectionSize(0)
 	                + header_view->sectionSize(1)
 	                + header_view->sectionSize(2)
 	                + header_view->sectionSize(3));
 	
 	addRowItems(0);
+	resizeColumnToContents(0);
+	resizeColumnToContents(2);
 
 	connect(this, &QTableWidget::cellChanged, this, &TagSelectWidget::onCellChanged);
 	connect(this, &QTableWidget::currentCellChanged, this, &TagSelectWidget::updateRowButtons, Qt::QueuedConnection);
@@ -141,32 +153,28 @@ void TagSelectWidget::showEvent(QShowEvent* event)
 
 void TagSelectWidget::addRowItems(int row)
 {
-	auto* item = new QTableWidgetItem();
-	setItem(row, 1, item);
-	item = new QTableWidgetItem();
-	setItem(row, 3, item);
-
+	auto* logical_op = new QComboBox();
+	auto and_label = QString { QLatin1String("  ") + ObjectQuery::labelFor(ObjectQuery::OperatorAnd) };
+	logical_op->addItem(and_label, QVariant::fromValue(ObjectQuery::OperatorAnd));
+	logical_op->addItem(ObjectQuery::labelFor(ObjectQuery::OperatorOr), QVariant::fromValue(ObjectQuery::OperatorOr));
+	if (row > 0)
+	{
+		setCellWidget(row, 0, logical_op);
+	}
+	else
+	{
+		setItem(row, 0, createPlaceholderItemFor(logical_op));
+		delete logical_op;
+	}
+	
+	setItem(row, 1, new QTableWidgetItem());  // key
+	
 	auto* compare_op = new QComboBox();
 	for (auto op : { ObjectQuery::OperatorIs, ObjectQuery::OperatorIsNot, ObjectQuery::OperatorContains })
 		compare_op->addItem(ObjectQuery::labelFor(op), QVariant::fromValue(op));
 	setCellWidget(row, 2, compare_op);
-
-	if (row == 0)
-	{
-		// The first row doesn't use a logical operator
-		item = new QTableWidgetItem();
-		item->setFlags(Qt::NoItemFlags);
-		item->setBackground(QBrush(QGuiApplication::palette().window()));
-		setItem(row, 0, item);
-	}
-	else
-	{
-		auto* logical_op = new QComboBox();
-		auto and_label = QString { QLatin1String("  ") + ObjectQuery::labelFor(ObjectQuery::OperatorAnd) };
-		logical_op->addItem(and_label, QVariant::fromValue(ObjectQuery::OperatorAnd));
-		logical_op->addItem(ObjectQuery::labelFor(ObjectQuery::OperatorOr), QVariant::fromValue(ObjectQuery::OperatorOr));
-		setCellWidget(row, 0, logical_op);
-	}
+	
+	setItem(row, 3, new QTableWidgetItem());  // value
 }
 
 
@@ -231,11 +239,8 @@ void TagSelectWidget::deleteRow()
 	// If we delete first row, need to fix logical operator
 	if (row == 0)
 	{
+		setItem(row, 0, createPlaceholderItemFor(cellWidget(row, 0)));
 		removeCellWidget(row, 0);
-		auto* item = new QTableWidgetItem();
-		item->setFlags(Qt::NoItemFlags);
-		item->setBackground(QBrush(QGuiApplication::palette().window()));
-		setItem(row, 0, item);
 	}
 }
 
