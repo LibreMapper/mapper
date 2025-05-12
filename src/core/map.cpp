@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -961,7 +961,6 @@ void Map::deleteSelectedObjects()
 			if (index >= 0)
 			{
 				undo_step->addObject(index, *obj);
-				part->releaseObject(index);
 			}
 			else
 			{
@@ -969,8 +968,7 @@ void Map::deleteSelectedObjects()
 			}
 		}
 		
-		setObjectsDirty();
-		clearObjectSelection(true);
+		undo_step->removeContainedObjects(true);
 		push(undo_step);
 	}
 }
