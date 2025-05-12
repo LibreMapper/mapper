@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2015 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -15,7 +15,6 @@
 #include <QDialog>
 #include <QObject>
 #include <QScopedPointer>
-#include <QString>
 
 #include "core/map_coord.h"
 #include "tools/tool.h"
@@ -42,7 +41,7 @@ class MapWidget;
 
 
 /**
- * A GeoreferencingDialog allows the user to adjust the georeferencing properties
+ * The GeoreferencingDialog allows the user to adjust the georeferencing properties
  * of a map.
  */
 class GeoreferencingDialog : public QDialog
@@ -51,7 +50,7 @@ Q_OBJECT
 public:
 	/**
 	 * Constructs a new georeferencing dialog for the map handled by the given 
-	 * controller. The optional parameter initial allows to override the current 
+	 * controller. The optional parameter initially allows to override the current 
 	 * properties of the map's georeferencing. The parameter
 	 * allow_no_georeferencing determines if the okay button can
 	 * be clicked while "- none -" is selected.
@@ -342,4 +341,4 @@ private:
 
 }  // namespace LibreMapper
 
-#endif
+#endif // OPENORIENTEERING_GEOREFERENCING_DIALOG_H
