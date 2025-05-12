@@ -12,10 +12,10 @@
 #include <QDialog>
 #include <QObject>
 #include <QSize>
+#include <QString>
 
 class QWidget;
 
-class QString;
 class QTextBrowser;
 class QUrl;
 
