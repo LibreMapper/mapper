@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -410,6 +410,24 @@ bool CombinedSymbol::containsDashSymbol() const
 {
 	return std::any_of(begin(parts), end(parts), [](auto const* part) {
 		return part && part->containsDashSymbol();
+	});
+}
+
+
+// override
+int CombinedSymbol::getMinimumArea() const
+{
+	return std::accumulate(parts.begin(), parts.end(), 0, [](int acc, auto part) {
+		return part ? qMax(acc, part->getMinimumArea()) : acc;
+	});
+}
+
+
+// override
+int CombinedSymbol::getMinimumLength() const
+{
+	return std::accumulate(parts.begin(), parts.end(), 0, [](int acc, auto part) {
+		return part ? qMax(acc, part->getMinimumLength()) : acc;
 	});
 }
 
