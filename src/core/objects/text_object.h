@@ -1,23 +1,22 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2019 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
 
 
-#ifndef LIBREMAPPER_OBJECT_TEXT_H
-#define LIBREMAPPER_OBJECT_TEXT_H
+#ifndef LIBREMAPPER_TEXT_OBJECT_H
+#define LIBREMAPPER_TEXT_OBJECT_H
 
-#include <memory>
 #include <vector>
 
 #include <QtGlobal>
-#include <QString>
 #include <QFontMetricsF>
 #include <QPointF>
 #include <QRectF>
+#include <QString>
 #include <QTransform>
 
 #include "core/map_coord.h"
@@ -382,4 +381,4 @@ const TextObjectLineInfo*TextObject::getLineInfo(int i) const
 
 }  // namespace LibreMapper
 
-#endif
+#endif // LIBREMAPPER_TEXT_OBJECT_H
