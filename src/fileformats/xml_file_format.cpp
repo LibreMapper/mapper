@@ -2,7 +2,7 @@
  *
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -14,8 +14,8 @@
 #include <cstddef>
 #include <functional>
 #include <memory>
-#include <vector>
 #include <utility>
+#include <vector>
 
 #include <QtGlobal>
 #include <QByteArray>
@@ -1070,7 +1070,7 @@ void XMLFileImporter::importView()
 		else if (xml.name() == literal::map_view)
 		{
 			if (view)
-				view->load(xml);
+				view->load(xml, version);
 			else
 				xml.skipCurrentElement();
 		}
