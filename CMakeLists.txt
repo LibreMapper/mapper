@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Copyright 2012, 2013, 2014 Thomas Schöps (OpenOrienteering)
-# Copyright 2012-2024 Kai Pastor (OpenOrienteering)
+# Copyright 2012-2025 Kai Pastor (OpenOrienteering)
 #
 # This file is part of LibreMapper.
  
@@ -23,7 +23,7 @@ option(CMAKE_FIND_PACKAGE_PREFER_CONFIG "Lookup package config files before usin
 # Project declaration
 
 project(Mapper VERSION 1.0.0 LANGUAGES CXX C)
-set(Mapper_COPYRIGHT "(C) 2024 LibreMapper developers")
+set(Mapper_COPYRIGHT "(C) 2025 LibreMapper developers")
 
 math(EXPR Mapper_VERSION_CODE "${Mapper_VERSION_MAJOR} * 10000 + ${Mapper_VERSION_MINOR} * 100 + ${Mapper_VERSION_PATCH} * 2 + ${CMAKE_SIZEOF_VOID_P} / 4 - 1")
 
