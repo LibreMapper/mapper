@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -11,8 +11,8 @@
 #define LIBREMAPPER_OBJECT_H
 
 #include <limits>
-#include <vector>
 #include <utility>
+#include <vector>
 
 #include <QtGlobal>
 #include <QRectF>
@@ -86,7 +86,7 @@ public:
 	
 protected:
 	/**
-	 * Constructs a Object, initialized from the given prototype.
+	 * Constructs an Object, initialized from the given prototype.
 	 * 
 	 * Note that the object is NOT added to a map, and consequently,
 	 * the map pointer is initialized to nullptr.
@@ -159,7 +159,7 @@ public:
 	/**
 	 * Sets the object's rotation (in radians).
 	 * 
-	 * The interpretation of this value depends the object's symbol.
+	 * The interpretation of this value depends on the object's symbol.
 	 * It may have no effect at all.
 	 * The value must not be NaN.
 	 */
@@ -253,11 +253,11 @@ public:
 	
 	/** Sets the object output's dirty state. */
 	void setOutputDirty(bool dirty = true);
-	/** Returns if the object's output must be regenerated. */
+	/** Returns true if the object's output must be regenerated. */
 	bool isOutputDirty() const;
 	
 	/**
-	 * Changes the object's symbol, returns if successful.
+	 * Changes the object's symbol, returns true if successful.
 	 * 
 	 * Some conversions are impossible, for example point to line. Normally,
 	 * this method checks if the types of the old and the new symbol are
@@ -884,6 +884,35 @@ public:
 	/** Called by Object::load() */
 	void recalculateParts();
 	
+	/** Returns the 'paper' length of path objects in mm. */
+	double getPaperLength() const;
+	
+	/** Returns the 'real' length of path objects in m. */
+	double getRealLength() const;
+	
+	/**
+	 * Calculates the 'paper' area of area objects in sq mm.
+	 * 
+	 * This is the area of the first part (outline) minus the area of other
+	 * parts (holes). The calculation is agnostic to overlap of parts.
+	 */
+	double calculatePaperArea() const;
+	
+	/**
+	 * Calculates 'real' area of area objects in sq m.
+	 * 
+	 * This is the area of the first part (outline) minus the area of other
+	 * parts (holes). The calculation is agnostic to overlap of parts.
+	 */
+	double calcuateRealArea() const;
+	
+	/** Returns true if the object is smaller than the minimum area required by its symbol. */
+	bool isAreaTooSmall() const;
+	
+	/** Returns true if the object is shorter than the minimum length required by its symbol. */
+	bool isLineTooShort() const;
+	
+	
 protected:
 	/**
 	 * Adjusts the end index of the given part and the start/end indexes of the following parts.
@@ -1286,4 +1315,4 @@ constexpr ObjectPathCoord::operator bool() const
 }  // namespace LibreMapper
 
 
-#endif
+#endif // LIBREMAPPER_OBJECT_H
