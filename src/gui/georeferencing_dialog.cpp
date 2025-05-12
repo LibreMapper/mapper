@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2024, 2025 Kai Pastor (OpenOrienteering)
  * Copyright 2024 Libor Pecháček
  *
  * This file is part of LibreMapper.
@@ -12,7 +12,6 @@
 
 #include <cmath>
 #include <functional>
-#include <vector>
 
 #include <Qt>
 #include <QtGlobal>
@@ -228,7 +227,6 @@ GeoreferencingDialog::GeoreferencingDialog(
 	  Qt::Horizontal);
 	reset_button = buttons_box->button(QDialogButtonBox::Reset);
 	reset_button->setEnabled(initial);
-	auto help_button = buttons_box->button(QDialogButtonBox::Help);
 	
 	auto edit_layout = new QFormLayout();
 	
@@ -242,7 +240,6 @@ GeoreferencingDialog::GeoreferencingDialog(
 	edit_layout->addRow(tr("Map coordinates:"), map_ref_layout);
 	edit_layout->addRow(projected_ref_label, projected_ref_layout);
 	edit_layout->addRow(tr("Geographic coordinates:"), geographic_ref_layout);
-	edit_layout->addRow(show_refpoint_label, link_label);
 	edit_layout->addRow(show_refpoint_label, link_label);
 	edit_layout->addRow(tr("On CRS changes, keep:"), keep_projected_radio);
 	edit_layout->addRow({}, keep_geographic_radio);
@@ -292,7 +289,7 @@ GeoreferencingDialog::GeoreferencingDialog(
 	connect(buttons_box, &QDialogButtonBox::accepted, this, &GeoreferencingDialog::accept);
 	connect(buttons_box, &QDialogButtonBox::rejected, this, &GeoreferencingDialog::reject);
 	connect(reset_button, &QPushButton::clicked, this, &GeoreferencingDialog::reset);
-	connect(help_button, &QPushButton::clicked, this, &GeoreferencingDialog::showHelp);
+	connect(buttons_box, &QDialogButtonBox::helpRequested, this, &GeoreferencingDialog::showHelp);
 	
 	connect(georef.data(), &Georeferencing::stateChanged, this, &GeoreferencingDialog::georefStateChanged);
 	connect(georef.data(), &Georeferencing::transformationChanged, this, &GeoreferencingDialog::transformationChanged);
