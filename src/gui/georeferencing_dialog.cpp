@@ -40,6 +40,7 @@
 #include <QSignalBlocker>
 #include <QSize>
 #include <QSpacerItem>
+#include <QStringList>
 #include <QStringRef>
 #include <QTimer>
 #include <QUrl>
@@ -447,23 +448,28 @@ void GeoreferencingDialog::requestDeclination(bool no_confirm)
 	query.addQueryItem(QString::fromLatin1("startMonth"), QString::number(today.month()));
 	query.addQueryItem(QString::fromLatin1("startDay"), QString::number(today.day()));
 	
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS) || defined(Q_OS_ANDROID) || !defined(QT_NETWORK_LIB)
-	// No QtNetwork or no OpenSSL: open result in system browser.
-	query.addQueryItem(QString::fromLatin1("resultFormat"), QString::fromLatin1("html"));
-	service_url.setQuery(query);
-	QDesktopServices::openUrl(service_url);
-#else
-	// Use result directly
-	query.addQueryItem(QString::fromLatin1("resultFormat"), QString::fromLatin1("xml"));
-	service_url.setQuery(query);
-	
-	declination_query_in_progress = true;
-	updateDeclinationButton();
-	
-	auto network = new QNetworkAccessManager(this);
-	connect(network, &QNetworkAccessManager::finished, this, &GeoreferencingDialog::declinationReplyFinished);
-	network->get(QNetworkRequest(service_url));
+#if defined(QT_NETWORK_LIB)
+	auto* network = new QNetworkAccessManager(this);
+	if (network->supportedSchemes().contains(QLatin1String("https")))
+	{
+		// Use result directly
+		query.addQueryItem(QString::fromLatin1("format"), QString::fromLatin1("xml"));
+		service_url.setQuery(query);
+		
+		declination_query_in_progress = true;
+		updateDeclinationButton();
+		
+		connect(network, &QNetworkAccessManager::finished, this, &GeoreferencingDialog::declinationReplyFinished);
+		network->get(QNetworkRequest(service_url));
+	}
+	else
 #endif
+	{
+		// No QtNetwork or no OpenSSL: open result in system browser.
+		query.addQueryItem(QString::fromLatin1("format"), QString::fromLatin1("html"));
+		service_url.setQuery(query);
+		QDesktopServices::openUrl(service_url);
+	}
 }
 
 void GeoreferencingDialog::setMapRefPoint(const MapCoord& coords)
