@@ -1,13 +1,13 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012-2014 Pete Curtis (OpenOrienteering)
- * Copyright 2012-2019 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_FILE_FORMAT_XML_H
-#define LIBREMAPPER_FILE_FORMAT_XML_H
+#ifndef LIBREMAPPER_XML_FILE_FORMAT_H
+#define LIBREMAPPER_XML_FILE_FORMAT_H
 
 #include <memory>
 
@@ -69,7 +69,7 @@ public:
 
 /**
   
-\page file_format OpenOrienteering Mapper XML File Format Documentation
+\page file_format LibreMapper Mapper XML File Format Documentation
 
 \date 2018-10-01
 \author Kai Pastor
@@ -116,4 +116,4 @@ public:
 
 */
 
-#endif // LIBREMAPPER_FILE_FORMAT_XML_H
+#endif // LIBREMAPPER_XML_FILE_FORMAT_H
