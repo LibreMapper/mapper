@@ -13,6 +13,8 @@
 
 #include <QString>
 
+#include <memory>
+
 #include "fileformats/file_format.h"
 
 namespace LibreMapper {
