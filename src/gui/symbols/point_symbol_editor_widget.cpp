@@ -12,9 +12,9 @@
 #include <algorithm>
 #include <limits>
 // IWYU pragma: no_include <memory>
+// IWYU pragma: no_include <vector>
 
 #include <Qt>
-#include <QAbstractButton>
 #include <QAbstractItemView>
 #include <QCheckBox>
 #include <QComboBox>
@@ -65,16 +65,15 @@
 
 namespace LibreMapper {
 
-PointSymbolEditorWidget::PointSymbolEditorWidget(MapEditorController* controller, PointSymbol* symbol, qreal offset_y, bool permanent_preview, QWidget* parent)
+PointSymbolEditorWidget::PointSymbolEditorWidget(MapEditorController* controller, PointSymbol* symbol, SymbolRole role, qreal offset_y, QWidget* parent)
 : QWidget(parent)
 , symbol(symbol)
 , object_origin_coord(0, offset_y)
 , offset_y(offset_y)
+, map(controller->getMap())
 , controller(controller)
-, permanent_preview(permanent_preview)
+, permanent_preview(role == PrimarySymbol)
 {
-	map = controller->getMap();
-	
 	if (permanent_preview)
 	{
 		midpoint_object = new PointObject(symbol);
@@ -84,6 +83,7 @@ PointSymbolEditorWidget::PointSymbolEditorWidget(MapEditorController* controller
 	
 	oriented_to_north = new QCheckBox(tr("Always oriented to north (not rotatable)"));
 	oriented_to_north->setChecked(!symbol->isRotatable());
+	oriented_to_north->setVisible(role != AreaSymbolElement);
 	
 	auto* elements_label = Util::Headline::create(tr("Elements"));
 	element_list = new QListWidget();

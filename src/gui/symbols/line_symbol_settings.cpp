@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2019, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -315,7 +315,7 @@ LineSymbolSettings::LineSymbolSettings(LineSymbol* symbol, SymbolSettingDialog* 
 	symbol->ensurePointSymbols(tr("Start symbol"), tr("Mid symbol"), tr("End symbol"), tr("Dash symbol"));
 	for (auto point_symbol : { symbol->getStartSymbol(), symbol->getMidSymbol(), symbol->getEndSymbol(), symbol->getDashSymbol() })
 	{
-		point_symbol_editor = new PointSymbolEditorWidget(controller, point_symbol, 16);
+		point_symbol_editor = new PointSymbolEditorWidget(controller, point_symbol, PointSymbolEditorWidget::LineSymbolElement, 16);
 		addPropertiesGroup(point_symbol->getName(), point_symbol_editor);
 		connect(point_symbol_editor, &PointSymbolEditorWidget::symbolEdited, this, &LineSymbolSettings::pointSymbolEdited);
 	}
@@ -806,7 +806,7 @@ void LineSymbolSettings::reset(Symbol* symbol)
 	this->symbol->ensurePointSymbols(tr("Start symbol"), tr("Mid symbol"), tr("End symbol"), tr("Dash symbol"));
 	for (auto point_symbol : { this->symbol->getStartSymbol(), this->symbol->getMidSymbol(), this->symbol->getEndSymbol(), this->symbol->getDashSymbol() })
 	{
-		point_symbol_editor = new PointSymbolEditorWidget(controller, point_symbol, 16);
+		point_symbol_editor = new PointSymbolEditorWidget(controller, point_symbol, PointSymbolEditorWidget::LineSymbolElement, 16);
 		connect(point_symbol_editor, &PointSymbolEditorWidget::symbolEdited, this, &LineSymbolSettings::pointSymbolEdited);
 		
 		int index = indexOfPropertiesGroup(point_symbol->getName()); // existing symbol editor

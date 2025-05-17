@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2018, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -37,7 +37,7 @@ PointSymbolSettings::PointSymbolSettings(PointSymbol* symbol, SymbolSettingDialo
 : SymbolPropertiesWidget(symbol, dialog), 
   symbol(symbol)
 {
-	symbol_editor = new PointSymbolEditorWidget(dialog->getPreviewController(), symbol, 0, true);
+	symbol_editor = new PointSymbolEditorWidget(dialog->getPreviewController(), symbol);
 	connect(symbol_editor, &PointSymbolEditorWidget::symbolEdited, this, &SymbolPropertiesWidget::propertiesModified );
 	
 	layout = new QVBoxLayout();
@@ -69,7 +69,7 @@ void PointSymbolSettings::reset(Symbol* symbol)
 	layout->removeWidget(symbol_editor);
 	delete(symbol_editor);
 	
-	symbol_editor = new PointSymbolEditorWidget(dialog->getPreviewController(), this->symbol, 0, true);
+	symbol_editor = new PointSymbolEditorWidget(dialog->getPreviewController(), this->symbol);
 	connect(symbol_editor, &PointSymbolEditorWidget::symbolEdited, this, &SymbolPropertiesWidget::propertiesModified );
 	layout->addWidget(symbol_editor);
 }
