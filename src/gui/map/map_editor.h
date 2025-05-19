@@ -298,6 +298,8 @@ public slots:
 	void zoomIn();
 	/** Zooms out in the current map widget. */
 	void zoomOut();
+	/** Activates the box zoom tool. */
+	void boxZoom(bool checked);
 	/** Shows the dialog to set a custom zoom factor in the current map widget. */
 	void setCustomZoomFactorClicked();
 	
@@ -715,6 +717,7 @@ private:
 	QAction* follow_position_act = {};
 	QAction* zoom_in_act = {};
 	QAction* zoom_out_act = {};
+	QAction* box_zoom_act = {};
 	QAction* show_all_act = {};
 	QAction* fullscreen_act = {};
 	QAction* custom_zoom_act = {};
