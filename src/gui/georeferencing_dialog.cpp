@@ -422,7 +422,6 @@ void GeoreferencingDialog::requestDeclination(bool no_confirm)
 	if (georef->getState() != Georeferencing::Geospatial)
 		return;
 	
-	/// \todo Move URL (template) to settings.
 	QString user_url(QString::fromLatin1("https://www.ngdc.noaa.gov/geomag-web/"));
 	QUrl service_url(user_url + QLatin1String("calculators/calculateDeclination"));
 	LatLon latlon(georef->getGeographicRefPoint());
@@ -452,7 +451,7 @@ void GeoreferencingDialog::requestDeclination(bool no_confirm)
 	if (network->supportedSchemes().contains(QLatin1String("https")))
 	{
 		// Use result directly
-		query.addQueryItem(QString::fromLatin1("format"), QString::fromLatin1("xml"));
+		query.addQueryItem(QString::fromLatin1("resultFormat"), QString::fromLatin1("xml"));
 		service_url.setQuery(query);
 		
 		declination_query_in_progress = true;
@@ -465,7 +464,7 @@ void GeoreferencingDialog::requestDeclination(bool no_confirm)
 #endif
 	{
 		// No QtNetwork or no OpenSSL: open result in system browser.
-		query.addQueryItem(QString::fromLatin1("format"), QString::fromLatin1("html"));
+		query.addQueryItem(QString::fromLatin1("resultFormat"), QString::fromLatin1("html"));
 		service_url.setQuery(query);
 		QDesktopServices::openUrl(service_url);
 	}
