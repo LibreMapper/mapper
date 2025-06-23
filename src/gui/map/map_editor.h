@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013, 2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -277,7 +277,7 @@ public slots:
 	/** Copies the selected object(s). */
 	void copy();
 	/** Pastes the object(s) from the clipboard. */
-	void paste();
+	void paste(int paste_at_center);
 	/** Empties the undo / redo history to save space. */
 	void clearUndoRedoHistory();
 	
@@ -705,6 +705,7 @@ private:
 	QAction* cut_act = {};
 	QAction* copy_act = {};
 	QAction* paste_act = {};
+	QAction* paste_original_act = {};
 	QAction* delete_act = {};
 	QAction* select_all_act = {};
 	QAction* select_nothing_act = {};
