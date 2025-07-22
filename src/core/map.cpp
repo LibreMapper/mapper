@@ -141,7 +141,7 @@ void Map::MapColorSet::insert(int pos, MapColor* color)
 	else
 	{
 		// Prefer ids starting at one.
-		auto free_spot = std::find(begin(ids) + 1, end(ids), nullptr);
+		auto free_spot = !ids.empty() ? std::find(begin(ids) + 1, end(ids), nullptr) : end(ids);
 		if (free_spot == end(ids))
 		{
 			color->setId(ids.size());
