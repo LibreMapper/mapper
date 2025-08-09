@@ -1024,7 +1024,9 @@ void OcdFileImport::importView(const QString& param_string)
 	OcdParameterStreamReader parameters(param_string);
 	
 	bool zoom_ok = false;
+	bool map_opacity_ok = false;
 	double zoom=1.0, offset_x=0.0, offset_y=0.0;
+	double map_opacity = 100.0;
 	
 	while (parameters.readNext())
 	{
@@ -1040,12 +1042,19 @@ void OcdFileImport::importView(const QString& param_string)
 		case 'z':
 			zoom = param_value.toDouble(&zoom_ok);
 			break;
+		case 'm':
+			map_opacity = param_value.toDouble(&map_opacity_ok);
+			break;
 		case 'h':
 			map->setAreaHatchingEnabled(param_value.toInt() != 0);
 			break;
 		case 'k':
 			map->setBaselineViewEnabled(param_value.toInt() != 0);
 			break;
+		case 'v':
+			// We don't consider the draft mode settings (2 & 3). Just the 
+			// Normal mode and Spot Colors.
+			view->setOverprintingSimulationEnabled(param_value.toInt() == 1);
 		default:
 			; // nothing
 		}
@@ -1057,6 +1066,12 @@ void OcdFileImport::importView(const QString& param_string)
 		if (zoom_ok)
 		{
 			view->setZoom(zoom);
+		}
+		if (map_opacity_ok)
+		{
+			auto vis = view->getMapVisibility();
+			vis.opacity = map_opacity/100;
+			view->setMapVisibility(vis);
 		}
 	}
 }
