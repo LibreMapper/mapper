@@ -545,12 +545,19 @@ QString stringForViewPar(const MapView& view, const MapCoord& area_offset, quint
 	{
 		const auto center = view.center() - area_offset;
 		const auto hatched = view.getMap()->isAreaHatchingEnabled() ? '1' : '0';
+
+		auto view_mode = '0';
+		if (view.isOverprintingSimulationEnabled()) 
+			view_mode = '1';
+		else if (view.getMapVisibility().opacity < 1)
+			view_mode = '2';
+		
 		out << qSetRealNumberPrecision(6)
 		    << "\tx" << center.x()
 		    << "\ty" << -center.y()
 		    << "\tz" << view.getZoom()
-		    << "\tv0"
-		    << "\tm50"
+		    << "\tv" << view_mode
+		    << "\tm" << view.getMapVisibility().opacity * 100
 		    << "\tt50"
 		    << "\tb50"
 		    << "\tc50"
