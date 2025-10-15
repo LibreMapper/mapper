@@ -446,6 +446,8 @@ public slots:
 	void rotatePatternClicked();
 	/** Activates the scale tool */
 	void scaleClicked();
+	/** Enlarges areas and lines to their minimum size */
+	void enlargeClicked();
 	/** Shows or hides the MeasureWidget */
 	void measureClicked(bool checked);
 	/** Calculates the union of selected same-symbol area objects */
@@ -795,6 +797,7 @@ private:
 	QAction* rotate_act = {};
 	QAction* rotate_pattern_act = {};
 	QAction* scale_act = {};
+	QAction* enlarge_act = {};
 	QAction* measure_act = {};
 	EditorDockWidget* measure_dock_widget;
 	QAction* boolean_union_act = {};
