@@ -2077,23 +2077,18 @@ void Map::removePart(std::size_t index)
 {
 	Q_ASSERT(index < parts.size());
 	Q_ASSERT(parts.size() > 1);
-	
-	if (current_part_index == index)
-		// First switch to another part when removing the current part
-		setCurrentPartIndex((index == parts.size() - 1) ? (parts.size() - 2) : (index + 1));
-	
+
+	// Adjust the active part selection so that it remains valid after the part removal
+	if (current_part_index > 0 && (current_part_index > index || current_part_index == (parts.size() - 1)))
+		setCurrentPartIndex(current_part_index - 1);
+
+	// Perform the actual object and part removal
 	MapPart* part = parts[index];
-	
-	// FIXME: This loop should move to MapPart.
+
 	while(part->getNumObjects())
 		part->deleteObject(0);
-	
 	parts.erase(parts.begin() + index);
-	if (current_part_index >= index)
-		setCurrentPartIndex((index == parts.size()) ? (parts.size() - 1) : index);
-	
 	emit mapPartDeleted(index, part);
-	
 	delete part;
 	
 	setOtherDirty();
