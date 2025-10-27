@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -952,8 +952,12 @@ void TemplateListWidget::changeGeorefClicked()
 	auto* templ = currentTemplate();
 	if (templ && templ->canChangeTemplateGeoreferenced())
 	{
-		auto new_value = !templ->isTemplateGeoreferenced();
-		if (new_value)
+		if (!templ->trySetTemplateGeoreferenced(!templ->isTemplateGeoreferenced(), this))
+		{
+			QMessageBox::warning(this, tr("Error"), tr("Cannot change the georeferencing state."));
+		}
+		georef_action->setChecked(templ->isTemplateGeoreferenced());
+		if (templ->isTemplateGeoreferenced())
 		{
 			// Properly tear down positioning activities
 			if (move_by_hand_action->isChecked())
@@ -962,11 +966,6 @@ void TemplateListWidget::changeGeorefClicked()
 				adjust_button->click();
 			if (position_action->isChecked())
 				position_action->trigger();
-		}
-		if (!templ->trySetTemplateGeoreferenced(new_value, this))
-		{
-			QMessageBox::warning(this, tr("Error"), tr("Cannot change the georeferencing state."));
-			georef_action->setChecked(templ->isTemplateGeoreferenced());
 		}
 	}
 }
