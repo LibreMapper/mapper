@@ -37,10 +37,10 @@ target_compile_definitions(mapper-gdal PRIVATE
 
 target_compile_definitions(mapper-gdal INTERFACE MAPPER_USE_GDAL)
 
-target_include_directories(mapper-gdal SYSTEM PRIVATE "${GDAL_INCLUDE_DIR}")
+target_include_directories(mapper-gdal SYSTEM PRIVATE GDAL::GDAL)
 target_include_directories(mapper-gdal PRIVATE "${PROJECT_SOURCE_DIR}/src")
 
-target_link_libraries(mapper-gdal "${GDAL_LIBRARY}" Qt::Core Qt::Gui Qt::Widgets Mapper_Common)
+target_link_libraries(mapper-gdal GDAL::GDAL Qt::Core Qt::Gui Qt::Widgets Mapper_Common)
 
 set_target_properties(mapper-gdal PROPERTIES PREFIX "")
 
@@ -57,6 +57,6 @@ add_custom_command(OUTPUT "${PROJECT_BINARY_DIR}/gdal/mapper-osmconf.ini"
 # Utility to dump GDAL format information
 
 add_executable(mapper-gdal-info mapper_gdal_info.cpp)
-target_include_directories(mapper-gdal-info SYSTEM PRIVATE "${GDAL_INCLUDE_DIR}")
-target_link_libraries(mapper-gdal-info "${GDAL_LIBRARY}")
+target_include_directories(mapper-gdal-info SYSTEM PRIVATE GDAL::GDAL)
+target_link_libraries(mapper-gdal-info GDAL::GDAL)
 
