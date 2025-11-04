@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -1836,6 +1836,14 @@ void MapEditorController::exportVector()
 void MapEditorController::printClicked(int task)
 {
 #ifdef QT_PRINTSUPPORT_LIB
+	if (editing_in_progress)
+	{
+		QMessageBox::warning(window,
+		                     tr("Editing in progress"),
+		                     tr("The map is currently being edited. "
+		                        "Please finish the edit operation first.") );
+		return;
+	}
 	if (!print_dock_widget)
 	{
 		print_dock_widget = new EditorDockWidget(QString{}, nullptr, this, window);
