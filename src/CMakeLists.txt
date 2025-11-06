@@ -355,7 +355,7 @@ add_custom_target(Mapper_Android SOURCES
 # Workaround Qt private include dir issue
 # Cf. https://bugreports.qt.io/browse/QTBUG-37417
 
-set(PRIVATE_MODULES Core Gui)
+set(PRIVATE_MODULES Core Gui Widgets)
 if(WIN32)
 	list(APPEND PRIVATE_MODULES PrintSupport)
 endif()
@@ -366,6 +366,7 @@ foreach(module ${PRIVATE_MODULES})
 		foreach(base_dir ${${qt6_module}_INCLUDE_DIRS})
 			if("${base_dir}" MATCHES "/${qt_module}\$")
 				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}/${qt_module}")
+				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}")
 			endif()
 		endforeach()
 	endif()

@@ -59,13 +59,14 @@ endforeach()
 # Workaround Qt private include dir issue
 # Cf. https://bugreports.qt.io/browse/QTBUG-37417
 
-foreach(module Core Gui PrintSupport)
+foreach(module Core Gui PrintSupport Widgets)
 	set(qt_module Qt${module})
 	set(qt6_module Qt6${module})
 	if("${${qt6_module}_PRIVATE_INCLUDE_DIRS}" STREQUAL "")
 		foreach(base_dir ${${qt6_module}_INCLUDE_DIRS})
 			if("${base_dir}" MATCHES "/${qt_module}\$")
 				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}/${qt_module}")
+				list(APPEND ${qt6_module}_PRIVATE_INCLUDE_DIRS "${base_dir}/${${qt6_module}_VERSION}")
 			endif()
 		endforeach()
 	endif()
