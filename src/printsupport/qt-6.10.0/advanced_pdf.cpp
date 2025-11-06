@@ -3,7 +3,8 @@
  * This file is part of LibreMapper.
  *
  * Changes:
- * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2015 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2025-11-06 Libor Pecháček <lpechacek@gmx.com>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -12,6 +13,7 @@
  * - Change of the PDF Producer property
  * - Use of DeviceCMYK color space in PDF output
  * - Distinct paint engine type
+ * - Skip Qt resource initialization
  */
 // Copyright (C) 2016 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
@@ -22,6 +24,7 @@
 
 #include "qplatformdefs.h"
 
+#include <private/qcmyk_p.h>
 #include <private/qfont_p.h>
 #include <private/qmath_p.h>
 #include <private/qpainter_p.h>
@@ -34,7 +37,12 @@
 #include <qimagewriter.h>
 #include <qnumeric.h>
 #include <qtemporaryfile.h>
+#include <qtimezone.h>
 #include <quuid.h>
+#include <qxmlstream.h>
+
+#include <cstdio>
+#include <map>
 
 #ifndef QT_NO_COMPRESS
 #include <zlib.h>
@@ -50,16 +58,11 @@ static const bool do_compress = true;
 // Can't use it though, as gs generates completely wrong images if this is true.
 static const bool interpolateImages = false;
 
-static void initResources()
-{
-//    Q_INIT_RESOURCE(advanced_pdf);
-}
-
 QT_BEGIN_NAMESPACE
 
 using namespace Qt::StringLiterals;
 
-inline QPaintEngine::PaintEngineFeatures qt_pdf_decide_features()
+constexpr QPaintEngine::PaintEngineFeatures qt_pdf_decide_features()
 {
     QPaintEngine::PaintEngineFeatures f = QPaintEngine::AllFeatures;
     f &= ~(QPaintEngine::PorterDuff
@@ -285,13 +288,6 @@ namespace AdvancedPdf {
         dev->open(QIODevice::ReadWrite | QIODevice::Truncate);
     }
 
-    void ByteStream::constructor_helper(QByteArray *ba)
-    {
-        delete dev;
-        dev = new QBuffer(ba);
-        dev->open(QIODevice::ReadWrite);
-    }
-
     void ByteStream::prepareBuffer()
     {
         Q_ASSERT(!dev->isSequential());
@@ -300,16 +296,17 @@ namespace AdvancedPdf {
                 && size > maxMemorySize()) {
             // Switch to file backing.
             QTemporaryFile *newFile = new QTemporaryFile;
-            newFile->open();
-            dev->reset();
-            while (!dev->atEnd()) {
-                QByteArray buf = dev->read(chunkSize());
-                newFile->write(buf);
+            if (newFile->open()) {
+                dev->reset();
+                while (!dev->atEnd()) {
+                    QByteArray buf = dev->read(chunkSize());
+                    newFile->write(buf);
+                }
+                delete dev;
+                dev = newFile;
+                ba.clear();
+                fileBackingActive = true;
             }
-            delete dev;
-            dev = newFile;
-            ba.clear();
-            fileBackingActive = true;
         }
         if (dev->pos() != size) {
             dev->seek(size);
@@ -1055,9 +1052,16 @@ void AdvancedPdfEngine::drawTextItem(const QPointF &p, const QTextItem &textItem
     *d->currentPage << "Q\n";
 }
 
+// Used by QtWebKit
 void AdvancedPdfEngine::drawHyperlink(const QRectF &r, const QUrl &url)
 {
     Q_D(AdvancedPdfEngine);
+
+    // PDF/X-4 (§ 6.17) does not allow annotations that don't lie
+    // outside the BleedBox/TrimBox, so don't emit an hyperlink
+    // annotation at all.
+    if (d->pdfVersion == AdvancedPdfEngine::Version_X4)
+        return;
 
     const uint annot = d->addXrefEntry(-1);
     const QByteArray urlascii = url.toEncoded();
@@ -1254,18 +1258,8 @@ void AdvancedPdfEngine::setPen()
     QBrush b = d->pen.brush();
     Q_ASSERT(b.style() == Qt::SolidPattern && b.isOpaque());
 
-    QColor rgba = b.color();
-    if (d->grayscale) {
-        qreal gray = (255-qGray(rgba.rgba()))/255.0;
-        *d->currentPage << 0.0 << 0.0 << 0.0 << gray;
-    } else {
-        *d->currentPage << rgba.cyanF()
-                        << rgba.magentaF()
-                        << rgba.yellowF()
-                        << rgba.blackF();
-    }
+    d->writeColor(AdvancedPdfEnginePrivate::ColorDomain::Stroking, b.color());
     *d->currentPage << "SCN\n";
-
     *d->currentPage << d->pen.widthF() << "w ";
 
     int pdfCapStyle = 0;
@@ -1319,19 +1313,9 @@ void AdvancedPdfEngine::setBrush()
     if (!patternObject && !specifyColor)
         return;
 
-    *d->currentPage << (patternObject ? "/PCSp cs " : "/CSp cs ");
-    if (specifyColor) {
-        QColor rgba = d->brush.color();
-        if (d->grayscale) {
-            qreal gray = (255-qGray(rgba.rgba()))/255.0;
-            *d->currentPage << 0.0 << 0.0 << 0.0 << gray;
-        } else {
-            *d->currentPage << rgba.cyanF()
-                            << rgba.magentaF()
-                            << rgba.yellowF()
-                            << rgba.blackF();
-        }
-    }
+    const auto domain = patternObject ? AdvancedPdfEnginePrivate::ColorDomain::NonStrokingPattern
+                                      : AdvancedPdfEnginePrivate::ColorDomain::NonStroking;
+    d->writeColor(domain, specifyColor ? d->brush.color() : QColor());
     if (patternObject)
         *d->currentPage << "/Pat" << patternObject;
     *d->currentPage << "scn\n";
@@ -1473,12 +1457,11 @@ int AdvancedPdfEngine::metric(QPaintDevice::PaintDeviceMetric metricType) const
 AdvancedPdfEnginePrivate::AdvancedPdfEnginePrivate()
     : clipEnabled(false), allClipped(false), hasPen(true), hasBrush(false), simplePen(false),
       needsTransform(false), pdfVersion(AdvancedPdfEngine::Version_1_4),
+      colorModel(AdvancedPdfEngine::ColorModel::CMYK),
       outDevice(nullptr), ownsDevice(false),
       embedFonts(true),
-      grayscale(false),
       m_pageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF(10, 10, 10, 10))
 {
-    initResources();
     resolution = 1200;
     currentObject = 1;
     currentPage = nullptr;
@@ -1530,7 +1513,9 @@ bool AdvancedPdfEngine::begin(QPaintDevice *pdev)
     d->catalog = 0;
     d->info = 0;
     d->graphicsState = 0;
-    d->patternColorSpace = 0;
+    d->patternColorSpaceRGB = 0;
+    d->patternColorSpaceGrayscale = 0;
+    d->patternColorSpaceCMYK = 0;
     d->simplePen = false;
     d->needsTransform = false;
 
@@ -1592,6 +1577,7 @@ void AdvancedPdfEnginePrivate::writeHeader()
         "1.4", // Version_1_4
         "1.4", // Version_A1b
         "1.6", // Version_1_6
+        "1.6", // Version_X4
     };
     static const size_t numMappings = sizeof mapping / sizeof *mapping;
     const char *verStr = mapping[size_t(pdfVersion) < numMappings ? pdfVersion : 0];
@@ -1599,16 +1585,27 @@ void AdvancedPdfEnginePrivate::writeHeader()
     xprintf("%%PDF-%s\n", verStr);
     xprintf("%%\303\242\303\243\n");
 
-    writeInfo();
+#if QT_CONFIG(timezone)
+    const QDateTime now = QDateTime::currentDateTime(QTimeZone::systemTimeZone());
+#else
+    const QDateTime now = QDateTime::currentDateTimeUtc();
+#endif
 
-    int metaDataObj = -1;
-    int outputIntentObj = -1;
-    if (pdfVersion == AdvancedPdfEngine::Version_A1b || !xmpDocumentMetadata.isEmpty()) {
-        metaDataObj = writeXmpDcumentMetaData();
-    }
-    if (pdfVersion == AdvancedPdfEngine::Version_A1b) {
-        outputIntentObj = writeOutputIntent();
-    }
+    writeInfo(now);
+
+    const int metaDataObj = writeXmpDocumentMetaData(now);
+    const int outputIntentObj = [&]() {
+        switch (pdfVersion) {
+        case AdvancedPdfEngine::Version_1_4:
+        case AdvancedPdfEngine::Version_1_6:
+            break;
+        case AdvancedPdfEngine::Version_A1b:
+        case AdvancedPdfEngine::Version_X4:
+            return writeOutputIntent();
+        }
+
+        return -1;
+    }();
 
     catalog = addXrefEntry(-1);
     pageRoot = requestObject();
@@ -1623,10 +1620,9 @@ void AdvancedPdfEnginePrivate::writeHeader()
           << "/Pages " << pageRoot << "0 R\n"
           << "/Names " << namesRoot << "0 R\n";
 
-        if (pdfVersion == AdvancedPdfEngine::Version_A1b || !xmpDocumentMetadata.isEmpty())
-            s << "/Metadata " << metaDataObj << "0 R\n";
+        s << "/Metadata " << metaDataObj << "0 R\n";
 
-        if (pdfVersion == AdvancedPdfEngine::Version_A1b)
+        if (outputIntentObj >= 0)
             s << "/OutputIntents [" << outputIntentObj << "0 R]\n";
 
         s << ">>\n"
@@ -1648,86 +1644,288 @@ void AdvancedPdfEnginePrivate::writeHeader()
             ">>\n"
             "endobj\n");
 
-    // color space for pattern
-    patternColorSpace = addXrefEntry(-1);
+    // color spaces for pattern
+    patternColorSpaceRGB = addXrefEntry(-1);
+    xprintf("[/Pattern /DeviceRGB]\n"
+            "endobj\n");
+    patternColorSpaceGrayscale = addXrefEntry(-1);
+    xprintf("[/Pattern /DeviceGray]\n"
+            "endobj\n");
+    patternColorSpaceCMYK = addXrefEntry(-1);
     xprintf("[/Pattern /DeviceCMYK]\n"
             "endobj\n");
 }
 
-void AdvancedPdfEnginePrivate::writeInfo()
+AdvancedPdfEngine::ColorModel AdvancedPdfEnginePrivate::colorModelForColor(const QColor &color) const
 {
-    info = addXrefEntry(-1);
-    xprintf("<<\n/Title ");
-    printString(title);
-    xprintf("\n/Creator ");
-    printString(creator);
-    xprintf("\n/Producer ");
-    printString(QString::fromLatin1("LibreMapper"));
-    QDateTime now = QDateTime::currentDateTime();
-    QTime t = now.time();
-    QDate d = now.date();
-    xprintf("\n/CreationDate (D:%d%02d%02d%02d%02d%02d",
-            d.year(),
-            d.month(),
-            d.day(),
-            t.hour(),
-            t.minute(),
-            t.second());
-    int offset = now.offsetFromUtc();
-    int hours  = (offset / 60) / 60;
-    int mins   = (offset / 60) % 60;
-    if (offset < 0)
-        xprintf("-%02d'%02d')\n", -hours, -mins);
-    else if (offset > 0)
-        xprintf("+%02d'%02d')\n", hours , mins);
-    else
-        xprintf("Z)\n");
-    xprintf(">>\n"
-            "endobj\n");
+    switch (colorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+    case AdvancedPdfEngine::ColorModel::Grayscale:
+    case AdvancedPdfEngine::ColorModel::CMYK:
+        return colorModel;
+    case AdvancedPdfEngine::ColorModel::Auto:
+        switch (color.spec()) {
+        case QColor::Invalid:
+        case QColor::Rgb:
+        case QColor::Hsv:
+        case QColor::Hsl:
+        case QColor::ExtendedRgb:
+            return AdvancedPdfEngine::ColorModel::RGB;
+        case QColor::Cmyk:
+            return AdvancedPdfEngine::ColorModel::CMYK;
+        }
+
+        break;
+    }
+
+    Q_UNREACHABLE_RETURN(AdvancedPdfEngine::ColorModel::RGB);
 }
 
-int AdvancedPdfEnginePrivate::writeXmpDcumentMetaData()
+void AdvancedPdfEnginePrivate::writeColor(ColorDomain domain, const QColor &color)
+{
+    // Switch to the right colorspace.
+    // For simplicity: do it even if it redundant (= already in that colorspace)
+    const AdvancedPdfEngine::ColorModel actualColorModel = colorModelForColor(color);
+
+    switch (actualColorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+        switch (domain) {
+        case ColorDomain::Stroking:
+            *currentPage << "/CSp CS\n"; break;
+        case ColorDomain::NonStroking:
+            *currentPage << "/CSp cs\n"; break;
+        case ColorDomain::NonStrokingPattern:
+            *currentPage << "/PCSp cs\n"; break;
+        }
+        break;
+    case AdvancedPdfEngine::ColorModel::Grayscale:
+        switch (domain) {
+        case ColorDomain::Stroking:
+            *currentPage << "/CSpg CS\n"; break;
+        case ColorDomain::NonStroking:
+            *currentPage << "/CSpg cs\n"; break;
+        case ColorDomain::NonStrokingPattern:
+            *currentPage << "/PCSpg cs\n"; break;
+        }
+        break;
+    case AdvancedPdfEngine::ColorModel::CMYK:
+        switch (domain) {
+        case ColorDomain::Stroking:
+            *currentPage << "/CSpcmyk CS\n"; break;
+        case ColorDomain::NonStroking:
+            *currentPage << "/CSpcmyk cs\n"; break;
+        case ColorDomain::NonStrokingPattern:
+            *currentPage << "/PCSpcmyk cs\n"; break;
+        }
+        break;
+    case AdvancedPdfEngine::ColorModel::Auto:
+        Q_UNREACHABLE_RETURN();
+    }
+
+    // If we also have a color specified, write it out.
+    if (!color.isValid())
+        return;
+
+    switch (actualColorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+        *currentPage << color.redF()
+                     << color.greenF()
+                     << color.blueF();
+        break;
+    case AdvancedPdfEngine::ColorModel::Grayscale: {
+        const qreal gray = qGray(color.rgba()) / 255.;
+        *currentPage << gray;
+        break;
+    }
+    case AdvancedPdfEngine::ColorModel::CMYK:
+        *currentPage << color.cyanF()
+                     << color.magentaF()
+                     << color.yellowF()
+                     << color.blackF();
+        break;
+    case AdvancedPdfEngine::ColorModel::Auto:
+        Q_UNREACHABLE_RETURN();
+    }
+}
+
+void AdvancedPdfEnginePrivate::writeInfo(const QDateTime &date)
+{
+    info = addXrefEntry(-1);
+    write("<<\n/Title ");
+    printString(title);
+    write("\n/Creator ");
+    printString(creator);
+    write("\n/Author ");
+    printString(author);
+    write("\n/Producer ");
+    printString(QString::fromLatin1("LibreMapper"));
+
+    const QTime t = date.time();
+    const QDate d = date.date();
+    // (D:YYYYMMDDHHmmSSOHH'mm')
+    constexpr size_t formattedDateSize = 26;
+    char formattedDate[formattedDateSize];
+    const int year = qBound(0, d.year(), 9999); // ASN.1, max 4 digits
+    auto printedSize = std::snprintf(formattedDate,
+                                     formattedDateSize,
+                                     "(D:%04d%02d%02d%02d%02d%02d",
+                                     year,
+                                     d.month(),
+                                     d.day(),
+                                     t.hour(),
+                                     t.minute(),
+                                     t.second());
+    const int offset = date.offsetFromUtc();
+    const int hours  = (offset / 60) / 60;
+    const int mins   = (offset / 60) % 60;
+    if (offset < 0) {
+        std::snprintf(formattedDate + printedSize,
+                      formattedDateSize - printedSize,
+                      "-%02d'%02d')", -hours, -mins);
+    } else if (offset > 0) {
+        std::snprintf(formattedDate + printedSize,
+                      formattedDateSize - printedSize,
+                      "+%02d'%02d')", hours, mins);
+    } else {
+        std::snprintf(formattedDate + printedSize,
+                      formattedDateSize - printedSize,
+                      "Z)");
+    }
+
+    write("\n/CreationDate ");
+    write(formattedDate);
+    write("\n/ModDate ");
+    write(formattedDate);
+
+    write("\n/Trapped /False\n"
+          ">>\n"
+          "endobj\n");
+}
+
+int AdvancedPdfEnginePrivate::writeXmpDocumentMetaData(const QDateTime &date)
 {
     const int metaDataObj = addXrefEntry(-1);
     QByteArray metaDataContent;
 
-    if (xmpDocumentMetadata.isEmpty()) {
-        const QString producer(QString::fromLatin1("Qt " QT_VERSION_STR));
-
-        const QDateTime now = QDateTime::currentDateTime();
-        const QDate date = now.date();
-        const QTime time = now.time();
-        const QString timeStr =
-                QString::asprintf("%d-%02d-%02dT%02d:%02d:%02d",
-                                  date.year(), date.month(), date.day(),
-                                  time.hour(), time.minute(), time.second());
-
-        const int offset = now.offsetFromUtc();
-        const int hours  = (offset / 60) / 60;
-        const int mins   = (offset / 60) % 60;
-        QString tzStr;
-        if (offset < 0)
-            tzStr = QString::asprintf("-%02d:%02d", -hours, -mins);
-        else if (offset > 0)
-            tzStr = QString::asprintf("+%02d:%02d", hours , mins);
-        else
-            tzStr = "Z"_L1;
-
-        const QString metaDataDate = timeStr + tzStr;
-
-        QFile metaDataFile(":/advanced_pdf/qpdfa_metadata.xml"_L1);
-        metaDataFile.open(QIODevice::ReadOnly);
-        metaDataContent = QString::fromUtf8(metaDataFile.readAll()).arg(producer.toHtmlEscaped(),
-                                                                        title.toHtmlEscaped(),
-                                                                        creator.toHtmlEscaped(),
-                                                                        metaDataDate).toUtf8();
-    }
-    else
+    if (!xmpDocumentMetadata.isEmpty()) {
         metaDataContent = xmpDocumentMetadata;
+    } else {
+        const QString producer(QString::fromLatin1("LibreMapper"));
+        const QString metaDataDate = date.toString(Qt::ISODate);
+
+        using namespace Qt::Literals;
+        constexpr QLatin1String xmlNS = "http://www.w3.org/XML/1998/namespace"_L1;
+
+        constexpr QLatin1String adobeNS = "adobe:ns:meta/"_L1;
+        constexpr QLatin1String rdfNS = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"_L1;
+        constexpr QLatin1String dcNS = "http://purl.org/dc/elements/1.1/"_L1;
+        constexpr QLatin1String xmpNS = "http://ns.adobe.com/xap/1.0/"_L1;
+        constexpr QLatin1String xmpMMNS = "http://ns.adobe.com/xap/1.0/mm/"_L1;
+        constexpr QLatin1String pdfNS = "http://ns.adobe.com/pdf/1.3/"_L1;
+        constexpr QLatin1String pdfaidNS = "http://www.aiim.org/pdfa/ns/id/"_L1;
+        constexpr QLatin1String pdfxidNS = "http://www.npes.org/pdfx/ns/id/"_L1;
+
+        QBuffer output(&metaDataContent);
+        output.open(QIODevice::WriteOnly);
+        output.write("<?xpacket begin='' id='W5M0MpCehiHzreSzNTczkc9d'?>");
+
+        QXmlStreamWriter w(&output);
+        w.setAutoFormatting(true);
+        w.writeNamespace(adobeNS, "x");
+        w.writeNamespace(rdfNS, "rdf");
+        w.writeNamespace(dcNS, "dc");
+        w.writeNamespace(xmpNS, "xmp");
+        w.writeNamespace(xmpMMNS, "xmpMM");
+        w.writeNamespace(pdfNS, "pdf");
+        w.writeNamespace(pdfaidNS, "pdfaid");
+        w.writeNamespace(pdfxidNS, "pdfxid");
+
+        w.writeStartElement(adobeNS, "xmpmeta");
+        w.writeStartElement(rdfNS, "RDF");
+
+        /*
+            XMP says: "The recommended approach is to have either a
+            single rdf:Description element containing all XMP
+            properties or a separate rdf:Description element for each
+            XMP property namespace."
+            We do the the latter.
+        */
+
+        // DC
+        w.writeStartElement(rdfNS, "Description");
+        w.writeAttribute(rdfNS, "about", "");
+            w.writeStartElement(dcNS, "title");
+                w.writeStartElement(rdfNS, "Alt");
+                    w.writeStartElement(rdfNS, "li");
+                    w.writeAttribute(xmlNS, "lang", "x-default");
+                        w.writeCharacters(title);
+                    w.writeEndElement();
+                w.writeEndElement();
+            w.writeEndElement();
+            w.writeStartElement(dcNS, "creator");
+                w.writeStartElement(rdfNS, "Seq");
+                    w.writeStartElement(rdfNS, "li");
+                        w.writeCharacters(author);
+                    w.writeEndElement();
+                w.writeEndElement();
+            w.writeEndElement();
+        w.writeEndElement();
+
+        // PDF
+        w.writeStartElement(rdfNS, "Description");
+        w.writeAttribute(rdfNS, "about", "");
+        w.writeAttribute(pdfNS, "Producer", producer);
+        w.writeAttribute(pdfNS, "Trapped", "False");
+        w.writeEndElement();
+
+        // XMP
+        w.writeStartElement(rdfNS, "Description");
+        w.writeAttribute(rdfNS, "about", "");
+        w.writeAttribute(xmpNS, "CreatorTool", creator);
+        w.writeAttribute(xmpNS, "CreateDate", metaDataDate);
+        w.writeAttribute(xmpNS, "ModifyDate", metaDataDate);
+        w.writeAttribute(xmpNS, "MetadataDate", metaDataDate);
+        w.writeEndElement();
+
+        // XMPMM
+        w.writeStartElement(rdfNS, "Description");
+        w.writeAttribute(rdfNS, "about", "");
+        w.writeAttribute(xmpMMNS, "DocumentID", "uuid:"_L1 + documentId.toString(QUuid::WithoutBraces));
+        w.writeAttribute(xmpMMNS, "VersionID", "1");
+        w.writeAttribute(xmpMMNS, "RenditionClass", "default");
+        w.writeEndElement();
+
+        // Version-specific
+        switch (pdfVersion) {
+        case AdvancedPdfEngine::Version_1_4:
+            break;
+        case AdvancedPdfEngine::Version_A1b:
+            w.writeStartElement(rdfNS, "Description");
+            w.writeAttribute(rdfNS, "about", "");
+            w.writeAttribute(pdfaidNS, "part", "1");
+            w.writeAttribute(pdfaidNS, "conformance", "B");
+            w.writeEndElement();
+            break;
+        case AdvancedPdfEngine::Version_1_6:
+            break;
+        case AdvancedPdfEngine::Version_X4:
+            w.writeStartElement(rdfNS, "Description");
+            w.writeAttribute(rdfNS, "about", "");
+            w.writeAttribute(pdfxidNS, "GTS_PDFXVersion", "PDF/X-4");
+            w.writeEndElement();
+            break;
+        }
+
+        w.writeEndElement(); // </RDF>
+        w.writeEndElement(); // </xmpmeta>
+
+        w.writeEndDocument();
+        output.write("<?xpacket end='w'?>");
+    }
 
     xprintf("<<\n"
             "/Type /Metadata /Subtype /XML\n"
-            "/Length %d\n"
+            "/Length %" PRIdQSIZETYPE "\n"
             ">>\n"
             "stream\n", metaDataContent.size());
     write(metaDataContent);
@@ -1739,21 +1937,38 @@ int AdvancedPdfEnginePrivate::writeXmpDcumentMetaData()
 
 int AdvancedPdfEnginePrivate::writeOutputIntent()
 {
-    const int colorProfile = addXrefEntry(-1);
+    const int colorProfileEntry = addXrefEntry(-1);
     {
-        QFile colorProfileFile(":/advanced_pdf/sRGB2014.icc"_L1);
-        colorProfileFile.open(QIODevice::ReadOnly);
-        const QByteArray colorProfileData = colorProfileFile.readAll();
+        const QColorSpace profile = outputIntent.outputProfile();
+        const QByteArray colorProfileData = profile.iccProfile();
 
         QByteArray data;
         AdvancedPdf::ByteStream s(&data);
         int length_object = requestObject();
 
         s << "<<\n";
-        s << "/N 3\n";
-        s << "/Alternate /DeviceRGB\n";
+
+        switch (profile.colorModel()) {
+        case QColorSpace::ColorModel::Undefined:
+            qWarning("AdvancedPdfEngine: undefined color model in the output intent profile, assuming RGB");
+            [[fallthrough]];
+        case QColorSpace::ColorModel::Rgb:
+            s << "/N 3\n";
+            s << "/Alternate /DeviceRGB\n";
+            break;
+        case QColorSpace::ColorModel::Gray:
+            s << "/N 1\n";
+            s << "/Alternate /DeviceGray\n";
+            break;
+        case QColorSpace::ColorModel::Cmyk:
+            s << "/N 4\n";
+            s << "/Alternate /DeviceCMYK\n";
+            break;
+        }
+
         s << "/Length " << length_object << "0 R\n";
-        s << "/Filter /FlateDecode\n";
+        if (do_compress)
+            s << "/Filter /FlateDecode\n";
         s << ">>\n";
         s << "stream\n";
         write(data);
@@ -1765,20 +1980,48 @@ int AdvancedPdfEnginePrivate::writeOutputIntent()
                 "endobj\n", len);
     }
 
-    const int outputIntent = addXrefEntry(-1);
+    const int outputIntentEntry = addXrefEntry(-1);
     {
-        xprintf("<<\n");
-        xprintf("/Type /OutputIntent\n");
-        xprintf("/S/GTS_PDFA1\n");
-        xprintf("/OutputConditionIdentifier (sRGB_IEC61966-2-1_black_scaled)\n");
-        xprintf("/DestOutputProfile %d 0 R\n", colorProfile);
-        xprintf("/Info(sRGB IEC61966 v2.1 with black scaling)\n");
-        xprintf("/RegistryName(http://www.color.org)\n");
-        xprintf(">>\n");
-        xprintf("endobj\n");
+        write("<<\n");
+        write("/Type /OutputIntent\n");
+
+        switch (pdfVersion) {
+        case AdvancedPdfEngine::Version_1_4:
+        case AdvancedPdfEngine::Version_1_6:
+            Q_UNREACHABLE(); // no output intent for these versions
+            break;
+        case AdvancedPdfEngine::Version_A1b:
+            write("/S/GTS_PDFA1\n");
+            break;
+        case AdvancedPdfEngine::Version_X4:
+            write("/S/GTS_PDFX\n");
+            break;
+        }
+
+        xprintf("/DestOutputProfile %d 0 R\n", colorProfileEntry);
+        write("/OutputConditionIdentifier ");
+        printString(outputIntent.outputConditionIdentifier());
+        write("\n");
+
+        write("/Info ");
+        printString(outputIntent.outputCondition());
+        write("\n");
+
+        write("/OutputCondition ");
+        printString(outputIntent.outputCondition());
+        write("\n");
+
+        if (const auto registryName = outputIntent.registryName(); !registryName.isEmpty()) {
+            write("/RegistryName ");
+            printString(registryName.toString());
+            write("\n");
+        }
+
+        write(">>\n");
+        write("endobj\n");
     }
 
-    return outputIntent;
+    return outputIntentEntry;
 }
 
 void AdvancedPdfEnginePrivate::writePageRoot()
@@ -1795,7 +2038,7 @@ void AdvancedPdfEnginePrivate::writePageRoot()
     xprintf("]\n");
 
     //xprintf("/Group <</S /Transparency /I true /K false>>\n");
-    xprintf("/Count %d\n", pages.size());
+    xprintf("/Count %" PRIdQSIZETYPE "\n", pages.size());
 
     xprintf("/ProcSet [/PDF /Text /ImageB /ImageC]\n"
             ">>\n"
@@ -1807,7 +2050,7 @@ void AdvancedPdfEnginePrivate::writeDestsRoot()
     if (destCache.isEmpty())
         return;
 
-    QHash<QString, int> destObjects;
+    std::map<QString, int> destObjects;
     QByteArray xs, ys;
     for (const DestInfo &destInfo : std::as_const(destCache)) {
         int destObj = addXrefEntry(-1);
@@ -1815,21 +2058,19 @@ void AdvancedPdfEnginePrivate::writeDestsRoot()
         ys.setNum(static_cast<double>(destInfo.coords.y()), 'f');
         xprintf("[%d 0 R /XYZ %s %s 0]\n", destInfo.pageObj, xs.constData(), ys.constData());
         xprintf("endobj\n");
-        destObjects.insert(destInfo.anchor, destObj);
+        destObjects.insert_or_assign(destInfo.anchor, destObj);
     }
 
     // names
     destsRoot = addXrefEntry(-1);
-    QStringList anchors = destObjects.keys();
-    anchors.sort();
     xprintf("<<\n/Limits [");
-    printString(anchors.constFirst());
+    printString(destObjects.begin()->first);
     xprintf(" ");
-    printString(anchors.constLast());
+    printString(destObjects.rbegin()->first);
     xprintf("]\n/Names [\n");
-    for (const QString &anchor : std::as_const(anchors)) {
+    for (const auto &[anchor, destObject] : destObjects) {
         printString(anchor);
-        xprintf(" %d 0 R\n", destObjects[anchor]);
+        xprintf(" %d 0 R\n", destObject);
     }
     xprintf("]\n>>\n"
             "endobj\n");
@@ -1862,7 +2103,8 @@ void AdvancedPdfEnginePrivate::writeAttachmentRoot()
 
         attachments.push_back(addXrefEntry(-1));
         xprintf("<<\n"
-                "/F (%s)", attachment.fileName.toLatin1().constData());
+                "/F ");
+        printString(attachment.fileName);
 
         xprintf("\n/EF <</F %d 0 R>>\n"
                 "/Type/Filespec\n"
@@ -1992,7 +2234,7 @@ void AdvancedPdfEnginePrivate::embedFont(QFontSubset *font)
     {
         addXrefEntry(toUnicode);
         QByteArray touc = font->createToUnicodeMap();
-        xprintf("<< /Length %d >>\n"
+        xprintf("<< /Length %" PRIdQSIZETYPE " >>\n"
                 "stream\n", touc.size());
         write(touc);
         write("\nendstream\n"
@@ -2028,7 +2270,7 @@ void AdvancedPdfEnginePrivate::embedFont(QFontSubset *font)
 
         addXrefEntry(cidset);
         xprintf("<<\n");
-        xprintf("/Length %d\n", cidSetStream.size());
+        xprintf("/Length %" PRIdQSIZETYPE "\n", cidSetStream.size());
         xprintf(">>\n");
         xprintf("stream\n");
         write(cidSetStream);
@@ -2075,17 +2317,24 @@ void AdvancedPdfEnginePrivate::writePage()
     qreal userUnit = calcUserUnit();
 
     addXrefEntry(pages.constLast());
+
+    // make sure we use the pagesize from when we started the page, since the user may have changed it
+    const QByteArray formattedPageWidth = QByteArray::number(currentPage->pageSize.width() / userUnit, 'f');
+    const QByteArray formattedPageHeight = QByteArray::number(currentPage->pageSize.height() / userUnit, 'f');
+
     xprintf("<<\n"
             "/Type /Page\n"
             "/Parent %d 0 R\n"
             "/Contents %d 0 R\n"
             "/Resources %d 0 R\n"
             "/Annots %d 0 R\n"
-            "/MediaBox [0 0 %s %s]\n",
+            "/MediaBox [0 0 %s %s]\n"
+            "/TrimBox [0 0 %s %s]\n",
             pageRoot, pageStream, resources, annots,
-            // make sure we use the pagesize from when we started the page, since the user may have changed it
-            QByteArray::number(currentPage->pageSize.width() / userUnit, 'f').constData(),
-            QByteArray::number(currentPage->pageSize.height() / userUnit, 'f').constData());
+            formattedPageWidth.constData(),
+            formattedPageHeight.constData(),
+            formattedPageWidth.constData(),
+            formattedPageHeight.constData());
 
     if (pdfVersion >= AdvancedPdfEngine::Version_1_6)
         xprintf("/UserUnit %s\n", QByteArray::number(userUnit, 'f').constData());
@@ -2097,12 +2346,18 @@ void AdvancedPdfEnginePrivate::writePage()
     xprintf("<<\n"
             "/ColorSpace <<\n"
             "/PCSp %d 0 R\n"
-            "/CSp /DeviceCMYK\n"
+            "/PCSpg %d 0 R\n"
+            "/PCSpcmyk %d 0 R\n"
+            "/CSp /DeviceRGB\n"
             "/CSpg /DeviceGray\n"
+            "/CSpcmyk /DeviceCMYK\n"
             ">>\n"
             "/ExtGState <<\n"
             "/GSa %d 0 R\n",
-            patternColorSpace, graphicsState);
+            patternColorSpaceRGB,
+            patternColorSpaceGrayscale,
+            patternColorSpaceCMYK,
+            graphicsState);
 
     for (int i = 0; i < currentPage->graphicStates.size(); ++i)
         xprintf("/GState%d %d 0 R\n", currentPage->graphicStates.at(i), currentPage->graphicStates.at(i));
@@ -2162,7 +2417,7 @@ void AdvancedPdfEnginePrivate::writeTail()
 
     addXrefEntry(xrefPositions.size(),false);
     xprintf("xref\n"
-            "0 %d\n"
+            "0 %" PRIdQSIZETYPE "\n"
             "%010d 65535 f \n", xrefPositions.size()-1, xrefPositions[0]);
 
     for (int i = 1; i < xrefPositions.size()-1; ++i)
@@ -2178,11 +2433,8 @@ void AdvancedPdfEnginePrivate::writeTail()
           << "/Info " << info << "0 R\n"
           << "/Root " << catalog << "0 R\n";
 
-        if (pdfVersion == AdvancedPdfEngine::Version_A1b) {
-            const QString uniqueId = QUuid::createUuid().toString();
-            const QByteArray fileIdentifier = QCryptographicHash::hash(uniqueId.toLatin1(), QCryptographicHash::Md5).toHex();
-            s << "/ID [ <" << fileIdentifier << "> <" << fileIdentifier << "> ]\n";
-        }
+        const QByteArray id = documentId.toString(QUuid::WithoutBraces).toUtf8().toHex();
+        s << "/ID [ <" << id << "> <" << id << "> ]\n";
 
         s << ">>\n"
           << "startxref\n" << xrefPositions.constLast() << "\n"
@@ -2243,7 +2495,7 @@ void AdvancedPdfEnginePrivate::xprintf(const char* fmt, ...)
 
     va_list args;
     va_start(args, fmt);
-    int bufsize = qvsnprintf(buf, msize, fmt, args);
+    int bufsize = std::vsnprintf(buf, msize, fmt, args);
     va_end(args);
 
     if (Q_LIKELY(bufsize < msize)) {
@@ -2252,7 +2504,7 @@ void AdvancedPdfEnginePrivate::xprintf(const char* fmt, ...)
         // Fallback for abnormal cases
         QScopedArrayPointer<char> tmpbuf(new char[bufsize + 1]);
         va_start(args, fmt);
-        bufsize = qvsnprintf(tmpbuf.data(), bufsize + 1, fmt, args);
+        bufsize = std::vsnprintf(tmpbuf.data(), bufsize + 1, fmt, args);
         va_end(args);
         stream->writeRawData(tmpbuf.data(), bufsize);
     }
@@ -2355,7 +2607,7 @@ int AdvancedPdfEnginePrivate::writeCompressed(const char *src, int len)
     return len;
 }
 
-int AdvancedPdfEnginePrivate::writeImage(const QByteArray &data, int width, int height, int depth,
+int AdvancedPdfEnginePrivate::writeImage(const QByteArray &data, int width, int height, WriteImageOption option,
                                   int maskObject, int softMaskObject, bool dct, bool isMono)
 {
     int image = addXrefEntry(-1);
@@ -2365,7 +2617,8 @@ int AdvancedPdfEnginePrivate::writeImage(const QByteArray &data, int width, int 
             "/Width %d\n"
             "/Height %d\n", width, height);
 
-    if (depth == 1) {
+    switch (option) {
+    case WriteImageOption::Monochrome:
         if (!isMono) {
             xprintf("/ImageMask true\n"
                     "/Decode [1 0]\n");
@@ -2373,10 +2626,21 @@ int AdvancedPdfEnginePrivate::writeImage(const QByteArray &data, int width, int 
             xprintf("/BitsPerComponent 1\n"
                     "/ColorSpace /DeviceGray\n");
         }
-    } else {
+        break;
+    case WriteImageOption::Grayscale:
         xprintf("/BitsPerComponent 8\n"
-                "/ColorSpace %s\n", (depth == 32) ? "/DeviceRGB" : "/DeviceGray");
+                "/ColorSpace /DeviceGray\n");
+        break;
+    case WriteImageOption::RGB:
+        xprintf("/BitsPerComponent 8\n"
+                "/ColorSpace /DeviceRGB\n");
+        break;
+    case WriteImageOption::CMYK:
+        xprintf("/BitsPerComponent 8\n"
+                "/ColorSpace /DeviceCMYK\n");
+        break;
     }
+
     if (maskObject > 0)
         xprintf("/Mask %d 0 R\n", maskObject);
     if (softMaskObject > 0)
@@ -2415,7 +2679,23 @@ struct QGradientBound {
 };
 Q_DECLARE_TYPEINFO(QGradientBound, Q_PRIMITIVE_TYPE);
 
-int AdvancedPdfEnginePrivate::createShadingFunction(const QGradient *gradient, int from, int to, bool reflect, bool alpha)
+void AdvancedPdfEnginePrivate::ShadingFunctionResult::writeColorSpace(AdvancedPdf::ByteStream *stream) const
+{
+    *stream << "/ColorSpace ";
+    switch (colorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+        *stream << "/DeviceRGB\n"; break;
+    case AdvancedPdfEngine::ColorModel::Grayscale:
+        *stream << "/DeviceGray\n"; break;
+    case AdvancedPdfEngine::ColorModel::CMYK:
+        *stream << "/DeviceCMYK\n"; break;
+    case AdvancedPdfEngine::ColorModel::Auto:
+        Q_UNREACHABLE(); break;
+    }
+}
+
+AdvancedPdfEnginePrivate::ShadingFunctionResult
+AdvancedPdfEnginePrivate::createShadingFunction(const QGradient *gradient, int from, int to, bool reflect, bool alpha)
 {
     QGradientStops stops = gradient->stops();
     if (stops.isEmpty()) {
@@ -2426,6 +2706,35 @@ int AdvancedPdfEnginePrivate::createShadingFunction(const QGradient *gradient, i
         stops.prepend(QGradientStop(0, stops.at(0).second));
     if (stops.at(stops.size() - 1).first < 1)
         stops.append(QGradientStop(1, stops.at(stops.size() - 1).second));
+
+    // Color to use which colorspace to use
+    const QColor referenceColor = stops.constFirst().second;
+
+    switch (colorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+    case AdvancedPdfEngine::ColorModel::Grayscale:
+    case AdvancedPdfEngine::ColorModel::CMYK:
+        break;
+    case AdvancedPdfEngine::ColorModel::Auto: {
+        // Make sure that all the stops have the same color spec
+        // (we don't support anything else)
+        const QColor::Spec referenceSpec = referenceColor.spec();
+        bool warned = false;
+        for (QGradientStop &stop : stops) {
+            if (stop.second.spec() != referenceSpec) {
+                if (!warned) {
+                    qWarning("AdvancedPdfEngine: unable to create a gradient between colors of different spec");
+                    warned = true;
+                }
+                stop.second = stop.second.convertTo(referenceSpec);
+            }
+        }
+        break;
+    }
+    }
+
+    ShadingFunctionResult result;
+    result.colorModel = colorModelForColor(referenceColor);
 
     QList<int> functions;
     const int numStops = stops.size();
@@ -2442,8 +2751,33 @@ int AdvancedPdfEnginePrivate::createShadingFunction(const QGradient *gradient, i
             s << "/C0 [" << stops.at(i).second.alphaF() << "]\n"
                  "/C1 [" << stops.at(i + 1).second.alphaF() << "]\n";
         } else {
-            s << "/C0 [" << stops.at(i).second.redF() << stops.at(i).second.greenF() <<  stops.at(i).second.blueF() << "]\n"
-                 "/C1 [" << stops.at(i + 1).second.redF() << stops.at(i + 1).second.greenF() <<  stops.at(i + 1).second.blueF() << "]\n";
+            switch (result.colorModel) {
+            case AdvancedPdfEngine::ColorModel::RGB:
+                s << "/C0 [" << stops.at(i).second.redF() << stops.at(i).second.greenF() <<  stops.at(i).second.blueF() << "]\n"
+                     "/C1 [" << stops.at(i + 1).second.redF() << stops.at(i + 1).second.greenF() <<  stops.at(i + 1).second.blueF() << "]\n";
+                break;
+            case AdvancedPdfEngine::ColorModel::Grayscale: {
+                constexpr qreal normalisationFactor = 1. / 255.;
+                s << "/C0 [" << (qGray(stops.at(i).second.rgba()) * normalisationFactor) << "]\n"
+                     "/C1 [" << (qGray(stops.at(i + 1).second.rgba()) * normalisationFactor) << "]\n";
+                break;
+            }
+            case AdvancedPdfEngine::ColorModel::CMYK:
+                s << "/C0 [" << stops.at(i).second.cyanF()
+                             << stops.at(i).second.magentaF()
+                             << stops.at(i).second.yellowF()
+                             << stops.at(i).second.blackF() << "]\n"
+                     "/C1 [" << stops.at(i + 1).second.cyanF()
+                             << stops.at(i + 1).second.magentaF()
+                             << stops.at(i + 1).second.yellowF()
+                             << stops.at(i + 1).second.blackF() << "]\n";
+                break;
+
+            case AdvancedPdfEngine::ColorModel::Auto:
+                Q_UNREACHABLE();
+                break;
+            }
+
         }
         s << ">>\n"
              "endobj\n";
@@ -2511,7 +2845,8 @@ int AdvancedPdfEnginePrivate::createShadingFunction(const QGradient *gradient, i
     } else {
         function = functions.at(0);
     }
-    return function;
+    result.function = function;
+    return result;
 }
 
 int AdvancedPdfEnginePrivate::generateLinearGradientShader(const QLinearGradient *gradient, const QTransform &matrix, bool alpha)
@@ -2557,17 +2892,22 @@ int AdvancedPdfEnginePrivate::generateLinearGradientShader(const QLinearGradient
     }
     }
 
-    int function = createShadingFunction(gradient, from, to, reflect, alpha);
+    const auto shadingFunctionResult = createShadingFunction(gradient, from, to, reflect, alpha);
 
     QByteArray shader;
     AdvancedPdf::ByteStream s(&shader);
     s << "<<\n"
-        "/ShadingType 2\n"
-        "/ColorSpace " << (alpha ? "/DeviceGray\n" : "/DeviceRGB\n") <<
-        "/AntiAlias true\n"
+         "/ShadingType 2\n";
+
+    if (alpha)
+        s << "/ColorSpace /DeviceGray\n";
+    else
+        shadingFunctionResult.writeColorSpace(&s);
+
+    s << "/AntiAlias true\n"
         "/Coords [" << start.x() << start.y() << stop.x() << stop.y() << "]\n"
         "/Extend [true true]\n"
-        "/Function " << function << "0 R\n"
+        "/Function " << shadingFunctionResult.function << "0 R\n"
         ">>\n"
         "endobj\n";
     int shaderObject = addXrefEntry(-1);
@@ -2625,18 +2965,23 @@ int AdvancedPdfEnginePrivate::generateRadialGradientShader(const QRadialGradient
     }
     }
 
-    int function = createShadingFunction(gradient, from, to, reflect, alpha);
+    const auto shadingFunctionResult = createShadingFunction(gradient, from, to, reflect, alpha);
 
     QByteArray shader;
     AdvancedPdf::ByteStream s(&shader);
     s << "<<\n"
-        "/ShadingType 3\n"
-        "/ColorSpace " << (alpha ? "/DeviceGray\n" : "/DeviceRGB\n") <<
-        "/AntiAlias true\n"
+         "/ShadingType 3\n";
+
+    if (alpha)
+        s << "/ColorSpace /DeviceGray\n";
+    else
+        shadingFunctionResult.writeColorSpace(&s);
+
+    s << "/AntiAlias true\n"
         "/Domain [0 1]\n"
         "/Coords [" << p0.x() << p0.y() << r0 << p1.x() << p1.y() << r1 << "]\n"
         "/Extend [true true]\n"
-        "/Function " << function << "0 R\n"
+        "/Function " << shadingFunctionResult.function << "0 R\n"
         ">>\n"
         "endobj\n";
     int shaderObject = addXrefEntry(-1);
@@ -2745,7 +3090,7 @@ int AdvancedPdfEnginePrivate::addConstantAlphaObject(int brushAlpha, int penAlph
 {
     if (brushAlpha == 255 && penAlpha == 255)
         return 0;
-    uint object = alphaCache.value(QPair<uint, uint>(brushAlpha, penAlpha), 0);
+    uint object = alphaCache.value(std::pair<uint, uint>(brushAlpha, penAlpha), 0);
     if (!object) {
         object = addXrefEntry(-1);
         QByteArray alphaDef;
@@ -2753,7 +3098,7 @@ int AdvancedPdfEnginePrivate::addConstantAlphaObject(int brushAlpha, int penAlph
         s << "<<\n/ca " << (brushAlpha/qreal(255.)) << '\n';
         s << "/CA " << (penAlpha/qreal(255.)) << "\n>>";
         xprintf("%s\nendobj\n", alphaDef.constData());
-        alphaCache.insert(QPair<uint, uint>(brushAlpha, penAlpha), object);
+        alphaCache.insert(std::pair<uint, uint>(brushAlpha, penAlpha), object);
     }
     if (currentPage->graphicStates.indexOf(object) < 0)
         currentPage->graphicStates.append(object);
@@ -2875,6 +3220,7 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
 
     QImage image = img;
     QImage::Format format = image.format();
+    const bool grayscale = (colorModel == AdvancedPdfEngine::ColorModel::Grayscale);
 
     if (pdfVersion == AdvancedPdfEngine::Version_A1b) {
         if (image.hasAlphaChannel()) {
@@ -2898,7 +3244,7 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
         format = QImage::Format_Mono;
     } else {
         *bitmap = false;
-        if (format != QImage::Format_RGB32 && format != QImage::Format_ARGB32) {
+        if (format != QImage::Format_RGB32 && format != QImage::Format_ARGB32 && format != QImage::Format_CMYK8888) {
             image = image.convertToFormat(QImage::Format_ARGB32);
             format = QImage::Format_ARGB32;
         }
@@ -2906,7 +3252,6 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
 
     int w = image.width();
     int h = image.height();
-    int d = image.depth();
 
     if (format == QImage::Format_Mono) {
         int bytesPerLine = (w + 7) >> 3;
@@ -2917,7 +3262,7 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
             memcpy(rawdata, image.constScanLine(y), bytesPerLine);
             rawdata += bytesPerLine;
         }
-        object = writeImage(data, w, h, d, 0, 0, false, is_monochrome(img.colorTable()));
+        object = writeImage(data, w, h, WriteImageOption::Monochrome, 0, 0, false, is_monochrome(img.colorTable()));
     } else {
         QByteArray softMaskData;
         bool dct = false;
@@ -2929,10 +3274,14 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
             QBuffer buffer(&imageData);
             QImageWriter writer(&buffer, "jpeg");
             writer.setQuality(94);
+            if (format == QImage::Format_CMYK8888) {
+                // PDFs require CMYK colors not to be inverted in the JPEG encoding
+                writer.setSubType("CMYK");
+            }
             writer.write(image);
             dct = true;
 
-            if (format != QImage::Format_RGB32) {
+            if (format != QImage::Format_RGB32 && format != QImage::Format_CMYK8888) {
                 softMaskData.resize(w * h);
                 uchar *sdata = (uchar *)softMaskData.data();
                 for (int y = 0; y < h; ++y) {
@@ -2947,41 +3296,59 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
                 }
             }
         } else {
-            imageData.resize(grayscale ? w * h : 3 * w * h);
-            uchar *data = (uchar *)imageData.data();
-            softMaskData.resize(w * h);
-            uchar *sdata = (uchar *)softMaskData.data();
-            for (int y = 0; y < h; ++y) {
-                const QRgb *rgb = (const QRgb *)image.constScanLine(y);
+            if (format == QImage::Format_CMYK8888) {
+                imageData.resize(grayscale ? w * h : w * h * 4);
+                uchar *data = (uchar *)imageData.data();
+                const qsizetype bytesPerLine = image.bytesPerLine();
                 if (grayscale) {
-                    for (int x = 0; x < w; ++x) {
-                        *(data++) = qGray(*rgb);
-                        uchar alpha = qAlpha(*rgb);
-                        *sdata++ = alpha;
-                        hasMask |= (alpha < 255);
-                        hasAlpha |= (alpha != 0 && alpha != 255);
-                        ++rgb;
+                    for (int y = 0; y < h; ++y) {
+                        const uint *cmyk = (const uint *)image.constScanLine(y);
+                        for (int x = 0; x < w; ++x)
+                            *data++ = qGray(QCmyk32::fromCmyk32(*cmyk++).toColor().rgba());
                     }
                 } else {
-                    for (int x = 0; x < w; ++x) {
-                        *(data++) = qRed(*rgb);
-                        *(data++) = qGreen(*rgb);
-                        *(data++) = qBlue(*rgb);
-                        uchar alpha = qAlpha(*rgb);
-                        *sdata++ = alpha;
-                        hasMask |= (alpha < 255);
-                        hasAlpha |= (alpha != 0 && alpha != 255);
-                        ++rgb;
+                    for (int y = 0; y < h; ++y) {
+                        uchar *start = data + y * w * 4;
+                        memcpy(start, image.constScanLine(y), bytesPerLine);
+                    }
+                }
+            } else {
+                imageData.resize(grayscale ? w * h : 3 * w * h);
+                uchar *data = (uchar *)imageData.data();
+                softMaskData.resize(w * h);
+                uchar *sdata = (uchar *)softMaskData.data();
+                for (int y = 0; y < h; ++y) {
+                    const QRgb *rgb = (const QRgb *)image.constScanLine(y);
+                    if (grayscale) {
+                        for (int x = 0; x < w; ++x) {
+                            *(data++) = qGray(*rgb);
+                            uchar alpha = qAlpha(*rgb);
+                            *sdata++ = alpha;
+                            hasMask |= (alpha < 255);
+                            hasAlpha |= (alpha != 0 && alpha != 255);
+                            ++rgb;
+                        }
+                    } else {
+                        for (int x = 0; x < w; ++x) {
+                            *(data++) = qRed(*rgb);
+                            *(data++) = qGreen(*rgb);
+                            *(data++) = qBlue(*rgb);
+                            uchar alpha = qAlpha(*rgb);
+                            *sdata++ = alpha;
+                            hasMask |= (alpha < 255);
+                            hasAlpha |= (alpha != 0 && alpha != 255);
+                            ++rgb;
+                        }
                     }
                 }
             }
-            if (format == QImage::Format_RGB32)
+            if (format == QImage::Format_RGB32 || format == QImage::Format_CMYK8888)
                 hasAlpha = hasMask = false;
         }
         int maskObject = 0;
         int softMaskObject = 0;
         if (hasAlpha) {
-            softMaskObject = writeImage(softMaskData, w, h, 8, 0, 0);
+            softMaskObject = writeImage(softMaskData, w, h, WriteImageOption::Grayscale, 0, 0);
         } else if (hasMask) {
             // dither the soft mask to 1bit and add it. This also helps PDF viewers
             // without transparency support
@@ -2997,9 +3364,18 @@ int AdvancedPdfEnginePrivate::addImage(const QImage &img, bool *bitmap, bool los
                 }
                 mdata += bytesPerLine;
             }
-            maskObject = writeImage(mask, w, h, 1, 0, 0);
+            maskObject = writeImage(mask, w, h, WriteImageOption::Monochrome, 0, 0);
         }
-        object = writeImage(imageData, w, h, grayscale ? 8 : 32,
+
+        const WriteImageOption option = [&]() {
+            if (grayscale)
+                return WriteImageOption::Grayscale;
+            if (format == QImage::Format_CMYK8888)
+                return WriteImageOption::CMYK;
+            return WriteImageOption::RGB;
+        }();
+
+        object = writeImage(imageData, w, h, option,
                             maskObject, softMaskObject, dct);
     }
     imageCache.insert(serial_no, object);
@@ -3012,7 +3388,11 @@ void AdvancedPdfEnginePrivate::drawTextItem(const QPointF &p, const QTextItemInt
 
     const bool isLink = ti.charFormat.hasProperty(QTextFormat::AnchorHref);
     const bool isAnchor = ti.charFormat.hasProperty(QTextFormat::AnchorName);
-    if (isLink || isAnchor) {
+    // PDF/X-4 (§ 6.17) does not allow annotations that don't lie
+    // outside the BleedBox/TrimBox, so don't emit an hyperlink
+    // annotation at all.
+    const bool isX4 = pdfVersion == AdvancedPdfEngine::Version_X4;
+    if ((isLink && !isX4) || isAnchor) {
         qreal size = ti.fontEngine->fontDef.pixelSize;
         int synthesized = ti.fontEngine->synthesized();
         qreal stretch = synthesized & QFontEngine::SynthesizedStretch ? ti.fontEngine->fontDef.stretch/100. : 1.;
@@ -3046,7 +3426,7 @@ void AdvancedPdfEnginePrivate::drawTextItem(const QPointF &p, const QTextItemInt
                 xprintf("/F 4\n"); // enable print flag, disable all other
 
             xprintf("/Rect [");
-            xprintf(rectData.constData());
+            write(rectData.constData());
 #ifdef Q_DEBUG_PDF_LINKS
             xprintf("]\n/Border [16 16 1]\n");
 #else

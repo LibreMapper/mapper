@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Copyright 2015 Kai Pastor (OpenOrienteering)
+# Copyright 2025 Libor Pecháček
 #
 # This file is part of LibreMapper.
 
@@ -13,7 +14,8 @@
   i\\ * This file is part of LibreMapper.
   i\\ *
   i\\ * Changes:
-  i\\ * %DATE% Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+  i\\ * 2015 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+  i\\ * %DATE% Libor Pecháček <lpechacek@gmx.com>
   i\\ * - Adjustment of legal information
   i\\ * - Modifications required for separate compilation:
   i\\ *   - Renaming of selected files, classes, members and macros

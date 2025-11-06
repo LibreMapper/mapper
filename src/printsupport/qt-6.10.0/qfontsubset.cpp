@@ -3,7 +3,8 @@
  * This file is part of LibreMapper.
  *
  * Changes:
- * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2015 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2025-11-06 Libor Pecháček <lpechacek@gmx.com>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -12,6 +13,7 @@
  */
 // Copyright (C) 2016 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+// Qt-Security score:critical reason:data-parser
 
 #include "qfontsubset_p.h"
 #include <qdebug.h>

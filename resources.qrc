@@ -118,5 +118,6 @@
         <file>images/window-new.png</file>
         <file>images/mapper-icon/Mapper-128.png</file>
         <file>images/map-information.png</file>
+        <file alias="advanced_pdf/sRGB2014.icc">src/printsupport/qt-6.10.0/sRGB2014.icc</file>
     </qresource>
 </RCC>

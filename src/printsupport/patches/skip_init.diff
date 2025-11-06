@@ -1,0 +1,32 @@
+Index: qt-6.10.0/advanced_pdf.cpp
+===================================================================
+--- qt-6.10.0.orig/advanced_pdf.cpp
++++ qt-6.10.0/advanced_pdf.cpp
+@@ -13,6 +13,7 @@
+  * - Change of the PDF Producer property
+  * - Use of DeviceCMYK color space in PDF output
+  * - Distinct paint engine type
++ * - Skip Qt resource initialization
+  */
+ // Copyright (C) 2016 The Qt Company Ltd.
+ // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+@@ -57,11 +58,6 @@ static const bool do_compress = true;
+ // Can't use it though, as gs generates completely wrong images if this is true.
+ static const bool interpolateImages = false;
+ 
+-static void initResources()
+-{
+-    Q_INIT_RESOURCE(advanced_pdf);
+-}
+-
+ QT_BEGIN_NAMESPACE
+ 
+ using namespace Qt::StringLiterals;
+@@ -1466,7 +1462,6 @@ AdvancedPdfEnginePrivate::AdvancedPdfEng
+       embedFonts(true),
+       m_pageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF(10, 10, 10, 10))
+ {
+-    initResources();
+     resolution = 1200;
+     currentObject = 1;
+     currentPage = nullptr;
