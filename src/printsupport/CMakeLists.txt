@@ -14,9 +14,10 @@ set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "")
 set(PRINTSUPPORT_SRCS
   advanced_pdf_printer.cpp
   printer_properties.h
-  qt-6.7.0/advanced_pdf.cpp
-  qt-6.7.0/printengine_advanced_pdf.cpp
-  qt-6.7.0/qfontsubset.cpp
+  qt-6.10.0/advanced_pdf.cpp
+  qt-6.10.0/advanced_pdfoutputintent.cpp
+  qt-6.10.0/printengine_advanced_pdf.cpp
+  qt-6.10.0/qfontsubset.cpp
 )
 
 if(WIN32)
@@ -35,7 +36,7 @@ target_compile_definitions(printsupport PRIVATE
 target_include_directories(printsupport
   SYSTEM
   BEFORE
-  PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/qt-6.7.0"
+  PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/qt-6.10.0"
   INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 

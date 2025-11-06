@@ -1,8 +1,8 @@
-Index: qt-6.7.0/advanced_pdf.cpp
+Index: qt-6.10.0/advanced_pdf.cpp
 ===================================================================
---- qt-6.7.0.orig/advanced_pdf.cpp
-+++ qt-6.7.0/advanced_pdf.cpp
-@@ -9,6 +9,7 @@
+--- qt-6.10.0.orig/advanced_pdf.cpp
++++ qt-6.10.0/advanced_pdf.cpp
+@@ -10,6 +10,7 @@
   *   - Renaming of selected files, classes, members and macros
   *   - Adjustment of include statements
   *   - Removal of Q_XXX_EXPORT
@@ -10,12 +10,21 @@ Index: qt-6.7.0/advanced_pdf.cpp
   */
  // Copyright (C) 2016 The Qt Company Ltd.
  // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
-@@ -1655,7 +1656,7 @@ void AdvancedPdfEnginePrivate::writeInfo
-     xprintf("\n/Creator ");
-     printString(creator);
-     xprintf("\n/Producer ");
+@@ -1758,7 +1759,7 @@ void AdvancedPdfEnginePrivate::writeInfo
+     write("\n/Author ");
+     printString(author);
+     write("\n/Producer ");
 -    printString(QString::fromLatin1("Qt " QT_VERSION_STR));
 +    printString(QString::fromLatin1("LibreMapper"));
-     QDateTime now = QDateTime::currentDateTime();
-     QTime t = now.time();
-     QDate d = now.date();
+ 
+     const QTime t = date.time();
+     const QDate d = date.date();
+@@ -1810,7 +1811,7 @@ int AdvancedPdfEnginePrivate::writeXmpDo
+     if (!xmpDocumentMetadata.isEmpty()) {
+         metaDataContent = xmpDocumentMetadata;
+     } else {
+-        const QString producer(QString::fromLatin1("Qt " QT_VERSION_STR));
++        const QString producer(QString::fromLatin1("LibreMapper"));
+         const QString metaDataDate = date.toString(Qt::ISODate);
+ 
+         using namespace Qt::Literals;

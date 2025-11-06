@@ -3,7 +3,8 @@
  * This file is part of LibreMapper.
  *
  * Changes:
- * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2015 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2025-11-06 Libor Pecháček <lpechacek@gmx.com>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -116,7 +117,14 @@ void AdvancedPdfPrintEngine::setProperty(PrintEnginePropertyKey key, const QVari
         d->collate = value.toBool();
         break;
     case PPK_ColorMode:
-        d->grayscale = (QPrinter::ColorMode(value.toInt()) == QPrinter::GrayScale);
+        switch (QPrinter::ColorMode(value.toInt())) {
+        case QPrinter::GrayScale:
+            d->colorModel = AdvancedPdfEngine::ColorModel::Grayscale;
+            break;
+        case QPrinter::Color:
+            d->colorModel = AdvancedPdfEngine::ColorModel::Auto;
+            break;
+        }
         break;
     case PPK_Creator:
         d->creator = value.toString();
@@ -189,7 +197,8 @@ void AdvancedPdfPrintEngine::setProperty(PrintEnginePropertyKey key, const QVari
         Q_ASSERT(margins.size() == 4);
         d->m_pageLayout.setUnits(QPageLayout::Point);
         d->m_pageLayout.setMargins(QMarginsF(margins.at(0).toReal(), margins.at(1).toReal(),
-                                             margins.at(2).toReal(), margins.at(3).toReal()));
+                                             margins.at(2).toReal(), margins.at(3).toReal()),
+                                   QPageLayout::OutOfBoundsPolicy::Clamp);
         break;
     }
     case PPK_QPageSize: {
@@ -199,9 +208,9 @@ void AdvancedPdfPrintEngine::setProperty(PrintEnginePropertyKey key, const QVari
         break;
     }
     case PPK_QPageMargins: {
-        QPair<QMarginsF, QPageLayout::Unit> pair = qvariant_cast<QPair<QMarginsF, QPageLayout::Unit> >(value);
+        auto pair = qvariant_cast<std::pair<QMarginsF, QPageLayout::Unit>>(value);
         d->m_pageLayout.setUnits(pair.second);
-        d->m_pageLayout.setMargins(pair.first);
+        d->m_pageLayout.setMargins(pair.first, QPageLayout::OutOfBoundsPolicy::Clamp);
         break;
     }
     case PPK_QPageLayout: {
@@ -233,7 +242,7 @@ QVariant AdvancedPdfPrintEngine::property(PrintEnginePropertyKey key) const
         ret = d->collate;
         break;
     case PPK_ColorMode:
-        ret = d->grayscale ? QPrinter::GrayScale : QPrinter::Color;
+        ret = d->printerColorMode();
         break;
     case PPK_Creator:
         ret = d->creator;
@@ -312,7 +321,7 @@ QVariant AdvancedPdfPrintEngine::property(PrintEnginePropertyKey key) const
         ret.setValue(d->m_pageLayout.pageSize());
         break;
     case PPK_QPageMargins: {
-        QPair<QMarginsF, QPageLayout::Unit> pair = qMakePair(d->m_pageLayout.margins(), d->m_pageLayout.units());
+        std::pair<QMarginsF, QPageLayout::Unit> pair(d->m_pageLayout.margins(), d->m_pageLayout.units());
         ret.setValue(pair);
         break;
     }
@@ -378,6 +387,22 @@ AdvancedPdfPrintEnginePrivate::AdvancedPdfPrintEnginePrivate(QPrinter::PrinterMo
 AdvancedPdfPrintEnginePrivate::~AdvancedPdfPrintEnginePrivate()
 {
 }
+
+QPrinter::ColorMode AdvancedPdfPrintEnginePrivate::printerColorMode() const
+{
+    switch (colorModel) {
+    case AdvancedPdfEngine::ColorModel::RGB:
+    case AdvancedPdfEngine::ColorModel::CMYK:
+    case AdvancedPdfEngine::ColorModel::Auto:
+        return QPrinter::Color;
+    case AdvancedPdfEngine::ColorModel::Grayscale:
+        return QPrinter::GrayScale;
+    }
+
+    Q_UNREACHABLE();
+    return QPrinter::Color;
+}
+
 
 QT_END_NAMESPACE
 

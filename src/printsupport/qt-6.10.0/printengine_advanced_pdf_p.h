@@ -3,7 +3,8 @@
  * This file is part of LibreMapper.
  *
  * Changes:
- * 2024-04-17 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2015 Kai Pastor <dg0yt@darc.de> (OpenOrienteering)
+ * 2025-11-06 Libor Pecháček <lpechacek@gmx.com>
  * - Adjustment of legal information
  * - Modifications required for separate compilation:
  *   - Renaming of selected files, classes, members and macros
@@ -90,6 +91,8 @@ class AdvancedPdfPrintEnginePrivate : public AdvancedPdfEnginePrivate
 public:
     AdvancedPdfPrintEnginePrivate(QPrinter::PrinterMode m);
     ~AdvancedPdfPrintEnginePrivate();
+
+    QPrinter::ColorMode printerColorMode() const;
 
     virtual bool openPrintDevice();
     virtual void closePrintDevice();

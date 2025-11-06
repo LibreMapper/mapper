@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBDIR=qt-6.7.0
+SUBDIR=qt-6.10.0
 
 if [ -n "$1" -a -d "$1/qtbase/src" ] ; then
 	SOURCE_DIR=$1/qtbase/src
@@ -22,6 +22,8 @@ for I in \
   printsupport/kernel/qprintengine_pdf.cpp \
   gui/painting/qpdf_p.h \
   gui/painting/qpdf.cpp \
+  gui/painting/qpdfoutputintent.h \
+  gui/painting/qpdfoutputintent.cpp \
   gui/text/qfontsubset_p.h \
   gui/text/qfontsubset_agl.cpp \
   gui/text/qfontsubset.cpp

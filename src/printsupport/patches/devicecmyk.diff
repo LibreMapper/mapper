@@ -1,8 +1,8 @@
-Index: qt-6.7.0/advanced_pdf.cpp
+Index: qt-6.10.0/advanced_pdf.cpp
 ===================================================================
---- qt-6.7.0.orig/advanced_pdf.cpp
-+++ qt-6.7.0/advanced_pdf.cpp
-@@ -10,6 +10,7 @@
+--- qt-6.10.0.orig/advanced_pdf.cpp
++++ qt-6.10.0/advanced_pdf.cpp
+@@ -11,6 +11,7 @@
   *   - Adjustment of include statements
   *   - Removal of Q_XXX_EXPORT
   * - Change of the PDF Producer property
@@ -10,59 +10,12 @@ Index: qt-6.7.0/advanced_pdf.cpp
   */
  // Copyright (C) 2016 The Qt Company Ltd.
  // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
-@@ -1254,12 +1255,13 @@ void AdvancedPdfEngine::setPen()
- 
-     QColor rgba = b.color();
-     if (d->grayscale) {
--        qreal gray = qGray(rgba.rgba())/255.;
--        *d->currentPage << gray << gray << gray;
-+        qreal gray = (255-qGray(rgba.rgba()))/255.0;
-+        *d->currentPage << 0.0 << 0.0 << 0.0 << gray;
-     } else {
--        *d->currentPage << rgba.redF()
--                        << rgba.greenF()
--                        << rgba.blueF();
-+        *d->currentPage << rgba.cyanF()
-+                        << rgba.magentaF()
-+                        << rgba.yellowF()
-+                        << rgba.blackF();
-     }
-     *d->currentPage << "SCN\n";
- 
-@@ -1320,12 +1322,13 @@ void AdvancedPdfEngine::setBrush()
-     if (specifyColor) {
-         QColor rgba = d->brush.color();
-         if (d->grayscale) {
--            qreal gray = qGray(rgba.rgba())/255.;
--            *d->currentPage << gray << gray << gray;
-+            qreal gray = (255-qGray(rgba.rgba()))/255.0;
-+            *d->currentPage << 0.0 << 0.0 << 0.0 << gray;
-         } else {
--            *d->currentPage << rgba.redF()
--                            << rgba.greenF()
--                            << rgba.blueF();
-+            *d->currentPage << rgba.cyanF()
-+                            << rgba.magentaF()
-+                            << rgba.yellowF()
-+                            << rgba.blackF();
-         }
-     }
-     if (patternObject)
-@@ -1644,7 +1647,7 @@ void AdvancedPdfEnginePrivate::writeHead
- 
-     // color space for pattern
-     patternColorSpace = addXrefEntry(-1);
--    xprintf("[/Pattern /DeviceRGB]\n"
-+    xprintf("[/Pattern /DeviceCMYK]\n"
-             "endobj\n");
- }
- 
-@@ -2091,7 +2094,7 @@ void AdvancedPdfEnginePrivate::writePage
-     xprintf("<<\n"
-             "/ColorSpace <<\n"
-             "/PCSp %d 0 R\n"
--            "/CSp /DeviceRGB\n"
-+            "/CSp /DeviceCMYK\n"
-             "/CSpg /DeviceGray\n"
-             ">>\n"
-             "/ExtGState <<\n"
+@@ -1457,7 +1458,7 @@ int AdvancedPdfEngine::metric(QPaintDevi
+ AdvancedPdfEnginePrivate::AdvancedPdfEnginePrivate()
+     : clipEnabled(false), allClipped(false), hasPen(true), hasBrush(false), simplePen(false),
+       needsTransform(false), pdfVersion(AdvancedPdfEngine::Version_1_4),
+-      colorModel(AdvancedPdfEngine::ColorModel::Auto),
++      colorModel(AdvancedPdfEngine::ColorModel::CMYK),
+       outDevice(nullptr), ownsDevice(false),
+       embedFonts(true),
+       m_pageLayout(QPageSize(QPageSize::A4), QPageLayout::Portrait, QMarginsF(10, 10, 10, 10))
