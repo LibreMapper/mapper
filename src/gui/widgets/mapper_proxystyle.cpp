@@ -53,7 +53,7 @@ namespace  {
  * This function helps to customize the style for classes like
  * "QDockWidgetTitleButton" or "MapEditorDockWidget".
  */
-bool Q_DECL_UNUSED isDockWidgetRelated(const QWidget* widget)
+Q_DECL_UNUSED bool isDockWidgetRelated(const QWidget* widget)
 {
 	if (widget == nullptr)
 		return false;
