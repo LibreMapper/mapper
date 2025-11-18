@@ -501,7 +501,7 @@ void ObjectQueryTest::testParser()
  * We don't need a real GUI window.
  */
 namespace {
-	auto Q_DECL_UNUSED qpa_selected = qputenv("QT_QPA_PLATFORM", "minimal");  // clazy:exclude=non-pod-global-static
+	Q_DECL_UNUSED auto const qpa_selected = qputenv("QT_QPA_PLATFORM", "minimal");  // clazy:exclude=non-pod-global-static
 }
 
 
