@@ -54,8 +54,8 @@ private slots:
 		QTest::addColumn<QString>("param_string");
 		
 		QTest::newRow("Stringtype: 8 (BackgroundMap)") << "C:\\user\\OL\\Karten\\Hagelloch\\Ortho\10-02-_2020_13-58-12.png\ts0\tr1\tx-54.763125\ty-118.991563\ta-0.07881792\tb-0.07881792\tu0.0196680528\tv0.0196680528";
-		QTest::newRow("Stringtype: 9 (Color)") << "All printing colours\tn1\tk100\tc100\tm100\ty100\tsProcess Black\tp100\tsPMS471_Brown\tp100\tsPMS136_Yellow\tp100\tsPMS299_Blue\tp100\tsPMS361_Green\tp100\tsPMS428_Grey\tp100\tsPurple\tp100\to0\tt100\tbNormal";
-		QTest::newRow("Stringtype: 9 (Color)") << "Lower Purple for Course Overprint\tn52\tc30\tm100\ty0\tk0\to1\tt100\tbDarken\tsPurple\tp100";
+		QTest::newRow("Stringtype: 9 (Color) - case 1") << "All printing colours\tn1\tk100\tc100\tm100\ty100\tsProcess Black\tp100\tsPMS471_Brown\tp100\tsPMS136_Yellow\tp100\tsPMS299_Blue\tp100\tsPMS361_Green\tp100\tsPMS428_Grey\tp100\tsPurple\tp100\to0\tt100\tbNormal";
+		QTest::newRow("Stringtype: 9 (Color) - case 2") << "Lower Purple for Course Overprint\tn52\tc30\tm100\ty0\tk0\to1\tt100\tbDarken\tsPurple\tp100";
 		QTest::newRow("Stringtype: 10 (SpotColor)") << "PMS471_Brown\tn2\tv1\tc0.0\tm56.0\ty81.5\tk18.5\tf1500.0\ta45.0";
 		QTest::newRow("Stringtype: 12 (Zoom)") << "\tx-27.403086\ty-42.832344\tz3.784824";
 		QTest::newRow("Stringtype: 1024 (DisplayPar)") << "\tt1\tg-1\tp188\tv190\ts128\tzVERT";
