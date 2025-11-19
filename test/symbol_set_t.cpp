@@ -922,11 +922,12 @@ void SymbolSetTool::processSymbolSet()
 void SymbolSetTool::processSymbolSetTranslations_data()
 {
 	QTest::addColumn<int>("unused");
-	QTest::newRow("map_symbols_template.ts") << 0;
 #ifdef MAP_SYMBOL_TRANSLATIONS
 	const auto files = map_symbol_translations.split(';');
 	for (const auto& file : files)
 		QTest::newRow(file) << 0;
+#else
+	QTest::newRow("map_symbols_template.ts") << 0;
 #endif
 }
 	
