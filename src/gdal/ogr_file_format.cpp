@@ -451,7 +451,7 @@ namespace {
 		}
 		
 	public:
-		AverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs)
+		AverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs)
 		{
 			auto num_layers = OGR_DS_GetLayerCount(data_source);
 			for (int i = 0; i < num_layers; ++i)
@@ -1837,7 +1837,7 @@ LatLon OgrFileImport::calcAverageLatLon(OGRDataSourceH data_source)
 
 
 // static
-QPointF OgrFileImport::calcAverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs)
+QPointF OgrFileImport::calcAverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs)
 {
 	return QPointF{AverageCoords(data_source, srs)};
 }
@@ -1928,10 +1928,16 @@ bool OgrFileExport::exportImplementation()
 	setupGeoreferencing(po_driver);
 
 	// Create output dataset
-	po_ds = ogr::unique_datasource(OGR_Dr_CreateDataSource(
-	                                   po_driver,
-	                                   path.toLatin1(),
-	                                   nullptr));
+	// FIXME - turn po_ds into a smart pointer that calls GDALClose upon destruction
+	/*
+	using unique_datasource = std::unique_ptr<GDALDatasetHS, decltype(&GDALClose)>;
+	
+	// Convenience function
+	inline unique_datasource make_unique_datasource(GDALDatasetH ds) {
+		return unique_datasource(ds, GDALClose);
+	}
+	*/
+	po_ds = GDALCreate(po_driver, path.toLatin1().constData(), 0, 0, 0, GDT_Unknown, nullptr);
 	if (!po_ds)
 		throw FileFormatException(tr("Failed to create dataset: %1").arg(QString::fromLatin1(CPLGetLastErrorMsg())));
 
@@ -2357,7 +2363,7 @@ void OgrFileExport::addAreasToLayer(OGRLayerH layer, const std::function<bool (c
 
 OGRLayerH OgrFileExport::createLayer(const char* layer_name, OGRwkbGeometryType type)
 {
-	auto po_layer = GDALDatasetCreateLayer(po_ds.get(), layer_name, map_srs.get(), type, nullptr);
+	auto po_layer = GDALDatasetCreateLayer(po_ds, layer_name, map_srs.get(), type, nullptr);
 	if (!po_layer) {
 		addWarning(tr("Failed to create layer %1: %2").arg(QString::fromUtf8(layer_name), QString::fromLatin1(CPLGetLastErrorMsg())));
 		return nullptr;

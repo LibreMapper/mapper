@@ -315,7 +315,7 @@ protected:
 	
 	static LatLon calcAverageLatLon(OGRDataSourceH data_source);
 	
-	static QPointF calcAverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs);
+	static QPointF calcAverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs);
 	
 	
 	void handleKmlOverlayIcon(OgrFileImport::ObjectList& objects, const KeyValueContainer& tags) const;
@@ -432,7 +432,7 @@ protected:
 
 private:
 	const char* id;
-	ogr::unique_datasource po_ds;
+	GDALDriverH po_ds = {};
 	ogr::unique_fielddefn o_name_field;
 	ogr::unique_srs map_srs;
 	ogr::unique_styletable table;
