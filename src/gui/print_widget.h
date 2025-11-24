@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -197,7 +197,7 @@ protected slots:
 	
 	/** This slot reacts to changes of the "Simulate overprinting" option. */
 	void overprintingClicked(bool checked);
-
+	
 	/** This slot reacts to changes of the "Color mode" option. */
 	void colorModeChanged();
 	
@@ -291,6 +291,7 @@ private:
 	QCheckBox* show_grid_check;
 	QCheckBox* overprinting_check;
 	QCheckBox* world_file_check;
+	QCheckBox* transparent_background_check;
 	QCheckBox* different_scale_check;
 	QSpinBox* different_scale_edit;
 	QComboBox* color_mode_combo;
@@ -332,7 +333,6 @@ private:
 Q_DECLARE_OPERATORS_FOR_FLAGS(LibreMapper::PrintWidget::TaskFlags)
 
 
-#endif
+#endif // OPENORIENTEERING_PRINT_WIDGET_H
 
-
-#endif
+#endif // QT_PRINTSUPPORT_LIB
