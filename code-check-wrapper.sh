@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# Copyright 2017, 2018, 2024 Kai Pastor (OpenOrienteering)
+# Copyright 2017, 2018, 2024, 2025 Kai Pastor (OpenOrienteering)
 #
 # This file is part of LibreMapper.
  
@@ -85,6 +85,7 @@ for I in \
   stretch_map_dialog.cpp \
   style_t.cpp \
   /symbol.cpp \
+  symbol_icon_decorator.cpp \
   symbol_report \
   symbol_replacement.cpp \
   symbol_replacement_dialog.cpp \
