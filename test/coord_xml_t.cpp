@@ -995,7 +995,6 @@ void CoordXmlTest::readFastImplementation()
 		
 		header.open(QBuffer::ReadWrite);
 		xml.setAutoFormatting(false);
-		xml.setAutoFormatting(false);
 		xml.writeStartDocument();
 		
 		XMLFileFormat::active_version = 6; // Activate fast text format.

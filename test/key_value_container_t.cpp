@@ -24,9 +24,9 @@ using namespace LibreMapper;
 #define QSL(str) QStringLiteral(str)
 
 /**
- * @test Tests printing and export features
+ * @test Tests the key-value container class
  */
-class KeyValueContainterTest : public QObject
+class KeyValueContainerTest : public QObject
 {
 Q_OBJECT
 	
@@ -153,5 +153,5 @@ private slots:
 
 
 
-QTEST_GUILESS_MAIN(KeyValueContainterTest)
+QTEST_GUILESS_MAIN(KeyValueContainerTest)
 #include "key_value_container_t.moc"  // IWYU pragma: keep
