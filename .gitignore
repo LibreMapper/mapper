@@ -7,6 +7,6 @@ CMakeLists.txt.user*
 *~
 build*/
 help/*.qhc
-3rd-party/*/download
+3rd-party/*/download/*
 !3rd-party/*/download/README.txt
 packaging/android/Mapper
