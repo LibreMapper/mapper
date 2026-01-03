@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
-# Copyright 2012-2024 Kai Pastor (OpenOrienteering)
+# Copyright 2012-2024, 2026 Kai Pastor (OpenOrienteering)
 #
 # This file is part of LibreMapper.
 
@@ -20,6 +20,12 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
 
 # Build configuration
 
+get_filename_component(ABSOLUTE_ABOUT_DESTINATION "${MAPPER_ABOUT_DESTINATION}" ABSOLUTE
+  BASE_DIR "${CMAKE_INSTALL_PREFIX}"
+)
+get_filename_component(ABSOLUTE_DATA_DESTINATION "${MAPPER_DATA_DESTINATION}" ABSOLUTE
+  BASE_DIR "${CMAKE_INSTALL_PREFIX}"
+)
 configure_file(mapper_config.h.in "${CMAKE_CURRENT_BINARY_DIR}/mapper_config.h.tmp")
 execute_process(
   COMMAND "${CMAKE_COMMAND}" -E copy_if_different mapper_config.h.tmp mapper_config.h
