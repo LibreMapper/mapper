@@ -121,11 +121,11 @@ void ReopenTemplateDialog::OpenTemplateList::dropEvent(QDropEvent* event)
 		auto item_data = item(i)->data(Qt::UserRole);
 		switch (item_data.typeId())
 		{
-		case QVariant::Int:
+		case QMetaType::Int:
 			item_index = i;
 			src_pos = item_data.toInt();
 			break;
-		case QVariant::Bool:
+		case QMetaType::Bool:
 			map_row = i;
 			break;
 		default:
