@@ -229,11 +229,13 @@ bool SymbolReplacementDialog::saveCrtFile()
 	{
 		updateMappingFromTable();
 		QSaveFile crt_file(filepath);
-		crt_file.open(QIODevice::WriteOnly | QIODevice::Text);
-		QTextStream stream{ &crt_file };
-		symbol_rules.writeCrt(stream);
-		if (crt_file.commit())
-			return true;
+		if (crt_file.open(QIODevice::WriteOnly | QIODevice::Text))
+		{
+			QTextStream stream{ &crt_file };
+			symbol_rules.writeCrt(stream);
+			if (crt_file.commit())
+				return true;
+		}
 		
 		/// \todo Reused translation, consider generalized context
 		QMessageBox::warning(this, ::LibreMapper::Map::tr("Error"),

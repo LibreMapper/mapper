@@ -89,7 +89,7 @@ void PolygonTest::saveResults(const cove::PolygonList& polys,
                               const QString& filename) const
 {
 	QFile file(filename);
-	file.open(QIODevice::WriteOnly);
+	QVERIFY(file.open(QIODevice::WriteOnly));
 	QDataStream out(&file);
 
 	for (auto const& poly : polys)

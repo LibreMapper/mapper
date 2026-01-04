@@ -106,8 +106,8 @@ private slots:
 		QVERIFY(actual_track.saveTo(filename_tmp));
 		
 		auto readAll = [](QFile&& file) -> QByteArray {
-			file.open(QIODevice::ReadOnly | QIODevice::Text);
-			return file.readAll();
+			return (file.open(QIODevice::ReadOnly | QIODevice::Text)
+			        ? file.readAll() : QByteArray {});
 		};
 		const auto raw_tmp = readAll(QFile(filename_tmp));
 		QVERIFY(!raw_tmp.isEmpty());
