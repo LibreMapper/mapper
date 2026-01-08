@@ -162,6 +162,21 @@ namespace ogr
 }
 
 
+namespace gdal
+{
+	class GDALDatasetHDeleter
+	{
+	public:
+		void operator()(GDALDatasetH data_source) const
+		{
+			::GDALClose(data_source);
+		}
+	};
+
+	/** A convenience class for GDAL C API datasource handles, similar to std::unique_ptr. */
+	using unique_dataset = std::unique_ptr<typename std::remove_pointer<GDALDatasetH>::type, GDALDatasetHDeleter>;
+}  // namespace gdal
+
 
 /**
  * An Importer for geospatial vector data supported by OGR.
@@ -315,7 +330,7 @@ protected:
 	
 	static LatLon calcAverageLatLon(OGRDataSourceH data_source);
 	
-	static QPointF calcAverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs);
+	static QPointF calcAverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs);
 	
 	
 	void handleKmlOverlayIcon(OgrFileImport::ObjectList& objects, const KeyValueContainer& tags) const;
@@ -432,7 +447,7 @@ protected:
 
 private:
 	const char* id;
-	ogr::unique_datasource po_ds;
+	gdal::unique_dataset po_ds;
 	ogr::unique_fielddefn o_name_field;
 	ogr::unique_srs map_srs;
 	ogr::unique_styletable table;
