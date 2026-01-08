@@ -451,7 +451,7 @@ namespace {
 		}
 		
 	public:
-		AverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs)
+		AverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs)
 		{
 			auto num_layers = OGR_DS_GetLayerCount(data_source);
 			for (int i = 0; i < num_layers; ++i)
@@ -1837,7 +1837,7 @@ LatLon OgrFileImport::calcAverageLatLon(OGRDataSourceH data_source)
 
 
 // static
-QPointF OgrFileImport::calcAverageCoords(OGRDataSourceH data_source, OGRDataSourceH srs)
+QPointF OgrFileImport::calcAverageCoords(OGRDataSourceH data_source, OGRSpatialReferenceH srs)
 {
 	return QPointF{AverageCoords(data_source, srs)};
 }
@@ -1928,10 +1928,9 @@ bool OgrFileExport::exportImplementation()
 	setupGeoreferencing(po_driver);
 
 	// Create output dataset
-	po_ds = ogr::unique_datasource(OGR_Dr_CreateDataSource(
-	                                   po_driver,
-	                                   path.toLatin1(),
-	                                   nullptr));
+	po_ds = gdal::unique_dataset(GDALCreate(po_driver,
+	                                        path.toLatin1().constData(),
+	                                        0, 0, 0, GDT_Unknown, nullptr));
 	if (!po_ds)
 		throw FileFormatException(tr("Failed to create dataset: %1").arg(QString::fromLatin1(CPLGetLastErrorMsg())));
 
