@@ -634,6 +634,8 @@ protected slots:
 	void projectionChanged();
 	void georeferencingDialogFinished();
 	
+	void colorAppearanceChanged();
+
 	/**
 	 * Sets the map's current part.
 	 */
@@ -730,6 +732,10 @@ private:
 	QAction* geographic_coordinates_act = {};
 	QAction* geographic_coordinates_dms_act = {};
 	
+	QAction* oomapper_colors_act = {};
+	QAction* pdf_colors_act = {};
+	QAction* ocad_colors_act = {};
+
 	QMenu* toolbars_menu = {};
 	
 	QAction* scale_all_symbols_act = {};

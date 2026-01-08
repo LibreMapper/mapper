@@ -263,7 +263,7 @@ void TemplateMap::drawTemplate(QPainter* painter, const QRectF& clip_rect, doubl
 		if (dpi > 0)
 			scaling *= dpi / 25.4;
 	}
-	RenderConfig config = { *template_map, transformed_clip_rect, scaling, options, qreal(opacity) };
+	RenderConfig config = { *template_map, transformed_clip_rect, scaling, {}, options, qreal(opacity) };
 	// TODO: introduce template-specific options, adjustable by the user, to allow changing some of these parameters
 	template_map->draw(painter, config);
 }

@@ -624,7 +624,7 @@ void CutTool::drawImpl(QPainter* painter, MapWidget* widget)
 						   widget->height() / 2.0 + map_view->panOffset().y());
 		painter->setWorldTransform(map_view->worldTransform(), true);
 		
-		RenderConfig config = { *map, map_view->calculateViewedRect(widget->viewportToView(widget->rect())), map_view->calculateFinalZoomFactor(), RenderConfig::Tool, 0.5 };
+		RenderConfig config = { *map, map_view->calculateViewedRect(widget->viewportToView(widget->rect())), map_view->calculateFinalZoomFactor(), {}, RenderConfig::Tool, 0.5 };
 		renderables->draw(painter, config);
 		
 		painter->restore();

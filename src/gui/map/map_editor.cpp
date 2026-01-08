@@ -1115,6 +1115,27 @@ void MapEditorController::createActions()
 	projectionChanged();
 	
 	copy_coords_act = newAction("copy-coords", tr("Copy position"), this, SLOT(copyDisplayedCoords()), "copy-coords.png", tr("Copy position to clipboard."));
+
+	oomapper_colors_act = new QAction(tr("OO Mapper (original)"), this);
+	oomapper_colors_act->setCheckable(true);
+	pdf_colors_act = new QAction(tr("PDF viewer"), this);
+	pdf_colors_act->setCheckable(true);
+	ocad_colors_act = new QAction(tr("OCAD Viewer"), this);
+	ocad_colors_act->setCheckable(true);
+	auto* color_appearance_group = new QActionGroup(this);
+	color_appearance_group->addAction(oomapper_colors_act);
+	color_appearance_group->addAction(pdf_colors_act);
+	color_appearance_group->addAction(ocad_colors_act);
+	QObject::connect(color_appearance_group, &QActionGroup::triggered, this, &MapEditorController::colorAppearanceChanged);
+	switch(Settings::getInstance().getSettingCached(Settings::MapDisplay_ColorCorrection).toInt())
+	{
+	case 0: oomapper_colors_act->setChecked(true);
+		break;
+	case 1: pdf_colors_act->setChecked(true);
+		break;
+	case 2: ocad_colors_act->setChecked(true);
+		break;
+	}
 }
 
 void MapEditorController::createMenuAndToolbars()
@@ -1192,6 +1213,12 @@ void MapEditorController::createMenuAndToolbars()
 	coordinates_menu->addAction(geographic_coordinates_act);
 	coordinates_menu->addAction(geographic_coordinates_dms_act);
 	view_menu->addMenu(coordinates_menu);
+	QMenu* color_appearance_menu = new QMenu(tr("Color appearance"), view_menu);
+	color_appearance_menu->menuAction()->setMenuRole(QAction::NoRole);
+	color_appearance_menu->addAction(oomapper_colors_act);
+	color_appearance_menu->addAction(pdf_colors_act);
+	color_appearance_menu->addAction(ocad_colors_act);
+	view_menu->addMenu(color_appearance_menu);
 	view_menu->addSeparator();
 	view_menu->addAction(fullscreen_act);
 	view_menu->addSeparator();
@@ -2151,6 +2178,17 @@ void MapEditorController::projectionChanged()
 		map_widget->setCoordsDisplay(MapWidget::MAP_COORDS);
 		map_coordinates_act->setChecked(true);
 	}
+}
+
+void MapEditorController::colorAppearanceChanged()
+{
+	int numeric_choice = 0;
+	if (pdf_colors_act->isChecked())
+		numeric_choice = 1;
+	else if (ocad_colors_act->isChecked())
+		numeric_choice = 2;
+	Settings::getInstance().setSetting(Settings::MapDisplay_ColorCorrection, numeric_choice);
+	map_widget->updateEverything();
 }
 
 void MapEditorController::showSymbolWindow(bool show)

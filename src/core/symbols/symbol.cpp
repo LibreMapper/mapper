@@ -764,7 +764,7 @@ QImage Symbol::createIcon(const Map& map, int side_length, bool antialiasing, qr
 		symbol_copy->setHidden(false);
 	}
 	
-	auto config = RenderConfig { map, QRectF(-10000, -10000, 20000, 20000), final_zoom, RenderConfig::HelperSymbols, 1.0 };
+	auto config = RenderConfig { map, QRectF(-10000, -10000, 20000, 20000), final_zoom, {}, RenderConfig::HelperSymbols, 1.0 };
 	icon_map.draw(&painter, config);
 	painter.end();
 	
