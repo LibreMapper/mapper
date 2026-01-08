@@ -292,6 +292,9 @@ if(Mapper_PACKAGE_GDAL)
 	  DESTINATION "${MAPPER_DATA_DESTINATION}/gdal")
         cmake_path(GET GDAL_LIBRARY PARENT_PATH GDAL_LIBRARY_DIR)
 	list(APPEND MAPPER_LIB_HINTS "${GDAL_LIBRARY_DIR}")
+	# Also include the bin dir as it contains the DLL's
+	cmake_path(GET GDAL_LIBRARY_DIR PARENT_PATH GDAL_ROOT)
+	list(APPEND MAPPER_LIB_HINTS "${GDAL_ROOT}/bin")
 endif()
 
 unset(MAPPER_QT_PLUGINS)
