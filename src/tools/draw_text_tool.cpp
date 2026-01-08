@@ -447,7 +447,7 @@ void DrawTextTool::drawImpl(QPainter* painter, MapWidget* widget)
 	widget->applyMapTransform(painter);
 	
 	float opacity = text_editor ? 1.0f : 0.5f;
-	RenderConfig config = { *map(), widget->getMapView()->calculateViewedRect(widget->viewportToView(widget->rect())), widget->getMapView()->calculateFinalZoomFactor(), RenderConfig::Tool, opacity };
+	RenderConfig config = { *map(), widget->getMapView()->calculateViewedRect(widget->viewportToView(widget->rect())), widget->getMapView()->calculateFinalZoomFactor(), {}, RenderConfig::Tool, opacity };
 	renderables.draw(painter, config);
 	
 	if (text_editor)

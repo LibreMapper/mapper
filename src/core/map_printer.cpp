@@ -1105,7 +1105,7 @@ void MapPrinter::drawPage(QPainter* device_painter, const QRectF& page_extent, c
 		map_painter->setTransform(page_extent_transform, /*combine*/ true);
 		map_painter->setClipRect(page_region_used, Qt::ReplaceClip);
 		
-		RenderConfig config = { map, page_region_used, units_per_mm * scale_adjustment, RenderConfig::NoOptions, 1.0 };
+		RenderConfig config = { map, page_region_used, units_per_mm * scale_adjustment, {}, RenderConfig::NoOptions, 1.0 };
 		
 		if (rasterModeSelected() && options.simulate_overprinting)
 		{
@@ -1264,7 +1264,7 @@ void MapPrinter::drawSeparationPages(QPrinter* printer, QPainter* device_painter
 				printer->newPage();
 			}
 			
-			RenderConfig config = { map, page_extent, scale, RenderConfig::NoOptions, 1.0 };
+			RenderConfig config = { map, page_extent, scale, {}, RenderConfig::NoOptions, 1.0 };
 			map.drawColorSeparation(device_painter, config, color);
 			need_new_page = true;
 		}

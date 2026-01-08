@@ -996,7 +996,7 @@ void Map::drawSelection(QPainter* painter, bool force_min_size, MapWidget* widge
 		options |= RenderConfig::Highlighted;
 		selection_opacity = 0.4;
 	}
-	RenderConfig config = { *this, view->calculateViewedRect(widget->viewportToView(widget->rect())), view->calculateFinalZoomFactor(), options, selection_opacity };
+	RenderConfig config = { *this, view->calculateViewedRect(widget->viewportToView(widget->rect())), view->calculateFinalZoomFactor(), {}, options, selection_opacity };
 	replacement_renderables->draw(painter, config);
 	
 	painter->restore();

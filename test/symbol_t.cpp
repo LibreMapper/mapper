@@ -266,7 +266,7 @@ private slots:
 		painter.scale(pixel_per_mm, pixel_per_mm);
 		painter.translate(-extent.topLeft());
 		painter.setClipRect(extent);
-		map.draw(&painter, RenderConfig{map, extent, pixel_per_mm, RenderConfig::DisableAntialiasing, 1});
+		map.draw(&painter, RenderConfig{map, extent, pixel_per_mm, {}, RenderConfig::DisableAntialiasing, 1});
 		painter.end();
 		
 		auto image_filename = QFileInfo{map_filename}.absoluteFilePath();

@@ -258,7 +258,7 @@ QImage FillTool::rasterizeMap(const QRectF& extent, QTransform& out_transform)
 	
 	// Draw map
 	RenderConfig::Options options = RenderConfig::DisableAntialiasing | RenderConfig::ForceMinSize;
-	RenderConfig config = { *map(), extent, view.calculateFinalZoomFactor(), options, 1.0 };
+	RenderConfig config = { *map(), extent, view.calculateFinalZoomFactor(), {}, options, 1.0 };
 	
 	QPainter painter;
 	painter.begin(&image);

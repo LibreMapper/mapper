@@ -1332,6 +1332,51 @@ void MapWidget::updateTemplateCache(QImage& cache, QRect& dirty_rect, int first_
 	dirty_rect.setWidth(-1); // => !dirty_rect.isValid()
 }
 
+
+namespace ColorCorrection {
+	// Color rendering helpers
+
+	QColor pdf_viewer_like(const MapColorCmyk& color_cmyk)
+	{
+		// Unknown source. This formula was proposed in
+		// https://github.com/OpenOrienteering/mapper/issues/2299#issue-2686041717
+		// and provides results very similar to Poppler PDF rendering results.
+		double r = (1.0 - color_cmyk.c)
+		           * (1.0 - color_cmyk.m * 0.098)
+		           * (1.0 - color_cmyk.k);
+		double g = (1.0 - color_cmyk.c * 0.376)
+		           * (1.0 - color_cmyk.m)
+		           * (1.0 - color_cmyk.y * 0.070)
+		           * (1.0 - color_cmyk.k);
+		double b = (1.0 - color_cmyk.c * 0.109)
+		           * (1.0 - color_cmyk.m * 0.505)
+		           * (1.0 - color_cmyk.y)
+		           * (1.0 - color_cmyk.k);
+		return QColor::fromRgbF(r, g, b);
+	}
+
+	QColor ocad_like(const MapColorCmyk& color_cmyk)
+	{
+		// OCAD-like transformation was determined by sampling CMYK colors
+		// from maps and their RGB values form Viewer rendered images. The
+		// formula coefficients were calculated using LibreOffice Solver to
+		// minimize differences between the sampled and calculated RGB values.
+		double r = (1.0 - color_cmyk.c)
+		           * (1.0 - color_cmyk.m * 0.00498)
+		           * (1.0 - color_cmyk.y * 0.00703)
+		           * (1.0 - color_cmyk.k);
+		double g = (1.0 - color_cmyk.c * 0.17416)
+		           * (1.0 - color_cmyk.m * 0.89769)
+		           * (1.0 - color_cmyk.y * 0.00272)
+		           * (1.0 - color_cmyk.k);
+		double b = (1.0 - color_cmyk.c * 0.18420)
+		           * (1.0 - color_cmyk.y * 0.91071)
+		           * (1.0 - color_cmyk.k);
+		return QColor::fromRgbF(r, g, b);
+	}
+} // namespace ColorCorrection
+
+
 void MapWidget::updateMapCache(bool use_background)
 {
 	if (map_cache.isNull())
@@ -1374,7 +1419,18 @@ void MapWidget::updateMapCache(bool use_background)
 	Map* map = view->getMap();
 	QRectF map_view_rect = view->calculateViewedRect(viewportToView(map_cache_dirty_rect));
 
-	RenderConfig config = { *map, map_view_rect, view->calculateFinalZoomFactor(), options, 1.0 };
+	std::function<QColor(const MapColorCmyk&)> color_transform;
+	switch (Settings::getInstance().getSettingCached(Settings::MapDisplay_ColorCorrection).toInt())
+	{
+	case 1: color_transform = &ColorCorrection::pdf_viewer_like;
+		break;
+	case 2: color_transform = &ColorCorrection::ocad_like;
+		break;
+	default:
+		break;
+	}
+
+	RenderConfig config = { *map, map_view_rect, view->calculateFinalZoomFactor(), color_transform, options, 1.0 };
 	
 	painter.translate(width() / 2.0, height() / 2.0);
 	painter.setWorldTransform(view->worldTransform(), true);

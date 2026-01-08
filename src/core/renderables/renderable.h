@@ -82,6 +82,9 @@ public:
 	                      ///  Used to calculate the final object sizes when
                           ///  ForceMinSize is set.
     
+	std::function<QColor(const MapColorCmyk&)> color_transform; ///< Color transformation function for map colors. The
+	                                     ///  primary use is conversion of CMYK color to screen colors.
+
 	Options options;      ///< The rendering options.
 	
 	qreal   opacity;      ///< The opacity.

@@ -271,7 +271,10 @@ void MapRenderables::draw(QPainter *painter, const RenderConfig &config) const
 					Q_ASSERT(state.color_priority == MapColor::Reserved);
 					continue; // in release build
 				}
-				QColor color = *map_color;
+
+				// If there is color transformation method, we feed the map color's CMYK values through it
+				auto color = (config.color_transform ? config.color_transform(map_color->getCmyk()) : *map_color);
+
 				if (state.color_priority >= 0 && map_color->getOpacity() < 1)
 					color.setAlphaF(map_color->getOpacity());
 				if (!state.activate(painter, current_clip, config, color, initial_clip))
