@@ -64,7 +64,7 @@ private slots:
 		auto container = KeyValueContainer{};
 		QVERIFY(container.find(key) == end(container));
 		QVERIFY(!container.contains(key));
-		QVERIFY_EXCEPTION_THROWN(container.at(key), std::out_of_range);
+		QVERIFY_THROWS_EXCEPTION(std::out_of_range, container.at(key));
 		
 		// operator[]
 		QVERIFY(container[key].isEmpty());
@@ -89,7 +89,7 @@ private slots:
 		container.erase(container.find(key));
 		QVERIFY(container.find(key) == container.end());
 		QVERIFY(!container.contains(key));
-		QVERIFY_EXCEPTION_THROWN(container.at(key), std::out_of_range);
+		QVERIFY_THROWS_EXCEPTION(std::out_of_range, container.at(key));
 		
 		// Order-preserving
 		auto kv_a = KeyValue{QSL("ak"), QSL("aa")};

@@ -74,12 +74,12 @@ private slots:
 			std::transform(begin(icon.bits), begin(icon.bits)+62, begin(icon.bits)+188, [](auto value) {
 				return value * 2 + 1;
 			});
-			QVERIFY_EXCEPTION_THROWN(icon.compress(), std::length_error);
+			QVERIFY_THROWS_EXCEPTION(std::length_error, icon.compress());
 			
 			// 197 non-repeating bytes of input, followed by white
 			// => cannot compress to less than 256 bytes
 			std::fill(begin(icon.bits)+197, end(icon.bits), 124);
-			QVERIFY_EXCEPTION_THROWN(icon.compress(), std::length_error);
+			QVERIFY_THROWS_EXCEPTION(std::length_error, icon.compress());
 			
 			// 196 non-repeating bytes of input, followed by white
 			std::fill(begin(icon.bits)+196, end(icon.bits), 124);
@@ -89,7 +89,7 @@ private slots:
 		}		
 		{
 			Ocd::IconV8 icon {};
-			QVERIFY_EXCEPTION_THROWN(icon.uncompress(), std::domain_error);
+			QVERIFY_THROWS_EXCEPTION(std::domain_error, icon.uncompress());
 		}
 	}
 	

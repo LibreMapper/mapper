@@ -112,10 +112,10 @@ private slots:
 		switch(source->error())
 		{
 		case QGeoPositionInfoSource::NoError:
-			QWARN("startUpdates(): QGeoPositionInfoSource::NoError");  // and no position yet!
+			qWarning("startUpdates(): QGeoPositionInfoSource::NoError");  // and no position yet!
 			break;
 		case QGeoPositionInfoSource::AccessError:
-			QWARN("startUpdates(): QGeoPositionInfoSource::AccessError");
+			qWarning("startUpdates(): QGeoPositionInfoSource::AccessError");
 			break;
 		case QGeoPositionInfoSource::ClosedError:
 			QFAIL("startUpdates(): QGeoPositionInfoSource::ClosedError");
