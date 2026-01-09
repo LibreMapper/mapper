@@ -70,7 +70,7 @@
             </part>
         </parts>
         <templates count="1" first_front_template="1">
-            <template open="true" name="гео.tiff" path="гео.tiff" relpath="гео.tiff" georef="true">
+            <template open="true" name="шаблон карты.tiff" path="шаблон карты.tiff" relpath="шаблон карты.tiff" georef="true">
                 <crs_spec>+init=epsg:2180</crs_spec>
             </template>
             <defaults meters_per_pixel="0" dpi="0" scale="0"/>
