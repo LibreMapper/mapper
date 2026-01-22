@@ -10,7 +10,6 @@
 #define OPENORIENTEERING_MAPPER_CONFIG_H
 
 #include <QCoreApplication>
-#include <clipper.hpp>
 
 #define APP_NAME qApp->translate("Global", QT_TRANSLATE_NOOP("Global", "LibreMapper"))
 #define APP_VERSION "@Mapper_VERSION_DISPLAY@"

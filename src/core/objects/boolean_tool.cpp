@@ -2,6 +2,7 @@
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
  * Copyright 2014-2021 Kai Pastor (OpenOrienteering)
+ * Copyright 2026 Libor Pecháček
  *
  * This file is part of LibreMapper.
  */
@@ -24,7 +25,7 @@
 #include <QHashFunctions>
 #include <QScopedPointer>
 
-#include <clipper.hpp>
+#include <clipper2/clipper.h>
 
 #include "core/map.h"
 #include "core/map_coord.h"
@@ -45,21 +46,21 @@
  * This is a C++ language issue, not a Qt issue.
  * Cf. https://bugreports.qt-project.org/browse/QTBUG-34912
  */
-namespace ClipperLib {
+namespace Clipper2Lib {
 
 /**
- * Implements qHash for ClipperLib::IntPoint.
+ * Implements qHash for Clipper2Lib::Point64.
  * 
- * This is needed to use ClipperLib::IntPoint as QHash key.
+ * This is needed to use Clipper2Lib::Point64 as QHash key.
  */
-uint qHash(const IntPoint& point, uint seed)
+uint qHash(const Point64& point, uint seed)
 {
-	quint64 tmp = (quint64(point.X) & 0xffffffff) | (quint64(point.Y) << 32);
+	quint64 tmp = (quint64(point.x) & 0xffffffff) | (quint64(point.y) << 32);
 	return ::qHash(tmp, seed); // must use :: namespace to prevent endless recursion
 }
 
 
-}  // namespace ClipperLib
+}  // namespace Clipper2Lib
 
 
 
@@ -70,48 +71,48 @@ namespace {
 using PathObjects = BooleanTool::PathObjects;
 
 using PathCoordInfo = std::pair<const PathPart*, const PathCoord*>;
-using PolyMap = QMultiHash<ClipperLib::IntPoint, PathCoordInfo>;
+using PolyMap = QMultiHash<Clipper2Lib::Point64, PathCoordInfo>;
 
 /**
- * Converts a ClipperLib::PolyTree to PathObjects.
+ * Converts a Clipper2Lib::PolyTree64 to PathObjects.
  * 
  * @see BooleanTool::outerPolyNodeToPathObjects()
  */
 static void polyTreeToPathObjects(
-        const ClipperLib::PolyTree& tree,
+        const Clipper2Lib::PolyTree64& tree,
         PathObjects& out_objects,
         const PathObject* proto,
         const PolyMap& polymap );
 
 /**
- * Converts a ClipperLib::PolyNode to PathObjects.
+ * Converts a Clipper2Lib::PolyPath64 to PathObjects.
  * 
- * The given ClipperLib::PolyNode must represent an outer polygon, not a hole.
+ * The given Clipper2Lib::PolyPath64 must represent an outer polygon, not a hole.
  * 
  * This method operates recursively on all outer children.
  */
 static void outerPolyNodeToPathObjects(
-        const ClipperLib::PolyNode& node,
+        const Clipper2Lib::PolyPath64& node,
         PathObjects& out_objects,
         const PathObject* proto,
         const PolyMap& polymap );
 
 /**
- * Constructs ClipperLib::Paths from a PathObject.
+ * Constructs Clipper2Lib::Paths64 from a PathObject.
  */
 static void pathObjectToPolygons(
         const PathObject* object,
-        ClipperLib::Paths& polygons,
+        Clipper2Lib::Paths64& polygons,
         PolyMap& polymap );
 
 /**
- * Reconstructs a PathObject from a polygon given as ClipperLib::Path.
+ * Reconstructs a PathObject from a polygon given as Clipper2Lib::Path64.
  * 
  * Curves are reconstructed with the help of the polymap, mapping locations
  * to path coords of the original objects.
  */
 static void polygonToPathPart(
-        const ClipperLib::Path& polygon,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object );
 
@@ -121,10 +122,10 @@ static void polygonToPathPart(
  * The first coordinate of the segment is assumed to be already added.
  */
 static void rebuildSegment(
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool sequence_increasing,
-        const ClipperLib::Path& polygon,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object );
 
@@ -132,20 +133,20 @@ static void rebuildSegment(
  * Approximates a curved segment from the result polygon alone.
  */
 static void rebuildSegmentFromPathOnly(
-        const ClipperLib::IntPoint& start_point,
-        const ClipperLib::IntPoint& second_point,
-        const ClipperLib::IntPoint& second_last_point,
-        const ClipperLib::IntPoint& end_point,
+        const Clipper2Lib::Point64& start_point,
+        const Clipper2Lib::Point64& second_point,
+        const Clipper2Lib::Point64& second_last_point,
+        const Clipper2Lib::Point64& end_point,
         PathObject* object );
 
 /**
  * Special case of rebuildSegment() for straight or very short lines.
  */
 static void rebuildTwoIndexSegment(
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool sequence_increasing,
-        const ClipperLib::Path& polygon,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object );
 
@@ -155,20 +156,20 @@ static void rebuildTwoIndexSegment(
  * Uses the polymap to check whether the coordinate should be a dash point.
  */
 static void rebuildCoordinate(
-        ClipperLib::Path::size_type index,
-        const ClipperLib::Path& polygon,
+        Clipper2Lib::Path64::size_type index,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object,
         bool start_new_part = false );
 
 /**
- * Compares a PathObject segment to a ClipperLib::Path polygon segment.
+ * Compares a PathObject segment to a Clipper2Lib::Path64 polygon segment.
  * 
  * Returns true if the segments match. In this case, the out_... parameters are set.
  * 
  * @param original      The original PathObject.
  * @param coord_index   The index of the segment start at the original.
- * @param polygon       The ClipperLib::Path polygon.
+ * @param polygon       The Clipper2Lib::Path64 polygon.
  * @param start_index   The start of the segment at the polygon.
  * @param end_index     The end of the segment at the polygon.
  * @param out_coords_increasing If the segments match, will be set to
@@ -181,9 +182,9 @@ static void rebuildCoordinate(
 static bool checkSegmentMatch(
         const PathObject* original,
         int coord_index,
-        const ClipperLib::Path& polygon,
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        const Clipper2Lib::Path64& polygon,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool& out_coords_increasing,
         bool& out_is_curve );
 
@@ -197,18 +198,18 @@ static MapCoord resetCoordinate(MapCoord in)
 }
 
 /**
- * Compares a MapCoord and ClipperLib::IntPoint.
+ * Compares a MapCoord and Clipper2Lib::Point64.
  */
-bool operator==(const MapCoord& lhs, const ClipperLib::IntPoint& rhs)
+bool operator==(const MapCoord& lhs, const Clipper2Lib::Point64& rhs)
 {
-	return lhs.nativeX() == rhs.X && lhs.nativeY() == rhs.Y;
+	return lhs.nativeX() == rhs.x && lhs.nativeY() == rhs.y;
 }
 
 /**
- * Compares a MapCoord and ClipperLib::IntPoint.
+ * Compares a MapCoord and Clipper2Lib::Point64.
  */
 Q_DECL_UNUSED
-bool operator==(const ClipperLib::IntPoint& lhs, const MapCoord& rhs)
+bool operator==(const Clipper2Lib::Point64& lhs, const MapCoord& rhs)
 {
 	return rhs == lhs;
 }
@@ -383,10 +384,10 @@ bool BooleanTool::executeForObjects(const PathObject* subject, const PathObjects
 	// These paths are to be regarded as closed.
 	PolyMap polymap;
 	
-	ClipperLib::Paths subject_polygons;
+	Clipper2Lib::Paths64 subject_polygons;
 	pathObjectToPolygons(subject, subject_polygons, polymap);
 	
-	ClipperLib::Paths clip_polygons;
+	Clipper2Lib::Paths64 clip_polygons;
 	for (PathObject* object : in_objects)
 	{
 		if (object != subject)
@@ -396,31 +397,31 @@ bool BooleanTool::executeForObjects(const PathObject* subject, const PathObjects
 	}
 	
 	// Do the operation.
-	ClipperLib::Clipper clipper;
-	clipper.AddPaths(subject_polygons, ClipperLib::ptSubject, true);
-	clipper.AddPaths(clip_polygons, ClipperLib::ptClip, true);
+	Clipper2Lib::Clipper64 clipper;
+	clipper.AddSubject(subject_polygons);
+	clipper.AddClip(clip_polygons);
 	
-	ClipperLib::ClipType clip_type;
-	ClipperLib::PolyFillType fill_type = ClipperLib::pftNonZero;
+	Clipper2Lib::ClipType clip_type;
+	Clipper2Lib::FillRule fill_rule = Clipper2Lib::FillRule::NonZero;
 	switch (op)
 	{
-	case Union:         clip_type = ClipperLib::ctUnion;
+	case Union:         clip_type = Clipper2Lib::ClipType::Union;
 	                    break;
-	case Intersection:  clip_type = ClipperLib::ctIntersection;
+	case Intersection:  clip_type = Clipper2Lib::ClipType::Intersection;
 	                    break;
-	case Difference:    clip_type = ClipperLib::ctDifference;
+	case Difference:    clip_type = Clipper2Lib::ClipType::Difference;
 	                    break;
-	case XOr:           clip_type = ClipperLib::ctXor;
+	case XOr:           clip_type = Clipper2Lib::ClipType::Xor;
 	                    break;
-	case MergeHoles:    clip_type = ClipperLib::ctUnion;
-	                    fill_type = ClipperLib::pftPositive;
+	case MergeHoles:    clip_type = Clipper2Lib::ClipType::Union;
+	                    fill_rule = Clipper2Lib::FillRule::Positive;
 	                    break;
 	default:            qWarning("Undefined operation");
 	                    return false;
 	}
 
-	ClipperLib::PolyTree solution;
-	bool success = clipper.Execute(clip_type, solution, fill_type, fill_type);
+	Clipper2Lib::PolyTree64 solution;
+	bool success = clipper.Execute(clip_type, fill_rule, solution);
 	if (success)
 	{
 		// Try to convert the solution polygons to objects again
@@ -520,27 +521,27 @@ void BooleanTool::executeForLine(const PathObject* area, const PathObject* line,
 
 namespace {
 
-void polyTreeToPathObjects(const ClipperLib::PolyTree& tree, PathObjects& out_objects, const PathObject* proto, const PolyMap& polymap)
+void polyTreeToPathObjects(const Clipper2Lib::PolyTree64& tree, PathObjects& out_objects, const PathObject* proto, const PolyMap& polymap)
 {
-	for (int i = 0, count = tree.ChildCount(); i < count; ++i)
-		outerPolyNodeToPathObjects(*tree.Childs[i], out_objects, proto, polymap);
+	for (int i = 0, count = tree.Count(); i < count; ++i)
+		outerPolyNodeToPathObjects(*tree.Child(i), out_objects, proto, polymap);
 }
 
-void outerPolyNodeToPathObjects(const ClipperLib::PolyNode& node, PathObjects& out_objects, const PathObject* proto, const PolyMap& polymap)
+void outerPolyNodeToPathObjects(const Clipper2Lib::PolyPath64& node, PathObjects& out_objects, const PathObject* proto, const PolyMap& polymap)
 {
 	auto object = std::unique_ptr<PathObject>{ proto->duplicate() };
 	object->clearCoordinates();
 	
 	try
 	{
-		polygonToPathPart(node.Contour, polymap, object.get());
-		for (int i = 0, i_count = node.ChildCount(); i < i_count; ++i)
+		polygonToPathPart(node.Polygon(), polymap, object.get());
+		for (int i = 0, i_count = node.Count(); i < i_count; ++i)
 		{
-			polygonToPathPart(node.Childs[i]->Contour, polymap, object.get());
+			polygonToPathPart(node.Child(i)->Polygon(), polymap, object.get());
 			
 			// Add outer polygons contained by (nested within) holes ...
-			for (int j = 0, j_count = node.Childs[i]->ChildCount(); j < j_count; ++j)
-				outerPolyNodeToPathObjects(*node.Childs[i]->Childs[j], out_objects, proto, polymap);
+			for (int j = 0, j_count = node.Child(i)->Count(); j < j_count; ++j)
+				outerPolyNodeToPathObjects(*node.Child(i)->Child(j), out_objects, proto, polymap);
 		}
 		
 		out_objects.push_back(object.release());
@@ -553,7 +554,7 @@ void outerPolyNodeToPathObjects(const ClipperLib::PolyNode& node, PathObjects& o
 
 void pathObjectToPolygons(
         const PathObject* object,
-        ClipperLib::Paths& polygons,
+        Clipper2Lib::Paths64& polygons,
         PolyMap& polymap)
 {
 	object->update();
@@ -568,7 +569,7 @@ void pathObjectToPolygons(
 		if (part.isClosed())
 			--path_coords_end;
 		
-		ClipperLib::Path polygon;
+		Clipper2Lib::Path64 polygon;
 		polygon.reserve(path_coords_end);
 		for (auto i = 0u; i < path_coords_end; ++i)
 		{
@@ -576,29 +577,29 @@ void pathObjectToPolygons(
 			if (path_coord.param == 0.0)
 			{
 				auto point = coords[path_coord.index];
-				polygon.push_back(ClipperLib::IntPoint(point.nativeX(), point.nativeY()));
+				polygon.push_back(Clipper2Lib::Point64(point.nativeX(), point.nativeY()));
 			}
 			else
 			{
 				auto point = MapCoord { path_coord.pos };
-				polygon.push_back(ClipperLib::IntPoint(point.nativeX(), point.nativeY()));
+				polygon.push_back(Clipper2Lib::Point64(point.nativeX(), point.nativeY()));
 			}
 			polymap.insert(polygon.back(), std::make_pair(&part, &path_coord));
 		}
 		
-		bool orientation = Orientation(polygon);
+		bool orientation = Clipper2Lib::IsPositive(polygon);
 		if ( (&part == &object->parts().front()) != orientation )
 		{
 			std::reverse(polygon.begin(), polygon.end());
 		}
 		
 		// Push_back shall move the polygon.
-		static_assert(std::is_nothrow_move_constructible<ClipperLib::Path>::value, "ClipperLib::Path must be nothrow move constructible");
+		static_assert(std::is_nothrow_move_constructible<Clipper2Lib::Path64>::value, "Clipper2Lib::Path64 must be nothrow move constructible");
 		polygons.push_back(polygon);
 	}
 }
 
-void polygonToPathPart(const ClipperLib::Path& polygon, const PolyMap& polymap, PathObject* object)
+void polygonToPathPart(const Clipper2Lib::Path64& polygon, const PolyMap& polymap, PathObject* object)
 {
 	auto num_points = polygon.size();
 	if (num_points < 3)
@@ -629,7 +630,7 @@ void polygonToPathPart(const ClipperLib::Path& polygon, const PolyMap& polymap, 
 	{
 		// Did not find a valid starting point. Return the part as a polygon.
 		for (auto i = 0u; i < num_points; ++i)
-			object->addCoordinate(MapCoord::fromNative64(polygon.at(i).X, polygon.at(i).Y), i == 0);
+			object->addCoordinate(MapCoord::fromNative64(polygon.at(i).x, polygon.at(i).y), i == 0);
 		object->parts().back().setClosed(true, true);
 		return;
 	}
@@ -768,10 +769,10 @@ void polygonToPathPart(const ClipperLib::Path& polygon, const PolyMap& polymap, 
 }
 
 void rebuildSegment(
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool sequence_increasing,
-        const ClipperLib::Path& polygon,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object)
 {
@@ -860,7 +861,7 @@ void rebuildSegment(
 	
 	// Find out start tangent
 	auto start_param = 0.0;
-	MapCoord start_coord = MapCoord::fromNative64(start_point.X, start_point.Y);
+	MapCoord start_coord = MapCoord::fromNative64(start_point.x, start_point.y);
 	MapCoord start_tangent;
 	MapCoord end_tangent;
 	MapCoord end_coord;
@@ -891,8 +892,8 @@ void rebuildSegment(
 			// Approximate coords
 			const PathCoord* prev_coord = second_info.second - 1;
 			
-			auto dx = second_point.X - start_point.X;
-			auto dy = second_point.Y - start_point.Y;
+			auto dx = second_point.x - start_point.x;
+			auto dy = second_point.y - start_point.y;
 			auto point_dist = 0.001 * sqrt(dx*dx + dy*dy);
 			
 			auto delta_start_param = (second_info.second->param - prev_coord->param) * point_dist / qMax(1e-7f, (second_info.second->clen - prev_coord->clen));
@@ -921,8 +922,8 @@ void rebuildSegment(
 			// Take coordinates directly
 			end_coord = original->getCoordinate(edge_start + 3);
 			
-			auto test_x = end_point.X - end_coord.nativeX();
-			auto test_y = end_point.Y - end_coord.nativeY();
+			auto test_x = end_point.x - end_coord.nativeX();
+			auto test_y = end_point.y - end_coord.nativeY();
 			end_error_sq = 0.001 * sqrt(test_x*test_x + test_y*test_y);
 			if (end_error_sq > error_bound)
 				qDebug() << "BooleanTool::rebuildSegment: end error too high in increasing direct case: " << sqrt(end_error_sq);
@@ -935,8 +936,8 @@ void rebuildSegment(
 			if (next_coord_param == 0.0)
 				next_coord_param = 1.0;
 			
-			auto dx = end_point.X - second_last_point.X;
-			auto dy = end_point.Y - second_last_point.Y;
+			auto dx = end_point.x - second_last_point.x;
+			auto dy = end_point.y - second_last_point.y;
 			auto point_dist = 0.001 * sqrt(dx*dx + dy*dy);
 			
 			auto delta_end_param = (next_coord_param - second_last_info.second->param) * point_dist / qMax(1e-7f, (next_coord->clen - second_last_info.second->clen));
@@ -951,8 +952,8 @@ void rebuildSegment(
 			end_tangent = MapCoord(o1);
 			end_coord = MapCoord(o2);
 			
-			auto test_x = end_point.X - end_coord.nativeX();
-			auto test_y = end_point.Y - end_coord.nativeY();
+			auto test_x = end_point.x - end_coord.nativeX();
+			auto test_y = end_point.y - end_coord.nativeY();
 			end_error_sq = 0.001 * sqrt(test_x*test_x + test_y*test_y);
 			if (end_error_sq > error_bound)
 				qDebug() << "BooleanTool::rebuildSegment: end error too high in increasing general case: " << sqrt(end_error_sq);
@@ -982,8 +983,8 @@ void rebuildSegment(
 			if (next_coord_param == 0.0)
 				next_coord_param = 1.0;
 			
-			auto dx = second_point.X - start_point.X;
-			auto dy = second_point.Y - start_point.Y;
+			auto dx = second_point.x - start_point.x;
+			auto dy = second_point.y - start_point.y;
 			auto point_dist = 0.001 * sqrt(dx*dx + dy*dy);
 			
 			auto delta_start_param = (next_coord_param - second_info.second->param) * point_dist / qMax(1e-7f, (next_coord->clen - second_info.second->clen));
@@ -1012,8 +1013,8 @@ void rebuildSegment(
 			// Take coordinates directly
 			end_coord = original->getCoordinate(edge_start + 0);
 			
-			auto test_x = end_point.X - end_coord.nativeX();
-			auto test_y = end_point.Y - end_coord.nativeY();
+			auto test_x = end_point.x - end_coord.nativeX();
+			auto test_y = end_point.y - end_coord.nativeY();
 			end_error_sq = 0.001 * sqrt(test_x*test_x + test_y*test_y);
 			if (end_error_sq > error_bound)
 				qDebug() << "BooleanTool::rebuildSegment: end error too high in decreasing direct case: " << sqrt(end_error_sq);
@@ -1023,8 +1024,8 @@ void rebuildSegment(
 			// Approximate coords
 			const PathCoord* prev_coord = second_last_info.second - 1;
 			
-			auto dx = end_point.X - second_last_point.X;
-			auto dy = end_point.Y - second_last_point.Y;
+			auto dx = end_point.x - second_last_point.x;
+			auto dy = end_point.y - second_last_point.y;
 			auto point_dist = 0.001 * sqrt(dx*dx + dy*dy);
 			
 			auto delta_end_param = (second_last_info.second->param - prev_coord->param) * point_dist / qMax(1e-7f, (second_last_info.second->clen - prev_coord->clen));
@@ -1039,8 +1040,8 @@ void rebuildSegment(
 			end_tangent = MapCoord(o1);
 			end_coord = MapCoord(o2);
 			
-			auto test_x = end_point.X - end_coord.nativeX();
-			auto test_y = end_point.Y - end_coord.nativeY();
+			auto test_x = end_point.x - end_coord.nativeX();
+			auto test_y = end_point.y - end_coord.nativeY();
 			end_error_sq = 0.001 * sqrt(test_x*test_x + test_y*test_y);
 			if (end_error_sq > error_bound)
 				qDebug() << "BooleanTool::rebuildSegment: end error too high in decreasing general case: " << sqrt(end_error_sq);
@@ -1062,16 +1063,16 @@ void rebuildSegment(
 }
 
 void rebuildSegmentFromPathOnly(
-        const ClipperLib::IntPoint& start_point,
-        const ClipperLib::IntPoint& second_point,
-        const ClipperLib::IntPoint& second_last_point,
-        const ClipperLib::IntPoint& end_point,
+        const Clipper2Lib::Point64& start_point,
+        const Clipper2Lib::Point64& second_point,
+        const Clipper2Lib::Point64& second_last_point,
+        const Clipper2Lib::Point64& end_point,
         PathObject* object)
 {
-	MapCoord start_point_c = MapCoord::fromNative64(start_point.X, start_point.Y);
-	MapCoord second_point_c = MapCoord::fromNative64(second_point.X, second_point.Y);
-	MapCoord second_last_point_c = MapCoord::fromNative64(second_last_point.X, second_last_point.Y);
-	MapCoord end_point_c = MapCoord::fromNative64(end_point.X, end_point.Y);
+	MapCoord start_point_c = MapCoord::fromNative64(start_point.x, start_point.y);
+	MapCoord second_point_c = MapCoord::fromNative64(second_point.x, second_point.y);
+	MapCoord second_last_point_c = MapCoord::fromNative64(second_last_point.x, second_last_point.y);
+	MapCoord end_point_c = MapCoord::fromNative64(end_point.x, end_point.y);
 	
 	MapCoordF polygon_start_tangent = MapCoordF(second_point_c - start_point_c);
 	polygon_start_tangent.normalize();
@@ -1085,10 +1086,10 @@ void rebuildSegmentFromPathOnly(
 }
 
 void rebuildTwoIndexSegment(
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool sequence_increasing,
-        const ClipperLib::Path& polygon,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object)
 {
@@ -1154,13 +1155,13 @@ void rebuildTwoIndexSegment(
 }
 
 void rebuildCoordinate(
-        ClipperLib::Path::size_type index,
-        const ClipperLib::Path& polygon,
+        Clipper2Lib::Path64::size_type index,
+        const Clipper2Lib::Path64& polygon,
         const PolyMap& polymap,
         PathObject* object,
         bool start_new_part)
 {
-	auto coord = MapCoord::fromNative64(polygon.at(index).X, polygon.at(index).Y);
+	auto coord = MapCoord::fromNative64(polygon.at(index).x, polygon.at(index).y);
 	if (polymap.contains(polygon.at(index)))
 	{
 		PathCoordInfo info = polymap.value(polygon.at(index));
@@ -1175,9 +1176,9 @@ void rebuildCoordinate(
 bool checkSegmentMatch(
         const PathObject* original,
         int coord_index,
-        const ClipperLib::Path& polygon,
-        ClipperLib::Path::size_type start_index,
-        ClipperLib::Path::size_type end_index,
+        const Clipper2Lib::Path64& polygon,
+        Clipper2Lib::Path64::size_type start_index,
+        Clipper2Lib::Path64::size_type end_index,
         bool& out_coords_increasing,
         bool& out_is_curve )
 {

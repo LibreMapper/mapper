@@ -53,7 +53,7 @@ function(add_test_helper testname autorun)
 	  Qt::Test
 	  Qt::Gui
 	  Qt::Core5Compat
-	  Polyclipping::Polyclipping
+	  Clipper2::Clipper2
 	)
 	if("${ARGN}" MATCHES "crs_template_implementation")
 		target_link_libraries(${testname} PRIVATE Qt::Widgets)

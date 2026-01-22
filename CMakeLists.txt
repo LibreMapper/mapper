@@ -54,7 +54,7 @@ option(Mapper_DEBUG_TRANSLATIONS "Debug missing translations" OFF)
 
 # To improve developer experience, build clipper if it is not found
 set(Mapper_BUILD_CLIPPER "auto" CACHE STRING
-  "Build the Clipper package from source, alternatives: ON, OFF"
+  "Build the Clipper2 package from source, alternatives: ON, OFF"
 )
 
 option(Mapper_USE_GDAL "Use the GDAL library" ON)
@@ -157,10 +157,10 @@ add_custom_target(Mapper_prerequisites
 set(Mapper_prerequisites_FOUND TRUE)
 
 if(Mapper_BUILD_CLIPPER STREQUAL "auto")
-	find_package(Polyclipping 6.1.3 MODULE)
-	if(NOT Polyclipping_FOUND)
+	find_package(Clipper2 QUIET)
+	if(NOT Clipper2_FOUND)
 		message(WARNING
-		  "System polyclipping is missing. Enabling embedded build.\n"
+		  "System Clipper2 is missing. Enabling embedded build.\n"
 		  "Set Mapper_BUILD_CLIPPER=OFF to disable embedded build."
 		)
 		set_property(CACHE Mapper_BUILD_CLIPPER PROPERTY VALUE "ON")
@@ -170,11 +170,10 @@ if(Mapper_BUILD_CLIPPER STREQUAL "auto")
 	set_property(CACHE Mapper_BUILD_CLIPPER PROPERTY TYPE "BOOL")
 endif()
 if(Mapper_BUILD_CLIPPER)
-	add_subdirectory(3rd-party/clipper)
-	add_feature_info(Mapper_BUILD_CLIPPER 1 "version: ${CLIPPER_VERSION}")
-	add_library(Polyclipping::Polyclipping ALIAS polyclipping)
+	add_subdirectory(3rd-party/clipper2)
+	add_feature_info(Mapper_BUILD_CLIPPER 1 "version: ${CLIPPER2_VERSION}")
 else()
-	find_package(Polyclipping 6.1.3 MODULE REQUIRED)
+	find_package(Clipper2 REQUIRED)
 endif()
 
 find_package(PROJ 9.3 REQUIRED)

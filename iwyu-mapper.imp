@@ -9,6 +9,14 @@
     
     { include: [ "<qtsingleapplication.h>", "private", "<QtSingleApplication>", "public" ] },
     
+    # Clipper2
+    { include: [ "<clipper2/clipper.core.h>", "private", "<clipper2/clipper.h>", "public" ] },
+    { include: [ "<clipper2/clipper.engine.h>", "private", "<clipper2/clipper.h>", "public" ] },
+    { include: [ "<clipper2/clipper.offset.h>", "private", "<clipper2/clipper.h>", "public" ] },
+    { include: [ "<clipper2/clipper.rectclip.h>", "private", "<clipper2/clipper.h>", "public" ] },
+    { include: [ "<clipper2/clipper.minkowski.h>", "private", "<clipper2/clipper.h>", "public" ] },
+    { include: [ "<clipper2/clipper.triangulation.h>", "private", "<clipper2/clipper.h>", "public" ] },
+
     # GDAL
     { include: [ "<gdal_version.h>", "private", "<gdal.h>", "public" ] },
     { include: [ "<ogr_core.h>", "private", "<ogr_api.h>", "public" ] },
