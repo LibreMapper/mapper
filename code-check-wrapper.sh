@@ -121,6 +121,7 @@ for I in \
   src/sensors/ \
   src/tools/ \
   settings \
+  test/boolean_tool_t.cpp \
   # end of patterns
 do
   PATTERN="${PATTERN:+$PATTERN\|}$I"
