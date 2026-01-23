@@ -262,6 +262,8 @@ else()
 	add_subdirectory("test")
 endif()
 
+add_subdirectory("fuzzing")
+
 #add_subdirectory("doc/api")
 add_subdirectory("packaging/src")
 
