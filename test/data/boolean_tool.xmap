@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns="http://openorienteering.org/apps/mapper/xml/v2" version="9">
+    <notes></notes>
+    <georeferencing scale="15000">
+        <projected_crs id="Local"/>
+    </georeferencing>
+    <colors count="0"/>
+    <barrier version="6" required="0.6.0">
+        <symbols count="4">
+            <symbol type="16" id="0" code="1.1" name="Area type 1">
+                <combined_symbol parts="2">
+                    <part private="true">
+                        <symbol type="2" code="1" name="Outer line">
+                            <line_symbol color="-900" line_width="250" minimum_length="0" join_style="1" cap_style="0" start_offset="0" end_offset="0" segment_length="4000" end_length="0" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0"/>
+                        </symbol>
+                    </part>
+                    <part private="true">
+                        <symbol type="4" code="1" name="Inner area">
+                            <area_symbol inner_color="-1" min_area="0" patterns="1">
+                                <pattern type="1" angle="0.785398" line_spacing="2500" line_offset="0" offset_along_line="0" color="-900" line_width="200"/>
+                            </area_symbol>
+                        </symbol>
+                    </part>
+                </combined_symbol>
+            </symbol>
+            <symbol type="16" id="1" code="1.2" name="Area type 2">
+                <combined_symbol parts="2">
+                    <part private="true">
+                        <symbol type="2" code="1" name="Outer line">
+                            <line_symbol color="-900" line_width="250" minimum_length="0" join_style="1" cap_style="0" start_offset="0" end_offset="0" segment_length="4000" end_length="0" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0"/>
+                        </symbol>
+                    </part>
+                    <part private="true">
+                        <symbol type="4" code="1" name="Inner area">
+                            <area_symbol inner_color="-1" min_area="0" patterns="1">
+                                <pattern type="1" angle="5.49779" line_spacing="2500" line_offset="0" offset_along_line="0" color="-900" line_width="200"/>
+                            </area_symbol>
+                        </symbol>
+                    </part>
+                </combined_symbol>
+            </symbol>
+            <symbol type="2" id="2" code="2.1" name="Thin line">
+                <line_symbol color="-900" line_width="200" minimum_length="0" join_style="1" cap_style="0" start_offset="0" end_offset="0" segment_length="4000" end_length="0" show_at_least_one_symbol="true" minimum_mid_symbol_count="0" minimum_mid_symbol_count_when_closed="0" dash_length="4000" break_length="1000" dashes_in_group="1" in_group_break_length="500" mid_symbols_per_spot="1" mid_symbol_distance="0"/>
+            </symbol>
+            <symbol type="8" id="3" code="3.1" name="Description text">
+                <text_symbol icon_text="DSC" rotatable="true">
+                    <font family="Arial" size="3528"/>
+                    <text color="-900" line_spacing="1" paragraph_spacing="0" character_spacing="0" kerning="true"/>
+                </text_symbol>
+            </symbol>
+        </symbols>
+        <parts count="3" current="1">
+            <part name="source">
+                <objects count="16">
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">7</t>
+                            <t k="order">1</t>
+                            <t k="description">square with overlapping holes</t>
+                            <t k="operations">MergeHoles</t>
+                            <t k="vertical_displacements">30</t>
+                        </tags>
+                        <coords count="31">
+                            <coord x="189994" y="10207" flags="32"/>
+                            <coord x="170007" y="10207"/>
+                            <coord x="170007" y="-9780"/>
+                            <coord x="189994" y="-9780"/>
+                            <coord x="189994" y="10207" flags="50"/>
+                            <coord x="174674" y="249" flags="1"/>
+                            <coord x="173002" y="1687"/>
+                            <coord x="172813" y="4209"/>
+                            <coord x="174252" y="5880" flags="1"/>
+                            <coord x="175690" y="7552"/>
+                            <coord x="178211" y="7741"/>
+                            <coord x="179883" y="6302" flags="1"/>
+                            <coord x="181555" y="4864"/>
+                            <coord x="181743" y="2342"/>
+                            <coord x="180305" y="671" flags="1"/>
+                            <coord x="178866" y="-1001"/>
+                            <coord x="176345" y="-1190"/>
+                            <coord x="174674" y="249" flags="18"/>
+                            <coord x="177333" y="-7584" flags="1"/>
+                            <coord x="175733" y="-6378"/>
+                            <coord x="176513" y="1363"/>
+                            <coord x="177719" y="2963" flags="1"/>
+                            <coord x="178924" y="4564"/>
+                            <coord x="185528" y="2206"/>
+                            <coord x="187129" y="1001" flags="1"/>
+                            <coord x="188730" y="-205"/>
+                            <coord x="187802" y="-4571"/>
+                            <coord x="186596" y="-6171" flags="1"/>
+                            <coord x="185391" y="-7772"/>
+                            <coord x="178934" y="-8789"/>
+                            <coord x="177333" y="-7584" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="1443" y="-1425" flags="32"/>
+                            <coord x="11079" y="-1425" flags="32"/>
+                            <coord x="11079" y="-11061" flags="32"/>
+                            <coord x="1443" y="-11061" flags="32"/>
+                            <coord x="1443" y="-1425" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, non-overlapping</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="-1444" y="1443" flags="32"/>
+                            <coord x="-11080" y="1443" flags="32"/>
+                            <coord x="-11080" y="11079" flags="32"/>
+                            <coord x="-1444" y="11079" flags="32"/>
+                            <coord x="-1444" y="1443" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="13">
+                            <coord x="114819" y="-2098" flags="1"/>
+                            <coord x="114984" y="2251"/>
+                            <coord x="118645" y="5643"/>
+                            <coord x="122994" y="5479" flags="1"/>
+                            <coord x="127343" y="5313"/>
+                            <coord x="130735" y="1653"/>
+                            <coord x="130571" y="-2696" flags="1"/>
+                            <coord x="130405" y="-7045"/>
+                            <coord x="126745" y="-10438"/>
+                            <coord x="122396" y="-10273" flags="1"/>
+                            <coord x="118045" y="-10107"/>
+                            <coord x="114654" y="-6447"/>
+                            <coord x="114819" y="-2098" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">1</t>
+                            <t k="description">square x circle, overlapping</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="125525" y="-5201" flags="32"/>
+                            <coord x="110025" y="-5201" flags="32"/>
+                            <coord x="110025" y="10299" flags="32"/>
+                            <coord x="125525" y="10299" flags="32"/>
+                            <coord x="125525" y="-5201" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">8</t>
+                            <t k="order">1</t>
+                            <t k="description">square with non-overlapping holes</t>
+                            <t k="operations">MergeHoles</t>
+                            <t k="vertical_displacements">30</t>
+                        </tags>
+                        <coords count="31">
+                            <coord x="220188" y="10207" flags="32"/>
+                            <coord x="200201" y="10207"/>
+                            <coord x="200201" y="-9780"/>
+                            <coord x="220188" y="-9780"/>
+                            <coord x="220188" y="10207" flags="50"/>
+                            <coord x="204025" y="825" flags="1"/>
+                            <coord x="202423" y="2145"/>
+                            <coord x="202193" y="4513"/>
+                            <coord x="203513" y="6115" flags="1"/>
+                            <coord x="204832" y="7717"/>
+                            <coord x="207200" y="7946"/>
+                            <coord x="208802" y="6627" flags="1"/>
+                            <coord x="210404" y="5307"/>
+                            <coord x="210634" y="2939"/>
+                            <coord x="209314" y="1337" flags="1"/>
+                            <coord x="207995" y="-265"/>
+                            <coord x="205627" y="-494"/>
+                            <coord x="204025" y="825" flags="18"/>
+                            <coord x="211589" y="-7308" flags="1"/>
+                            <coord x="209924" y="-5706"/>
+                            <coord x="209874" y="-3058"/>
+                            <coord x="211476" y="-1393" flags="1"/>
+                            <coord x="213078" y="272"/>
+                            <coord x="215726" y="323"/>
+                            <coord x="217391" y="-1279" flags="1"/>
+                            <coord x="219056" y="-2881"/>
+                            <coord x="219107" y="-5530"/>
+                            <coord x="217505" y="-7195" flags="1"/>
+                            <coord x="215903" y="-8859"/>
+                            <coord x="213254" y="-8910"/>
+                            <coord x="211589" y="-7308" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="27175" y="2864" flags="32"/>
+                            <coord x="36811" y="2864" flags="32"/>
+                            <coord x="36811" y="-6772" flags="32"/>
+                            <coord x="27175" y="-6772" flags="32"/>
+                            <coord x="27175" y="2864" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, overlapping</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="32782" y="-2257" flags="32"/>
+                            <coord x="23146" y="-2257" flags="32"/>
+                            <coord x="23146" y="7379" flags="32"/>
+                            <coord x="32782" y="7379" flags="32"/>
+                            <coord x="32782" y="-2257" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">1</t>
+                            <t k="description">small square inside another</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="69745" y="10207" flags="32"/>
+                            <coord x="49758" y="10207"/>
+                            <coord x="49758" y="-9780"/>
+                            <coord x="69745" y="-9780"/>
+                            <coord x="69745" y="10207" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="65847" y="6309" flags="32"/>
+                            <coord x="53656" y="6309"/>
+                            <coord x="53656" y="-5882"/>
+                            <coord x="65847" y="-5882"/>
+                            <coord x="65847" y="6309" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">1</t>
+                            <t k="description">small square inside another</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="96062" y="6317" flags="32"/>
+                            <coord x="83855" y="6317"/>
+                            <coord x="83855" y="-5890"/>
+                            <coord x="96062" y="-5890"/>
+                            <coord x="96062" y="6317" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="99988" y="10243" flags="32"/>
+                            <coord x="79929" y="10243"/>
+                            <coord x="79929" y="-9816"/>
+                            <coord x="99988" y="-9816"/>
+                            <coord x="99988" y="10243" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="13">
+                            <coord x="146217" y="-2102" flags="1"/>
+                            <coord x="146379" y="2180"/>
+                            <coord x="149984" y="5520"/>
+                            <coord x="154267" y="5358" flags="1"/>
+                            <coord x="158549" y="5195"/>
+                            <coord x="161889" y="1591"/>
+                            <coord x="161727" y="-2692" flags="1"/>
+                            <coord x="161564" y="-6974"/>
+                            <coord x="157960" y="-10315"/>
+                            <coord x="153677" y="-10152" flags="1"/>
+                            <coord x="149393" y="-9989"/>
+                            <coord x="146054" y="-6385"/>
+                            <coord x="146217" y="-2102" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">1</t>
+                            <t k="operations">Difference,Intersection,Union,XOr</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                            <t k="description">circles, overlapping</t>
+                        </tags>
+                        <coords count="13">
+                            <coord x="138844" y="3725" flags="1"/>
+                            <coord x="139006" y="8007"/>
+                            <coord x="142611" y="11347"/>
+                            <coord x="146894" y="11185" flags="1"/>
+                            <coord x="151176" y="11022"/>
+                            <coord x="154516" y="7418"/>
+                            <coord x="154354" y="3135" flags="1"/>
+                            <coord x="154191" y="-1147"/>
+                            <coord x="150587" y="-4488"/>
+                            <coord x="146304" y="-4325" flags="1"/>
+                            <coord x="142020" y="-4162"/>
+                            <coord x="138681" y="-558"/>
+                            <coord x="138844" y="3725" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, overlapping, different symbols</t>
+                            <t k="operations">Difference,Intersection,XOr</t>
+                            <t k="vertical_displacements">30,60,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="243182" y="-2257" flags="32"/>
+                            <coord x="233546" y="-2257" flags="32"/>
+                            <coord x="233546" y="7379" flags="32"/>
+                            <coord x="243182" y="7379" flags="32"/>
+                            <coord x="243182" y="-2257" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="1">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">2</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="237575" y="2864" flags="32"/>
+                            <coord x="247211" y="2864" flags="32"/>
+                            <coord x="247211" y="-6772" flags="32"/>
+                            <coord x="237575" y="-6772" flags="32"/>
+                            <coord x="237575" y="2864" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                </objects>
+            </part>
+            <part name="results">
+                <objects count="36">
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">1</t>
+                            <t k="description">small square inside another</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="96062" y="36317" flags="32"/>
+                            <coord x="83855" y="36317"/>
+                            <coord x="83855" y="24110"/>
+                            <coord x="96062" y="24110"/>
+                            <coord x="96062" y="36317" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="10">
+                            <coord x="99988" y="40243" flags="32"/>
+                            <coord x="79929" y="40243"/>
+                            <coord x="79929" y="20184"/>
+                            <coord x="99988" y="20184"/>
+                            <coord x="99988" y="40243" flags="50"/>
+                            <coord x="83855" y="24110"/>
+                            <coord x="83855" y="36317"/>
+                            <coord x="96062" y="36317"/>
+                            <coord x="96062" y="24110"/>
+                            <coord x="83855" y="24110" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="12">
+                            <coord x="130571" y="27304" flags="1"/>
+                            <coord x="130701" y="30761"/>
+                            <coord x="128585" y="33783"/>
+                            <coord x="125527" y="34960"/>
+                            <coord x="125525" y="24799" flags="32"/>
+                            <coord x="115333" y="24799" flags="1"/>
+                            <coord x="116540" y="21625"/>
+                            <coord x="119005" y="19911"/>
+                            <coord x="122396" y="19727" flags="1"/>
+                            <coord x="126745" y="19562"/>
+                            <coord x="130405" y="22955"/>
+                            <coord x="130571" y="27304" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">1</t>
+                            <t k="description">square x circle, overlapping</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="125525" y="24799" flags="32"/>
+                            <coord x="110025" y="24799" flags="32"/>
+                            <coord x="110025" y="40299" flags="32"/>
+                            <coord x="125525" y="40299" flags="32"/>
+                            <coord x="125525" y="24799" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">1</t>
+                            <t k="description">small square inside another</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="69745" y="40207" flags="32"/>
+                            <coord x="49758" y="40207"/>
+                            <coord x="49758" y="20220"/>
+                            <coord x="69745" y="20220"/>
+                            <coord x="69745" y="40207" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, overlapping</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="32782" y="27743" flags="32"/>
+                            <coord x="23146" y="27743" flags="32"/>
+                            <coord x="23146" y="37379" flags="32"/>
+                            <coord x="32782" y="37379" flags="32"/>
+                            <coord x="32782" y="27743" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="7">
+                            <coord x="36811" y="32864" flags="32"/>
+                            <coord x="32782" y="32864"/>
+                            <coord x="32782" y="27743" flags="32"/>
+                            <coord x="27175" y="27743"/>
+                            <coord x="27175" y="23228" flags="32"/>
+                            <coord x="36811" y="23228"/>
+                            <coord x="36811" y="32864" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="11079" y="28575" flags="32"/>
+                            <coord x="1443" y="28575"/>
+                            <coord x="1443" y="18939"/>
+                            <coord x="11079" y="18939"/>
+                            <coord x="11079" y="28575" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, non-overlapping</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="-1444" y="31443" flags="32"/>
+                            <coord x="-11080" y="31443" flags="32"/>
+                            <coord x="-11080" y="41079" flags="32"/>
+                            <coord x="-1444" y="41079" flags="32"/>
+                            <coord x="-1444" y="31443" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="17">
+                            <coord x="161727" y="27308" flags="1"/>
+                            <coord x="161889" y="31591"/>
+                            <coord x="158549" y="35195"/>
+                            <coord x="154267" y="35358"/>
+                            <coord x="154111" y="35361" flags="1"/>
+                            <coord x="154299" y="34653"/>
+                            <coord x="154383" y="33905"/>
+                            <coord x="154354" y="33135" flags="1"/>
+                            <coord x="154193" y="28905"/>
+                            <coord x="150674" y="25593"/>
+                            <coord x="146459" y="25671" flags="1"/>
+                            <coord x="147402" y="22175"/>
+                            <coord x="150061" y="20047"/>
+                            <coord x="153677" y="19848" flags="1"/>
+                            <coord x="157960" y="19685"/>
+                            <coord x="161564" y="23026"/>
+                            <coord x="161727" y="27308" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">1</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                            <t k="description">circles, overlapping</t>
+                        </tags>
+                        <coords count="13">
+                            <coord x="138844" y="33725" flags="1"/>
+                            <coord x="139006" y="38007"/>
+                            <coord x="142611" y="41347"/>
+                            <coord x="146894" y="41185" flags="1"/>
+                            <coord x="151176" y="41022"/>
+                            <coord x="154516" y="37418"/>
+                            <coord x="154354" y="33135" flags="1"/>
+                            <coord x="154191" y="28853"/>
+                            <coord x="150587" y="25512"/>
+                            <coord x="146304" y="25675" flags="1"/>
+                            <coord x="142020" y="25838"/>
+                            <coord x="138681" y="29442"/>
+                            <coord x="138844" y="33725" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">1</t>
+                            <t k="description">squares, overlapping, different symbols</t>
+                            <t k="operations">Difference</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="243182" y="27743" flags="32"/>
+                            <coord x="233546" y="27743" flags="32"/>
+                            <coord x="233546" y="37379" flags="32"/>
+                            <coord x="243182" y="37379" flags="32"/>
+                            <coord x="243182" y="27743" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="1">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">2</t>
+                            <t k="operations">Difference</t>
+                        </tags>
+                        <coords count="7">
+                            <coord x="247211" y="32864" flags="32"/>
+                            <coord x="243182" y="32864"/>
+                            <coord x="243182" y="27743" flags="32"/>
+                            <coord x="237575" y="27743"/>
+                            <coord x="237575" y="23228" flags="32"/>
+                            <coord x="247211" y="23228"/>
+                            <coord x="247211" y="32864" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="32782" y="62864"/>
+                            <coord x="27175" y="62864" flags="32"/>
+                            <coord x="27175" y="57743"/>
+                            <coord x="32782" y="57743" flags="32"/>
+                            <coord x="32782" y="62864" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="65847" y="66309" flags="32"/>
+                            <coord x="53656" y="66309"/>
+                            <coord x="53656" y="54118"/>
+                            <coord x="65847" y="54118"/>
+                            <coord x="65847" y="66309" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="96062" y="66317" flags="32"/>
+                            <coord x="83855" y="66317"/>
+                            <coord x="83855" y="54110"/>
+                            <coord x="96062" y="54110"/>
+                            <coord x="96062" y="66317" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="12">
+                            <coord x="125525" y="64957" flags="1"/>
+                            <coord x="124574" y="65294"/>
+                            <coord x="124002" y="65424"/>
+                            <coord x="122994" y="65479" flags="1"/>
+                            <coord x="118645" y="65643"/>
+                            <coord x="114984" y="62251"/>
+                            <coord x="114819" y="57902" flags="1"/>
+                            <coord x="114778" y="56808"/>
+                            <coord x="114961" y="55758"/>
+                            <coord x="115328" y="54796"/>
+                            <coord x="125525" y="54799" flags="32"/>
+                            <coord x="125525" y="64957" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="13">
+                            <coord x="154354" y="63135" flags="1"/>
+                            <coord x="154383" y="63905"/>
+                            <coord x="154299" y="64653"/>
+                            <coord x="154117" y="65364" flags="1"/>
+                            <coord x="149630" y="65182"/>
+                            <coord x="146371" y="61965"/>
+                            <coord x="146217" y="57898" flags="1"/>
+                            <coord x="146188" y="57128"/>
+                            <coord x="146272" y="56380"/>
+                            <coord x="146454" y="55669" flags="1"/>
+                            <coord x="150941" y="55851"/>
+                            <coord x="154199" y="59069"/>
+                            <coord x="154354" y="63135" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="1">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">2</t>
+                            <t k="operations">Intersection</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="243182" y="62864"/>
+                            <coord x="237575" y="62864" flags="32"/>
+                            <coord x="237575" y="57743"/>
+                            <coord x="243182" y="57743" flags="32"/>
+                            <coord x="243182" y="62864" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                            <t k="operations">Union</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="11079" y="88575" flags="32"/>
+                            <coord x="1443" y="88575"/>
+                            <coord x="1443" y="78939"/>
+                            <coord x="11079" y="78939"/>
+                            <coord x="11079" y="88575" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                            <t k="operations">Union</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="-1444" y="101079" flags="32"/>
+                            <coord x="-11080" y="101079"/>
+                            <coord x="-11080" y="91443"/>
+                            <coord x="-1444" y="91443"/>
+                            <coord x="-1444" y="101079" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">2</t>
+                            <t k="operations">Union</t>
+                        </tags>
+                        <coords count="9">
+                            <coord x="36811" y="92864" flags="32"/>
+                            <coord x="32782" y="92864"/>
+                            <coord x="32782" y="97379" flags="32"/>
+                            <coord x="23146" y="97379"/>
+                            <coord x="23146" y="87743"/>
+                            <coord x="27175" y="87743"/>
+                            <coord x="27175" y="83228" flags="32"/>
+                            <coord x="36811" y="83228"/>
+                            <coord x="36811" y="92864" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">2</t>
+                            <t k="operations">Union</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="69745" y="100207" flags="32"/>
+                            <coord x="49758" y="100207"/>
+                            <coord x="49758" y="80220"/>
+                            <coord x="69745" y="80220"/>
+                            <coord x="69745" y="100207" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">1</t>
+                            <t k="description">small square inside another</t>
+                            <t k="operations">Union</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="99988" y="100243" flags="32"/>
+                            <coord x="79929" y="100243"/>
+                            <coord x="79929" y="80184"/>
+                            <coord x="99988" y="80184"/>
+                            <coord x="99988" y="100243" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">1</t>
+                            <t k="operations">Union</t>
+                            <t k="vertical_displacements">30,60,90,120</t>
+                            <t k="description">circles, overlapping</t>
+                        </tags>
+                        <coords count="21">
+                            <coord x="161727" y="87308" flags="1"/>
+                            <coord x="161889" y="91591"/>
+                            <coord x="158549" y="95195"/>
+                            <coord x="154267" y="95358"/>
+                            <coord x="154111" y="95361" flags="1"/>
+                            <coord x="153168" y="98858"/>
+                            <coord x="150510" y="100986"/>
+                            <coord x="146894" y="101185" flags="1"/>
+                            <coord x="142611" y="101347"/>
+                            <coord x="139006" y="98007"/>
+                            <coord x="138844" y="93725" flags="1"/>
+                            <coord x="138681" y="89442"/>
+                            <coord x="142020" y="85838"/>
+                            <coord x="146304" y="85675"/>
+                            <coord x="146459" y="85672" flags="1"/>
+                            <coord x="147402" y="82175"/>
+                            <coord x="150061" y="80047"/>
+                            <coord x="153677" y="79848" flags="1"/>
+                            <coord x="157960" y="79685"/>
+                            <coord x="161564" y="83026"/>
+                            <coord x="161727" y="87308" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">2</t>
+                            <t k="operations">Union</t>
+                        </tags>
+                        <coords count="14">
+                            <coord x="130571" y="87304" flags="1"/>
+                            <coord x="130701" y="90761"/>
+                            <coord x="128585" y="93783"/>
+                            <coord x="125527" y="94960"/>
+                            <coord x="125525" y="100299" flags="32"/>
+                            <coord x="110025" y="100299"/>
+                            <coord x="110025" y="84799"/>
+                            <coord x="115333" y="84799" flags="1"/>
+                            <coord x="116540" y="81625"/>
+                            <coord x="119005" y="79911"/>
+                            <coord x="122396" y="79727" flags="1"/>
+                            <coord x="126745" y="79562"/>
+                            <coord x="130405" y="82955"/>
+                            <coord x="130571" y="87304" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="-1444" y="131079" flags="32"/>
+                            <coord x="-11080" y="131079"/>
+                            <coord x="-11080" y="121443"/>
+                            <coord x="-1444" y="121443"/>
+                            <coord x="-1444" y="131079" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">1</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="5">
+                            <coord x="11079" y="118575" flags="32"/>
+                            <coord x="1443" y="118575"/>
+                            <coord x="1443" y="108939"/>
+                            <coord x="11079" y="108939"/>
+                            <coord x="11079" y="118575" flags="50"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">2</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="14">
+                            <coord x="36811" y="122864" flags="32"/>
+                            <coord x="32782" y="122864"/>
+                            <coord x="32782" y="127379" flags="32"/>
+                            <coord x="23146" y="127379"/>
+                            <coord x="23146" y="117743"/>
+                            <coord x="27175" y="117743"/>
+                            <coord x="27175" y="113228" flags="32"/>
+                            <coord x="36811" y="113228"/>
+                            <coord x="36811" y="122864" flags="50"/>
+                            <coord x="27175" y="117743"/>
+                            <coord x="27175" y="122864" flags="32"/>
+                            <coord x="32782" y="122864"/>
+                            <coord x="32782" y="117743" flags="32"/>
+                            <coord x="27175" y="117743" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">3</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="10">
+                            <coord x="69745" y="130207" flags="32"/>
+                            <coord x="49758" y="130207"/>
+                            <coord x="49758" y="110220"/>
+                            <coord x="69745" y="110220"/>
+                            <coord x="69745" y="130207" flags="50"/>
+                            <coord x="53656" y="114118"/>
+                            <coord x="53656" y="126309"/>
+                            <coord x="65847" y="126309"/>
+                            <coord x="65847" y="114118"/>
+                            <coord x="53656" y="114118" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">4</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="10">
+                            <coord x="99988" y="130243" flags="32"/>
+                            <coord x="79929" y="130243"/>
+                            <coord x="79929" y="110184"/>
+                            <coord x="99988" y="110184"/>
+                            <coord x="99988" y="130243" flags="50"/>
+                            <coord x="83855" y="114110"/>
+                            <coord x="83855" y="126317"/>
+                            <coord x="96062" y="126317"/>
+                            <coord x="96062" y="114110"/>
+                            <coord x="83855" y="114110" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">5</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="26">
+                            <coord x="130571" y="117304" flags="1"/>
+                            <coord x="130701" y="120761"/>
+                            <coord x="128585" y="123783"/>
+                            <coord x="125527" y="124960"/>
+                            <coord x="125525" y="130299" flags="32"/>
+                            <coord x="110025" y="130299"/>
+                            <coord x="110025" y="114799"/>
+                            <coord x="115333" y="114799" flags="1"/>
+                            <coord x="116540" y="111625"/>
+                            <coord x="119005" y="109911"/>
+                            <coord x="122396" y="109727" flags="1"/>
+                            <coord x="126745" y="109562"/>
+                            <coord x="130405" y="112955"/>
+                            <coord x="130571" y="117304" flags="18"/>
+                            <coord x="115333" y="114799" flags="1"/>
+                            <coord x="114961" y="115758"/>
+                            <coord x="114778" y="116808"/>
+                            <coord x="114819" y="117902" flags="1"/>
+                            <coord x="114984" y="122251"/>
+                            <coord x="118645" y="125643"/>
+                            <coord x="122994" y="125479" flags="1"/>
+                            <coord x="123886" y="125445"/>
+                            <coord x="124737" y="125264"/>
+                            <coord x="125526" y="124960"/>
+                            <coord x="125525" y="114799" flags="32"/>
+                            <coord x="115333" y="114799" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">6</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="34">
+                            <coord x="161727" y="117308" flags="1"/>
+                            <coord x="161889" y="121591"/>
+                            <coord x="158549" y="125195"/>
+                            <coord x="154267" y="125358"/>
+                            <coord x="154111" y="125361" flags="1"/>
+                            <coord x="153168" y="128858"/>
+                            <coord x="150510" y="130986"/>
+                            <coord x="146894" y="131185" flags="1"/>
+                            <coord x="142611" y="131347"/>
+                            <coord x="139006" y="128007"/>
+                            <coord x="138844" y="123725" flags="1"/>
+                            <coord x="138681" y="119442"/>
+                            <coord x="142020" y="115838"/>
+                            <coord x="146304" y="115675"/>
+                            <coord x="146459" y="115672" flags="1"/>
+                            <coord x="147402" y="112175"/>
+                            <coord x="150061" y="110047"/>
+                            <coord x="153677" y="109848" flags="1"/>
+                            <coord x="157960" y="109685"/>
+                            <coord x="161564" y="113026"/>
+                            <coord x="161727" y="117308" flags="18"/>
+                            <coord x="146459" y="115672" flags="1"/>
+                            <coord x="146272" y="116380"/>
+                            <coord x="146188" y="117128"/>
+                            <coord x="146217" y="117898" flags="1"/>
+                            <coord x="146377" y="122128"/>
+                            <coord x="149897" y="125438"/>
+                            <coord x="154111" y="125362" flags="1"/>
+                            <coord x="154299" y="124653"/>
+                            <coord x="154383" y="123905"/>
+                            <coord x="154354" y="123135" flags="1"/>
+                            <coord x="154193" y="118905"/>
+                            <coord x="150674" y="115593"/>
+                            <coord x="146459" y="115672" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="1">
+                        <tags>
+                            <t k="case_id">9</t>
+                            <t k="order">2</t>
+                            <t k="operations">XOr</t>
+                        </tags>
+                        <coords count="14">
+                            <coord x="247211" y="122864" flags="32"/>
+                            <coord x="243182" y="122864"/>
+                            <coord x="243182" y="127379" flags="32"/>
+                            <coord x="233546" y="127379"/>
+                            <coord x="233546" y="117743"/>
+                            <coord x="237575" y="117743"/>
+                            <coord x="237575" y="113228" flags="32"/>
+                            <coord x="247211" y="113228"/>
+                            <coord x="247211" y="122864" flags="50"/>
+                            <coord x="237575" y="117743"/>
+                            <coord x="237575" y="122864" flags="32"/>
+                            <coord x="243182" y="122864"/>
+                            <coord x="243182" y="117743" flags="32"/>
+                            <coord x="237575" y="117743" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">7</t>
+                            <t k="order">1</t>
+                            <t k="description">square with overlapping holes</t>
+                            <t k="operations">MergeHoles</t>
+                            <t k="vertical_displacements">30</t>
+                        </tags>
+                        <coords count="30">
+                            <coord x="189994" y="40207" flags="32"/>
+                            <coord x="170007" y="40207"/>
+                            <coord x="170007" y="20220"/>
+                            <coord x="189994" y="20220"/>
+                            <coord x="189994" y="40207" flags="50"/>
+                            <coord x="177333" y="22416" flags="1"/>
+                            <coord x="176321" y="23179"/>
+                            <coord x="176261" y="26557"/>
+                            <coord x="176659" y="29342" flags="1"/>
+                            <coord x="175949" y="29441"/>
+                            <coord x="175259" y="29745"/>
+                            <coord x="174674" y="30249" flags="1"/>
+                            <coord x="173002" y="31687"/>
+                            <coord x="172813" y="34209"/>
+                            <coord x="174252" y="35880" flags="1"/>
+                            <coord x="175690" y="37552"/>
+                            <coord x="178211" y="37741"/>
+                            <coord x="179883" y="36302" flags="1"/>
+                            <coord x="180800" y="35513"/>
+                            <coord x="181271" y="34398"/>
+                            <coord x="181271" y="33275" flags="1"/>
+                            <coord x="183547" y="32804"/>
+                            <coord x="186193" y="31705"/>
+                            <coord x="187129" y="31001" flags="1"/>
+                            <coord x="188730" y="29795"/>
+                            <coord x="187802" y="25429"/>
+                            <coord x="186596" y="23829" flags="1"/>
+                            <coord x="185391" y="22228"/>
+                            <coord x="178934" y="21211"/>
+                            <coord x="177333" y="22416" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="0">
+                        <tags>
+                            <t k="case_id">8</t>
+                            <t k="order">1</t>
+                            <t k="description">square with non-overlapping holes</t>
+                            <t k="operations">MergeHoles</t>
+                            <t k="vertical_displacements">30</t>
+                        </tags>
+                        <coords count="31">
+                            <coord x="220188" y="40207" flags="32"/>
+                            <coord x="200201" y="40207"/>
+                            <coord x="200201" y="20220"/>
+                            <coord x="220188" y="20220"/>
+                            <coord x="220188" y="40207" flags="50"/>
+                            <coord x="204025" y="30825" flags="1"/>
+                            <coord x="202423" y="32145"/>
+                            <coord x="202193" y="34513"/>
+                            <coord x="203513" y="36115" flags="1"/>
+                            <coord x="204832" y="37717"/>
+                            <coord x="207200" y="37946"/>
+                            <coord x="208802" y="36627" flags="1"/>
+                            <coord x="210404" y="35307"/>
+                            <coord x="210634" y="32939"/>
+                            <coord x="209314" y="31337" flags="1"/>
+                            <coord x="207995" y="29735"/>
+                            <coord x="205627" y="29506"/>
+                            <coord x="204025" y="30825" flags="18"/>
+                            <coord x="211589" y="22692" flags="1"/>
+                            <coord x="209924" y="24294"/>
+                            <coord x="209874" y="26942"/>
+                            <coord x="211476" y="28607" flags="1"/>
+                            <coord x="213078" y="30272"/>
+                            <coord x="215726" y="30323"/>
+                            <coord x="217391" y="28721" flags="1"/>
+                            <coord x="219056" y="27119"/>
+                            <coord x="219107" y="24470"/>
+                            <coord x="217505" y="22805" flags="1"/>
+                            <coord x="215903" y="21141"/>
+                            <coord x="213254" y="21090"/>
+                            <coord x="211589" y="22692" flags="18"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                </objects>
+            </part>
+            <part name="default part">
+                <objects count="31">
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="120000"/>
+                        </coords>
+                        <text>XOR</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="90000"/>
+                        </coords>
+                        <text>UNION</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="60000"/>
+                        </coords>
+                        <text>INTERSECTION</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="30000"/>
+                        </coords>
+                        <text>DIFFERENCE</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="0"/>
+                        </coords>
+                        <text>SOURCE</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="2" v_align="2">
+                        <coords count="1">
+                            <coord x="-30000" y="0"/>
+                        </coords>
+                        <text>SOURCE</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="0" y="-30000"/>
+                        </coords>
+                        <text>CASE 1
+squares,
+non-overlapping</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="30000" y="-30000"/>
+                        </coords>
+                        <text>CASE 2
+squares,
+overlapping</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="60000" y="-30000"/>
+                        </coords>
+                        <text>CASE 3
+small square
+inside another</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="90000" y="-30000"/>
+                        </coords>
+                        <text>CASE 4
+small square
+inside another,
+reverse order</text>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-15000" y="-45000" flags="32"/>
+                            <coord x="-15000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="15000" y="-45000" flags="32"/>
+                            <coord x="15000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="45000" y="-45000" flags="32"/>
+                            <coord x="45000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="75000" y="-45000" flags="32"/>
+                            <coord x="75000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="105000" y="-45000" flags="32"/>
+                            <coord x="105000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="165000" y="-45000" flags="32"/>
+                            <coord x="165000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="195000" y="-45000" flags="32"/>
+                            <coord x="195000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="135000" y="-45000" flags="32"/>
+                            <coord x="135000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="255000" y="-45000" flags="32"/>
+                            <coord x="255000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="225000" y="-45000" flags="32"/>
+                            <coord x="225000" y="165000" flags="16"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="-15000"/>
+                            <coord x="285000" y="-15000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="135000"/>
+                            <coord x="285000" y="135000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="15000"/>
+                            <coord x="285000" y="15000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="45000"/>
+                            <coord x="285000" y="45000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="105000"/>
+                            <coord x="285000" y="105000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="1" symbol="2">
+                        <coords count="2">
+                            <coord x="-60000" y="75640"/>
+                            <coord x="285000" y="75000" flags="48"/>
+                        </coords>
+                        <pattern rotation="0">
+                            <coord x="0" y="0"/>
+                        </pattern>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="210000" y="-30000"/>
+                        </coords>
+                        <text>CASE 8
+square with 
+non-overlapping
+holes</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="120000" y="-30000"/>
+                        </coords>
+                        <text>CASE 5
+square x circle,
+overlapping</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="180000" y="-30000"/>
+                        </coords>
+                        <text>CASE 7
+square with
+overlapping holes</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="150000" y="-30000"/>
+                        </coords>
+                        <text>CASE 6
+circles,
+overlapping</text>
+                    </object>
+                    <object type="4" symbol="3" h_align="1" v_align="0">
+                        <coords count="1">
+                            <coord x="240000" y="-30000"/>
+                        </coords>
+                        <text>CASE 9
+squares,
+overlapping,
+different symbols</text>
+                    </object>
+                </objects>
+            </part>
+        </parts>
+        <templates count="0" first_front_template="0">
+            <defaults use_meters_per_pixel="true" meters_per_pixel="0" dpi="0" scale="0"/>
+        </templates>
+        <view>
+            <grid color="#80646464" display="0" alignment="0" additional_rotation="0" unit="0" h_spacing="15" v_spacing="15" h_offset="0" v_offset="0" snapping_enabled="true"/>
+            <map_view zoom="0.980935" position_x="112500" position_y="60000">
+                <map opacity="1" visible="true"/>
+                <templates count="0"/>
+            </map_view>
+        </view>
+    </barrier>
+</map>
