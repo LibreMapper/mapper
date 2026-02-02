@@ -24,10 +24,10 @@ class PathObject;
 /**
  * Wraps some helper functions for boolean operations.
  * 
- * The implementation of the boolean operation tools is based on the Clipper
- * library (aka libpolyclipping) (http://www.angusj.com/delphi/clipper.php).
+ * The implementation of the boolean operation tools is based on the Clipper2
+ * library (https://www.angusj.com/clipper2/Docs/Overview.htm).
  * 
- * Because Clipper does not support bezier curves, areas are clipped as
+ * Because Clipper2 does not support bezier curves, areas are clipped as
  * polygonal approximations, and after clipping we try to rebuild the curves.
  * 
  * @todo This class should get unit tests.

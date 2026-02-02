@@ -23,7 +23,7 @@
 # basename[:package_name] 
 
 list(APPEND easy_dependencies
-  libpolyclipping
+  Clipper2
   proj
   qtbase
   qtimageformats
@@ -91,9 +91,9 @@ foreach(dependency ${easy_dependencies})
 		if(dependency MATCHES "^qt")
 			find_package(Qt5Core)
 			list(APPEND explicit_copyright_${dependency} "${Qt5Core_VERSION}")
-		elseif(dependency STREQUAL "libpolyclipping")
-			find_package(Polyclipping)
-			list(APPEND explicit_copyright_${dependency} "${POLYCLIPPING_VERSION}")
+		elseif(dependency STREQUAL "Clipper2")
+			find_package(Clipper2)
+			list(APPEND explicit_copyright_${dependency} "${CLIPPER2_VERSION}")
 		elseif(dependency STREQUAL "proj" AND PROJ_VERSION)
 			list(APPEND explicit_copyright_${dependency} "${PROJ_VERSION}")
 		elseif(dependency STREQUAL "zlib")
