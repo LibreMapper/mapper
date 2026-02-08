@@ -31,6 +31,7 @@ Checks: >-
   -google*,
   -hicpp*,
   -llvm*,
+  -misc-include-cleaner,
   -misc-non-private-member-variables-in-classes,
   -modernize-avoid-c-arrays,
   -modernize-make-unique,
