@@ -66,7 +66,6 @@ protected:
 	QUndoStack* bwBitmapUndo {};
 	std::vector<QPushButton*> colorButtons;
 	Settings settings;
-	static const int MESSAGESHOWDELAY;
 
 	bool performMorphologicalOperation(Vectorizer::MorphologicalOperation mo);
 	void clearColorsTab();
