@@ -116,7 +116,7 @@ protected:
 	QPoint cur_pos;
 	MapCoordF cur_pos_map;
 	MapCoordF constrained_pos_map;
-	bool dragging;
+	bool dragging         = false;
 	bool draw_dash_points = true;
 	bool shift_pressed    = false;
 	bool ctrl_pressed     = false;
