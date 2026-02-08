@@ -9,19 +9,19 @@
 #include "Vectorizer.h"
 
 #include <algorithm>
+#include <cmath>
 #include <cstdlib>
-#include <iosfwd>
 #include <iterator>
 #include <numeric>
 #include <utility>
-#include <type_traits>
 
-#include <Qt>
-#include <QtGlobal>
 #include <QColor>
-#include <QException>
 #include <QImage>
+#include <QList>
 #include <QVector>
+#include <Qt>
+#include <QtAssert>
+#include <QtGlobal>
 
 #include "AlphaGetter.h"
 #include "Concurrency.h"
@@ -407,7 +407,7 @@ public:
 		{
 			for (int x = 0; x < width; x++)
 			{
-				double distance;
+				double distance = NAN;
 				color->setRGBTriplet(sourceImage.pixel(x, y));
 				int index = km.findClosest(*color, distance);
 				outputImage.setPixel(x, y, index);

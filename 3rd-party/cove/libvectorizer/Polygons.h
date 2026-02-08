@@ -12,8 +12,8 @@
 #include <limits>
 #include <vector>
 
-#include <QtGlobal>
 #include <QPointF>
+#include <QtTypes>
 
 #include "cove-potrace.h"
 

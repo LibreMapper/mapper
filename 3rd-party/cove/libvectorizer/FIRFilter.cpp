@@ -7,8 +7,6 @@
 
 #include "FIRFilter.h"
 
-#include <memory>
-
 #include <QImage>
 
 #include "MapColor.h"

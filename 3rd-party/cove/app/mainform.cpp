@@ -242,8 +242,11 @@ void mainForm::afterLoadImage()
 QRgb mainForm::getColorFromImage(const QImage& image)
 {
 	srand(time(nullptr));  // NOLINT
-	unsigned long r, g, b, divisor;
-	r = g = b = divisor = 0;
+	auto r = 0U;
+	auto g = 0U;
+	auto b = 0U;
+	auto divisor = 0U;
+
 	for (int a = 0; a < 5; a++)
 	{
 		int line = rand() % image.height();  // NOLINT
@@ -365,7 +368,7 @@ void mainForm::on_runClassificationButton_clicked()
 void mainForm::clearColorButtonsGroup()
 {
 	setTabEnabled(ui.thinningTab, false);
-	for (auto button : colorButtons)
+	for (auto* button : colorButtons)
 	{
 		disconnect(button);
 		ui.gridLayout->removeWidget(button);
@@ -380,9 +383,10 @@ void mainForm::setColorButtonsGroup(std::vector<QRgb> colors)
 {
 	clearColorButtonsGroup();
 	auto nColors = colors.size();
-	if (!nColors) return;
+	if (!nColors)
+		return;
 	colorButtons.resize(nColors + 1);
-	unsigned i;
+	auto i = 0U;
 	for (i = 0; i < nColors; i++)
 	{
 		QPixmap buttonFace(20, 20);
@@ -713,7 +717,7 @@ void mainForm::on_saveVectorsButton_clicked()
 
 	ooMap->clearObjectSelection(false);
 
-	auto* symbol = ui.symbolComboBox->symbol();
+	auto const* symbol = ui.symbolComboBox->symbol();
 	if (!symbol)
 		symbol = ooMap->getUndefinedLine();
 

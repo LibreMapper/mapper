@@ -16,15 +16,15 @@ class ProgressObserver;
 class Morphology
 {
 protected:
-	static unsigned int masks[];
-	static bool todelete[];
-	static bool isDeletable[];
-	static bool isInsertable[];
-	static bool isPrunable[];
+	static const unsigned int masks[];
+	static const bool todelete[];
+	static const bool isDeletable[];
+	static const bool isInsertable[];
+	static const bool isPrunable[];
 	QImage image, thinnedImage;
-	bool runMorpholo(bool* table, bool insert,
+	bool runMorpholo(const bool* table, bool insert,
 	                 ProgressObserver* progressObserver = nullptr);
-	int modifyImage(bool* table, bool insert,
+	int modifyImage(const bool* table, bool insert,
 	                ProgressObserver* progressObserver = nullptr);
 
 public:

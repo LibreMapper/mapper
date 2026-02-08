@@ -7,10 +7,10 @@
 
 #include "MapColor.h"
 
+#include <algorithm>
 #include <cmath>
 
 #include <QColor>
-#include <QtGlobal>
 
 #include "KohonenMap.h"  // IWYU pragma: keep
 
@@ -77,7 +77,7 @@ void MapColor::setP(double p)
 }
 
 /*! Current value of p. */
-double MapColor::getP()
+double MapColor::getP() const
 {
 	return p;
 }
@@ -94,9 +94,8 @@ double MapColor::distImplEuclid(double y1, double y2, double y3) const
 
 inline double MapColor::squaresImpl(double y1, double y2, double y3) const
 {
-	double result, d;
-	d = x1 - y1;
-	result = d * d;
+	auto d = x1 - y1;
+	auto result = d * d;
 	d = x2 - y2;
 	result += d * d;
 	d = x3 - y3;
@@ -105,22 +104,16 @@ inline double MapColor::squaresImpl(double y1, double y2, double y3) const
 
 double MapColor::distImplChebyshev(double y1, double y2, double y3) const
 {
-	double result = fabs(x1 - y1), d;
-	if ((d = fabs(x2 - y2)) > result) result = d;
-	if ((d = fabs(x3 - y3)) > result) result = d;
-	return result;
+	auto const result = std::max(std::abs(x1 - y1), std::abs(x2 - y2));
+	return std::max(result, std::abs(x3 - y3));
 }
 
 double MapColor::distImplMinkowski(double y1, double y2, double y3) const
 {
-	double result, d;
-	d = fabs(x1 - y1);
-	result = pow(d, p);
-	d = fabs(x2 - y2);
-	result += pow(d, p);
-	d = fabs(x3 - y3);
-	result += pow(d, p);
-	return pow(result, p1);
+	auto result = std::pow(std::abs(x1 - y1), p);
+	result += std::pow(std::abs(x2 - y2), p);
+	result += std::pow(std::abs(x3 - y3), p);
+	return std::pow(result, p1);
 }
 
 //! \brief Minkowski distance to the next vector.
@@ -235,7 +228,9 @@ QRgb MapColorHSV::getRGBTriplet() const
 
 void MapColorHSV::setRGBTriplet(const QRgb i)
 {
-	float qx1, qx2, qx3;
+	float qx1 = NAN;
+	float qx2 = NAN;
+	float qx3 = NAN;
 	QColor(i).getHsvF(&qx1, &qx2, &qx3);
 	x1 = qx1;
 	x2 = qx2;

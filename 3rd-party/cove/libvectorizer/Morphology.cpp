@@ -47,7 +47,7 @@ QImage Morphology::getImage() const
 }
 
 //! Direction masks N S W E
-unsigned int Morphology::masks[] = {0200, 0002, 0040, 0010};
+constexpr unsigned Morphology::masks[] = {0200, 0002, 0040, 0010};
 
 /*! Conditional erosion
 
@@ -62,7 +62,7 @@ neighborhood is:
 </pre>
 */
 
-bool Morphology::todelete[512] = {
+constexpr bool Morphology::todelete[512] = {
 	false, false, false, false, false, false, false, false, false, false, false,
 	false, false, false, false, false, false, false, false, false, false, false,
 	false, false, false, false, false, true,  false, false, false, true,  false,
@@ -198,7 +198,7 @@ bool Morphology::rosenfeld(ProgressObserver* progressObserver)
 }
 
 //! Erosion table
-bool Morphology::isDeletable[512] = {
+constexpr bool Morphology::isDeletable[512] = {
 	false, false, false, false, false, false, false, false, false, false, false,
 	false, false, false, false, false, true,  true,  true,  true,  true,  true,
 	true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  false,
@@ -248,7 +248,7 @@ bool Morphology::isDeletable[512] = {
 	false, false, true,  true,  false, false};
 
 //! Dilation table.
-bool Morphology::isInsertable[512] = {
+constexpr bool Morphology::isInsertable[512] = {
 	false, false, true,  true,  false, false, true,  true,  true,  true,  true,
 	true,  true,  true,  true,  true,  false, false, false, false, false, false,
 	false, false, false, false, false, false, false, false, false, false, true,
@@ -298,7 +298,7 @@ bool Morphology::isInsertable[512] = {
 	false, false, false, false, false, false};
 
 //! Pruning table.
-bool Morphology::isPrunable[512] = {
+constexpr bool Morphology::isPrunable[512] = {
 	false, false, false, false, false, false, false, false, false, false, false,
 	false, false, false, false, false, false, false, true,  true,  false, false,
 	true,  true,  true,  true,  false, false, true,  true,  false, false, false,
@@ -366,7 +366,7 @@ bool Morphology::pruning(ProgressObserver* progressObserver)
 }
 
 //! Prepares new thinnedImage and runs modifyImage once.
-bool Morphology::runMorpholo(bool* table, bool insert,
+bool Morphology::runMorpholo(const bool* table, bool insert,
 							 ProgressObserver* progressObserver)
 {
 	thinnedImage = image;
@@ -382,7 +382,7 @@ bool Morphology::runMorpholo(bool* table, bool insert,
   contains true.
   \param[in] progressObserver Progress observer.
   */
-int Morphology::modifyImage(bool* table, bool insert,
+int Morphology::modifyImage(const bool* table, bool insert,
 							ProgressObserver* progressObserver)
 {
 	int xSize = thinnedImage.width();
@@ -391,7 +391,8 @@ int Morphology::modifyImage(bool* table, bool insert,
 	std::vector<bool> topScanLine(xSize);
 	std::vector<bool> midScanLine(xSize);
 	std::vector<bool> botScanLine(xSize);
-	int p, modifications;
+	auto modifications = 0U;
+	auto p = 0U; // Pixel neighborhood
 	bool cancel = false;
 
 	modifications = 0;

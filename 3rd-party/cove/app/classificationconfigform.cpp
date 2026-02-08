@@ -108,9 +108,12 @@ void ClassificationConfigForm::accept()
 	minAlpha = ui.minAlphaInput->text().toDouble();
 	learnMethod = ui.learningMethodComboBox->currentIndex();
 	colorSpace = ui.colorSpaceComboBox->currentIndex();
-	bool ok;
+
+	bool ok = false;
 	p = ui.pInput->text().toDouble(&ok);
-	if (!ok && ui.pInput->text() == QString::fromLatin1("inf")) p = INFINITY;
+	if (!ok && ui.pInput->text() == QString::fromLatin1("inf"))
+		p = INFINITY;
+
 	QDialog::accept();
 }
 

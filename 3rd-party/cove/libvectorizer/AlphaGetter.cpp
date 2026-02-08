@@ -46,6 +46,7 @@ ClassicAlphaGetter::ClassicAlphaGetter(ProgressObserver* progressObserver)
 }
 
 //! Constructs ClassicAlphaGetter with given defaults and no progressObserver.
+// NOLINTNEXTLINE(bugprone-easily-swappable-parameters)
 ClassicAlphaGetter::ClassicAlphaGetter(double alpha, double q, unsigned int e,
 									   double minAlpha)
 	: alpha(alpha)
@@ -56,6 +57,7 @@ ClassicAlphaGetter::ClassicAlphaGetter(double alpha, double q, unsigned int e,
 }
 
 //! Constructs ClassicAlphaGetter with given defaults and progressObserver.
+// NOLINTNEXTLINE(bugprone-easily-swappable-parameters)
 ClassicAlphaGetter::ClassicAlphaGetter(double alpha, double q, unsigned int e,
 									   double minAlpha,
 									   ProgressObserver* progressObserver)
@@ -71,14 +73,14 @@ ClassicAlphaGetter::ClassicAlphaGetter(double alpha, double q, unsigned int e,
 \sa getE */
 double ClassicAlphaGetter::getAlpha()
 {
-	bool cancel = false;
+	auto cancel = false;
 	if (progressObserver)
 	{
 		progressObserver->setPercentage(
 			static_cast<int>(100 * std::log(alpha) / std::log(minAlpha)));
 		cancel = progressObserver->isInterruptionRequested();
 	}
-	double retalpha = (!cancel && alpha > minAlpha) ? alpha : 0;
+	auto const retalpha = (!cancel && alpha > minAlpha) ? alpha : 0;
 	alpha *= q;
 	return retalpha;
 }

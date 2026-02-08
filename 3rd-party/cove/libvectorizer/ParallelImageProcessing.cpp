@@ -10,9 +10,8 @@
 
 #include <algorithm>
 
-#include <QtGlobal>
+#include <QtTypes>
 #include <QImage>
-#include <QRgb>
 
 
 namespace cove {

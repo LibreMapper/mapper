@@ -7,7 +7,8 @@
 
 #include "KohonenMap.h"
 
-#include <iosfwd>
+#include <cmath>
+#include <cstddef>
 
 namespace cove {
 //@{
@@ -113,11 +114,11 @@ int KohonenMap::findClosest(const OrganizableElement& v,
 							double& bestDistance) const
 {
 	int bestIndex = 0;
-	double currentDistance;
 	bestDistance = classes[0]->distance(v);
 	for (std::size_t i = 0; i < classes.size(); i++)
 	{
-		if ((currentDistance = classes[i]->distance(v)) < bestDistance)
+		auto currentDistance = classes[i]->distance(v);
+		if (currentDistance < bestDistance)
 		{
 			bestDistance = currentDistance;
 			bestIndex = i;
@@ -131,7 +132,7 @@ int KohonenMap::findClosest(const OrganizableElement& v,
   -# modify it according to Kohonens' learning rule */
 void KohonenMap::learn(const OrganizableElement& v, double alfa)
 {
-	double bd;
+	double bd = NAN;
 	int learnMomentum = findClosest(v, bd);
 	OrganizableElement* adjustment = v.clone();
 	adjustment->subtract(*classes[learnMomentum]);
@@ -165,11 +166,12 @@ double KohonenMap::performBatchLearning(BatchPatternGetter& patternGetter)
 {
 	std::vector<unsigned int> counts(classes.size());
 	std::vector<std::unique_ptr<OrganizableElement>> accClasses(classes.size());
-	double dist, quality;
 
 	for (auto i = 0U; i < classes.size(); i++)
 		accClasses[i].reset(classes[i]->clone());
 
+	double quality = 0;
+	double dist = NAN;
 	do
 	{
 		quality = 0;

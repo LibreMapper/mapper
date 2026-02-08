@@ -8,6 +8,7 @@
 
 #include "ImageView.h"
 
+#include <algorithm>
 #include <cmath>
 
 #include <QAction>
@@ -276,7 +277,7 @@ ImageView::ImageView(ImageWidget* image_widget, QWidget* parent)
 {
 	setWidget(image_widget);
 	reset();
-	QAction* a;
+	QAction* a = {};
 	addAction(a = new QAction(tr("Move"), this));
 	connect(a, SIGNAL(triggered(bool)), this, SLOT(setMoveMode()));
 	addAction(a = new QAction(tr("Zoom in"), this));
@@ -354,7 +355,8 @@ void ImageView::mousePressEvent(QMouseEvent* event)
 //! Handles mouse drag when moving image or zooming in.
 void ImageView::mouseMoveEvent(QMouseEvent* event)
 {
-	if (!(event->buttons() & Qt::LeftButton)) return;
+	if (!(event->buttons() & Qt::LeftButton))
+		return;
 
 	auto* iw = imageWidget();
 
@@ -369,7 +371,9 @@ void ImageView::mouseMoveEvent(QMouseEvent* event)
 			QRect vportrect = viewport()->rect();
 			if (!vportrect.contains(dragCurPos))
 			{
-				int dx = 0, dy = 0, t;
+				auto dx = 0;
+				auto dy = 0;
+				auto t = 0;
 				if ((t = dragCurPos.x() - vportrect.right()) > 0)
 					dx -= t;
 				else if ((t = dragCurPos.x() - vportrect.left()) < 0)
@@ -393,33 +397,9 @@ void ImageView::mouseMoveEvent(QMouseEvent* event)
 				iw->move(d);
 			}
 
-			QPoint dist = dragStartPos - dragCurPos;
-			int x, y, w, h;
-
-			if (dist.x() > 0)
-			{
-				x = dragCurPos.x();
-				w = dist.x();
-			}
-			else
-			{
-				x = dragStartPos.x();
-				w = -dist.x();
-			}
-
-			if (dist.y() > 0)
-			{
-				y = dragCurPos.y();
-				h = dist.y();
-			}
-			else
-			{
-				y = dragStartPos.y();
-				h = -dist.y();
-			}
-
-			zoomRect = QRect(QPoint(x, y) - iw->pos(), QSize(w, h))
-						   .intersected(iw->rect().adjusted(0, 0, -1, -1));
+			auto const rect = QRect(dragStartPos, dragCurPos).normalized();
+			zoomRect = QRect(rect.topLeft() - iw->pos(), rect.size())
+			           .intersected(iw->rect().adjusted(0, 0, -1, -1));
 			iw->displayRect(zoomRect);
 		}
 	}

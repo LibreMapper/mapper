@@ -11,7 +11,6 @@
 #include <limits>
 
 #include <QCheckBox>
-#include <QDoubleValidator>
 #include <QIntValidator>
 #include <QLineEdit>
 #include <Qt>

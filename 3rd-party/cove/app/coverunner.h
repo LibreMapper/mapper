@@ -19,7 +19,7 @@ class CoveRunner
 {
 public:
 	void run(LibreMapper::MainWindow* parent, LibreMapper::Map* map,
-	         LibreMapper::TemplateImage* templ);
+	         LibreMapper::TemplateImage* templ) const;
 };
 } // cove
 

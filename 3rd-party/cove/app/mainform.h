@@ -72,7 +72,7 @@ protected:
 	void clearBWImageTab();
 	void setTabEnabled(QWidget* tab, bool state);
 	void afterLoadImage();
-	QRgb getColorFromImage(const QImage& image);
+	static QRgb getColorFromImage(const QImage& image);
 
 public:
 	mainForm(QWidget* parent, LibreMapper::Map* map,

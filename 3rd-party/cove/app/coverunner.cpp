@@ -16,9 +16,10 @@ class Map;
 } // namespace LibreMapper
 
 namespace cove {
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
 void CoveRunner::run(LibreMapper::MainWindow* parent,
 					 LibreMapper::Map* map,
-					 LibreMapper::TemplateImage* templ)
+					 LibreMapper::TemplateImage* templ) const
 {
 	mainForm f(parent, map, templ);
 	f.exec();

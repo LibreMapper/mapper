@@ -9,6 +9,7 @@
 #include "PolygonsView.h"
 
 #include <utility>
+#include <vector>
 
 #include <Qt>
 #include <QBrush>

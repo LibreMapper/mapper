@@ -13,6 +13,7 @@
 #include <iterator>
 #include <limits>
 #include <numeric>
+#include <vector>
 
 #include <QtGlobal>
 #include <QtMath>

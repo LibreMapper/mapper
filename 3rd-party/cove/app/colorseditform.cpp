@@ -8,8 +8,6 @@
 #include "colorseditform.h"
 #include "ui_colorseditform.h"
 
-#include <memory>
-
 #include <QAbstractItemModel>
 #include <QBrush>
 #include <QColor>

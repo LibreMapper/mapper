@@ -55,8 +55,9 @@ Settings::Settings()
   \return NaN in case the variable name does not exist */
 double Settings::getDouble(const QString& attname) const
 {
-	for (auto& k : doubleTab)
-		if (k.name == attname) return k.value;
+	for (const auto& k : doubleTab)
+		if (k.name == attname)
+			return k.value;
 
 	return std::nan("");
 }

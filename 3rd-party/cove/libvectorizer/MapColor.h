@@ -39,7 +39,7 @@ public:
 	virtual QRgb getRGBTriplet() const = 0;
 	virtual void setRGBTriplet(QRgb i) = 0;
 	void setP(double p);
-	double getP();
+	double getP() const;
 };
 
 class MapColorRGB : public MapColor

@@ -18,13 +18,14 @@
 #include <stdexcept>
 #include <utility>
 
-#include <QtGlobal>
 #include <QByteArray>
-#include <QPointF>
-#include <QString>
-
 #include <QImage>
+#include <QPointF>
 #include <QRectF>
+#include <QSize>
+#include <QString>
+#include <QtGlobal>
+#include <QtTypes>
 
 #include "ProgressObserver.h"
 
@@ -142,10 +143,10 @@ void Polygon::recheckBounds()
 	maxY = std::numeric_limits<qreal>::min();
 	for (auto const& p : *this)
 	{
-		if (p.x() > maxX) maxX = p.x();
-		if (p.x() < minX) minX = p.x();
-		if (p.y() > maxY) maxY = p.y();
-		if (p.y() < minY) minY = p.y();
+		maxX = std::max(maxX, p.x());
+		minX = std::min(minX, p.x());
+		maxY = std::max(maxY, p.y());
+		minY = std::min(minY, p.y());
 	}
 }
 
@@ -258,19 +259,22 @@ bool Polygons::findNextPixel(const QImage& image, int& xp, int& yp)
  */
 void Polygons::followPath(const QImage& image, int& x, int& y, Path* path)
 {
-	const int origX = x, origY = y;
-	int newx = 0, newy = 0;
-	int imWidth = image.width(), imHeight = image.height();
-	DIRECTION direction = NONE, newDirection;
-	int canProceed;
-	bool firstCycle = true;
+	auto const origX = x;
+	auto const origY = y;
+	auto newx = 0;
+	auto newy = 0;
+	auto const imSize = image.size();
+	DIRECTION direction = NONE;
+	DIRECTION newDirection = NONE;
+	auto canProceed = 0;
+	auto firstCycle = true;
 
 	for (;;)
 	{
 		canProceed = 0;
 		newDirection = NONE;
 
-		if (x < imWidth - 1 && image.pixelIndex(x + 1, y) && direction != WEST)
+		if (x < imSize.width() - 1 && image.pixelIndex(x + 1, y) && direction != WEST)
 		{
 			newx = x + 1;
 			newy = y;
@@ -284,7 +288,7 @@ void Polygons::followPath(const QImage& image, int& x, int& y, Path* path)
 			newDirection = WEST;
 			canProceed++;
 		}
-		if (y < imHeight - 1 && image.pixelIndex(x, y + 1) &&
+		if (y < imSize.height() - 1 && image.pixelIndex(x, y + 1) &&
 			direction != NORTH)
 		{
 			newx = x;
@@ -333,7 +337,8 @@ void Polygons::followPath(const QImage& image, int& x, int& y, Path* path)
 Polygons::Path Polygons::recordPath(const QImage& image, const int initX,
 									const int initY)
 {
-	int x = initX, y = initY;
+	auto x = initX;
+	auto y = initY;
 	// find the end of the path
 	followPath(image, x, y);
 	// record path into newPath
@@ -391,7 +396,7 @@ PolygonList
 Polygons::getPathPolygons(const Polygons::PathList& constpaths,
 						  ProgressObserver* progressObserver) const
 {
-	path_t* p;
+	path_t* p = {};
 	path_t* plist = nullptr;   /* linked list of path objects */
 	path_t** hook = &plist; /* used to speed up appending to linked list */
 
@@ -399,13 +404,11 @@ Polygons::getPathPolygons(const Polygons::PathList& constpaths,
 	polylist.reserve(constpaths.size());
 
 	// convert Polygons::Paths into Potrace paths
-	bool cancel = false;
 	int tpolys = constpaths.size(), cntr = 0;
 	int progressHowOften = (tpolys > 100) ? tpolys / 35 : 1;
-	for (PathList::const_iterator pathsiterator = constpaths.begin();
-		 !cancel && pathsiterator != constpaths.end(); ++pathsiterator)
+	for (auto const& path : constpaths)
 	{
-		int len = pathsiterator->size();
+		int len = path.size();
 		point_t* pt = reinterpret_cast<point_t*>(malloc(len * sizeof(point_t)));  // NOLINT
 		p = path_new();
 		if (!p || !pt)
@@ -415,12 +418,12 @@ Polygons::getPathPolygons(const Polygons::PathList& constpaths,
 		privpath_t* pp = p->priv;
 		pp->pt = pt;
 		pp->len = len;
-		pp->closed = pathsiterator->isClosed();
+		pp->closed = path.isClosed();
 		p->area = 100; // no speckle
 		p->sign = '+';
 
 		len = 0;
-		for (auto const& i : *pathsiterator)
+		for (auto const& i : path)
 		{
 			pt[len].x = i.x;
 			pt[len].y = i.y;
@@ -432,7 +435,8 @@ Polygons::getPathPolygons(const Polygons::PathList& constpaths,
 		if (progressObserver && !((++cntr) % progressHowOften))
 		{
 			progressObserver->setPercentage(25 + cntr * 25 / tpolys);
-			cancel = progressObserver->isInterruptionRequested();
+			if(progressObserver->isInterruptionRequested())
+				break;
 		}
 	}
 
@@ -524,28 +528,33 @@ Polygons::createPolygonsFromImage(const QImage& image,
 //! Fast computation of distance square of two points.  It is used in
 // comparisons where the monotonic transformation makes no problem. It saves
 // one call to sqrt(3).
-inline double Polygons::distSqr(const dpoint_t* a, const dpoint_t* b) const
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
+double Polygons::distSqr(const dpoint_t* a, const dpoint_t* b) const
 {
 	auto p = a->x - b->x, q = a->y - b->y;
 	return p * p + q * q;
 }
 
-inline Polygons::JOINEND Polygons::joinEndA(Polygons::JOINTYPE j) const
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
+Polygons::JOINEND Polygons::joinEndA(Polygons::JOINTYPE j) const
 {
 	return (j == FF || j == FB) ? FRONT : ((j == BF || j == BB) ? BACK : NOEND);
 }
 
-inline Polygons::JOINEND Polygons::joinEndB(Polygons::JOINTYPE j) const
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
+Polygons::JOINEND Polygons::joinEndB(Polygons::JOINTYPE j) const
 {
 	return (j == FF || j == BF) ? FRONT : ((j == FB || j == BB) ? BACK : NOEND);
 }
 
-inline Polygons::JOINEND Polygons::oppositeEnd(Polygons::JOINEND j) const
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
+Polygons::JOINEND Polygons::oppositeEnd(Polygons::JOINEND j) const
 {
 	return (j == BACK) ? FRONT : ((j == FRONT) ? BACK : NOEND);
 }
 
-inline Polygons::JOINTYPE Polygons::endsToType(Polygons::JOINEND ea,
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
+Polygons::JOINTYPE Polygons::endsToType(Polygons::JOINEND ea,
 											   Polygons::JOINEND eb) const
 {
 	if (ea == FRONT)
@@ -721,7 +730,10 @@ bool Polygons::compdists(JOINENDPOINTLIST& pl, JOINOPLIST& ops,
 			{
 				if (distSqr(start, &j->coords) < maxDistSqr)
 				{
-					dpoint_t *a, *b, *c, *d;
+					dpoint_t *a = {};
+					dpoint_t *b = {};
+					dpoint_t *c = {};
+					dpoint_t *d = {};
 					privcurve_t* pp_curve = &j->path->priv->curve;
 
 					switch (i->end)
@@ -791,11 +803,13 @@ bool Polygons::joinPolygons(path_t*& plist,
 {
 	JOINOPLIST ops;
 	JOINENDPOINTLIST pointlist;
-	path_t* p;
-	int nops, cntr, progressHowOften;
-	bool cancel = false;
-	double inf = std::numeric_limits<double>::infinity();
-	dpoint_t min = {inf, inf}, max = {-inf, -inf};
+	path_t* p = {};
+	auto nops = 0;
+	auto cntr = 0;
+	auto progressHowOften = 0;
+	auto cancel = false;
+	dpoint_t min = { std::numeric_limits<double>::max(), std::numeric_limits<double>::max() };
+	dpoint_t max = { std::numeric_limits<double>::min(), std::numeric_limits<double>::min() };
 
 	list_forall(p, plist)
 	{
@@ -804,14 +818,10 @@ bool Polygons::joinPolygons(path_t*& plist,
 		dpoint_t f = p_curve->vertex[0], b = p_curve->vertex[p_n - 1];
 		pointlist.push_back(JOINENDPOINT(f, FRONT, p));
 		pointlist.push_back(JOINENDPOINT(b, BACK, p));
-		if (f.x > max.x) max.x = f.x;
-		if (f.x < min.x) min.x = f.x;
-		if (f.y > max.y) max.y = f.y;
-		if (f.y < min.y) min.y = f.y;
-		if (b.x > max.x) max.x = b.x;
-		if (b.x < min.x) min.x = b.x;
-		if (b.y > max.y) max.y = b.y;
-		if (b.y < min.y) min.y = b.y;
+		max.x = std::max({max.x, f.x, b.x});
+		max.y = std::max({max.y, f.y, b.y});
+		min.x = std::min({min.x, f.x, b.x});
+		min.y = std::min({min.y, f.y, b.y});
 	}
 
 	compdists(pointlist, ops, min, max, true, progressObserver, 50, 12);
@@ -857,7 +867,7 @@ bool Polygons::joinPolygons(path_t*& plist,
 
 				if (simpleonly && !checkedOp.simple) continue;
 
-				int oslen;
+				auto oslen = 0;
 				if (JOIN_DEBUG)
 				{
 					os = QString("  %1. %2 %3 ")
