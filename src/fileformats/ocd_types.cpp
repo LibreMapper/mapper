@@ -40,6 +40,8 @@ namespace Ocd
 	Q_STATIC_ASSERT(sizeof(FormatV11::FileHeader) == 48);
 	
 	Q_STATIC_ASSERT(sizeof(FormatV12::FileHeader) == 60);
+
+	Q_STATIC_ASSERT(sizeof(FormatV2018::FileHeader) == 60);
 	
 	
 	Q_STATIC_ASSERT(std::extent<decltype(IconV8::bits)>::value == IconV8::length());
@@ -567,4 +569,4 @@ OCD_EXPLICIT_INSTANTIATION(template, Ocd::FormatV9)
 Q_STATIC_ASSERT((std::is_same<Ocd::FormatV10, Ocd::FormatV9>::value));
 OCD_EXPLICIT_INSTANTIATION(template, Ocd::FormatV11)
 OCD_EXPLICIT_INSTANTIATION(template, Ocd::FormatV12)
-Q_STATIC_ASSERT((std::is_same<Ocd::FormatV2018, Ocd::FormatV12>::value));
+OCD_EXPLICIT_INSTANTIATION(template, Ocd::FormatV2018)

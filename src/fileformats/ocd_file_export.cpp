@@ -73,6 +73,7 @@
 #include "fileformats/ocd_types_v9.h"
 #include "fileformats/ocd_types_v11.h"  // IWYU pragma: keep
 #include "fileformats/ocd_types_v12.h"  // IWYU pragma: keep
+#include "fileformats/ocd_types_v2018.h"
 #include "templates/template.h"
 #include "templates/template_map.h"
 #include "util/encoding.h"
@@ -592,6 +593,8 @@ OcdFileExport::OcdFileExport(const QString& path, const Map* map, const MapView*
 			ocd_version = 11;
 		else if (path.endsWith(QLatin1String("test-v12.ocd")))
 			ocd_version = 12;
+		else if (path.endsWith(QLatin1String("test-v2018.ocd")))
+			ocd_version = 2018;
 	}
 #endif
 	
@@ -647,6 +650,9 @@ bool OcdFileExport::exportImplementation()
 	case 12:
 		return exportImplementation<Ocd::FormatV12>();
 		
+	case 2018:
+		return exportImplementation<Ocd::FormatV2018>();
+
 	default:
 		throw FileFormatException(
 		            ::LibreMapper::Exporter::tr("Could not write file: %1").
@@ -678,6 +684,12 @@ void setupFileHeaderGeneric(quint16 actual_version, Ocd::FileHeaderGeneric& head
 	case 11:
 		header.subversion = 3;
 		break;
+	case 2018:
+		// The numbers are likely the application minor version and revision
+		// in the internal code revision system. The same number combnination
+		// is in the start-up splash screen.
+		header.subversion = 8;
+		header.subsubversion_V10 = 3;
 	default:
 		; // nothing
 	}

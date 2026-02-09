@@ -836,7 +836,7 @@ void FileFormatTest::saveAndLoad_data()
 			
 			if (qstrcmp(format_id, "OCD") == 0)
 			{
-				for (auto i : { 8, 9, 10, 11, 12 })
+				for (auto i : { 8, 9, 10, 11, 12, 2018 })
 				{
 					auto ocd_id = id;
 					ocd_id.append(QByteArray::number(i));

@@ -2493,10 +2493,7 @@ bool OcdFileImport::importImplementation()
 		importImplementation<Ocd::FormatV12>();
 		break;
 	case 2018:
-		addWarning(tr("Support for OCD version %1 files is experimental.").arg(ocd_version));
-		Q_STATIC_ASSERT((std::is_same<Ocd::FormatV2018, Ocd::FormatV12>::value));
-		importImplementation<Ocd::FormatV12>();
-		map->setProperty(OcdFileFormat::versionProperty(), 12);  // save as V12 for now
+		importImplementation<Ocd::FormatV2018>();
 		break;
 	default:
 		throw FileFormatException(tr("OCD files of version %1 are not supported!").arg(ocd_version));
