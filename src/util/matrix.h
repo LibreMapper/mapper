@@ -6,8 +6,8 @@
  */
 
 
-#ifndef LIBREMAPPER_UTIL_MATRIX_H
-#define LIBREMAPPER_UTIL_MATRIX_H
+#ifndef LIBREMAPPER_MATRIX_H
+#define LIBREMAPPER_MATRIX_H
 
 #include <cstring>
 

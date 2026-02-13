@@ -6,8 +6,8 @@
  */
 
 
-#ifndef LIBREMAPPER_DRAW_POINT_GPS_H
-#define LIBREMAPPER_DRAW_POINT_GPS_H
+#ifndef LIBREMAPPER_DRAW_POINT_GPS_TOOL_H
+#define LIBREMAPPER_DRAW_POINT_GPS_TOOL_H
 
 #include <QObject>
 #include <QPointer>

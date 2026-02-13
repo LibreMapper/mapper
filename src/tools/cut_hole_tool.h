@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_TOOL_CUT_HOLE_H
-#define LIBREMAPPER_TOOL_CUT_HOLE_H
+#ifndef LIBREMAPPER_CUT_HOLE_TOOL_H
+#define LIBREMAPPER_CUT_HOLE_TOOL_H
 
 #include <QObject>
 #include <QRectF>

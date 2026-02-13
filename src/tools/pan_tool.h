@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_TOOL_PAN_H
-#define LIBREMAPPER_TOOL_PAN_H
+#ifndef LIBREMAPPER_PAN_TOOL_H
+#define LIBREMAPPER_PAN_TOOL_H
 
 #include <QObject>
 #include <QString>

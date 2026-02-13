@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_MAP_EDITOR_TOOL_H
-#define LIBREMAPPER_MAP_EDITOR_TOOL_H
+#ifndef LIBREMAPPER_TOOL_H
+#define LIBREMAPPER_TOOL_H
 
 #include <Qt>
 #include <QtGlobal>

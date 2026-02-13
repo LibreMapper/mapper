@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_MAP_EDITOR_TOOL_BASE_H
-#define LIBREMAPPER_MAP_EDITOR_TOOL_BASE_H
+#ifndef LIBREMAPPER_TOOL_BASE_H
+#define LIBREMAPPER_TOOL_BASE_H
 
 #include <memory>
 #include <set>

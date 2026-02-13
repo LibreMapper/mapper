@@ -6,8 +6,8 @@
  */
 
 
-#ifndef LIBREMAPPER_UTIL_FILE_DIALOG_H
-#define LIBREMAPPER_UTIL_FILE_DIALOG_H
+#ifndef LIBREMAPPER_FILE_DIALOG_H
+#define LIBREMAPPER_FILE_DIALOG_H
 
 #include <QFileDialog>
 #include <QString>

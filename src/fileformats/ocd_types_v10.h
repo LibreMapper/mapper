@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_OCD_TYPES_V10
-#define LIBREMAPPER_OCD_TYPES_V10
+#ifndef LIBREMAPPER_OCD_TYPES_V10_H
+#define LIBREMAPPER_OCD_TYPES_V10_H
 
 #include "ocd_types.h"
 #include "ocd_types_v9.h"

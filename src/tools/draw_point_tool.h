@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_DRAW_POINT_H
-#define LIBREMAPPER_DRAW_POINT_H
+#ifndef LIBREMAPPER_DRAW_POINT_TOOL_H
+#define LIBREMAPPER_DRAW_POINT_TOOL_H
 
 #include <memory>
 

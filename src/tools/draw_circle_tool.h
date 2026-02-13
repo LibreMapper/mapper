@@ -6,8 +6,8 @@
  */
 
 
-#ifndef LIBREMAPPER_DRAW_CIRCLE_H
-#define LIBREMAPPER_DRAW_CIRCLE_H
+#ifndef LIBREMAPPER_DRAW_CIRCLE_TOOL_H
+#define LIBREMAPPER_DRAW_CIRCLE_TOOL_H
 
 #include <QObject>
 #include <QPoint>

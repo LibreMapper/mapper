@@ -5,8 +5,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_AUTO_SAVE_T_H
-#define LIBREMAPPER_AUTO_SAVE_T_H
+#ifndef LIBREMAPPER_AUTOSAVE_T_H
+#define LIBREMAPPER_AUTOSAVE_T_H
 
 #include <QObject>
 

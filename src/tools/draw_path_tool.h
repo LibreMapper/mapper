@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_DRAW_PATH_H
-#define LIBREMAPPER_DRAW_PATH_H
+#ifndef LIBREMAPPER_DRAW_PATH_TOOL_H
+#define LIBREMAPPER_DRAW_PATH_TOOL_H
 
 #include <memory>
 

@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_TOOL_ROTATE_H
-#define LIBREMAPPER_TOOL_ROTATE_H
+#ifndef LIBREMAPPER_ROTATE_TOOL_H
+#define LIBREMAPPER_ROTATE_TOOL_H
 
 #include <QtGlobal>
 #include <QObject>

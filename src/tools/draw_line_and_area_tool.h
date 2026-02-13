@@ -7,8 +7,8 @@
  */
 
 
-#ifndef LIBREMAPPER_DRAW_LINE_AND_AREA_H
-#define LIBREMAPPER_DRAW_LINE_AND_AREA_H
+#ifndef LIBREMAPPER_DRAW_LINE_AND_AREA_TOOL_H
+#define LIBREMAPPER_DRAW_LINE_AND_AREA_TOOL_H
 
 #include <memory>
 #include <vector>

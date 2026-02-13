@@ -6,8 +6,8 @@
  * This file is part of LibreMapper.
  */
 
-#ifndef LIBREMAPPER_FILE_FORMAT_XML_P_H
-#define LIBREMAPPER_FILE_FORMAT_XML_P_H
+#ifndef LIBREMAPPER_XML_FILE_FORMAT_P_H
+#define LIBREMAPPER_XML_FILE_FORMAT_P_H
 
 #include <functional>
 

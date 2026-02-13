@@ -6,8 +6,8 @@
  */
 
 
-#ifndef LIBREMAPPER_UTIL_TASK_DIALOG_H
-#define LIBREMAPPER_UTIL_TASK_DIALOG_H
+#ifndef LIBREMAPPER_TASK_DIALOG_H
+#define LIBREMAPPER_TASK_DIALOG_H
 
 #include <QDialog>
 #include <QDialogButtonBox>
