@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013, 2014 Thomas Schöps (OpenOrienteering)
- * Copyright 2013-2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -277,7 +277,7 @@ public slots:
 	/** Copies the selected object(s). */
 	void copy();
 	/** Pastes the object(s) from the clipboard. */
-	void paste();
+	void paste(int paste_at_center);
 	/** Empties the undo / redo history to save space. */
 	void clearUndoRedoHistory();
 	
@@ -298,6 +298,8 @@ public slots:
 	void zoomIn();
 	/** Zooms out in the current map widget. */
 	void zoomOut();
+	/** Activates the box zoom tool. */
+	void boxZoom(bool checked);
 	/** Shows the dialog to set a custom zoom factor in the current map widget. */
 	void setCustomZoomFactorClicked();
 	
@@ -705,6 +707,7 @@ private:
 	QAction* cut_act = {};
 	QAction* copy_act = {};
 	QAction* paste_act = {};
+	QAction* paste_original_act = {};
 	QAction* delete_act = {};
 	QAction* select_all_act = {};
 	QAction* select_nothing_act = {};
@@ -717,6 +720,7 @@ private:
 	QAction* follow_position_act = {};
 	QAction* zoom_in_act = {};
 	QAction* zoom_out_act = {};
+	QAction* box_zoom_act = {};
 	QAction* show_all_act = {};
 	QAction* fullscreen_act = {};
 	QAction* custom_zoom_act = {};

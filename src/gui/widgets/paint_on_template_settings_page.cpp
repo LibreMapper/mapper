@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2021 Libor Pecháček (OpenOrienteering)
+ * Copyright 2021, 2025 Libor Pecháček (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -157,9 +157,11 @@ PaintOnTemplateSettingsPage::PaintOnTemplateSettingsPage(QWidget* parent)
 		auto const enabled = !color_table->selectedItems().empty();
 		delete_button->setEnabled(enabled);
 		edit_button->setEnabled(enabled);
-		move_up_button->setEnabled(enabled);
-		move_down_button->setEnabled(enabled);
+		move_up_button->setEnabled(enabled && color_table->currentRow() > 0);
+		move_down_button->setEnabled(enabled && color_table->currentRow() < color_table->rowCount() - 1);
 	});
+	connect(color_table, &QTableWidget::cellDoubleClicked, this, &PaintOnTemplateSettingsPage::editColor);
+	
 	connect(edit_button, &QAbstractButton::clicked, this, &PaintOnTemplateSettingsPage::editColor);
 	connect(delete_button, &QAbstractButton::clicked, this, &PaintOnTemplateSettingsPage::dropColor);
 

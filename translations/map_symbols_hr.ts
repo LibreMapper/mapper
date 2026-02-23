@@ -6,42 +6,42 @@
     <message>
         <source>Upper purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation type="unfinished">Crna 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railroad</source>
         <comment>Color 1</comment>
-        <translation type="unfinished">Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100%</source>
         <comment>Color 2</comment>
-        <translation>Crna 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% point symbols</source>
         <comment>Color 3</comment>
-        <translation type="unfinished">Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% point symbols</source>
         <comment>Color 4</comment>
-        <translation type="unfinished">Bijela za željeznicu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% point symbols</source>
         <comment>Color 5</comment>
-        <translation type="unfinished">Plava 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% line symbols</source>
         <comment>Color 6</comment>
-        <translation type="unfinished">Smeđa 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% line symbols</source>
@@ -51,12 +51,12 @@
     <message>
         <source>Lower purple for course overprint</source>
         <comment>Color 9</comment>
-        <translation type="unfinished">Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for road infill</source>
         <comment>Color 10</comment>
-        <translation type="unfinished">Crna 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100% for road outline</source>
@@ -81,22 +81,22 @@
     <message>
         <source>Blue 70% area symbols</source>
         <comment>Color 15</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50% area symbols</source>
         <comment>Color 16</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green and brown (+ yellow)</source>
         <comment>Color 17</comment>
-        <translation type="unfinished">Plava 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for paved area</source>
         <comment>Color 18</comment>
-        <translation type="unfinished">OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride (extra)</source>
@@ -111,32 +111,32 @@
     <message>
         <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 21</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Olive green</source>
         <comment>Color 22</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
         <comment>Color 23</comment>
-        <translation type="unfinished">Žuta 100%/Zelena 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60% area symbols</source>
         <comment>Color 24</comment>
-        <translation type="unfinished">Crna 25% (siva)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% area symbols</source>
         <comment>Color 25</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 35% area symbols</source>
         <comment>Color 26</comment>
-        <translation type="unfinished">Zelena 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% below green areas (extra)</source>
@@ -146,7 +146,7 @@
     <message>
         <source>White over yellow</source>
         <comment>Color 28</comment>
-        <translation>Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for cultivated land and sandy ground</source>
@@ -156,7 +156,7 @@
     <message>
         <source>Yellow 100% area symbols</source>
         <comment>Color 30</comment>
-        <translation type="unfinished">Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 75% area symbols</source>
@@ -166,7 +166,7 @@
     <message>
         <source>Yellow 50%</source>
         <comment>Color 32</comment>
-        <translation>Žuta 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange (extra)</source>
@@ -176,7 +176,7 @@
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
@@ -218,7 +218,7 @@ The index contour level must be carefully selected in flat terrain. The ideal le
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.1</comment>
-        <translation>Vrijednost izohipse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An index contour may have a height value assigned. A height value should only be inserted in an index contour in places where other detail is not obscured. It shall be orientated so that the top of the label is on the higher side of the contour. The index value (label) shall be 1.5 mm high and represented in a sans-serif font.</source>
@@ -555,7 +555,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff</source>
         <comment>Name of symbol 202</comment>
-        <translation>Klipa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -569,7 +569,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, minimum size</source>
         <comment>Name of symbol 202.1</comment>
-        <translation>Klipa, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -583,7 +583,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags</source>
         <comment>Name of symbol 202.2</comment>
-        <translation>Klipa, s oznakama</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -597,7 +597,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size</source>
         <comment>Name of symbol 202.3</comment>
-        <translation>Klipa, s oznakama, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -611,7 +611,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 202.9</comment>
-        <translation>Klipa, s oznakama, najmanje veličine (po ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -635,7 +635,7 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
         <comment>Name of symbol 203.1.1</comment>
-        <translation type="unfinished">Špilja ili jama u stijeni (s pravim ulazom)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
@@ -647,7 +647,7 @@ Rocky pits larger than 5 m in diameter should be exaggerated and represented usi
     <message>
         <source>Dangerous pit</source>
         <comment>Name of symbol 203.2</comment>
-        <translation type="unfinished">Špilja ili jama u stijeni (s pravim ulazom)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
@@ -870,7 +870,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 214</comment>
-        <translation>Stijena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A runnable area of rock without earth or vegetation should be shown as bare rock.
@@ -1015,7 +1015,7 @@ Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale. Location is the centre of gravity of the symbol, and the symbol is orientated to north.
@@ -1192,7 +1192,7 @@ Footprint: 13.5 m x 13.5 m.</source>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land that has a ground cover (grass, moss or similar) which offers better runnability than typical open forest. If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -1204,7 +1204,7 @@ Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in open land may be generalised by using a regular pattern of large dots in the yellow screen. The dots may be white (scattered trees) or green (scattered bushes / thickets). Prominent individual trees may be added using symbol Prominent large tree (417). If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -1507,7 +1507,7 @@ Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
     <message>
         <source>Vineyard or similar</source>
         <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Vinograd ili slično</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
@@ -1636,7 +1636,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Wide road, minimum width</source>
         <comment>Name of symbol 502</comment>
-        <translation>Široka cesta, najmanja širina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -1649,7 +1649,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Wide road, 0.5 mm (from ISOM2000)</source>
         <comment>Name of symbol 502.1</comment>
-        <translation type="unfinished">Široka cesta, 0,5 mm (po ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -1846,7 +1846,7 @@ Very large carrying masts shall be represented in plan shape using outline of sy
     <message>
         <source>Bridge / tunnel</source>
         <comment>Name of symbol 512</comment>
-        <translation>Most/tunel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -1859,7 +1859,7 @@ Small bridges connected to a track/path are shown by centring a track dash on th
     <message>
         <source>Bridge / tunnel, minimum size</source>
         <comment>Name of symbol 512.1</comment>
-        <translation>Most/tunel, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -1883,7 +1883,7 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     <message>
         <source>Wall</source>
         <comment>Name of symbol 513.1</comment>
-        <translation>Zid</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
@@ -2019,7 +2019,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Building</source>
         <comment>Name of symbol 521</comment>
-        <translation>Zgrada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
@@ -2034,7 +2034,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>Building, minimum size</source>
         <comment>Name of symbol 521.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
@@ -2549,589 +2549,19 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>OpenOrienteering Logo</source>
         <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Dark green line symbols</source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50%</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>White over green and brown</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>Brown 100% point symbols </source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Bijela za željeznicu</translation>
-    </message>
-    <message>
-        <source>Dark green line symbols </source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50% </source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Green 100%</source>
-        <comment>Color 3</comment>
-        <translation type="obsolete">Zelena 100%</translation>
-    </message>
-    <message>
-        <source>White for railway</source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Bijela za željeznicu</translation>
-    </message>
-    <message>
-        <source>Blue 100%</source>
-        <comment>Color 5</comment>
-        <translation type="obsolete">Plava 100%</translation>
-    </message>
-    <message>
-        <source>Brown 100%</source>
-        <comment>Color 6</comment>
-        <translation type="obsolete">Smeđa 100%</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Crna 50%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 10</comment>
-        <translation type="obsolete">Crna 20%</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 16</comment>
-        <translation type="obsolete">Plava 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 23</comment>
-        <translation type="obsolete">Žuta 100%/Zelena 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Dark green line symbols </source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Zelena 30%</translation>
-    </message>
-    <message>
-        <source>White over yellow</source>
-        <comment>Color 30</comment>
-        <translation type="obsolete">Bijela preko žute</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation type="obsolete">Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 34</comment>
-        <translation type="obsolete">Žuta 50%</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Crna 65%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Cave or rocky pit (with a distinct entrance)</source>
-        <comment>Name of symbol 203.2</comment>
-        <translation type="obsolete">Špilja ili jama u stijeni (s pravim ulazom)</translation>
-    </message>
-    <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation type="obsolete">Zid</translation>
-    </message>
 </context>
 <context>
     <name>ISOM2017</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Purpurna</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 1</comment>
-        <translation>Crna</translation>
-    </message>
-    <message>
-        <source>Opaque White below Black</source>
-        <comment>Color 2</comment>
-        <translation>Neprozirna bijela ispod crne</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 3</comment>
-        <translation>Crna 65%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 4</comment>
-        <translation>Crna 20%</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 5</comment>
-        <translation>Smeđa 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 6</comment>
-        <translation>Crna ispod svjetlo smeđih</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 7</comment>
-        <translation>Neprozirne plava</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 8</comment>
-        <translation>Plava</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 9</comment>
-        <translation>Plava 50%</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 10</comment>
-        <translation>Smeđa</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 11</comment>
-        <translation>OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 12</comment>
-        <translation>Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 13</comment>
-        <translation>Zelena 50%, žuta</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 14</comment>
-        <translation>Zelena</translation>
-    </message>
-    <message>
-        <source>Opaque Yellow</source>
-        <comment>Color 15</comment>
-        <translation>Neprozirna žuta</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 16</comment>
-        <translation>Neprozirna bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Opaque Green 20%</source>
-        <comment>Color 17</comment>
-        <translation>Neprozirna zelena 20%</translation>
-    </message>
-    <message>
-        <source>Opaque Green 50%</source>
-        <comment>Color 18</comment>
-        <translation>Neprozirna zelena 50%</translation>
-    </message>
-    <message>
-        <source>Green, Black 50%</source>
-        <comment>Color 19</comment>
-        <translation>Zelena, crna 50%</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 20</comment>
-        <translation>Neprozirna zelena</translation>
-    </message>
-    <message>
-        <source>Green 50%</source>
-        <comment>Color 21</comment>
-        <translation>Zelena 50%</translation>
-    </message>
-    <message>
-        <source>Green 20%</source>
-        <comment>Color 22</comment>
-        <translation>Zelena 20%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 23</comment>
-        <translation>Zelena ispod svijetlo zelenih</translation>
-    </message>
-    <message>
-        <source>Green 50% over Yellow</source>
-        <comment>Color 24</comment>
-        <translation>Zelena 50% preko žute</translation>
-    </message>
-    <message>
-        <source>White over Yellow</source>
-        <comment>Color 25</comment>
-        <translation>Bijela preko žute</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 26</comment>
-        <translation>Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 27</comment>
-        <translation>Žuta 50%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
-    </message>
-    <message>
-        <source>A line joining points of equal height. The standard vertical interval between contours is 5 metres. A contour interval of 2.5 metres may be used for flat terrains. The smallest bend in a contour is 0.25 mm from centre to centre of the lines.</source>
-        <comment>Description of symbol 101</comment>
-        <translation>Linija koja povezuje točke jednake visine. Uopičajeni vertikalni razmak među slojnicama je 5 metara. Razmak od 2,5 metara može se koristiti za ravne terene. Najmanji zavoj na slojnici je 0,25 mm od centra do sredine linije.</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 102.1</comment>
-        <translation>Vrijednost izohipse</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 102.1</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen. Brojke se moraju usmjeriti tako da se vrh brojke nalazi na gornjoj strani izohipse.</translation>
-    </message>
-    <message>
-        <source>Cliff</source>
-        <comment>Name of symbol 202</comment>
-        <translation>Klipa</translation>
-    </message>
-    <message>
-        <source>Cliff, minimum size</source>
-        <comment>Name of symbol 202.1</comment>
-        <translation>Klipa, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags</source>
-        <comment>Name of symbol 202.2</comment>
-        <translation>Klipa, s oznakama</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags, minimum size</source>
-        <comment>Name of symbol 202.3</comment>
-        <translation>Klipa, s oznakama, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags, minimum size (from ISOM2000)</source>
-        <comment>Name of symbol 202.9</comment>
-        <translation>Klipa, s oznakama, najmanje veličine (po ISOM2000)</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 214</comment>
-        <translation>Stijena</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
-    </message>
-    <message>
-        <source>Vineyard</source>
-        <comment>Name of symbol 414</comment>
-        <translation>Vinograd</translation>
-    </message>
-    <message>
-        <source>Wide road, minimum width</source>
-        <comment>Name of symbol 502</comment>
-        <translation>Široka cesta, najmanja širina</translation>
-    </message>
-    <message>
-        <source>Bridge / tunnel</source>
-        <comment>Name of symbol 512</comment>
-        <translation>Most/tunel</translation>
-    </message>
-    <message>
-        <source>Bridge / tunnel, minimum size</source>
-        <comment>Name of symbol 512.1</comment>
-        <translation>Most/tunel, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation>Zid</translation>
-    </message>
-    <message>
-        <source>Building</source>
-        <comment>Name of symbol 521</comment>
-        <translation>Zgrada</translation>
-    </message>
-    <message>
-        <source>Building, minimum size</source>
-        <comment>Name of symbol 521.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Logo</source>
-        <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
-    </message>
 </context>
 <context>
     <name>ISOM2000</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Purpurna</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 1</comment>
-        <translation>Crna</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 2</comment>
-        <translation>Smeđa 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 3</comment>
-        <translation>Crna ispod svjetlo smeđih</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 4</comment>
-        <translation>Neprozirne plava</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 5</comment>
-        <translation>Plava</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 6</comment>
-        <translation>Plava 50%</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 7</comment>
-        <translation>Smeđa</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 8</comment>
-        <translation>OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Black 30%</source>
-        <comment>Color 9</comment>
-        <translation>Crna 30%</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 10</comment>
-        <translation>Zelena 50%, žuta</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 12</comment>
-        <translation>Neprozirna bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 13</comment>
-        <translation>Neprozirna zelena</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 14</comment>
-        <translation>Zelena</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 15</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 16</comment>
-        <translation>Zelena 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 17</comment>
-        <translation>Zelena ispod svijetlo zelenih</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 18</comment>
-        <translation>Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 19</comment>
-        <translation>Žuta 50%</translation>
-    </message>
-    <message>
-        <source>White over Yellow 70%</source>
-        <comment>Color 20</comment>
-        <translation>Bijela preko žute 70%</translation>
-    </message>
-    <message>
-        <source>Yellow 70%</source>
-        <comment>Color 21</comment>
-        <translation>Žuta 70%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Vrijednost izohipse</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen. Brojke se moraju usmjeriti tako da se vrh brojke nalazi na gornjoj strani izohipse.</translation>
-    </message>
-    <message>
-        <source>Cave</source>
-        <comment>Name of symbol 205</comment>
-        <translation>Špilja</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Otvorena pješčana zemlja</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Stijena</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
-    </message>
-    <message>
-        <source>Well</source>
-        <comment>Name of symbol 312</comment>
-        <translation>Zdenac</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
-    </message>
-    <message>
-        <source>Vineyard</source>
-        <comment>Name of symbol 413</comment>
-        <translation>Vinograd</translation>
-    </message>
-    <message>
-        <source>Motorway</source>
-        <comment>Name of symbol 501.0</comment>
-        <translation>Autoput</translation>
-    </message>
-    <message>
-        <source>Motorway, under construction</source>
-        <comment>Name of symbol 501.5</comment>
-        <translation>Autoput, u izgradnji</translation>
-    </message>
-    <message>
-        <source>Building</source>
-        <comment>Name of symbol 526</comment>
-        <translation>Zgrada</translation>
-    </message>
-    <message>
-        <source>Building, minimum size</source>
-        <comment>Name of symbol 526.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Logo</source>
-        <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
-    </message>
 </context>
 <context>
     <name>ISSprOM 2019</name>
@@ -3148,22 +2578,22 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Black 100%</source>
         <comment>Color 2</comment>
-        <translation>Crna 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%</source>
         <comment>Color 3</comment>
-        <translation>Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railway</source>
         <comment>Color 4</comment>
-        <translation>Bijela za željeznicu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
         <comment>Color 5</comment>
-        <translation type="unfinished">Crna 65%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple 50%</source>
@@ -3173,37 +2603,37 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Blue 100%</source>
         <comment>Color 7</comment>
-        <translation>Plava 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100%</source>
         <comment>Color 8</comment>
-        <translation>Smeđa 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 60%</source>
         <comment>Color 9</comment>
-        <translation>Crna 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 50%</source>
         <comment>Color 10</comment>
-        <translation>Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20%</source>
         <comment>Color 11</comment>
-        <translation>Crna 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over light brown</source>
         <comment>Color 12</comment>
-        <translation>Bijela preko svjetlo smeđe</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
         <comment>Color 13</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower brown 30%</source>
@@ -3218,32 +2648,32 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Blue 100% for area features</source>
         <comment>Color 16</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70%</source>
         <comment>Color 17</comment>
-        <translation>Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 30%</source>
         <comment>Color 18</comment>
-        <translation>Plava 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Blue</source>
         <comment>Color 19</comment>
-        <translation>OpenOrienteering plava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 20</comment>
-        <translation>OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green</source>
         <comment>Color 21</comment>
-        <translation>Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 50%/Yellow 100%</source>
@@ -3253,22 +2683,22 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Black 30% for bare rock</source>
         <comment>Color 23</comment>
-        <translation>Crna 30% za stijenu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 24</comment>
-        <translation type="unfinished">Crna 25% (siva)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 25</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 26</comment>
-        <translation>Zelena 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
@@ -3278,7 +2708,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>White over yellow</source>
         <comment>Color 28</comment>
-        <translation>Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for open land</source>
@@ -3288,17 +2718,17 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Yellow 100%</source>
         <comment>Color 30</comment>
-        <translation>Žuta 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 31</comment>
-        <translation>Žuta 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height.
@@ -3341,12 +2771,12 @@ However, contour lines shall be cut out for better legibility, if they touch the
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.2</comment>
-        <translation>Vrijednost izohipse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour values may be included to aid assessment of large height differences. The labels shall be orientated so that the top of the label is on the higher side of the contour. They are inserted in the index contours in positions where other detail is not obscured.</source>
         <comment>Description of symbol 102.2</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Oznake se moraju usmjeriti tako da se vrh oznake nalazi na gornjoj strani izohipse. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Form line</source>
@@ -3723,7 +3153,7 @@ Footprint: 4.4 m x 5.0 m.</source>
     <message>
         <source>Cave (with a distinct entrance)</source>
         <comment>Name of symbol 203.1</comment>
-        <translation>Špilja (s pravim ulazom)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cave with distinct entrance which may constitute a danger to the competitor.
@@ -3736,7 +3166,7 @@ Footprint: 4.4 m x 5.0 m.</source>
     <message>
         <source>Cave (with a distinct entrance) (from ISSOM)</source>
         <comment>Name of symbol 203.9</comment>
-        <translation>Špilja (s pravim ulazom) (po ISSOM)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cave with distinct entrance which may constitute a danger to the competitor.
@@ -3905,7 +3335,7 @@ Density: Minimum 3 dots.</source>
     <message>
         <source>Open sandy ground</source>
         <comment>Name of symbol 213</comment>
-        <translation>Otvorena pješčana zemlja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of sandy ground or soft gravel with no vegetation which reduces runnability.
@@ -3919,7 +3349,7 @@ Minimum area: 1 mm² (footprint 16 m²).</source>
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 214</comment>
-        <translation>Stijena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of runnable rock without earth or vegetation.
@@ -4030,7 +3460,7 @@ Minimum area (inside): 0.5 mm² (footprint 8 m²)</source>
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale.
@@ -4188,7 +3618,7 @@ Footprint: 4.8 m in diameter.</source>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of cultivated land, lawn, field, meadow, grassland, bark mulch etc. without trees, offering very good runnability.
@@ -4200,7 +3630,7 @@ Minimum area: 0.5 mm² (footprint 8 m²).</source>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of meadows with scattered trees or bushes, with grass or similar ground cover offering very good runnability.
@@ -4214,7 +3644,7 @@ Smaller areas must be left out, exaggerated or shown using the symbol Open land 
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402.1</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of meadows with scattered trees or bushes, with grass or similar ground cover offering very good runnability.
@@ -4841,7 +4271,7 @@ The bars indicate the exact location of the pylons. If a section of a power line
     <message>
         <source>Bridge, one side</source>
         <comment>Name of symbol 512</comment>
-        <translation>Most, jedna strana</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A bridge is a structure spanning and permitting passage over a river, chasm, road or the like.
@@ -4852,7 +4282,7 @@ The bars indicate the exact location of the pylons. If a section of a power line
     <message>
         <source>Bridge, minimum width</source>
         <comment>Name of symbol 512.1</comment>
-        <translation>Most, najmanje širine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A bridge is a structure spanning and permitting passage over a river, chasm, road or the like.
@@ -4976,7 +4406,7 @@ Minimum area: 0.25 mm² (footprint 4 m²).</source>
     <message>
         <source>Building</source>
         <comment>Name of symbol 521</comment>
-        <translation>Zgrada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is a relatively permanent construction having a roof.
@@ -4990,7 +4420,7 @@ Minimum area: 0.25 mm² (footprint 4 m²).</source>
     <message>
         <source>Building, minimum size</source>
         <comment>Name of symbol 521.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is a relatively permanent construction having a roof.
@@ -5004,7 +4434,7 @@ Minimum area: 0.25 mm² (footprint 4 m²).</source>
     <message>
         <source>Building, fill</source>
         <comment>Name of symbol 521.3</comment>
-        <translation>Zgrada, ispuna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is a relatively permanent construction having a roof.
@@ -5018,7 +4448,7 @@ Minimum area: 0.25 mm² (footprint 4 m²).</source>
     <message>
         <source>Building, outline</source>
         <comment>Name of symbol 521.4</comment>
-        <translation>Zgrada, kontura</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is a relatively permanent construction having a roof.
@@ -5480,7 +4910,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>OpenOrienteering Logo</source>
         <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The OpenOrienteering Logo.</source>
@@ -5490,193 +4920,18 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
 </context>
 <context>
     <name>ISSOM</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Purpurna</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 2</comment>
-        <translation>Crna</translation>
-    </message>
-    <message>
-        <source>Opaque White below Black</source>
-        <comment>Color 3</comment>
-        <translation>Neprozirna bijela ispod crne</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 6</comment>
-        <translation>Crna 50%</translation>
-    </message>
-    <message>
-        <source>Black 30%</source>
-        <comment>Color 7</comment>
-        <translation>Crna 30%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 8</comment>
-        <translation>Crna 20%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 15</comment>
-        <translation>Crna ispod svjetlo smeđih</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 16</comment>
-        <translation>Neprozirne plava</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 17</comment>
-        <translation>Plava</translation>
-    </message>
-    <message>
-        <source>Blue 30%</source>
-        <comment>Color 19</comment>
-        <translation>Plava 30%</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 21</comment>
-        <translation>Smeđa</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 22</comment>
-        <translation>OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 24</comment>
-        <translation>Zelena 50%, žuta</translation>
-    </message>
-    <message>
-        <source>Green, Black 50%</source>
-        <comment>Color 26</comment>
-        <translation>Zelena, crna 50%</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 27</comment>
-        <translation>Neprozirna zelena</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 28</comment>
-        <translation>Zelena</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 29</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 30</comment>
-        <translation>Zelena 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 31</comment>
-        <translation>Zelena ispod svijetlo zelenih</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation>Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 33</comment>
-        <translation>Žuta 50%</translation>
-    </message>
-    <message>
-        <source>White over Yellow 70%</source>
-        <comment>Color 34</comment>
-        <translation>Bijela preko žute 70%</translation>
-    </message>
-    <message>
-        <source>Yellow 70%</source>
-        <comment>Color 35</comment>
-        <translation>Žuta 70%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Vrijednost izohipse</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen. Brojke se moraju usmjeriti tako da se vrh brojke nalazi na gornjoj strani izohipse.</translation>
-    </message>
-    <message>
-        <source>Cave</source>
-        <comment>Name of symbol 205</comment>
-        <translation>Špilja</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Otvorena pješčana zemlja</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Stijena</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
-    </message>
-    <message>
-        <source>Bridge, minimum width</source>
-        <comment>Name of symbol 512.1.1</comment>
-        <translation>Most, najmanje širine</translation>
-    </message>
-    <message>
-        <source>Bridge, one side</source>
-        <comment>Name of symbol 512.1.2</comment>
-        <translation>Most, jedna strana</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Logo</source>
-        <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
-    </message>
 </context>
 <context>
     <name>ISMTBOM</name>
     <message>
         <source>Purple</source>
         <comment>Color 0</comment>
-        <translation>Purpurna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black</source>
         <comment>Color 1</comment>
-        <translation>Crna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower Purple</source>
@@ -5686,52 +4941,52 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Black 70%</source>
         <comment>Color 3</comment>
-        <translation>Crna 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50%</source>
         <comment>Color 4</comment>
-        <translation>Smeđa 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below light browns</source>
         <comment>Color 5</comment>
-        <translation>Crna ispod svjetlo smeđih</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown</source>
         <comment>Color 6</comment>
-        <translation>Smeđa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 7</comment>
-        <translation>OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Opaque Blue</source>
         <comment>Color 8</comment>
-        <translation>Neprozirne plava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue</source>
         <comment>Color 9</comment>
-        <translation>Plava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50%</source>
         <comment>Color 10</comment>
-        <translation>Plava 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 30%</source>
         <comment>Color 11</comment>
-        <translation>Crna 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 50%, Yellow</source>
         <comment>Color 12</comment>
-        <translation>Zelena 50%, žuta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green over White over Green</source>
@@ -5741,62 +4996,62 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Opaque White over Green</source>
         <comment>Color 14</comment>
-        <translation>Neprozirna bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow over Green</source>
         <comment>Color 15</comment>
-        <translation>Žuta preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Opaque Green</source>
         <comment>Color 16</comment>
-        <translation>Neprozirna zelena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green</source>
         <comment>Color 17</comment>
-        <translation>Zelena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 18</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 19</comment>
-        <translation>Zelena 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green below light greens</source>
         <comment>Color 20</comment>
-        <translation>Zelena ispod svijetlo zelenih</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow</source>
         <comment>Color 21</comment>
-        <translation>Žuta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 22</comment>
-        <translation>Žuta 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over Yellow 70%</source>
         <comment>Color 23</comment>
-        <translation>Bijela preko žute 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 70%</source>
         <comment>Color 24</comment>
-        <translation>Žuta 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 metres. The smallest bend in a contour is 0.25 mm from centre to centre of the lines.</source>
@@ -5826,12 +5081,12 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 105</comment>
-        <translation>Vrijednost izohipse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
         <comment>Description of symbol 105</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen. Brojke se moraju usmjeriti tako da se vrh brojke nalazi na gornjoj strani izohipse.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank</source>
@@ -5996,7 +5251,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Open sandy ground</source>
         <comment>Name of symbol 211</comment>
-        <translation>Otvorena pješčana zemlja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of soft sandy ground or gravel with no vegetation and where running is slow. Where an area of sandy ground is open but running is good, it is shown as open land (401/402).</source>
@@ -6006,7 +5261,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 212</comment>
-        <translation>Stijena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A runnable area of rock without earth or vegetation is shown as bare rock. An area of rock covered with grass, moss or other low vegetation is shown as open land (401/402).</source>
@@ -6130,7 +5385,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cultivated land, fields, meadows, grassland, etc. without trees, offering easy running. If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -6140,7 +5395,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Meadows with scattered trees or bushes, with grass or similar ground cover offering easy running. Areas smaller than 10 mm at the maps scale are shown as open land (401). Individual trees may be added (418, 419, 420). If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -6200,7 +5455,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Vineyard</source>
         <comment>Name of symbol 413</comment>
-        <translation>Vinograd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The green lines may be orientated to show the direction of planting. If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -6240,7 +5495,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Motorway</source>
         <comment>Name of symbol 501.0</comment>
-        <translation>Autoput</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A road with two carriageways. The width of the symbol should be drawn to scale but not smaller than the minimum width. The outer boundary lines may be replaced with symbols 519, 521, 522 or 524 if a fence or wall is so close to the motorway edge that it cannot practically be shown as a separate symbol. The space between the black lines must be filled with brown (50%). A road under construction may be shown with broken lines.</source>
@@ -6440,7 +5695,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Building</source>
         <comment>Name of symbol 526</comment>
-        <translation>Zgrada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.</source>
@@ -6450,7 +5705,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Building, minimum size</source>
         <comment>Name of symbol 526.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Settlement</source>
@@ -6777,7 +6032,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>OpenOrienteering Logo</source>
         <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The OpenOrienteering Logo.</source>
@@ -6957,7 +6212,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Cave</source>
         <comment>Name of symbol 205</comment>
-        <translation>Špilja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cave is represented by the same symbol as a rocky pit. In this case the symbol should be orientated to point up the slope as indicated opposite. The centre of gravity of the symbol marks the opening.</source>
@@ -7017,7 +6272,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale. Location is the centre of gravity of the symbol, which is orientated to north.</source>
@@ -7052,7 +6307,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Well</source>
         <comment>Name of symbol 312</comment>
-        <translation>Zdenac</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wells and captive springs, which are clearly visible on the ground.</source>
@@ -7182,7 +6437,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Motorway, under construction</source>
         <comment>Name of symbol 501.5</comment>
-        <translation>Autoput, u izgradnji</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A road under construction may be shown with broken lines.</source>
@@ -7448,191 +6703,6 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
 </context>
 <context>
     <name>ISSkiOM</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 1</comment>
-        <translation>Purpurna</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 3</comment>
-        <translation>Crna</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 4</comment>
-        <translation>Smeđa 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 5</comment>
-        <translation>Crna ispod svjetlo smeđih</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 6</comment>
-        <translation>Smeđa</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 7</comment>
-        <translation>OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 8</comment>
-        <translation>Neprozirne plava</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 9</comment>
-        <translation>Plava</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 10</comment>
-        <translation>Plava 50%</translation>
-    </message>
-    <message>
-        <source>Black 30%</source>
-        <comment>Color 11</comment>
-        <translation>Crna 30%</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 12</comment>
-        <translation>Zelena 50%, žuta</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 14</comment>
-        <translation>Neprozirna bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 15</comment>
-        <translation>Neprozirna zelena</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 16</comment>
-        <translation>Zelena</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 17</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 18</comment>
-        <translation>Zelena 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 19</comment>
-        <translation>Zelena ispod svijetlo zelenih</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 20</comment>
-        <translation>Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 21</comment>
-        <translation>Žuta 50%</translation>
-    </message>
-    <message>
-        <source>White over Yellow 70%</source>
-        <comment>Color 22</comment>
-        <translation>Bijela preko žute 70%</translation>
-    </message>
-    <message>
-        <source>Yellow 70%</source>
-        <comment>Color 23</comment>
-        <translation>Žuta 70%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Izohipsa</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Vrijednost izohipse</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Vrijednosti izohipsa mogu se uključiti kao pomoć u procjeni velikih visinskih razlika. Umeću se u indeks izohipsa na pozicijama gdje drugi detalj nije zatamnjen. Brojke se moraju usmjeriti tako da se vrh brojke nalazi na gornjoj strani izohipse.</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation>Otvoreno polje</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation>Otvoreno polje s razbacanim stablima</translation>
-    </message>
-    <message>
-        <source>Vineyard</source>
-        <comment>Name of symbol 413</comment>
-        <translation>Vinograd</translation>
-    </message>
-    <message>
-        <source>Motorway</source>
-        <comment>Name of symbol 501.0</comment>
-        <translation>Autoput</translation>
-    </message>
-    <message>
-        <source>Building</source>
-        <comment>Name of symbol 526</comment>
-        <translation>Zgrada</translation>
-    </message>
-    <message>
-        <source>Building, minimum size</source>
-        <comment>Name of symbol 526.1</comment>
-        <translation>Zgrada, najmanje veličine</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Logo</source>
-        <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
-    </message>
-    <message>
-        <source>Cave</source>
-        <comment>Name of symbol 205</comment>
-        <translation>Špilja</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Otvorena pješčana zemlja</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Stijena</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Bunar</translation>
-    </message>
-    <message>
-        <source>Well</source>
-        <comment>Name of symbol 312</comment>
-        <translation>Zdenac</translation>
-    </message>
-    <message>
-        <source>Motorway, under construction</source>
-        <comment>Name of symbol 501.5</comment>
-        <translation>Autoput, u izgradnji</translation>
-    </message>
 </context>
 <context>
     <name>ISSkiOM 2019</name>
@@ -7654,147 +6724,147 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Upper purple for course overprint</source>
         <comment>Color 3</comment>
-        <translation type="unfinished">Crna 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railroad</source>
         <comment>Color 4</comment>
-        <translation type="unfinished">Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100%</source>
         <comment>Color 5</comment>
-        <translation type="unfinished">Crna 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%</source>
         <comment>Color 6</comment>
-        <translation type="unfinished">Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railway</source>
         <comment>Color 7</comment>
-        <translation type="unfinished">Bijela za željeznicu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100%</source>
         <comment>Color 8</comment>
-        <translation type="unfinished">Plava 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100%</source>
         <comment>Color 9</comment>
-        <translation type="unfinished">Smeđa 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
         <comment>Color 10</comment>
-        <translation>Crna 65%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below purple for track symbols</source>
         <comment>Color 11</comment>
-        <translation type="unfinished">Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 65%</source>
         <comment>Color 12</comment>
-        <translation type="unfinished">Crna 65%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20%</source>
         <comment>Color 13</comment>
-        <translation type="unfinished">Crna 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Upper brown 50%</source>
         <comment>Color 14</comment>
-        <translation type="unfinished">Crna 65%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below upper brown 50%</source>
         <comment>Color 15</comment>
-        <translation type="unfinished">Crna 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
         <comment>Color 16</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below lower brown 50%</source>
         <comment>Color 17</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% for area features</source>
         <comment>Color 18</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70%</source>
         <comment>Color 19</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50%</source>
         <comment>Color 20</comment>
-        <translation type="unfinished">Plava 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 21</comment>
-        <translation type="unfinished">OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride</source>
         <comment>Color 22</comment>
-        <translation type="unfinished">Plava 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60% for narrow ride</source>
         <comment>Color 23</comment>
-        <translation type="unfinished">OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% for narrow ride</source>
         <comment>Color 24</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green</source>
         <comment>Color 25</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100%/Green 50%</source>
         <comment>Color 26</comment>
-        <translation type="unfinished">Žuta 100%/Zelena 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 25% (Grey)</source>
         <comment>Color 27</comment>
-        <translation type="unfinished">Crna 25% (siva)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%/Black 50%</source>
         <comment>Color 28</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 29</comment>
-        <translation type="unfinished">Crna 25% (siva)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 30</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 31</comment>
-        <translation type="unfinished">Zelena 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
@@ -7804,7 +6874,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>White over yellow</source>
         <comment>Color 33</comment>
-        <translation type="unfinished">Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for open land</source>
@@ -7814,7 +6884,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Yellow</source>
         <comment>Color 35</comment>
-        <translation type="unfinished">Žuta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for area features</source>
@@ -7824,27 +6894,27 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Yellow 50%</source>
         <comment>Color 37</comment>
-        <translation type="unfinished">Žuta 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% point symbols</source>
         <comment>Color 38</comment>
-        <translation type="unfinished">Zelena 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% point symbols</source>
         <comment>Color 39</comment>
-        <translation type="unfinished">Bijela za željeznicu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% point symbols</source>
         <comment>Color 40</comment>
-        <translation type="unfinished">Plava 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% line symbols</source>
         <comment>Color 41</comment>
-        <translation type="unfinished">Smeđa 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% line symbols</source>
@@ -7854,12 +6924,12 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Lower purple for course overprint</source>
         <comment>Color 43</comment>
-        <translation type="unfinished">Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for road infill</source>
         <comment>Color 44</comment>
-        <translation type="unfinished">Crna 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100% for road outline</source>
@@ -7884,22 +6954,22 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Blue 70% area symbols</source>
         <comment>Color 49</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50% area symbols</source>
         <comment>Color 50</comment>
-        <translation type="unfinished">Plava 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green and brown (+ yellow)</source>
         <comment>Color 51</comment>
-        <translation type="unfinished">Plava 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for paved area</source>
         <comment>Color 52</comment>
-        <translation type="unfinished">OpenOrienteering narančasta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride (extra)</source>
@@ -7909,27 +6979,27 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 54</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Olive green</source>
         <comment>Color 55</comment>
-        <translation type="unfinished">Bijela preko zelene</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
         <comment>Color 56</comment>
-        <translation type="unfinished">Žuta 100%/Zelena 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% area symbols</source>
         <comment>Color 57</comment>
-        <translation type="unfinished">Zelena 100%/Crna 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 35% area symbols</source>
         <comment>Color 58</comment>
-        <translation type="unfinished">Zelena 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% below green areas (extra)</source>
@@ -7939,7 +7009,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>White over yellow</source>
         <comment>Color 60</comment>
-        <translation type="unfinished">Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for cultivated land and sandy ground</source>
@@ -7949,7 +7019,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Yellow 100% area symbols</source>
         <comment>Color 62</comment>
-        <translation type="unfinished">Bijela preko žute</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 75% area symbols</source>
@@ -7959,7 +7029,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Yellow 50%</source>
         <comment>Color 64</comment>
-        <translation type="unfinished">Žuta 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange (extra)</source>
@@ -7969,7 +7039,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation type="unfinished">Izohipsa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
@@ -8011,7 +7081,7 @@ The index contour level must be carefully selected in flat terrain. The ideal le
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.1</comment>
-        <translation type="unfinished">Vrijednost izohipse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An index contour may have a height value assigned. A height value should only be inserted in an index contour in places where other detail is not obscured. It shall be orientated so that the top of the label is on the higher side of the contour. The index value (label) shall be 1.5 mm high and represented in a sans-serif font.</source>
@@ -8235,7 +7305,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff</source>
         <comment>Name of symbol 202</comment>
-        <translation type="unfinished">Klipa</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -8249,7 +7319,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, minimum size</source>
         <comment>Name of symbol 202.1</comment>
-        <translation type="unfinished">Klipa, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -8263,7 +7333,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags</source>
         <comment>Name of symbol 202.2</comment>
-        <translation type="unfinished">Klipa, s oznakama</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -8277,7 +7347,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size</source>
         <comment>Name of symbol 202.3</comment>
-        <translation type="unfinished">Klipa, s oznakama, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -8291,7 +7361,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     <message>
         <source>Cliff, with tags, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 202.9</comment>
-        <translation type="unfinished">Klipa, s oznakama, najmanje veličine (po ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -8519,7 +7589,7 @@ Minimum length (isolated): 1 mm (footprint 15 m)</source>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Otvoreno polje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land that has a ground cover (grass, moss or similar) which offers better runnability than typical open forest. If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -8531,7 +7601,7 @@ Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Otvoreno polje s razbacanim stablima</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in open land may be generalised by using a regular pattern of large dots in the yellow screen. The dots may be white (scattered trees) or green (scattered bushes / thickets). Prominent individual trees may be added using symbol Prominent large tree (417). If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -8650,7 +7720,7 @@ Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
     <message>
         <source>Vineyard or similar</source>
         <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Vinograd ili slično</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
@@ -8742,7 +7812,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Wide road, minimum width</source>
         <comment>Name of symbol 502</comment>
-        <translation type="unfinished">Široka cesta, najmanja širina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -8755,7 +7825,7 @@ A road with two carriageways can be represented using two wide road symbols side
     <message>
         <source>Wide road, 0.5 mm (from ISOM2000)</source>
         <comment>Name of symbol 502.1</comment>
-        <translation type="unfinished">Široka cesta, 0,5 mm (po ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
@@ -8904,7 +7974,7 @@ Very large carrying masts shall be represented in plan shape using outline of sy
     <message>
         <source>Bridge / tunnel</source>
         <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Most/tunel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -8917,7 +7987,7 @@ Small bridges connected to a track/path are shown by centring a track dash on th
     <message>
         <source>Bridge / tunnel, minimum size</source>
         <comment>Name of symbol 512.1</comment>
-        <translation type="unfinished">Most/tunel, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -8941,7 +8011,7 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     <message>
         <source>Wall</source>
         <comment>Name of symbol 513.1</comment>
-        <translation type="unfinished">Zid</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
@@ -9055,7 +8125,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Building</source>
         <comment>Name of symbol 521</comment>
-        <translation type="unfinished">Zgrada</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
@@ -9070,7 +8140,7 @@ Minimum area: 0.5 mm x 0.5 mm (footprint 7.5 m x 7.5 m).</source>
     <message>
         <source>Building, minimum size</source>
         <comment>Name of symbol 521.1</comment>
-        <translation type="unfinished">Zgrada, najmanje veličine</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A building is shown with its ground plan so far as the scale permits.
@@ -9522,222 +8592,12 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
     <message>
         <source>OpenOrienteering Logo</source>
         <comment>Name of symbol 999</comment>
-        <translation>OpenOrienteering logotip</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The OpenOrienteering Logo.</source>
         <comment>Description of symbol 999</comment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50%</source>
-        <comment>Color 55</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Black 100%</source>
-        <comment>Color 3</comment>
-        <translation type="obsolete">Crna 100%</translation>
-    </message>
-    <message>
-        <source>Green 100%</source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Zelena 100%</translation>
-    </message>
-    <message>
-        <source>White for railway</source>
-        <comment>Color 5</comment>
-        <translation type="obsolete">Bijela za željeznicu</translation>
-    </message>
-    <message>
-        <source>Blue 100%</source>
-        <comment>Color 6</comment>
-        <translation type="obsolete">Plava 100%</translation>
-    </message>
-    <message>
-        <source>Brown 100%</source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Smeđa 100%</translation>
-    </message>
-    <message>
-        <source>Purple for track symbols</source>
-        <comment>Color 8</comment>
-        <translation type="obsolete">Crna 65%</translation>
-    </message>
-    <message>
-        <source>Black below purple for track symbols</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Crna 50%</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 10</comment>
-        <translation type="obsolete">Crna 65%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 11</comment>
-        <translation type="obsolete">Crna 20%</translation>
-    </message>
-    <message>
-        <source>Upper brown 50%</source>
-        <comment>Color 12</comment>
-        <translation type="obsolete">Crna 65%</translation>
-    </message>
-    <message>
-        <source>Black below upper brown 50%</source>
-        <comment>Color 13</comment>
-        <translation type="obsolete">Crna 20%</translation>
-    </message>
-    <message>
-        <source>Blue 100% for area features</source>
-        <comment>Color 16</comment>
-        <translation type="obsolete">Plava 70%</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Plava 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 19</comment>
-        <translation type="obsolete">OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for narrow ride</source>
-        <comment>Color 20</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>Green 60% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation type="obsolete">OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>Green 30% for narrow ride</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 23</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Žuta 100%/Zelena 50%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 26</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 100% for area features</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 29</comment>
-        <translation type="obsolete">Zelena 30%</translation>
-    </message>
-    <message>
-        <source>White over yellow</source>
-        <comment>Color 31</comment>
-        <translation type="obsolete">Bijela preko žute</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 33</comment>
-        <translation type="obsolete">Žuta</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 35</comment>
-        <translation type="obsolete">Žuta 50%</translation>
-    </message>
-    <message>
-        <source>White over green and brown</source>
-        <comment>Color 51</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>Brown 100% point symbols </source>
-        <comment>Color 39</comment>
-        <translation type="obsolete">Bijela za željeznicu</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50% </source>
-        <comment>Color 55</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 11</comment>
-        <translation type="obsolete">Crna 50%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 12</comment>
-        <translation type="obsolete">Crna 20%</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">Plava 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 19</comment>
-        <translation type="obsolete">Plava 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 20</comment>
-        <translation type="obsolete">OpenOrienteering narančasta</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Bijela preko zelene</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Žuta 100%/Zelena 50%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 26</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Zelena 100%/Crna 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Crna 25% (siva)</translation>
     </message>
 </context>
 <context>
@@ -9745,7 +8605,7 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
     <message>
         <source>Purple</source>
         <comment>Color 0</comment>
-        <translation>Purpurna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for control descriptions</source>
@@ -9770,7 +8630,7 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
     <message>
         <source>Black</source>
         <comment>Color 5</comment>
-        <translation>Crna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Simple Orienteering Course</source>

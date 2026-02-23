@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2020 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -25,6 +25,7 @@
 #include <QFontMetrics>
 #include <QIcon>
 #include <QImage>
+#include <QImageWriter>
 #include <QLatin1Char>
 #include <QLatin1String>
 #include <QList>
@@ -320,12 +321,13 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 	}
 	else
 	{
-		auto image = makeImage(filename);
-		if (!image.save(image_file_path))
+		const auto image = makeImage(filename);
+		QImageWriter writer(image_file_path);
+		if (!writer.write(image))
 		{
 			showMessage(window,
 			            LibreMapper::MapEditorController::tr("Cannot save file\n%1:\n%2")
-			            .arg(filename, QString{}));
+			            .arg(filename, writer.errorString()));
 			return nullptr;
 		}
 		remove_file = true;

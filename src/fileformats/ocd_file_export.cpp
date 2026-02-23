@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2024 Libor Pecháček
- * Copyright 2016-2022, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2016-2022, 2024, 2025 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  *
@@ -413,23 +413,23 @@ Ocd::OcdPoint32 convertPoint(const MapCoord& coord)
 
 
 /**
- * Convert a size to the OCD format.
+ * Convert a size or offset to the OCD format.
  * 
- * This function converts from 1/100 mm to 1/10 mm, rounding half up for positive values.
+ * This function converts from 1/100 mm to 1/10 mm, rounding halfway cases away from zero.
  */
 constexpr qint16 convertSize(qint32 size)
 {
-	return qint16((size+5) / 10);
+	return qint16(((size < 0) ? (size-5) : (size+5)) / 10);
 }
 
 /**
  * Convert a size to the OCD format.
  * 
- * This function converts from 1/100 mm to 1/10 mm, rounding half up for positive values.
+ * This function converts from 1/100 mm to 1/10 mm, rounding halfway cases away from zero.
  */
 constexpr qint32 convertSize(qint64 size)
 {
-	return qint32((size+5) / 10);
+	return qint32(((size < 0) ? (size-5) : (size+5)) / 10);
 }
 
 
@@ -1422,6 +1422,8 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 	ocd_area_common.structure_draw_V12 = 0;
 	
 	quint8 flags = 0;
+	if (area_symbol->isRotatable())
+		flags |= Ocd::SymbolRotatable;
 	// Hatch
 	for (int i = 0, end = area_symbol->getNumFillPatterns(); i < end; ++i)
 	{
@@ -1440,8 +1442,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 				else
 					ocd_area_common.hatch_dist = decltype(ocd_area_common.hatch_dist)(convertSize(pattern.line_spacing));
 				ocd_area_common.hatch_angle_1 = decltype(ocd_area_common.hatch_angle_1)(convertRotation(pattern.angle));
-				if (pattern.rotatable())
-					flags |= Ocd::SymbolRotatable;
 				break;
 			case Ocd::HatchSingle:
 				if (ocd_area_common.hatch_color == convertColor(pattern.line_color))
@@ -1453,8 +1453,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 					else
 						ocd_area_common.hatch_dist = decltype(ocd_area_common.hatch_dist)(ocd_area_common.hatch_dist + convertSize(pattern.line_spacing)) / 2;
 					ocd_area_common.hatch_angle_2 = decltype(ocd_area_common.hatch_angle_2)(convertRotation(pattern.angle));
-					if (pattern.rotatable())
-						flags |= Ocd::SymbolRotatable;
 					break;
 				}
 				Q_FALLTHROUGH();
@@ -1476,8 +1474,6 @@ quint8 OcdFileExport::exportAreaSymbolCommon(const AreaSymbol* area_symbol, OcdA
 				ocd_area_common.structure_height = decltype(ocd_area_common.structure_height)(convertSize(pattern.line_spacing));
 				ocd_area_common.structure_angle = decltype(ocd_area_common.structure_angle)(convertRotation(pattern.angle));
 				pattern_symbol = pattern.point;
-				if (pattern.rotatable())
-					flags |= Ocd::SymbolRotatable;
 				point_patterns.append(&pattern);
 				break;
 			case 1:
@@ -1910,6 +1906,7 @@ QByteArray OcdFileExport::exportTextSymbol(const TextSymbol* text_symbol, quint3
 	setupTextSymbolExtra(text_symbol, ocd_symbol);
 	setupTextSymbolBasic(text_symbol, alignment, ocd_symbol.basic);
 	setupTextSymbolSpecial(text_symbol, ocd_symbol.special);
+	setupTextSymbolFraming(text_symbol, ocd_symbol.framing);
 	
 	auto header_size = int(sizeof(OcdTextSymbol));
 	ocd_symbol.base.size = decltype(ocd_symbol.base.size)(header_size);
@@ -1996,6 +1993,7 @@ void OcdFileExport::setupTextSymbolFraming(const TextSymbol* text_symbol, OcdTex
 	if (text_symbol->getFramingColor())
 	{
 		ocd_text_framing.color = convertColor(text_symbol->getFramingColor());
+		ocd_text_framing.line_style_V9 = (ocd_version >= 9) ? /* miter join */ 4 : 0;
 		switch (text_symbol->getFramingMode())
 		{
 		case TextSymbol::NoFraming:

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -133,6 +133,7 @@
 #include "templates/template.h"
 #include "templates/template_dialog_reopen.h"
 #include "templates/template_track.h"
+#include "tools/box_zoom_tool.h"
 #include "tools/cut_tool.h"
 #include "tools/cut_hole_tool.h"
 #include "tools/cutout_tool.h"
@@ -978,8 +979,14 @@ void MapEditorController::createActions()
 	cut_act->setMenuRole(QAction::TextHeuristicRole);
 	copy_act = newAction("copy", tr("C&opy"), this, SLOT(copy()), "copy.png", QString{}, "edit_menu.html");
 	copy_act->setMenuRole(QAction::TextHeuristicRole);
-	paste_act = newAction("paste", tr("&Paste"), this, SLOT(paste()), "paste", QString{}, "edit_menu.html");
+	auto* paste_act_mapper = new QSignalMapper(this);
+	connect(paste_act_mapper, &QSignalMapper::mappedInt, this, QOverload<int>::of(&MapEditorController::paste));
+	paste_act = newAction("paste", tr("&Paste"), paste_act_mapper, SLOT(map()), "paste", QString{}, "edit_menu.html");
 	paste_act->setMenuRole(QAction::TextHeuristicRole);
+	paste_act_mapper->setMapping(paste_act, 1);
+	paste_original_act = newAction("paste-original", tr("Paste at original location"), paste_act_mapper, SLOT(map()), "paste-at-location.png", QString{}, "edit_menu.html");
+	paste_original_act->setMenuRole(QAction::TextHeuristicRole);
+	paste_act_mapper->setMapping(paste_original_act, 0);
 	delete_act = newAction("delete", tr("Delete"), this, SLOT(deleteClicked()), "delete.png", QString{}, "toolbars.html#delete");
 	select_all_act = newAction("select-all", tr("Select all"), this, SLOT(selectAll()), nullptr, QString{}, "edit_menu.html");
 	select_nothing_act = newAction("select-nothing", tr("Select nothing"), this, SLOT(selectNothing()), nullptr, QString{}, "edit_menu.html");
@@ -996,6 +1003,7 @@ void MapEditorController::createActions()
 	follow_position_act = newCheckAction("follow-position", tr("Keep my location on screen"), this, SLOT(followPositionClicked(bool)), nullptr, QString{}, "view_menu.html");
 	zoom_in_act = newAction("zoomin", tr("Zoom in"), this, SLOT(zoomIn()), "view-zoom-in.png", QString{}, "view_menu.html");
 	zoom_out_act = newAction("zoomout", tr("Zoom out"), this, SLOT(zoomOut()), "view-zoom-out.png", QString{}, "view_menu.html");
+	box_zoom_act = newCheckAction("boxzoom", tr("Zoom to box"), this, SLOT(boxZoom(bool)), "view-box-zoom.png", QString{}, "view_menu.html");
 	show_all_act = newAction("showall", tr("Show whole map"), this, SLOT(showWholeMap()), "view-show-all.png", QString{}, "view_menu.html");
 	fullscreen_act = newAction("fullscreen", tr("Toggle fullscreen mode"), window, SLOT(toggleFullscreenMode()), nullptr, QString{}, "view_menu.html");
 	custom_zoom_act = newAction("setzoom", tr("Set custom zoom factor..."), this, SLOT(setCustomZoomFactorClicked()), nullptr, QString{}, "view_menu.html");
@@ -1026,7 +1034,7 @@ void MapEditorController::createActions()
 	open_template_act = newAction("opentemplate", tr("Open template..."), this, SLOT(openTemplateClicked()), nullptr, QString{}, "templates_menu.html");
 	reopen_template_act = newAction("reopentemplate", tr("Reopen template..."), this, SLOT(reopenTemplateClicked()), nullptr, QString{}, "templates_menu.html");
 	
-	tags_window_act = newCheckAction("tagswindow", tr("Tag editor"), this, SLOT(showTagsWindow(bool)), "window-new", tr("Show/Hide the tag editor window"), "tag_editor.html");
+	tags_window_act = newCheckAction("tagswindow", tr("Tag editor"), this, SLOT(showTagsWindow(bool)), "tag-editor.png", tr("Show/Hide the tag editor window"), "tag_editor.html");
 	
 	edit_tool_act = newToolAction("editobjects", tr("Edit objects"), this, SLOT(editToolClicked()), "tool-edit.png", QString{}, "toolbars.html#tool_edit_point");
 	edit_line_tool_act = newToolAction("editlines", tr("Edit lines"), this, SLOT(editLineToolClicked()), "tool-edit-line.png", QString{}, "toolbars.html#tool_edit_line");
@@ -1180,6 +1188,7 @@ void MapEditorController::createMenuAndToolbars()
 	edit_menu->addAction(cut_act);
 	edit_menu->addAction(copy_act);
 	edit_menu->addAction(paste_act);
+	edit_menu->addAction(paste_original_act);
 	edit_menu->addAction(delete_act);
 	edit_menu->addSeparator();
 	edit_menu->addAction(select_all_act);
@@ -1197,6 +1206,7 @@ void MapEditorController::createMenuAndToolbars()
 	view_menu->addAction(pan_act);
 	view_menu->addAction(zoom_in_act);
 	view_menu->addAction(zoom_out_act);
+	view_menu->addAction(box_zoom_act);
 	view_menu->addAction(show_all_act);
 	view_menu->addAction(custom_zoom_act);
 	view_menu->addSeparator();
@@ -1337,6 +1347,7 @@ void MapEditorController::createMenuAndToolbars()
 	toolbar_view->addAction(pan_act);
 	toolbar_view->addAction(zoom_in_act);
 	toolbar_view->addAction(zoom_out_act);
+	toolbar_view->addAction(box_zoom_act);
 	toolbar_view->addAction(show_all_act);
 	toolbar_view->addAction(template_window_act);
 	
@@ -1859,6 +1870,14 @@ void MapEditorController::exportVector()
 void MapEditorController::printClicked(int task)
 {
 #ifdef QT_PRINTSUPPORT_LIB
+	if (editing_in_progress)
+	{
+		QMessageBox::warning(window,
+		                     tr("Editing in progress"),
+		                     tr("The map is currently being edited. "
+		                        "Please finish the edit operation first.") );
+		return;
+	}
 	if (!print_dock_widget)
 	{
 		print_dock_widget = new EditorDockWidget(QString{}, nullptr, this, window);
@@ -1972,7 +1991,7 @@ void MapEditorController::copy()
 }
 
 
-void MapEditorController::paste()
+void MapEditorController::paste(int paste_at_center)
 {
 	if (editing_in_progress)
 		return;
@@ -1995,14 +2014,17 @@ void MapEditorController::paste()
 		return;
 	}
 	
-	// Move objects in paste_map so their bounding box center is at this map's viewport center.
-	// This makes the pasted objects appear at the center of the viewport.
-	QRectF paste_extent = paste_map.calculateExtent(true, false, nullptr);
-	auto offset = main_view->center() - paste_extent.center();
-	
-	MapPart* part = paste_map.getCurrentPart();
-	for (int i = 0; i < part->getNumObjects(); ++i)
-		part->getObject(i)->move(offset);
+	if (paste_at_center)
+	{
+		// Move objects in paste_map so their bounding box center is at this map's viewport center.
+		// This makes the pasted objects appear at the center of the viewport.
+		QRectF paste_extent = paste_map.calculateExtent(true, false, nullptr);
+		auto offset = main_view->center() - paste_extent.center();
+		
+		MapPart* part = paste_map.getCurrentPart();
+		for (int i = 0; i < part->getNumObjects(); ++i)
+			part->getObject(i)->move(offset);
+	}
 	
 	// Import pasted map. Do not blindly import all colors.
 	importMap(paste_map, Map::MinimalObjectImport, window);
@@ -2103,10 +2125,20 @@ void MapEditorController::zoomIn()
 {
 	main_view->zoomSteps(1);
 }
+
 void MapEditorController::zoomOut()
 {
 	main_view->zoomSteps(-1);
 }
+
+void MapEditorController::boxZoom(bool checked)
+{
+	if (checked)
+		setTool(new BoxZoomTool(this, box_zoom_act));
+	else
+		setTool(nullptr);
+}
+
 void MapEditorController::setCustomZoomFactorClicked()
 {
 	bool ok;
@@ -2448,13 +2480,15 @@ void MapEditorController::selectedSymbolsChanged()
 				image = symbol->createIcon(*map, qMin(icon_size.width(), icon_size.height()));
 			else
 				image = image.scaled(icon_size.width(), icon_size.height(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-			if (symbol->isHidden() || symbol->isProtected())
+			if (symbol->isHidden() || symbol->isProtected() || symbol->isHelperSymbol())
 			{
 				QPainter p(&image);
 				if (symbol->isHidden())
 					HiddenSymbolDecorator(icon_size.width()).draw(p);
 				if (symbol->isProtected())
 					ProtectedSymbolDecorator(icon_size.width()).draw(p);
+				if (symbol->isHelperSymbol())
+					HelperSymbolDecorator(icon_size.width()).draw(p);
 			}
 			pixmap = QPixmap::fromImage(image);
 			
@@ -2478,7 +2512,7 @@ void MapEditorController::selectedSymbolsChanged()
 		if (symbol && !symbol->isHidden() && !symbol->isProtected() && current_tool)
 		{
 			// Auto-switch to a draw tool when selecting a symbol under certain conditions
-			if (current_tool->toolType() == MapEditorTool::Pan || current_tool->toolType() == MapEditorTool::Scribble
+			if (current_tool->toolType() == MapEditorTool::Pan || current_tool->toolType() == MapEditorTool::BoxZoom || current_tool->toolType() == MapEditorTool::Scribble
 			    || ((current_tool->toolType() == MapEditorTool::EditLine || current_tool->toolType() == MapEditorTool::EditPoint) && map->getNumSelectedObjects() == 0))
 			{
 				current_tool->switchToDefaultDrawTool(active_symbol);
@@ -2720,13 +2754,14 @@ void MapEditorController::clipboardChanged(QClipboard::Mode mode)
 
 void MapEditorController::updatePasteAvailability()
 {
+	const bool paste_available = QApplication::clipboard()->mimeData()
+		&& QApplication::clipboard()->mimeData()->hasFormat(MimeType::OpenOrienteeringObjects())
+		&& !editing_in_progress;
+	
 	if (paste_act)
-	{
-		paste_act->setEnabled(
-			QApplication::clipboard()->mimeData()
-			&& QApplication::clipboard()->mimeData()->hasFormat(MimeType::OpenOrienteeringObjects())
-			&& !editing_in_progress);
-	}
+		paste_act->setEnabled(paste_available);
+	if (paste_original_act)
+		paste_original_act->setEnabled(paste_available);
 }
 
 void MapEditorController::showWholeMap()
@@ -4364,6 +4399,7 @@ QHash<const Symbol*, Symbol*> MapEditorController::importMap(
 void MapEditorController::setViewOptionsEnabled(bool enabled)
 {
 	pan_act->setEnabled(enabled);
+	box_zoom_act->setEnabled(enabled);
 	show_grid_act->setEnabled(enabled);
 // 	hatch_areas_view_act->setEnabled(enabled);
 // 	baseline_view_act->setEnabled(enabled);

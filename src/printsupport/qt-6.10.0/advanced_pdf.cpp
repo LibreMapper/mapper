@@ -114,6 +114,7 @@ static void removeTransparencyFromBrush(QBrush &brush)
 
 
 /* also adds a space at the end of the number */
+static
 const char *qt_real_to_string(qreal val, char *buf) {
     const char *ret = buf;
 
@@ -166,6 +167,7 @@ const char *qt_real_to_string(qreal val, char *buf) {
     return ret;
 }
 
+static
 const char *qt_int_to_string(int val, char *buf) {
     const char *ret = buf;
     if (val < 0) {

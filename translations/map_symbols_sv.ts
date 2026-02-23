@@ -6,177 +6,177 @@
     <message>
         <source>Upper purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation type="unfinished">Lila för banövertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railroad</source>
         <comment>Color 1</comment>
-        <translation type="unfinished">Vit för banövertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100%</source>
         <comment>Color 2</comment>
-        <translation>Svart 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% point symbols</source>
         <comment>Color 3</comment>
-        <translation type="unfinished">Grön 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% point symbols</source>
         <comment>Color 4</comment>
-        <translation type="unfinished">Vit för järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% point symbols</source>
         <comment>Color 5</comment>
-        <translation type="unfinished">Blå 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% line symbols</source>
         <comment>Color 6</comment>
-        <translation type="unfinished">Brun 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dark green for forest edges</source>
         <comment>Color 7</comment>
-        <translation type="unfinished">Grön 100%/Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% line symbols</source>
         <comment>Color 8</comment>
-        <translation type="unfinished">Svart under lila för spår symboler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower purple for course overprint</source>
         <comment>Color 9</comment>
-        <translation type="unfinished">Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for road infill</source>
         <comment>Color 10</comment>
-        <translation type="unfinished">Svart 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100% for road outline</source>
         <comment>Color 11</comment>
-        <translation type="unfinished">Övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 50% for large buildings and tramway</source>
         <comment>Color 12</comment>
-        <translation type="unfinished">Svart under övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20% for canopy</source>
         <comment>Color 13</comment>
-        <translation type="unfinished">Lägre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% area symbols</source>
         <comment>Color 14</comment>
-        <translation type="unfinished">Svart under nedre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70% area symbols</source>
         <comment>Color 15</comment>
-        <translation type="unfinished">Blå 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50% area symbols</source>
         <comment>Color 16</comment>
-        <translation type="unfinished">Blå 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green and brown (+ yellow)</source>
         <comment>Color 17</comment>
-        <translation type="unfinished">Blå 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for paved area</source>
         <comment>Color 18</comment>
-        <translation type="unfinished">OpenOrienteering Orange</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride (extra)</source>
         <comment>Color 19</comment>
-        <translation type="unfinished">Gul 100% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60% for narrow ride (extra)</source>
         <comment>Color 20</comment>
-        <translation type="unfinished">Grön 60% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 21</comment>
-        <translation type="unfinished">Grön 30% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Olive green</source>
         <comment>Color 22</comment>
-        <translation type="unfinished">Vit över grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
         <comment>Color 23</comment>
-        <translation type="unfinished">Gul 100%/Grön 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60% area symbols</source>
         <comment>Color 24</comment>
-        <translation type="unfinished">Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% area symbols</source>
         <comment>Color 25</comment>
-        <translation type="unfinished">Grön 100%/Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 35% area symbols</source>
         <comment>Color 26</comment>
-        <translation type="unfinished">Grön 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% below green areas (extra)</source>
         <comment>Color 27</comment>
-        <translation type="unfinished">Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 28</comment>
-        <translation>Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for cultivated land and sandy ground</source>
         <comment>Color 29</comment>
-        <translation type="unfinished">Grön 100% för undervegetation</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% area symbols</source>
         <comment>Color 30</comment>
-        <translation type="unfinished">Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 75% area symbols</source>
         <comment>Color 31</comment>
-        <translation type="unfinished">Svart för öppet land</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 32</comment>
-        <translation>Gul 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange (extra)</source>
         <comment>Color 33</comment>
-        <translation type="unfinished">Gul 100% för areafunktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
@@ -190,81 +190,67 @@ The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minim
 A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
 Contours shall be adapted or broken in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
         <comment>Description of symbol 101</comment>
-        <translation type="unfinished">En höjdkurva sammanbinder två punkter på samma höjdnivå. Standardskillnaden i höjd mellan två höjdkurvor, ekvidistansen, är 5m. En stödkurva med ekvidistans 2,5m kan användas i flack terräng.
-Lutningsstreck kan ritas på den nedre sidan av en höjdkurva för att förtydliga riktningen av lutningen. Vid användning måste lutningsstrecket placeras i inbuktningar, tex. sänkor.
-En stängd höjdkurva representerar en höjd eller grop. En grop måste ha minst ett lutningsstreck. Minsta höjd/djup bör vara 1m.
-Förhållandet mellan två närliggande höjdkurvor är viktigt. Närliggande höjdkurvor visar form och konturer av terrängen. Små detaljer i kurvningen bör undvikas eftersom de tenderar att dölja större formationer i terrängen.
-Framstående detaljer så som gropar, sänkor, åsar och terrasser kan behöva överdrivas.
-Exakt återgivelse i höjd för varje objekt är inte viktigt, däremot är höjdskillnaden mellan närliggande objekt viktigt att den anges så noggrant som möjligt. Det är tillåtet att överdriva ett objekts höjd något för att förtydliga ett objekt. Denna justering bör dock inte överstiga 25% av ekvidistansen, och man måste ha förhållandet med närliggande objekt i åtanke.
-Den minsta tillåtna böjning av en höjdkurva är 0,25mm i radie (4m i terrängen). Längden på en sänka eller ås måste vara större än 0,5mm från mitten till mitten av kurvan (8m i terrängen).
-Minimumlängd på en höjd är 0.9mm (13,5m i terrängen) och minimumbredd är 0,6mm (9m i terrängen). Mindre men tydliga höjder bör ritas med symbolen Liten höjd (109) eller Liten avlång höjd (110) eller så kan de överdrivas för att uppnå minimummåtten.
-En grop måste ha minst ett lutningsstreck, så minimumlängden är 1,1mm (16,5m i terrängen) och minimumbredd 0,7mm (10,5 i terrängen). Mindre men tydliga gropar kan ritas med symbolen Liten grop (111) eller så kan de överdrivas för att uppfylla minimummåtten.
-Konturer bör följas med höjdkurvan för att inte tangera objekt av symbolen Liten höjd (109) eller Liten avlång höjd (110).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope line, contour</source>
         <comment>Name of symbol 101.1</comment>
-        <translation>Lutningsstreck, Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
 A depression has to have at least one slope line.</source>
         <comment>Description of symbol 101.1</comment>
-        <translation type="unfinished">Lutningsstreck bör ritas på nedåtsidan av höjdkurvan för att förtydliga lutningen. Lutningsstreck bör placeras i inbuktningar så som sänkor.
-En grop måste innehålla minst ett lutningsstreck.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Index contour</source>
         <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface.
 An index contour may be represented as an ordinary contour line in an area with much detail. Small contour knolls and depressions are normally not represented using index contours.
 The index contour level must be carefully selected in flat terrain. The ideal level for the index contour is the central contour in the most prominent slopes.</source>
         <comment>Description of symbol 102</comment>
-        <translation type="unfinished">Var femte höjdkurva bör ritas med en tjockare linje. Detta är en hjälp för att snabbt urskilja höjdskillnad och större konturer i terrängen.
-En stödkurva kan användas som en vanlig höjdkurva med mycket detaljer. Små höjdformationer och gropar är normalt inte redovisade med stödkurva.
-Stödkurvans nivå måste väljas med försiktighet i flack terräng. Den optimala nivån för höjdkurvan är mitt i sluttningen för de mest tydliga och branta sluttningarna.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.1</comment>
-        <translation>Höjdsiffra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An index contour may have a height value assigned. A height value should only be inserted in an index contour in places where other detail is not obscured. It shall be orientated so that the top of the label is on the higher side of the contour. The index value (label) shall be 1.5 mm high and represented in a sans-serif font.</source>
         <comment>Description of symbol 102.1</comment>
-        <translation type="unfinished">En stödkurva kan tilldelas en höjdangivelse. En höjdangivelse bör bara placeras så att inga andra detaljer döljs. Den bör bli placerad så att den övre kanten av höjdangivelsen är på den högre sidan av höjdkurvan. Texten för höjdangivelsen skall vara 1,5mm hög och i typsnittet sans-serif.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Form line</source>
         <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Form lines are used where more information must be given about the shape of the ground. Form lines are added only where representation would be incomplete with ordinary contours. They shall not be used as intermediate contours. Only one form line should be used between neighbouring contours. It is very important that a form line fits logically into the contour system, so the start and end of a form line should be parallel to the neighbouring contours. The gaps between the form line dashes must be placed on reasonably straight sections of the form line. Form lines can be used to differentiate flat knolls and depressions from more distinct ones (minimum height / depth should be 1 m). Excessive use of form lines must be avoided as this disturbs the three-dimensional picture of the ground shape and will complicate map reading.
 Minimum length (non-closed): two dashes.
 Minimum length of a form line, knoll or depression: 1.1 mm (footprint 16.5 m)</source>
         <comment>Description of symbol 103</comment>
-        <translation type="unfinished">Hjälpkurvor används för att komplettera kurvinformationen. De användsenbart när fullständig redovisning med vanliga höjdkurvor inte är möjlig.Hjälpkurvor ska inte användas som intermediära kurvor. Endast enhjälpkurva ska användas mellan närliggande höjdkurvor.Det är mycket viktigt att hjälpkurvorna används logiskt, vilket innebär attstart- och slut av en hjälpkurva ska vara parallella med närliggandehöjdkurvor.Uppehållen i hjälpkurvorna ska placeras på någorlunda raka delar avhjälpkurvan.Hjälpkurvor kan användas för att skilja mellan platta och mer tydliga höjderoch gropar (lägsta höjd /djup bör vara 1 m).Överdriven användning av hjälpkurvor ska undvikas då det stör dentredimensionella terrängbilden och försvårar kartläsningen.
-Minsta längd (öppen hjälpkurva): två streck.
-Minsta längd för en hjälpkurvehöjd/-grop: 1,1 mm (16,5 m) yttermått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope line, formline</source>
         <comment>Name of symbol 103.1</comment>
-        <translation>Lutningsstreck, Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
         <comment>Description of symbol 103.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank</source>
         <comment>Name of symbol 104</comment>
-        <translation>Skärning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -272,15 +258,12 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, minimum size</source>
         <comment>Name of symbol 104.1</comment>
-        <translation>Skärning, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -288,15 +271,12 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.1</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, top line</source>
         <comment>Name of symbol 104.2</comment>
-        <translation>Skärning, baslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -304,42 +284,38 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.2</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, tag line</source>
         <comment>Name of symbol 104.3</comment>
-        <translation>Skärning, tagg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of wide earth banks.</source>
         <comment>Description of symbol 104.3</comment>
-        <translation>Använd denna symbol för att visa den totala utsträckningen av breda jordvallar.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 104.9</comment>
-        <translation>Skärning, minsta längd (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth wall</source>
         <comment>Name of symbol 105.1</comment>
-        <translation>Jordwall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
         <comment>Description of symbol 105.1</comment>
-        <translation type="unfinished">Tydlig jordvall.Lägsta höjd:1m.
-Minsta längd: 1,4 mm (21 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining earth wall</source>
@@ -355,7 +331,7 @@ Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
     <message>
         <source>Ruined earth wall</source>
         <comment>Name of symbol 106</comment>
-        <translation>Otydligt jordvall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A ruined or less distinct earth wall. Minimum height: 0.5 m.
@@ -366,35 +342,31 @@ Minimum length: two dashes (3.65 mm - footprint 55 m). If shorter, the object mu
     <message>
         <source>Erosion gully</source>
         <comment>Name of symbol 107</comment>
-        <translation>Erosionsfåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Contour lines may be broken around this symbol for better readability.
 Minimum depth: 1 m.
 Minimum length: 1.15 mm (footprint 17.25 m).</source>
         <comment>Description of symbol 107</comment>
-        <translation type="unfinished">En erosionsfåra som är för liten för att redovisas med symbol 104(skärning) redovisas med en enkellinje. Minstadjup: 1 m.
-Minsta längd:1,15 mm(17 m).
-Höjdkurvor bör ritas utan uppehåll genom symbolen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small erosion gully</source>
         <comment>Name of symbol 108</comment>
-        <translation>Liten fåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small erosion gully or dry ditch. Minimum depth: 0.5 m.
 Minimum length (isolated): two dots (0.7 mm - footprint 10.5 m).
 Contour lines shall be broken around this symbol.</source>
         <comment>Description of symbol 108</comment>
-        <translation type="unfinished">En liten erosionsfåra, torrt dike eller fåra. Minsta djup: 0,5 m. Minsta
-längd (friliggande): tre punkter (1,15 mm - 17 m).
-Höjdkurvor bör ritas med uppehåll omkring symbolen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small knoll</source>
         <comment>Name of symbol 109</comment>
-        <translation>Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An obvious mound or knoll which cannot be drawn to scale with a contour.
@@ -402,15 +374,12 @@ Minimum height: 1 m.
 The symbol shall not touch or overlap contours.
 Footprint: 7.5 m x 7.5 m.</source>
         <comment>Description of symbol 109</comment>
-        <translation type="unfinished">En tydlig kulle eller topp som inte kan ritas skalriktigt med höjdkurva.
-Lägsta höjd: 1 m.
-Symbolen ska inte vidröra eller överlappa höjdkurvor.
-Utbredning: 7,5 x 7,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small elongated knoll</source>
         <comment>Name of symbol 110</comment>
-        <translation>Avlång Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An obvious elongated knoll which cannot be drawn to scale with a contour.
@@ -423,7 +392,7 @@ Footprint: 12 m x 6 m.</source>
     <message>
         <source>Small depression</source>
         <comment>Name of symbol 111</comment>
-        <translation>Liten grop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small depression or hollow without steep sides that is too small to be shown by contours.
@@ -432,16 +401,12 @@ Small depressions with steep sides are represented with symbol Pit (112).
 The symbol shall not touch or overlap other brown symbols. Location is the centre of gravity of the symbol, and the symbol is orientated to north.
 Footprint: 12 m x 6 m.</source>
         <comment>Description of symbol 111</comment>
-        <translation type="unfinished">En liten grop eller håla utan branta sidor som inte kan redovisas skalenligt med höjdkurvor.
-Minsta djup: 1 m. Minsta bredd: 2 m.
-Små gropar med branta sidor redovisas med symbol 112.
-Symbolen får inte vidröra eller överlappa andra bruna symboler. Symbolens tyngdpunkt anger läget. Symbolen orienteras mot norr.
-Utbredning: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Pit</source>
         <comment>Name of symbol 112</comment>
-        <translation>Liten grop med branta sidor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Pits and holes with distinct steep sides which cannot be shown to scale using symbol Earth bank (104).
@@ -455,7 +420,7 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Broken ground</source>
         <comment>Name of symbol 113</comment>
-        <translation>Småkuperad terräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of pits and / or knolls which is too intricate to be shown in detail, or other types of rough and uneven ground that is clearly distinguishable but has little impact on runnability.
@@ -471,7 +436,7 @@ The dots shall not be arranged to form a single point wide line.</source>
     <message>
         <source>Broken ground, individual dot</source>
         <comment>Name of symbol 113.1</comment>
-        <translation>Småkuperad terräng, enskild punkt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of pits and / or knolls which is too intricate to be shown in detail, or other types of rough and uneven ground that is clearly distinguishable but has little impact on runnability.
@@ -488,7 +453,7 @@ Density: 3-4 dots / mm².</source>
     <message>
         <source>Very broken ground</source>
         <comment>Name of symbol 114</comment>
-        <translation>Mycket småkuperad terräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of pits and/or knolls, which is too intricate to be shown in detail, or other types of rough and uneven ground that is clearly distinguishable and affects runnability.
@@ -504,7 +469,7 @@ The dots shall not be arranged to form a single point wide line.</source>
     <message>
         <source>Prominent landform feature</source>
         <comment>Name of symbol 115</comment>
-        <translation>Övrigt tydligt terrängföremål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The feature must be very clearly distinguishable from its surroundings.
@@ -518,7 +483,7 @@ Footprint: 13.5 m x 11.5 m.</source>
     <message>
         <source>Impassable cliff</source>
         <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -527,16 +492,12 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat. Baslinjens avslutningar kan vara avrundade eller raka. Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Kortare lutningsstreck kan användas vid linjesluten.
-
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -545,26 +506,22 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201.1</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat. Baslinjens avslutningar kan vara avrundade eller raka. Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Kortare lutningsstreck kan användas vid linjesluten.
-
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, plan shape representation (from ISOM2000)</source>
         <comment>Name of symbol 201.2</comment>
-        <translation type="unfinished">Opasserbar brant, (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
         <comment>Name of symbol 201.3</comment>
-        <translation>Opasserbar brant, baslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -573,36 +530,32 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201.3</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat. Baslinjens avslutningar kan vara avrundade eller raka. Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Kortare lutningsstreck kan användas vid linjesluten.
-
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.4</comment>
-        <translation>Opasserbar brant, tag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of a wide cliff.</source>
         <comment>Description of symbol 201.4</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 201.9</comment>
-        <translation>Opasserbar brant, minsta storlek (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff</source>
         <comment>Name of symbol 202</comment>
-        <translation>Passerbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -611,16 +564,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, minimum size</source>
         <comment>Name of symbol 202.1</comment>
-        <translation>Passerbar brant, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -629,16 +578,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.1</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags</source>
         <comment>Name of symbol 202.2</comment>
-        <translation>Passerbar brant, med taggar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -647,16 +592,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.2</comment>
-        <translation type="unfinished">En passerbar brant eller stenbrott. Om brantens fallriktning inte framgår av konturerna eller för att förbättra läsbarheten kan korta taggar dras i riktning  nedför.
-För icke-vertikala branter bör taggarna ritas för att visa hela horisontalområdet. Slut på baslinjen måste avrundas om inga taggar visas. En passage mellan två branter måste vara minst 0,2 mm. En brant bör samverka med konturlinjerna.
-Att passera en brant kommer normalt att sakta ner hastigheten.
-Minsta höjd: 1 m.
-Minsta längd: 0,6 mm (fotavtryck 9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags, minimum size</source>
         <comment>Name of symbol 202.3</comment>
-        <translation>Passerbar brant med taggar, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -665,26 +606,22 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.3</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 202.9</comment>
-        <translation>Passerbar brant med taggar, minsta storlek (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pit or cave (without a distinct entrance)</source>
         <comment>Name of symbol 203.1</comment>
-        <translation>Stenig grop eller grotta (utan tydlig ingång)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts without a distinct entrance which may constitute a danger to the competitor.
@@ -698,58 +635,52 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
         <comment>Name of symbol 203.1.1</comment>
-        <translation type="unfinished">Grotta eller gruvhål (med en tydlig ingång)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
 Location is the centre of gravity of the symbol, and the symbol should point into the cave.
 Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
         <comment>Description of symbol 203.1.1</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan.
-En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dangerous pit</source>
         <comment>Name of symbol 203.2</comment>
-        <translation type="unfinished">Grotta eller gruvhål (med en tydlig ingång)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
 Footprint: 13.5 m diameter.</source>
         <comment>Description of symbol 203.2</comment>
-        <translation type="unfinished">Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan.
-En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pit or cave with distinct entrance (from ISOM2000)</source>
         <comment>Name of symbol 203.9</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål med tydlig ingång (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 203.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder</source>
         <comment>Name of symbol 204</comment>
-        <translation>Sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct boulder (should be higher than 1 m), which is immediately identifiable on the ground. Groups of boulders are represented using symbol Boulder cluster (207) or a boulder field symbol (208, 209).
 To be able to show the distinction between neighbouring (closer than 30 m apart) boulders with significant difference in size, it is permitted to enlarge the symbol to 0.5 mm for some of the boulders.
 Footprint: 6 m diameter (7.5 m diameter).</source>
         <comment>Description of symbol 204</comment>
-        <translation type="unfinished">En tydlig sten (bör vara högre än 1 m) som omedelbart kan identifieras i terrängen. Grupper av stenar redovisas med symbol 207 (grupp av sten) eller med blockterrängsymbol (208, 209).
-För att kunna särskilja närliggande stenar (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen till 0,5 mm för somliga stenar.
-Utbredning: 6 m (7,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder or large boulder, different size</source>
         <comment>Name of symbol 204.5</comment>
-        <translation>Stenblock eller stort stenblock, olika storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A boulder which is larger than neighboring boulders (204), or a large boulder which is smaller than neighboring large boulders (205).
@@ -758,26 +689,24 @@ To be able to show the distinction between neighbouring (closer than 30 metres a
 
 To be able to show the distinction between neighbouring (closer than 30 metres apart) large boulders (205) with significant difference in size, it is permitted to use this symbol (0.5 mm) as an as a reduction of symbol 205 for some of the boulders.</source>
         <comment>Description of symbol 204.5</comment>
-        <translation>För att kunna särskilja närliggande stenar av typ 204 &quot;Sten&quot; (närmare än 30 meter) med betydande storleksskillnad, eller att särskilja en mindre sten från typ 205 &quot;Stor sten&quot; så är det tillåtet att endera förstora symbolen 204 till 0,5 mm, eller förminska symbolen 205 till 0,5 mm.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 205</comment>
-        <translation>Stor sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder. A large boulder should be more than 2 m high.
 To be able to show the distinction between neighbouring (closer than 30 m apart) large boulders with significant difference in size, it is permitted to reduce the size of the symbol to 0.5 mm for some of the boulders.
 Footprint: 9 m diameter (7.5 m diameter).</source>
         <comment>Description of symbol 205</comment>
-        <translation type="unfinished">En särskilt stor och tydlig sten. En stor sten bör vara mer än 2 m hög.
-För att kunna särskilja närliggande stenar (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förminska symbolen till 0,5 mm för somliga stenar.
-Utbredning: 9 m (7,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Gigantic boulder</source>
         <comment>Name of symbol 206</comment>
-        <translation>Gigantisk sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A gigantic boulder, rock pillar or massive cliff shall be represented in plan shape. The objects can vary in shape and width.
@@ -785,15 +714,12 @@ The gap between gigantic boulders or between gigantic boulders and other impassa
 Minimum width: 0.25 mm (footprint 3.75 m).
 Minimum area: 0.3 mm² (footprint 67 m²).</source>
         <comment>Description of symbol 206</comment>
-        <translation type="unfinished">Gigantisk sten, stenpelare eller klippa ska redovisas som en yta. Objekten kanvariera i form och bredd.
-Avståndet mellan två gigantiska stenar eller mellan gigantiska stenar och andra opasserbara symboler måste vara mer än 0,15 mm.
-Minsta bredd: 0,25 mm (3,75 m).
-Minsta yta: 0,3 mm² (67 m²).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder cluster</source>
         <comment>Name of symbol 207</comment>
-        <translation>Grupp av stenar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct group of boulders so closely clustered together that they cannot be marked individually. The boulders in the cluster should be higher than 1 m.
@@ -802,26 +728,22 @@ To be able to show the distinction between neighbouring (maximum 30 m apart) bou
 The symbol is orientated to north.
 Footprint: 12 m x 10 m.</source>
         <comment>Description of symbol 207</comment>
-        <translation type="unfinished">En tydlig grupp av stenar som ligger så tätt att de inte kan redovisas individuellt. Stenarna bör vara högre än 1 m.
-En stengrupp måste tydligt kunna identifieras som en grupp av stenar.
-För att kunna särskilja närliggande stengrupper (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen till 120% (kantlängd 0,96 mm) för somliga stengrupper.
-Tecknet orienteras mot norr.
-Utbredning: 12 x 10 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder cluster, large</source>
         <comment>Name of symbol 207.1</comment>
-        <translation>Grupp av stenar, stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>To be able to show the distinction between neighbouring (maximum 30 m apart) boulder clusters with significant difference in boulder size, it is permitted to use this symbol instead of regular Boulder cluster (207) for some of the boulder clusters.</source>
         <comment>Description of symbol 207.1</comment>
-        <translation type="unfinished">För att visa skillnaden mellan näraliggande grupper av stenar (max 30 m isär) av betydligt olika storlket kan man använda denna symbol istället för den vanliga gruppen av stenar (207) för vissa grupper.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field</source>
         <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -830,17 +752,12 @@ The maximum centre to centre distance between neighbouring triangles is 1.2 mm. 
 Density: 0.8-1 symbol / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 208</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Blockterräng påverkar normalt inte löpbarheten. Om löpbarheten påverkas bör symbol 209 (tät blockterräng) användas eller symbolen kombineras med stenig mark.
-Minst 2 trianglar ska användas. En triangel kan användas om den kombineras med annan sten/brantsymbol, exempelvis direkt under branter (201, 202), bredvid stenar (204-206) eller kombinerat med stenig mark (210-212).
-Största tillåtna avståndet mellan närliggande trianglar är 1,2 mm (centrummått).
-Minsta tillåtna avståndet mellan närliggande trianglar är 0,75 mm (centrummått).
-Täthet: 0,8-1 symbol/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field, single triangle</source>
         <comment>Name of symbol 208.1</comment>
-        <translation>Blockterräng, enskild triangel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -849,27 +766,22 @@ The maximum centre to centre distance between neighbouring triangles is 1.2 mm. 
 Density: 0.8-1 symbol / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 208.1</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Blockterräng påverkar normalt inte löpbarheten. Om löpbarheten påverkas bör symbol 209 (tät blockterräng) användas eller symbolen kombineras med stenig mark.
-Minst 2 trianglar ska användas. En triangel kan användas om den kombineras med annan sten/brantsymbol, exempelvis direkt under branter (201, 202), bredvid stenar (204-206) eller kombinerat med stenig mark (210-212).
-Största tillåtna avståndet mellan närliggande trianglar är 1,2 mm (centrummått).
-Minsta tillåtna avståndet mellan närliggande trianglar är 0,75 mm (centrummått).
-Täthet: 0,8-1 symbol/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field, single triangle, enlarged</source>
         <comment>Name of symbol 208.2</comment>
-        <translation>Blockterräng, enskild triangel, förstorad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.</source>
         <comment>Description of symbol 208.2</comment>
-        <translation type="unfinished">För att visa en tydlig skilland inom ett område med stenblock är det tillåtet att förstora vissa trianglar till 120%.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dense boulder field</source>
         <comment>Name of symbol 209</comment>
-        <translation>Tät blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many blocks of stone that they cannot be marked individually and the runnability is affected, is shown with randomly placed and orientated solid triangles. A minimum of two triangles must be used.
@@ -877,15 +789,12 @@ The maximum centre to centre distance between neighbouring triangles is 0.6 mm.
 Density: 2-3 symbols / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 209</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt där löpbarhet är nedsatt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Minst 2 trianglar ska användas.
-Största tillåtna avståndet mellan närliggande trianglar är 0,6 mm (centrummått).
-Täthet: 2-3 symboler/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Stony ground, slow running</source>
         <comment>Name of symbol 210</comment>
-        <translation>Stenig mark, löphindrande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Stony or rocky ground which reduces runnability to about 60-80% of normal speed.
@@ -901,7 +810,7 @@ To avoid confusion with symbol Distinct vegetation boundary (416), the dots shou
     <message>
         <source>Stony ground, individual dot</source>
         <comment>Name of symbol 210.1</comment>
-        <translation>Stenig mark, enskiljd punkt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Stony or rocky ground which reduces runnability to about 60-80% of normal speed.
@@ -917,7 +826,7 @@ To avoid confusion with symbol Distinct vegetation boundary (416), the dots shou
     <message>
         <source>Stony ground, walk</source>
         <comment>Name of symbol 211</comment>
-        <translation>Stenig mark, svårlöpt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Stony or rocky ground which reduces the runnability significantly (to about 20-60% of normal speed).
@@ -933,7 +842,7 @@ To avoid confusion with symbol Distinct vegetation boundary (416), the dots shou
     <message>
         <source>Stony ground, fight</source>
         <comment>Name of symbol 212</comment>
-        <translation>Stenig mark, svårframkomlig</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Stony or rocky ground which is hardly passable (less than 20% of normal speed).
@@ -949,7 +858,7 @@ To avoid confusion with symbol Distinct vegetation boundary (416), the dots shou
     <message>
         <source>Sandy ground</source>
         <comment>Name of symbol 213</comment>
-        <translation>Sandområde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of soft sandy ground where runnability is reduced to less than 80% of normal speed.
@@ -961,7 +870,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 214</comment>
-        <translation>Berg i dagen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A runnable area of rock without earth or vegetation should be shown as bare rock.
@@ -974,7 +883,7 @@ Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
     <message>
         <source>Trench</source>
         <comment>Name of symbol 215</comment>
-        <translation>Dike (eller skreva, skyttevärn)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky or artificial trench. Minimum depth should be 1 m.
@@ -995,24 +904,19 @@ Collapsed and easily crossable trenches should be mapped as erosion gullies.</so
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301</comment>
-        <translation type="unfinished">En svart konturlinje betyder att föremålet inte kan passeras.
-Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Uncrossable body of water (full colour)</source>
         <comment>Name of symbol 301.1</comment>
-        <translation>Opasserbar vattenyta (full färg)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of deep water such as a lake, pond or river which may constitute a danger to the competitor. Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.1</comment>
-        <translation type="unfinished">Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Uncrossable body of water (dominant), with bank line</source>
@@ -1024,10 +928,7 @@ Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.2</comment>
-        <translation type="unfinished">En svart konturlinje betyder att föremålet inte kan passeras.
-Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Uncrossable body of water (dominant)</source>
@@ -1039,9 +940,7 @@ Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
 Minimum width (inside): 0.3 mm.
 Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 301.3</comment>
-        <translation type="unfinished">Större vattenytor kan redovisas med 70% punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Uncrossable body of water, bank line</source>
@@ -1051,7 +950,7 @@ Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
     <message>
         <source>The black bank line emphasises that the feature is uncrossable.</source>
         <comment>Description of symbol 301.4</comment>
-        <translation type="unfinished">En svart linje indikerar att föremålet inte kan korsas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shallow body of water, with solid outline</source>
@@ -1070,7 +969,7 @@ Minimum area (full colour): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>Shallow body of water</source>
         <comment>Name of symbol 302.1</comment>
-        <translation>Grund vattenyta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A shallow seasonal or periodic body of water may be represented using a dashed outline. Small shallow water bodies may be represented as 100% blue (without an outline).
@@ -1116,7 +1015,7 @@ Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale. Location is the centre of gravity of the symbol, and the symbol is orientated to north.
@@ -1127,25 +1026,24 @@ Footprint: 10.5 m x 12 m.</source>
     <message>
         <source>Crossable watercourse</source>
         <comment>Name of symbol 304</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossable watercourse more than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <comment>Description of symbol 304</comment>
-        <translation type="unfinished">Bör vara minst 2 m breda.
-Kortaste längd (friliggande): 1 mm (15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small crossable watercourse</source>
         <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart litet vattendrag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossable watercourse less than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m)</source>
         <comment>Description of symbol 305</comment>
-        <translation type="unfinished">Kortaste längd (friliggande): 1 mm (15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Minor/seasonal water channel</source>
@@ -1289,29 +1187,24 @@ Footprint: 13.5 m x 7 m.</source>
 The definition of the symbol must be given on the map.
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 313</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (linjebredd 0.36 mm, och linjen ska vara 0.18 mm längre i symboländarna).
-Symbolen orienteras mot norr.
-Tecknets betydelse måste redovisas i teckenförklaringen.
-Utbredning: 13,5 x 13,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land that has a ground cover (grass, moss or similar) which offers better runnability than typical open forest. If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
 Shall not be combined with area symbols other than Broken ground (113), Boulder field (208), Marsh (308) and Indistinct marsh (310).
 Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 401</comment>
-        <translation type="unfinished">Öppen mark med en markyta (gräs, mossa eller liknande) som innebär bättre löpbarhet än typisk öppen skog. Om öppna ytor dominerar kartbilden, kan ett 75 % raster användas istället för gul helton.
-Ska inte kombineras med andra ytsymboler än symbol 113 (småkuperad terräng), 208 (blockterräng) och sankmarker (308, 310).
-Minsta yta: 0,55 x 0,55 mm (8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in open land may be generalised by using a regular pattern of large dots in the yellow screen. The dots may be white (scattered trees) or green (scattered bushes / thickets). Prominent individual trees may be added using symbol Prominent large tree (417). If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -1321,12 +1214,7 @@ Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Open land (401).
 The symbol is orientated to north.</source>
         <comment>Description of symbol 402</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen. Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Enstaka tydliga träd kan redovisas med symbol 417 (tydligt stort träd). Om öppna ytor dominerar kartbilden, kan ett 75 % raster användas istället för gul helton. 
-Ska inte kombineras med andra ytsymboler än symbol 113 (småkuperad terräng), 208 (blockterräng) och sankmarker (308, 310).
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2 x 2 mm (30 x 30 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 401 (öppen mark).
-Symbolen orienteras mot norr.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land with scattered bushes (green dots)</source>
@@ -1341,17 +1229,12 @@ Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Open land (401).
 The symbol is orientated to north.</source>
         <comment>Description of symbol 402.1</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen. Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Enstaka tydliga träd kan redovisas med symbol 417 (tydligt stort träd). Om öppna ytor dominerar kartbilden, kan ett 75 % raster användas istället för gul helton. 
-Ska inte kombineras med andra ytsymboler än symbol 113 (småkuperad terräng), 208 (blockterräng) och sankmarker (308, 310).
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2 x 2 mm (30 x 30 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 401 (öppen mark).
-Symbolen orienteras mot norr.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rough open land</source>
         <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Heath, moorland, felled areas, newly planted areas (trees lower than ca. 1 m) or other generally open land with rough ground vegetation, heather or tall grass offering the same runnability as typical open forest.
@@ -1359,14 +1242,12 @@ May be combined with symbol Vegetation: slow running, good visibility (407) or V
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Open land (401).</source>
         <comment>Description of symbol 403</comment>
-        <translation type="unfinished">Hedmark, avverkade områden, nyligen planterade områden (träd lägre än cirka 1 m) eller andra öppna områden, med lägre vegetation, ljung eller högt gräs, med samma löpbarhet som typisk öppen skog. Kan kombineras med symbol 407 (löphindrande undervegetation) eller 409 (svårlöpt undervegetation) för att redovisa nedsatt löpbarhet.
-Minsta yta: 1 x 1 mm (15 x 15 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 401 (öppen mark).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rough open land with scattered trees</source>
         <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in rough open land may be generalised by using a regular pattern of large dots in the yellow screen.
@@ -1376,12 +1257,7 @@ Minimum width: 1.5 mm (footprint 22.5 m).
 Minimum area: 2.5 mm x 2.5 mm (footprint 37.5 m x 37.5 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Rough open land (403).</source>
         <comment>Description of symbol 404</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark med normal löpbarhet kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen.
-Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Ytor med vita punkter kan kombineras med symbol 407 (löphindrande undervegetation) eller 409 (svårlöpt undervegetation) för att redovisa nedsatt löpbarhet.
-Symbolen orienteras mot norr.
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2,5 x 2,5 mm (37,5 x 37,5 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 403 (öppen mark med normal löpbarhet).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rough open land with scattered bushes (green dots)</source>
@@ -1396,17 +1272,12 @@ Minimum width: 1.5 mm (footprint 22.5 m).
 Minimum area: 2.5 mm x 2.5 mm (footprint 37.5 m x 37.5 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Rough open land (403).</source>
         <comment>Description of symbol 404.1</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark med normal löpbarhet kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen.
-Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Ytor med vita punkter kan kombineras med symbol 407 (löphindrande undervegetation) eller 409 (svårlöpt undervegetation) för att redovisa nedsatt löpbarhet.
-Symbolen orienteras mot norr.
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2,5 x 2,5 mm (37,5 x 37,5 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 403 (öppen mark med normal löpbarhet).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Forest</source>
         <comment>Name of symbol 405</comment>
-        <translation type="unfinished">Skog</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Typical open forest for the particular type of terrain. If no part of the forest is easily runnable then no white should appear on the map.
@@ -1415,15 +1286,12 @@ For openings in symbol Open land (401), the minimum area is 0.7 mm x 0.7 mm (foo
 For openings in symbol Vegetation: walk (408), the minimum area is 0.7 mm x 0.7 mm (footprint 10.5 m x 10.5 m).
 For openings in symbol Vegetation: fight (410) the minimum area is 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 405</comment>
-        <translation type="unfinished">Typisk öppen skog för aktuell terrängtyp. Om ingen del av skogen är lättlöpt ska inte någon del av kartan vara vit.
-Minsta yta: 1 x 1 mm (15 x 15 m) för öppningar i andra ytor, förutom för följande symboler:
-401 (öppen mark) och 408 (svårlöpt skog) minsta yta: 0,7 x 0,7 mm (10,5 x 10,5 m)
-410 (svårframkomlig skog) minsta yta: 0,55 x 0,55 mm (8 x 8 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running</source>
         <comment>Name of symbol 406</comment>
-        <translation type="unfinished">Skog, löphindrande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with dense vegetation (low visibility) which reduces running to about 60-80% of normal speed.
@@ -1431,15 +1299,12 @@ Where runnability is better in one direction, a regular pattern of white stripes
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Minimum width: 0.4 mm (footprint 6 m).</source>
         <comment>Description of symbol 406</comment>
-        <translation type="unfinished">Område med tät vegetation (dålig sikt) som försämrar löpbarheten till cirka 60-80 % av normal löphastighet.
-Om löpbarheten är bättre i en riktning, lämnas vita regelbundna korridorer i ytmarkeringen för att visa den riktning som har bättre löpbarhet.
-Minsta bredd: 0,4 mm (6 m).
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running, normal running in one direction</source>
         <comment>Name of symbol 406.1</comment>
-        <translation type="unfinished">Skog, löphindrande (men bättre löpbarhet i en riktning)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with dense vegetation (low visibility) which reduces running to about 60-80% of normal speed.
@@ -1447,10 +1312,7 @@ Where runnability is better in one direction, a regular pattern of white stripes
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Minimum width: 0.4 mm (footprint 6 m).</source>
         <comment>Description of symbol 406.1</comment>
-        <translation type="unfinished">Område med tät vegetation (dålig sikt) som försämrar löpbarheten till cirka 60-80 % av normal löphastighet.
-Om löpbarheten är bättre i en riktning, lämnas vita regelbundna korridorer i ytmarkeringen för att visa den riktning som har bättre löpbarhet.
-Minsta bredd: 0,4 mm (6 m).
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running, good visibility</source>
@@ -1619,7 +1481,7 @@ Minimum area: 3 mm x 3 mm (footprint 45 m x 45 m).</source>
     <message>
         <source>Orchard</source>
         <comment>Name of symbol 413</comment>
-        <translation type="unfinished">Fruktodling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with trees or bushes, normally in a regular pattern. The dot lines may be orientated to show the direction of planting.
@@ -1627,15 +1489,12 @@ Must be combined with either symbol Open land (401) or Rough open land (403).
 May be combined with symbol Vegetation: slow running, good visibility (407) or Vegetation: walk, good visibility (409) to show reduced runnability.
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 413</comment>
-        <translation type="unfinished">Område planterat med träd eller buskar, ofta i regelbundna mönster. Punktlinjerna kan roteras för att visa planteringsriktningen.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Symbolen kan kombineras med symbol 407 (undervegetation, löphindrande) eller 409 (undervegetation, svårlöpt) för att redovisa nedsatt löpbarhet.
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Orchard, rough open land</source>
         <comment>Name of symbol 413.1</comment>
-        <translation type="unfinished">Fruktodling, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with trees or bushes, normally in a regular pattern. The dot lines may be orientated to show the direction of planting.
@@ -1643,53 +1502,45 @@ Must be combined with either symbol Open land (401) or Rough open land (403).
 May be combined with symbol Vegetation: slow running, good visibility (407) or Vegetation: walk, good visibility (409) to show reduced runnability.
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 413.1</comment>
-        <translation type="unfinished">Område planterat med träd eller buskar, ofta i regelbundna mönster. Punktlinjerna kan roteras för att visa planteringsriktningen.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Symbolen kan kombineras med symbol 407 (undervegetation, löphindrande) eller 409 (undervegetation, svårlöpt) för att redovisa nedsatt löpbarhet.
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vineyard or similar</source>
         <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Vingård eller liknande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 414</comment>
-        <translation type="unfinished">Vingård eller liknande odlad mark med täta plantrader erbjudande god eller normal löpbarhet i planteringsriktningen. Linjerna ska roteras för att visa planteringsriktning.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vineyard or similar, rough open land</source>
         <comment>Name of symbol 414.1</comment>
-        <translation type="unfinished">Vingård eller liknande, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 414.1</comment>
-        <translation type="unfinished">Vingård eller liknande odlad mark med täta plantrader erbjudande god eller normal löpbarhet i planteringsriktningen. Linjerna ska roteras för att visa planteringsriktning.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct cultivation boundary</source>
         <comment>Name of symbol 415</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A boundary of cultivated land vegetation (symbols 401, 412, 413, 414) or a boundary between areas of cultivated land when not shown with other symbols (fence, wall, path, etc.).
 Minimum length: 2 mm (footprint 30 m).</source>
         <comment>Description of symbol 415</comment>
-        <translation type="unfinished">Gräns för odlad mark (401, 412, 413, 414) eller gräns mellan ytor av odlad mark då den inte redovisas med andra symboler (stängsel, stenmur, stig etc.).
-Kortaste längd: 2 mm (30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct vegetation boundary</source>
         <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vegetation boundary within the forest, or a distinct forest edge.
@@ -1697,9 +1548,7 @@ Only one of the vegetation boundary symbols (black dotted line or dashed green l
 The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
 Minimum length, black dot implementation: 5 dots (2.0 mm - footprint 30 m).</source>
         <comment>Description of symbol 416</comment>
-        <translation type="unfinished">En tydlig skogskant eller gräns av vegetation i skog. Mycket tydliga skogskanter och beståndsgränser kan redovisas med symbol 415 (exakt begränsningslinje). Enbart en typ av beståndsgränssymbol (svarta punkter eller streckad grön linje) ska användas på en karta. I stenbundna områden rekommenderas att den streckade gröna linjen används för beståndsgränser. En nackdel med den gröna linjen är att den inte kan användas för att redovisa tydliga beståndsgränser omkring och inne i symbolerna 410 (skog, svårframkomlig). Ett alternativ är då att använda symbol 415 (exakt begränsningslinje).
-Kortaste längd för svarta punkter: 5 punkter (2,5 mm - 37 m).
-Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct vegetation boundary, green dashed line</source>
@@ -1712,10 +1561,7 @@ Only one of the vegetation boundary symbols (black dotted line or dashed green l
 The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
 Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
         <comment>Description of symbol 416.1</comment>
-        <translation type="unfinished">En tydlig skogskant eller gräns av vegetation i skog.
-Mycket tydliga skogskanter och beståndsgränser kan redovisas med symbol 415 (exakt begränsningslinje). Enbart en typ av beståndsgränssymbol (svarta punkter eller streckad grön linje) ska användas på en karta. I stenbundna områden rekommenderas att den streckade gröna linjen används för beståndsgränser. En nackdel med den gröna linjen är att den inte kan användas för att redovisa tydliga beståndsgränser omkring och inne i symbolerna 410 (skog, svårframkomlig). Ett alternativ är då att använda symbol 415 (exakt begränsningslinje).
-Kortaste längd för svarta punkter: 5 punkter (2,5 mm - 37 m).
-Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prominent large tree</source>
@@ -1727,8 +1573,7 @@ Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
 White mask is used under the green circle, to improve readability in yellow and green (OM 1.1 mm).
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 417</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (yttermått 1.1 mm). 
-Utbredning: 13,5 x 13,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prominent bush or tree</source>
@@ -1740,14 +1585,12 @@ Utbredning: 13,5 x 13,5 m.</translation>
 Use sparingly, as it is easily mistaken for symbol Small knoll (109). Small white dot inside is used to aid the colour vision impaired.
 Footprint: 9.0 m x 9.0 m.</source>
         <comment>Description of symbol 418</comment>
-        <translation type="unfinished">Används sparsamt då den lätt kan förväxla med symbol 109 (liten höjd).
-Liten vit punkt i mitten hjälper personer med defekt färgseende.
-Utbredning: 9 x 9 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prominent vegetation feature</source>
         <comment>Name of symbol 419</comment>
-        <translation type="unfinished">Tydligt vegetationsföremål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vegetation feature which is significant or prominent.
@@ -1756,49 +1599,44 @@ The symbol is orientated to north.
 The definition of the symbol must be given on the map.
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 419</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (linjebredd 0.36 mm, och linjen ska vara 0.18 mm längre i symboländarna).
-Symbolen orienteras mot norr.
-Tecknets betydelse måste redovisas i teckenförklaringen.
-Utbredning: 13,5 x 13,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area, with bounding line</source>
         <comment>Name of symbol 501</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with a firm surface such as asphalt, hard gravel, tiles, concrete or the like. Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 501</comment>
-        <translation type="unfinished">Yta med hårt och jämnt underlag som asfalt, grus, betong och liknande. Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area</source>
         <comment>Name of symbol 501.1</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with a firm surface such as asphalt, hard gravel, tiles, concrete or the like. Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 501.1</comment>
-        <translation type="unfinished">Yta med hårt och jämnt underlag som asfalt, grus, betong och liknande. Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area, bounding line</source>
         <comment>Name of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.</source>
         <comment>Description of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wide road, minimum width</source>
         <comment>Name of symbol 502</comment>
-        <translation type="unfinished">Bred väg, minsta bredd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -1806,24 +1644,22 @@ The width should be drawn to scale, but not smaller than the minimum width (0.3 
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502</comment>
-        <translation type="unfinished">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wide road, 0.5 mm (from ISOM2000)</source>
         <comment>Name of symbol 502.1</comment>
-        <translation type="unfinished">Bred väg, 0.5 mm (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
         <comment>Name of symbol 502.2</comment>
-        <translation type="unfinished">Väg med två körbanor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -1831,33 +1667,29 @@ The width should be drawn to scale, but not smaller than the minimum width (0.3 
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502.2</comment>
-        <translation type="unfinished">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Road</source>
         <comment>Name of symbol 503</comment>
-        <translation type="unfinished">Väg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road less than 5 m wide suitable for vehicles in all weather.</source>
         <comment>Description of symbol 503</comment>
-        <translation type="unfinished">Underhållen väg farbar med motorfordon i alla väder. Bredd mindre än 5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vehicle track</source>
         <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Körväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A track or poorly maintained road suitable for vehicles only when travelling slowly. For distinct junctions the dashes of the symbols are joined at the junction.
 For indistinct junctions the dashes of the symbols are not joined.
 Minimum length (isolated): two dashes (6.25 mm - footprint 94 m).</source>
         <comment>Description of symbol 504</comment>
-        <translation type="unfinished">Ett körspår eller dåligt underhållen väg, endast långsamt farbar med motorfordon. När en förgrening är tydlig ritas strecken ihop.
-I otydliga förgreningar ritas strecken inte ihop.
-Kortaste längd (friliggande): två streck (6,25 mm - 94 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Footpath</source>
@@ -1899,7 +1731,7 @@ Minimum length: two sections of double dashes (5.3 mm - footprint 79.5 m).</sour
     <message>
         <source>Narrow ride</source>
         <comment>Name of symbol 508</comment>
-        <translation type="unfinished">Rågång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
@@ -1910,49 +1742,40 @@ Green 30%: slow running.
 Green 60%: walk.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Utan bakgrundslinje: samma löpbarhet som omgivningen
-gul 100%: bättre löpbarhet
-vitt i grönt: normal löpbarhet
-grön 30%: sämre löpbarhet
-grön 60%: gångfart
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, easy running</source>
         <comment>Name of symbol 508.1</comment>
-        <translation type="unfinished">Rågång, bättre löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.1</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, normal runnability</source>
         <comment>Name of symbol 508.2</comment>
-        <translation type="unfinished">Rågång, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.2</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, slow running</source>
         <comment>Name of symbol 508.3</comment>
-        <translation type="unfinished">Rågång, sämre löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.3</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, walk</source>
@@ -1963,63 +1786,57 @@ Kortaste längd: två streck (3,25 mm - 48 m).</translation>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.4</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Railway</source>
         <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A railway or other kind of railed track.
 If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
 Minimum length (isolated): two black dashes (4 mm - footprint 60 m).</source>
         <comment>Description of symbol 509</comment>
-        <translation type="unfinished">Järnväg eller järnvägsliknande spår.
-Om det är förbjudet att springa längs med järnvägen ska symbolen kombineras med 711 (förbjuden väg). Om det är förbjudet att korsa järnvägen, ska symbolen kombineras med 520 (förbjudet område) eller med 709 (förbjudet område).
-Kortaste längd (friliggande): två streck (4 mm - 60 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Power line, cableway or skilift</source>
         <comment>Name of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Power line, cableway or skilift. The bars show the exact location of the pylons. The line may be broken to improve legibility.
 If a section of a power line, cableway or skilift goes along a road or path (and does not offer significant additional navigational value) it should be omitted.
 Minimum length (isolated): 5 mm (footprint: 75 m).</source>
         <comment>Description of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjen kan göras för att förbättra läsbarheten.
-Delar av kraftledningar, linbanor eller skidliftar som går längs med väg eller stig och inte tillför någon kartinformation ska utelämnas.
-Kortaste längd (friliggande): 5 mm (75 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line, minimum width</source>
         <comment>Name of symbol 511</comment>
-        <translation type="unfinished">Större kraftledning, minsta bredd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the power line. The lines may be broken to improve legibility.
 Very large carrying masts shall be represented in plan shape using outline of symbol Building (521) or with symbol High tower (524).</source>
         <comment>Description of symbol 511</comment>
-        <translation type="unfinished">Större kraftledningar bör ritas med dubbel linje. Linjerna kan ritas skalriktigt, det vill säga vid de yttre trådarna. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjerna kan göras för att förbättra läsbarheten.
-Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggnad) eller med 524 (högt torn).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line</source>
         <comment>Name of symbol 511.1</comment>
-        <translation type="unfinished">Större kraftledning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the power line. The lines may be broken to improve legibility. The bars show the exact location of the pylons. Very large carrying masts shall be represented in plan shape using outline of symbol Building (521) or with symbol High tower (524).</source>
         <comment>Description of symbol 511.1</comment>
-        <translation type="unfinished">Större kraftledningar bör ritas med dubbel linje. Linjerna kan ritas skalriktigt, det vill säga vid de yttre trådarna. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjerna kan göras för att förbättra läsbarheten. Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggnad) eller med 524 (högt torn).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line, large carrying masts</source>
         <comment>Name of symbol 511.2</comment>
-        <translation type="unfinished">Större kraftledning med höga master</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the powerline. The bars show the exact location of the pylons. The lines may be broken to improve legibility. Very large carrying masts shall be represented in plan shape using symbol 521 (building) or with symbol 524 (high tower).</source>
@@ -2029,7 +1846,7 @@ Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggn
     <message>
         <source>Bridge / tunnel</source>
         <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Bro/tunnel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -2037,15 +1854,12 @@ If it is not possible to get through a tunnel (or under a bridge), it shall be o
 Minimum length (of baseline): 0.4 mm (footprint 6 m).
 Small bridges connected to a track/path are shown by centring a track dash on the crossing. Tracks/paths are broken for water course crossings without bridges. A small footbridge with no path leading to it is represented with a single dash.</source>
         <comment>Description of symbol 512</comment>
-        <translation type="unfinished">Broar och tunnlar redovisas med samma symbol.
-Opasserbara tunnlar och broar utelämnas.
-Små broar som ansluter till en stig redovisas genom att centrera ett streck på korsningen. Om ingen bro finns, utelämnas streck över vattendraget. En liten bro utan anslutande stig redovisas med ett streck.
-Kortaste längd (baslinjen): 0,4 mm (6 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridge / tunnel, minimum size</source>
         <comment>Name of symbol 512.1</comment>
-        <translation type="unfinished">Bro / tunnel, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -2053,36 +1867,30 @@ If it is not possible to get through a tunnel (or under a bridge), it shall be o
 Minimum length (of baseline): 0.4 mm (footprint 6 m).
 Small bridges connected to a track/path are shown by centring a track dash on the crossing. Tracks/paths are broken for water course crossings without bridges. A small footbridge with no path leading to it is represented with a single dash.</source>
         <comment>Description of symbol 512.1</comment>
-        <translation type="unfinished">Broar och tunnlar redovisas med samma symbol.
-Opasserbara tunnlar och broar utelämnas.
-Små broar som ansluter till en stig redovisas genom att centrera ett streck på korsningen. Om ingen bro finns, utelämnas streck över vattendraget. En liten bro utan anslutande stig redovisas med ett streck.
-Kortaste längd (baslinjen): 0,4 mm (6 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Footbridge</source>
         <comment>Name of symbol 512.2</comment>
-        <translation type="unfinished">Gångbro</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small footbridge with no path leading to it is represented with a single dash.
 Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 mm over both sides of the stream!</source>
         <comment>Description of symbol 512.2</comment>
-        <translation type="unfinished">En liten bro utan anslutande stig redovisas med ett streck.
-Observera: Om bäcken är bredare än 0,25 mm, justera symbolen så att den sträcker sig 0,5 mm över bäckens båda sidor!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wall</source>
         <comment>Name of symbol 513.1</comment>
-        <translation type="unfinished">Mur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
         <comment>Description of symbol 513.1</comment>
-        <translation type="unfinished">En tydlig mur av sten, betong, trä eller annat material.
-Lägsta höjd: 1 m.
-Kortaste längd (friliggande): 1,4 mm (21 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining wall</source>
@@ -2110,27 +1918,25 @@ Minimum length: two dashes (3.65 mm - footprint 55 m). If shorter, the object mu
     <message>
         <source>Impassable wall</source>
         <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Opasserbar mur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable or uncrossable wall, normally more than 1.5 m high.
 Minimum length (isolated): 3 mm (footprint 45 m).</source>
         <comment>Description of symbol 515</comment>
-        <translation type="unfinished">En mur som är opasserbar eller förbjuden att passera, normalt mer än 1,5 m hög.
-Kortaste längd (friliggande): 3 mm (45 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Fence</source>
         <comment>Name of symbol 516</comment>
-        <translation type="unfinished">Stängsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable or crossable fence, normally less than 1.5 m high.
 If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
         <comment>Description of symbol 516</comment>
-        <translation type="unfinished">Om stängslet är slutet bör taggarna ritas på insidan.
-Kortaste längd (friliggande): 1,5 mm (22,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ruined fence</source>
@@ -2146,33 +1952,30 @@ Minimum length: two dashes (3.65 mm - footprint 55 m). If shorter, the symbol mu
     <message>
         <source>Impassable fence</source>
         <comment>Name of symbol 518</comment>
-        <translation type="unfinished">Opasserbart stängsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable or uncrossable fence, normally more than 1.5 m high.
 If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 2 mm (footprint 30 m).</source>
         <comment>Description of symbol 518</comment>
-        <translation type="unfinished">Ett stängsel som är opasserbart eller förbjudet att passera, normalt mer än 1,5 m högt.
-Om stängslet är slutet bör taggarna ritas på insidan.
-Kortaste längd (friliggande): 2 mm (30 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 519</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A way through or over a wall, fence or other linear feature, including a gate or stile.
 For impassable features, the line shall be broken at the crossing point. For passable features, the line shall not be broken if passing involves a degree of climb.</source>
         <comment>Description of symbol 519</comment>
-        <translation type="unfinished">Passage, grind eller stätta, genom eller över en mur, stängsel eller annat linjeföremål.
-För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För passerbara föremål ska uppehåll i linjen inte göras om passage innebär klättring.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered</source>
         <comment>Name of symbol 520</comment>
-        <translation type="unfinished">Förbjudet område</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. The area shall be discontinued where a path goes through and white colour is used as background with overlap 0.15 mm on both sides.
@@ -2181,37 +1984,27 @@ Course planning symbol 709 can be used for temporary out-of bounds areas.
 An out-of-bounds area shall not be entered.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 520</comment>
-        <translation type="unfinished">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, solid colour, bounding line</source>
         <comment>Name of symbol 520.1</comment>
-        <translation type="unfinished">Förbjudet område, enfärgad, gränslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
         <comment>Description of symbol 520.1</comment>
-        <translation type="unfinished">Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, stripes (deprecated)</source>
         <comment>Name of symbol 520.2</comment>
-        <translation type="unfinished">Förbjudet område, ränder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.2</comment>
-        <translation type="unfinished">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, stripes, bounding line (deprecated)</source>
@@ -2221,7 +2014,7 @@ Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
     <message>
         <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.3</comment>
-        <translation type="unfinished">Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Building</source>
@@ -2680,7 +2473,7 @@ Minimum area: 3 mm x 3 mm (footprint 45 m x 45 m).</source>
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 710</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossing point, for instance through or over a wall or fence, across a road or railway, through a tunnel or out-of-bounds area, or over an uncrossable boundary is drawn on the map with two lines curving outwards. The lines shall reflect the length of the crossing.</source>
@@ -2763,1939 +2556,44 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
         <comment>Description of symbol 999</comment>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Dark green line symbols</source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50%</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>White over green and brown</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Blå 50%</translation>
-    </message>
-    <message>
-        <source>Brown 100% point symbols </source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Vit för järnväg</translation>
-    </message>
-    <message>
-        <source>Dark green line symbols </source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>Brown 100% line symbols </source>
-        <comment>Color 8</comment>
-        <translation type="obsolete">Svart under lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50% </source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Black for cultivated land and sandy ground </source>
-        <comment>Color 29</comment>
-        <translation type="obsolete">Grön 100% för undervegetation</translation>
-    </message>
-    <message>
-        <source>Green 100% bellow green areas (extra)</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Grön 60%</translation>
-    </message>
-    <message>
-        <source>Purple for course overprint</source>
-        <comment>Color 0</comment>
-        <translation type="obsolete">Lila för banövertryck</translation>
-    </message>
-    <message>
-        <source>White for course overprint</source>
-        <comment>Color 1</comment>
-        <translation type="obsolete">Vit för banövertryck</translation>
-    </message>
-    <message>
-        <source>Green 100%</source>
-        <comment>Color 3</comment>
-        <translation type="obsolete">Grön 100%</translation>
-    </message>
-    <message>
-        <source>White for railway</source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Vit för järnväg</translation>
-    </message>
-    <message>
-        <source>Blue 100%</source>
-        <comment>Color 5</comment>
-        <translation type="obsolete">Blå 100%</translation>
-    </message>
-    <message>
-        <source>Brown 100%</source>
-        <comment>Color 6</comment>
-        <translation type="obsolete">Brun 100%</translation>
-    </message>
-    <message>
-        <source>Purple for track symbols</source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Black below purple for track symbols</source>
-        <comment>Color 8</comment>
-        <translation type="obsolete">Svart under lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Svart 50%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 10</comment>
-        <translation type="obsolete">Svart 20%</translation>
-    </message>
-    <message>
-        <source>Upper brown 50%</source>
-        <comment>Color 11</comment>
-        <translation type="obsolete">Övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below upper brown 50%</source>
-        <comment>Color 12</comment>
-        <translation type="obsolete">Svart under övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Lower brown 50%</source>
-        <comment>Color 13</comment>
-        <translation type="obsolete">Lägre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below lower brown 50%</source>
-        <comment>Color 14</comment>
-        <translation type="obsolete">Svart under nedre brun 50%</translation>
-    </message>
-    <message>
-        <source>Blue 100% for area features</source>
-        <comment>Color 15</comment>
-        <translation type="obsolete">Blå 100% för områdes funktioner</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 16</comment>
-        <translation type="obsolete">Blå 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Blå 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for narrow ride</source>
-        <comment>Color 19</comment>
-        <translation type="obsolete">Gul 100% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 60% for narrow ride</source>
-        <comment>Color 20</comment>
-        <translation type="obsolete">Grön 60% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 30% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation type="obsolete">Grön 30% för smal åktur</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 23</comment>
-        <translation type="obsolete">Gul 100%/Grön 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Svart 25% (Grå)</translation>
-    </message>
-    <message>
-        <source>Dark green line symbols </source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>Green 100% for area features</source>
-        <comment>Color 26</comment>
-        <translation type="obsolete">Grön 100% för områdes funktioner</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Grön 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Grön 30%</translation>
-    </message>
-    <message>
-        <source>Green 100% for undergrowth</source>
-        <comment>Color 29</comment>
-        <translation type="obsolete">Grön 100% för undervegetation</translation>
-    </message>
-    <message>
-        <source>White over yellow</source>
-        <comment>Color 30</comment>
-        <translation type="obsolete">Vit över gul</translation>
-    </message>
-    <message>
-        <source>Black for open land</source>
-        <comment>Color 31</comment>
-        <translation type="obsolete">Svart för öppet land</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation type="obsolete">Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for area features</source>
-        <comment>Color 33</comment>
-        <translation type="obsolete">Gul 100% för areafunktioner</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 34</comment>
-        <translation type="obsolete">Gul 50%</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Svart 65%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Svart 25% (Grå)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
-Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
-A closed contour represents a knoll or a depression. A depression has to have at least one slope line. Minimum height/depth should be 1 m.
-Relationships between adjacent contour lines are important. Adjacent contour lines show form and structure. Small details on contours should be avoided because they tend to hide the main features of the terrain.
-Prominent features such as depressions, re-entrants, spurs, earth banks and terraces may have to be exaggerated.
-Absolute height accuracy is of little importance, but the relative height difference between neighbouring features should be represented on the map as accurately as possible. It is permissible to alter the height of a contour slightly if this improves the representation of a feature. This deviation should not exceed 25% of the contour interval, and attention must be paid to neighbouring features.
-The smallest bend in a contour line is 0.25 mm from centre to centre of the line (footprint 4 m). The mouth of a re-entrant or a spur must be wider than 0.5 mm from centre to centre of the line (footprint 8 m).
-The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minimum width is 0.6 mm (footprint 9 m) outside measure. Smaller prominent knolls can be represented using symbol Small knoll (109) or Small elongated knoll (110) or they can be exaggerated on the map to satisfy the minimum dimension.
-A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller, prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
-Contours should be adapted (not broken) in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
-        <comment>Description of symbol 101</comment>
-        <translation type="obsolete">En höjdkurva sammanbinder två punkter på samma höjdnivå. Standardskillnaden i höjd mellan två höjdkurvor, ekvidistansen, är 5m. En stödkurva med ekvidistans 2,5m kan användas i flack terräng.
-Lutningsstreck kan ritas på den nedre sidan av en höjdkurva för att förtydliga riktningen av lutningen. Vid användning måste lutningsstrecket placeras i inbuktningar, tex. sänkor.
-En stängd höjdkurva representerar en höjd eller grop. En grop måste ha minst ett lutningsstreck. Minsta höjd/djup bör vara 1m.
-Förhållandet mellan två närliggande höjdkurvor är viktigt. Närliggande höjdkurvor visar form och konturer av terrängen. Små detaljer i kurvningen bör undvikas eftersom de tenderar att dölja större formationer i terrängen.
-Framstående detaljer så som gropar, sänkor, åsar och terrasser kan behöva överdrivas.
-Exakt återgivelse i höjd för varje objekt är inte viktigt, däremot är höjdskillnaden mellan närliggande objekt viktigt att den anges så noggrant som möjligt. Det är tillåtet att överdriva ett objekts höjd något för att förtydliga ett objekt. Denna justering bör dock inte överstiga 25% av ekvidistansen, och man måste ha förhållandet med närliggande objekt i åtanke.
-Den minsta tillåtna böjning av en höjdkurva är 0,25mm i radie (4m i terrängen). Längden på en sänka eller ås måste vara större än 0,5mm från mitten till mitten av kurvan (8m i terrängen).
-Minimumlängd på en höjd är 0.9mm (13,5m i terrängen) och minimumbredd är 0,6mm (9m i terrängen). Mindre men tydliga höjder bör ritas med symbolen Liten höjd (109) eller Liten avlång höjd (110) eller så kan de överdrivas för att uppnå minimummåtten.
-En grop måste ha minst ett lutningsstreck, så minimumlängden är 1,1mm (16,5m i terrängen) och minimumbredd 0,7mm (10,5 i terrängen). Mindre men tydliga gropar kan ritas med symbolen Liten grop (111) eller så kan de överdrivas för att uppfylla minimummåtten.
-Konturer bör följas med höjdkurvan för att inte tangera objekt av symbolen Liten höjd (109) eller Liten avlång höjd (110).</translation>
-    </message>
-    <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
-        <translation type="obsolete">Jordwall</translation>
-    </message>
-    <message>
-        <source>Distinct earth wall. Minimum height: 1 m.
-Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105</comment>
-        <translation type="obsolete">Tydlig jordvall. Lägsta höjd: 1 m.
-Minsta längd: 1,4 mm (21 m).</translation>
-    </message>
-    <message>
-        <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Minimum depth: 1 m.
-Minimum length: 1.15 mm (footprint 17 m).
-Contour lines should not be broken around this symbol.</source>
-        <comment>Description of symbol 107</comment>
-        <translation type="obsolete">En erosionsfåra som är för liten för att redovisas med symbol 104(skärning) redovisas med en enkellinje. Minstadjup: 1 m.
-Minsta längd:1,15 mm(17 m).
-Höjdkurvor bör ritas utan uppehåll genom symbolen.</translation>
-    </message>
-    <message>
-        <source>A small erosion gully, dry ditch or trench. Minimum depth: 0.5 m.
-Minimum length (isolated): three dots (1.15 mm - footprint 17 m).
-Contour lines should be broken around this symbol.</source>
-        <comment>Description of symbol 108</comment>
-        <translation type="obsolete">En liten erosionsfåra, torrt dike eller fåra. Minsta djup: 0,5 m. Minsta
-längd (friliggande): tre punkter (1,15 mm - 17 m).
-Höjdkurvor bör ritas med uppehåll omkring symbolen.</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202</comment>
-        <translation type="obsolete">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.1</comment>
-        <translation type="obsolete">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.2</comment>
-        <translation type="obsolete">En passerbar brant eller stenbrott. Om brantens fallriktning inte framgår av konturerna eller för att förbättra läsbarheten kan korta taggar dras i riktning  nedför.
-För icke-vertikala branter bör taggarna ritas för att visa hela horisontalområdet. Slut på baslinjen måste avrundas om inga taggar visas. En passage mellan två branter måste vara minst 0,2 mm. En brant bör samverka med konturlinjerna.
-Att passera en brant kommer normalt att sakta ner hastigheten.
-Minsta höjd: 1 m.
-Minsta längd: 0,6 mm (fotavtryck 9 m).</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
-For non-vertical cliffs, the tags should be drawn to show the full horizontal extent. Ends of the base line must be rounded if no tags appear. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.
-Minimum height: 1 m.
-Minimum length: 0.6 mm (footprint 9 m).</source>
-        <comment>Description of symbol 202.3</comment>
-        <translation type="obsolete">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
-    </message>
-    <message>
-        <source>Cave or rocky pit (with a distinct entrance)</source>
-        <comment>Name of symbol 203.2</comment>
-        <translation type="obsolete">Grotta eller gruvhål (med en tydlig ingång)</translation>
-    </message>
-    <message>
-        <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
-Location is the centre of gravity of the symbol, and the symbol should point into the cave.
-Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
-        <comment>Description of symbol 203.2</comment>
-        <translation type="obsolete">Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan.
-En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).</translation>
-    </message>
-    <message>
-        <source>The black bank line emphasises that the feature is uncrossable.
-Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
-Minimum width (inside): 0.3 mm.
-Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
-        <comment>Description of symbol 301</comment>
-        <translation type="obsolete">En svart konturlinje betyder att föremålet inte kan passeras.
-Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
-    </message>
-    <message>
-        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
-Minimum width (inside): 0.3 mm.
-Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
-        <comment>Description of symbol 301.1</comment>
-        <translation type="obsolete">Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
-    </message>
-    <message>
-        <source>The black bank line emphasises that the feature is uncrossable.
-Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
-Minimum width (inside): 0.3 mm.
-Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
-        <comment>Description of symbol 301.2</comment>
-        <translation type="obsolete">En svart konturlinje betyder att föremålet inte kan passeras.
-Större vattenytor kan redovisas med 70 % punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
-    </message>
-    <message>
-        <source>Dominant areas of water may be shown with 70% colour. Small areas of water and bodies of water that have narrow parts shall always be shown with full colour.
-Minimum width (inside): 0.3 mm.
-Minimum area (inside): 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
-        <comment>Description of symbol 301.3</comment>
-        <translation type="obsolete">Större vattenytor kan redovisas med 70% punktraster. Mindre vattenytor och vattenytor med smalare partier ska redovisas med helton.
-Minsta bredd (innermått): 0,3 mm.
-Minsta yta (innermått): 0,55 x 0,55 mm (utbredning 8 x 8 m).</translation>
-    </message>
-    <message>
-        <source>A black bank line indicates that the feature cannot be crossed.</source>
-        <comment>Description of symbol 301.4</comment>
-        <translation type="obsolete">En svart linje indikerar att föremålet inte kan korsas.</translation>
-    </message>
-    <message>
-        <source>Should be at least 2 m wide.
-Minimum length (isolated): 1 mm (footprint 15 m).</source>
-        <comment>Description of symbol 304</comment>
-        <translation type="obsolete">Bör vara minst 2 m breda.
-Kortaste längd (friliggande): 1 mm (15 m).</translation>
-    </message>
-    <message>
-        <source>Minimum length (isolated): 1 mm (footprint 15 m).</source>
-        <comment>Description of symbol 305</comment>
-        <translation type="obsolete">Kortaste längd (friliggande): 1 mm (15 m).</translation>
-    </message>
-    <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
-Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
-        <comment>Description of symbol 416</comment>
-        <translation type="obsolete">En tydlig skogskant eller gräns av vegetation i skog. Mycket tydliga skogskanter och beståndsgränser kan redovisas med symbol 415 (exakt begränsningslinje). Enbart en typ av beståndsgränssymbol (svarta punkter eller streckad grön linje) ska användas på en karta. I stenbundna områden rekommenderas att den streckade gröna linjen används för beståndsgränser. En nackdel med den gröna linjen är att den inte kan användas för att redovisa tydliga beståndsgränser omkring och inne i symbolerna 410 (skog, svårframkomlig). Ett alternativ är då att använda symbol 415 (exakt begränsningslinje).
-Kortaste längd för svarta punkter: 5 punkter (2,5 mm - 37 m).
-Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
-    </message>
-    <message>
-        <source>A distinct forest edge or vegetation boundary within the forest.
-Very distinct forest edges and vegetation boundaries may be represented using the cultivation boundary symbol. Only one of the vegetation boundary symbols (black dotted line or dashed green line) can be used on a map. For areas with a lot of rock features, it is recommended to use the green dashed line for vegetation boundaries.
-A disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
-Minimum length, black dot implementation: 5 dots (2.5 mm - footprint 37 m).
-Minimum length, green line implementation: 4 dashes (1.8 mm - footprint 27 m).</source>
-        <comment>Description of symbol 416.1</comment>
-        <translation type="obsolete">En tydlig skogskant eller gräns av vegetation i skog.
-Mycket tydliga skogskanter och beståndsgränser kan redovisas med symbol 415 (exakt begränsningslinje). Enbart en typ av beståndsgränssymbol (svarta punkter eller streckad grön linje) ska användas på en karta. I stenbundna områden rekommenderas att den streckade gröna linjen används för beståndsgränser. En nackdel med den gröna linjen är att den inte kan användas för att redovisa tydliga beståndsgränser omkring och inne i symbolerna 410 (skog, svårframkomlig). Ett alternativ är då att använda symbol 415 (exakt begränsningslinje).
-Kortaste längd för svarta punkter: 5 punkter (2,5 mm - 37 m).
-Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
-    </message>
-    <message>
-        <source>Footprint: 13.5 m x 13.5 m.</source>
-        <comment>Description of symbol 417</comment>
-        <translation type="obsolete">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (yttermått 1.1 mm). 
-Utbredning: 13,5 x 13,5 m.</translation>
-    </message>
-    <message>
-        <source>Use sparingly, as it is easily mistaken for symbol Small knoll (109).
-Footprint: 9.0 m x 9.0 m.</source>
-        <comment>Description of symbol 418</comment>
-        <translation type="obsolete">Används sparsamt då den lätt kan förväxla med symbol 109 (liten höjd).
-Liten vit punkt i mitten hjälper personer med defekt färgseende.
-Utbredning: 9 x 9 m.</translation>
-    </message>
-    <message>
-        <source>The symbol is orientated to north.
-The definition of the symbol must be given on the map.
-Footprint: 13.5 m x 13.5 m.</source>
-        <comment>Description of symbol 419</comment>
-        <translation type="obsolete">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (linjebredd 0.36 mm, och linjen ska vara 0.18 mm längre i symboländarna).
-Symbolen orienteras mot norr.
-Tecknets betydelse måste redovisas i teckenförklaringen.
-Utbredning: 13,5 x 13,5 m.</translation>
-    </message>
-    <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
-The space between the black lines is filled with brown (50%).
-A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
-        <comment>Description of symbol 502</comment>
-        <translation type="obsolete">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
-    </message>
-    <message>
-        <source>The width should be drawn to scale, but not smaller than the minimum width (0.3 + 2*0.14 mm - footprint 8.7 m). The outer boundary lines may be replaced with other black line symbols, such as symbol Fence (516), Impassable fence (518), Wall (513) or Impassable wall (515) if the feature is so close to the road edge that it cannot practically be shown as a separate symbol.
-The space between the black lines is filled with brown (50%).
-A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
-        <comment>Description of symbol 502.2</comment>
-        <translation type="obsolete">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
-    </message>
-    <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
-        <comment>Description of symbol 503</comment>
-        <translation type="obsolete">Underhållen väg farbar med motorfordon i alla väder. Bredd mindre än 5 m.</translation>
-    </message>
-    <message>
-        <source>A railway or other kind of railed track.
-If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
-Minimum length (isolated): two dashes (4 mm - footprint 60 m).</source>
-        <comment>Description of symbol 509</comment>
-        <translation type="obsolete">Järnväg eller järnvägsliknande spår.
-Om det är förbjudet att springa längs med järnvägen ska symbolen kombineras med 711 (förbjuden väg). Om det är förbjudet att korsa järnvägen, ska symbolen kombineras med 520 (förbjudet område) eller med 709 (förbjudet område).
-Kortaste längd (friliggande): två streck (4 mm - 60 m).</translation>
-    </message>
-    <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation type="obsolete">Mur</translation>
-    </message>
-    <message>
-        <source>A significant wall of stone, concrete, wood or other materials.
-Minimum height: 1 m.
-Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513</comment>
-        <translation type="obsolete">En tydlig mur av sten, betong, trä eller annat material.
-Lägsta höjd: 1 m.
-Kortaste längd (friliggande): 1,4 mm (21 m).</translation>
-    </message>
-    <message>
-        <source>If the fence forms an enclosed area, tags should be placed inside.
-Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
-        <comment>Description of symbol 516</comment>
-        <translation type="obsolete">Om stängslet är slutet bör taggarna ritas på insidan.
-Kortaste längd (friliggande): 1,5 mm (22,5 m).</translation>
-    </message>
-    <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
-        <comment>Description of symbol 520</comment>
-        <translation type="obsolete">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
-    </message>
-    <message>
-        <source>Area that shall not be entered, stripes</source>
-        <comment>Name of symbol 520.2</comment>
-        <translation type="obsolete">Förbjudet område, ränder</translation>
-    </message>
-    <message>
-        <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. Vertical black stripes may be used for areas where it is important to show a complete representation of the terrain (e.g. when a part of the forest is out-of-bounds). The area shall be discontinued where a path or track goes through.
-Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.
-Course planning symbol 709 can be used for temporary out-of bounds areas.
-The vertical black stripes version of the symbol is orientated to north.
-An out-of-bounds area shall not be entered.
-Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
-        <comment>Description of symbol 520.2</comment>
-        <translation type="obsolete">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
-    </message>
-    <message>
-        <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
-        <comment>Description of symbol 520.3</comment>
-        <translation type="obsolete">Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.</translation>
-    </message>
 </context>
 <context>
     <name>ISOM2017</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Violett</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 1</comment>
-        <translation>Svart</translation>
-    </message>
-    <message>
-        <source>Opaque White below Black</source>
-        <comment>Color 2</comment>
-        <translation>Ogenomskinlig Vit under Svart</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 3</comment>
-        <translation>Svart 65%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 4</comment>
-        <translation>Svart 20%</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 5</comment>
-        <translation>Brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 6</comment>
-        <translation>Väg sidlinje</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 7</comment>
-        <translation>Ogenomskinlig Blå</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 8</comment>
-        <translation>Blå</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 9</comment>
-        <translation>Blå 50%</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 10</comment>
-        <translation>Brun</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 11</comment>
-        <translation>OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 12</comment>
-        <translation>Svart 25% (Grå)</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 13</comment>
-        <translation>Grön 50%/Gul 100%</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 14</comment>
-        <translation>Grön</translation>
-    </message>
-    <message>
-        <source>Opaque Yellow</source>
-        <comment>Color 15</comment>
-        <translation>Ogenomskinlig Gul</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 16</comment>
-        <translation>Ogenomskinlig vit över grön</translation>
-    </message>
-    <message>
-        <source>Opaque Green 20%</source>
-        <comment>Color 17</comment>
-        <translation>Ogenomskinlig grön 20%</translation>
-    </message>
-    <message>
-        <source>Opaque Green 50%</source>
-        <comment>Color 18</comment>
-        <translation>Ogenomskinlig Grön 50%</translation>
-    </message>
-    <message>
-        <source>Green, Black 50%</source>
-        <comment>Color 19</comment>
-        <translation>Grön 100%, Svart 50%</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 20</comment>
-        <translation>Ogenomskinlig Grön</translation>
-    </message>
-    <message>
-        <source>Green 50%</source>
-        <comment>Color 21</comment>
-        <translation>Grön 50%</translation>
-    </message>
-    <message>
-        <source>Green 20%</source>
-        <comment>Color 22</comment>
-        <translation>Grön 20%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 23</comment>
-        <translation>Grön under Ljusgrön</translation>
-    </message>
-    <message>
-        <source>Green 50% over Yellow</source>
-        <comment>Color 24</comment>
-        <translation>Grön 50% för Gul</translation>
-    </message>
-    <message>
-        <source>White over Yellow</source>
-        <comment>Color 25</comment>
-        <translation>Vit för Gul</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 26</comment>
-        <translation>Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 27</comment>
-        <translation>Gul 50%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
-    </message>
-    <message>
-        <source>A line joining points of equal height. The standard vertical interval between contours is 5 metres. A contour interval of 2.5 metres may be used for flat terrains. The smallest bend in a contour is 0.25 mm from centre to centre of the lines.</source>
-        <comment>Description of symbol 101</comment>
-        <translation>En linje som sammanbinder punkter med samma höjd. Standardekvidistansen mellan höjdkurvor är 5 m. 2.5 meters ekvidistans kan användas i flack terräng.</translation>
-    </message>
-    <message>
-        <source>Slope line, contour</source>
-        <comment>Name of symbol 101.1</comment>
-        <translation>Lutningsstreck, Höjdkurva</translation>
-    </message>
-    <message>
-        <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
-        <comment>Description of symbol 101.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
-    </message>
-    <message>
-        <source>Index contour</source>
-        <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
-    </message>
-    <message>
-        <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface. An index contour may be represented as an ordinary contour line in an area with much detail. Small contour knolls and depressions are normally not represented using index contours.</source>
-        <comment>Description of symbol 102</comment>
-        <translation>Var femte höjdkurva ska ritas med bredare linje. Stödkurvorna hjälper löparen att snabbt uppskatta höjdskillnader och ge en överblick över terrängen i stort. I detaljerade partier kan stödkurvan ritas med normal höjdkurva. Mindre höjder och gropar ritas oftast inte med stödkurvor.</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 102.1</comment>
-        <translation>Höjdsiffra</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 102.1</comment>
-        <translation>Höjdsiffror kan placeras på stödkurvorna. Höjdsiffrorna infogas på ställen där andra detaljer inte döljs. Siffrorna orienteras så att uppåt är på den högre sidan av stödkurvan.</translation>
-    </message>
-    <message>
-        <source>Form line</source>
-        <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
-    </message>
-    <message>
-        <source>Form lines are used where more information must be given about the shape of the ground. Form lines are added only where representation would be incomplete with ordinary contours. They shall not be used as intermediate contours. Only one form line should be used between neighbouring contours. It is very important that a form line fits logically into the contour system, so the start and end of a form line should be parallel to the neighbouring contours. The gaps between the form line dashes must be placed on reasonably straight sections of the form line. Form lines can be used to differentiate flat knolls and depressions from more distinct ones.</source>
-        <comment>Description of symbol 103</comment>
-        <translation>Hjälpkurvor används för att komplettera kurvinformationen. De används enbart när fullständig redovisning med vanliga höjdkurvor inte är möjlig. Hjälpkurvor ska inte användas som intermediära kurvor. Endast en hjälpkurva ska användas mellan närliggande höjdkurvor. Det är mycket viktigt att hjälpkurvorna används logiskt, vilket innebär att start- och slut av en hjälpkurva ska vara parallella med närliggande höjdkurvor. Uppehållen i hjälpkurvorna ska placeras på någorlunda raka delar av hjälpkurvan. Hjälpkurvor kan användas för att skilja mellan platta och mer tydliga höjder och gropar.</translation>
-    </message>
-    <message>
-        <source>Slope line, formline</source>
-        <comment>Name of symbol 103.1</comment>
-        <translation>Lutningsstreck, Hjälpkurva</translation>
-    </message>
-    <message>
-        <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
-        <comment>Description of symbol 103.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
-    </message>
-    <message>
-        <source>Earth bank</source>
-        <comment>Name of symbol 104</comment>
-        <translation>Skärning</translation>
-    </message>
-    <message>
-        <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. Minimum height: 1 m. An earth bank may impact runnability. The tags represent the full extent of the earth bank. For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol 201 (impassable cliff).</source>
-        <comment>Description of symbol 104</comment>
-        <translation>En skärning är en kraftig förändring i marknivån som tydligt kan urskiljas från sin omgivning, till exempel grus- och sandtag eller skärningar för vägar och järnvägar. Minsta höjd: 1 m. En skärning kan påverka löpbarheten. Lutningsstrecken ska motsvara skärningens horisontella utsträckning. För långa skärningar är det tillåtet att använda kortare taggar vid ändpunkterna. Lutningsstreck kan utelämnas för två närliggande skärningar. Opasserbara skärningar ska ritas med symbol 201 (opasserbar brant).</translation>
-    </message>
-    <message>
-        <source>Earth bank, minimum size</source>
-        <comment>Name of symbol 104.1</comment>
-        <translation>Skärning, minsta längd</translation>
-    </message>
-    <message>
-        <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. Minimum height: 1 m. An earth bank may impact runnability. The tags represent the full extent of the earth bank. For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol 201 (impassable cliff).</source>
-        <comment>Description of symbol 104.1</comment>
-        <translation>En skärning är en kraftig förändring i marknivån som tydligt kan urskiljas från sin omgivning, till exempel grus- och sandtag eller skärningar för vägar och järnvägar. Minsta höjd: 1 m. En skärning kan påverka löpbarheten. Lutningsstrecken ska motsvara skärningens horisontella utsträckning.
-För långa skärningar är det tillåtet att använda kortare taggar vid ändpunkterna. Lutningsstreck kan utelämnas för två närliggande skärningar. Opasserbara skärningar ska ritas med symbol 201 (opasserbar brant).</translation>
-    </message>
-    <message>
-        <source>Earth bank, top line</source>
-        <comment>Name of symbol 104.2</comment>
-        <translation>Skärning, baslinje</translation>
-    </message>
-    <message>
-        <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. Minimum height: 1 m. An earth bank may impact runnability. The tags represent the full extent of the earth bank. For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol 201 (impassable cliff).</source>
-        <comment>Description of symbol 104.2</comment>
-        <translation>En skärning är en kraftig förändring i marknivån som tydligt kan urskiljas från sin omgivning, till exempel grus- och sandtag eller skärningar för vägar och järnvägar. Minsta höjd: 1 m. En skärning kan påverka löpbarheten. Lutningsstrecken ska motsvara skärningens horisontella utsträckning.
-För långa skärningar är det tillåtet att använda kortare taggar vid ändpunkterna. Lutningsstreck kan utelämnas för två närliggande skärningar. Opasserbara skärningar ska ritas med symbol 201 (opasserbar brant).</translation>
-    </message>
-    <message>
-        <source>Earth bank, tag line</source>
-        <comment>Name of symbol 104.3</comment>
-        <translation>Skärning, tagg</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of wide earth banks.</source>
-        <comment>Description of symbol 104.3</comment>
-        <translation>Använd denna symbol för att visa den totala utsträckningen av breda jordvallar.</translation>
-    </message>
-    <message>
-        <source>Earth bank, minimum size (from ISOM2000)</source>
-        <comment>Name of symbol 104.9</comment>
-        <translation>Skärning, minsta längd (från ISOM2000)</translation>
-    </message>
-    <message>
-        <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. Minimum height: 1 m. An earth bank may impact runnability. The tags represent the full extent of the earth bank. For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol 201 (impassable cliff).</source>
-        <comment>Description of symbol 104.9</comment>
-        <translation>En skärning är en kraftig förändring i marknivån som tydligt kan urskiljas från sin omgivning, till exempel grus- och sandtag eller skärningar för vägar och järnvägar. Minsta höjd: 1 m. En skärning kan påverka löpbarheten. Lutningsstrecken ska motsvara skärningens horisontella utsträckning.
-För långa skärningar är det tillåtet att använda kortare taggar vid ändpunkterna. Lutningsstreck kan utelämnas för två närliggande skärningar. Opasserbara skärningar ska ritas med symbol 201 (opasserbar brant).</translation>
-    </message>
-    <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Jordwall</translation>
-    </message>
-    <message>
-        <source>Distinct earth wall. Minimum height is 1 m.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Tydligt jordvall. Lägsta höjd: 1 m.</translation>
-    </message>
-    <message>
-        <source>Ruined earth wall</source>
-        <comment>Name of symbol 106</comment>
-        <translation>Otydligt jordvall</translation>
-    </message>
-    <message>
-        <source>A ruined or less distinct earth wall. Minimum height: 0.5 m.
-Minimum length: two dashes (footprint 55 m). If shorter, the symbol must be exaggerated to the minimum length or changed to symbol 105 (earth wall).</source>
-        <comment>Description of symbol 106</comment>
-        <translation>Otydligt eller raserad jordvall. Lägsta höjd: 0,5 m.
-Minsta längd: två streck (55m). Om kortare ska symbolen ritas med minimumlängden eller ändras till symbil 105 (jordvall).</translation>
-    </message>
-    <message>
-        <source>Erosion gully</source>
-        <comment>Name of symbol 107</comment>
-        <translation>Erosionsfåra</translation>
-    </message>
-    <message>
-        <source>An erosion gully which is too small to be shown using symbol 104 (earth bank) is shown by a single line. Minimum depth: 1 m.
-Contour lines shall not be broken around this symbol.</source>
-        <comment>Description of symbol 107</comment>
-        <translation>En erosionsfåra som är för liten får att redovisas med symbol 104 (skärning) redovisas med en enkel linje. Minsta djup: 1m.
-Höjdkurvor ska ritas utan uppehåll genom symbolen.</translation>
-    </message>
-    <message>
-        <source>Small erosion gully</source>
-        <comment>Name of symbol 108</comment>
-        <translation>Liten fåra</translation>
-    </message>
-    <message>
-        <source>A small erosion gully, dry ditch or trench. Minimum depth: 0.5 m.
-Contour lines should be broken around this symbol.</source>
-        <comment>Description of symbol 108</comment>
-        <translation>En liten erosionsfåra, torrt dike eller fåra. Minsta djup: 0,5 m.
-Höjdkurvor bör ritas med uppehåll omkring symbolen.</translation>
-    </message>
-    <message>
-        <source>Small knoll</source>
-        <comment>Name of symbol 109</comment>
-        <translation>Punkthöjd</translation>
-    </message>
-    <message>
-        <source>An obvious mound or knoll which cannot be drawn to scale with a contour. Minimum height: 1 m.
-The symbol shall not touch or overlap contours.</source>
-        <comment>Description of symbol 109</comment>
-        <translation>En tydlig kulle eller topp som inte kan ritas skalriktig med höjdkurva. Lägsta höjd: 1 m.
-Symbolen ska inte vidröra eller överlappa höjdkurvor.</translation>
-    </message>
-    <message>
-        <source>Small elongated knoll</source>
-        <comment>Name of symbol 110</comment>
-        <translation>Avlång Punkthöjd</translation>
-    </message>
-    <message>
-        <source>An obvious elongated knoll which cannot be drawn to scale with a contour. Minimum height: 1 m.
-The symbol shall not touch or overlap contours.</source>
-        <comment>Description of symbol 110</comment>
-        <translation>En tydlig avlång höjd som inte kan ritas skalriktig med höjdkurva. Lägsta höjd: 1 m.
-Symbolen ska inte vidröra eller överlappa höjdkurvor.</translation>
-    </message>
-    <message>
-        <source>Small depression</source>
-        <comment>Name of symbol 111</comment>
-        <translation>Liten grop</translation>
-    </message>
-    <message>
-        <source>A small depression or hollow without steep sides that is too small to be shown by contours. Minimum depth: 1 m. Minimum width: 2 m.
-Small depressions with steep sides are represented with symbol 112 (pit). The symbol may not touch or overlap other brown symbols. Location is the centre of gravity of the symbol, and the symbol is orientated to north.</source>
-        <comment>Description of symbol 111</comment>
-        <translation>En liten grop eller håla utan branta sidor som inte kan redovisas skalenligt med höjdkurvor. Minsta djup: 1 m. Minsta bredd: 2 m.
-Små gropar med branta sidor redovisas med symbol 112 (grävd grop). Symbolen får inte vidröra eller överlappa andra bruna symboler. Symbolens tyngdpunkt anger läget. Symbolen orienteras mot norr.</translation>
-    </message>
-    <message>
-        <source>Pit</source>
-        <comment>Name of symbol 112</comment>
-        <translation>Liten grop med branta sidor</translation>
-    </message>
-    <message>
-        <source>Pits and holes with distinct steep sides which cannot be shown to scale using symbol 104 (earth bank). Minimum depth: 1 m. Minimum width: 1 m. A pit larger than 5 m x 5 m should normally be exaggerated and drawn using symbol 104 (earth bank). Pits without steep sides are represented with symbol 111 (small depression). The symbol may not touch or overlap other brown symbols. Location is the centre of gravity of the symbol, and the symbol is orientated to north.</source>
-        <comment>Description of symbol 112</comment>
-        <translation>Gropar och hålor med tydliga, branta sidor som inte kan redovisas skalenligt med symbol 104 (skärning). Minsta djup: 1 m. Minsta bredd: 1 m.
-En grop större än 5 x 5 m bör i normalfallet överdrivas och redovisas med symbol 104 (skärning). Gropar utan branta sidor redovisas med symbol 111
-(liten grop). Symbolen får inte vidröra eller överlappa andra bruna symboler. Symbolens tyngdpunkt anger läget. Symbolen orienteras mot norr.</translation>
-    </message>
-    <message>
-        <source>Broken ground</source>
-        <comment>Name of symbol 113</comment>
-        <translation>Småkuperad terräng</translation>
-    </message>
-    <message>
-        <source>An area of pits and/or knolls which is too intricate to be shown in detail, or other types of rough and uneven ground that is clearly distinguishable but has little impact on runnability.
-This is an area symbol.
-The minimum number of dots is three (footprint 10 m x 10 m).
-Contours shall not be cut in broken ground areas.
-Density: 3 to 5 dots / mm² (9-16%).</source>
-        <comment>Description of symbol 113</comment>
-        <translation>Ett område med smågropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och har liten inverkan på löpbarheten.
-Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål. Minst tre punkter (10 x 10 m).
-Största tillåtna avståndet mellan närliggande punkter är 0,6 mm (centrummått).
-Minsta tillåtna avståndet mellan närliggande punkter är 0,5 mm (centrummått).
-Höjdkurvor ska inte göra uppehåll i småkuperad terräng. Punkterna ska inte arrangeras i raka linjer.
-Täthet: 3-4 punkter/mm² (9-13%).</translation>
-    </message>
-    <message>
-        <source>Broken ground, individual dot</source>
-        <comment>Name of symbol 113.1</comment>
-        <translation>Småkuperad terräng, enskild punkt</translation>
-    </message>
-    <message>
-        <source>An area of pits or knolls which is too intricate to be shown in detail. The density of randomly placed dots may vary according to the detail on the ground.</source>
-        <comment>Description of symbol 113.1</comment>
-        <translation>Ett område med små gropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och har liten inverkan på löpbarheten. Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål.</translation>
-    </message>
-    <message>
-        <source>Very broken ground</source>
-        <comment>Name of symbol 114</comment>
-        <translation>Mycket småkuperad terräng</translation>
-    </message>
-    <message>
-        <source>An area of pits and/or knolls, which is too intricate to be shown in detail, or other types of rough and uneven ground that is clearly distinguishable and affects runnability.
-This is an area symbol.
-The minimum number of dots is three (footprint 7m x 7m).
-Contours shall not be cut in broken ground areas.
-Density: 8 to 10 dots / mm² (25-32%).</source>
-        <comment>Description of symbol 114</comment>
-        <translation>Ett område med smågropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och påverkar löpbarheten.
-Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål. Minst tre punkter (7 x 7 m).
-Största tillåtna avståndet mellan närliggande punkter är 0,38 mm (centrummått).
-Minsta tillåtna avståndet mellan närliggande punkter är 0,25 mm (centrummått).
-Höjdkurvor ska inte göra uppehåll i småkuperad terräng. Punkterna ska inte arrangeras i raka linjer.
-Täthet: 7-9 punkter/mm² (22-28%).</translation>
-    </message>
-    <message>
-        <source>Prominent landform feature</source>
-        <comment>Name of symbol 115</comment>
-        <translation>Övrigt tydligt terrängföremål</translation>
-    </message>
-    <message>
-        <source>The feature must be very clearly distinguishable from its surroundings. Location is the centre of gravity of the symbol, which is orientated to north. The symbol may not touch or overlap other brown symbols.</source>
-        <comment>Description of symbol 115</comment>
-        <translation>Föremålet måste vara tydligt avvikande från dess omgivning. Symbolen får inte vidröra eller överlappa andra bruna symboler. Symbolens tyngdpunkt anger läget. Symbolen orienteras mot norr. Utbredning: 13,5 x 11,5 m.</translation>
-    </message>
-    <message>
-        <source>Impassable cliff</source>
-        <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
-    </message>
-    <message>
-        <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
-For vertical rock faces the tags may be omitted if space is short. Ends of the top line may be rounded or square. Shorter tags may be used at the ends.
-The gap between two impassable cliffs or between impassable cliffs and other impassable feature symbols must exceed 0.3 mm on the map.
-When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.</source>
-        <comment>Description of symbol 201</comment>
-        <translation>Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat. Baslinjens avslutningar kan vara avrundade eller raka. Kortare lutningsstreck kan användas vid linjesluten.
-Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, minimum size</source>
-        <comment>Name of symbol 201.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
-    </message>
-    <message>
-        <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
-Ends of the top line may be rounded or square.
-The gap between two impassable cliffs or between impassable cliffs and other impassable feature symbols must exceed 0.3 mm on the map.
-When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.</source>
-        <comment>Description of symbol 201.1</comment>
-        <translation>Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera. Lutningsstreck kan utelämnas om utrymmet är begränsat.
-Baslinjens avslutningar kan vara avrundade eller raka.
-Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Kortare lutningsstreck kan användas vid linjesluten. Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna. Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, plan shape representation</source>
-        <comment>Name of symbol 201.2</comment>
-        <translation>Opasserbar brant, planvy-representation</translation>
-    </message>
-    <message>
-        <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
-For vertical rock faces the tags may be omitted if space is short. &lt;b&gt;For plan shape representation, the minimum width is 0.35 mm.&lt;/b&gt; Shorter tags may be used at the ends.
-The gap between two impassable cliffs or between impassable cliffs and other impassable feature symbols must exceed 0.3 mm on the map.
-When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.</source>
-        <comment>Description of symbol 201.2</comment>
-        <translation>Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat. Baslinjens avslutningar kan vara avrundade eller raka. &lt;b&gt;Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred.&lt;/b&gt; Kortare lutningsstreck kan användas vid linjesluten.
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna. Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, top line</source>
-        <comment>Name of symbol 201.3</comment>
-        <translation>Opasserbar brant, baslinje</translation>
-    </message>
-    <message>
-        <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
-        <comment>Description of symbol 201.3</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, tag line</source>
-        <comment>Name of symbol 201.4</comment>
-        <translation>Opasserbar brant, tag</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of a wide cliff.</source>
-        <comment>Description of symbol 201.4</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, minimum size (from ISOM2000)</source>
-        <comment>Name of symbol 201.9</comment>
-        <translation>Opasserbar brant, minsta storlek (från ISOM2000)</translation>
-    </message>
-    <message>
-        <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
-Ends of the top line may be rounded or square.
-The gap between two impassable cliffs or between impassable cliffs and other impassable feature symbols must exceed 0.3 mm on the map.
-When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.</source>
-        <comment>Description of symbol 201.9</comment>
-        <translation>Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera. Lutningsstreck kan utelämnas om utrymmet är begränsat.
-Baslinjens avslutningar kan vara avrundade eller raka.
-Vid redovisning i plan måste baslinjen vara minst 0,35 mm bred. Kortare lutningsstreck kan användas vid linjesluten. Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm. När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna. Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
-    </message>
-    <message>
-        <source>Cliff</source>
-        <comment>Name of symbol 202</comment>
-        <translation>Passerbar brant</translation>
-    </message>
-    <message>
-        <source>A passable, vertical cliff or quarry where the direction of fall of the cliff is apparent from the contours. Minimum height: 1 m.
-Ends of the top line may be rounded or square. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.</source>
-        <comment>Description of symbol 202</comment>
-        <translation>En passerbar brant eller gruva. Lägsta höjd: 1 m.
-Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning. Taggarna ska redovisa brantens horisontella utsträckning. Baslinjens avslutningar kan vara avrundade eller raka. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna. Att passera en brant påverkar normalt löpbarheten.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,65mm (9,75 m).</translation>
-    </message>
-    <message>
-        <source>Cliff, minimum size</source>
-        <comment>Name of symbol 202.1</comment>
-        <translation>Passerbar brant, minsta storlek</translation>
-    </message>
-    <message>
-        <source>A passable, vertical cliff or quarry where the direction of fall of the cliff is apparent from the contours. Minimum height: 1 m.
-Ends of the top line may be rounded or square. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.</source>
-        <comment>Description of symbol 202.1</comment>
-        <translation>En passerbar brant eller gruva. Lägsta höjd: 1 m. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning. Taggarna ska redovisa brantens horisontella utsträckning. Baslinjens avslutningar kan vara avrundade eller raka. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna. Att passera en brant påverkar normalt löpbarheten.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,65mm (9,75 m ).</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags</source>
-        <comment>Name of symbol 202.2</comment>
-        <translation>Passerbar brant, med taggar</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. Minimum height: 1 m.
-Short tags indicate in the direction of the downslope because the direction of fall of the cliff is not apparent from the contours, or to improve legibility. For non-vertical cliffs, the tags should be drawn to show the full horizontal extent.
-Ends of the top line may be rounded or square. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.</source>
-        <comment>Description of symbol 202.2</comment>
-        <translation>En passerbar brant eller gruva. Lägsta höjd: 1 m.
-Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning. Taggarna ska redovisa brantens horisontella utsträckning.
-Baslinjens avslutningar kan vara avrundade eller raka. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna. Att passera en brant påverkar normalt löpbarheten.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,65 mm (9,75 m).</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags, minimum size</source>
-        <comment>Name of symbol 202.3</comment>
-        <translation>Passerbar brant med taggar, minsta storlek</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. Minimum height: 1 m.
-Short tags indicate in the direction of the downslope because the direction of fall of the cliff is not apparent from the contours, or to improve legibility. For non-vertical cliffs, the tags should be drawn to show the full horizontal extent.
-Ends of the top line may be rounded or square. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.</source>
-        <comment>Description of symbol 202.3</comment>
-        <translation>En passerbar brant eller gruva. Lägsta höjd: 1 m.
-Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning. Taggarna ska redovisa brantens horisontella utsträckning. Baslinjens avslutningar kan vara avrundade eller raka. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna. Att passera en brant påverkar normalt löpbarheten.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,65 mm (9,75 m).</translation>
-    </message>
-    <message>
-        <source>Cliff, with tags, minimum size (from ISOM2000)</source>
-        <comment>Name of symbol 202.9</comment>
-        <translation>Passerbar brant med taggar, minsta storlek (från ISOM2000)</translation>
-    </message>
-    <message>
-        <source>A passable cliff or quarry. Minimum height: 1 m.
-Short tags indicate in the direction of the downslope because the direction of fall of the cliff is not apparent from the contours, or to improve legibility. For non-vertical cliffs, the tags should be drawn to show the full horizontal extent.
-Ends of the top line may be rounded or square. A passage between two cliffs must be at least 0.2 mm. A cliff should interplay with the contour lines.
-Crossing a cliff will normally slow progress.</source>
-        <comment>Description of symbol 202.9</comment>
-        <translation>En passerbar brant eller gruva. Lägsta höjd: 1 m.
-Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning. Taggarna ska redovisa brantens horisontella utsträckning. Baslinjens avslutningar kan vara avrundade eller raka. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna. Att passera en brant påverkar normalt löpbarheten.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,65 mm (9,75 m).</translation>
-    </message>
-    <message>
-        <source>Rocky pit or cave (without distinct entrance)</source>
-        <comment>Name of symbol 203.1</comment>
-        <translation>Stenig grop eller grotta</translation>
-    </message>
-    <message>
-        <source>Rocky pits, holes, caves or mineshafts which may constitute a danger to the competitor. Minimum depth: 1 m.
-Location is the centre of gravity of the symbol.
-Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
-        <comment>Description of symbol 203.1</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan. En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).
-Utbredning: 10,5 x 12 m.</translation>
-    </message>
-    <message>
-        <source>Rocky pit or cave with distinct entrance</source>
-        <comment>Name of symbol 203.2</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål med tydlig ingång (symbolen ska orienteras in i grottan)</translation>
-    </message>
-    <message>
-        <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
-Location is the centre of gravity of the symbol, and the symbol should point into the cave.
-Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
-        <comment>Description of symbol 203.2</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan.
-En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).</translation>
-    </message>
-    <message>
-        <source>Rocky pit or cave with distinct entrance (from ISOM2000)</source>
-        <comment>Name of symbol 203.9</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål med tydlig ingång (från ISOM2000)</translation>
-    </message>
-    <message>
-        <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
-Location is the centre of gravity of the symbol, and the symbol should point into the cave.
-Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
-        <comment>Description of symbol 203.9</comment>
-        <translation>Steniga gropar, hålor, grottor eller gruvhål som kan vara farliga för löparen. Minsta djup: 1 m.
-Symbolens tyngdpunkt anger föremålets läge och tecknet orienteras mot norr. För grottor med tydlig ingång ska symbolen orienteras in i grottan.
-En stenig grop med diameter större än 5 m bör överdrivas och redovisas med lämplig brantsymbol (201, 202).</translation>
-    </message>
-    <message>
-        <source>Boulder</source>
-        <comment>Name of symbol 204</comment>
-        <translation>Sten</translation>
-    </message>
-    <message>
-        <source>A distinct boulder (should be higher than 1 m), which is immediately identifiable on the ground. Groups of boulders are represented using symbol 207 (boulder cluster) or a boulder field symbol (208, 209).
-To be able to show the distinction between neighbouring (closer than 30 metres apart) boulders with significant difference in size, it is permitted to enlarge the symbol to 0.5 mm for some of the boulders.</source>
-        <comment>Description of symbol 204</comment>
-        <translation>En tydlig sten (bör vara högre än 1 m) som omedelbart kan identifieras i terrängen. Grupper av stenar redovisas med symbol 207 (grupp av sten) eller med blockterrängsymbol (208, 209).
-För att kunna särskilja närliggande stenar (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen till 0,5 mm för somliga stenar.</translation>
-    </message>
-    <message>
-        <source>Boulder or large boulder, different size</source>
-        <comment>Name of symbol 204.5</comment>
-        <translation>Stenblock eller stort stenblock, olika storlek</translation>
-    </message>
-    <message>
-        <source>A boulder which is larger than neighboring boulders (204), or a large boulder which is smaller than neighboring large boulders (205).
-
-To be able to show the distinction between neighbouring (closer than 30 metres apart) boulders (204) with significant difference in size, it is permitted to use this symbol (0.5 mm) as an enlargement of symbol 204 for some of the boulders.
-
-To be able to show the distinction between neighbouring (closer than 30 metres apart) large boulders (205) with significant difference in size, it is permitted to use this symbol (0.5 mm) as an as a reduction of symbol 205 for some of the boulders.</source>
-        <comment>Description of symbol 204.5</comment>
-        <translation>För att kunna särskilja närliggande stenar av typ 204 &quot;Sten&quot; (närmare än 30 meter) med betydande storleksskillnad, eller att särskilja en mindre sten från typ 205 &quot;Stor sten&quot; så är det tillåtet att endera förstora symbolen 204 till 0,5 mm, eller förminska symbolen 205 till 0,5 mm.</translation>
-    </message>
-    <message>
-        <source>Large boulder</source>
-        <comment>Name of symbol 205</comment>
-        <translation>Stor sten</translation>
-    </message>
-    <message>
-        <source>A particularly large and distinct boulder. A large boulder should be more than 2 m high. To be able to show the distinction between neighbouring (closer than 30 metres apart) large boulders with significant difference in size, it is permitted to reduce the size of the symbol to 0.5 mm for some of the boulders.</source>
-        <comment>Description of symbol 205</comment>
-        <translation>En särskilt stor och tydlig sten. En stor sten bör vara mer än 2 m hög. För att kunna särskilja närliggande stenar (närmare än 30 meter) med be tydande storleksskillnad, är det tillåtet att förminska symbolen till 0,5 mm för somliga stenar.</translation>
-    </message>
-    <message>
-        <source>Gigantic boulder</source>
-        <comment>Name of symbol 206</comment>
-        <translation>Gigantisk sten</translation>
-    </message>
-    <message>
-        <source>A rock pillar or gigantic boulder that is so high and steep that it is impossible topass/climb.
-The gap between gigantic boulders or between gigantic boulders and other impassable feature symbols must exceed 0.3 mm on the map.</source>
-        <comment>Description of symbol 206</comment>
-        <translation>Stenpelare eller gigantisk sten som är så hög och brant att den inte kan passeras.
-Avståndet mellan två gigantiska stenar eller mellan gigantiska stenar och andra opasserbara symboler måste vara mer än 0,3 mm.</translation>
-    </message>
-    <message>
-        <source>Boulder cluster</source>
-        <comment>Name of symbol 207</comment>
-        <translation>Grupp av stenar</translation>
-    </message>
-    <message>
-        <source>A distinct group of boulders so closely clustered together that they cannot be marked individually. The boulders in the cluster should be higher than 1 metre. A boulder cluster must be easily identifiable as a group of boulders.
-To be able to show the distinction between neighbouring (maximum 30 metres apart), boulder clusters with significant difference in boulder size, it is permitted to enlarge this symbol by 20% (edge length 0.96 mm) for some of the boulder clusters.</source>
-        <comment>Description of symbol 207</comment>
-        <translation>En tydlig grupp av stenar som ligger så tätt att de inte kan redovisas individuellt. Stenarna bör vara högre än 1 m. En stengrupp måste tydligt kunna identifieras som en grupp av stenar.
-För att kunna särskilja närliggande stengrupper (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen med 20% (kantlängd 0,96 mm) för somliga stengrupper. Tecknet orienteras mot norr.</translation>
-    </message>
-    <message>
-        <source>Boulder cluster, large</source>
-        <comment>Name of symbol 207.1</comment>
-        <translation>Grupp av stenar, stor</translation>
-    </message>
-    <message>
-        <source>To be able to show the distinction between neighbouring (maximum 30 metres apart), boulder clusters with significant difference in boulder size, it is permitted to enlarge this symbol by 20% (edge length 0.96 mm) for some of the boulder clusters.</source>
-        <comment>Description of symbol 207.1</comment>
-        <translation>För att kunna särskilja närliggande stengrupper (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen med 20 % (kantlängd 0,96 mm) för somliga stengrupper.</translation>
-    </message>
-    <message>
-        <source>Boulder field</source>
-        <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
-    </message>
-    <message>
-        <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
-A minimum of two triangles should be used. One triangle may be used if it is combined with other rock symbols (for instance directly below cliff symbols (201, 202), adjacent to boulder symbols (204-206) or combined with stony ground symbols (210-212)).
-To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.</source>
-        <comment>Description of symbol 208</comment>
-        <translation>Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Blockterräng påverkar normalt inte löpbarheten. Om löpbarheten påverkas bör symbol 209 (tät blockterräng) användas eller symbolen kombineras med stenig mark. Minst 2 trianglar ska användas. En triangel kan användas om den kombineras med annan sten/brantsymbol, exempelvis direkt under branter (201, 202), bredvid stenar (204-206) eller kombinerat med stenig mark (210-212). Största tillåtna avståndet mellan närliggande trianglar är 1,2 mm (centrummått). Minsta tillåtna avståndet mellan närliggande trianglar är 0,75 mm (centrummått). Täthet: 0,8-1 symbol/mm² (12-16%).
-För att visa tydliga höjdskillnader mellan block i blockterräng är det tillåtet att förstora somliga trianglar till 120%.</translation>
-    </message>
-    <message>
-        <source>Boulder field, single triangle</source>
-        <comment>Name of symbol 208.1</comment>
-        <translation>Blockterräng, enskild triangel</translation>
-    </message>
-    <message>
-        <source>An area which is covered with so many blocks of stone that they cannot be marked individually is shown with randomly orientated solid triangles with sides of ratio 8:6:5. A minimum of two triangles should be used. The going is indicated by the density of the triangles. To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208.1</comment>
-        <translation>Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5. Minst 2 trianglar ska användas. The going is indicated by the density of the triangles. För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
-    </message>
-    <message>
-        <source>Boulder field, single triangle, enlarged</source>
-        <comment>Name of symbol 208.2</comment>
-        <translation>Blockterräng, enskild triangel, förstorad</translation>
-    </message>
-    <message>
-        <source>To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208.2</comment>
-        <translation>För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
-    </message>
-    <message>
-        <source>Dense boulder field</source>
-        <comment>Name of symbol 209</comment>
-        <translation>Tät blockterräng</translation>
-    </message>
-    <message>
-        <source>Stony ground, slow running</source>
-        <comment>Name of symbol 210</comment>
-        <translation>Stenig mark, löphindrande</translation>
-    </message>
-    <message>
-        <source>Stony ground, individual dot</source>
-        <comment>Name of symbol 210.1</comment>
-        <translation>Stenig mark, enskiljd punkt</translation>
-    </message>
-    <message>
-        <source>Stony ground, walk</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Stenig mark, svårlöpt</translation>
-    </message>
-    <message>
-        <source>Stony ground, fight</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Stenig mark, svårframkomlig</translation>
-    </message>
-    <message>
-        <source>Sandy ground</source>
-        <comment>Name of symbol 213</comment>
-        <translation>Sandområde</translation>
-    </message>
-    <message>
-        <source>An area of soft sandy ground where runnability is reduced to less than 80% of normal speed.</source>
-        <comment>Description of symbol 213</comment>
-        <translation>Ett område med mjuk sandig mark, där löpbarheten är nedsatt till under 80% av normal löpfart.
-Symbolen orienteras mot norr. Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 214</comment>
-        <translation>Berg i dagen</translation>
-    </message>
-    <message>
-        <source>A runnable area of rock without earth or vegetation should be shown as bare rock.
-An area of rock covered with grass, moss or other low vegetation, shall not be shown using the bare rock symbol.
-An area of less runnable bare rock should be shown using a stony ground symbol (210-212).</source>
-        <comment>Description of symbol 214</comment>
-        <translation>En löpbar bergyta utan jord eller vegetation bör redovisas som berg i dagen.
-En yta täckt med gräs, mossa eller annan låg vegetation ska inte redovisas med denna symbol.
-Om löpbarheten är nedsatt bör istället redovisning ske med symbol för stenig mark (210-212).
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
-    </message>
-    <message>
-        <source>Trench</source>
-        <comment>Name of symbol 215</comment>
-        <translation>Dike (eller skreva, skyttevärn)</translation>
-    </message>
-    <message>
-        <source>Uncrossable body of water, with bank line</source>
-        <comment>Name of symbol 301</comment>
-        <translation>Opasserbar vattenyta, med konturlinje</translation>
-    </message>
-    <message>
-        <source>Uncrossable body of water</source>
-        <comment>Name of symbol 301.1</comment>
-        <translation>Opasserbar vattenyta</translation>
-    </message>
-    <message>
-        <source>A black bank line indicates that the feature cannot be crossed.</source>
-        <comment>Description of symbol 301.2</comment>
-        <translation type="unfinished">En svart linje indikerar att föremålet inte kan korsas.</translation>
-    </message>
-    <message>
-        <source>Shallow body of water</source>
-        <comment>Name of symbol 302.1</comment>
-        <translation>Grund vattenyta</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
-    </message>
-    <message>
-        <source>Crossable watercourse</source>
-        <comment>Name of symbol 304</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
-    </message>
-    <message>
-        <source>Small crossable watercourse</source>
-        <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart litet vattendrag</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
-    </message>
-    <message>
-        <source>Rough open land</source>
-        <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
-    </message>
-    <message>
-        <source>Rough open land with scattered trees</source>
-        <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
-    </message>
-    <message>
-        <source>Forest</source>
-        <comment>Name of symbol 405</comment>
-        <translation type="unfinished">Skog</translation>
-    </message>
-    <message>
-        <source>Orchard</source>
-        <comment>Name of symbol 413</comment>
-        <translation type="unfinished">Fruktodling</translation>
-    </message>
-    <message>
-        <source>Distinct cultivation boundary</source>
-        <comment>Name of symbol 415</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Distinct vegetation boundary</source>
-        <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
-    </message>
-    <message>
-        <source>Footprint: 13.5 m x 13.5 m.</source>
-        <comment>Description of symbol 417</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (yttermått 1.1 mm). 
-Utbredning: 13,5 x 13,5 m.</translation>
-    </message>
-    <message>
-        <source>Prominent vegetation feature</source>
-        <comment>Name of symbol 419</comment>
-        <translation type="unfinished">Tydligt vegetationsföremål</translation>
-    </message>
-    <message>
-        <source>Footprint: 13.5 m x 13.5 m.</source>
-        <comment>Description of symbol 419</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (yttermått 1.1 mm). 
-Utbredning: 13,5 x 13,5 m.</translation>
-    </message>
-    <message>
-        <source>Paved area, with bounding line</source>
-        <comment>Name of symbol 501</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Paved area</source>
-        <comment>Name of symbol 501.1</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
-    </message>
-    <message>
-        <source>Paved area, bounding line</source>
-        <comment>Name of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.</source>
-        <comment>Description of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.</translation>
-    </message>
-    <message>
-        <source>Wide road, minimum width</source>
-        <comment>Name of symbol 502</comment>
-        <translation type="unfinished">Bred väg, minsta bredd</translation>
-    </message>
-    <message>
-        <source>Road with two carriageways</source>
-        <comment>Name of symbol 502.2</comment>
-        <translation type="unfinished">Väg med två körbanor</translation>
-    </message>
-    <message>
-        <source>Road</source>
-        <comment>Name of symbol 503</comment>
-        <translation type="unfinished">Väg</translation>
-    </message>
-    <message>
-        <source>A maintained road suitable for motor vehicles in all weather. Width less than 5 m.</source>
-        <comment>Description of symbol 503</comment>
-        <translation type="unfinished">Underhållen väg farbar med motorfordon i alla väder. Bredd mindre än 5 m.</translation>
-    </message>
-    <message>
-        <source>Vehicle track</source>
-        <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Körväg</translation>
-    </message>
-    <message>
-        <source>Narrow ride</source>
-        <comment>Name of symbol 508</comment>
-        <translation type="unfinished">Rågång</translation>
-    </message>
-    <message>
-        <source>Railway</source>
-        <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Järnväg</translation>
-    </message>
-    <message>
-        <source>Power line, cableway or skilift</source>
-        <comment>Name of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift</translation>
-    </message>
-    <message>
-        <source>Major power line, minimum width</source>
-        <comment>Name of symbol 511</comment>
-        <translation type="unfinished">Större kraftledning, minsta bredd</translation>
-    </message>
-    <message>
-        <source>Major power line</source>
-        <comment>Name of symbol 511.1</comment>
-        <translation type="unfinished">Större kraftledning</translation>
-    </message>
-    <message>
-        <source>Major power line, large carrying masts</source>
-        <comment>Name of symbol 511.2</comment>
-        <translation type="unfinished">Större kraftledning med höga master</translation>
-    </message>
-    <message>
-        <source>Bridge / tunnel</source>
-        <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Bro/tunnel</translation>
-    </message>
-    <message>
-        <source>Bridge / tunnel, minimum size</source>
-        <comment>Name of symbol 512.1</comment>
-        <translation type="unfinished">Bro / tunnel, minsta storlek</translation>
-    </message>
-    <message>
-        <source>Footbridge</source>
-        <comment>Name of symbol 512.2</comment>
-        <translation type="unfinished">Gångbro</translation>
-    </message>
-    <message>
-        <source>Wall</source>
-        <comment>Name of symbol 513</comment>
-        <translation type="unfinished">Mur</translation>
-    </message>
-    <message>
-        <source>Impassable wall</source>
-        <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Opasserbar mur</translation>
-    </message>
-    <message>
-        <source>Fence</source>
-        <comment>Name of symbol 516</comment>
-        <translation type="unfinished">Stängsel</translation>
-    </message>
-    <message>
-        <source>Impassable fence</source>
-        <comment>Name of symbol 518</comment>
-        <translation type="unfinished">Opasserbart stängsel</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 519</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
-    <message>
-        <source>A way through or over a wall, fence or other linear feature, including a gate or stile.
-For impassable features, the line shall be broken at the crossing point. For passable features, the line shall not be broken if passing involves a degree of climb.</source>
-        <comment>Description of symbol 519</comment>
-        <translation type="unfinished">Passage, grind eller stätta, genom eller över en mur, stängsel eller annat linjeföremål.
-För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För passerbara föremål ska uppehåll i linjen inte göras om passage innebär klättring.</translation>
-    </message>
-    <message>
-        <source>Area that shall not be entered</source>
-        <comment>Name of symbol 520</comment>
-        <translation type="unfinished">Förbjudet område</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 710</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
 </context>
 <context>
     <name>ISOM2000</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Violett</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 1</comment>
-        <translation>Svart</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 2</comment>
-        <translation>Brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 3</comment>
-        <translation>Svart under ljusbrunt</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 4</comment>
-        <translation>Ogenomskinlig Blå</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 5</comment>
-        <translation>Blå</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 6</comment>
-        <translation>Blå 50%</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 7</comment>
-        <translation>Brun</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 8</comment>
-        <translation>OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 10</comment>
-        <translation>Grön 50%/Gul 100%</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 12</comment>
-        <translation>Ogenomskinlig vit över grön</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 13</comment>
-        <translation>Ogenomskinlig Grön</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 14</comment>
-        <translation>Grön</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 15</comment>
-        <translation>Grön 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 16</comment>
-        <translation>Grön 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 17</comment>
-        <translation>Grön under Ljusgrön</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 18</comment>
-        <translation>Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 19</comment>
-        <translation>Gul 50%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
-    </message>
-    <message>
-        <source>Index contour</source>
-        <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
-    </message>
-    <message>
-        <source>Form line</source>
-        <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Höjdsiffra</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Höjdsiffror kan placeras på stödkurvorna. Höjdsiffrorna infogas på ställen där andra detaljer inte döljs. Siffrorna orienteras så att uppåt är på den högre sidan av stödkurvan.</translation>
-    </message>
-    <message>
-        <source>Earth bank</source>
-        <comment>Name of symbol 106</comment>
-        <translation>Jordvall</translation>
-    </message>
-    <message>
-        <source>Earth bank, minimum size</source>
-        <comment>Name of symbol 106.0.1</comment>
-        <translation>Skärning, minsta längd</translation>
-    </message>
-    <message>
-        <source>Earth bank, tag line</source>
-        <comment>Name of symbol 106.2</comment>
-        <translation>Jordvall, tagg</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of wide earth banks.</source>
-        <comment>Description of symbol 106.2</comment>
-        <translation>Använd denna symbol för att visa den totala omfattningen av breda jordvallar.</translation>
-    </message>
-    <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 107</comment>
-        <translation>Jordvall</translation>
-    </message>
-    <message>
-        <source>Distinct earth wall. Minimum height is 1 m.</source>
-        <comment>Description of symbol 107</comment>
-        <translation>Tydligt jordvall. Lägsta höjd: 1 m.</translation>
-    </message>
-    <message>
-        <source>Small earth wall</source>
-        <comment>Name of symbol 108</comment>
-        <translation>Otydligt jordvall</translation>
-    </message>
-    <message>
-        <source>A small or partly ruined earth wall shall be shown with a dashed line. Minimum height is 0.5 m.</source>
-        <comment>Description of symbol 108</comment>
-        <translation>Otydligt eller raserad jordvall ska visas med streckad linje. Lägsta höjd: 0,5 m.</translation>
-    </message>
-    <message>
-        <source>Erosion gully</source>
-        <comment>Name of symbol 109</comment>
-        <translation>Erosionsfåra</translation>
-    </message>
-    <message>
-        <source>Small erosion gully</source>
-        <comment>Name of symbol 110</comment>
-        <translation>Liten fåra</translation>
-    </message>
-    <message>
-        <source>Small knoll</source>
-        <comment>Name of symbol 112</comment>
-        <translation>Punkthöjd</translation>
-    </message>
-    <message>
-        <source>Small depression</source>
-        <comment>Name of symbol 115</comment>
-        <translation>Liten grop</translation>
-    </message>
-    <message>
-        <source>Pit</source>
-        <comment>Name of symbol 116</comment>
-        <translation>Liten grop med branta sidor</translation>
-    </message>
-    <message>
-        <source>An area of pits or knolls which is too intricate to be shown in detail. The density of randomly placed dots may vary according to the detail on the ground.</source>
-        <comment>Description of symbol 117.1</comment>
-        <translation>Ett område med små gropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och har liten inverkan på löpbarheten. Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål.</translation>
-    </message>
-    <message>
-        <source>Impassable cliff</source>
-        <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, minimum size</source>
-        <comment>Name of symbol 201.0.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
-    </message>
-    <message>
-        <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
-        <comment>Description of symbol 201.1</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, tag line</source>
-        <comment>Name of symbol 201.2</comment>
-        <translation>Opasserbar brant, tag</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of a wide cliff.</source>
-        <comment>Description of symbol 201.2</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
-    </message>
-    <message>
-        <source>Boulder</source>
-        <comment>Name of symbol 206</comment>
-        <translation>Sten</translation>
-    </message>
-    <message>
-        <source>Large boulder</source>
-        <comment>Name of symbol 207</comment>
-        <translation>Stor sten</translation>
-    </message>
-    <message>
-        <source>Boulder field</source>
-        <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
-    </message>
-    <message>
-        <source>An area which is covered with so many blocks of stone that they cannot be marked individually is shown with randomly orientated solid triangles with sides of ratio 8:6:5. A minimum of two triangles should be used. The going is indicated by the density of the triangles. To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208</comment>
-        <translation>Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5. Minst 2 trianglar ska användas. The going is indicated by the density of the triangles. För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
-    </message>
-    <message>
-        <source>To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208.1</comment>
-        <translation>För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
-    </message>
-    <message>
-        <source>Boulder cluster</source>
-        <comment>Name of symbol 209</comment>
-        <translation>Grupp av stenar</translation>
-    </message>
-    <message>
-        <source>Boulder cluster, large</source>
-        <comment>Name of symbol 209.1</comment>
-        <translation>Grupp av stenar, stor</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Sandområde</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Berg i dagen</translation>
-    </message>
-    <message>
-        <source>A black bank line indicates that the feature cannot be crossed.</source>
-        <comment>Description of symbol 301.1</comment>
-        <translation type="unfinished">En svart linje indikerar att föremålet inte kan korsas.</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
-    </message>
-    <message>
-        <source>Crossable watercourse</source>
-        <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
-    </message>
-    <message>
-        <source>Rough open land</source>
-        <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
-    </message>
-    <message>
-        <source>Rough open land with scattered trees</source>
-        <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
-    </message>
-    <message>
-        <source>Orchard</source>
-        <comment>Name of symbol 412</comment>
-        <translation type="unfinished">Fruktodling</translation>
-    </message>
-    <message>
-        <source>Distinct cultivation boundary</source>
-        <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Distinct vegetation boundary</source>
-        <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
-    </message>
-    <message>
-        <source>Road</source>
-        <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Väg</translation>
-    </message>
-    <message>
-        <source>Vehicle track</source>
-        <comment>Name of symbol 505</comment>
-        <translation type="unfinished">Körväg</translation>
-    </message>
-    <message>
-        <source>Narrow ride</source>
-        <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Rågång</translation>
-    </message>
-    <message>
-        <source>Footbridge</source>
-        <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Gångbro</translation>
-    </message>
-    <message>
-        <source>Railway</source>
-        <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Järnväg</translation>
-    </message>
-    <message>
-        <source>Major power line</source>
-        <comment>Name of symbol 517</comment>
-        <translation type="unfinished">Större kraftledning</translation>
-    </message>
-    <message>
-        <source>Fence</source>
-        <comment>Name of symbol 522</comment>
-        <translation type="unfinished">Stängsel</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 525</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
-    <message>
-        <source>Paved area</source>
-        <comment>Name of symbol 529</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
-    </message>
-    <message>
-        <source>Paved area, bounding line</source>
-        <comment>Name of symbol 529.1</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Paved area, with bounding line</source>
-        <comment>Name of symbol 529.2</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 708</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
 </context>
 <context>
     <name>ISSprOM 2019</name>
     <message>
         <source>Purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation>Lila för kurs övertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for course overprint</source>
         <comment>Color 1</comment>
-        <translation>Vit för kurs övertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100%</source>
         <comment>Color 2</comment>
-        <translation>Svart 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%</source>
         <comment>Color 3</comment>
-        <translation>Grön 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railway</source>
         <comment>Color 4</comment>
-        <translation>Vit för järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
         <comment>Color 5</comment>
-        <translation>Lila för spår symboler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple 50%</source>
@@ -4705,12 +2603,12 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Blue 100%</source>
         <comment>Color 7</comment>
-        <translation>Blå 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100%</source>
         <comment>Color 8</comment>
-        <translation>Brun 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 60%</source>
@@ -4720,12 +2618,12 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Black 50%</source>
         <comment>Color 10</comment>
-        <translation type="unfinished">Svart 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20%</source>
         <comment>Color 11</comment>
-        <translation>Svart 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over light brown</source>
@@ -4735,7 +2633,7 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Lower brown 50%</source>
         <comment>Color 13</comment>
-        <translation>Lägre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower brown 30%</source>
@@ -4750,12 +2648,12 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Blue 100% for area features</source>
         <comment>Color 16</comment>
-        <translation>Blå 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70%</source>
         <comment>Color 17</comment>
-        <translation>Blå 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 30%</source>
@@ -4770,12 +2668,12 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 20</comment>
-        <translation>OpenOrienteering Orange</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green</source>
         <comment>Color 21</comment>
-        <translation>Vit över grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 50%/Yellow 100%</source>
@@ -4790,32 +2688,32 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 24</comment>
-        <translation>Grön 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 25</comment>
-        <translation>Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 26</comment>
-        <translation>Grön 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
         <comment>Color 27</comment>
-        <translation>Grön 100% för undervegetation</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 28</comment>
-        <translation>Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for open land</source>
         <comment>Color 29</comment>
-        <translation>Svart för öppet land</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100%</source>
@@ -4825,12 +2723,12 @@ För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För 
     <message>
         <source>Yellow 50%</source>
         <comment>Color 31</comment>
-        <translation>Gul 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height.
@@ -4843,17 +2741,17 @@ However, contour lines shall be cut out for better legibility, if they touch the
     <message>
         <source>Slope line, contour</source>
         <comment>Name of symbol 101.1</comment>
-        <translation>Lutningsstreck, Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
         <comment>Description of symbol 101.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Index contour</source>
         <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface. Where an index contour coincides with an area of much detail, it may be shown with symbol Contour (101).</source>
@@ -4868,12 +2766,12 @@ However, contour lines shall be cut out for better legibility, if they touch the
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
         <comment>Description of symbol 102.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.2</comment>
-        <translation>Höjdsiffra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour values may be included to aid assessment of large height differences. The labels shall be orientated so that the top of the label is on the higher side of the contour. They are inserted in the index contours in positions where other detail is not obscured.</source>
@@ -4883,7 +2781,7 @@ However, contour lines shall be cut out for better legibility, if they touch the
     <message>
         <source>Form line</source>
         <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An intermediate contour line. Form lines are used where more information can be given about the shape of the ground. They are used only where representation is not possible with ordinary contours. Only one form line may be used between neighbouring contours.</source>
@@ -4898,12 +2796,12 @@ However, contour lines shall be cut out for better legibility, if they touch the
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
         <comment>Description of symbol 103.1</comment>
-        <translation>Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank</source>
         <comment>Name of symbol 104</comment>
-        <translation>Skärning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A steep earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, roads and railway cuttings or embankments.
@@ -4925,7 +2823,7 @@ The tags should show the full extent of the slope, but may be omitted if two ban
     <message>
         <source>Earth bank, tag line</source>
         <comment>Name of symbol 104.2</comment>
-        <translation>Skärning, tagg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The tags should show the full extent of the slope, but may be omitted if two banks are close together.</source>
@@ -4935,7 +2833,7 @@ The tags should show the full extent of the slope, but may be omitted if two ban
     <message>
         <source>Small earth wall</source>
         <comment>Name of symbol 105</comment>
-        <translation>Otydligt jordvall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small distinct earth wall, usually man-made.
@@ -4960,7 +2858,7 @@ Minimum length: 2.0 mm (footprint 8 m).</source>
     <message>
         <source>Small erosion gully</source>
         <comment>Name of symbol 108</comment>
-        <translation>Liten fåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small erosion gully or trench.
@@ -4973,7 +2871,7 @@ Minimum length (isolated): three dots (1.6 mm - footprint 6.4 m).</source>
     <message>
         <source>Small knoll</source>
         <comment>Name of symbol 109</comment>
-        <translation>Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small obvious mound or rocky knoll which cannot be drawn to scale with a Contour (101), Index contour (102) or Form line (103). The symbol shall not touch or overlap contours.
@@ -4985,7 +2883,7 @@ Footprint: 3 m in diameter.</source>
     <message>
         <source>Small elongated knoll</source>
         <comment>Name of symbol 110</comment>
-        <translation>Avlång Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small obvious elongated knoll which cannot be drawn to scale with a Contour (101), Index contour (102) or Form line (103). The maximum length should be 6 m and the maximum width 2 m. Knolls larger than this shall be shown by contours. The symbol shall not be drawn in free form or such that two elongated knoll symbols touch or overlap. The symbol shall not touch or overlap contours.
@@ -4997,7 +2895,7 @@ Footprint: 4.8 m x 2.4 m.</source>
     <message>
         <source>Small depression</source>
         <comment>Name of symbol 111</comment>
-        <translation>Liten grop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small shallow natural depression or hollow which cannot be represented by the symbol Contour (101) or Form line (103) is represented by a semicircle. The symbol shall not touch or overlap other brown symbols.
@@ -5023,7 +2921,7 @@ Footprint: 4.4 m x 5.0 m.</source>
     <message>
         <source>Broken ground</source>
         <comment>Name of symbol 113</comment>
-        <translation>Småkuperad terräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of pits or knolls, which is too complex to be represented in detail.
@@ -5071,7 +2969,7 @@ The minimum number of dots is three.</source>
     <message>
         <source>Prominent landform feature</source>
         <comment>Name of symbol 115</comment>
-        <translation>Övrigt tydligt terrängföremål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small landform feature which is significant or prominent.
@@ -5084,7 +2982,7 @@ Footprint: 5.4 m x 4.6 m.</source>
     <message>
         <source>Impassable cliff</source>
         <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable cliff, quarry or earth bank (see symbol Earth bank 104).
@@ -5097,7 +2995,7 @@ Minimum length: 0.9 mm (footprint 3.6 m).</source>
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable cliff, quarry or earth bank (see symbol Earth bank 104).
@@ -5110,7 +3008,7 @@ Minimum length: 0.9 mm (footprint 3.6 m).</source>
     <message>
         <source>Impassable cliff, top line</source>
         <comment>Name of symbol 201.3</comment>
-        <translation>Opasserbar brant, baslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable cliff, quarry or earth bank (see symbol Earth bank 104).
@@ -5123,7 +3021,7 @@ Minimum length: 0.9 mm (footprint 3.6 m).</source>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.4</comment>
-        <translation>Opasserbar brant, tag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Tags are drawn downwards, showing a cliff&apos;s full extent from the top line to the foot. The tags may extend over an area symbol representing detail immediately below the rock face. When a rock face drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line.</source>
@@ -5242,7 +3140,7 @@ Minimum length: 0.9 mm (footprint 3.6 m).</source>
     <message>
         <source>Rocky pit or cave (without a distinct entrance)</source>
         <comment>Name of symbol 203</comment>
-        <translation>Stenig grop eller grotta (utan tydlig ingång)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A rocky pit, hole, cave (without a distinct entrance) or mineshaft which may constitute a danger to the competitor.
@@ -5281,7 +3179,7 @@ Footprint: 4.4 m x 5.0 m.</source>
     <message>
         <source>Boulder</source>
         <comment>Name of symbol 204</comment>
-        <translation>Sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small distinct boulder.
@@ -5293,7 +3191,7 @@ Footprint: 2.4 m in diameter.</source>
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 205</comment>
-        <translation>Stor sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder.
@@ -5317,7 +3215,7 @@ Minimum area: 0.75 mm2 (footprint 12 m²)</source>
     <message>
         <source>Boulder cluster</source>
         <comment>Name of symbol 207</comment>
-        <translation>Grupp av stenar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct group of boulders so closely clustered together that they cannot be marked individually.
@@ -5329,7 +3227,7 @@ Footprint: 4.8 m x 4.0 m</source>
     <message>
         <source>Boulder cluster, large</source>
         <comment>Name of symbol 207.1</comment>
-        <translation>Grupp av stenar, stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct group of boulders so closely clustered together that they cannot be marked individually.
@@ -5341,7 +3239,7 @@ Footprint: 4.8 m x 4.0 m</source>
     <message>
         <source>Boulder field</source>
         <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually is represented with randomly placed and orientated solid triangles. The runnability is reduced and is indicated by the density of the triangles.
@@ -5353,7 +3251,7 @@ To be able to show obvious height differences within a boulder field, it is perm
     <message>
         <source>Boulder field, single triangle</source>
         <comment>Name of symbol 208.1</comment>
-        <translation>Blockterräng, enskild triangel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually is represented with randomly placed and orientated solid triangles. The runnability is reduced and is indicated by the density of the triangles.
@@ -5365,7 +3263,7 @@ To be able to show obvious height differences within a boulder field, it is perm
     <message>
         <source>Boulder field, single triangle, enlarged</source>
         <comment>Name of symbol 208.2</comment>
-        <translation>Blockterräng, enskild triangel, förstorad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually is represented with randomly placed and orientated solid triangles. The runnability is reduced and is indicated by the density of the triangles.
@@ -5377,7 +3275,7 @@ To be able to show obvious height differences within a boulder field, it is perm
     <message>
         <source>Dense boulder field</source>
         <comment>Name of symbol 208.5</comment>
-        <translation>Tät blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually is represented with randomly placed and orientated solid triangles. The runnability is reduced and is indicated by the density of the triangles.
@@ -5437,7 +3335,7 @@ Density: Minimum 3 dots.</source>
     <message>
         <source>Open sandy ground</source>
         <comment>Name of symbol 213</comment>
-        <translation>Sandområde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of sandy ground or soft gravel with no vegetation which reduces runnability.
@@ -5451,7 +3349,7 @@ Minimum area: 1 mm² (footprint 16 m²).</source>
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 214</comment>
-        <translation>Berg i dagen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of runnable rock without earth or vegetation.
@@ -5464,7 +3362,7 @@ Minimum area: 1 mm² (footprint 16 m²).</source>
     <message>
         <source>Uncrossable body of water (full colour)</source>
         <comment>Name of symbol 301</comment>
-        <translation>Opasserbar vattenyta (full färg)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of deep water such as a lake, pond, river or fountain. The dark blue colour and the bordering black line indicate that the feature shall not be crossed.
@@ -5562,7 +3460,7 @@ Minimum area (inside): 0.5 mm² (footprint 8 m²)</source>
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale.
@@ -5720,7 +3618,7 @@ Footprint: 4.8 m in diameter.</source>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of cultivated land, lawn, field, meadow, grassland, bark mulch etc. without trees, offering very good runnability.
@@ -5732,7 +3630,7 @@ Minimum area: 0.5 mm² (footprint 8 m²).</source>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of meadows with scattered trees or bushes, with grass or similar ground cover offering very good runnability.
@@ -5746,7 +3644,7 @@ Smaller areas must be left out, exaggerated or shown using the symbol Open land 
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402.1</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of meadows with scattered trees or bushes, with grass or similar ground cover offering very good runnability.
@@ -5760,7 +3658,7 @@ Smaller areas must be left out, exaggerated or shown using the symbol Open land 
     <message>
         <source>Rough open land</source>
         <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of heath or moorland, a felled area, a newly planted area (trees lower than ca. 1 m) or other generally open land with rough ground vegetation, i.e. heather or tall grass.
@@ -5772,7 +3670,7 @@ Minimum area: 1 mm² (footprint 16 m²).</source>
     <message>
         <source>Rough open land with scattered trees</source>
         <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of rough open land with scattered trees or bushes. The dots may be white (scattered trees) or green (scattered bushes / thickets).
@@ -5786,7 +3684,7 @@ Smaller areas must be left out, exaggerated or shown using either the symbol Rou
     <message>
         <source>Rough open land with scattered trees</source>
         <comment>Name of symbol 404.1</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of rough open land with scattered trees or bushes. The dots may be white (scattered trees) or green (scattered bushes / thickets).
@@ -5800,7 +3698,7 @@ Smaller areas must be left out, exaggerated or shown using either the symbol Rou
     <message>
         <source>Forest</source>
         <comment>Name of symbol 405</comment>
-        <translation type="unfinished">Skog</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Typical open forest for the particular type of terrain. If no part of the forest is easily runnable then no white should appear on the map.
@@ -5824,7 +3722,7 @@ Minimum area: 1 mm² (footprint 16 m²).</source>
     <message>
         <source>Vegetation: slow running, normal running in one direction</source>
         <comment>Name of symbol 406.1</comment>
-        <translation type="unfinished">Skog, löphindrande (men bättre löpbarhet i en riktning)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with dense vegetation (low visibility) which reduces running to about 60-80% of normal speed.
@@ -5967,7 +3865,7 @@ Minimum area: 9 mm² (144 m²).</source>
     <message>
         <source>Orchard</source>
         <comment>Name of symbol 413</comment>
-        <translation type="unfinished">Fruktodling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with fruit trees or bushes, normally in regular pattern.
@@ -5980,7 +3878,7 @@ Minimum area: 4 mm² (64 m²)</source>
     <message>
         <source>Orchard, rough open land</source>
         <comment>Name of symbol 413.1</comment>
-        <translation type="unfinished">Fruktodling, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with fruit trees or bushes, normally in regular pattern.
@@ -6019,7 +3917,7 @@ Minimum area: 4 mm² (64 m²)</source>
     <message>
         <source>Distinct cultivation boundary</source>
         <comment>Name of symbol 415</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A boundary of symbol cultivated land vegetation (401, 412, 413, 414) or a permanent boundary between different types of cultivated land, when not shown with other symbols (fence, wall, path, etc.)
@@ -6030,7 +3928,7 @@ Minimum length: 1 mm (footprint 4 m).</source>
     <message>
         <source>Distinct vegetation boundary</source>
         <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct forest edge or very distinct vegetation boundary within the forest. For indistinct boundaries, the area edges are shown only by the change in colour and / or dot screen.
@@ -6063,7 +3961,7 @@ Footprint: 3.2 m in diameter.</source>
     <message>
         <source>Prominent vegetation feature</source>
         <comment>Name of symbol 419</comment>
-        <translation type="unfinished">Tydligt vegetationsföremål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vegetation feature which is significant or prominent.
@@ -6302,7 +4200,7 @@ Minimum length: two sections of double dashes (7.9 mm - footprint 31.6 m).</sour
     <message>
         <source>Narrow ride</source>
         <comment>Name of symbol 508</comment>
-        <translation type="unfinished">Rågång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct ride is a linear break in the forest (usually in a plantation), which does not have a distinct path along it. Where there is a path along a ride, the symbol Small unpaved footpath or track (506) shall be used.
@@ -6313,7 +4211,7 @@ Minimum length: two dashes (9.75 mm - footprint 39 m).</source>
     <message>
         <source>Railway</source>
         <comment>Name of symbol 509.1</comment>
-        <translation type="unfinished">Järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A railway is a permanent track laid with rails on which locomotives, carriages or wagons can travel.
@@ -6336,7 +4234,7 @@ Tramways are generally not represented. However, if they serve navigation or ori
     <message>
         <source>Power line, cableway or skilift</source>
         <comment>Name of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Power line, cableway or skilift.
@@ -6349,7 +4247,7 @@ The bars indicate the exact location of the pylons. If a section of a power line
     <message>
         <source>Major power line</source>
         <comment>Name of symbol 511</comment>
-        <translation type="unfinished">Större kraftledning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the powerline. Very large carrying masts shall be represented in plan shape using symbol Building (521) or High tower (524). In this case, the cable lines can be left out (the map shows only the pylons).
@@ -6432,7 +4330,7 @@ Minimum length (isolated): 2.4 mm (footprint 9.6 m).</source>
     <message>
         <source>Impassable wall</source>
         <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Opasserbar mur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable or uncrossable wall or retaining wall is a wall, which fulfil the function of an enclosure or solid barrier. It shall not be crossed.
@@ -6954,7 +4852,7 @@ Minimum area: 4 mm² (footprint 64 m²).</source>
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 710.1</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossing point through or over a wall or fence, or across a road or railway or through a tunnel or an out-of-bounds area is drawn on the map with two lines curving outwards.
@@ -7022,308 +4920,18 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
 </context>
 <context>
     <name>ISSOM</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 0</comment>
-        <translation>Violett</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 2</comment>
-        <translation>Svart</translation>
-    </message>
-    <message>
-        <source>Opaque White below Black</source>
-        <comment>Color 3</comment>
-        <translation>Ogenomskinlig Vit under Svart</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 6</comment>
-        <translation type="unfinished">Svart 20%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 8</comment>
-        <translation>Svart 20%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 15</comment>
-        <translation type="unfinished">Väg sidlinje</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 16</comment>
-        <translation>Ogenomskinlig Blå</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 17</comment>
-        <translation>Blå</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 21</comment>
-        <translation>Brun</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 22</comment>
-        <translation>OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 24</comment>
-        <translation>Grön 50%, Gul 100%</translation>
-    </message>
-    <message>
-        <source>Green, Black 50%</source>
-        <comment>Color 26</comment>
-        <translation>Grön 100%, Svart 50%</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 27</comment>
-        <translation>Ogenomskinlig Grön</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 28</comment>
-        <translation>Grön</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 29</comment>
-        <translation>Grön 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 30</comment>
-        <translation>Grön 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 31</comment>
-        <translation>Grön under ljusgrön</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 32</comment>
-        <translation>Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 33</comment>
-        <translation>Gul 50%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
-    </message>
-    <message>
-        <source>Index contour</source>
-        <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
-    </message>
-    <message>
-        <source>Form line</source>
-        <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Höjdsiffra</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Höjdsiffror kan placeras på stödkurvorna. Höjdsiffrorna infogas på ställen där andra detaljer inte döljs. Siffrorna orienteras så att uppåt är på den högre sidan av stödkurvan.</translation>
-    </message>
-    <message>
-        <source>Earth bank</source>
-        <comment>Name of symbol 106.0</comment>
-        <translation>Skärning</translation>
-    </message>
-    <message>
-        <source>Earth bank, tag line</source>
-        <comment>Name of symbol 106.2</comment>
-        <translation>Skärning, tagg</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of wide earth banks.</source>
-        <comment>Description of symbol 106.2</comment>
-        <translation>Använd denna symbol för att visa den totala omfattningen av breda jordvallar.</translation>
-    </message>
-    <message>
-        <source>Small earth wall</source>
-        <comment>Name of symbol 108.1</comment>
-        <translation>Otydligt jordvall</translation>
-    </message>
-    <message>
-        <source>Small erosion gully</source>
-        <comment>Name of symbol 110</comment>
-        <translation>Liten fåra</translation>
-    </message>
-    <message>
-        <source>Small knoll</source>
-        <comment>Name of symbol 112</comment>
-        <translation>Punkthöjd</translation>
-    </message>
-    <message>
-        <source>Small depression</source>
-        <comment>Name of symbol 115</comment>
-        <translation>Liten grop</translation>
-    </message>
-    <message>
-        <source>Pit</source>
-        <comment>Name of symbol 116</comment>
-        <translation>Liten grop med branta sidor</translation>
-    </message>
-    <message>
-        <source>Broken ground</source>
-        <comment>Name of symbol 117.2</comment>
-        <translation>Småkuperad terräng</translation>
-    </message>
-    <message>
-        <source>Prominent landform feature</source>
-        <comment>Name of symbol 118</comment>
-        <translation>Övrigt tydligt terrängföremål</translation>
-    </message>
-    <message>
-        <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
-        <comment>Description of symbol 201.1</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
-    </message>
-    <message>
-        <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
-        <comment>Description of symbol 201.1.1</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, tag line</source>
-        <comment>Name of symbol 201.2</comment>
-        <translation>Opasserbar brant, tag</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of a wide cliff.</source>
-        <comment>Description of symbol 201.2</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
-    </message>
-    <message>
-        <source>Boulder</source>
-        <comment>Name of symbol 206</comment>
-        <translation>Sten</translation>
-    </message>
-    <message>
-        <source>Large boulder</source>
-        <comment>Name of symbol 207</comment>
-        <translation>Stor sten</translation>
-    </message>
-    <message>
-        <source>Boulder field</source>
-        <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Sandområde</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Berg i dagen</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
-    </message>
-    <message>
-        <source>Rough open land</source>
-        <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
-    </message>
-    <message>
-        <source>Rough open land with scattered trees</source>
-        <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
-    </message>
-    <message>
-        <source>Orchard</source>
-        <comment>Name of symbol 412</comment>
-        <translation type="unfinished">Fruktodling</translation>
-    </message>
-    <message>
-        <source>Distinct cultivation boundary</source>
-        <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Distinct vegetation boundary</source>
-        <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
-    </message>
-    <message>
-        <source>Prominent vegetation feature</source>
-        <comment>Name of symbol 420</comment>
-        <translation type="unfinished">Tydligt vegetationsföremål</translation>
-    </message>
-    <message>
-        <source>Narrow ride</source>
-        <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Rågång</translation>
-    </message>
-    <message>
-        <source>Railway</source>
-        <comment>Name of symbol 515.1</comment>
-        <translation type="unfinished">Järnväg</translation>
-    </message>
-    <message>
-        <source>Power line, cableway or skilift</source>
-        <comment>Name of symbol 516</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift</translation>
-    </message>
-    <message>
-        <source>Major power line</source>
-        <comment>Name of symbol 517</comment>
-        <translation type="unfinished">Större kraftledning</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 525</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 708</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
 </context>
 <context>
     <name>ISMTBOM</name>
     <message>
         <source>Purple</source>
         <comment>Color 0</comment>
-        <translation>Violett</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black</source>
         <comment>Color 1</comment>
-        <translation>Svart</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower Purple</source>
@@ -7338,37 +4946,37 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Brown 50%</source>
         <comment>Color 4</comment>
-        <translation>Brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below light browns</source>
         <comment>Color 5</comment>
-        <translation>Svart under ljusbrun</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown</source>
         <comment>Color 6</comment>
-        <translation>Brun</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 7</comment>
-        <translation>OpenOrienteering Orange</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Opaque Blue</source>
         <comment>Color 8</comment>
-        <translation>Ogenomskinlig Blå</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue</source>
         <comment>Color 9</comment>
-        <translation>Blå</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50%</source>
         <comment>Color 10</comment>
-        <translation>Blå 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 30%</source>
@@ -7378,7 +4986,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Green 50%, Yellow</source>
         <comment>Color 12</comment>
-        <translation>Grön 50%, Gul 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green over White over Green</source>
@@ -7388,7 +4996,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Opaque White over Green</source>
         <comment>Color 14</comment>
-        <translation>Ogenomskinlig vit över grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow over Green</source>
@@ -7398,37 +5006,37 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Opaque Green</source>
         <comment>Color 16</comment>
-        <translation>Ogenomskinlig Grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green</source>
         <comment>Color 17</comment>
-        <translation>Grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 18</comment>
-        <translation>Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 19</comment>
-        <translation>Grön 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green below light greens</source>
         <comment>Color 20</comment>
-        <translation>Grön under ljusgrön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow</source>
         <comment>Color 21</comment>
-        <translation>Gul 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 22</comment>
-        <translation>Gul 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over Yellow 70%</source>
@@ -7443,7 +5051,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 metres. The smallest bend in a contour is 0.25 mm from centre to centre of the lines.</source>
@@ -7453,7 +5061,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Index contour</source>
         <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface. Where an index contour coincides with an area of much detail, it may be shown with a normal contour line.</source>
@@ -7473,17 +5081,17 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 105</comment>
-        <translation>Höjdsiffra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
         <comment>Description of symbol 105</comment>
-        <translation>Höjdsiffror kan placeras på stödkurvorna. Höjdsiffrorna infogas på ställen där andra detaljer inte döljs. Siffrorna orienteras så att uppåt är på den högre sidan av stödkurvan.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank</source>
         <comment>Name of symbol 106</comment>
-        <translation>Skärning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A steep earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. The tags should show the full extent of the slope, but may be omitted if two banks are close together. Impassable banks should be drawn with symbol 201 (impassable cliff). The line width of very high earth banks may be 0.25 mm.</source>
@@ -7493,7 +5101,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Earth bank, minimum size</source>
         <comment>Name of symbol 106.0.1</comment>
-        <translation>Skärning, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A steep earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments. The tags should show the full extent of the slope, but may be omitted if two banks are close together. Impassable banks should be drawn with symbol 201 (impassable cliff). The line width of very high earth banks may be 0.25 mm.</source>
@@ -7523,27 +5131,27 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Earth bank, tag line</source>
         <comment>Name of symbol 106.2</comment>
-        <translation>Skärning, tagg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of wide earth banks.</source>
         <comment>Description of symbol 106.2</comment>
-        <translation>Använd denna symbol för att visa den totala omfattningen av breda jordvallar.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth wall</source>
         <comment>Name of symbol 107</comment>
-        <translation>Jordvall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height is 1 m.</source>
         <comment>Description of symbol 107</comment>
-        <translation>Tydligt jordvall. Lägsta höjd: 1 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Erosion gully</source>
         <comment>Name of symbol 109</comment>
-        <translation>Erosionsfåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An erosion gully or trench which is too small to be shown by symbol 106 is shown by a single line. The line width reflects the size of the gully. Minimum depth 1 m. The end of the line is pointed.</source>
@@ -7553,7 +5161,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Impassable cliff</source>
         <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable cliff, quarry or earth bank (see 106) is shown with a 0.35 mm line and downward tags showing its full extent from the top line to the foot. For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm). The tags may extend over an area symbol representing detail immediately below the rock face. When a rock face drops straight into water making it impossible to pass under the cliff along the water&apos;s edge, the bank line is omitted or the tags should clearly extend over the bank line.</source>
@@ -7563,7 +5171,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.0.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable cliff, quarry or earth bank (see 106) is shown with a 0.35 mm line and downward tags showing its full extent from the top line to the foot. For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm). The tags may extend over an area symbol representing detail immediately below the rock face. When a rock face drops straight into water making it impossible to pass under the cliff along the water&apos;s edge, the bank line is omitted or the tags should clearly extend over the bank line.</source>
@@ -7578,17 +5186,17 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
         <comment>Description of symbol 201.1</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.2</comment>
-        <translation>Opasserbar brant, tag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of a wide cliff.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rock pillars/cliffs</source>
@@ -7603,7 +5211,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Boulder</source>
         <comment>Name of symbol 206</comment>
-        <translation>Sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small distinct boulder (minimum height 1 m). Every boulder marked on the map should be immediately identifiable on the ground. To be able to show the distinction between boulders with significant difference in size it is permitted to enlarge this symbol by 20% (diameter 0.5 mm).</source>
@@ -7643,7 +5251,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Open sandy ground</source>
         <comment>Name of symbol 211</comment>
-        <translation>Sandområde</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of soft sandy ground or gravel with no vegetation and where running is slow. Where an area of sandy ground is open but running is good, it is shown as open land (401/402).</source>
@@ -7653,7 +5261,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Bare rock</source>
         <comment>Name of symbol 212</comment>
-        <translation>Berg i dagen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A runnable area of rock without earth or vegetation is shown as bare rock. An area of rock covered with grass, moss or other low vegetation is shown as open land (401/402).</source>
@@ -7680,7 +5288,7 @@ Small areas of water should be shown with full colour. Use symbol 302 (&quot;Pon
     <message>
         <source>A black bank line indicates that the feature cannot be crossed.</source>
         <comment>Description of symbol 301.1</comment>
-        <translation type="unfinished">En svart linje indikerar att föremålet inte kan korsas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lake, with bank line</source>
@@ -7702,7 +5310,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Crossable watercourse</source>
         <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossable watercourse, minimum 2 m wide. The width of watercourses over 5 m wide should be shown to scale.</source>
@@ -7777,7 +5385,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cultivated land, fields, meadows, grassland, etc. without trees, offering easy running. If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -7787,7 +5395,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Meadows with scattered trees or bushes, with grass or similar ground cover offering easy running. Areas smaller than 10 mm at the maps scale are shown as open land (401). Individual trees may be added (418, 419, 420). If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -7797,7 +5405,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Rough open land</source>
         <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Heath, moorland, felled areas, newly planted areas (trees lower than ca. 1 m) or other generally open land with rough ground vegetation, heather or tall grass. Symbol 403 may be combined with symbols 407 and 409 to show reduced runnability.</source>
@@ -7807,7 +5415,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Rough open land with scattered trees</source>
         <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Where there are scattered trees in rough open land, areas of white (or green) should appear in the tone. Such an area may be generalised by using a regular pattern of large white dots in the yellow screen. Areas smaller than 16 mm in the maps scale are shown as rough open land (403). Individual trees may be added (418, 419, 420).</source>
@@ -7837,7 +5445,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Orchard</source>
         <comment>Name of symbol 412</comment>
-        <translation type="unfinished">Fruktodling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with fruit trees or bushes. The dot lines may be orientated to show the direction of planting. If yellow coloured areas becomes dominant, a screen (75%) instead of full yellow may be used.</source>
@@ -7997,7 +5605,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Narrow ride</source>
         <comment>Name of symbol 509.1</comment>
-        <translation type="unfinished">Rågång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Non-ridable narrow forest rides should be represented.</source>
@@ -8007,7 +5615,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Railway</source>
         <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A railway or other kind of railed track (tramway, truckway, etc.).</source>
@@ -8027,7 +5635,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Major power line</source>
         <comment>Name of symbol 517</comment>
-        <translation type="unfinished">Större kraftledning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the powerline.</source>
@@ -8077,7 +5685,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 525</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>All ways through or over high fences or walls must be indicated. The symbol may also be used for a gate through or stile over a stone wall (521) or a fence (524) or a pipeline (534).</source>
@@ -8112,7 +5720,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Paved area</source>
         <comment>Name of symbol 529</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area of hard standing used for parking or other purposes.</source>
@@ -8122,12 +5730,12 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Paved area, bounding line</source>
         <comment>Name of symbol 529.1</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area, with bounding line</source>
         <comment>Name of symbol 529.2</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Firing range</source>
@@ -8337,7 +5945,7 @@ This is symbol &quot;302 Pond&quot; in ISOM, but is a variation of &quot;301 Lak
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 708</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossing point through or over a wall or fence, or across a road or railway or through a tunnel or an out-of-bounds area is drawn on the map with two lines curving outwards.</source>
@@ -8434,7 +6042,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Form line</source>
         <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An intermediate contour line. Form lines are used where more information can be given about the shape of the ground. They are used only where representation is not possible with ordinary contours. Only one form line may be used between neighbouring contours.</source>
@@ -8444,17 +6052,17 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Small earth wall</source>
         <comment>Name of symbol 108</comment>
-        <translation>Otydligt jordvall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small or partly ruined earth wall shall be shown with a dashed line. Minimum height is 0.5 m.</source>
         <comment>Description of symbol 108</comment>
-        <translation>Otydligt eller raserad jordvall. Lägsta höjd: 0,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small erosion gully</source>
         <comment>Name of symbol 110</comment>
-        <translation>Liten fåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small erosion gully or trench. Minimum depth 0.5 m.</source>
@@ -8464,7 +6072,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Small knoll</source>
         <comment>Name of symbol 112</comment>
-        <translation>Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small obvious mound or rocky knoll which cannot be drawn to scale with a contour (diameter of mound less than ca. 5 m). The height of the knoll should be a minimum of 1 m from the surrounding ground. The symbol may not touch a contour line.</source>
@@ -8484,7 +6092,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Small depression</source>
         <comment>Name of symbol 115</comment>
-        <translation>Liten grop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small shallow natural depressions and hollows (minimum diameter 2 m) which cannot be shown to scale by contours are represented by a semicircle. Minimum depth from the surrounding ground should be 1 m. Location is the centre of gravity of the symbol, which is orientated to north. Symbol 116 is used for man-made pits.</source>
@@ -8494,7 +6102,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Pit</source>
         <comment>Name of symbol 116</comment>
-        <translation>Liten grop med branta sidor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Pits and holes with distinct steep sides which cannot be shown to scale by symbol 106 (minimum diameter 2 m). Minimum depth from the surrounding ground should be 1 m. Location is the centre of gravity of the symbol which is orientated to north.</source>
@@ -8509,7 +6117,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>An area of pits or knolls which is too intricate to be shown in detail. The density of randomly placed dots may vary according to the detail on the ground.</source>
         <comment>Description of symbol 117.1</comment>
-        <translation>Ett område med små gropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och har liten inverkan på löpbarheten. Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Broken ground, big</source>
@@ -8614,7 +6222,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 207</comment>
-        <translation>Stor sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder. For gigantic boulders symbol 202 should be used.</source>
@@ -8624,12 +6232,12 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Boulder field</source>
         <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many blocks of stone that they cannot be marked individually is shown with randomly orientated solid triangles with sides of ratio 8:6:5. A minimum of two triangles should be used. The going is indicated by the density of the triangles. To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
         <comment>Description of symbol 208</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5. Minst 2 trianglar ska användas. The going is indicated by the density of the triangles. För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field, large</source>
@@ -8639,12 +6247,12 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
         <comment>Description of symbol 208.1</comment>
-        <translation>För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder cluster</source>
         <comment>Name of symbol 209</comment>
-        <translation>Grupp av stenar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small distinct group of boulders so closely clustered together that they cannot be marked individually. The symbol is an equilateral triangle orientated to the north. To be able to show the distinction between boulder clusters with significant difference in size it is permitted to enlarge this symbol by 25% (1.0 mm).</source>
@@ -8654,7 +6262,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Boulder cluster, large</source>
         <comment>Name of symbol 209.1</comment>
-        <translation>Grupp av stenar, stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>To be able to show the distinction between boulder clusters with significant difference in size it is permitted to enlarge this symbol by 25% (1.0 mm).</source>
@@ -8664,7 +6272,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Waterhole</source>
         <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A water-filled pit or an area of water which is too small to be shown to scale. Location is the centre of gravity of the symbol, which is orientated to north.</source>
@@ -8799,7 +6407,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Distinct cultivation boundary</source>
         <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The boundary of cultivated land when not shown with other symbols (fence, wall, path, etc.) is shown with a black line. A permanent boundary between different types of cultivated land is also shown with this symbol.</source>
@@ -8819,7 +6427,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Distinct vegetation boundary</source>
         <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct forest edge or very distinct vegetation boundary within the forest.</source>
@@ -8859,7 +6467,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Road</source>
         <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Väg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road suitable for motor vehicles in all weather. Width less than 3 m.</source>
@@ -8869,7 +6477,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Vehicle track</source>
         <comment>Name of symbol 505</comment>
-        <translation type="unfinished">Körväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A track or poorly maintained road suitable for vehicles only when travelling slowly. Width less than 3 m.</source>
@@ -8909,7 +6517,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Narrow ride</source>
         <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Rågång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct ride, less than ca. 5 m wide. A ride is a linear break in the forest (usually plantation) which does not have a distinct path along it. Where there is a path along a ride, symbols 507 or 508 should be used in place of symbol 509.</source>
@@ -8919,7 +6527,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Footbridge</source>
         <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Gångbro</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A footbridge with no path leading to it.
@@ -8950,7 +6558,7 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Fence</source>
         <comment>Name of symbol 522</comment>
-        <translation type="unfinished">Stängsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A wooden or wire fence less than ca. 1.5 m high.</source>
@@ -9095,383 +6703,18 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
 </context>
 <context>
     <name>ISSkiOM</name>
-    <message>
-        <source>Purple</source>
-        <comment>Color 1</comment>
-        <translation>Violett</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <comment>Color 3</comment>
-        <translation>Svart</translation>
-    </message>
-    <message>
-        <source>Brown 50%</source>
-        <comment>Color 4</comment>
-        <translation>Brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below light browns</source>
-        <comment>Color 5</comment>
-        <translation>Svart under ljusbrun</translation>
-    </message>
-    <message>
-        <source>Brown</source>
-        <comment>Color 6</comment>
-        <translation>Brun</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 7</comment>
-        <translation>OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Opaque Blue</source>
-        <comment>Color 8</comment>
-        <translation>Ogenomskinlig Blå</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <comment>Color 9</comment>
-        <translation>Blå</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 10</comment>
-        <translation>Blå 50%</translation>
-    </message>
-    <message>
-        <source>Green 50%, Yellow</source>
-        <comment>Color 12</comment>
-        <translation>Grön 50%, Gul 100%</translation>
-    </message>
-    <message>
-        <source>Opaque White over Green</source>
-        <comment>Color 14</comment>
-        <translation>Ogenomskinlig vit över grön</translation>
-    </message>
-    <message>
-        <source>Opaque Green</source>
-        <comment>Color 15</comment>
-        <translation>Ogenomskinlig Grön</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <comment>Color 16</comment>
-        <translation>Grön</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 17</comment>
-        <translation>Grön 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 18</comment>
-        <translation>Grön 30%</translation>
-    </message>
-    <message>
-        <source>Green below light greens</source>
-        <comment>Color 19</comment>
-        <translation>Grön under ljusgrön</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 20</comment>
-        <translation>Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 21</comment>
-        <translation>Gul 50%</translation>
-    </message>
-    <message>
-        <source>Contour</source>
-        <comment>Name of symbol 101</comment>
-        <translation>Höjdkurva</translation>
-    </message>
-    <message>
-        <source>Index contour</source>
-        <comment>Name of symbol 102</comment>
-        <translation>Stödkurva</translation>
-    </message>
-    <message>
-        <source>Form line</source>
-        <comment>Name of symbol 103</comment>
-        <translation>Hjälpkurva</translation>
-    </message>
-    <message>
-        <source>Contour value</source>
-        <comment>Name of symbol 105</comment>
-        <translation>Höjdsiffra</translation>
-    </message>
-    <message>
-        <source>Contour values may be included to aid assessment of large height differences. They are inserted in the index contours in positions where other detail is not obscured. The figures should be orientated so that the top of the figure is on the higher side of the contour.</source>
-        <comment>Description of symbol 105</comment>
-        <translation>Höjdsiffror kan placeras på stödkurvorna. Höjdsiffrorna infogas på ställen där andra detaljer inte döljs. Siffrorna orienteras så att uppåt är på den högre sidan av stödkurvan.</translation>
-    </message>
-    <message>
-        <source>Earth bank</source>
-        <comment>Name of symbol 106</comment>
-        <translation>Skärning</translation>
-    </message>
-    <message>
-        <source>Earth bank, minimum size</source>
-        <comment>Name of symbol 106.0.1</comment>
-        <translation>Skärning, minsta längd</translation>
-    </message>
-    <message>
-        <source>Earth bank, tag line</source>
-        <comment>Name of symbol 106.2</comment>
-        <translation>Skärning, tagg</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of wide earth banks.</source>
-        <comment>Description of symbol 106.2</comment>
-        <translation>Använd denna symbol för att visa den totala omfattningen av breda jordvallar.</translation>
-    </message>
-    <message>
-        <source>Earth wall</source>
-        <comment>Name of symbol 107</comment>
-        <translation>Jordvall</translation>
-    </message>
-    <message>
-        <source>Distinct earth wall. Minimum height is 1 m.</source>
-        <comment>Description of symbol 107</comment>
-        <translation>Tydligt jordvall. Lägsta höjd: 1 m.</translation>
-    </message>
-    <message>
-        <source>Erosion gully</source>
-        <comment>Name of symbol 109</comment>
-        <translation>Erosionsfåra</translation>
-    </message>
-    <message>
-        <source>Impassable cliff</source>
-        <comment>Name of symbol 201</comment>
-        <translation>Opasserbar brant</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, minimum size</source>
-        <comment>Name of symbol 201.0.1</comment>
-        <translation>Opasserbar brant, minsta längd</translation>
-    </message>
-    <message>
-        <source>For vertical rock faces the tags may be omitted if space is short, e.g. narrow passages between cliffs (the passage should be drawn with a width of at least 0.3 mm).</source>
-        <comment>Description of symbol 201.1</comment>
-        <translation>Lutningsstreck kan utelämnas om utrymmet är begränsat (Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara symboler måste vara mer än 0,3 mm).</translation>
-    </message>
-    <message>
-        <source>Impassable cliff, tag line</source>
-        <comment>Name of symbol 201.2</comment>
-        <translation>Opasserbar brant, tag</translation>
-    </message>
-    <message>
-        <source>Use this symbol to display the full extent of a wide cliff.</source>
-        <comment>Description of symbol 201.2</comment>
-        <translation>Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
-    </message>
-    <message>
-        <source>Boulder</source>
-        <comment>Name of symbol 206</comment>
-        <translation>Sten</translation>
-    </message>
-    <message>
-        <source>Large boulder</source>
-        <comment>Name of symbol 207</comment>
-        <translation>Stor sten</translation>
-    </message>
-    <message>
-        <source>Boulder field</source>
-        <comment>Name of symbol 208</comment>
-        <translation>Blockterräng</translation>
-    </message>
-    <message>
-        <source>An area which is covered with so many blocks of stone that they cannot be marked individually is shown with randomly orientated solid triangles with sides of ratio 8:6:5. A minimum of two triangles should be used. The going is indicated by the density of the triangles. To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5. Minst 2 trianglar ska användas. The going is indicated by the density of the triangles. För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.</translation>
-    </message>
-    <message>
-        <source>To be able to show the distinction between boulder fields with a significant difference in boulder size it is permitted to enlarge the triangles by 20%.</source>
-        <comment>Description of symbol 208.1</comment>
-        <translation>För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.</translation>
-    </message>
-    <message>
-        <source>Boulder cluster</source>
-        <comment>Name of symbol 209</comment>
-        <translation>Grupp av stenar</translation>
-    </message>
-    <message>
-        <source>Boulder cluster, large</source>
-        <comment>Name of symbol 209.1</comment>
-        <translation>Grupp av stenar, stor</translation>
-    </message>
-    <message>
-        <source>A black bank line indicates that the feature cannot be crossed.</source>
-        <comment>Description of symbol 301.1</comment>
-        <translation type="unfinished">En svart linje indikerar att föremålet inte kan korsas.</translation>
-    </message>
-    <message>
-        <source>Crossable watercourse</source>
-        <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
-    </message>
-    <message>
-        <source>Open land</source>
-        <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
-    </message>
-    <message>
-        <source>Open land with scattered trees</source>
-        <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
-    </message>
-    <message>
-        <source>Rough open land</source>
-        <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
-    </message>
-    <message>
-        <source>Rough open land with scattered trees</source>
-        <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
-    </message>
-    <message>
-        <source>Orchard</source>
-        <comment>Name of symbol 412</comment>
-        <translation type="unfinished">Fruktodling</translation>
-    </message>
-    <message>
-        <source>Distinct cultivation boundary</source>
-        <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Distinct vegetation boundary</source>
-        <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
-    </message>
-    <message>
-        <source>Road</source>
-        <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Väg</translation>
-    </message>
-    <message>
-        <source>Narrow ride</source>
-        <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Rågång</translation>
-    </message>
-    <message>
-        <source>Railway</source>
-        <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Järnväg</translation>
-    </message>
-    <message>
-        <source>Major power line</source>
-        <comment>Name of symbol 517</comment>
-        <translation type="unfinished">Större kraftledning</translation>
-    </message>
-    <message>
-        <source>Fence</source>
-        <comment>Name of symbol 522</comment>
-        <translation type="unfinished">Stängsel</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 525</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
-    <message>
-        <source>Paved area</source>
-        <comment>Name of symbol 529</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
-    </message>
-    <message>
-        <source>Paved area, bounding line</source>
-        <comment>Name of symbol 529.1</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Paved area, with bounding line</source>
-        <comment>Name of symbol 529.2</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
-    </message>
-    <message>
-        <source>Crossing point</source>
-        <comment>Name of symbol 708</comment>
-        <translation type="unfinished">Genomgång</translation>
-    </message>
-    <message>
-        <source>Small earth wall</source>
-        <comment>Name of symbol 108</comment>
-        <translation>Otydligt jordvall</translation>
-    </message>
-    <message>
-        <source>A small or partly ruined earth wall shall be shown with a dashed line. Minimum height is 0.5 m.</source>
-        <comment>Description of symbol 108</comment>
-        <translation>Otydligt eller raserad jordvall. Lägsta höjd: 0,5 m.</translation>
-    </message>
-    <message>
-        <source>Small erosion gully</source>
-        <comment>Name of symbol 110</comment>
-        <translation>Liten fåra</translation>
-    </message>
-    <message>
-        <source>Small knoll</source>
-        <comment>Name of symbol 112</comment>
-        <translation>Punkthöjd</translation>
-    </message>
-    <message>
-        <source>Small depression</source>
-        <comment>Name of symbol 115</comment>
-        <translation>Liten grop</translation>
-    </message>
-    <message>
-        <source>Pit</source>
-        <comment>Name of symbol 116</comment>
-        <translation>Liten grop med branta sidor</translation>
-    </message>
-    <message>
-        <source>An area of pits or knolls which is too intricate to be shown in detail. The density of randomly placed dots may vary according to the detail on the ground.</source>
-        <comment>Description of symbol 117.1</comment>
-        <translation>Ett område med små gropar och/eller höjder som är alltför komplicerat för att redovisas i detalj, eller andra typer av ojämn mark som är tydligt urskiljbart och har liten inverkan på löpbarheten. Punkterna ska placeras slumpmässigt utan att påverka läsbarheten för viktiga terrängföremål.</translation>
-    </message>
-    <message>
-        <source>Open sandy ground</source>
-        <comment>Name of symbol 211</comment>
-        <translation>Sandområde</translation>
-    </message>
-    <message>
-        <source>Bare rock</source>
-        <comment>Name of symbol 212</comment>
-        <translation>Berg i dagen</translation>
-    </message>
-    <message>
-        <source>Waterhole</source>
-        <comment>Name of symbol 303</comment>
-        <translation>Vattenhål</translation>
-    </message>
-    <message>
-        <source>Vehicle track</source>
-        <comment>Name of symbol 505</comment>
-        <translation type="unfinished">Körväg</translation>
-    </message>
-    <message>
-        <source>Footbridge</source>
-        <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Gångbro</translation>
-    </message>
 </context>
 <context>
     <name>ISSkiOM 2019</name>
     <message>
         <source>Purple for course overprint</source>
         <comment>Color 0</comment>
-        <translation>Lila för kurs övertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for course overprint</source>
         <comment>Color 1</comment>
-        <translation>Vit för kurs övertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green for SkiO</source>
@@ -9481,322 +6724,322 @@ Note: if the stream is wider than 0.25mm, adjust this symbol so it extends 0.5mm
     <message>
         <source>Upper purple for course overprint</source>
         <comment>Color 3</comment>
-        <translation type="unfinished">Lila för banövertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railroad</source>
         <comment>Color 4</comment>
-        <translation type="unfinished">Vit för banövertryck</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100%</source>
         <comment>Color 5</comment>
-        <translation type="unfinished">Svart 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%</source>
         <comment>Color 6</comment>
-        <translation type="unfinished">Grön 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White for railway</source>
         <comment>Color 7</comment>
-        <translation type="unfinished">Vit för järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100%</source>
         <comment>Color 8</comment>
-        <translation type="unfinished">Blå 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100%</source>
         <comment>Color 9</comment>
-        <translation type="unfinished">Brun 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Purple for track symbols</source>
         <comment>Color 10</comment>
-        <translation type="unfinished">Lila för spår symboler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below purple for track symbols</source>
         <comment>Color 11</comment>
-        <translation type="unfinished">Svart under lila för spår symboler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 65%</source>
         <comment>Color 12</comment>
-        <translation type="unfinished">Svart 65%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20%</source>
         <comment>Color 13</comment>
-        <translation type="unfinished">Svart 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Upper brown 50%</source>
         <comment>Color 14</comment>
-        <translation type="unfinished">Övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below upper brown 50%</source>
         <comment>Color 15</comment>
-        <translation type="unfinished">Svart under övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower brown 50%</source>
         <comment>Color 16</comment>
-        <translation type="unfinished">Lägre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black below lower brown 50%</source>
         <comment>Color 17</comment>
-        <translation type="unfinished">Svart under nedre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% for area features</source>
         <comment>Color 18</comment>
-        <translation type="unfinished">Blå 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70%</source>
         <comment>Color 19</comment>
-        <translation type="unfinished">Blå 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50%</source>
         <comment>Color 20</comment>
-        <translation type="unfinished">Blå 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange</source>
         <comment>Color 21</comment>
-        <translation type="unfinished">OpenOrienteering Orange</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride</source>
         <comment>Color 22</comment>
-        <translation type="unfinished">Gul 100% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60% for narrow ride</source>
         <comment>Color 23</comment>
-        <translation type="unfinished">Grön 60% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% for narrow ride</source>
         <comment>Color 24</comment>
-        <translation type="unfinished">Grön 30% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green</source>
         <comment>Color 25</comment>
-        <translation type="unfinished">Vit över grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100%/Green 50%</source>
         <comment>Color 26</comment>
-        <translation type="unfinished">Gul 100%/Grön 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 25% (Grey)</source>
         <comment>Color 27</comment>
-        <translation type="unfinished">Svart 25% (Grå)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100%/Black 50%</source>
         <comment>Color 28</comment>
-        <translation type="unfinished">Grön 100%/Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for area features</source>
         <comment>Color 29</comment>
-        <translation type="unfinished">Grön 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 60%</source>
         <comment>Color 30</comment>
-        <translation type="unfinished">Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30%</source>
         <comment>Color 31</comment>
-        <translation type="unfinished">Grön 30%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% for undergrowth</source>
         <comment>Color 32</comment>
-        <translation type="unfinished">Grön 100% för undervegetation</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 33</comment>
-        <translation type="unfinished">Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for open land</source>
         <comment>Color 34</comment>
-        <translation type="unfinished">Svart för öppet land</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow</source>
         <comment>Color 35</comment>
-        <translation type="unfinished">Gul 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for area features</source>
         <comment>Color 36</comment>
-        <translation type="unfinished">Gul 100% för areafunktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 37</comment>
-        <translation type="unfinished">Gul 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% point symbols</source>
         <comment>Color 38</comment>
-        <translation type="unfinished">Grön 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% point symbols</source>
         <comment>Color 39</comment>
-        <translation type="unfinished">Vit för järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% point symbols</source>
         <comment>Color 40</comment>
-        <translation type="unfinished">Blå 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% line symbols</source>
         <comment>Color 41</comment>
-        <translation type="unfinished">Brun 100%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 100% line symbols</source>
         <comment>Color 42</comment>
-        <translation type="unfinished">Svart under lila för spår symboler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lower purple for course overprint</source>
         <comment>Color 43</comment>
-        <translation type="unfinished">Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for road infill</source>
         <comment>Color 44</comment>
-        <translation type="unfinished">Svart 20%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 100% for road outline</source>
         <comment>Color 45</comment>
-        <translation type="unfinished">Övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 50% for large buildings and tramway</source>
         <comment>Color 46</comment>
-        <translation type="unfinished">Svart under övre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 20% for canopy</source>
         <comment>Color 47</comment>
-        <translation type="unfinished">Lägre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 100% area symbols</source>
         <comment>Color 48</comment>
-        <translation type="unfinished">Svart under nedre brun 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 70% area symbols</source>
         <comment>Color 49</comment>
-        <translation type="unfinished">Blå 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Blue 50% area symbols</source>
         <comment>Color 50</comment>
-        <translation type="unfinished">Blå 70%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over green and brown (+ yellow)</source>
         <comment>Color 51</comment>
-        <translation type="unfinished">Blå 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Brown 50% for paved area</source>
         <comment>Color 52</comment>
-        <translation type="unfinished">OpenOrienteering Orange</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% for narrow ride (extra)</source>
         <comment>Color 53</comment>
-        <translation type="unfinished">Gul 100% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% for narrow ride (extra)</source>
         <comment>Color 54</comment>
-        <translation type="unfinished">Grön 30% för smal åktur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Olive green</source>
         <comment>Color 55</comment>
-        <translation type="unfinished">Vit över grön</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% area symbols</source>
         <comment>Color 56</comment>
-        <translation type="unfinished">Gul 100%/Grön 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 30% area symbols</source>
         <comment>Color 57</comment>
-        <translation type="unfinished">Grön 100%/Svart 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black 35% area symbols</source>
         <comment>Color 58</comment>
-        <translation type="unfinished">Grön 100% för områdes funktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Green 100% below green areas (extra)</source>
         <comment>Color 59</comment>
-        <translation type="unfinished">Grön 60%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>White over yellow</source>
         <comment>Color 60</comment>
-        <translation type="unfinished">Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for cultivated land and sandy ground</source>
         <comment>Color 61</comment>
-        <translation type="unfinished">Grön 100% för undervegetation</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 100% area symbols</source>
         <comment>Color 62</comment>
-        <translation type="unfinished">Vit över gul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 75% area symbols</source>
         <comment>Color 63</comment>
-        <translation type="unfinished">Svart för öppet land</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Yellow 50%</source>
         <comment>Color 64</comment>
-        <translation type="unfinished">Gul 50%</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>OpenOrienteering Orange (extra)</source>
         <comment>Color 65</comment>
-        <translation type="unfinished">Gul 100% för areafunktioner</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour</source>
         <comment>Name of symbol 101</comment>
-        <translation type="unfinished">Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A line joining points of equal height. The standard vertical interval between contours is 5 m. A contour interval of 2.5 m may be used for flat terrains.
@@ -9810,81 +7053,67 @@ The minimum length of a contour knoll is 0.9 mm (footprint 13.5 m) and the minim
 A depression must accommodate a slope line, so the minimum length is 1.1 mm (footprint 16.5 m) and the minimum width is 0.7 mm (footprint 10.5 m) outside measure. Smaller prominent depressions can be represented using symbol Small depression (111) or they can be exaggerated to satisfy the minimum dimension.
 Contours shall be adapted or broken in order not to touch symbol Small knoll (109) or Small elongated knoll (110).</source>
         <comment>Description of symbol 101</comment>
-        <translation type="unfinished">En höjdkurva sammanbinder två punkter på samma höjdnivå. Standardskillnaden i höjd mellan två höjdkurvor, ekvidistansen, är 5m. En stödkurva med ekvidistans 2,5m kan användas i flack terräng.
-Lutningsstreck kan ritas på den nedre sidan av en höjdkurva för att förtydliga riktningen av lutningen. Vid användning måste lutningsstrecket placeras i inbuktningar, tex. sänkor.
-En stängd höjdkurva representerar en höjd eller grop. En grop måste ha minst ett lutningsstreck. Minsta höjd/djup bör vara 1m.
-Förhållandet mellan två närliggande höjdkurvor är viktigt. Närliggande höjdkurvor visar form och konturer av terrängen. Små detaljer i kurvningen bör undvikas eftersom de tenderar att dölja större formationer i terrängen.
-Framstående detaljer så som gropar, sänkor, åsar och terrasser kan behöva överdrivas.
-Exakt återgivelse i höjd för varje objekt är inte viktigt, däremot är höjdskillnaden mellan närliggande objekt viktigt att den anges så noggrant som möjligt. Det är tillåtet att överdriva ett objekts höjd något för att förtydliga ett objekt. Denna justering bör dock inte överstiga 25% av ekvidistansen, och man måste ha förhållandet med närliggande objekt i åtanke.
-Den minsta tillåtna böjning av en höjdkurva är 0,25mm i radie (4m i terrängen). Längden på en sänka eller ås måste vara större än 0,5mm från mitten till mitten av kurvan (8m i terrängen).
-Minimumlängd på en höjd är 0.9mm (13,5m i terrängen) och minimumbredd är 0,6mm (9m i terrängen). Mindre men tydliga höjder bör ritas med symbolen Liten höjd (109) eller Liten avlång höjd (110) eller så kan de överdrivas för att uppnå minimummåtten.
-En grop måste ha minst ett lutningsstreck, så minimumlängden är 1,1mm (16,5m i terrängen) och minimumbredd 0,7mm (10,5 i terrängen). Mindre men tydliga gropar kan ritas med symbolen Liten grop (111) eller så kan de överdrivas för att uppfylla minimummåtten.
-Konturer bör följas med höjdkurvan för att inte tangera objekt av symbolen Liten höjd (109) eller Liten avlång höjd (110).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope line, contour</source>
         <comment>Name of symbol 101.1</comment>
-        <translation type="unfinished">Lutningsstreck, Höjdkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.
 A depression has to have at least one slope line.</source>
         <comment>Description of symbol 101.1</comment>
-        <translation type="unfinished">Lutningsstreck bör ritas på nedåtsidan av höjdkurvan för att förtydliga lutningen. Lutningsstreck bör placeras i inbuktningar så som sänkor.
-En grop måste innehålla minst ett lutningsstreck.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Index contour</source>
         <comment>Name of symbol 102</comment>
-        <translation type="unfinished">Stödkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Every fifth contour shall be drawn with a thicker line. This is an aid to the quick assessment of height difference and the overall shape of the terrain surface.
 An index contour may be represented as an ordinary contour line in an area with much detail. Small contour knolls and depressions are normally not represented using index contours.
 The index contour level must be carefully selected in flat terrain. The ideal level for the index contour is the central contour in the most prominent slopes.</source>
         <comment>Description of symbol 102</comment>
-        <translation type="unfinished">Var femte höjdkurva bör ritas med en tjockare linje. Detta är en hjälp för att snabbt urskilja höjdskillnad och större konturer i terrängen.
-En stödkurva kan användas som en vanlig höjdkurva med mycket detaljer. Små höjdformationer och gropar är normalt inte redovisade med stödkurva.
-Stödkurvans nivå måste väljas med försiktighet i flack terräng. Den optimala nivån för höjdkurvan är mitt i sluttningen för de mest tydliga och branta sluttningarna.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contour value</source>
         <comment>Name of symbol 102.1</comment>
-        <translation type="unfinished">Höjdangivelse</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An index contour may have a height value assigned. A height value should only be inserted in an index contour in places where other detail is not obscured. It shall be orientated so that the top of the label is on the higher side of the contour. The index value (label) shall be 1.5 mm high and represented in a sans-serif font.</source>
         <comment>Description of symbol 102.1</comment>
-        <translation type="unfinished">En stödkurva kan tilldelas en höjdangivelse. En höjdangivelse bör bara placeras så att inga andra detaljer döljs. Den bör bli placerad så att den övre kanten av höjdangivelsen är på den högre sidan av höjdkurvan. Texten för höjdangivelsen skall vara 1,5 mm hög och i typsnittet sans-serif.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Form line</source>
         <comment>Name of symbol 103</comment>
-        <translation type="unfinished">Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Form lines are used where more information must be given about the shape of the ground. Form lines are added only where representation would be incomplete with ordinary contours. They shall not be used as intermediate contours. Only one form line should be used between neighbouring contours. It is very important that a form line fits logically into the contour system, so the start and end of a form line should be parallel to the neighbouring contours. The gaps between the form line dashes must be placed on reasonably straight sections of the form line. Form lines can be used to differentiate flat knolls and depressions from more distinct ones (minimum height / depth should be 1 m). Excessive use of form lines must be avoided as this disturbs the three-dimensional picture of the ground shape and will complicate map reading.
 Minimum length (non-closed): two dashes.
 Minimum length of a form line, knoll or depression: 1.1 mm (footprint 16.5 m)</source>
         <comment>Description of symbol 103</comment>
-        <translation type="unfinished">Hjälpkurvor används för att komplettera kurvinformationen. De användsenbart när fullständig redovisning med vanliga höjdkurvor inte är möjlig.Hjälpkurvor ska inte användas som intermediära kurvor. Endast enhjälpkurva ska användas mellan närliggande höjdkurvor.Det är mycket viktigt att hjälpkurvorna används logiskt, vilket innebär attstart- och slut av en hjälpkurva ska vara parallella med närliggandehöjdkurvor.Uppehållen i hjälpkurvorna ska placeras på någorlunda raka delar avhjälpkurvan.Hjälpkurvor kan användas för att skilja mellan platta och mer tydliga höjderoch gropar (lägsta höjd /djup bör vara 1 m).Överdriven användning av hjälpkurvor ska undvikas då det stör dentredimensionella terrängbilden och försvårar kartläsningen.
-Minsta längd (öppen hjälpkurva): två streck.
-Minsta längd för en hjälpkurvehöjd/-grop: 1,1 mm (16,5 m) yttermått</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope line, formline</source>
         <comment>Name of symbol 103.1</comment>
-        <translation type="unfinished">Lutningsstreck, Hjälpkurva</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Slope lines may be drawn on the lower side of a contour line to clarify the direction of slope. When used, they should be placed in re-entrants.</source>
         <comment>Description of symbol 103.1</comment>
-        <translation type="unfinished">Lutningsstreck kan ritas på den lägre sidan av en kurva för att klarlägga markens lutningsförhållande. Lutningsstreck bör ritas i sänkor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank</source>
         <comment>Name of symbol 104</comment>
-        <translation type="unfinished">Skärning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -9892,15 +7121,12 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, minimum size</source>
         <comment>Name of symbol 104.1</comment>
-        <translation type="unfinished">Skärning, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -9908,15 +7134,12 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.1</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, top line</source>
         <comment>Name of symbol 104.2</comment>
-        <translation type="unfinished">Skärning, baslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An earth bank is an abrupt change in ground level which can be clearly distinguished from its surroundings, e.g. gravel or sand pits, road and railway cuttings or embankments.
@@ -9924,42 +7147,38 @@ Minimum height: 1 m. An earth bank may impact runnability. The tags represent th
 For long earth banks it is allowed to use tags shorter than the minimum length at the ends. If two earth banks are close together, tags may be omitted. Impassable earth banks shall be represented using symbol impassable cliff (201).
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 104.2</comment>
-        <translation type="unfinished">En jordbank är en tydlig förändring i markhöjd som tydligt kan urskiljas från omgivningen, t.ex grus eller sandgropar, väg eller järnvägsbanker eller försänkningar.
-Minsta höjd: 1 m. En jordbank kan påverka löpningsmöjligheterna. Taggarna representerar fulla längden av jordbanken.
-För långa jordbanker är det tillåtet att använda kortare taggar än minimumlängden vid ändarna. Om två jordbanker är nära varandra kan taggarna möjligtvis utelämnas. Opasserbara jordbanker ska representeras som en opasserbar brant(201).
-Minsta längd: 0,6 mm (avtryck 9m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, tag line</source>
         <comment>Name of symbol 104.3</comment>
-        <translation type="unfinished">Skärning, tagg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of wide earth banks.</source>
         <comment>Description of symbol 104.3</comment>
-        <translation type="unfinished">Använd denna symbol för att visa den totala utsträckningen av breda jordvallar.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth bank, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 104.9</comment>
-        <translation type="unfinished">Skärning, minsta längd (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 104.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Earth wall</source>
         <comment>Name of symbol 105.1</comment>
-        <translation type="unfinished">Jordwall</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
         <comment>Description of symbol 105.1</comment>
-        <translation type="unfinished">Tydlig jordvall. Lägsta höjd: 1 m.
-Minsta längd: 1,4 mm (21 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining earth wall</source>
@@ -9975,21 +7194,19 @@ Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
     <message>
         <source>Erosion gully</source>
         <comment>Name of symbol 107</comment>
-        <translation type="unfinished">Erosionsfåra</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An erosion gully which is too small to be shown using symbol Earth bank (104) is shown by a single line. Contour lines may be broken around this symbol for better readability.
 Minimum depth: 1 m.
 Minimum length: 1.15 mm (footprint 17.25 m).</source>
         <comment>Description of symbol 107</comment>
-        <translation type="unfinished">En erosionsfåra som är för liten för att redovisas med symbol 104(skärning) redovisas med en enkellinje. Minstadjup: 1 m.
-Minsta längd:1,15 mm(17 m).
-Höjdkurvor bör ritas utan uppehåll genom symbolen.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small knoll</source>
         <comment>Name of symbol 109</comment>
-        <translation type="unfinished">Punkthöjd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An obvious mound or knoll which cannot be drawn to scale with a contour.
@@ -9997,15 +7214,12 @@ Minimum height: 1 m.
 The symbol shall not touch or overlap contours.
 Footprint: 7.5 m x 7.5 m.</source>
         <comment>Description of symbol 109</comment>
-        <translation type="unfinished">En tydlig kulle eller topp som inte kan ritas skalriktigt med höjdkurva.
-Lägsta höjd: 1 m.
-Symbolen ska inte vidröra eller överlappa höjdkurvor.
-Utbredning: 7,5 x 7,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small depression</source>
         <comment>Name of symbol 111</comment>
-        <translation type="unfinished">Liten grop</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small depression or hollow without steep sides that is too small to be shown by contours.
@@ -10014,16 +7228,12 @@ Small depressions with steep sides are represented with symbol Pit (112).
 The symbol shall not touch or overlap other brown symbols. Location is the centre of gravity of the symbol, and the symbol is orientated to north.
 Footprint: 12 m x 6 m.</source>
         <comment>Description of symbol 111</comment>
-        <translation type="unfinished">En liten grop eller håla utan branta sidor som inte kan redovisas skalenligt med höjdkurvor.
-Minsta djup: 1 m. Minsta bredd: 2 m.
-Små gropar med branta sidor redovisas med symbol 112.
-Symbolen får inte vidröra eller överlappa andra bruna symboler. Symbolens tyngdpunkt anger läget. Symbolen orienteras mot norr.
-Utbredning: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff</source>
         <comment>Name of symbol 201</comment>
-        <translation type="unfinished">Opasserbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -10032,16 +7242,12 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat vid vertikala branter. Baslinjens avslutningar kan vara avrundade eller raka. Kortare lutningsstreck kan användas vid linjesluten.
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara föremål måste vara mer än 0,25 mm på kartan.
-När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd: 0,6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, minimum size</source>
         <comment>Name of symbol 201.1</comment>
-        <translation type="unfinished">Opasserbar brant, minsta längd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -10050,26 +7256,22 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201.1</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat vid vertikala branter. Baslinjens avslutningar kan vara avrundade eller raka. Kortare lutningsstreck kan användas vid linjesluten.
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara föremål måste vara mer än 0,25 mm på kartan.
-När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, plan shape representation (from ISOM2000)</source>
         <comment>Name of symbol 201.2</comment>
-        <translation type="unfinished">Opasserbar brant, (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.2</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, top line</source>
         <comment>Name of symbol 201.3</comment>
-        <translation type="unfinished">Opasserbar brant, baslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A cliff, quarry or earth bank that is so high and steep that it is impossible to pass/climb or is dangerous.
@@ -10078,36 +7280,32 @@ The gap between two impassable cliffs or between impassable cliffs and other imp
 When an impassable cliff drops straight into water, making it impossible to pass under the cliff along the water’s edge, the bank line is omitted or the tags shall clearly extend over the bank line. An impassable cliff should interplay with the contour lines.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 201.3</comment>
-        <translation type="unfinished">Opasserbar brant, stenbrott eller skärning som är så hög och brant att den inte kan eller är farlig att passera.
-Lutningsstreck kan utelämnas om utrymmet är begränsat vid vertikala branter. Baslinjens avslutningar kan vara avrundade eller raka. Kortare lutningsstreck kan användas vid linjesluten.
-Avståndet mellan två opasserbara branter eller mellan opasserbar brant och andra opasserbara föremål måste vara mer än 0,25 mm på kartan.
-När en brant ligger i anslutning till vatten så att passage längs med stranden nedanför branten inte är möjlig, utelämnas strandkonturen eller ska lutningsstrecken tydligt gå över strandkantlinjen. En opasserbar brant ska ansluta till höjdkurvorna.
-Kortaste längd, rakt linjeslut: 0,6 mm (9 m), runt linjeslut: 0,7 mm (10,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, tag line</source>
         <comment>Name of symbol 201.4</comment>
-        <translation type="unfinished">Opasserbar brant, tag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this symbol to display the full extent of a wide cliff.</source>
         <comment>Description of symbol 201.4</comment>
-        <translation type="unfinished">Använd denna symbol för att redovisa hela utbredningen av en ur planvy bred brant (t.ex. sva).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable cliff, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 201.9</comment>
-        <translation type="unfinished">Opasserbar brant, minsta storlek (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 201.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff</source>
         <comment>Name of symbol 202</comment>
-        <translation type="unfinished">Passerbar brant</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -10116,16 +7314,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, minimum size</source>
         <comment>Name of symbol 202.1</comment>
-        <translation type="unfinished">Passerbar brant, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -10134,16 +7328,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.1</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags</source>
         <comment>Name of symbol 202.2</comment>
-        <translation type="unfinished">Passerbar brant, med taggar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -10152,16 +7342,12 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.2</comment>
-        <translation type="unfinished">En passerbar brant eller stenbrott. Om brantens fallriktning inte framgår av konturerna eller för att förbättra läsbarheten kan korta taggar dras i riktning  nedför.
-För icke-vertikala branter bör taggarna ritas för att visa hela horisontalområdet. Slut på baslinjen måste avrundas om inga taggar visas. En passage mellan två branter måste vara minst 0,2 mm. En brant bör samverka med konturlinjerna.
-Att passera en brant kommer normalt att sakta ner hastigheten.
-Minsta höjd: 1 m.
-Minsta längd: 0,6 mm (fotavtryck 9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags, minimum size</source>
         <comment>Name of symbol 202.3</comment>
-        <translation type="unfinished">Passerbar brant med taggar, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable cliff or quarry. If the direction of fall of the cliff is not apparent from the contours, or to improve legibility, short tags may be drawn in the direction of the downslope.
@@ -10170,40 +7356,34 @@ Crossing a cliff will normally slow progress.
 Minimum height: 1 m.
 Minimum length: 0.6 mm (footprint 9 m).</source>
         <comment>Description of symbol 202.3</comment>
-        <translation type="unfinished">En passerbar brant eller gruva. Om fallriktningen inte klart framgår av kurvbilden, eller för att förbättra läsbarheten, kan taggar ritas nedåt i lutningens riktning.
-För icke-vertikala branter så ska taggarna redovisa brantens horisontella utsträckning. Baslinjens avslutningar ska vara rundade om taggar inte ritas. Passager mellan branter ska vara minst 0,2 mm. En brant ska ansluta till höjdkurvorna.
-Att passera en brant påverkar normalt löpbarheten.
-Lägsta höjd: 1 m.
-Minsta längd: 0.6 mm (9 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cliff, with tags, minimum size (from ISOM2000)</source>
         <comment>Name of symbol 202.9</comment>
-        <translation type="unfinished">Passerbar brant med taggar, minsta storlek (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 202.9</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder</source>
         <comment>Name of symbol 204</comment>
-        <translation type="unfinished">Sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct boulder (should be higher than 1 m), which is immediately identifiable on the ground. Groups of boulders are represented using symbol Boulder cluster (207) or a boulder field symbol (208, 209).
 To be able to show the distinction between neighbouring (closer than 30 m apart) boulders with significant difference in size, it is permitted to enlarge the symbol to 0.5 mm for some of the boulders.
 Footprint: 6 m diameter (7.5 m diameter).</source>
         <comment>Description of symbol 204</comment>
-        <translation type="unfinished">En tydlig sten (bör vara högre än 1 m) som omedelbart kan identifieras i terrängen. Grupper av stenar redovisas med symbol 207 (grupp av sten) eller med blockterrängsymbol (208,209).
-För att kunna särskilja närliggande stenar (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen till 0,5 mm för somliga stenar.
-Utbredning: 6 m (7,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder or large boulder, different size</source>
         <comment>Name of symbol 204.5</comment>
-        <translation type="unfinished">Sten, förstorad storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A boulder which is larger than neighboring boulders (204), or a large boulder which is smaller than neighboring large boulders (205).
@@ -10212,28 +7392,24 @@ To be able to show the distinction between neighbouring (closer than 30 metres a
 
 To be able to show the distinction between neighbouring (closer than 30 metres apart) large boulders (205) with significant difference in size, it is permitted to use this symbol (0.5 mm) as an as a reduction of symbol 205 for some of the boulders.</source>
         <comment>Description of symbol 204.5</comment>
-        <translation type="unfinished">En sten som är större än närliggande stenar (204), eller en stor sten som är mindre än närliggande stora stenar (205).
-
-För att kunna särskilja närliggande stenar av typ 204 &quot;Sten&quot; (närmare än 30 meter) med betydande storleksskillnad, eller att särskilja en mindre sten från typ 205 &quot;Stor sten&quot; så är det tillåtet att endera förstora symbolen 204 till 0,5 mm, eller förminska symbolen 205 till 0,5 mm.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Large boulder</source>
         <comment>Name of symbol 205</comment>
-        <translation type="unfinished">Stor sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A particularly large and distinct boulder. A large boulder should be more than 2 m high.
 To be able to show the distinction between neighbouring (closer than 30 m apart) large boulders with significant difference in size, it is permitted to reduce the size of the symbol to 0.5 mm for some of the boulders.
 Footprint: 9 m diameter (7.5 m diameter).</source>
         <comment>Description of symbol 205</comment>
-        <translation type="unfinished">En särskilt stor och tydlig sten. En stor sten bör vara mer än 2 m hög.
-För att kunna särskilja närliggande stenar (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förminska symbolen till 0,5 mm för somliga stenar.
-Utbredning: 9 m (7,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Gigantic boulder</source>
         <comment>Name of symbol 206</comment>
-        <translation type="unfinished">Gigantisk sten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A gigantic boulder, rock pillar or massive cliff shall be represented in plan shape. The objects can vary in shape and width.
@@ -10241,15 +7417,12 @@ The gap between gigantic boulders or between gigantic boulders and other impassa
 Minimum width: 0.25 mm (footprint 3.75 m).
 Minimum area: 0.3 mm² (footprint 67 m²).</source>
         <comment>Description of symbol 206</comment>
-        <translation type="unfinished">Gigantisk sten, stenpelare eller klippa ska redovisas som en yta. Objekten kan variera i form och bredd.
-Avståndet mellan två gigantiska stenar eller mellan gigantiska stenar och andra opasserbara symboler måste vara mer än 0,15 mm.
-Minsta bredd: 0,25 mm (3,75 m).
-Minsta yta: 0,3 mm² (67 m²).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder cluster</source>
         <comment>Name of symbol 207</comment>
-        <translation type="unfinished">Grupp av stenar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A distinct group of boulders so closely clustered together that they cannot be marked individually. The boulders in the cluster should be higher than 1 m.
@@ -10258,26 +7431,22 @@ To be able to show the distinction between neighbouring (maximum 30 m apart) bou
 The symbol is orientated to north.
 Footprint: 12 m x 10 m.</source>
         <comment>Description of symbol 207</comment>
-        <translation type="unfinished">En tydlig grupp av stenar som ligger så tätt att de inte kan redovisas individuellt. Stenarna bör vara högre än 1 m.
-En stengrupp måste tydligt kunna identifieras som en grupp av stenar.
-För att kunna särskilja närliggande stengrupper (närmare än 30 meter) med betydande storleksskillnad, är det tillåtet att förstora symbolen till 120% (kantlängd 0,96 mm) för somliga stengrupper.
-Tecknet orienteras mot norr.
-Utbredning: 12 x 10 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder cluster, large</source>
         <comment>Name of symbol 207.1</comment>
-        <translation type="unfinished">Grupp av stenar, stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>To be able to show the distinction between neighbouring (maximum 30 m apart) boulder clusters with significant difference in boulder size, it is permitted to use this symbol instead of regular Boulder cluster (207) for some of the boulder clusters.</source>
         <comment>Description of symbol 207.1</comment>
-        <translation type="unfinished">För att visa skillnaden mellan näraliggande grupper av stenar (max 30 m isär) av betydligt olika storlket kan man använda denna symbol istället för den vanliga gruppen av stenar (207) för vissa grupper.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field</source>
         <comment>Name of symbol 208</comment>
-        <translation type="unfinished">Blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -10286,17 +7455,12 @@ The maximum centre to centre distance between neighbouring triangles is 1.2 mm. 
 Density: 0.8-1 symbol / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 208</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar,
-sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Blockterräng påverkar normalt inte löpbarheten. Om löpbarheten påverkas bör symbol 209 (tät blockterräng) användas eller symbolen kombineras med stenig mark.
-Minst 2 trianglar ska användas. En triangel kan användas om den kombineras med annan sten/brantsymbol, exempelvis direkt under branter (201,202), bredvid stenar (204-206) eller kombinerat med stenig mark (210-212).
-Största tillåtna avståndet mellan närliggande trianglar är 1,2 mm (centrummått). Minsta tillåtna avståndet mellan närliggande trianglar är 0,75 mm (centrummått).
-Täthet: 0,8-1 symbol/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120 %.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field, single triangle</source>
         <comment>Name of symbol 208.1</comment>
-        <translation type="unfinished">Blockterräng, enskild triangel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many scattered blocks of stone that they cannot be marked individually, is shown with randomly placed and orientated solid triangles. A boulder field will generally not impact runnability. If the runnability of the boulder field is reduced, symbol 209 (dense boulder field) should be used or the symbol should be combined with a stony ground symbol.
@@ -10305,27 +7469,22 @@ The maximum centre to centre distance between neighbouring triangles is 1.2 mm. 
 Density: 0.8-1 symbol / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 208.1</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar,
-sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Blockterräng påverkar normalt inte löpbarheten. Om löpbarheten påverkas bör symbol 209 (tät blockterräng) användas eller symbolen kombineras med stenig mark.
-Minst 2 trianglar ska användas. En triangel kan användas om den kombineras med annan sten/brantsymbol, exempelvis direkt under branter (201,202), bredvid stenar (204-206) eller kombinerat med stenig mark (210-212).
-Största tillåtna avståndet mellan närliggande trianglar är 1,2 mm (centrummått). Minsta tillåtna avståndet mellan närliggande trianglar är 0,75 mm (centrummått).
-Täthet: 0,8-1 symbol/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Boulder field, single triangle, enlarged</source>
         <comment>Name of symbol 208.2</comment>
-        <translation type="unfinished">Blockterräng, enskild triangel, förstorad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.</source>
         <comment>Description of symbol 208.2</comment>
-        <translation type="unfinished">För att visa en tydlig skilland inom ett område med stenblock är det tillåtet att förstora vissa trianglar till 120%.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dense boulder field</source>
         <comment>Name of symbol 209</comment>
-        <translation type="unfinished">Tät blockterräng</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area which is covered with so many blocks of stone that they cannot be marked individually and the runnability is affected, is shown with randomly placed and orientated solid triangles. A minimum of two triangles must be used.
@@ -10333,10 +7492,7 @@ The maximum centre to centre distance between neighbouring triangles is 0.6 mm.
 Density: 2-3 symbols / mm². To be able to show obvious height differences within a boulder field, it is permitted to enlarge some of the triangles to 120%.
 Footprint of individual triangle: 12 m x 6 m.</source>
         <comment>Description of symbol 209</comment>
-        <translation type="unfinished">Ett område täckt av så många stenblock att de inte kan redovisas individuellt där löpbarhet är nedsatt, redovisas med slumpmässigt utplacerade fyllda roterade trianglar, sidförhållande 8:6:5 (inre vinklar: 92.9, 48.5, 38.6). Minst 2 trianglar ska användas.
-Största tillåtna avståndet mellan närliggande trianglar är 0,6 mm (centrummått).
-Täthet: 2-3 symboler/mm². För att visa tydliga höjdskillnader mellan block i blockterräng, är det tillåtet att förstora somliga trianglar till 120%.
-Utbredning av en triangel: 12 x 6 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Body of water that shall not be crossed, with bank line</source>
@@ -10401,25 +7557,24 @@ Utbredning av en triangel: 12 x 6 m.</translation>
     <message>
         <source>Crossable watercourse</source>
         <comment>Name of symbol 304</comment>
-        <translation type="unfinished">Passerbart vattendrag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossable watercourse more than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m).</source>
         <comment>Description of symbol 304</comment>
-        <translation type="unfinished">Bör vara minst 2 m breda.
-Kortaste längd (friliggande): 1 mm (15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Small crossable watercourse</source>
         <comment>Name of symbol 305</comment>
-        <translation type="unfinished">Passerbart litet vattendrag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossable watercourse less than 2 m wide.
 Minimum length (isolated): 1 mm (footprint 15 m)</source>
         <comment>Description of symbol 305</comment>
-        <translation type="unfinished">Kortaste längd (friliggande): 1 mm (15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Marsh (in ski orienteering map)</source>
@@ -10434,21 +7589,19 @@ Minimum length (isolated): 1 mm (footprint 15 m)</source>
     <message>
         <source>Open land</source>
         <comment>Name of symbol 401</comment>
-        <translation type="unfinished">Öppen lättlöpt mark</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land that has a ground cover (grass, moss or similar) which offers better runnability than typical open forest. If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
 Shall not be combined with area symbols other than Broken ground (113), Boulder field (208), Marsh (308) and Indistinct marsh (310).
 Minimum area: 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 401</comment>
-        <translation type="unfinished">Öppen mark med en markyta (gräs, mossa eller liknande) som innebär bättre löpbarhet än typisk öppen skog. Om öppna ytor dominerar kartbilden, kan ett 75 % raster användas istället för gul helton.
-Ska inte kombineras med andra ytsymboler än symbol 113 (småkuperad terräng), 208 (blockterräng) och sankmarker (308, 310).
-Minsta yta: 0,55 x 0,55 mm (8 x 8 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open land with scattered trees</source>
         <comment>Name of symbol 402</comment>
-        <translation type="unfinished">Öppen lättlöpt mark med spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in open land may be generalised by using a regular pattern of large dots in the yellow screen. The dots may be white (scattered trees) or green (scattered bushes / thickets). Prominent individual trees may be added using symbol Prominent large tree (417). If yellow coloured areas become dominant, a screen (75% instead of full yellow) may be used.
@@ -10458,17 +7611,12 @@ Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Open land (401).
 The symbol is orientated to north.</source>
         <comment>Description of symbol 402</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen. Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Enstaka tydliga träd kan redovisas med symbol 417 (tydligt stort träd). Om öppna ytor dominerar kartbilden, kan ett 75 % raster användas istället för gul helton. 
-Ska inte kombineras med andra ytsymboler än symbol 113 (småkuperad terräng), 208 (blockterräng) och sankmarker (308, 310).
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2 x 2 mm (30 x 30 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 401 (öppen mark).
-Symbolen orienteras mot norr.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rough open land</source>
         <comment>Name of symbol 403</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Heath, moorland, felled areas, newly planted areas (trees lower than ca. 1 m) or other generally open land with rough ground vegetation, heather or tall grass offering the same runnability as typical open forest.
@@ -10476,14 +7624,12 @@ May be combined with symbol Vegetation: slow running, good visibility (407) or V
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Open land (401).</source>
         <comment>Description of symbol 403</comment>
-        <translation type="unfinished">Hedmark, avverkade områden, nyligen planterade områden (träd lägre än cirka 1 m) eller andra öppna områden, med lägre vegetation, ljung eller högt gräs, med samma löpbarhet som typisk öppen skog. Kan kombineras med symbol 407 (löphindrande undervegetation) eller 409 (svårlöpt undervegetation) för att redovisa nedsatt löpbarhet.
-Minsta yta: 1 x 1 mm (15 x 15 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 401 (öppen mark).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rough open land with scattered trees</source>
         <comment>Name of symbol 404</comment>
-        <translation type="unfinished">Öppen mark med normal löpbarhet och spridda träd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Areas with scattered trees or bushes in rough open land may be generalised by using a regular pattern of large dots in the yellow screen.
@@ -10493,17 +7639,12 @@ Minimum width: 1.5 mm (footprint 22.5 m).
 Minimum area: 2.5 mm x 2.5 mm (footprint 37.5 m x 37.5 m).
 Smaller areas must either be left out, exaggerated or shown using symbol Rough open land (403).</source>
         <comment>Description of symbol 404</comment>
-        <translation type="unfinished">Ytor med spridda träd eller buskar i öppen mark med normal löpbarhet kan generaliseras och redovisas med ett regelbundet mönster av stora punkter i den gula tonen.
-Punkterna kan vara vita (spridda träd) eller gröna (spridda buskar/buskage). Ytor med vita punkter kan kombineras med symbol 407 (löphindrande undervegetation) eller 409 (svårlöpt undervegetation) för att redovisa nedsatt löpbarhet.
-Symbolen orienteras mot norr.
-Minsta bredd: 1,5 mm (22,5 m).
-Minsta yta: 2,5 x 2,5 mm (37,5 x 37,5 m).
-Mindre ytor måste utelämnas, överdrivas eller redovisas med symbol 403 (öppen mark med normal löpbarhet).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Forest</source>
         <comment>Name of symbol 405</comment>
-        <translation type="unfinished">Skog</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Typical open forest for the particular type of terrain. If no part of the forest is easily runnable then no white should appear on the map.
@@ -10512,15 +7653,12 @@ For openings in symbol Open land (401), the minimum area is 0.7 mm x 0.7 mm (foo
 For openings in symbol Vegetation: walk (408), the minimum area is 0.7 mm x 0.7 mm (footprint 10.5 m x 10.5 m).
 For openings in symbol Vegetation: fight (410) the minimum area is 0.55 mm x 0.55 mm (footprint 8 m x 8 m).</source>
         <comment>Description of symbol 405</comment>
-        <translation type="unfinished">Typisk öppen skog för aktuell terrängtyp. Om ingen del av skogen är lättlöpt ska inte någon del av kartan vara vit.
-Minsta yta: 1 x 1 mm (15 x 15 m) för öppningar i andra ytor, förutom för följande symboler:
-401 (öppen mark) och 408 (svårlöpt skog) minsta yta: 0,7 x 0,7 mm (10,5 x 10,5 m)
-410 (svårframkomlig skog) minsta yta: 0,55 x 0,55 mm (8 x 8 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running</source>
         <comment>Name of symbol 406</comment>
-        <translation type="unfinished">Skog, löphindrande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with dense vegetation (low visibility) which reduces running to about 60-80% of normal speed.
@@ -10528,15 +7666,12 @@ Where runnability is better in one direction, a regular pattern of white stripes
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Minimum width: 0.4 mm (footprint 6 m).</source>
         <comment>Description of symbol 406</comment>
-        <translation type="unfinished">Område med tät vegetation (dålig sikt) som försämrar löpbarheten till cirka 60-80 % av normal löphastighet.
-Om löpbarheten är bättre i en riktning, lämnas vita regelbundna korridorer i ytmarkeringen för att visa den riktning som har bättre löpbarhet.
-Minsta bredd: 0,4 mm (6 m).
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running, normal running in one direction</source>
         <comment>Name of symbol 406.1</comment>
-        <translation type="unfinished">Skog, löphindrande (men bättre löpbarhet i en riktning)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with dense vegetation (low visibility) which reduces running to about 60-80% of normal speed.
@@ -10544,10 +7679,7 @@ Where runnability is better in one direction, a regular pattern of white stripes
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).
 Minimum width: 0.4 mm (footprint 6 m).</source>
         <comment>Description of symbol 406.1</comment>
-        <translation type="unfinished">Område med tät vegetation (dålig sikt) som försämrar löpbarheten till cirka 60-80 % av normal löphastighet.
-Om löpbarheten är bättre i en riktning, lämnas vita regelbundna korridorer i ytmarkeringen för att visa den riktning som har bättre löpbarhet.
-Minsta bredd: 0,4 mm (6 m).
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vegetation: slow running, minimum width</source>
@@ -10562,7 +7694,7 @@ Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
     <message>
         <source>Orchard</source>
         <comment>Name of symbol 413</comment>
-        <translation type="unfinished">Fruktodling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with trees or bushes, normally in a regular pattern. The dot lines may be orientated to show the direction of planting.
@@ -10570,15 +7702,12 @@ Must be combined with either symbol Open land (401) or Rough open land (403).
 May be combined with symbol Vegetation: slow running, good visibility (407) or Vegetation: walk, good visibility (409) to show reduced runnability.
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 413</comment>
-        <translation type="unfinished">Område planterat med träd eller buskar, ofta i regelbundna mönster. Punktlinjerna kan roteras för att visa planteringsriktningen.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Symbolen kan kombineras med symbol 407 (undervegetation, löphindrande) eller 409 (undervegetation, svårlöpt) för att redovisa nedsatt löpbarhet.
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Orchard, rough open land</source>
         <comment>Name of symbol 413.1</comment>
-        <translation type="unfinished">Fruktodling, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Land planted with trees or bushes, normally in a regular pattern. The dot lines may be orientated to show the direction of planting.
@@ -10586,53 +7715,45 @@ Must be combined with either symbol Open land (401) or Rough open land (403).
 May be combined with symbol Vegetation: slow running, good visibility (407) or Vegetation: walk, good visibility (409) to show reduced runnability.
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 413.1</comment>
-        <translation type="unfinished">Område planterat med träd eller buskar, ofta i regelbundna mönster. Punktlinjerna kan roteras för att visa planteringsriktningen.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Symbolen kan kombineras med symbol 407 (undervegetation, löphindrande) eller 409 (undervegetation, svårlöpt) för att redovisa nedsatt löpbarhet.
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vineyard or similar</source>
         <comment>Name of symbol 414</comment>
-        <translation type="unfinished">Vingård eller liknande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 414</comment>
-        <translation type="unfinished">Vingård eller liknande odlad mark med täta plantrader erbjudande god eller normal löpbarhet i planteringsriktningen. Linjerna ska roteras för att visa planteringsriktning.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vineyard or similar, rough open land</source>
         <comment>Name of symbol 414.1</comment>
-        <translation type="unfinished">Vingård eller liknande, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vineyard or similar cultivated land containing dense rows of plants offering good or normal runnability in the direction of planting. The lines shall be orientated to show the direction of planting. At least three lines shall be clearly visible. Must be combined with either symbol Open land (401) or Rough open land (403).
 Minimum area: 2 mm x 2 mm (footprint 30 m x 30 m).</source>
         <comment>Description of symbol 414.1</comment>
-        <translation type="unfinished">Vingård eller liknande odlad mark med täta plantrader erbjudande god eller normal löpbarhet i planteringsriktningen. Linjerna ska roteras för att visa planteringsriktning.
-Symbolen ska kombineras med symbol 401 (öppen mark) eller 403 (öppen mark med normal löpbarhet).
-Minsta yta: 2 x 2 mm (30 x 30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct cultivation boundary</source>
         <comment>Name of symbol 415</comment>
-        <translation type="unfinished">Exakt begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A boundary of cultivated land vegetation (symbols 401, 412, 413, 414) or a boundary between areas of cultivated land when not shown with other symbols (fence, wall, path, etc.).
 Minimum length: 2 mm (footprint 30 m).</source>
         <comment>Description of symbol 415</comment>
-        <translation type="unfinished">Gräns för odlad mark (401, 412, 413, 414) eller gräns mellan ytor av odlad mark då den inte redovisas med andra symboler (stängsel, stenmur, stig etc.).
-Kortaste längd: 2 mm (30 m)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct vegetation boundary</source>
         <comment>Name of symbol 416</comment>
-        <translation type="unfinished">Tydlig beståndsgräns</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vegetation boundary within the forest, or a distinct forest edge.
@@ -10640,14 +7761,12 @@ Only one of the vegetation boundary symbols (black dotted line or dashed green l
 The disadvantage with a green line is that it cannot be used to show distinct vegetation boundaries around and within symbol Vegetation: fight (410). An alternative for these situations is to use symbol Distinct cultivation boundary (415).
 Minimum length, black dot implementation: 5 dots (2.0 mm - footprint 30 m).</source>
         <comment>Description of symbol 416</comment>
-        <translation type="unfinished">En tydlig skogskant eller gräns av vegetation i skog. Mycket tydliga skogskanter och beståndsgränser kan redovisas med symbol 415 (exakt begränsningslinje). Enbart en typ av beståndsgränssymbol (svarta punkter eller streckad grön linje) ska användas på en karta. I stenbundna områden rekommenderas att den streckade gröna linjen används för beståndsgränser. En nackdel med den gröna linjen är att den inte kan användas för att redovisa tydliga beståndsgränser omkring och inne i symbolerna 410 (skog, svårframkomlig). Ett alternativ är då att använda symbol 415 (exakt begränsningslinje).
-Kortaste längd för svarta punkter: 5 punkter (2,5 mm - 37 m).
-Kortaste längd för gröna linjer: 4 streck (1,8 mm - 27 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prominent vegetation feature</source>
         <comment>Name of symbol 419</comment>
-        <translation type="unfinished">Tydligt vegetationsföremål</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A vegetation feature which is significant or prominent.
@@ -10656,49 +7775,44 @@ The symbol is orientated to north.
 The definition of the symbol must be given on the map.
 Footprint: 13.5 m x 13.5 m.</source>
         <comment>Description of symbol 419</comment>
-        <translation type="unfinished">Vit mask används under symbolen, för att förbättra läsbarheten i gult och grönt (linjebredd 0.36 mm, och linjen ska vara 0.18 mm längre i symboländarna).
-Symbolen orienteras mot norr.
-Tecknets betydelse måste redovisas i teckenförklaringen.
-Utbredning: 13,5 x 13,5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area, with bounding line</source>
         <comment>Name of symbol 501</comment>
-        <translation type="unfinished">Hårdgjord yta, med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with a firm surface such as asphalt, hard gravel, tiles, concrete or the like. Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 501</comment>
-        <translation type="unfinished">Yta med hårt och jämnt underlag som asfalt, grus, betong och liknande. Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area</source>
         <comment>Name of symbol 501.1</comment>
-        <translation type="unfinished">Hårdgjord yta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An area with a firm surface such as asphalt, hard gravel, tiles, concrete or the like. Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 501.1</comment>
-        <translation type="unfinished">Yta med hårt och jämnt underlag som asfalt, grus, betong och liknande. Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved area, bounding line</source>
         <comment>Name of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjord yta med begränsningslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Paved areas should be bordered (or framed) by a thin black line where they have a distinct boundary.</source>
         <comment>Description of symbol 501.2</comment>
-        <translation type="unfinished">Hårdgjorda ytor bör omges av en tunn svart linje där de har tydliga gränser.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wide road, minimum width</source>
         <comment>Name of symbol 502</comment>
-        <translation type="unfinished">Bred väg, minsta bredd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -10706,24 +7820,22 @@ The width should be drawn to scale, but not smaller than the minimum width (0.3 
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502</comment>
-        <translation type="unfinished">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wide road, 0.5 mm (from ISOM2000)</source>
         <comment>Name of symbol 502.1</comment>
-        <translation type="unfinished">Bred väg, 0.5 mm (från ISOM2000)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</source>
         <comment>Description of symbol 502.1</comment>
-        <translation type="unfinished">Försedd för migration från ISOM2000. Denna symbolvariant är inte rekomenderad på nyare kartor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Road with two carriageways</source>
         <comment>Name of symbol 502.2</comment>
-        <translation type="unfinished">Väg med två körbanor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road wider than 5 m wide suitable for vehicles in all weather.
@@ -10731,38 +7843,34 @@ The width should be drawn to scale, but not smaller than the minimum width (0.3 
 The space between the black lines is filled with brown (50%).
 A road with two carriageways can be represented using two wide road symbols side by side, keeping only one of the road edges in the middle.</source>
         <comment>Description of symbol 502.2</comment>
-        <translation type="unfinished">Vägen ritas skalriktigt men inte smalare än angivna mått (0,3 + 2*0,14 mm - utbredning 8,7 m). Den yttre kantlinjen kan ersättas med andra svarta linjesymboler, såsom symbol 513 (stenmur), 515 (opasserbar stenmur), 516 (stängsel) eller 518 (opasserbart stängsel) om föremålet ligger så nära vägkanten att separata symboler inte är lämpligt att använda.
-Ytan mellan de svarta linjerna fylls med brunt (50 %).
-En väg med två körbanor kan redovisas med två symboler för bred väg, med enbart en mittlinje.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Road</source>
         <comment>Name of symbol 503</comment>
-        <translation type="unfinished">Väg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A maintained road less than 5 m wide suitable for vehicles in all weather.</source>
         <comment>Description of symbol 503</comment>
-        <translation type="unfinished">Underhållen väg farbar med motorfordon i alla väder. Bredd mindre än 5 m.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Vehicle track</source>
         <comment>Name of symbol 504</comment>
-        <translation type="unfinished">Körväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A track or poorly maintained road suitable for vehicles only when travelling slowly. For distinct junctions the dashes of the symbols are joined at the junction.
 For indistinct junctions the dashes of the symbols are not joined.
 Minimum length (isolated): two dashes (6.25 mm - footprint 94 m).</source>
         <comment>Description of symbol 504</comment>
-        <translation type="unfinished">Ett körspår eller dåligt underhållen väg, endast långsamt farbar med motorfordon. När en förgrening är tydlig ritas strecken ihop.
-I otydliga förgreningar ritas strecken inte ihop.
-Kortaste längd (friliggande): två streck (6,25 mm - 94 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride</source>
         <comment>Name of symbol 508</comment>
-        <translation type="unfinished">Rågång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
@@ -10773,104 +7881,90 @@ Green 30%: slow running.
 Green 60%: walk.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Utan bakgrundslinje: samma löpbarhet som omgivningen
-gul 100%: bättre löpbarhet
-vitt i grönt: normal löpbarhet
-grön 30%: sämre löpbarhet
-grön 60%: gångfart
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, easy running</source>
         <comment>Name of symbol 508.1</comment>
-        <translation type="unfinished">Rågång, bättre löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.1</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, normal runnability</source>
         <comment>Name of symbol 508.2</comment>
-        <translation type="unfinished">Rågång, normal löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.2</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Narrow ride, slow running</source>
         <comment>Name of symbol 508.3</comment>
-        <translation type="unfinished">Rågång, sämre löpbarhet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A forest ride or a prominent trace (forestry extraction track, sandy track, ski track) through the terrain which does not have a distinct runnable path along it. Runnability is shown using a slightly thicker line of yellow, green or white as background.
 Minimum length: two dashes (3.25 mm - footprint 48 m).</source>
         <comment>Description of symbol 508.3</comment>
-        <translation type="unfinished">En rågång (smal linjär öppning) eller tydligt spår (drivningsväg, sandspår, skidspår) som inte har en tydlig löpbar stig. Löpbarheten visas med en något tjockare gul, grön eller vit bakgrundslinje.
-Kortaste längd: två streck (3,25 mm - 48 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Railway</source>
         <comment>Name of symbol 509</comment>
-        <translation type="unfinished">Järnväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A railway or other kind of railed track.
 If it is forbidden to run along the railway, it shall be combined with symbol Out-of-bounds route (711). If it is forbidden to cross the railway, it must be combined with symbol Area that shall not be entered (520) or Out-of-bounds area (709).
 Minimum length (isolated): two black dashes (4 mm - footprint 60 m).</source>
         <comment>Description of symbol 509</comment>
-        <translation type="unfinished">Järnväg eller järnvägsliknande spår.
-Om det är förbjudet att springa längs med järnvägen ska symbolen kombineras med 711 (förbjuden väg). Om det är förbjudet att korsa järnvägen, ska symbolen kombineras med 520 (förbjudet område) eller med 709 (förbjudet område).
-Kortaste längd (friliggande): två streck (4 mm - 60 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Power line, cableway or skilift</source>
         <comment>Name of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Power line, cableway or skilift. The bars show the exact location of the pylons. The line may be broken to improve legibility.
 If a section of a power line, cableway or skilift goes along a road or path (and does not offer significant additional navigational value) it should be omitted.
 Minimum length (isolated): 5 mm (footprint: 75 m).</source>
         <comment>Description of symbol 510</comment>
-        <translation type="unfinished">Kraftledning, linbana eller skidlift. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjen kan göras för att förbättra läsbarheten.
-Delar av kraftledningar, linbanor eller skidliftar som går längs med väg eller stig och inte tillför någon kartinformation ska utelämnas.
-Kortaste längd (friliggande): 5 mm (75 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line, minimum width</source>
         <comment>Name of symbol 511</comment>
-        <translation type="unfinished">Större kraftledning, minsta bredd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the power line. The lines may be broken to improve legibility.
 Very large carrying masts shall be represented in plan shape using outline of symbol Building (521) or with symbol High tower (524).</source>
         <comment>Description of symbol 511</comment>
-        <translation type="unfinished">Större kraftledningar bör ritas med dubbel linje. Linjerna kan ritas skalriktigt, det vill säga vid de yttre trådarna. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjerna kan göras för att förbättra läsbarheten.
-Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggnad) eller med 524 (högt torn).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line</source>
         <comment>Name of symbol 511.1</comment>
-        <translation type="unfinished">Större kraftledning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the power line. The lines may be broken to improve legibility. The bars show the exact location of the pylons. Very large carrying masts shall be represented in plan shape using outline of symbol Building (521) or with symbol High tower (524).</source>
         <comment>Description of symbol 511.1</comment>
-        <translation type="unfinished">Större kraftledningar bör ritas med dubbel linje. Linjerna kan ritas skalriktigt, det vill säga vid de yttre trådarna. Tvärstrecken redovisar stolparnas exakta lägen. Uppehåll i linjerna kan göras för att förbättra läsbarheten. Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggnad) eller med 524 (högt torn).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power line, large carrying masts</source>
         <comment>Name of symbol 511.2</comment>
-        <translation type="unfinished">Större kraftledning med höga master</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Major power lines should be drawn with a double line. The gap between the lines may indicate the extent of the powerline. The bars show the exact location of the pylons. The lines may be broken to improve legibility. Very large carrying masts shall be represented in plan shape using symbol 521 (building) or with symbol 524 (high tower).</source>
@@ -10880,7 +7974,7 @@ Mycket stora stolpar ska redovisas ytriktigt med kantlinjen av symbol 521 (byggn
     <message>
         <source>Bridge / tunnel</source>
         <comment>Name of symbol 512</comment>
-        <translation type="unfinished">Bro/tunnel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -10888,15 +7982,12 @@ If it is not possible to get through a tunnel (or under a bridge), it shall be o
 Minimum length (of baseline): 0.4 mm (footprint 6 m).
 Small bridges connected to a track/path are shown by centring a track dash on the crossing. Tracks/paths are broken for water course crossings without bridges. A small footbridge with no path leading to it is represented with a single dash.</source>
         <comment>Description of symbol 512</comment>
-        <translation type="unfinished">Broar och tunnlar redovisas med samma symbol.
-Opasserbara tunnlar och broar utelämnas.
-Små broar som ansluter till en stig redovisas genom att centrera ett streck på korsningen. Om ingen bro finns, utelämnas streck över vattendraget. En liten bro utan anslutande stig redovisas med ett streck.
-Kortaste längd (baslinjen): 0,4 mm (6 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridge / tunnel, minimum size</source>
         <comment>Name of symbol 512.1</comment>
-        <translation type="unfinished">Bro / tunnel, minsta storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bridges and tunnels are represented using the same basic symbols.
@@ -10904,36 +7995,30 @@ If it is not possible to get through a tunnel (or under a bridge), it shall be o
 Minimum length (of baseline): 0.4 mm (footprint 6 m).
 Small bridges connected to a track/path are shown by centring a track dash on the crossing. Tracks/paths are broken for water course crossings without bridges. A small footbridge with no path leading to it is represented with a single dash.</source>
         <comment>Description of symbol 512.1</comment>
-        <translation type="unfinished">Broar och tunnlar redovisas med samma symbol.
-Opasserbara tunnlar och broar utelämnas.
-Små broar som ansluter till en stig redovisas genom att centrera ett streck på korsningen. Om ingen bro finns, utelämnas streck över vattendraget. En liten bro utan anslutande stig redovisas med ett streck.
-Kortaste längd (baslinjen): 0,4 mm (6 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Footbridge</source>
         <comment>Name of symbol 512.2</comment>
-        <translation type="unfinished">Gångbro</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A small footbridge with no path leading to it is represented with a single dash.
 Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 mm over both sides of the stream!</source>
         <comment>Description of symbol 512.2</comment>
-        <translation type="unfinished">En liten bro utan anslutande stig redovisas med ett streck.
-Observera: Om bäcken är bredare än 0,25 mm, justera symbolen så att den sträcker sig 0,5 mm över bäckens båda sidor!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wall</source>
         <comment>Name of symbol 513.1</comment>
-        <translation type="unfinished">Mur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
         <comment>Description of symbol 513.1</comment>
-        <translation type="unfinished">En tydlig mur av sten, betong, trä eller annat material.
-Lägsta höjd: 1 m.
-Kortaste längd (friliggande): 1,4 mm (21 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining wall</source>
@@ -10950,58 +8035,53 @@ Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
     <message>
         <source>Impassable wall</source>
         <comment>Name of symbol 515</comment>
-        <translation type="unfinished">Opasserbar mur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable or uncrossable wall, normally more than 1.5 m high.
 Minimum length (isolated): 3 mm (footprint 45 m).</source>
         <comment>Description of symbol 515</comment>
-        <translation type="unfinished">En mur som är opasserbar eller förbjuden att passera, normalt mer än 1,5 m hög.
-Kortaste längd (friliggande): 3 mm (45 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Fence</source>
         <comment>Name of symbol 516</comment>
-        <translation type="unfinished">Stängsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A passable or crossable fence, normally less than 1.5 m high.
 If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 1.5 mm (footprint 22.5 m).</source>
         <comment>Description of symbol 516</comment>
-        <translation type="unfinished">Om stängslet är slutet bör taggarna ritas på insidan.
-Kortaste längd (friliggande): 1,5 mm (22,5 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Impassable fence</source>
         <comment>Name of symbol 518</comment>
-        <translation type="unfinished">Opasserbart stängsel</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An impassable or uncrossable fence, normally more than 1.5 m high.
 If the fence forms an enclosed area, tags should be placed inside.
 Minimum length (isolated): 2 mm (footprint 30 m).</source>
         <comment>Description of symbol 518</comment>
-        <translation type="unfinished">Ett stängsel som är opasserbart eller förbjudet att passera, normalt mer än 1,5 m högt.
-Om stängslet är slutet bör taggarna ritas på insidan.
-Kortaste längd (friliggande): 2 mm (30 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 519</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A way through or over a wall, fence or other linear feature, including a gate or stile.
 For impassable features, the line shall be broken at the crossing point. For passable features, the line shall not be broken if passing involves a degree of climb.</source>
         <comment>Description of symbol 519</comment>
-        <translation type="unfinished">Passage, grind eller stätta, genom eller över en mur, stängsel eller annat linjeföremål.
-För opasserbara föremål ska uppehåll i linjen göras vid genomgången. För passerbara föremål ska uppehåll i linjen inte göras om passage innebär klättring.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered</source>
         <comment>Name of symbol 520</comment>
-        <translation type="unfinished">Förbjudet område</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>An out-of-bounds area is a feature such as a private house, a garden, a factory or another industrial area. Only contours and prominent features such as railways and large buildings shall be shown inside an out-of-bounds area. The area shall be discontinued where a path goes through and white colour is used as background with overlap 0.15 mm on both sides.
@@ -11010,37 +8090,27 @@ Course planning symbol 709 can be used for temporary out-of bounds areas.
 An out-of-bounds area shall not be entered.
 Minimum area: 1 mm x 1 mm (footprint 15 m x 15 m).</source>
         <comment>Description of symbol 520</comment>
-        <translation type="unfinished">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, solid colour, bounding line</source>
         <comment>Name of symbol 520.1</comment>
-        <translation type="unfinished">Förbjudet område, enfärgad, gränslinje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Out-of-bound areas with a clear border shall be bounded by a black boundary line or another black line. If the border is unclear no black line shall occur.</source>
         <comment>Description of symbol 520.1</comment>
-        <translation type="unfinished">Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, stripes (deprecated)</source>
         <comment>Name of symbol 520.2</comment>
-        <translation type="unfinished">Förbjudet område, ränder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.2</comment>
-        <translation type="unfinished">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Area that shall not be entered, stripes, bounding line (deprecated)</source>
@@ -11050,12 +8120,7 @@ Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
     <message>
         <source>Deprecated in revision 6 of the ISOM 2017-2 document.</source>
         <comment>Description of symbol 520.3</comment>
-        <translation type="unfinished">Ett förbjudet område kan vara privata tomter, trädgårdar, fabriker och andra industriområden. Enbart höjdkurvor och framträdande föremål som järnvägar och stora byggnader ska redovisas inne i förbjudna områden. Vertikala svarta streck kan användas för ytor där det är viktigt med en komplett kartbild (exempelvis förbjudna områden i skog). Uppehåll i ytan ska göras om väg eller stig passerar igenom ytan.
-Förbjudna områden med tydliga gränser ska omges av svart konturlinje eller annan svart linjesymbol. Om gränsen är otydlig ska ingen svart kantlinje ritas.
-Banpåtryckssymbol 709 kan användas för temporära förbjudna områden.
-De svarta vertikala linjerna ska orienteras mot norr.
-Förbjudna områden får inte beträdas.
-Minsta yta: 1 x 1 mm (15 x 15 m).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Building</source>
@@ -11534,303 +8599,13 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
         <comment>Description of symbol 999</comment>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Yellow 100% + Green 50%</source>
-        <comment>Color 55</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Black 100%</source>
-        <comment>Color 3</comment>
-        <translation type="obsolete">Svart 100%</translation>
-    </message>
-    <message>
-        <source>Green 100%</source>
-        <comment>Color 4</comment>
-        <translation type="obsolete">Grön 100%</translation>
-    </message>
-    <message>
-        <source>White for railway</source>
-        <comment>Color 5</comment>
-        <translation type="obsolete">Vit för järnväg</translation>
-    </message>
-    <message>
-        <source>Blue 100%</source>
-        <comment>Color 6</comment>
-        <translation type="obsolete">Blå 100%</translation>
-    </message>
-    <message>
-        <source>Brown 100%</source>
-        <comment>Color 7</comment>
-        <translation type="obsolete">Brun 100%</translation>
-    </message>
-    <message>
-        <source>Purple for track symbols</source>
-        <comment>Color 8</comment>
-        <translation type="obsolete">Lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Black below purple for track symbols</source>
-        <comment>Color 9</comment>
-        <translation type="obsolete">Svart under lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Black 65%</source>
-        <comment>Color 10</comment>
-        <translation type="obsolete">Svart 65%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 11</comment>
-        <translation type="obsolete">Svart 20%</translation>
-    </message>
-    <message>
-        <source>Upper brown 50%</source>
-        <comment>Color 12</comment>
-        <translation type="obsolete">Övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below upper brown 50%</source>
-        <comment>Color 13</comment>
-        <translation type="obsolete">Svart under övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Lower brown 50%</source>
-        <comment>Color 14</comment>
-        <translation type="obsolete">Lägre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below lower brown 50%</source>
-        <comment>Color 15</comment>
-        <translation type="obsolete">Svart under nedre brun 50%</translation>
-    </message>
-    <message>
-        <source>Blue 100% for area features</source>
-        <comment>Color 16</comment>
-        <translation type="obsolete">Blå 100% för områdes funktioner</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Blå 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">Blå 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 19</comment>
-        <translation type="obsolete">OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for narrow ride</source>
-        <comment>Color 20</comment>
-        <translation type="obsolete">Gul 100% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 60% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation type="obsolete">Grön 60% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 30% for narrow ride</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Grön 30% för smal åktur</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 23</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Gul 100%/Grön 50%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Svart 25% (Grå)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 26</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>Green 100% for area features</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Grön 100% för områdes funktioner</translation>
-    </message>
-    <message>
-        <source>Green 60%</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Grön 60%</translation>
-    </message>
-    <message>
-        <source>Green 30%</source>
-        <comment>Color 29</comment>
-        <translation type="obsolete">Grön 30%</translation>
-    </message>
-    <message>
-        <source>Green 100% for undergrowth</source>
-        <comment>Color 30</comment>
-        <translation type="obsolete">Grön 100% för undervegetation</translation>
-    </message>
-    <message>
-        <source>White over yellow</source>
-        <comment>Color 31</comment>
-        <translation type="obsolete">Vit över gul</translation>
-    </message>
-    <message>
-        <source>Black for open land</source>
-        <comment>Color 32</comment>
-        <translation type="obsolete">Svart för öppet land</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <comment>Color 33</comment>
-        <translation type="obsolete">Gul 100%</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for area features</source>
-        <comment>Color 34</comment>
-        <translation type="obsolete">Gul 100% för areafunktioner</translation>
-    </message>
-    <message>
-        <source>Yellow 50%</source>
-        <comment>Color 35</comment>
-        <translation type="obsolete">Gul 50%</translation>
-    </message>
-    <message>
-        <source>White over green and brown</source>
-        <comment>Color 51</comment>
-        <translation type="obsolete">Blå 50%</translation>
-    </message>
-    <message>
-        <source>Brown 100% point symbols </source>
-        <comment>Color 39</comment>
-        <translation type="obsolete">Vit för järnväg</translation>
-    </message>
-    <message>
-        <source>Brown 100% line symbols </source>
-        <comment>Color 42</comment>
-        <translation type="obsolete">Svart under lila för spår symboler</translation>
-    </message>
-    <message>
-        <source>Yellow 100% + Green 50% </source>
-        <comment>Color 55</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Black for cultivated land and sandy ground </source>
-        <comment>Color 61</comment>
-        <translation type="obsolete">Grön 100% för undervegetation</translation>
-    </message>
-    <message>
-        <source>Green 100% bellow green areas (extra)</source>
-        <comment>Color 59</comment>
-        <translation type="obsolete">Grön 60%</translation>
-    </message>
-    <message>
-        <source>Black 50%</source>
-        <comment>Color 11</comment>
-        <translation type="obsolete">Svart 50%</translation>
-    </message>
-    <message>
-        <source>Black 20%</source>
-        <comment>Color 12</comment>
-        <translation type="obsolete">Svart 20%</translation>
-    </message>
-    <message>
-        <source>Upper brown 50%</source>
-        <comment>Color 13</comment>
-        <translation type="obsolete">Övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below upper brown 50%</source>
-        <comment>Color 14</comment>
-        <translation type="obsolete">Svart under övre brun 50%</translation>
-    </message>
-    <message>
-        <source>Lower brown 50%</source>
-        <comment>Color 15</comment>
-        <translation type="obsolete">Lägre brun 50%</translation>
-    </message>
-    <message>
-        <source>Black below lower brown 50%</source>
-        <comment>Color 16</comment>
-        <translation type="obsolete">Svart under nedre brun 50%</translation>
-    </message>
-    <message>
-        <source>Blue 100% for area features</source>
-        <comment>Color 17</comment>
-        <translation type="obsolete">Blå 100% för områdes funktioner</translation>
-    </message>
-    <message>
-        <source>Blue 70%</source>
-        <comment>Color 18</comment>
-        <translation type="obsolete">Blå 70%</translation>
-    </message>
-    <message>
-        <source>Blue 50%</source>
-        <comment>Color 19</comment>
-        <translation type="obsolete">Blå 50%</translation>
-    </message>
-    <message>
-        <source>OpenOrienteering Orange</source>
-        <comment>Color 20</comment>
-        <translation type="obsolete">OpenOrienteering Orange</translation>
-    </message>
-    <message>
-        <source>Yellow 100% for narrow ride</source>
-        <comment>Color 21</comment>
-        <translation type="obsolete">Gul 100% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 60% for narrow ride</source>
-        <comment>Color 22</comment>
-        <translation type="obsolete">Grön 60% för smal åktur</translation>
-    </message>
-    <message>
-        <source>Green 30% for narrow ride</source>
-        <comment>Color 23</comment>
-        <translation type="obsolete">Grön 30% för smal åktur</translation>
-    </message>
-    <message>
-        <source>White over green</source>
-        <comment>Color 24</comment>
-        <translation type="obsolete">Vit över grön</translation>
-    </message>
-    <message>
-        <source>Yellow 100%/Green 50%</source>
-        <comment>Color 25</comment>
-        <translation type="obsolete">Gul 100%/Grön 50%</translation>
-    </message>
-    <message>
-        <source>Black 25% (Grey)</source>
-        <comment>Color 26</comment>
-        <translation type="obsolete">Svart 25% (Grå)</translation>
-    </message>
-    <message>
-        <source>Green 100%/Black 50%</source>
-        <comment>Color 27</comment>
-        <translation type="obsolete">Grön 100%/Svart 50%</translation>
-    </message>
-    <message>
-        <source>Black 35% (Grey)</source>
-        <comment>Color 28</comment>
-        <translation type="obsolete">Svart 25% (Grå)</translation>
-    </message>
 </context>
 <context>
     <name>Course_Design</name>
     <message>
         <source>Purple</source>
         <comment>Color 0</comment>
-        <translation>Violett</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Black for control descriptions</source>
@@ -11855,7 +8630,7 @@ A route which is out-of-bounds and forbidden to cross is shown with a zigzag. Th
     <message>
         <source>Black</source>
         <comment>Color 5</comment>
-        <translation>Svart</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Simple Orienteering Course</source>
@@ -11942,7 +8717,7 @@ The purple line will extend a bit into the finish symbol. This is a shortcoming 
     <message>
         <source>Crossing point</source>
         <comment>Name of symbol 708</comment>
-        <translation type="unfinished">Genomgång</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A crossing point through or over a wall or fence, or across a road or railway or through a tunnel or an out-of-bounds area is drawn on the map with two lines curving outwards.</source>

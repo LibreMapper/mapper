@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2013-2022 Kai Pastor (OpenOrienteering)
+ * Copyright 2013-2022, 2024, 2025 Kai Pastor (OpenOrienteering)
  * Some parts taken from file_format_oc*d8{.h,_p.h,cpp} which are
  * Copyright 2012 Pete Curtis (OpenOrienteering)
  *
@@ -1609,6 +1609,7 @@ void OcdFileImport::setupAreaSymbolCommon(OcdImportedAreaSymbol* symbol, bool ro
 	// Basic area symbol fields: minimum_area, color
 	symbol->minimum_area = 0;
 	symbol->color = fill_on ? convertColor(ocd_symbol.fill_color) : nullptr;
+	symbol->setRotatable(rotatable);
 	symbol->patterns.clear();
 	symbol->patterns.reserve(4);
 	
@@ -1618,7 +1619,7 @@ void OcdFileImport::setupAreaSymbolCommon(OcdImportedAreaSymbol* symbol, bool ro
 		AreaSymbol::FillPattern pattern;
 		pattern.type = AreaSymbol::FillPattern::LinePattern;
 		pattern.angle = convertAngle(ocd_symbol.hatch_angle_1);
-		pattern.setRotatable(rotatable);
+		pattern.setRotatable(true);
 		pattern.line_spacing = convertLength(ocd_symbol.hatch_dist);
 		pattern.line_offset = 0;
 		pattern.line_width = convertLength(ocd_symbol.hatch_line_width);
@@ -1643,7 +1644,7 @@ void OcdFileImport::setupAreaSymbolCommon(OcdImportedAreaSymbol* symbol, bool ro
 		AreaSymbol::FillPattern pattern;
 		pattern.type = AreaSymbol::FillPattern::PointPattern;
 		pattern.angle = convertAngle(ocd_symbol.structure_angle);
-		pattern.setRotatable(rotatable);
+		pattern.setRotatable(true);
 		pattern.point_distance = convertLength(ocd_symbol.structure_width);
 		pattern.line_spacing = convertLength(ocd_symbol.structure_height);
 		pattern.line_offset = 0;
@@ -2444,7 +2445,13 @@ void OcdFileImport::setFraming(OcdFileImport::OcdImportedTextSymbol* symbol, con
 	case Ocd::FramingLine: // since V7
 		symbol->framing = true;
 		symbol->framing_mode = TextSymbol::LineFraming;
+		symbol->framing_color = convertColor(framing.color);
 		symbol->framing_line_half_width = convertLength(framing.line_width);
+		if (ocd_version >= 9)
+		{
+			if (framing.line_style_V9 != 0 && framing.line_style_V9 != 4)
+				addSymbolWarning(symbol, tr("Ignoring text framing line style."));
+		}
 		break;
 	case Ocd::FramingRectangle:
 	default:

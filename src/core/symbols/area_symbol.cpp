@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2019 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -772,6 +772,7 @@ void AreaSymbol::saveImpl(QXmlStreamWriter& xml, const Map& map) const
 	XmlElementWriter element { xml, QLatin1String("area_symbol") };
 	element.writeAttribute(QLatin1String{"inner_color"}, map.findColorPrio(color));
 	element.writeAttribute(QLatin1String{"min_area"}, minimum_area);
+	element.writeAttribute(QLatin1String("rotatable"), isRotatable());
 	element.writeAttribute(QLatin1String{"patterns"}, patterns.size());
 	for (const auto& pattern : patterns)
 		pattern.save(xml, map);
@@ -785,6 +786,7 @@ bool AreaSymbol::loadImpl(QXmlStreamReader& xml, const Map& map, SymbolDictionar
 	XmlElementReader element { xml };
 	color = map.getColorByPrio(element.attribute<int>(QLatin1String("inner_color")));
 	minimum_area = element.attribute<int>(QLatin1String("min_area"));
+	setRotatable(element.attribute<bool>(QLatin1String("rotatable")));
 	
 	auto num_patterns = element.attribute<int>(QLatin1String("patterns"));
 	patterns.reserve(num_patterns % 100); // 100 is not the limit

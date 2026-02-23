@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2015, 2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2015, 2017-2020, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -9,16 +9,26 @@
 
 #include "template_adjust.h"
 
+#include <Qt>
 #include <QAbstractItemView>
 #include <QAction>
 #include <QCheckBox>
+#include <QCursor>
+#include <QEvent>
 #include <QHeaderView>
+#include <QIcon>
 #include <QLabel>
+#include <QLatin1Char>
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QPixmap>
+#include <QPoint>
+#include <QPointF>
 #include <QPushButton>
+#include <QRectF>
 #include <QTableWidget>
+#include <QTableWidgetItem>
 #include <QToolBar>
 #include <QVBoxLayout>
 
@@ -317,7 +327,7 @@ void TemplateAdjustWidget::deletePassPoint(int number)
 
 void TemplateAdjustWidget::stopTemplateAdjust()
 {
-	// If one of these is checked, the corresponding tool should be set. The last condition is just to be sure.
+	// If one of these is checked, the corresponding tool should be unset. The last condition is just to be sure.
 	if ((new_act->isChecked() || move_act->isChecked() || delete_act->isChecked()) && controller->getTool())
 	{
 		controller->setTool(nullptr);
@@ -332,18 +342,11 @@ void TemplateAdjustWidget::updateActions()
 	clear_and_revert_button->setEnabled(has_pass_points);
 	move_act->setEnabled(has_pass_points);
 	delete_act->setEnabled(has_pass_points);
-	if (! has_pass_points)
+	if (!has_pass_points && (move_act->isChecked() || delete_act->isChecked()))
 	{
-		if (move_act->isChecked())
-		{
-			move_act->setChecked(false);
-			moveClicked(false);
-		}
-		if (delete_act->isChecked())
-		{
-			delete_act->setChecked(false);
-			deleteClicked(false);
-		}
+		move_act->setChecked(false);
+		delete_act->setChecked(false);
+		controller->setTool(nullptr);
 	}
 }
 

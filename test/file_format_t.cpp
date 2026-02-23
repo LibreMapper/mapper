@@ -2,6 +2,7 @@
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
  * Copyright 2012-2021, 2024, 2025 Kai Pastor (OpenOrienteering)
+ * Copyright 2025 Matthias Kühlewein (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -18,6 +19,7 @@
 #include <tuple>
 // IWYU pragma: no_include <type_traits>
 #include <utility>
+#include <vector>
 
 #include <Qt>
 #include <QtGlobal>
@@ -59,16 +61,17 @@
 #include "core/objects/object.h"
 #include "core/objects/text_object.h"
 #include "core/symbols/area_symbol.h"
-#include "core/symbols/symbol.h"
 #include "core/symbols/line_symbol.h"
+#include "core/symbols/symbol.h"
+#include "core/symbols/text_symbol.h"
 #include "fileformats/file_format.h"
 #include "fileformats/file_format_registry.h"
 #include "fileformats/file_import_export.h"
 #include "fileformats/iof_course_export.h"
 #include "fileformats/kml_course_export.h"
 #include "fileformats/ocd_file_export.h"
-#include "fileformats/ocd_file_import.h"
 #include "fileformats/ocd_file_format.h"
+#include "fileformats/ocd_file_import.h"
 #include "fileformats/ocd_types.h"
 #include "fileformats/ocd_types_v8.h"
 #include "fileformats/ocd_types_v12.h"
@@ -130,7 +133,7 @@ namespace QTest
 			ba += ", overprinting";
 		return qstrdup(ba.data());
 	}
-}
+}  // namespace QTest
 
 #endif
 
@@ -202,6 +205,38 @@ namespace
 		COMPARE_SYMBOL_PROPERTY(actual.isProtected(), expected.isProtected(), expected);
 		VERIFY_SYMBOL_PROPERTY(actual.stateEquals(&expected), expected);
 		VERIFY_SYMBOL_PROPERTY(actual.equals(&expected, Qt::CaseInsensitive), expected);
+	}
+	
+#define COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(property) \
+	COMPARE_SYMBOL_PROPERTY(actual_pattern.property, expected_pattern.property, symbol)
+	
+	void compareAreaSymbolPattern(const AreaSymbol::FillPattern& actual_pattern, const AreaSymbol::FillPattern& expected_pattern, const AreaSymbol& symbol)
+	{
+		// cf. AreaSymbol::FillPattern::equals
+		COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(type);
+		COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(line_spacing);
+		COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(line_offset);
+		
+		// OCD treats all patterns as rotatable.
+		COMPARE_SYMBOL_PROPERTY(int(actual_pattern.flags),
+		                        int(expected_pattern.flags | AreaSymbol::FillPattern::Rotatable),
+		                        symbol
+		)
+		
+		switch(expected_pattern.type)
+		{
+		case AreaSymbol::FillPattern::PointPattern:
+			COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(offset_along_line);
+			COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(point_distance);
+			COMPARE_SYMBOL_PROPERTY(bool(actual_pattern.point), bool(expected_pattern.point), symbol);
+			if(actual_pattern.point)
+				QVERIFY(actual_pattern.point->equals(expected_pattern.point));
+			break;
+		case AreaSymbol::FillPattern::LinePattern:
+			COMPARE_SYMBOL_PROPERTY(actual_pattern.line_color->operator QRgb(), expected_pattern.line_color->operator QRgb(), symbol);
+			COMPARE_AREA_SYMBOL_PATTERN_PROPERTY(line_width);
+			break;
+		}
 	}
 	
 	void compareMaps(const Map& actual, const Map& expected)
@@ -323,16 +358,16 @@ namespace
 	}
 	
 	
-	void fuzzyCompareSymbol(const AreaSymbol& actual, const AreaSymbol& expected)
+	void fuzzyCompareSymbol(const AreaSymbol& actual, const AreaSymbol& expected, const QByteArray& format_id)
 	{
-		auto pattern_rotable = false;
+		auto pattern_rotable = format_id.startsWith("OCD") ? true : false;
 		for (auto i = 0; i < expected.getNumFillPatterns(); ++i)
 			pattern_rotable |= expected.getFillPattern(i).rotatable();
 		for (auto i = 0; i < actual.getNumFillPatterns(); ++i)
 			COMPARE_SYMBOL_PROPERTY(actual.getFillPattern(i).rotatable(), pattern_rotable, expected);
 	}
 	
-	void fuzzyCompareSymbol(const Symbol& actual, const Symbol& expected, const QByteArray& /*format_id*/)
+	void fuzzyCompareSymbol(const Symbol& actual, const Symbol& expected, const QByteArray& format_id)
 	{
 		COMPARE_SYMBOL_PROPERTY(actual.isHidden(), expected.isHidden(), expected);
 		COMPARE_SYMBOL_PROPERTY(actual.isProtected(), expected.isProtected(), expected);
@@ -348,7 +383,7 @@ namespace
 		switch (actual.getType())
 		{
 		case Symbol::Area:
-			fuzzyCompareSymbol(static_cast<AreaSymbol const&>(actual), static_cast<AreaSymbol const&>(expected));
+			fuzzyCompareSymbol(static_cast<AreaSymbol const&>(actual), static_cast<AreaSymbol const&>(expected), format_id);
 			break;
 			
 		default:
@@ -785,10 +820,10 @@ void FileFormatTest::issue_513_high_coordinates()
 	}
 	
 	auto print_area = map.printerConfig().print_area;
-	QVERIFY2(print_area.top()    <  1000000.0, "extent.top() outside printable range");
-	QVERIFY2(print_area.left()   > -1000000.0, "extent.left() outside printable range");
-	QVERIFY2(print_area.bottom() > -1000000.0, "extent.bottom() outside printable range");
-	QVERIFY2(print_area.right()  <  1000000.0, "extent.right() outside printable range");
+	QVERIFY2(print_area.top()    <  1000000.0, "print_area.top() outside printable range");
+	QVERIFY2(print_area.left()   > -1000000.0, "print_area.left() outside printable range");
+	QVERIFY2(print_area.bottom() > -1000000.0, "print_area.bottom() outside printable range");
+	QVERIFY2(print_area.right()  <  1000000.0, "print_area.right() outside printable range");
 }
 
 
@@ -1830,6 +1865,385 @@ void FileFormatTest::ocdPathImportTest()
 			QFAIL(qPrintable(err));
 		}
 	}
+}
+
+
+void FileFormatTest::ocdAreaSymbolTest_data()
+{
+	QTest::addColumn<int>("format_version");
+	
+#ifndef MAPPER_BIG_ENDIAN
+	static struct { int version; const char* id; } const tests[] = {
+	    { 8, "OCD8" },
+	    { 9, "OCD9" },
+	    { 10, "OCD10" },
+	    { 11, "OCD11" },
+	    { 12, "OCD12" },
+	};
+	for (auto& t : tests)
+	{
+		QTest::newRow(t.id) << t.version;
+	}
+#endif
+}
+
+void FileFormatTest::ocdAreaSymbolTest()
+{
+	QFETCH(int, format_version);
+	
+	auto* format_id = QTest::currentDataTag();
+	const auto* format = FileFormats.findFormat(format_id);
+	QVERIFY(format);
+	
+	static const auto filepath = QString::fromLatin1("data:rotated-pattern.omap");
+	QVERIFY(QFileInfo::exists(filepath));
+	
+	// Load the test map
+	auto expected = std::make_unique<Map>();
+	QVERIFY(expected->loadFrom(filepath));
+	
+	// Save and load the map
+	auto actual = saveAndLoadMap(*expected, format);
+	QVERIFY2(actual, "Exception while importing / exporting.");
+	QCOMPARE(actual->property(OcdFileFormat::versionProperty()), format_version);
+	
+	// Symbols
+	QCOMPARE(actual->getNumSymbols(), expected->getNumSymbols());
+	for (int i = 0; i < actual->getNumSymbols(); ++i)
+	{
+		auto* expected_symbol = expected->getSymbol(i);
+		if (expected_symbol->getType() != Symbol::Area)
+			continue;
+		
+		auto* actual_symbol = actual->getSymbol(i);
+		QCOMPARE(actual_symbol->getType(), Symbol::Area);
+		
+		COMPARE_SYMBOL_PROPERTY(actual_symbol->getNumberComponent(0), expected_symbol->getNumberComponent(0), *expected_symbol);
+		// OCD limitation: always two number components
+		expected_symbol->setNumberComponent(2, -1);
+		if (expected_symbol->getNumberComponent(1) == -1)
+			expected_symbol->setNumberComponent(1, actual_symbol->getNumberComponent(1));
+		
+		auto* expected_area_symbol = expected_symbol->asArea();
+		auto* actual_area_symbol = actual_symbol->asArea();
+		COMPARE_SYMBOL_PROPERTY(bool(actual_area_symbol->getColor()), bool(expected_area_symbol->getColor()), *expected_area_symbol);
+		if (expected_area_symbol->getColor())
+			COMPARE_SYMBOL_PROPERTY(actual_area_symbol->getColor()->operator QRgb(), expected_area_symbol->getColor()->operator QRgb(), *expected_area_symbol);
+		COMPARE_SYMBOL_PROPERTY(actual_area_symbol->isRotatable(), expected_area_symbol->isRotatable(), *expected_area_symbol);
+		
+		COMPARE_SYMBOL_PROPERTY(actual_area_symbol->getNumFillPatterns(), expected_area_symbol->getNumFillPatterns(), *expected_area_symbol);
+		for (auto j = 0; j < expected_area_symbol->getNumFillPatterns(); ++j)
+		{
+			auto expected_pattern = expected_area_symbol->getFillPattern(j);
+			auto actual_pattern = actual_area_symbol->getFillPattern(j);
+			
+			// OCD limitation: Fill pattern always rotatable
+			expected_pattern.setRotatable(true);
+			
+			compareAreaSymbolPattern(actual_pattern, expected_pattern, *expected_area_symbol);
+		}
+	}
+	
+	// Objects
+	QCOMPARE(actual->getNumParts(), 1);
+	QCOMPARE(expected->getNumParts(), 1);
+	
+	const auto& actual_part = *actual->getPart(0);
+	const auto& expected_part = *expected->getPart(0);
+	QCOMPARE(actual_part.getNumObjects(), expected_part.getNumObjects());
+	for (int i = 0; i < actual_part.getNumObjects(); ++i)
+	{
+		auto const& expected_object = *expected_part.getObject(i);
+		auto const& expected_symbol = *expected_object.getSymbol();
+		if (expected_symbol.getType() != Symbol::Area)
+			continue;
+		
+		auto const& actual_object = *actual_part.getObject(i);
+		
+		// Adopt expected object properties to OCD format capabilites.
+		{
+			auto& expected_path = *const_cast<Object&>(expected_object).asPath();
+			
+			// ATM the last import coord never carries "HolePoint".
+			auto& last_coord = expected_path.getCoordinateRef(expected_path.getCoordinateCount()-1);
+			last_coord.setHolePoint(false);
+			
+			// OC*D uses tenths of a degree, counterclockwise.
+			auto delta_rotation = actual_object.getRotation() - expected_path.getRotation();
+			if (delta_rotation > M_PI)
+				delta_rotation -= 2*M_PI;
+			else if (delta_rotation < -M_PI)
+				delta_rotation += 2*M_PI;
+			if (qAbs(delta_rotation) < qDegreesToRadians(0.2))
+				expected_path.setRotation(actual_object.getRotation());
+			
+			// OC*D doesn't have pattern origin.
+			expected_path.setPatternOrigin({});
+			
+			// Mapper may store rotation even if there are no rotatable patterns (left).
+			if (!expected_symbol.hasRotatableFillPattern())
+				expected_path.setRotation(0);
+		}
+		
+		// Verifying object property; symbol is for tracing
+		VERIFY_SYMBOL_PROPERTY(actual_object.equals(&expected_object, false), expected_symbol);
+	}
+}
+
+void FileFormatTest::ocdTextSymbolTest_data()
+{
+	QTest::addColumn<int>("format_version");
+	
+#ifndef MAPPER_BIG_ENDIAN
+	static struct { int version; const char* id; } const tests[] = {
+	    { 8, "OCD8" },
+	    { 9, "OCD9" },
+	    { 10, "OCD10" },
+	    { 11, "OCD11" },
+	    { 12, "OCD12" },
+	};
+	for (auto& t : tests)
+	{
+		QTest::newRow(t.id) << t.version;
+	}
+#endif
+}
+
+void FileFormatTest::ocdTextSymbolTest()
+{
+	QFETCH(int, format_version);
+	
+	auto* format_id = QTest::currentDataTag();
+	const auto* format = FileFormats.findFormat(format_id);
+	QVERIFY(format);
+	
+	static const auto filepath = QString::fromLatin1("data:text-symbol.omap");
+	QVERIFY(QFileInfo::exists(filepath));
+	
+	// Load the test map
+	auto expected = std::make_unique<Map>();
+	QVERIFY(expected->loadFrom(filepath));
+	
+	// Save and load the map
+	auto actual = saveAndLoadMap(*expected, format);
+	QVERIFY2(actual, "Exception while importing / exporting.");
+	QCOMPARE(actual->property(OcdFileFormat::versionProperty()), format_version);
+	
+	// Symbols
+	QCOMPARE(actual->getNumSymbols(), expected->getNumSymbols());
+	for (int i = 0; i < actual->getNumSymbols(); ++i)
+	{
+		auto* expected_symbol = expected->getSymbol(i);
+		if (expected_symbol->getType() != Symbol::Text)	// actually redundant for the given test data
+			continue;
+		
+		auto* actual_symbol = actual->getSymbol(i);
+		QCOMPARE(actual_symbol->getType(), Symbol::Text);
+		
+		COMPARE_SYMBOL_PROPERTY(actual_symbol->getNumberComponent(0), expected_symbol->getNumberComponent(0), *expected_symbol);
+		// OCD limitation: always two number components
+		if (expected_symbol->getNumberComponent(1) != -1)
+			COMPARE_SYMBOL_PROPERTY(actual_symbol->getNumberComponent(1), expected_symbol->getNumberComponent(1), *expected_symbol);
+		
+		QVERIFY(expected_symbol->stateEquals(actual_symbol));
+		
+		auto* expected_text_symbol = expected_symbol->asText();
+		auto* actual_text_symbol = actual_symbol->asText();
+		
+		COMPARE_SYMBOL_PROPERTY(bool(actual_text_symbol->getColor()), bool(expected_text_symbol->getColor()), *expected_text_symbol);
+		if (expected_text_symbol->getColor())
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getColor()->operator QRgb(), expected_text_symbol->getColor()->operator QRgb(), *expected_text_symbol);
+		COMPARE_SYMBOL_PROPERTY(bool(actual_text_symbol->getFramingColor()), bool(expected_text_symbol->getFramingColor()), *expected_text_symbol);
+		if (expected_text_symbol->getFramingColor())
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getFramingColor()->operator QRgb(), expected_text_symbol->getFramingColor()->operator QRgb(), *expected_text_symbol);
+		COMPARE_SYMBOL_PROPERTY(bool(actual_text_symbol->getLineBelowColor()), bool(expected_text_symbol->getLineBelowColor()), *expected_text_symbol);
+		if (expected_text_symbol->getLineBelowColor())
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getLineBelowColor()->operator QRgb(), expected_text_symbol->getLineBelowColor()->operator QRgb(), *expected_text_symbol);
+		
+		COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getFramingMode(), expected_text_symbol->getFramingMode(), *expected_text_symbol);
+		if (expected_text_symbol->getFramingMode() == TextSymbol::FramingMode::ShadowFraming)
+		{
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getFramingShadowYOffset(), expected_text_symbol->getFramingShadowYOffset(), *expected_text_symbol);
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getFramingShadowXOffset(), expected_text_symbol->getFramingShadowXOffset(), *expected_text_symbol);
+		}
+		if (expected_text_symbol->getFramingMode() == TextSymbol::FramingMode::LineFraming)
+		{
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getFramingLineHalfWidth(), expected_text_symbol->getFramingLineHalfWidth(), *expected_text_symbol);
+		}
+
+		if (expected_text_symbol->hasLineBelow())
+		{
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getLineBelowWidth(), expected_text_symbol->getLineBelowWidth(), *expected_text_symbol);
+			COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getLineBelowDistance(), expected_text_symbol->getLineBelowDistance(), *expected_text_symbol);
+		}
+		
+		COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getNumCustomTabs(), expected_text_symbol->getNumCustomTabs(), *expected_text_symbol);
+		if (expected_text_symbol->getNumCustomTabs())
+		{
+			for (int i = 0; i < expected_text_symbol->getNumCustomTabs(); ++i)
+				COMPARE_SYMBOL_PROPERTY(actual_text_symbol->getCustomTab(i), expected_text_symbol->getCustomTab(i), *expected_text_symbol);
+		}
+	}
+}
+
+void FileFormatTest::dxfExportTest_data()
+{
+	QTest::addColumn<QString>("map_filepath");
+	QTest::addColumn<QByteArray>("ogr_format_id");
+	QTest::addColumn<QString>("ogr_extension");
+	QTest::addColumn<bool>("export_one_layer_per_symbol");
+	
+	QTest::newRow("export_one_layer_per_symbol = false") << QString::fromLatin1("data:helper-hidden-symbols.omap")
+	                              << QByteArray("OGR-export-DXF") << QString::fromLatin1("dxf")
+	                              << false;
+	QTest::newRow("export_one_layer_per_symbol = true") << QString::fromLatin1("data:helper-hidden-symbols.omap")
+	                              << QByteArray("OGR-export-DXF") << QString::fromLatin1("dxf")
+	                              << true;
+}
+
+void FileFormatTest::dxfExportTest()
+{
+#ifdef MAPPER_USE_GDAL
+	QFETCH(QString, map_filepath);
+	QFETCH(QByteArray, ogr_format_id);
+	QFETCH(QString, ogr_extension);
+	QFETCH(bool, export_one_layer_per_symbol);
+	
+	QTemporaryDir dir;
+	QVERIFY(dir.isValid());
+	auto const ogr_filepath = QString {dir.path() + QLatin1String("/dxfexport.") + ogr_extension};
+	
+	GdalManager manager;
+	auto prev_export_one_layer_per_symbol = manager.isExportOptionEnabled(GdalManager::OneLayerPerSymbol);
+	if (prev_export_one_layer_per_symbol != export_one_layer_per_symbol)
+		manager.setExportOptionEnabled(GdalManager::OneLayerPerSymbol, export_one_layer_per_symbol);
+	
+	Map map;
+	{
+		QVERIFY(map.loadFrom(map_filepath));
+		
+		auto const* format = FileFormats.findFormat(ogr_format_id);
+		QVERIFY(format);
+		
+		auto exporter = format->makeExporter(ogr_filepath, &map, nullptr);
+		QVERIFY(bool(exporter));
+		QVERIFY(exporter->doExport());
+	}
+	
+	if (prev_export_one_layer_per_symbol != export_one_layer_per_symbol)
+		manager.setExportOptionEnabled(GdalManager::OneLayerPerSymbol, prev_export_one_layer_per_symbol);
+	
+	Map imported_map;
+	{
+		auto const* format = FileFormats.findFormat("OGR");
+		QVERIFY(format);
+		
+		auto importer = format->makeImporter(ogr_filepath, &imported_map, nullptr);
+		QVERIFY(bool(importer));
+		QVERIFY(importer->doImport());
+	}
+	
+	// Symbols
+	QCOMPARE(imported_map.getNumSymbols(), 8);	// 4 default symbols and 4 symbols for the imported objects
+	
+	// Objects
+	const auto& actual_part = *map.getPart(0);
+	const auto& imported_part = *imported_map.getPart(0);
+	QCOMPARE(actual_part.getNumObjects(), 12);
+	QCOMPARE(imported_part.getNumObjects(), 4);
+#endif  // MAPPER_USE_GDAL
+}
+
+
+void FileFormatTest::shpExportTest_data()
+{
+	QTest::addColumn<QString>("map_filepath");
+	QTest::addColumn<QByteArray>("ogr_format_id");
+	QTest::addColumn<QString>("ogr_extension");
+	QTest::addColumn<bool>("export_one_layer_per_symbol");
+	QTest::addColumn<QString>("name_extensions");
+	QTest::addColumn<std::vector<int>>("number_symbols");
+	QTest::addColumn<std::vector<int>>("number_objects");
+	
+	
+	QTest::newRow("export_one_layer_per_symbol = false") << QString::fromLatin1("data:helper-hidden-symbols.omap")
+	                              << QByteArray("OGR-export-ESRI Shapefile") << QString::fromLatin1("shp")
+	                              << false
+	                              << QString::fromLatin1("areas lines")
+	                              << std::vector<int>{4, 4}
+ 	                              << std::vector<int>{1, 2};	// the single line is exported as two lines
+	QTest::newRow("export_one_layer_per_symbol = true") << QString::fromLatin1("data:helper-hidden-symbols.omap")
+	                              << QByteArray("OGR-export-ESRI Shapefile") << QString::fromLatin1("shp")
+	                              << true
+	                              << QString::fromLatin1("Area Line Text")
+	                              << std::vector<int>{4, 4, 4}
+ 	                              << std::vector<int>{1, 2, 0};	// the single line is exported as two lines
+}
+
+void FileFormatTest::shpExportTest()
+{
+#ifdef MAPPER_USE_GDAL
+	QFETCH(QString, map_filepath);
+	QFETCH(QByteArray, ogr_format_id);
+	QFETCH(QString, ogr_extension);
+	QFETCH(bool, export_one_layer_per_symbol);
+	QFETCH(QString, name_extensions);
+	QFETCH(std::vector<int>, number_symbols);
+	QFETCH(std::vector<int>, number_objects);
+	
+	const auto name_extension_list = name_extensions.split(QLatin1String(" "));
+	QVERIFY(name_extension_list.size() == (int)number_symbols.size());
+	QVERIFY(number_objects.size() == number_symbols.size());
+	
+	QTemporaryDir dir;
+	QVERIFY(dir.isValid());
+	auto const ogr_filepath = QString {dir.path() + QLatin1String("/shpexport.") + ogr_extension};
+	
+	GdalManager manager;
+	auto prev_export_one_layer_per_symbol = manager.isExportOptionEnabled(GdalManager::OneLayerPerSymbol);
+	if (prev_export_one_layer_per_symbol != export_one_layer_per_symbol)
+		manager.setExportOptionEnabled(GdalManager::OneLayerPerSymbol, export_one_layer_per_symbol);
+	
+	Map map;
+	{
+		QVERIFY(map.loadFrom(map_filepath));
+		
+		auto const* format = FileFormats.findFormat(ogr_format_id);
+		QVERIFY(format);
+		
+		auto exporter = format->makeExporter(ogr_filepath, &map, nullptr);
+		QVERIFY(bool(exporter));
+		QVERIFY(exporter->doExport());
+	}
+	
+	if (prev_export_one_layer_per_symbol != export_one_layer_per_symbol)
+		manager.setExportOptionEnabled(GdalManager::OneLayerPerSymbol, prev_export_one_layer_per_symbol);
+	
+	int i = 0;
+	for (const auto& name_extension : name_extension_list)
+	{
+		Map imported_map;
+		{
+			auto const* format = FileFormats.findFormat("OGR");
+			QVERIFY(format);
+			
+			auto const ogr_filepath = QString {dir.path() + QLatin1String("/shpexport_") + name_extension + QLatin1String(".") + ogr_extension};
+			auto importer = format->makeImporter(ogr_filepath, &imported_map, nullptr);
+			QVERIFY(bool(importer));
+			QVERIFY(importer->doImport());
+		}
+	
+		// Symbols
+		QCOMPARE(imported_map.getNumSymbols(), number_symbols.at(i));	// 4 default symbols and 4 symbols for the imported objects
+		
+		// Objects
+		const auto& actual_part = *map.getPart(0);
+		const auto& imported_part = *imported_map.getPart(0);
+		QCOMPARE(actual_part.getNumObjects(), 12);
+		QCOMPARE(imported_part.getNumObjects(), number_objects.at(i));
+		++i;
+	}
+#endif  // MAPPER_USE_GDAL
 }
 
 /*

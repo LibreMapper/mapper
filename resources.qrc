@@ -27,8 +27,10 @@
         <file>images/cursor-hollow.png</file>
         <file>images/cursor-invisible.png</file>
         <file>images/cursor-move-parallel.png</file>
+        <file>images/cursor-paint-on-template.png</file>
         <file>images/cursor-rotate.png</file>
         <file>images/cursor-scale.png</file>
+        <file>images/cursor-zoom.png</file>
         <file>images/cut.png</file>
         <file>images/delete.png</file>
         <file>images/draw-circle.png</file>
@@ -47,15 +49,16 @@
         <file>images/group.png</file>
         <file>images/help.png</file>
         <file>images/magnifying-glass.png</file>
+        <file>images/map-information.png</file>
         <file>images/map-parts.png</file>
         <file>images/mapper.png</file>
         <file>images/minus.png</file>
         <file>images/move.png</file>
         <file>images/new.png</file>
         <file>images/open.png</file>
-        <file>images/paint-on-template-settings.png</file>
         <file>images/move-to-gps.png</file>
         <file>images/paste.png</file>
+        <file>images/paste-at-location.png</file>
         <file>images/pencil.png</file>
         <file>images/plus.png</file>
         <file>images/point-handles.png</file>
@@ -72,6 +75,7 @@
         <file>images/settings.png</file>
         <file>images/symbols.png</file>
         <file>images/symbol_point_explanation.png</file>
+        <file>images/tag-editor.png</file>
         <file>images/tag-selector.png</file>
         <file>images/templates.png</file>
         <file>images/text-align-left.png</file>
@@ -111,6 +115,7 @@
         <file>images/tool-touch-cursor.png</file>
         <file>images/undo.png</file>
         <file>images/view-baseline.png</file>
+        <file>images/view-box-zoom.png</file>
         <file>images/view-hatch-areas.png</file>
         <file>images/view-show-all.png</file>
         <file>images/view-zoom-in.png</file>

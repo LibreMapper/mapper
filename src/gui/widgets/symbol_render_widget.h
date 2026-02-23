@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2014 Kai Pastor (OpenOrienteering)
+ * Copyright 2014-2019, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -157,7 +157,7 @@ signals:
 	/**
 	 * @brief The user triggered selecting objects with the active symbol.
 	 * @param exclusively If true, an existing selection is replaced,
-	 *                    otherwise it is extend.
+	 *                    otherwise it is extended.
 	 */
 	void selectObjectsClicked(bool exclusively);
 	
@@ -233,7 +233,7 @@ protected:
 	void paintEvent(QPaintEvent* event) override;
 	
 	/**
-	 * @brief Draws the icon and its decoration (hidden, protected).
+	 * @brief Draws the icon and its decoration (hidden, protected, helper symbol).
 	 * 
 	 * The icon is drawn at (0, 0) with the current icon size.
 	 * @param painter The QPainter to be used (must be active).
@@ -297,7 +297,7 @@ protected:
 	 * @brief Emits selectedSymbolsChanged() while temporarily locking the symbol selection against changes.
 	 * 
 	 * An active tool could catch the selectedSymbolsChanged() signal and
-	 * finish its editing for that reason. It would than insert a new object to
+	 * finish its editing for that reason. It would then insert a new object in
 	 * the map and so trigger another change of selection. Emitting
 	 * selectedSymbolsChanged() via this method suppresses behavior by setting
 	 * the selection_locked flag before emitting the actual signal and resetting
@@ -356,6 +356,7 @@ private:
 	
 	QScopedPointer<SymbolIconDecorator> hidden_symbol_decoration;
 	QScopedPointer<SymbolIconDecorator> protected_symbol_decoration;
+	QScopedPointer<SymbolIconDecorator> helper_symbol_decoration;
 };
 
 //### SymbolRenderWidget inline code ###

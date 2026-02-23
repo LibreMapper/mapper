@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2021, 2024 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2021, 2024, 2025 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -127,7 +127,30 @@ private slots:
 	 */
 	void ocdPathImportTest_data();
 	void ocdPathImportTest();
-
+	
+	/**
+	 * Test OCD area symbol export and import.
+	 */
+	void ocdAreaSymbolTest_data();
+	void ocdAreaSymbolTest();
+	
+	/**
+	 * Test OCD text symbol export and import.
+	 */
+	void ocdTextSymbolTest_data();
+	void ocdTextSymbolTest();
+	
+	/**
+	 * Test DXF export and import.
+	 */
+	void dxfExportTest_data();
+	void dxfExportTest();
+	
+	/**
+	 * Test SHP export and import.
+	 */
+	void shpExportTest_data();
+	void shpExportTest();
 };
 
 #endif // LIBREMAPPER_FILE_FORMAT_T_H
