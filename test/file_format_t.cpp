@@ -1879,6 +1879,7 @@ void FileFormatTest::ocdAreaSymbolTest_data()
 	    { 10, "OCD10" },
 	    { 11, "OCD11" },
 	    { 12, "OCD12" },
+	    { 2018, "OCD2018" },
 	};
 	for (auto& t : tests)
 	{
@@ -1983,6 +1984,14 @@ void FileFormatTest::ocdAreaSymbolTest()
 			// Mapper may store rotation even if there are no rotatable patterns (left).
 			if (!expected_symbol.hasRotatableFillPattern())
 				expected_path.setRotation(0);
+
+			// Transfer the creation date and modification date tags
+			for (auto* tag_name : {"ctime", "mtime"})
+			{
+				auto const value = actual_object.getTag(QLatin1StringView(tag_name));
+				if (!value.isEmpty())
+					expected_path.setTag(QLatin1StringView(tag_name), value);
+			}
 		}
 		
 		// Verifying object property; symbol is for tracing
@@ -2001,6 +2010,7 @@ void FileFormatTest::ocdTextSymbolTest_data()
 	    { 10, "OCD10" },
 	    { 11, "OCD11" },
 	    { 12, "OCD12" },
+	    { 2018, "OCD2018" },
 	};
 	for (auto& t : tests)
 	{
