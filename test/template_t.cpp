@@ -346,7 +346,7 @@ private slots:
 		QCOMPARE(map.getNumTemplates(), 1);
 		auto temp = map.getTemplate(0);
 		QCOMPARE(temp->getTemplateFilename(),
-		         QString::fromUtf8("\u0448\u0430\u0431\u043B\u043E\u043D\u0020\u043A\u0430\u0440\u0442\u044B.tiff"));
+		         QString::fromWCharArray(L"\u0448\u0430\u0431\u043B\u043E\u043D\u0020\u043A\u0430\u0440\u0442\u044B.tiff"));
 #ifndef MAPPER_USE_GDAL
 		QCOMPARE(temp->getTemplateType(), "TemplateImage");
 #else
@@ -732,7 +732,7 @@ private slots:
  */
 #ifndef Q_OS_MACOS
 namespace  {
-	Q_DECL_UNUSED auto const qpa_selected = qputenv("QT_QPA_PLATFORM", "minimal");  // clazy:exclude=non-pod-global-static
+	Q_DECL_UNUSED auto const qpa_selected = qputenv("QT_QPA_PLATFORM", "offscreen");  // clazy:exclude=non-pod-global-static
 }
 #endif
 

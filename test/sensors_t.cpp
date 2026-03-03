@@ -93,6 +93,9 @@ private slots:
 		
 	void powershellPositionSourceLiveTest()
 	{
+		if(!qEnvironmentVariableIsEmpty("SKIP_POWERSHELL_POSITION_SOURCE_LIVE_TEST"))
+			QSKIP("SKIP_POWERSHELL_POSITION_SOURCE_LIVE_TEST is set");
+		
 		auto powershell_path = QStandardPaths::findExecutable(QStringLiteral("powershell.exe"));
 #if !defined(Q_OS_WIN)
 		if (powershell_path.isEmpty())
@@ -126,23 +129,25 @@ private slots:
 		}
 	}
 	
+	static QGeoPositionInfoSource::Error powershellPositionSourceSimulationSetup(QProcess& process, QByteArray& /* unused */, QByteArray& /* unused */)
+	{
+		auto test_file = QFileInfo(QStringLiteral("testdata:sensors/powershell_position.txt"));
+		if (!test_file.exists())
+			return QGeoPositionInfoSource::UnknownSourceError;
+		
+#if defined(Q_OS_WIN)
+		process.setProgram(QStandardPaths::findExecutable(QStringLiteral("cmd")));
+		process.setArguments({QStringLiteral("/C"), QStringLiteral("type"), QDir::toNativeSeparators(test_file.absoluteFilePath())});
+#else
+		process.setProgram(QStringLiteral("/bin/cat"));
+		process.setArguments({test_file.absoluteFilePath()});
+#endif
+		return QGeoPositionInfoSource::NoError;
+	};
+	
 	void powershellPositionSourceSimulatedTest()
 	{
-		auto setup_function = [](QProcess& process, QByteArray&, QByteArray&) -> QGeoPositionInfoSource::Error {
-			auto test_file = QFileInfo(QStringLiteral("testdata:sensors/powershell_position.txt"));
-			if (!test_file.exists())
-				return QGeoPositionInfoSource::UnknownSourceError;
-			
-#if defined(Q_OS_WIN)
-			process.setProgram(QStandardPaths::findExecutable(QStringLiteral("cmd")));
-			process.setArguments({QStringLiteral("/C"), QStringLiteral("type"), QDir::toNativeSeparators(test_file.absoluteFilePath())});
-#else
-			process.setProgram(QStringLiteral("/bin/cat"));
-			process.setArguments({test_file.absoluteFilePath()});
-#endif
-			return QGeoPositionInfoSource::NoError;
-		};
-		PowershellPositionSource source(*setup_function);
+		PowershellPositionSource source(powershellPositionSourceSimulationSetup);
 		QCOMPARE(int(source.error()), int(QGeoPositionInfoSource::NoError));
 		
 		QSignalSpy source_spy(&source, &QGeoPositionInfoSource::positionUpdated);
@@ -171,7 +176,7 @@ private slots:
  */
 #ifndef Q_OS_MACOS
 namespace  {
-	Q_DECL_UNUSED auto const qpa_selected = qputenv("QT_QPA_PLATFORM", "minimal");  // clazy:exclude=non-pod-global-static
+	Q_DECL_UNUSED auto const qpa_selected = qputenv("QT_QPA_PLATFORM", "offscreen");  // clazy:exclude=non-pod-global-static
 }
 #endif
 
