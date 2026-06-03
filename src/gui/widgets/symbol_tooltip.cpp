@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2017 Kai Pastor (OpenOrienteering)
+ * Copyright 2014, 2016-2019, 2026 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -127,8 +127,12 @@ void SymbolToolTip::paintEvent(QPaintEvent* event)
 
 void SymbolToolTip::adjustPosition(bool mobile_mode)
 {
+	auto* screen = qApp->screenAt(QCursor::pos());
+	if (!screen)
+		return;
+	
 	auto size = this->size();
-	auto desktop = QGuiApplication::screenAt(QCursor::pos())->availableGeometry();
+	auto desktop = screen->availableGeometry();
 	
 	const int margin = 3;
 	bool has_room_to_left  = (icon_rect.left()   - size.width()  - margin >= desktop.left());

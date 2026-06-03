@@ -182,7 +182,7 @@ if(Mapper_USE_GDAL)
         find_package(GDAL 3.9 REQUIRED)
 endif()
 
-find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 qt_standard_project_setup()
 
 if(CMAKE_CXX_BYTE_ORDER STREQUAL "BIG_ENDIAN")

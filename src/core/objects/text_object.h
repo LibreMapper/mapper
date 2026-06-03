@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2012-2019, 2025 Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2019, 2025, 2026 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Copyright 2012, 2013 Thomas Schöps (OpenOrienteering)
- * Copyright 2014 Thomas Schöps, Kai Pastor (OpenOrienteering)
+ * Copyright 2012-2014 Thomas Schöps (OpenOrienteering)
+ * Copyright 2013, 2014, 2016-2019, 2026 Kai Pastor (OpenOrienteering)
  *
  * This file is part of LibreMapper.
  */
@@ -149,18 +149,22 @@ void PieMenu::popup(const QPoint& pos)
 {
 	updateCachedState(); // We need the current total_radius.
 	
-	QPoint cursor_pos = QCursor::pos();
-	QRect screen_rect = QGuiApplication::screenAt(cursor_pos)->availableGeometry();
-	
-	if (cursor_pos.x() > screen_rect.right() - total_radius)
-		cursor_pos.setX(screen_rect.right() - total_radius);
-	else if (cursor_pos.x() < total_radius)
-		cursor_pos.setX(total_radius);
-	
-	if (cursor_pos.y() > screen_rect.bottom() - total_radius)
-		cursor_pos.setY(screen_rect.bottom() - total_radius);
-	else if (cursor_pos.y() < total_radius)
-		cursor_pos.setY(total_radius);
+	auto* screen = qApp->screenAt(pos);
+	if (screen)
+	{
+		QPoint cursor_pos = QCursor::pos();
+		QRect screen_rect = screen->availableGeometry();
+		
+		if (cursor_pos.x() > screen_rect.right() - total_radius)
+			cursor_pos.setX(screen_rect.right() - total_radius);
+		else if (cursor_pos.x() < total_radius)
+			cursor_pos.setX(total_radius);
+		
+		if (cursor_pos.y() > screen_rect.bottom() - total_radius)
+			cursor_pos.setY(screen_rect.bottom() - total_radius);
+		else if (cursor_pos.y() < total_radius)
+			cursor_pos.setY(total_radius);
+	}
 	
 	setGeometry(pos.x() - total_radius, pos.y() - total_radius, 2 * total_radius, 2 * total_radius);
 	
