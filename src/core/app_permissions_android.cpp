@@ -10,6 +10,7 @@
 
 #include <algorithm>
 #include <QtAndroid>
+#include <QHash>
 
 
 namespace AppPermissions
