@@ -128,7 +128,10 @@ void SymbolToolTip::paintEvent(QPaintEvent* event)
 void SymbolToolTip::adjustPosition(bool mobile_mode)
 {
 	auto size = this->size();
-	auto desktop = QGuiApplication::screenAt(QCursor::pos())->availableGeometry();
+	auto screen = QGuiApplication::screenAt(QCursor::pos());
+	if (!screen)
+		return;
+	auto const desktop = screen->availableGeometry();
 	
 	const int margin = 3;
 	bool has_room_to_left  = (icon_rect.left()   - size.width()  - margin >= desktop.left());
