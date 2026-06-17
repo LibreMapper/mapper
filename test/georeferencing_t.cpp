@@ -107,8 +107,8 @@ void GeoreferencingTest::initTestCase()
 	XMLFileFormat::active_version = 6;
 	
 	auto info = proj_info();
-	QVERIFY(info.major == PROJ_VERSION_MAJOR);
-	QVERIFY(info.minor == PROJ_VERSION_MINOR);
+	QCOMPARE(info.major, PROJ_VERSION_MAJOR);
+	QCOMPARE(info.minor, PROJ_VERSION_MINOR);
 	
 #ifdef MAPPER_TEST_GDAL
 	QVERIFY(GDALCheckVersion(GDAL_VERSION_MAJOR, GDAL_VERSION_MINOR, "GeoreferencingTest") == TRUE);
