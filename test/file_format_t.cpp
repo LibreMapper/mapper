@@ -1374,9 +1374,11 @@ void FileFormatTest::colorTest()
 				                std::make_tuple<const float*, float*>(&orig_cmyk.y, &copy_cmyk.y),
 				                std::make_tuple<const float*, float*>(&orig_cmyk.k, &copy_cmyk.k) })
 				{
+					// The number is either a near-exact match or within the limitations
+					// of the OCD 8 format (half-percent resolution)
 					if (qFuzzyCompare(*std::get<0>(f), *std::get<1>(f)))
 						continue;
-					if (qFuzzyCompare(std::floor(*std::get<0>(f) * 200), std::floor(*std::get<1>(f) * 200)))
+					if (std::lround(*std::get<0>(f) * 200) == std::lround(*std::get<1>(f) * 200))
 					{
 						*std::get<1>(f) = *std::get<0>(f);
 						do_set_color = true;
