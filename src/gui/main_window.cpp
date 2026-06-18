@@ -604,9 +604,9 @@ bool MainWindow::closeFile()
 			close();
 		else
 			setController(new HomeScreenController());
+
+		setIgnoreTouch(false);
 	}
-	
-	setIgnoreTouch(false);
 	
 	return closed;
 }
