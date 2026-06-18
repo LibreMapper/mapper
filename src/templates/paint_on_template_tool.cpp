@@ -214,10 +214,16 @@ ActionGridBar* PaintOnTemplateTool::makeToolBar()
 	auto* erase_action = new QAction(makeEraserIcon(icon_size), tr("Erase"), toolbar);
 	erase_action->setCheckable(true);
 	erase_action->setActionGroup(color_options);
+	if (last_selected == QLatin1String("eraser"))
+	{
+		erasing.setFlag(ExplicitErasing, true);
+		erase_action->setChecked(true);
+	}
 	connect(erase_action, &QAction::triggered, this, [this]() {
 		erasing.setFlag(ExplicitErasing, true);
 		background_drawing_action->setEnabled(false);
 		fill_options->setEnabled(false);
+		QSettings().setValue(QStringLiteral("PaintOnTemplateTool/selectedColor"), QLatin1String("eraser"));
 	});
 	toolbar->addAction(erase_action, count % 2, count / 2);
 	
