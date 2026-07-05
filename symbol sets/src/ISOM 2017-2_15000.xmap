@@ -1345,7 +1345,7 @@ Rocky pits larger than 5 m in diameter should be exaggerated and represented usi
             <symbol type="1" id="37" code="203.2" name="Dangerous pit">
                 <description>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
 Footprint: 13.5 m diameter.</description>
-                <point_symbol inner_radius="175" inner_color="-1" outer_width="280" outer_color="2" elements="0"/>
+                <point_symbol inner_radius="100" inner_color="-1" outer_width="350" outer_color="2" elements="0"/>
             </symbol>
             <symbol type="1" id="38" code="203.9" name="Rocky pit or cave with distinct entrance (from ISOM2000)" is_hidden="true">
                 <description>Provided for migration from ISOM2000. Use of this symbol variant is discouraged for new maps.</description>
