@@ -29,11 +29,11 @@
 
 214    natural = bare_rock
 213    natural = beach AND surface = sand
-203.2  natural = cave_entrance
+203.101 natural = cave_entrance
 201    natural = cliff
 206    natural = cliff AND (area = yes OR is_area = yes)
 213    natural = dune
-203.1  natural = hole AND rock != no
+203.100 natural = hole AND rock != no
 206    natural = rock AND (area = yes OR is_area = yes)
 213    natural = sand
 205    natural = stone

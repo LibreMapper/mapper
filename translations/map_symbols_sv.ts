@@ -308,24 +308,24 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>Earth wall</source>
-        <comment>Name of symbol 105.1</comment>
+        <comment>Name of symbol 105.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105.1</comment>
+        <comment>Description of symbol 105.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining earth wall</source>
-        <comment>Name of symbol 105.2</comment>
+        <comment>Name of symbol 105.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A retaining earth wall is an abrupt change in ground level which can be clearly distinguished from its surroundings used for minor peat edges and cultivation terraces. If such a feature is higher than 1 m, it should be drawn with the symbol Earth bank (104).
 Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
-        <comment>Description of symbol 105.2</comment>
+        <comment>Description of symbol 105.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -620,7 +620,7 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>Rocky pit or cave (without a distinct entrance)</source>
-        <comment>Name of symbol 203.1</comment>
+        <comment>Name of symbol 203.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -629,30 +629,30 @@ Location is the centre of gravity of the symbol, and the symbol shall be orienta
 Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).
 Minimum depth: 1 m.
 Footprint: 10.5 m x 12 m.</source>
-        <comment>Description of symbol 203.1</comment>
+        <comment>Description of symbol 203.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cave or rocky pit (with a distinct entrance)</source>
-        <comment>Name of symbol 203.1.1</comment>
+        <comment>Name of symbol 203.101</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rocky pits, holes, caves or mineshafts with a distinct entrance which may constitute a danger to the competitor. Minimum depth: 1 m.
 Location is the centre of gravity of the symbol, and the symbol should point into the cave.
 Rocky pits larger than 5 m in diameter should be exaggerated and represented using cliff symbols (201, 202).</source>
-        <comment>Description of symbol 203.1.1</comment>
+        <comment>Description of symbol 203.101</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dangerous pit</source>
-        <comment>Name of symbol 203.2</comment>
+        <comment>Name of symbol 203.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A highly dangerous pit, vertical shaft or abyss where a fall into the pit could cause severe injury or death. It is strongly recommended not to use such a feature as a control point. If this object is part of a possible route choice, it should be marked in the terrain with tape.
 Footprint: 13.5 m diameter.</source>
-        <comment>Description of symbol 203.2</comment>
+        <comment>Description of symbol 203.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1882,26 +1882,26 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     </message>
     <message>
         <source>Wall</source>
-        <comment>Name of symbol 513.1</comment>
+        <comment>Name of symbol 513.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513.1</comment>
+        <comment>Description of symbol 513.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining wall</source>
-        <comment>Name of symbol 513.2</comment>
+        <comment>Name of symbol 513.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials which is seen only from one side. Half dot must point to the lower level.
 Minimum height: 0.5 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513.2</comment>
+        <comment>Description of symbol 513.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7171,24 +7171,24 @@ Minimum length: 0.6 mm (footprint 9 m).</source>
     </message>
     <message>
         <source>Earth wall</source>
-        <comment>Name of symbol 105.1</comment>
+        <comment>Name of symbol 105.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Distinct earth wall. Minimum height: 1 m.
 Minimum length: 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 105.1</comment>
+        <comment>Description of symbol 105.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining earth wall</source>
-        <comment>Name of symbol 105.2</comment>
+        <comment>Name of symbol 105.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A retaining earth wall is an abrupt change in ground level which can be clearly distinguished from its surroundings used for minor peat edges and cultivation terraces. If such a feature is higher than 1 m, it should be drawn with the symbol Earth bank (104).
 Minimum height: 0.5 m, minimum length (isolated): 1.4 mm.</source>
-        <comment>Description of symbol 105.2</comment>
+        <comment>Description of symbol 105.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8010,26 +8010,26 @@ Note: if the stream is wider than 0.25 mm, adjust this symbol so it extends 0.5 
     </message>
     <message>
         <source>Wall</source>
-        <comment>Name of symbol 513.1</comment>
+        <comment>Name of symbol 513.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials.
 Minimum height: 1 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513.1</comment>
+        <comment>Description of symbol 513.100</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Retaining wall</source>
-        <comment>Name of symbol 513.2</comment>
+        <comment>Name of symbol 513.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A significant wall of stone, concrete, wood or other materials which is seen only from one side. Half dot must point to the lower level.
 Minimum height: 0.5 m.
 Minimum length (isolated): 1.4 mm (footprint 21 m).</source>
-        <comment>Description of symbol 513.2</comment>
+        <comment>Description of symbol 513.200</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
