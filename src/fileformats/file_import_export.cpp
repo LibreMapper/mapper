@@ -66,6 +66,28 @@ QVariant ImportExport::option(const QString& name) const
 }
 
 
+void ImportExport::addWarning(const QString& str)
+{
+	warnings_[str]++;
+}
+
+
+const std::vector<QString> ImportExport::warnings() const
+{
+	std::vector<QString> warning_list;
+	for (auto const& [warning, occurrences] : warnings_)
+	{
+		if (occurrences < 2)
+			warning_list.emplace_back(warning);
+		else
+			warning_list.emplace_back(QLatin1String("%1 %2")
+			                          .arg(warning)
+			                          .arg(tr("(x%n)", "Shorthand suffix marking multiple occurrences in import warning list", occurrences)));
+	}
+	return warning_list;
+}
+
+
 void ImportExport::setOption(const QString& name, const QVariant& value)
 {
 	options[name] = value;

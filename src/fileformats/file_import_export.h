@@ -98,12 +98,12 @@ public:
 	 * 
 	 * The provided message should be translated.
 	 */
-	void addWarning(const QString& str) { warnings_.emplace_back(str); }
+	void addWarning(const QString& str);
 	
 	/**
 	 * Returns the current list of warnings collected by this object.
 	 */
-	const std::vector<QString>& warnings() const noexcept { return warnings_; }
+	const std::vector<QString> warnings() const;
 	
 private:
 	friend class Exporter;  // direct access to device_ in Exporter::doExport()
@@ -116,7 +116,7 @@ private:
 	QHash<QString, QVariant> options;
 	
 	/// A list of warnings
-	std::vector<QString> warnings_;
+	std::map<QString, int> warnings_;
 };
 
 
