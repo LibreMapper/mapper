@@ -1972,14 +1972,11 @@ Object* OcdFileImport::importObject(const O& ocd_object, MapPart* part)
 		{
 			p->setRotation(convertAngle(ocd_object.angle));
 		}
-		else if (ocd_object.angle != 0)
+		else if (ocd_object.angle != 0 && !point_symbol->isSymmetrical())
 		{
-			if (!point_symbol->isSymmetrical())
-			{
-				point_symbol->setRotatable(true);
-				p->setRotation(convertAngle(ocd_object.angle));
-			}
 			addSymbolWarning(point_symbol, tr("Removing rotation lock due to the existence of a rotated point object."));		
+			point_symbol->setRotatable(true);
+			p->setRotation(convertAngle(ocd_object.angle));
 		}
 		
 		const MapCoord pos = convertOcdPoint(ocd_object.coords[0]);
