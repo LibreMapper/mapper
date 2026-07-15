@@ -4110,7 +4110,7 @@ Spot heights must only be used where they do not conflict with other symbols.</d
                 <description>Spot heights are used for the rough assessment of height differences. The height is given to the nearest metre.
 Water levels are given without the dot.
 Spot heights must only be used where they do not conflict with other symbols.</description>
-                <text_symbol icon_text="321" rotatable="true">
+                <text_symbol icon_text="321">
                     <font family="Sans Serif" size="2095"/>
                     <text color="2" line_spacing="1" paragraph_spacing="0" character_spacing="0" kerning="true"/>
                 </text_symbol>
