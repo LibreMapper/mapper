@@ -107,14 +107,14 @@ void PointHandles::draw(
 				QPointF point = widget->mapToViewport(coord);
 				bool is_active = hover_point == i;
 				
-				if (i == part.first_index && !part.isClosed()) // || (i > part.start_index && path->getCoordinate(i-1).isHolePoint()))
-					handle_type = StartHandle;
-				else if (i == part.last_index && !part.isClosed()) // || coord.isHolePoint())
-					handle_type = EndHandle;
-				else if (coord.isDashPoint())
+				if (coord.isDashPoint())
 					handle_type = DashHandle;
 				else if (coord.isCornerPoint())
 					handle_type = CornerHandle;
+				else if (i == part.first_index && !part.isClosed())
+					handle_type = StartHandle;
+				else if (i == part.last_index && !part.isClosed())
+					handle_type = EndHandle;
 				else 
 					handle_type = NormalHandle;
 				
