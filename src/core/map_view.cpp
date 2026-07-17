@@ -436,7 +436,13 @@ void MapView::onTemplateAdded(int, Template* temp)
 
 void MapView::onTemplateDeleted(int, const Template* temp)
 {
-	template_visibilities.erase(findVisibility(temp));
+	auto const temp_it = findVisibility(temp);
+	if (temp_it == template_visibilities.end())
+	{
+		qWarning() << "Cannot find visibility info for " << temp;
+		return;
+	}
+	template_visibilities.erase(temp_it);
 }
 
 
