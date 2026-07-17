@@ -265,7 +265,7 @@ QTransform TextObject::calcTextToMapTransform() const
 	QTransform transform;
 	auto const scaling = 1.0 / text_symbol->calculateInternalScaling();
 	transform.translate(coords[0].x(), coords[0].y());
-	if (getRotation() != 0)
+	if (text_symbol->isRotatable() && !qFuzzyIsNull(getRotation()))
 		transform.rotate(-qRadiansToDegrees(getRotation()));
 	transform.scale(scaling, scaling);
 	
@@ -279,7 +279,7 @@ QTransform TextObject::calcMapToTextTransform() const
 	QTransform transform;
 	auto const scaling = text_symbol->calculateInternalScaling();
 	transform.scale(scaling, scaling);
-	if (getRotation() != 0)
+	if (text_symbol->isRotatable() && !qFuzzyIsNull(getRotation()))
 		transform.rotate(qRadiansToDegrees(getRotation()));
 	transform.translate(-coords[0].x(), -coords[0].y());
 	

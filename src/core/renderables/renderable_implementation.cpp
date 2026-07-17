@@ -733,8 +733,8 @@ TextRenderable::TextRenderable(const TextSymbol* symbol, const TextObject* text_
 	QTransform t { 1.0, 0.0, 0.0, 1.0, anchor_x, anchor_y };
 	t.scale(scale_factor, scale_factor);
 	
-	auto rotation_rad = text_object->getRotation();
-	if (!qIsNull(rotation_rad))
+	auto rotation_rad = symbol->isRotatable() ? text_object->getRotation() : 0.;
+	if (!qFuzzyIsNull(rotation_rad))
 	{
 		rotation = -qRadiansToDegrees(rotation_rad);
 		t.rotate(rotation);
@@ -773,7 +773,7 @@ void TextRenderable::renderCommon(QPainter& painter, const RenderConfig& config)
 
 
 
-// ### TextRenderable ###
+// ### TextFramingRenderable ###
 
 TextFramingRenderable::TextFramingRenderable(const TextSymbol* symbol, const TextObject* text_object, const MapColor* color, double anchor_x, double anchor_y)
 : TextRenderable     { symbol, text_object, color, anchor_x, anchor_y }
