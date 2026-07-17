@@ -985,8 +985,7 @@ void Map::drawSelection(QPainter* painter, bool force_min_size, MapWidget* widge
 	MapView* view = widget->getMapView();
 	
 	painter->save();
-	painter->translate(widget->width() / 2.0 + view->panOffset().x(), widget->height() / 2.0 + view->panOffset().y());
-	painter->setWorldTransform(view->worldTransform(), true);
+	widget->applyMapTransform(painter);
 	
 	if (!replacement_renderables)
 		replacement_renderables = selection_renderables.data();
