@@ -63,9 +63,9 @@ class Object;
  */
 struct TemplateTransform
 {
-	/// x position in 1/1000 mm
+	/// Image center x position in 1/1000 mm
 	qint32 template_x = 0;
-	/// x position in 1/1000 mm
+	/// Image center y position in 1/1000 mm
 	qint32 template_y = 0;
 	
 	/// Rotation in radians, a positive rotation is counter-clockwise.

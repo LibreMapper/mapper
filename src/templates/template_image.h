@@ -128,6 +128,8 @@ public:
 	bool canChangeTemplateGeoreferenced() const override;
 	bool trySetTemplateGeoreferenced(bool value, QWidget* dialog_parent) override;
 	
+	bool withWorldFile() const { return with_world_file; }
+	void setWithWorldFile(bool val) { with_world_file = val; }
 	
 public slots:
 	void updateGeoreferencing();
@@ -181,6 +183,8 @@ protected:
 	int undo_index = 0;
 	/// A flag indicating that this template can be drawn onto.
 	bool drawable = false;
+	/// Template should be saved with a world file.
+	bool with_world_file = false;
 	
 	GeoreferencingOptions available_georef;
 	std::unique_ptr<Georeferencing> georef;

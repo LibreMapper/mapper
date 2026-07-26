@@ -52,6 +52,7 @@
 #include "templates/paint_on_template_tool.h"
 #include "templates/template.h"
 #include "templates/template_image.h"
+#include "templates/world_file.h"
 #include "tools/tool.h"
 
 
@@ -342,6 +343,7 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 		template_image->setTemplateShear(0);
 		template_image->setTemplateRotation(0);
 		template_image->setTemplateState(Template::Unloaded);
+		template_image->setWithWorldFile(true);
 		template_image->loadTemplateFile();
 		
 		if (template_image->getTemplateState() != Template::Loaded)
@@ -359,6 +361,7 @@ Template* PaintOnTemplateFeature::setupTemplate() const
 	if (remove_file)
 	{
 		QFile::remove(image_file_path);   // Created for check/initialization.
+		QFile::remove(WorldFile::pathForImage(image_file_path));
 		temp->setHasUnsavedChanges(true); // Save again when the map is saved.
 	}
 	

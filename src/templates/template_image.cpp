@@ -48,6 +48,7 @@
 #endif
 #include "templates/template_image_open_dialog.h"
 #include "templates/world_file.h"
+#include "util/matrix.h"
 #include "util/transformation.h"
 #include "util/util.h"
 
@@ -150,6 +151,23 @@ bool TemplateImage::saveTemplateFile() const
 			const_cast<TemplateImage*>(this)->setErrorString(file.errorString());
 			return false;
 		}
+
+		if (with_world_file)
+		{
+			// The template map transformation origin is at the template center
+			// while the world file uses the template center of the top left
+			// pixel. The first step is to move from the center to the top left
+			// pixel, and then apply the remaining transformations down to the
+			// projected coordinates.
+			auto template_to_world = QTransform::fromTranslate(-image.width()/2. + .5, -image.height()/2. + .5);
+			auto to_map = QTransform {template_to_map.get(0, 0), template_to_map.get(0, 1),
+			                          template_to_map.get(1, 0), template_to_map.get(1, 1),
+			                          template_to_map.get(0, 2), template_to_map.get(1, 2) };
+			template_to_world *= to_map;
+			template_to_world *= map->getGeoreferencing().mapToProjected();
+			const WorldFile world_file(template_to_world);
+			return world_file.save(WorldFile::pathForImage(template_path));
+		}
 	}
 	
 #ifdef Q_OS_ANDROID
@@ -236,6 +254,10 @@ bool TemplateImage::loadTemplateFileImpl()
 	}
 	
 	drawable = !findExportFormat(template_path).isEmpty();
+	// Somewhat crude way to enable world files on draft templates
+	auto info = QFileInfo(template_path);
+	with_world_file = info.fileName().startsWith(QLatin1String("Draft @ ")) && info.suffix() == QLatin1String("png");
+
 	return true;
 }
 
