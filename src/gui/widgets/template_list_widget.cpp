@@ -13,16 +13,19 @@
 #include <vector>
 
 #include <Qt>
+#include <QtAssert>
+#include <QtContainerFwd>
 #include <QtGlobal>
+#include <QtMinMax>
+#include <QtNumeric>
+#include <QtPreprocessorSupport>
 #include <QAbstractButton>
-#include <QAbstractItemModel>
 #include <QAbstractItemView>
-#include <QAbstractSlider>
 #include <QAbstractTableModel>
 #include <QAction>
-#include <QBoxLayout>
-#include <QByteArray>
+#include <QByteArrayAlgorithms>
 #include <QCheckBox>
+#include <QColor>
 #include <QCoreApplication>
 #include <QDialog>
 #include <QDir>
@@ -39,19 +42,20 @@
 #include <QLatin1String>
 #include <QList>
 #include <QLocale>
+#include <QMargins>
 #include <QMenu>
 #include <QMessageBox>
 #include <QModelIndex>
 #include <QPainter>
 #include <QPixmap>
+#include <QPoint>
 #include <QRect>
 #include <QScroller>
 #include <QSettings>
 #include <QSize>
 #include <QSlider>
-#include <QStringList>
+#include <QString>
 #include <QStyle>
-#include <QStyleOption>
 #include <QStyleOptionButton>
 #include <QStyleOptionViewItem>
 #include <QTableView>
@@ -59,7 +63,6 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QVariant>
-#include <QVector>
 
 #ifdef WITH_COVE
 #include <app/coverunner.h>
@@ -176,6 +179,12 @@ TemplateListWidget::TemplateListWidget(Map& map, MapView& main_view, MapEditorCo
 	template_table->setEditTriggers(QAbstractItemView::AllEditTriggers);
 	template_table->setSelectionBehavior(QAbstractItemView::SelectRows);
 	template_table->setSelectionMode(QAbstractItemView::SingleSelection);
+	template_table->setDragEnabled(true);
+	template_table->setAcceptDrops(true);
+	template_table->setDragDropMode(QAbstractItemView::DropOnly);
+	template_table->setDefaultDropAction(Qt::CopyAction);
+	template_table->setDropIndicatorShown(true);
+	template_table->setDragDropOverwriteMode(false);
 	template_table->verticalHeader()->setVisible(false);
 #ifdef NO_TEMPLATE_GROUP_SUPPORT
 	// Template grouping is not yet implemented.

@@ -8,6 +8,9 @@
 
 #include "template_table_model.h"
 
+#include <memory>
+#include <utility>
+
 #include <Qt>
 #include <QtGlobal>
 #include <QBrush>
@@ -18,6 +21,14 @@
 #include <QLatin1String>
 #include <QModelIndex>
 #include <QPalette>
+#include <QMimeData>
+#include <QUrl>
+#include <QMessageBox>
+#include <QList>
+#include <QString>
+#include <QtAssert>
+#include <QtMinMax>
+#include <QtPreprocessorSupport>
 
 #include "core/map.h"
 #include "core/map_view.h"
@@ -105,6 +116,8 @@ int TemplateTableModel::columnCount(const QModelIndex& /*parent*/) const
 
 int TemplateTableModel::posFromRow(int row) const
 {
+	Q_ASSERT(row >= 0 && row < rowCount());
+
 	auto pos = map.getNumTemplates() - row;
 	if (pos == map.getFirstFrontTemplate())
 		pos = -1; // the map row
@@ -173,18 +186,27 @@ QVariant TemplateTableModel::headerData(int section, Qt::Orientation orientation
 
 Qt::ItemFlags TemplateTableModel::flags(const QModelIndex &index) const
 {
+	if (!index.isValid() || index.row() < 0 || index.row() > map.getNumTemplates() + 1)
+		return Qt::ItemIsDropEnabled;
+
 	auto pos = posFromRow(index.row());
 	auto* temp = pos >= 0 ? map.getTemplate(pos) : nullptr;
 	auto visibility = temp ? view.getTemplateVisibility(temp) : view.getMapVisibility();
+
+	auto ret = Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDropEnabled;
 	switch (index.column())
 	{
 	case visibilityColumn():
-		return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsUserCheckable;
+		ret |= Qt::ItemIsUserCheckable;
+		break;
 	case opacityColumn():
-		return Qt::ItemIsEnabled | Qt::ItemIsSelectable | ((visibility.visible && !touchMode()) ? Qt::ItemIsEditable : Qt::NoItemFlags);
+		ret |= ((visibility.visible && !touchMode()) ? Qt::ItemIsEditable : Qt::NoItemFlags);
+		break;
 	default:
-		return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
+		;
 	}
+
+	return ret;
 }
 
 QVariant TemplateTableModel::data(const QModelIndex &index, int role) const
@@ -197,6 +219,75 @@ bool TemplateTableModel::setData(const QModelIndex& index, const QVariant& value
 {
 	auto const pos = posFromRow(index.row());
 	return pos < 0 ? setMapData(index, value, role) : setTemplateData(map.getTemplate(pos), index, value, role);
+}
+
+
+bool TemplateTableModel::canDropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent) const
+{
+	Q_UNUSED(action);
+	Q_UNUSED(row);
+	Q_UNUSED(column);
+
+	if (!data->hasUrls() || !data->hasFormat(QLatin1String("text/uri-list")) || parent.isValid())
+		return false;
+
+	for (auto const& url : data->urls())
+	{
+		if(!url.isLocalFile())
+			return false;
+	}
+
+	return true;
+}
+
+bool TemplateTableModel::dropMimeData(const QMimeData* data, Qt::DropAction action, int row, int column, const QModelIndex& parent)
+{
+	if (!canDropMimeData(data, action, row, column, parent))
+		return false;
+
+	if (action == Qt::IgnoreAction)
+		return true;
+
+	for (auto const& url : data->urls())
+	{
+		auto path = url.toLocalFile();
+
+		QString error;
+		auto new_template = Template::templateForPath(path, &map);
+		if (!new_template)
+		{
+			error = tr("File format not recognized.");
+		}
+		else if (!new_template->setupAndLoad(nullptr, &view))
+		{
+			error = new_template->errorString();
+			if (new_template->getTemplateState() == Template::Invalid && error.isEmpty())
+				error = tr("Failed to load template. Does the file exist and is it valid?");
+			new_template.reset();
+		}
+
+		if (!error.isEmpty())
+		{
+			auto const error_template = tr("Cannot open template\n%1:\n%2");
+			QMessageBox::warning(nullptr, tr("Error"), error_template.arg(path, error));
+		}
+
+		if (new_template)
+		{
+			// row == -1 means that the file was dropped in the widget's free space
+			// and row == 0 is the top of the list. Other values can be translated by posFromRow().
+			auto pos = row > 0 ? posFromRow(row - 1) : (row == 0 ? map.getNumTemplates() : 0);
+			map.addTemplate(pos, std::move(new_template));
+		}
+	}
+
+	return true;
+}
+
+
+Qt::DropActions TemplateTableModel::supportedDropActions() const
+{
+	return Qt::CopyAction;
 }
 
 

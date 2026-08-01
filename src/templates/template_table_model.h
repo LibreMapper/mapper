@@ -11,11 +11,9 @@
 
 #include <Qt>
 #include <QAbstractTableModel>
+#include <QModelIndex>
 #include <QObject>
-#include <QString>
 #include <QVariant>
-
-class QModelIndex;
 
 namespace LibreMapper {
 
@@ -93,6 +91,10 @@ public:
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 	bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
 	
+	bool canDropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) const override;
+	bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
+	Qt::DropActions supportedDropActions() const override;
+
 protected:
 	QVariant mapData(const QModelIndex &index, int role = Qt::DisplayRole) const;
 	QVariant templateData(Template* temp, const QModelIndex &index, int role = Qt::DisplayRole) const;

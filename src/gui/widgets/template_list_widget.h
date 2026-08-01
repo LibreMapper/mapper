@@ -15,14 +15,12 @@
 #include <Qt>
 #include <QWidget>
 #include <QObject>
-#include <QString>
 
 #include "core/map_view.h"
 
 class QAction;
 class QBoxLayout;
 class QCheckBox;
-class QEvent;
 class QModelIndex;
 class QTableView;
 class QToolButton;
