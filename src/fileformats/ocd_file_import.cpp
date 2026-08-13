@@ -2003,6 +2003,14 @@ Object* OcdFileImport::importObject(const O& ocd_object, MapPart* part)
 		
 		const MapCoord pos = convertOcdPoint(ocd_object.coords[0]);
 		p->setPosition(pos.nativeX(), pos.nativeY());
+
+		if (ocd_object.num_items > 1)
+		{
+			auto const offending_coord = p->getCoordF();
+			addWarning(OcdFileImport::tr("Point object at [%1, %2] has cut circles. Importing with full circles.")
+			           .arg(offending_coord.x())
+			           .arg(offending_coord.y()));
+		}
 		
 		p->setMap(map);
 		setObjectDates(p, ocd_object);		
