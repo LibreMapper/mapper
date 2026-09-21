@@ -159,11 +159,14 @@ void EditPointTool::clickPress()
 		PathObject* path = hover_object->asPath();
 		
 		auto closest = path->findClosestPointTo(cur_pos_map);
+		auto const& part = *path->findPartForIndex(closest.path_coord.index);
 		
 		auto click_tolerance_map_sq = cur_map_widget->getMapView()->pixelToLength(clickTolerance());
 		click_tolerance_map_sq = click_tolerance_map_sq * click_tolerance_map_sq;
 		
-		if (closest.distance_squared <= click_tolerance_map_sq)
+		if (closest.distance_squared <= click_tolerance_map_sq
+		    && closest.path_coord.clen > 0
+		    && closest.path_coord.clen < part.length())
 		{
 			startDragging();
 			hover_state = OverObjectNode;
