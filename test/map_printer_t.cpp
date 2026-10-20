@@ -73,7 +73,8 @@ private slots:
 		image.fill(QColor(Qt::white));
 		{
 			QPainter p(&image);
-			printer.drawPage(&p, printer.getPrintArea(), &image);
+			p.setRenderHint(QPainter::Antialiasing, false);
+			printer.drawPage(&p, printer.getPrintArea(), &image, RenderConfig::DisableAntialiasing);
 		}
 		
 		auto image_filepath = QFileInfo{map_filepath}.absoluteFilePath();
@@ -92,10 +93,7 @@ private slots:
 		QVERIFY(expected_image.load(image_filepath));
 		
 		image = image.convertToFormat(expected_image.format());
-		QEXPECT_FAIL("", "To be fixed with the next patch.", Continue);
-		auto const ret = fuzzyDifference(image, expected_image);
-		QEXPECT_FAIL("", "To be fixed with the next patch.", Continue);
-		QCOMPARE(ret, QPoint(-1,-1));
+		QCOMPARE(fuzzyDifference(image, expected_image), QPoint(-1,-1));
 	}
 };
 
