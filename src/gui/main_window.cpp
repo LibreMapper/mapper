@@ -29,7 +29,7 @@
 
 #if defined(Q_OS_ANDROID)
 #  include <QtAndroid>
-#  include <QDesktopWidget>
+#  include <QScreen>
 #  include <QTimer>
 #  include <QUrl>
 #endif
@@ -760,7 +760,9 @@ void MainWindow::loadWindowSettings()
 {
 #if defined(Q_OS_ANDROID)
 	// Always show the window on the whole available area on Android
-	resize(QGuiApplication::primaryScreen()->availableGeometry().size());
+	// Qt 5.14 adds QWidget::screen().
+	if (auto* screen = qApp->screenAt(geometry().center()))
+		resize(screen->availableGeometry().size());
 #else
 	QSettings settings;
 	

@@ -725,15 +725,8 @@ void SymbolRenderWidget::dropEvent(QDropEvent* event)
 		
 		event->acceptProposedAction();
 		
-        // save selection
-        std::set<Symbol *> sel;
-        for (auto symbol_index : selected_symbols) {
-            sel.insert(map->getSymbol(symbol_index));
-        }
-
 		map->moveSymbol(current_symbol_index, pos);
 		update();
-
 
 		if (pos > current_symbol_index)
 			--pos;

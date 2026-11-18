@@ -122,6 +122,15 @@ include_directories("${PROJECT_SOURCE_DIR}/src")
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 
+add_library(MapperTestUtils STATIC
+    image-difference.cpp
+)
+target_link_libraries(MapperTestUtils PRIVATE
+  Qt6::Widgets
+  Qt6::Test
+)
+
+
 # Unit tests
 add_unit_test(tst_qglobal)
 add_unit_test(autosave_t MANUAL ../src/core/autosave
@@ -180,11 +189,13 @@ add_system_test(file_format_t)
 add_system_test(duplicate_equals_t)
 add_system_test(map_t)
 add_system_test(map_printer_t)
+target_link_libraries(map_printer_t PRIVATE MapperTestUtils)
 add_system_test(object_t)
 add_system_test(object_query_t)
 add_system_test(path_object_t)
 add_system_test(symbol_set_t)
 add_system_test(symbol_t)
+target_link_libraries(symbol_t PRIVATE MapperTestUtils)
 add_system_test(template_t)
 add_system_test(tools_t)
 add_system_test(track_t)  # Could be unit test, but needs Georeferencing
