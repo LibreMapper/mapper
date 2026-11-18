@@ -65,7 +65,6 @@ bool operator!=(TemplateVisibility lhs, TemplateVisibility rhs);
 class MapView : public QObject
 {
 	Q_OBJECT
-	Q_FLAGS(ChangeFlags  VisibilityFeature)
 	
 public:
 	enum ChangeFlag
@@ -77,6 +76,7 @@ public:
 	};
 	
 	Q_DECLARE_FLAGS(ChangeFlags, ChangeFlag)
+	Q_FLAG(ChangeFlags)
 	
 	enum VisibilityFeature
 	{
@@ -88,6 +88,8 @@ public:
 		MapVisible          = 16,
 	};
 	
+	Q_DECLARE_FLAGS(VisibilityFeatures, VisibilityFeature)
+	Q_FLAG(VisibilityFeatures)
 	
 	/**
 	 * Creates a default view looking at the origin.
